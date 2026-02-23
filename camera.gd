@@ -16,6 +16,7 @@ func _physics_process(delta):
 			project_ray_origin(mouse_position),
 			project_ray_normal(mouse_position)
 		)
+		intersect.y = player.global_position.y
 		# Prints either null or the Vector3 where the raycast intersects the zero-plane:
 		player.target_location = intersect
 		
