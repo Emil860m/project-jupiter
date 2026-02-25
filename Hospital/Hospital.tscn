@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dgoaswo3rtbfn"]
 
 [ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_q1h0t"]
-[ext_resource type="PackedScene" uid="uid://cfn72r3jkye4" path="res://room.tscn" id="2_ujp4m"]
-[ext_resource type="PackedScene" uid="uid://xc2dq7qgpaxi" path="res://ClosedRoom.tscn" id="3_jjvbr"]
+[ext_resource type="PackedScene" uid="uid://dibux3ff2b4ro" path="res://Hospital/Elevators.tscn" id="2_ucevt"]
+[ext_resource type="PackedScene" uid="uid://cfn72r3jkye4" path="res://Hospital/room.tscn" id="2_ujp4m"]
+[ext_resource type="PackedScene" uid="uid://xc2dq7qgpaxi" path="res://Hospital/ClosedRoom.tscn" id="3_jjvbr"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="4_0gbd4"]
 
 [node name="Node" type="Node" unique_id=1071325820]
@@ -14,24 +15,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.520611, 0)
 use_collision = true
 
 [node name="HospitalFloor" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1685449123]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, 0)
-size = Vector3(16, 6, 26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, -0.5, 5)
+size = Vector3(19, 6, 42)
 material = ExtResource("1_q1h0t")
 
 [node name="Cutout" type="CSGBox3D" parent="CSGCombiner3D/HospitalFloor" unique_id=717342804]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -7.5)
 operation = 2
-size = Vector3(15, 6, 25)
+size = Vector3(17, 6, 26)
 material = ExtResource("1_q1h0t")
 
 [node name="Entrance" type="CSGBox3D" parent="CSGCombiner3D/HospitalFloor" unique_id=282628396]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.99999976, -11.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.99999976, -17.5)
 operation = 2
 size = Vector3(1, 7, 2)
 material = ExtResource("1_q1h0t")
 
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/HospitalFloor" unique_id=973439936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 12)
+operation = 2
+size = Vector3(12, 6, 13)
+material = ExtResource("1_q1h0t")
+
+[node name="Elevators" parent="CSGCombiner3D/HospitalFloor" unique_id=555946332 instance=ExtResource("2_ucevt")]
+transform = Transform3D(0.9997192, -0.015638996, -0.017802687, 0.015632201, 0.9998777, -0.00052071456, 0.017808652, 0.00024228511, 0.99984133, 5, 0, -12)
+
 [node name="Room" parent="." unique_id=1858408311 instance=ExtResource("2_ujp4m")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, -1, -3)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, -1, 2)
 use_collision = true
 
 [node name="Entrance" type="CSGBox3D" parent="Room" unique_id=97115291]
@@ -41,7 +51,7 @@ size = Vector3(2, 7, 2)
 material = ExtResource("1_q1h0t")
 
 [node name="Room2" parent="." unique_id=82553410 instance=ExtResource("2_ujp4m")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, -1, 8)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, -1, 14)
 use_collision = true
 
 [node name="Entrance" type="CSGBox3D" parent="Room2" unique_id=2071132626]
@@ -51,11 +61,8 @@ size = Vector3(2, 7, 2)
 material = ExtResource("1_q1h0t")
 
 [node name="ClosedRoom" parent="." unique_id=1360992036 instance=ExtResource("3_jjvbr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, -0.5, -7)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, -0.5, -10)
 use_collision = true
 
 [node name="Player" parent="." unique_id=134844603 instance=ExtResource("4_0gbd4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -12)
-
-[node name="Camera3D" type="Camera3D" parent="Player" unique_id=409881239]
-transform = Transform3D(-1, 6.1817246e-08, -6.181724e-08, -3.821371e-15, 0.70710677, 0.7071069, 8.742278e-08, 0.7071069, -0.70710677, 0, 15, -4)
