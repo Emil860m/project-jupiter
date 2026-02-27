@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://ceis1xx8wo0sy" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
-size = Vector3(1, 2, 1)
+size = Vector3(0.8, 2, 0.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3pqv"]
 no_depth_test = true
@@ -12,10 +12,7 @@ albedo_texture = ExtResource("1_4flbx")
 
 [sub_resource type="BoxMesh" id="BoxMesh_hqtel"]
 material = SubResource("StandardMaterial3D_i3pqv")
-size = Vector3(1, 2, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_onrkg"]
-size = Vector3(1, 5, 1)
+size = Vector3(0.8, 2, 0.8)
 
 [node name="Player" type="CharacterBody3D" unique_id=134844603]
 script = ExtResource("1_onrkg")
@@ -27,15 +24,14 @@ shape = SubResource("BoxShape3D_onrkg")
 mesh = SubResource("BoxMesh_hqtel")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=387184353]
-transform = Transform3D(-1, 6.181723e-08, -6.181723e-08, -1.6859255e-08, 0.5574698, 0.8301972, 8.5781735e-08, 0.8301972, -0.5574698, 0, 15, -3)
+transform = Transform3D(0.34202015, 0.53898555, -0.76975113, 0, 0.81915206, 0.57357645, 0.9396926, -0.19617471, 0.2801665, -11, 8, 5)
 top_level = true
+projection = 1
+size = 13.0
+near = 0.001
 
 [node name="CameraMarker" type="Marker3D" parent="." unique_id=1125414468]
-transform = Transform3D(-1, 6.181723e-08, -6.181723e-08, -1.6859255e-08, 0.5574698, 0.8301972, 8.5781735e-08, 0.8301972, -0.5574698, 0, 15, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 8, 5)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
 debug_enabled = true
-
-[node name="ClickBox" type="MeshInstance3D" parent="." unique_id=1197322885]
-top_level = true
-mesh = SubResource("BoxMesh_onrkg")
