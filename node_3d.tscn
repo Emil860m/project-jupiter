@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b3li34cikjxsv" path="res://assets/office-pack/computer_monitor.fbx" id="5_i5arm"]
 [ext_resource type="PackedScene" uid="uid://dmkqmn7whnjv4" path="res://assets/office-pack/office_chair_grey.fbx" id="5_wc5p8"]
 [ext_resource type="PackedScene" uid="uid://cjd3arfay1bxh" path="res://assets/office-pack/floor_3x3-.fbx" id="7_wc5p8"]
+[ext_resource type="Texture2D" uid="uid://33qfxpg1l5s8" path="res://assets/office-pack/cement-texture.png" id="8_jsk3o"]
+[ext_resource type="Texture2D" uid="uid://cloh38s6wk3jb" path="res://assets/office-pack/cement2-texture.png" id="9_4arys"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4xowi"]
 size = Vector3(5, 1, 5)
@@ -23,10 +25,18 @@ size = Vector3(100, 1, 100)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a0tk4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6iypd"]
+albedo_texture = ExtResource("9_4arys")
+
+[sub_resource type="QuadMesh" id="QuadMesh_6iypd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4arys"]
+albedo_texture = ExtResource("8_jsk3o")
+
 [node name="Node3D" type="Node3D" unique_id=74942238]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1940532366 node_paths=PackedStringArray("player")]
-transform = Transform3D(0.7071068, -0.5, 0.5, 0, 0.7071068, 0.70710677, -0.7071068, -0.5, 0.5, 3.2, 5, 3.289)
+transform = Transform3D(0.34202015, -0.53898555, 0.76975113, 0, 0.81915206, 0.57357645, -0.9396926, -0.19617471, 0.2801665, 2, 5, 0.5)
 projection = 1
 size = 9.702
 script = ExtResource("1_noarx")
@@ -37,6 +47,7 @@ target_position = Vector3(0, -1, -1)
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1941389075]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -0.5, 0)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=783246156]
 shape = SubResource("BoxShape3D_4xowi")
@@ -48,13 +59,13 @@ mesh = SubResource("BoxMesh_a202f")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=219050871]
 transform = Transform3D(0.7071068, -0.5, 0.5, 0, 0.7071068, 0.70710677, -0.7071068, -0.5, 0.5, 0, 10, 0)
+light_color = Color(1, 0.871, 0.82, 1)
 light_energy = 10.0
 light_indirect_energy = 10.0
 omni_range = 100.0
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=93641918]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8994546, 0)
-visible = false
 script = ExtResource("3_a0tk4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1178972068]
@@ -63,15 +74,37 @@ mesh = SubResource("CapsuleMesh_noarx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1922527176]
 shape = SubResource("CapsuleShape3D_a0tk4")
 
-[node name="desk1" type="Node3D" parent="." unique_id=1655990647]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.7210045)
+[node name="desk2" type="Node3D" parent="." unique_id=279370143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6.442123)
 
-[node name="computer_monitor" parent="desk1" unique_id=1157219521 instance=ExtResource("5_i5arm")]
+[node name="computer_monitor" parent="desk2" unique_id=1157219521 instance=ExtResource("5_i5arm")]
+transform = Transform3D(0.98077506, 0, 0.19514169, 0, 1, 0, -0.19514169, 0, 0.98077506, -0.5679436, 0.89340794, -0.18388844)
+
+[node name="1desk" parent="desk2" unique_id=1644037245 instance=ExtResource("4_jka67")]
+
+[node name="office_chair_grey" parent="desk2" unique_id=1886911860 instance=ExtResource("5_wc5p8")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.16125703, 0, 0.5421481)
+
+[node name="desk3" type="Node3D" parent="." unique_id=1379973618]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4, 0, 4.158541)
+
+[node name="computer_monitor" parent="desk3" unique_id=1226419330 instance=ExtResource("5_i5arm")]
+transform = Transform3D(0.98077506, 0, 0.19514169, 0, 1, 0, -0.19514169, 0, 0.98077506, -0.5679436, 0.89340794, -0.18388844)
+
+[node name="1desk" parent="desk3" unique_id=929147705 instance=ExtResource("4_jka67")]
+
+[node name="office_chair_grey" parent="desk3" unique_id=160833406 instance=ExtResource("5_wc5p8")]
+transform = Transform3D(0.78527373, 0, 0.6191487, 0, 1, 0, -0.6191487, 0, 0.78527373, -0.16125679, 0, 0.54214835)
+
+[node name="desk1" type="Node3D" parent="." unique_id=1655990647]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.4347634, 0, -3.6817708)
+
+[node name="computer_monitor" parent="desk1" unique_id=594192538 instance=ExtResource("5_i5arm")]
 transform = Transform3D(0.8968496, 0, 0.44233567, 0, 1, 0, -0.44233567, 0, 0.8968496, -0.5679436, 0.89340794, -0.18388835)
 
-[node name="1desk" parent="desk1" unique_id=1644037245 instance=ExtResource("4_jka67")]
+[node name="1desk" parent="desk1" unique_id=1814238644 instance=ExtResource("4_jka67")]
 
-[node name="office_chair_grey" parent="desk1" unique_id=1886911860 instance=ExtResource("5_wc5p8")]
+[node name="office_chair_grey" parent="desk1" unique_id=278190396 instance=ExtResource("5_wc5p8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.38524687)
 
 [node name="floor" type="Node3D" parent="." unique_id=160751830]
@@ -105,20 +138,182 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 [node name="floor_3x3-10" parent="floor" unique_id=1444164879 instance=ExtResource("7_wc5p8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
 
-[node name="floor_3x3-11" parent="floor" unique_id=978843506 instance=ExtResource("7_wc5p8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+[node name="floor_3x3-18" parent="floor" unique_id=1480305767 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 
-[node name="floor_3x3-12" parent="floor" unique_id=927643377 instance=ExtResource("7_wc5p8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 9)
+[node name="floor_3x3-19" parent="floor" unique_id=1917565762 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
 
-[node name="floor_3x3-13" parent="floor" unique_id=1868519540 instance=ExtResource("7_wc5p8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+[node name="floor_3x3-20" parent="floor" unique_id=1518578265 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 3)
 
-[node name="floor_3x3-14" parent="floor" unique_id=1411158734 instance=ExtResource("7_wc5p8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+[node name="floor_3x3-21" parent="floor" unique_id=1355178399 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 3)
 
-[node name="floor_3x3-15" parent="floor" unique_id=967521918 instance=ExtResource("7_wc5p8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+[node name="floor_3x3-22" parent="floor" unique_id=2132418521 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
 
-[node name="floor_3x3-16" parent="floor" unique_id=23034677 instance=ExtResource("7_wc5p8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+[node name="floor_3x3-23" parent="floor" unique_id=1979411050 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="floor_3x3-24" parent="floor" unique_id=772908733 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -3)
+
+[node name="floor_3x3-25" parent="floor" unique_id=1905358973 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -6)
+
+[node name="floor_3x3-26" parent="floor" unique_id=1504617075 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
+
+[node name="floor_3x3-27" parent="floor" unique_id=730270496 instance=ExtResource("7_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 6)
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="." unique_id=733626943]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 4, 0, -2, 0, -8.742278e-08, -8.985922, 1.9880757, 5.0189037)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="." unique_id=1866623670]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 4, 0, -2, 0, -8.742278e-08, -8.985922, 1.9880757, 7.0189037)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="." unique_id=835480615]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 4, 0, -2, 0, -8.742278e-08, -8.985922, 1.9880757, 3.0189037)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="." unique_id=185357542]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 4, 0, -2, 0, -8.742278e-08, -8.985922, 1.9880757, 1.0189037)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="." unique_id=2114909219]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 4, 0, -2, 0, -8.742278e-08, -8.985922, 1.9880757, -0.98109627)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="." unique_id=19436482]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 4, 0, -2, 0, -8.742278e-08, -8.985922, 1.9880757, -2.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="." unique_id=418169479]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 4, 0, -2, 0, -8.742278e-08, -8.985922, 1.9880757, -4.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="." unique_id=431537055]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -5.985922, 1.9880757, -7.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="." unique_id=678943377]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -3.9859219, 1.9880757, -7.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="." unique_id=4994986]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -1.9859219, 1.9880757, -7.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="." unique_id=2002143731]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 0.01407814, 1.9880757, -7.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="." unique_id=1120054392]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 2.0140781, 1.9880757, -7.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="." unique_id=823222193]
+transform = Transform3D(2.0506094, 0, 1.4142137, 0, 4, 0, -2.0506096, 0, 1.4142134, -7.985922, 1.9880757, -6.9810963)
+material_override = SubResource("StandardMaterial3D_6iypd")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="flat-room-walls" type="Node3D" parent="." unique_id=1922343204]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="flat-room-walls" unique_id=1278526404]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.9859219, 0.98807573, -6.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="flat-room-walls" unique_id=1120373215]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.98592186, 0.98807573, -6.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="flat-room-walls" unique_id=1663589572]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.0140781, 0.98807573, -6.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="flat-room-walls" unique_id=1051947040]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 2.0140781, 0.98807573, -5.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="flat-room-walls" unique_id=770964065]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 2.0140781, 0.98807573, -3.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="flat-room-walls" unique_id=164084057]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 2.0140781, 0.98807573, -1.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="flat-room-walls" unique_id=1471269956]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.985922, 0.98807573, -6.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="flat-room-walls" unique_id=1466465244]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -7.985922, 0.98807573, -3.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="flat-room-walls" unique_id=666520534]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -7.985922, 0.98807573, -1.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="flat-room-walls" unique_id=1130489314]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -7.985922, 0.98807573, 0.018903732)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="flat-room-walls" unique_id=71199940]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -7.985922, 0.98807573, 2.0189037)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="flat-room-walls" unique_id=737213211]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -7.985922, 0.98807573, 4.0189037)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="flat-room-walls" unique_id=576147606]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.985922, 0.98807573, 5.0189037)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="flat-room-walls" unique_id=2033372312]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.985922, 0.98807573, 5.0189037)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="flat-room-walls" unique_id=704210216]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.9859219, 0.98807573, 5.0189037)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="flat-room-walls" unique_id=168387906]
+transform = Transform3D(2.0506096, 0, 1.4142135, 0, 2, 0, -2.0506096, 0, 1.4142135, -6.985922, 0.98807573, -5.9810963)
+material_override = SubResource("StandardMaterial3D_4arys")
+mesh = SubResource("QuadMesh_6iypd")
+
+[node name="3d-room-walls" type="Node3D" parent="." unique_id=1633390796]
+transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, -8, 1, 4)
