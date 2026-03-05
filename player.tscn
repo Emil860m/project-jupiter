@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ceis1xx8wo0sy" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Script" uid="uid://7jddkljk15i1" path="res://movement.gd" id="3_i3pqv"]
+[ext_resource type="Script" path="res://movement.gd" id="3_i3pqv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
 size = Vector3(0.8, 2, 0.8)
@@ -26,14 +26,14 @@ shape = SubResource("BoxShape3D_onrkg")
 mesh = SubResource("BoxMesh_hqtel")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=387184353]
-transform = Transform3D(0.34202015, 0.53898555, -0.76975113, 0, 0.81915206, 0.57357645, 0.9396926, -0.19617471, 0.2801665, -11, 8, 5)
+transform = Transform3D(-0.34202012, -0.53898555, 0.76975113, 0, 0.81915206, 0.57357645, -0.9396926, 0.1961747, -0.28016648, 11, 8, -5)
 top_level = true
 projection = 1
 size = 13.0
 near = 0.001
 
 [node name="CameraMarker" type="Marker3D" parent="." unique_id=1125414468]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 8, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, -5)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
 debug_enabled = true

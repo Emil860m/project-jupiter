@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://c8lklyyis4umu"]
+
+[ext_resource type="Script" uid="uid://bft62ml4aoo5i" path="res://Hospital/hospital_2.gd" id="1_8j3s2"]
+[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="1_op4ho"]
+[ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="2_8j3s2"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ispbn"]
+vertices = PackedVector3Array(-8, 3.5, -15, 17, 3.5, -15, 17, 3.5, -23, -8.25, 3.5, -23, -8.75, -2, -11, -7.75, -2, -11, -7.5, -2, -13.75, -9, -2, -14, -9, -2, -21.75, -15.75, -2, -21.75, -15.75, -2, -10, -9, -2, -10, -6.75, -2, -10.75, 2, -2, -6.75, 3.75, -2, -7, 3.5, -2, -13.75, -6.75, -2, -5.5, 2, -2, -5.25, 17, -2, -7, 17, -2, -13.75, -7.75, 3.5, -6.75, -7.75, 3.5, -10, -8.25, 3.5, -9, -8, 3.5, -0.75, -17, 3.5, -9.25, -17, 3.5, -0.75, 2.75, 3.5, 27.75, 17, 3.5, 28, 17, 3.5, -6, 3, 3.5, -6, -6.75, -2, -1.75, 2, -2, -1.5, -5, -2, 12, -4.75, -2, 13.75, 2, -2, 13.75, -6.75, -2, -0.25, -7.25, -2, 0.25, -8.75, -2, 0.25, -8.5, -2, 12, -15.75, -2, 0.25, -15.75, -2, 12, -5.75, -2, 18.5, -5.75, -2, 15.75, -6.5, -2, 15.5, -15.75, -2, 13.75, -6.5, -2, 18.75, -15.75, -2, 27, -6.5, -2, 27, -6.5, -2, 13.75, -4.75, -2, 18.75, 2, -2, 20, -4.75, -2, 15.25, -4.75, -2, 20.25, -4.75, -2, 27, 2, -2, 27)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(4, 11, 7), PackedInt32Array(7, 11, 10), PackedInt32Array(12, 5, 6), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 12), PackedInt32Array(15, 12, 6), PackedInt32Array(17, 16, 13), PackedInt32Array(13, 16, 12), PackedInt32Array(18, 14, 19), PackedInt32Array(19, 14, 15), PackedInt32Array(20, 22, 21), PackedInt32Array(20, 23, 22), PackedInt32Array(22, 23, 25), PackedInt32Array(22, 25, 24), PackedInt32Array(29, 28, 26), PackedInt32Array(26, 28, 27), PackedInt32Array(16, 17, 30), PackedInt32Array(30, 17, 31), PackedInt32Array(34, 33, 32), PackedInt32Array(35, 30, 31), PackedInt32Array(35, 31, 36), PackedInt32Array(36, 31, 32), PackedInt32Array(32, 31, 34), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 32), PackedInt32Array(39, 37, 40), PackedInt32Array(40, 37, 38), PackedInt32Array(41, 45, 42), PackedInt32Array(42, 45, 43), PackedInt32Array(43, 45, 44), PackedInt32Array(47, 46, 45), PackedInt32Array(45, 46, 44), PackedInt32Array(44, 48, 43), PackedInt32Array(41, 42, 49), PackedInt32Array(49, 42, 51), PackedInt32Array(49, 51, 50), PackedInt32Array(50, 51, 34), PackedInt32Array(51, 33, 34), PackedInt32Array(50, 52, 49), PackedInt32Array(53, 52, 54), PackedInt32Array(54, 52, 50)]
+
+[node name="Hospital2" type="Node3D" unique_id=442109093]
+script = ExtResource("1_8j3s2")
+
+[node name="Player" parent="." unique_id=134844603 instance=ExtResource("1_op4ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.735145, -1.5, -9.077846)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1570380906]
+navigation_mesh = SubResource("NavigationMesh_ispbn")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=1317782731]
+use_collision = true
+
+[node name="HospitalFloor" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=715904547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+size = Vector3(35, 6, 52)
+material = ExtResource("2_8j3s2")
+
+[node name="Elevators" type="Label3D" parent="NavigationRegion3D/CSGCombiner3D/HospitalFloor" unique_id=989830167]
+transform = Transform3D(-1, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 8.742278e-08, 1, 4.371139e-08, 12, 4, -6)
+modulate = Color(1, 0.18431373, 0.18431373, 1)
+text = "Elevators"
+font_size = 150
+
+[node name="Info desk" type="Label3D" parent="NavigationRegion3D/CSGCombiner3D/HospitalFloor" unique_id=740488815]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -10, 4, -8)
+modulate = Color(1, 0.14509805, 0.2509804, 1)
+text = "Info Desk"
+font_size = 150
+
+[node name="Log" type="Label3D" parent="NavigationRegion3D/CSGCombiner3D/HospitalFloor" unique_id=198470571]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 11.5, 2, -16)
+modulate = Color(1, 0.21176471, 0.13333334, 1)
+text = "Log system"
+font_size = 150
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=685113018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.5, 13.5)
+operation = 2
+size = Vector3(19, 6, 28)
+material = ExtResource("2_8j3s2")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1639605532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, -10.5)
+operation = 2
+size = Vector3(25, 6, 8)
+material = ExtResource("2_8j3s2")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1049834673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.5, -3.5)
+operation = 2
+size = Vector3(10, 6, 6)
+material = ExtResource("2_8j3s2")
+
+[node name="WorkerRoom" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=752627432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0.5, -16)
+operation = 2
+size = Vector3(8, 6, 13)
+material = ExtResource("2_8j3s2")
+
+[node name="WorkerRoomDoor" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1213741220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -12.5)
+operation = 2
+size = Vector3(1, 7, 4)
+material = ExtResource("2_8j3s2")
+
+[node name="Room" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=406587207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 0, 20.5)
+size = Vector3(12, 6, 16)
+material = ExtResource("2_8j3s2")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D/Room" unique_id=1201163875]
+operation = 2
+size = Vector3(11, 7, 15)
+material = ExtResource("2_8j3s2")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D/Room" unique_id=1578663363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, -3.5)
+operation = 2
+size = Vector3(1, 6, 4)
+material = ExtResource("2_8j3s2")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1084485855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.5, -4.5)
+operation = 2
+size = Vector3(3, 2, 4)
+material = ExtResource("2_8j3s2")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1211537401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, -0.5, -13.5)
+size = Vector3(4, 4, 2)
+material = ExtResource("2_8j3s2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2036067606]
+transform = Transform3D(0.94856006, 0.31211478, 0.053086936, -0.061307922, 0.016578786, 0.99798125, 0.31060454, -0.9498998, 0.034861084, 0, 22, 0)
