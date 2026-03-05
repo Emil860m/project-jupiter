@@ -2,19 +2,23 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
 
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
+
+@export var movement: Node
 
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var camera_marker: Marker3D = $CameraMarker
 
 
 func _physics_process(delta: float) -> void:
-	var next_path_point := navigation_agent_3d.get_next_path_position()
-	var new_velocity := (next_path_point - global_position).normalized() * SPEED
-	velocity.x = new_velocity.x
-	velocity.z = new_velocity.z
+	
+	velocity = movement.set_movement_velocity(
+		navigation_agent_3d.get_next_path_position(),
+		global_position,
+		SPEED
+		)
+	
 	
 	move_and_slide()
 	
