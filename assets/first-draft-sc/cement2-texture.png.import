@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbvkid58bvgnv"
-path.s3tc="res://.godot/imported/office_chair_grey.jpg-a144650a20736f513aeb4b8e79e5700e.s3tc.ctex"
+uid="uid://cloh38s6wk3jb"
+path.s3tc="res://.godot/imported/cement2-texture.png-b257afe7b0eeec2d1b769dec9538cb6b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/office-pack/office_chair_grey.jpg"
-dest_files=["res://.godot/imported/office_chair_grey.jpg-a144650a20736f513aeb4b8e79e5700e.s3tc.ctex"]
+source_file="res://assets/first-draft-sc/cement2-texture.png"
+dest_files=["res://.godot/imported/cement2-texture.png-b257afe7b0eeec2d1b769dec9538cb6b.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cloh38s6wk3jb"
-path.s3tc="res://.godot/imported/cement2-texture.png-905fd736918efa4c7e872ecd862c8272.s3tc.ctex"
+uid="uid://33qfxpg1l5s8"
+path.s3tc="res://.godot/imported/cement-texture.png-980f2aab1b57e2e78939f87a265404f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/office-pack/cement2-texture.png"
-dest_files=["res://.godot/imported/cement2-texture.png-905fd736918efa4c7e872ecd862c8272.s3tc.ctex"]
+source_file="res://assets/first-draft-sc/cement-texture.png"
+dest_files=["res://.godot/imported/cement-texture.png-980f2aab1b57e2e78939f87a265404f1.s3tc.ctex"]
 
 [params]
 

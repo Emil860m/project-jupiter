@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5r3bbityu3it"
-path.s3tc="res://.godot/imported/computer.jpg-2d3612625ae6f8e416d330f3fcd61ea4.s3tc.ctex"
+uid="uid://cpow1gljyo26b"
+path.s3tc="res://.godot/imported/desk_1.jpg-335d07b379957675d5a3fb4a1a089e3a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/office-pack/computer.jpg"
-dest_files=["res://.godot/imported/computer.jpg-2d3612625ae6f8e416d330f3fcd61ea4.s3tc.ctex"]
+source_file="res://assets/first-draft-sc/desk_1.jpg"
+dest_files=["res://.godot/imported/desk_1.jpg-335d07b379957675d5a3fb4a1a089e3a.s3tc.ctex"]
 
 [params]
 

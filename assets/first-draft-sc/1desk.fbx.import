@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://n3e20nl5lo7q"
-path="res://.godot/imported/1desk.fbx-53e2dfc97b8244dcd31509d38dfc0d06.scn"
+path="res://.godot/imported/1desk.fbx-538b90d00b35864d023f06f410bc87e2.scn"
 
 [deps]
 
-source_file="res://assets/office-pack/1desk.fbx"
-dest_files=["res://.godot/imported/1desk.fbx-53e2dfc97b8244dcd31509d38dfc0d06.scn"]
+source_file="res://assets/first-draft-sc/1desk.fbx"
+dest_files=["res://.godot/imported/1desk.fbx-538b90d00b35864d023f06f410bc87e2.scn"]
 
 [params]
 

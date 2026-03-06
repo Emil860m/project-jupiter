@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://niaauef5yytq"
-path="res://.godot/imported/wall1-concrete.fbx-a1c3f3ae51b7193a5e87a57607bce800.scn"
+uid="uid://c1rtfarbq4mgd"
+path="res://.godot/imported/plackard_closed_full.fbx-e3d7f02dc40fb4a8e66a9b0210f6b127.scn"
 
 [deps]
 
-source_file="res://assets/office-pack/wall1-concrete.fbx"
-dest_files=["res://.godot/imported/wall1-concrete.fbx-a1c3f3ae51b7193a5e87a57607bce800.scn"]
+source_file="res://assets/first-draft-sc/plackard_closed_full.fbx"
+dest_files=["res://.godot/imported/plackard_closed_full.fbx-e3d7f02dc40fb4a8e66a9b0210f6b127.scn"]
 
 [params]
 
