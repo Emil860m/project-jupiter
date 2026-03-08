@@ -4,11 +4,18 @@
 
 [sub_resource type="SphereMesh" id="SphereMesh_p38eq"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_3tcni"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3tcni"]
+
 [node name="Moon" type="StaticBody3D" unique_id=909652346]
 script = ExtResource("1_3tcni")
-speed = null
-distance = null
-starting_angle = null
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=153960357]
+[node name="model" type="MeshInstance3D" parent="." unique_id=153960357]
 mesh = SubResource("SphereMesh_p38eq")
+
+[node name="estimated_loc" type="MeshInstance3D" parent="." unique_id=2105076162]
+mesh = SubResource("BoxMesh_3tcni")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2045080135]
+shape = SubResource("SphereShape3D_3tcni")
