@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cfn72r3jkye4"]
+
+[ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_88gup"]
+
+[node name="Room" type="CSGCombiner3D" unique_id=1858408311]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1758939125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, 0)
+size = Vector3(12, 5, 10)
+material = ExtResource("1_88gup")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D" unique_id=141604788]
+operation = 2
+size = Vector3(11, 5, 9)
+material = ExtResource("1_88gup")

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dgoaswo3rtbfn"]
+
+[ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_q1h0t"]
+[ext_resource type="PackedScene" uid="uid://dibux3ff2b4ro" path="res://Hospital/Elevators.tscn" id="2_ucevt"]
+[ext_resource type="PackedScene" uid="uid://cfn72r3jkye4" path="res://Hospital/room.tscn" id="2_ujp4m"]
+[ext_resource type="PackedScene" uid="uid://xc2dq7qgpaxi" path="res://Hospital/ClosedRoom.tscn" id="3_jjvbr"]
+[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="4_0gbd4"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ucevt"]
+vertices = PackedVector3Array(-10.5, 3.5, -20, -10.5, 3.5, -10, -6, 3.5, -10, -6, 3.5, -20, -9.25, -2, -19.25, -9.25, -2, -10, -6, -2, -10, -6, -2, -19.25, 9.5, -2, -16.5, 10.25, -2, -17.5, 9.5, -2, -18, 2.25, -2, -16.5, 0.75, -2, -12, 1.5, -2, -12, 1.5, -2, -15.75, -3.75, -2, -10, 0, -2, -9.75, 0, -2, -11.25, -3.75, -2, -19.25, 9.5, -2, -19.25, 3.5, 3, -14.5, 3.5, 3, -12, 9.5, 3, -12, 9.5, 3, -14.5, 0.75, -2, -2, 1.5, -2, -2, 1.5, -2, -2.75, 0.75, -2, -2.75, -3.75, -2, -8.75, -4.75, -2, -7.75, 0, -2, -3.5, 0, -2, -1.25, -9.25, -2, -7.75, -9.25, -2, 4.5, -3, -2, 4.5, -2.5, -2, 5, 0, -2, 4.75, 2.75, -2, -1.25, 9.5, -2, -0.5, 2.75, -2, -3.5, 9.5, -2, -9.25, 2.75, -2, -9.25, 2.75, -2, -0.5, 1.5, -2, 9.25, 1.5, -2, 10, 2.75, -2, 10.75, 9.5, -2, 11.5, 2.75, -2, 8.5, 9.5, -2, 2.75, 2.75, -2, 2.75, 2.75, -2, 11.5, 0.75, -2, 10, 0.75, -2, 9.25, 9.5, -2, 17.5, 9.5, -2, 14.25, 0.75, -2, 14.25, -2.25, -2, 17.5, 0, -2, 10.75, 0, -2, 8.5, 0, -2, 13.5, -4.25, 3.5, 18.75, -4.25, 3.5, 6.5, -10.5, 3.5, 6.5, -10.5, 3.5, 20, 10.5, 3.5, 20, 10.5, 3.5, 19.5, -3.5, 3.5, 19.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(14, 13, 12), PackedInt32Array(17, 16, 15), PackedInt32Array(12, 17, 14), PackedInt32Array(14, 17, 15), PackedInt32Array(14, 15, 18), PackedInt32Array(14, 18, 11), PackedInt32Array(10, 11, 19), PackedInt32Array(19, 11, 18), PackedInt32Array(23, 22, 20), PackedInt32Array(20, 22, 21), PackedInt32Array(27, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(28, 16, 29), PackedInt32Array(29, 16, 30), PackedInt32Array(24, 31, 27), PackedInt32Array(27, 31, 30), PackedInt32Array(30, 31, 29), PackedInt32Array(29, 31, 32), PackedInt32Array(32, 31, 34), PackedInt32Array(32, 34, 33), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 31), PackedInt32Array(28, 15, 16), PackedInt32Array(26, 39, 25), PackedInt32Array(25, 39, 37), PackedInt32Array(37, 39, 38), PackedInt32Array(41, 40, 39), PackedInt32Array(39, 40, 38), PackedInt32Array(38, 42, 37), PackedInt32Array(43, 47, 44), PackedInt32Array(44, 47, 45), PackedInt32Array(45, 47, 46), PackedInt32Array(49, 48, 47), PackedInt32Array(47, 48, 46), PackedInt32Array(46, 50, 45), PackedInt32Array(52, 43, 51), PackedInt32Array(51, 43, 44), PackedInt32Array(54, 53, 55), PackedInt32Array(55, 53, 56), PackedInt32Array(51, 57, 52), PackedInt32Array(52, 57, 58), PackedInt32Array(56, 59, 55), PackedInt32Array(35, 36, 58), PackedInt32Array(35, 58, 57), PackedInt32Array(59, 56, 57), PackedInt32Array(57, 56, 35), PackedInt32Array(61, 60, 62), PackedInt32Array(62, 60, 63), PackedInt32Array(65, 64, 66), PackedInt32Array(66, 64, 63), PackedInt32Array(66, 63, 60)]
+border_size = 1.0
+agent_radius = 0.9
+
+[node name="Node" type="Node" unique_id=1071325820]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=813896384]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17.52061, 0)
+
+[node name="Player" parent="." unique_id=134844603 instance=ExtResource("4_0gbd4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, -18)
+
+[node name="NavRegion" type="NavigationRegion3D" parent="." unique_id=1028896755]
+navigation_mesh = SubResource("NavigationMesh_ucevt")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavRegion" unique_id=652229891]
+use_collision = true
+
+[node name="HospitalFloor" type="CSGBox3D" parent="NavRegion/CSGCombiner3D" unique_id=1685449123]
+size = Vector3(23, 6, 42)
+material = ExtResource("1_q1h0t")
+
+[node name="Cutout" type="CSGBox3D" parent="NavRegion/CSGCombiner3D/HospitalFloor" unique_id=717342804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -7.5)
+operation = 2
+size = Vector3(21, 6, 26)
+material = ExtResource("1_q1h0t")
+
+[node name="Entrance" type="CSGBox3D" parent="NavRegion/CSGCombiner3D/HospitalFloor" unique_id=282628396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.99999976, -17.5)
+operation = 2
+size = Vector3(1, 7, 2)
+material = ExtResource("1_q1h0t")
+
+[node name="Backroom" type="CSGBox3D" parent="NavRegion/CSGCombiner3D/HospitalFloor" unique_id=973439936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.5, 12)
+operation = 2
+size = Vector3(14, 6, 13)
+material = ExtResource("1_q1h0t")
+
+[node name="Elevators" parent="NavRegion/CSGCombiner3D" unique_id=555946332 instance=ExtResource("2_ucevt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 6, 0, -13)
+
+[node name="Room" parent="NavRegion" unique_id=1858408311 instance=ExtResource("2_ujp4m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, -4)
+use_collision = true
+
+[node name="Entrance" type="CSGBox3D" parent="NavRegion/Room" unique_id=97115291]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5000002, 0.99999976, -4.000001)
+operation = 2
+size = Vector3(2, 7, 3)
+material = ExtResource("1_q1h0t")
+
+[node name="Room2" parent="NavRegion" unique_id=82553410 instance=ExtResource("2_ujp4m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, 8)
+use_collision = true
+
+[node name="Entrance" type="CSGBox3D" parent="NavRegion/Room2" unique_id=2071132626]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.5000019, 0.9999995, -4.0000005)
+operation = 2
+size = Vector3(3, 7, 2)
+material = ExtResource("1_q1h0t")
+
+[node name="ClosedRoom" parent="NavRegion" unique_id=1360992036 instance=ExtResource("3_jjvbr")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -15)
+use_collision = true
