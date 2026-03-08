@@ -1,34 +1,37 @@
 extends StaticBody3D
 
 
-@export var jupiter: StaticBody3D
+@export var center: StaticBody3D
 @export var speed: float = 50.0
-@export var distance: float = 10.0
+@export var orbital_period: float = 1 # in days
+@export var radius: float = 10.0
 @export var starting_angle: float = 0.0
-var angle: float = 0.0
+@export var inclination: float = 0.0
+@export var eccentricity: float = 0.0
+var current_angle: float = 0.0
 
+const MINUTES_PER_DAY = 1440
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("move_click"):
+		Globals.current_timestep += 5
+		set_orbital_position()
+		#global_position = get_position_at_time(Globals.moon_movement_per_timestep)
+		#current_angle += deg_to_rad(speed) * Globals.moon_movement_per_timestep
+		#print(current_angle)
 func _ready() -> void:
-	global_position = new_pos(5)
+	current_angle = starting_angle
+	global_position = get_position_at_time(0)
 	
+func set_orbital_position():
+	#current_angle += deg_to_rad(speed) * Globals.moon_movement_per_timestep
+	global_position = get_position_at_time(Globals.current_timestep)
+	#Globals.current_timestep += 1
 	
-func new_pos(delta) -> Vector3:
-	angle += deg_to_rad(speed) * delta
+func get_position_at_time(timestep) -> Vector3:
+	var angle = deg_to_rad(speed) * timestep * Globals.moon_movement_per_timestep
+	var x = center.global_position.x + cos(starting_angle + angle) * radius 
+	var z = center.global_position.z + sin(starting_angle + angle) * radius * (1.0 - eccentricity)
+	#var y = jupiter.global_position.y + cos(starting_angle + angle) * distance
 	
-	var x = jupiter.global_position.x + cos(starting_angle + angle) * distance
-	var z = jupiter.global_position.z + sin(starting_angle + angle) * distance
-	var y = jupiter.global_position.y + cos(starting_angle + angle) * distance
-	return Vector3(x, y, z)
-
-func rotate_around(point, axis, angle):
-	
-	# Get transform
-	var trans = transform
-
-	# Rotate its basis
-	var rotated_basis = trans.basis.rotated(axis, angle)
-
-	# Rotate its origin
-	var rotated_origin = point + (trans.origin - point).rotated(axis, angle)
-
-	# Set the result back
-	transform = Transform3D(rotated_basis, rotated_origin)
+	return Vector3(x, center.global_position.y, z)
