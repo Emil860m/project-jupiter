@@ -1,18 +1,13 @@
 [gd_scene format=3 uid="uid://d023beam3t7hj"]
 
-[ext_resource type="PackedScene" uid="uid://cnkvgnh8pqno1" path="res://moon.tscn" id="1_p38eq"]
-[ext_resource type="Script" uid="uid://mywdy6s801uv" path="res://planet_view.gd" id="1_pvshp"]
+[ext_resource type="PackedScene" uid="uid://cnkvgnh8pqno1" path="res://Luner_system/moon.tscn" id="1_p38eq"]
+[ext_resource type="Script" uid="uid://mywdy6s801uv" path="res://Luner_system/planet_view.gd" id="1_pvshp"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="3_hi6cs"]
 [ext_resource type="PackedScene" uid="uid://b56p36sssq7xt" path="res://Components/raycast_component.tscn" id="4_0k8u8"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_dtrs2"]
 radius = 2.0
 height = 4.0
-
-[sub_resource type="Environment" id="Environment_p38eq"]
-background_mode = 1
-
-[sub_resource type="BoxMesh" id="BoxMesh_pvshp"]
 
 [node name="PlanetView" type="Node3D" unique_id=1679912917]
 script = ExtResource("1_pvshp")
@@ -34,29 +29,12 @@ center = NodePath("../Jupiter")
 speed = 17.3
 radius = 4.2
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=11144690 groups=["moon"]]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 25, 0)
-environment = SubResource("Environment_p38eq")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=765328955]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.932185, 0, 8.959137)
-omni_range = 201.587
-
 [node name="Callisto" parent="." unique_id=7216145 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("1_p38eq")]
 center = NodePath("../Jupiter")
 speed = 8.2
 radius = 18.2
 starting_angle = 2.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1522895303]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.964482, 0, -13.713015)
-omni_range = 201.587
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=73432446]
-transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -10.835865, 0)
-mesh = SubResource("BoxMesh_pvshp")
-
 [node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("3_hi6cs")]
 
-[node name="RaycastComponent" parent="." unique_id=693145787 node_paths=PackedStringArray("camera_3d") instance=ExtResource("4_0k8u8")]
-camera_3d = NodePath("../Camera3D")
+[node name="RaycastComponent" parent="." unique_id=693145787 instance=ExtResource("4_0k8u8")]

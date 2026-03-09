@@ -16,8 +16,6 @@ func _ready() -> void:
 	raycast_comp.camera_3d = camera_3d
 
 func _physics_process(delta: float) -> void:
-
-
 	velocity = movement.set_movement_velocity(
 		navigation_agent_3d.get_next_path_position(),
 		global_position,

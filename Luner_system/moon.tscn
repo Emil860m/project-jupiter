@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnkvgnh8pqno1"]
 
-[ext_resource type="Script" uid="uid://85q3ysfq1yhr" path="res://moon.gd" id="1_3tcni"]
+[ext_resource type="Script" uid="uid://85q3ysfq1yhr" path="res://Luner_system/moon.gd" id="1_3tcni"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_p38eq"]
 
