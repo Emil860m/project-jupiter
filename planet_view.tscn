@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cnkvgnh8pqno1" path="res://moon.tscn" id="1_p38eq"]
 [ext_resource type="Script" uid="uid://mywdy6s801uv" path="res://planet_view.gd" id="1_pvshp"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="3_hi6cs"]
+[ext_resource type="PackedScene" uid="uid://b56p36sssq7xt" path="res://Components/raycast_component.tscn" id="4_0k8u8"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_dtrs2"]
 radius = 2.0
@@ -55,6 +56,7 @@ omni_range = 201.587
 transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -10.835865, 0)
 mesh = SubResource("BoxMesh_pvshp")
 
-[node name="InputComponent" parent="." unique_id=840703200 node_paths=PackedStringArray("camera_3d", "world_space") instance=ExtResource("3_hi6cs")]
+[node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("3_hi6cs")]
+
+[node name="RaycastComponent" parent="." unique_id=693145787 node_paths=PackedStringArray("camera_3d") instance=ExtResource("4_0k8u8")]
 camera_3d = NodePath("../Camera3D")
-world_space = NodePath("..")

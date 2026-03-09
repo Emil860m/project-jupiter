@@ -2,15 +2,22 @@ extends Node3D
 
 var selected: StaticBody3D
 @onready var input_comp: input_component = $InputComponent
+@onready var raycast_comp: raycast_component = $RaycastComponent
 
 
-func _ready() -> void:
-	input_comp.func_on_click = select_moon
 
-func select_moon(collider):
+func _process(_delta: float) -> void:
+	if input_comp.get_select_input():
+		select_moon(raycast_comp.send_raycast_from_screen())
+
+func select_moon(hit):
+	if hit == null:
+		return
+	if not hit.has("collider"):
+		return
 	if selected != null:
 		selected.set_selected(false)
 	
-	selected = collider
-	if selected.is_in_group("moon"):
+	if hit.collider.is_in_group("moon"):
+		selected = hit.collider
 		selected.set_selected(true)
