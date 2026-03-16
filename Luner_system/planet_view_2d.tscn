@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://blydwht5d8cue"]
+
+[ext_resource type="Script" uid="uid://cbpvb7301r142" path="res://Luner_system/planet_view_2d.gd" id="1_l0xxy"]
+[ext_resource type="PackedScene" uid="uid://bte2u56r132tv" path="res://Luner_system/moon_2d.tscn" id="2_s3bh8"]
+[ext_resource type="PackedScene" uid="uid://cr04mmvo0moc7" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l0xxy"]
+
+[node name="PlanetView2d" type="Node2D" unique_id=618163059]
+script = ExtResource("1_l0xxy")
+
+[node name="Jupiter" type="StaticBody2D" parent="." unique_id=1425320544]
+
+[node name="Sprite2D" type="Sprite2D" parent="Jupiter" unique_id=1251946925]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jupiter" unique_id=1020449411]
+shape = SubResource("CircleShape2D_l0xxy")
+
+[node name="Moon2d" parent="." unique_id=1495557927 instance=ExtResource("2_s3bh8")]
+
+[node name="Raycast2dComponent" parent="." unique_id=1529308835 instance=ExtResource("3_sgy7y")]
