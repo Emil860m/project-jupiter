@@ -9,7 +9,7 @@ const SPEED = 5.0
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_component = $RaycastComponent
 
-@export var movement: Node
+@onready var movement_component: Node = $movement_component
 
 
 func _ready() -> void:
