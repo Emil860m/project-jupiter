@@ -39,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, -5)
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
 debug_enabled = true
 
-[node name="Movement" type="Node" parent="." unique_id=1328033895]
+[node name="MovementComponent" type="Node" parent="." unique_id=1328033895]
 script = ExtResource("3_i3pqv")
 
 [node name="RaycastComponent" parent="." unique_id=693145787 instance=ExtResource("4_sweqy")]

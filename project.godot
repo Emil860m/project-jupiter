@@ -16,7 +16,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*uid://ihfy7ewtquwy"
+SignalBus="*uid://b8lo2mbp3e1wt"
+<<<<<<<UpdatedupstreamGlobals="*uid://ihfy7ewtquwy"
 
 [input]
 

@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
@@ -8,25 +7,32 @@ const SPEED = 5.0
 @onready var camera_marker: Marker3D = $CameraMarker
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_component = $RaycastComponent
+@onready var movement_component: Node = $MovementComponent
 
-@onready var movement_component: Node = $movement_component
+@export var interact_dist = 3
+
+var interact_object: Node = null
 
 
 func _ready() -> void:
 	raycast_comp.camera_3d = camera_3d
+	SignalBus.object_clicked.connect(_on_object_clicked)
 
 func _physics_process(delta: float) -> void:
-	velocity = movement.set_movement_velocity(
+	if interact_object != null:
+		if interact_object.global_position.distance_to(self.global_position) < interact_dist:
+			interact_object.runner()
+			interact_object = null
+	velocity = movement_component.set_movement_velocity(
 		navigation_agent_3d.get_next_path_position(),
 		global_position,
 		SPEED
 		)
-	
-	
 	move_and_slide()
 	
 func _process(delta: float) -> void:
 	if input_comp.get_select_input():
+		interact_object = null
 		handle_raycast(raycast_comp.send_raycast_from_screen())
 	camera_3d.global_position = camera_marker.global_position
 
@@ -35,4 +41,10 @@ func handle_raycast(hit):
 		return
 	if hit.has("position"):
 		navigation_agent_3d.target_position = hit.position
+	if Input.is_action_just_pressed("debug_click"):
+		print(interact_object)
+	camera_3d.global_position = camera_marker.global_position
 	
+	
+func _on_object_clicked(object: Node):
+	interact_object = object
