@@ -14,6 +14,10 @@ config/name="project-jupiter"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*uid://ihfy7ewtquwy"
+
 [input]
 
 move_click={
