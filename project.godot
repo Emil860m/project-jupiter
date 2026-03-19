@@ -18,6 +18,12 @@ config/icon="res://icon.svg"
 
 Globals="*uid://ihfy7ewtquwy"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+
 [input]
 
 move_click={
@@ -37,4 +43,5 @@ debug_click={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
