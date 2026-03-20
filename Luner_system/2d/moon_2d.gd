@@ -11,8 +11,10 @@ var planetview: Node2D
 @export var inclination: float = 0.0
 @export var eccentricity: float = 0.0
 @export var sprite: Texture2D
+@export var displayName: String
 var current_angle: float = 0.0
 var selected: bool = false
+var estimated_travel_time: int
 
 @onready var estimated_loc: Sprite2D = $estimated_loc
 @onready var youAreHere: Sprite2D = $YouAreHere
@@ -44,6 +46,7 @@ func set_orbital_position():
 func set_estimated_loc(timestep, current_loc):
 	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + timestep)
 	estimated_loc.look_at(current_loc)
+	estimated_travel_time = timestep
 
 func get_position_at_time(timestep) -> Vector2:
 	if center != null:

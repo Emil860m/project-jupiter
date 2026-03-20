@@ -6,11 +6,15 @@ var selected: Area2D
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_2d_component = $Raycast2dComponent
 @onready var moons: Node2D = $MoonParent
+@export var selectedMoonLabel: Label
+@export var currentLocationLabel: Label
+@export var estimatedTravelLabel: Label
 var current_location: moon_2d
 
 func _ready() -> void:
 	raycast_comp.camera_2d = camera_2d
 	current_location = get_node("MoonParent/" + Globals.current_moon)
+	currentLocationLabel.text = current_location.displayName
 	var current_location_vector = current_location.global_position
 	current_location.youAreHere.visible = true
 	for m in moons.get_children():
@@ -34,7 +38,10 @@ func select_moon(hit):
 		return
 	if selected != null:
 		selected.set_selected(false)
+		selectedMoonLabel.text = "None"
 	if hit.is_in_group("moon"):
 		selected = hit
 		selected.set_selected(true)
+		selectedMoonLabel.text = hit.displayName
+		estimatedTravelLabel.text = str(hit.estimated_travel_time)
 	
