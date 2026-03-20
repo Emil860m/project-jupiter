@@ -9,9 +9,10 @@ const SPEED = 5.0
 @onready var raycast_comp: raycast_component = $RaycastComponent
 @onready var movement_component: Node = $MovementComponent
 
-@export var interact_dist = 3
+@export var interact_dist = 2.5
 
 var interact_object: Node = null
+var interact_click: bool = false
 
 
 func _ready() -> void:
@@ -32,7 +33,10 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	if input_comp.get_select_input():
-		interact_object = null
+		PlayerStats.education = randi() % 10
+		if !interact_click:
+			interact_object = null
+		interact_click = false
 		handle_raycast(raycast_comp.send_raycast_from_screen())
 	camera_3d.global_position = camera_marker.global_position
 
@@ -48,3 +52,4 @@ func handle_raycast(hit):
 	
 func _on_object_clicked(object: Node):
 	interact_object = object
+	interact_click = true

@@ -12,5 +12,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_click"):
+		print(PlayerStats.education)
 		worker_room.visible = !worker_room.visible
 		worker_room_door.visible = !worker_room_door.visible
