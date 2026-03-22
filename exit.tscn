@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bc4ho6kbeqpy3"]
+
+[ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_6sfst"]
+[ext_resource type="Script" uid="uid://bb7gqhqwl5mte" path="res://exit.gd" id="2_24kvk"]
+[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="3_mlcv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pinn1"]
+size = Vector3(8, 5, 0.5)
+
+[node name="Exit" type="CSGBox3D" unique_id=1915521577]
+size = Vector3(8, 5, 0.5)
+material = ExtResource("1_6sfst")
+script = ExtResource("2_24kvk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=473548553]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=9363786]
+shape = SubResource("BoxShape3D_pinn1")
+
+[node name="InteractableComponent" parent="StaticBody3D/CollisionShape3D" unique_id=1146505506 instance=ExtResource("3_mlcv5")]
+
+[connection signal="input_event" from="StaticBody3D" to="." method="_on_static_body_3d_input_event"]

@@ -5,7 +5,6 @@ var mat = null
 
 func _physics_process(delta: float) -> void:
 	var t = delta * 0.8
-	print(mat.albedo_color.a)
 	if (fade_out && mat.albedo_color.a >= 0.2 || !fade_out && mat.albedo_color.a <= 1):
 		if (fade_out):
 			mat.albedo_color.a = mat.albedo_color.a - (mat.albedo_color.a -0.1 ) * t

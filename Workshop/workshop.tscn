@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://vodb7twlkt1p"]
+
+[ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_ruomw"]
+[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="2_mvvd2"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_mvvd2"]
+vertices = PackedVector3Array(-19, 1, -17, -19, 1, 19, 16, 1, 19, 16, 1, -17)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[node name="Node3D" type="Node3D" unique_id=1012072473]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=840333211]
+navigation_mesh = SubResource("NavigationMesh_mvvd2")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=71882906]
+use_collision = true
+
+[node name="Floor" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=890023327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -2.9802322e-08, 1)
+size = Vector3(36, 1, 37)
+material = ExtResource("1_ruomw")
+
+[node name="Workshop" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1211792103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 3, -7)
+size = Vector3(6, 5, 17)
+material = ExtResource("1_ruomw")
+
+[node name="Player" parent="." unique_id=134844603 instance=ExtResource("2_mvvd2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.6, -11)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=329004573]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 25, 0)

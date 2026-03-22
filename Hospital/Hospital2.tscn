@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://dap5xdobtef3w" path="res://Hospital/fadeout_test.gd" id="5_o1bgc"]
 [ext_resource type="PackedScene" uid="uid://dm846q37cl6ql" path="res://Shaders/outline_shader_test.tscn" id="6_7fkrr"]
 [ext_resource type="PackedScene" uid="uid://cltlbsqy63oj" path="res://Components/fadeout_component.tscn" id="6_o1bgc"]
+[ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://exit.tscn" id="9_natc4"]
+[ext_resource type="PackedScene" uid="uid://vodb7twlkt1p" path="res://Workshop/workshop.tscn" id="10_2756i"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ispbn"]
 vertices = PackedVector3Array(-7.5, 3.5, -22.5, -7.5, 3.5, -15.5, 16.5, 3.5, -15.5, 16.5, 3.5, -22.5, -7.75, -2, -11.5, -7.75, -2, -13.25, -8.75, -2, -13.25, -8.75, -2, -11.5, -9.5, -2, -14, -9.5, -2, -21.25, -15.25, -2, -21.25, -15.25, -2, -10.5, -9.5, -2, -10.5, -7, -2, -11.5, -6.25, -2, -10.75, 1.75, -2, -13.25, 1.5, -2, -5.25, 1.75, -2, -7, -6.25, -2, -5.5, 6, -2, -7.5, 6.75, -2, -6.5, 7.5, -2, -6.5, 8.25, -2, -7.5, 15, -2, -8.5, 15.75, -2, -7.5, 16.5, -2, -7.5, 16.5, -2, -13.25, 9.5, -2, -7.5, 10.25, -2, -8.5, 2.25, -2, -7.5, -8.5, 3.5, -1.5, -8.25, 3.5, -6.75, -8.25, 3.5, -8.5, -16.5, 3.5, -8.5, -16.5, 3.5, -1.5, -6.25, -2, -1.75, 1.5, -2, -1.5, 3.5, 3.5, -5.5, 3.5, 3.5, 27.5, 16.5, 3.5, 27.5, 16.5, 3.5, -5.5, -9.25, 0, -5.25, -9.25, 0, -3.5, -8.5, 0, -3.5, -8.5, 0, -5.25, -9.75, -2, 9.25, -11, -2, 9.25, -11, -2, 11.5, -8.75, -2, 8.25, -5, -2, 11.5, -6.25, -2, -0.25, -7.25, -2, 0.75, -9, -2, 0.75, -9, -2, 5.5, -4.25, -2, 12.75, 1.5, -2, 12.75, -12.25, -2, 9.25, -13, -2, 8.5, -15.25, -2, 11.5, -13, -2, 5.75, -12.25, -2, 5, -15.25, -2, 0.75, -9.5, -2, 5, -5.25, -2, 14.25, -6.25, -2, 14.25, -6, -2, 17, -5, -2, 17, -4.25, -2, 17.75, -4.25, -2, 19.25, 1.5, -2, 19, -6.75, -2, 17, -7.5, -2, 17.75, -15.25, -2, 14.25, -15.25, -2, 26.5, -7.5, -2, 26.5, -4.25, -2, 26.5, 1.5, -2, 26.5)
@@ -133,7 +135,12 @@ operation = 2
 size = Vector3(3, 5, 1)
 material = ExtResource("2_8j3s2")
 
-[node name="Node3D" parent="NavigationRegion3D" unique_id=1883052071 instance=ExtResource("6_7fkrr")]
+[node name="Exit" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1915521577 instance=ExtResource("9_natc4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.5, 0, -10.5)
+material = ExtResource("4_fj7dm")
+scene_to_load = ExtResource("10_2756i")
+
+[node name="Interact_test" parent="NavigationRegion3D" unique_id=1883052071 instance=ExtResource("6_7fkrr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -1.5, 7)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2036067606]
@@ -142,4 +149,4 @@ transform = Transform3D(0.94856006, 0.31211478, 0.053086936, -0.061307922, 0.016
 [connection signal="body_entered" from="NavigationRegion3D/CSGCombiner3D/Room/CSGBox3D3/Area3D" to="NavigationRegion3D/CSGCombiner3D/Room/CSGBox3D3" method="_on_area_3d_body_entered"]
 [connection signal="input_event" from="NavigationRegion3D/CSGCombiner3D/LogSystem/Area3D" to="NavigationRegion3D/CSGCombiner3D/LogSystem" method="_on_area_3d_input_event"]
 
-[editable path="NavigationRegion3D/Node3D"]
+[editable path="NavigationRegion3D/Interact_test"]
