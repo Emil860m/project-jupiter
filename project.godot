@@ -14,6 +14,12 @@ config/name="project-jupiter"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SignalBus="*uid://b8lo2mbp3e1wt"
+<<<<<<<UpdatedupstreamGlobals="*uid://ihfy7ewtquwy"
+PlayerStats="*uid://ddpa3wdwu0ah3"
+
 [input]
 
 move_click={

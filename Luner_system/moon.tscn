@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cnkvgnh8pqno1"]
+
+[ext_resource type="Script" uid="uid://85q3ysfq1yhr" path="res://Luner_system/moon.gd" id="1_3tcni"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_p38eq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3tcni"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3tcni"]
+
+[node name="Moon" type="StaticBody3D" unique_id=909652346]
+script = ExtResource("1_3tcni")
+
+[node name="model" type="MeshInstance3D" parent="." unique_id=153960357]
+mesh = SubResource("SphereMesh_p38eq")
+
+[node name="estimated_loc" type="MeshInstance3D" parent="." unique_id=2105076162]
+mesh = SubResource("BoxMesh_3tcni")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2045080135]
+shape = SubResource("SphereShape3D_3tcni")
