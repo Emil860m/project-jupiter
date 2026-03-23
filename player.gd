@@ -45,7 +45,6 @@ func handle_raycast(hit):
 		return
 	if hit.has("position"):
 		navigation_agent_3d.target_position = hit.position
-		print("something")
 	if Input.is_action_just_pressed("debug_click"):
 		print(interact_object)
 	camera_3d.global_position = camera_marker.global_position

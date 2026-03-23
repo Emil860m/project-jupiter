@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dwhagy4vc2hld"]
+
+[ext_resource type="Script" uid="uid://itvdqqxpypo6" path="res://canvas_layer.gd" id="1_b3bc3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b3bc3"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="Control" unique_id=1309283280]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+script = ExtResource("1_b3bc3")
+
+[node name="TimeLabel" type="Label" parent="." unique_id=901210064]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_right = 65.5
+offset_bottom = 36.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Some Text"
+label_settings = SubResource("LabelSettings_b3bc3")
