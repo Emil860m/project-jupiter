@@ -51,7 +51,7 @@ func _on_travel_button_up() -> void:
 	if selected:
 		Globals.current_timestep += selected.estimated_travel_time
 		Globals.current_moon = selected.name
-		if selected.travelScene:
-			SceneController.goto_scene(selected.travelScene.resource_path)
+		if selected.travelScenePath:
+			SceneController.goto_scene(selected.travelScenePath)
 		else:
 			SceneController.reload_scene()

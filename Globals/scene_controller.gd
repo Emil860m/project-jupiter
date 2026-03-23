@@ -18,6 +18,7 @@ func goto_scene(path):
 
 func _deferred_goto_scene(path):
 	var old = get_tree().current_scene
+	print(path)
 	var s = ResourceLoader.load(path)
 
 	var inst = s.instantiate()

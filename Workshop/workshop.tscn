@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_ruomw"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="2_mvvd2"]
 [ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://exit.tscn" id="3_0f4vu"]
-[ext_resource type="PackedScene" uid="uid://c8lklyyis4umu" path="res://Hospital/Hospital2.tscn" id="4_5y4ig"]
+[ext_resource type="PackedScene" uid="uid://dg42y40qkysex" path="res://node_3d.tscn" id="4_5y4ig"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_mvvd2"]
 vertices = PackedVector3Array(-19, 1, -17, -19, 1, 19, 16, 1, 19, 16, 1, -17)
