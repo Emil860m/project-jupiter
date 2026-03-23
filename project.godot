@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*uid://ihfy7ewtquwy"
+SceneController="*uid://cdmxc1gx4ekl8"
 
 [display]
 

@@ -12,6 +12,7 @@ var planetview: Node2D
 @export var eccentricity: float = 0.0
 @export var sprite: Texture2D
 @export var displayName: String
+@export var travelScene: PackedScene
 var current_angle: float = 0.0
 var selected: bool = false
 var estimated_travel_time: int
@@ -26,17 +27,19 @@ func set_selected(b: bool):
 	selected = b
 	estimated_loc.visible = b
 	selectedSprite.visible = b
+#var time = 0
 #func _process(delta: float) -> void:
-#	if Input.is_action_just_pressed("move_click"):
-#		Globals.current_timestep += 5
+#	time += delta
+#	if time > 0.2:
+#		Globals.current_timestep += 1
 #		set_orbital_position()
-#		set_estimated_loc(5)
+#		time = 0
 		
 func _ready() -> void:
 	$Sprite2D.texture = sprite
 	estimated_loc.texture = sprite
 	current_angle = starting_angle
-	global_position = get_position_at_time(0)
+	set_orbital_position()
 	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + 5)
 	estimated_loc.visible = false
 	

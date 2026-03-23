@@ -12,6 +12,7 @@ var selected: Area2D
 var current_location: moon_2d
 
 func _ready() -> void:
+	print(Globals.current_timestep)
 	raycast_comp.camera_2d = camera_2d
 	current_location = get_node("MoonParent/" + Globals.current_moon)
 	currentLocationLabel.text = current_location.displayName
@@ -31,7 +32,6 @@ func _process(_delta: float) -> void:
 		#select_moon(raycast_comp.send_raycast_from_screen())
 
 func select_moon(hit):
-	print(hit)
 	if hit == null:
 		return
 	if hit == current_location:
@@ -45,3 +45,13 @@ func select_moon(hit):
 		selectedMoonLabel.text = hit.displayName
 		estimatedTravelLabel.text = str(hit.estimated_travel_time)
 	
+
+
+func _on_travel_button_up() -> void:
+	if selected:
+		Globals.current_timestep += selected.estimated_travel_time
+		Globals.current_moon = selected.name
+		if selected.travelScene:
+			SceneController.goto_scene(selected.travelScene.resource_path)
+		else:
+			SceneController.reload_scene()

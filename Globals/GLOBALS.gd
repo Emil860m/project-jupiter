@@ -6,4 +6,4 @@ var current_timestep = 0
 var max_travel_distance = 360
 var current_moon: String = "Ganymede" # todo: set default moon
 @export_subgroup("Ship stats")
-@export var travel_speed: float = 1
+@export var travel_speed: float = 20

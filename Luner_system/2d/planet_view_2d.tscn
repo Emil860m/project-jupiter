@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cr04mmvo0moc7" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="6_hpwom"]
 [ext_resource type="Texture2D" uid="uid://bkdf436lcp53" path="res://Textures/MapUI/002_MapUI_callisto.png" id="6_l0otk"]
+[ext_resource type="PackedScene" uid="uid://c8lklyyis4umu" path="res://Hospital/Hospital2.tscn" id="7_ttfwe"]
 [ext_resource type="Texture2D" uid="uid://djljvypx8740c" path="res://Textures/MapUI/007_MapUI_thePonds.png" id="7_ydf4a"]
 [ext_resource type="Texture2D" uid="uid://kh46cvmjlnll" path="res://Textures/MapUI/008_MapUI_theRational.png" id="8_p17up"]
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="10_p17up"]
@@ -46,6 +47,7 @@ speed = 8.2
 radius = 364.0
 sprite = ExtResource("6_l0otk")
 displayName = "Callisto"
+travelScene = ExtResource("7_ttfwe")
 
 [node name="ThePonds" parent="MoonParent" unique_id=1184550554 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
@@ -116,3 +118,10 @@ offset_top = -76.0
 offset_right = -77.0
 offset_bottom = -53.0
 text = "N/A"
+
+[node name="Button" type="Button" parent="UiElements" unique_id=2141699318]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Travel"
+
+[connection signal="button_up" from="UiElements/Button" to="." method="_on_travel_button_up"]
