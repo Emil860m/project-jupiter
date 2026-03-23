@@ -1,0 +1,30 @@
+extends Node
+
+func get_current_scene_path() -> String:
+	# Always return a valid path; updates cache when possible
+	var s = get_tree().current_scene
+	if s:
+		return s.scene_file_path
+	return ""
+
+func reload_scene():
+	# Avoid reload_current_scene(); it can leave current_scene transiently invalid.
+	goto_scene(get_current_scene_path())
+
+func goto_scene(path):
+	_deferred_goto_scene.call_deferred(path)
+	
+
+
+func _deferred_goto_scene(path):
+	var old = get_tree().current_scene
+	print(path)
+	var s = ResourceLoader.load(path)
+
+	var inst = s.instantiate()
+
+	get_tree().root.add_child(inst)
+	get_tree().current_scene = inst
+
+	if is_instance_valid(old):
+		old.queue_free()

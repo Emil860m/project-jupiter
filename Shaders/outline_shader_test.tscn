@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dm846q37cl6ql"]
+
+[ext_resource type="Shader" uid="uid://dr5xvwejlnd1o" path="res://Shaders/outline_shader_test_interacted.gdshader" id="1_lc66a"]
+[ext_resource type="Script" uid="uid://jao8n5fw48yn" path="res://mesh_instance_3d.gd" id="2_pxa67"]
+[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="3_djy1k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lc66a"]
+render_priority = 0
+shader = ExtResource("1_lc66a")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_lc66a"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxa67"]
+size = Vector3(2, 2, 2)
+
+[node name="Node3D" type="Node3D" unique_id=1883052071]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2082337183]
+material_overlay = SubResource("ShaderMaterial_lc66a")
+mesh = SubResource("BoxMesh_lc66a")
+script = ExtResource("2_pxa67")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=435631889]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1384260008]
+shape = SubResource("BoxShape3D_pxa67")
+
+[node name="InteractableComponent" parent="MeshInstance3D/StaticBody3D" unique_id=386515781 instance=ExtResource("3_djy1k")]
+
+[connection signal="input_event" from="MeshInstance3D/StaticBody3D" to="MeshInstance3D" method="_on_static_body_3d_input_event"]

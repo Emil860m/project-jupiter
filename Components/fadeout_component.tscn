@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cltlbsqy63oj"]
+
+[ext_resource type="Script" uid="uid://dpyp3fn40sydu" path="res://Components/fadeout_compoennt.gd" id="1_qdwcy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o1bgc"]
+
+[node name="Area3D" type="Area3D" unique_id=1283104052]
+script = ExtResource("1_qdwcy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=105825421]
+shape = SubResource("BoxShape3D_o1bgc")

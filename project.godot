@@ -16,7 +16,16 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SignalBus="*uid://b8lo2mbp3e1wt"
+PlayerStats="*uid://ddpa3wdwu0ah3"
 Globals="*uid://ihfy7ewtquwy"
+SceneController="*uid://cdmxc1gx4ekl8"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
 
 [input]
 
@@ -37,4 +46,5 @@ debug_click={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

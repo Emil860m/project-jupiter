@@ -17,9 +17,8 @@ albedo_texture = ExtResource("1_4flbx")
 material = SubResource("StandardMaterial3D_i3pqv")
 size = Vector3(0.8, 2, 0.8)
 
-[node name="Player" type="CharacterBody3D" unique_id=134844603 node_paths=PackedStringArray("movement")]
+[node name="Player" type="CharacterBody3D" unique_id=134844603]
 script = ExtResource("1_onrkg")
-movement = NodePath("Movement")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=651148158]
 shape = SubResource("BoxShape3D_onrkg")
@@ -40,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, -5)
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
 debug_enabled = true
 
-[node name="Movement" type="Node" parent="." unique_id=1328033895]
+[node name="MovementComponent" type="Node" parent="." unique_id=1328033895]
 script = ExtResource("3_i3pqv")
 
 [node name="RaycastComponent" parent="." unique_id=693145787 instance=ExtResource("4_sweqy")]

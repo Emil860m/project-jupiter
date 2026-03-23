@@ -1,7 +1,7 @@
 extends StaticBody3D
 
 class_name moon
-@export var center: StaticBody3D
+@export var center: Node3D
 @export var speed: float = 50.0
 @export var orbital_period: float = 1 # in days
 @export var radius: float = 10.0
@@ -18,16 +18,11 @@ const MINUTES_PER_DAY = 1440
 func set_selected(b: bool):
 	selected = b
 	estimated_loc.visible = b
-#func _process(delta: float) -> void:
-#	if Input.is_action_just_pressed("move_click"):
-#		Globals.current_timestep += 5
-#		set_orbital_position()
-#		set_estimated_loc(5)
 		
 func _ready() -> void:
 	current_angle = starting_angle
 	global_position = get_position_at_time(0)
-	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + 5)
+	estimated_loc.global_position = get_position_at_time(Globals.current_timestep)
 	estimated_loc.visible = false
 	
 func set_orbital_position():

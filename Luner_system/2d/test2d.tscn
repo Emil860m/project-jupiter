@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://br0sx80oa7x8w"]
+
+[ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="1_1l4kd"]
+[ext_resource type="PackedScene" uid="uid://blydwht5d8cue" path="res://Luner_system/2d/planet_view_2d.tscn" id="1_ut2ef"]
+
+[node name="Test2d" type="Node2D" unique_id=2028741739]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127771672]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(65.00008, -128.5)
+scale = Vector2(23.953125, 12.3671875)
+texture = ExtResource("1_1l4kd")
+
+[node name="PlanetView2d" parent="." unique_id=618163059 node_paths=PackedStringArray("camera_2d") instance=ExtResource("1_ut2ef")]
+camera_2d = NodePath("../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1932443995]
