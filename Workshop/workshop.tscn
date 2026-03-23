@@ -2,6 +2,8 @@
 
 [ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_ruomw"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="2_mvvd2"]
+[ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://exit.tscn" id="3_0f4vu"]
+[ext_resource type="PackedScene" uid="uid://c8lklyyis4umu" path="res://Hospital/Hospital2.tscn" id="4_5y4ig"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_mvvd2"]
 vertices = PackedVector3Array(-19, 1, -17, -19, 1, 19, 16, 1, 19, 16, 1, -17)
@@ -24,6 +26,10 @@ material = ExtResource("1_ruomw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 3, -7)
 size = Vector3(6, 5, 17)
 material = ExtResource("1_ruomw")
+
+[node name="Exit" parent="NavigationRegion3D" unique_id=1915521577 instance=ExtResource("3_0f4vu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.650883, 3, -13.615499)
+scene_to_load = ExtResource("4_5y4ig")
 
 [node name="Player" parent="." unique_id=134844603 instance=ExtResource("2_mvvd2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.6, -11)
