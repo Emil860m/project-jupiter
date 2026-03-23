@@ -9,5 +9,7 @@ var current_moon: String = "Ganymede" # todo: set default moon
 @export var travel_speed: float = 20
 
 func increment_timestep(increment: int):
+	print(current_timestep)
+	print(increment)
 	current_timestep += increment
 	SignalBus.time_step_changed.emit()

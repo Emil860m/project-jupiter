@@ -10,7 +10,7 @@ func runner():
 	if !interacted:
 		print("First time interaction")
 		print("Do something with the time")
-		Globals.increment_timestep(11)
+		Globals.increment_timestep(time_pass)
 	interacted = true
 	interact.call()
 	
