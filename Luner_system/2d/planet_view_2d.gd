@@ -12,7 +12,6 @@ var selected: Area2D
 var current_location: moon_2d
 
 func _ready() -> void:
-	print(Globals.current_timestep)
 	raycast_comp.camera_2d = camera_2d
 	current_location = get_node("MoonParent/" + Globals.current_moon)
 	currentLocationLabel.text = current_location.displayName
@@ -22,7 +21,6 @@ func _ready() -> void:
 		m.planetview = self
 		for i in range(Globals.max_travel_distance):
 			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= Globals.travel_speed * i:
-				print(m.name + ": " + str(i))
 				m.set_estimated_loc(i, current_location_vector)
 				m.estimated_travel_time = i
 				break
