@@ -20,13 +20,15 @@ var estimated_travel_time: int
 @onready var estimated_loc: Sprite2D = $estimated_loc
 @onready var youAreHere: Sprite2D = $YouAreHere
 @onready var selectedSprite: Sprite2D = $selected
+@onready var direction: Node2D = $estimated_loc/direction
 
 const MINUTES_PER_DAY = 1440
 
 func set_selected(b: bool):
 	selected = b
-	estimated_loc.visible = b
+	#estimated_loc.visible = b
 	selectedSprite.visible = b
+	direction.visible = b
 #var time = 0
 #func _process(delta: float) -> void:
 #	time += delta
@@ -41,15 +43,17 @@ func _ready() -> void:
 	current_angle = starting_angle
 	set_orbital_position()
 	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + 5)
-	estimated_loc.visible = false
+	#estimated_loc.visible = false
+	direction.visible = false
+	estimated_loc.self_modulate.a = 0.5
 	
 func set_orbital_position():
 	global_position = get_position_at_time(Globals.current_timestep)
 
 func set_estimated_loc(timestep, current_loc):
 	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + timestep)
-	estimated_loc.look_at(current_loc)
-	estimated_travel_time = timestep
+	direction.look_at(current_loc)
+	#estimated_travel_time = timestep
 
 func get_position_at_time(timestep) -> Vector2:
 	if center != null:

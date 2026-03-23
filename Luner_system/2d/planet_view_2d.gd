@@ -24,12 +24,9 @@ func _ready() -> void:
 			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= Globals.travel_speed * i:
 				print(m.name + ": " + str(i))
 				m.set_estimated_loc(i, current_location_vector)
+				m.estimated_travel_time = i
 				break
 
-func _process(_delta: float) -> void:
-	if input_comp.get_select_input():
-		pass
-		#select_moon(raycast_comp.send_raycast_from_screen())
 
 func select_moon(hit):
 	if hit == null:
@@ -44,6 +41,8 @@ func select_moon(hit):
 		selected.set_selected(true)
 		selectedMoonLabel.text = hit.displayName
 		estimatedTravelLabel.text = str(hit.estimated_travel_time)
+		for m in moons.get_children():
+			m.set_estimated_loc(hit.estimated_travel_time, current_location.global_position)
 	
 
 
