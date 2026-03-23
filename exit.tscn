@@ -19,5 +19,6 @@ scene_to_load_path = "res://Luner_system/2d/test2d.tscn"
 shape = SubResource("BoxShape3D_pinn1")
 
 [node name="InteractableComponent" parent="StaticBody3D/CollisionShape3D" unique_id=1146505506 instance=ExtResource("3_mlcv5")]
+time_pass = 0
 
 [connection signal="input_event" from="StaticBody3D" to="." method="_on_static_body_3d_input_event"]

@@ -3,11 +3,12 @@
 [ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_ruomw"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="2_mvvd2"]
 [ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://exit.tscn" id="3_0f4vu"]
-[ext_resource type="PackedScene" uid="uid://dg42y40qkysex" path="res://node_3d.tscn" id="4_5y4ig"]
+[ext_resource type="PackedScene" uid="uid://dwhagy4vc2hld" path="res://UI.tscn" id="4_5y4ig"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_mvvd2"]
-vertices = PackedVector3Array(-19, 1, -17, -19, 1, 19, 16, 1, 19, 16, 1, -17)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-17.5, 1, -15.865498, -16.75, 1, -16.615498, -18.5, 1, -16.615498, -17.5, 1, 1.8845024, -18.5, 1, 18.384502, 15.5, 1, 0.6345024, -9.25, 1, 0.3845024, -9.25, 1, 1.8845024, -16.75, 1, 2.6345024, -10, 1, 2.6345024, 15.5, 1, 18.384502, 15.25, 1, -16.615498, -10, 1, -16.615498, -9.25, 1, -15.865498, -15.5, 6, -14.615498, -15.5, 6, 0.6345024, -11.5, 6, 0.6345024, -11.5, 6, -14.615498, -15.25, 1, -14.365498, -15.25, 1, 0.3845024, -11.5, 1, 0.3845024, -11.5, 1, -14.365498)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(7, 6, 5), PackedInt32Array(4, 3, 8), PackedInt32Array(4, 8, 9), PackedInt32Array(9, 7, 4), PackedInt32Array(4, 7, 5), PackedInt32Array(4, 5, 10), PackedInt32Array(13, 12, 11), PackedInt32Array(13, 11, 6), PackedInt32Array(6, 11, 5), PackedInt32Array(17, 16, 14), PackedInt32Array(14, 16, 15), PackedInt32Array(21, 20, 18), PackedInt32Array(18, 20, 19)]
+agent_radius = 1.0
 
 [node name="Node3D" type="Node3D" unique_id=1012072473]
 
@@ -29,10 +30,11 @@ material = ExtResource("1_ruomw")
 
 [node name="Exit" parent="NavigationRegion3D" unique_id=1915521577 instance=ExtResource("3_0f4vu")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.650883, 3, -13.615499)
-scene_to_load = ExtResource("4_5y4ig")
 
 [node name="Player" parent="." unique_id=134844603 instance=ExtResource("2_mvvd2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.6, -11)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=329004573]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 25, 0)
+
+[node name="UI" parent="." unique_id=1309283280 instance=ExtResource("4_5y4ig")]
