@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bte2u56r132tv"]
+
+[ext_resource type="Script" uid="uid://btu0m70dy4yfs" path="res://Luner_system/2d/moon_2d.gd" id="1_6xeag"]
+[ext_resource type="Texture2D" uid="uid://bqgjdircq5020" path="res://Textures/MapUI/003_MapUI_arrowHead.png" id="2_il48s"]
+[ext_resource type="Texture2D" uid="uid://vb7t2tm832gd" path="res://Textures/MapUI/005_MapUI_selectetPlanet.png" id="2_jbmmh"]
+[ext_resource type="Texture2D" uid="uid://wm7jqjb62tby" path="res://Textures/MapUI/004_MapUI_arrowBody.png" id="3_1rqb0"]
+[ext_resource type="Texture2D" uid="uid://bup5jewhqwn17" path="res://Textures/MapUI/006_MapUI_selectedDestination.png" id="3_caebh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6xeag"]
+radius = 25.019993
+
+[node name="Moon2d" type="Area2D" unique_id=1184550554]
+script = ExtResource("1_6xeag")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2143419481]
+
+[node name="estimated_loc" type="Sprite2D" parent="." unique_id=857844219]
+
+[node name="direction" type="Node2D" parent="estimated_loc" unique_id=1456533699]
+
+[node name="arrow" type="Sprite2D" parent="estimated_loc/direction" unique_id=1813780986]
+position = Vector2(40, 0)
+texture = ExtResource("2_il48s")
+
+[node name="Sprite2D" type="Sprite2D" parent="estimated_loc/direction" unique_id=50044397]
+position = Vector2(70, 0)
+texture = ExtResource("3_1rqb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=296438334]
+shape = SubResource("CircleShape2D_6xeag")
+
+[node name="YouAreHere" type="Sprite2D" parent="." unique_id=177738678]
+visible = false
+texture = ExtResource("2_jbmmh")
+
+[node name="selected" type="Sprite2D" parent="." unique_id=1560463259]
+visible = false
+texture = ExtResource("3_caebh")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

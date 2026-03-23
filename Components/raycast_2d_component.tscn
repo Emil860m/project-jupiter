@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cr04mmvo0moc7"]
+
+[ext_resource type="Script" uid="uid://b853oxwcrwt08" path="res://Components/raycast_2d_component.gd" id="1_lrtgp"]
+
+[node name="Raycast2dComponent" type="Node2D" unique_id=1529308835]
+script = ExtResource("1_lrtgp")
