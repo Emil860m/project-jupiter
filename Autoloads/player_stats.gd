@@ -9,7 +9,7 @@ enum PlayerStatTypes {
 	education,
 }
 
-var PlayerStats = {
+var Stats = {
 		PlayerStatTypes.physical: 3,
 		PlayerStatTypes.mental: 3,
 		PlayerStatTypes.social: 3,
@@ -26,14 +26,19 @@ enum RollKind {
 	disadvantage,
 }
 
-func roll_die(num_sides: int, succes: int, roll_kind: RollKind) -> bool:
+
+func dialog_check(succes: int, roll_kind: RollKind, stats: Array[PlayerStatTypes], num_sides = 6) -> bool:
+	var sum = 0 
+	for stat in stats:
+		sum += Stats[stat]
+	var avg = (sum / stats.size())
+	var result = 0
 	match roll_kind:
 		RollKind.normal:
-			return rng.randi_range(1,num_sides) >= succes
+			result = rng.randi_range(1,num_sides) >= succes
 		RollKind.advantage:
-			var max = max(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
-			return max >= succes
+			result = max(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
 		RollKind.disadvantage:
-			var min = min(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
-			return min >= succes
-		_: return false
+			result = min(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
+		_: pass
+	return result + avg >= succes

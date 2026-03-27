@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_click"):
-		print(PlayerStats.roll_die(20, 13, PlayerStats.RollKind.disadvantage))
+		print(PlayerStats.dialog_check(6, PlayerStats.RollKind.disadvantage, [PlayerStats.PlayerStatTypes.physical, PlayerStats.PlayerStatTypes.mental]))
 
 
 func _on_updated_timestep():
