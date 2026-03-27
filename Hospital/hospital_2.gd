@@ -9,6 +9,9 @@ func _ready() -> void:
 	SignalBus.time_step_changed.connect(_on_updated_timestep)
 	pass # Replace with function body.
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("debug_click"):
+		print(PlayerStats.roll_die(20, 13, PlayerStats.RollKind.disadvantage))
 
 
 func _on_updated_timestep():
@@ -16,5 +19,5 @@ func _on_updated_timestep():
 		worker_room.visible = false
 		worker_room_door.visible = false
 	else:
-		worker_room.visible = false
-		worker_room_door.visible = false
+		worker_room.visible = true
+		worker_room_door.visible = true

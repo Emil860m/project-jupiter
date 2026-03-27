@@ -75,12 +75,14 @@ material = ExtResource("2_8j3s2")
 
 [node name="WorkerRoom" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=752627432]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0.5, -16)
+visible = false
 operation = 2
 size = Vector3(8, 6, 13)
 material = ExtResource("2_8j3s2")
 
 [node name="WorkerRoomDoor" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1213741220]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -12.5)
+visible = false
 operation = 2
 size = Vector3(1, 7, 4)
 material = ExtResource("2_8j3s2")

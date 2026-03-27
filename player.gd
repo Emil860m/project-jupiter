@@ -33,7 +33,6 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	if input_comp.get_select_input():
-		PlayerStats.education = randi() % 10
 		if !interact_click:
 			interact_object = null
 		interact_click = false
@@ -45,8 +44,6 @@ func handle_raycast(hit):
 		return
 	if hit.has("position"):
 		navigation_agent_3d.target_position = hit.position
-	if Input.is_action_just_pressed("debug_click"):
-		print(interact_object)
 	camera_3d.global_position = camera_marker.global_position
 	
 	
