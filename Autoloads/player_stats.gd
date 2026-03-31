@@ -2,6 +2,8 @@ extends Node
 
 ## Player stuff
 
+
+
 enum PlayerStatTypes {
 	physical,
 	mental,
