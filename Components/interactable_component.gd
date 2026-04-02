@@ -1,17 +1,17 @@
 extends Node
 
-@export var interacted = false
+#@export var interacted = false
 @export var time_pass = 5
 
 var interact: Callable = func ():
 	pass
 	
 func runner():
-	if !interacted:
+	if !Globals.has_interacted(self):
 		print("First time interaction")
 		print("Do something with the time")
 		Globals.increment_timestep(time_pass)
-	interacted = true
+	Globals.add_to_interact_set(self)
 	interact.call()
 	
 
