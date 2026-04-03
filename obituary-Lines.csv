@@ -1,0 +1,19 @@
+id,text,file,node,lineNumber
+line:232b4dd2,Kat tries to punch you,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Fastfoward,5
+line:b51b4aa5,Try to dodge.,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Fastfoward,6
+line:0f4a433c,Get a punched.,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Fastfoward,8
+line:997a444b,oh hello,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Fastfoward,11
+line:996b2536,u succeed adv,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Dodge,20
+line:0f5b2241,you fail adv,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Dodge,22
+line:b50a2bd8,you succeed no adv,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Dodge,27
+line:233a2caf,you fail no adv,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Dodge,29
+line:c95ef9e2,I deserved it,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Punched,35
+line:44781033,Advantage does not work atm we're gonna have to implement a custom function to roll dice in godot,/home/emil/itu/project-jupiter/Dialog/prologuePt2.yarn,Node,41
+line:0099c90e,"you meet Kat, she's looking tired as always.",/home/emil/itu/project-jupiter/Dialog/prologuePt1.yarn,Chapter1,5
+line:96a9ce79,say hi to Kat,/home/emil/itu/project-jupiter/Dialog/prologuePt1.yarn,Chapter1,7
+line:2cf8c7e0,Hi kat,/home/emil/itu/project-jupiter/Dialog/prologuePt1.yarn,Chapter1,8
+line:bac8c097,Kat: Oh hi,/home/emil/itu/project-jupiter/Dialog/prologuePt1.yarn,Chapter1,9
+line:195da409,say fuck off to Kat,/home/emil/itu/project-jupiter/Dialog/prologuePt1.yarn,Chapter1,11
+line:8f6da37e,Fuck you kat,/home/emil/itu/project-jupiter/Dialog/prologuePt1.yarn,Chapter1,13
+line:353caae7,Kat: fuck you,/home/emil/itu/project-jupiter/Dialog/prologuePt1.yarn,Chapter1,14
+line:8b388f9b,D,/home/emil/itu/project-jupiter/Dialog/kherStats.yarn,Start,15

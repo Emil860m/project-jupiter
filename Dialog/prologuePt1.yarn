@@ -1,0 +1,16 @@
+title: Chapter1
+position: -358,-257
+---
+
+you meet Kat, she's looking tired as always. roll()
+
+-> say hi to Kat
+    Hi kat 
+    Kat: Oh hi
+    <<jump Fastfoward>>
+-> say fuck off to Kat
+    <<set $trustKat to false>>
+    Fuck you kat 
+    Kat: fuck you
+    <<jump Fastfoward>>
+===
