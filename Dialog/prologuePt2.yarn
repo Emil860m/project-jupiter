@@ -1,7 +1,7 @@
 title: Fastfoward
 position: -233,-168
 ---
-<<if roll() < 10>>
+<<if yarn_function() < 10>>
     Kat tries to punch you
         ->Try to dodge.
            <<jump Dodge>>

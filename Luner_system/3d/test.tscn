@@ -30,4 +30,4 @@ transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -10.835865, 0)
 mesh = SubResource("BoxMesh_ibkqd")
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_u6ugv")]
-filename = "test_file.json"
+auto_start = true

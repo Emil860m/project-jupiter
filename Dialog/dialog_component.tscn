@@ -6,9 +6,8 @@
 [ext_resource type="Script" uid="uid://cogqy630mjgv7" path="res://addons/yarn_spinner/ui/options_presenter.gd" id="4_tomcn"]
 [ext_resource type="PackedScene" uid="uid://byt7aunaouofm" path="res://Dialog/optionsButton.tscn" id="5_007lo"]
 
-[node name="DialogComponent" type="Node" unique_id=1464193511 node_paths=PackedStringArray("dialogue_runner")]
+[node name="DialogComponent" type="Node" unique_id=1464193511]
 script = ExtResource("1_var2f")
-dialogue_runner = NodePath("DialogRunner")
 
 [node name="DialogRunner" parent="." unique_id=189222724 instance=ExtResource("2_sm16w")]
 
@@ -59,5 +58,3 @@ option_button_scene = ExtResource("5_007lo")
 
 [node name="OptionsContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPresenter" unique_id=1030912164]
 layout_mode = 2
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2092633614]

@@ -2,7 +2,7 @@ title: Chapter1
 position: -358,-257
 ---
 
-you meet Kat, she's looking tired as always. roll()
+you meet Kat, she's looking tired as always. 
 
 -> say hi to Kat
     Hi kat 
