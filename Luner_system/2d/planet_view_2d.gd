@@ -20,7 +20,7 @@ func _ready() -> void:
 	for m in moons.get_children():
 		m.planetview = self
 		for i in range(Globals.max_travel_distance):
-			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= Globals.travel_speed * i:
+			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= ShipStats.travel_speed * i:
 				m.set_estimated_loc(i, current_location_vector)
 				m.estimated_travel_time = i
 				break

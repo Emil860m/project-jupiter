@@ -8,8 +8,7 @@ extends Node3D
 func _ready() -> void:
 	SignalBus.time_step_changed.connect(_on_updated_timestep)
 	var buff = Buff.new()
-	#buff.setup(5,PlayerStats.PlayerStatTypes.mental, 10)
-	pass # Replace with function body.
+	buff.setup(5,PlayerStats.PlayerStatTypes.mental, 10)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_click"):
