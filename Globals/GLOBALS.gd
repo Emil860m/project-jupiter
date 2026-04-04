@@ -17,6 +17,7 @@ func increment_timestep(increment: int):
 
 func add_to_interact_set(item) -> void:
 	interacted_set[item] = null
+	print(interacted_set.size())
 	
 func has_interacted(item) -> bool:
 	return interacted_set.has(item)

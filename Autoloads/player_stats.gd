@@ -3,7 +3,6 @@ extends Node
 ## Player stuff
 
 
-
 enum PlayerStatTypes {
 	physical,
 	mental,
@@ -30,17 +29,15 @@ enum RollKind {
 
 
 func dialog_check(succes: int, roll_kind: RollKind, stats: Array[PlayerStatTypes], num_sides = 6) -> bool:
-	var sum = 0 
-	for stat in stats:
-		sum += Stats[stat]
-	var avg = (sum / stats.size())
-	var result = 0
+	var sum = stats.reduce(func(accum,elem): return Stats[elem] + accum, 0)
+	var avg = sum / stats.size()
+	var luck = 0
 	match roll_kind:
 		RollKind.normal:
-			result = rng.randi_range(1,num_sides) >= succes
+			luck = rng.randi_range(1,num_sides) >= succes
 		RollKind.advantage:
-			result = max(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
+			luck = max(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
 		RollKind.disadvantage:
-			result = min(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
+			luck = min(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
 		_: pass
-	return result + avg >= succes
+	return luck + avg >= succes

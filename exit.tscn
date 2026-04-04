@@ -20,5 +20,6 @@ shape = SubResource("BoxShape3D_pinn1")
 
 [node name="InteractableComponent" parent="StaticBody3D/CollisionShape3D" unique_id=1146505506 instance=ExtResource("3_mlcv5")]
 time_pass = 0
+object_id = "exit_door"
 
 [connection signal="input_event" from="StaticBody3D" to="." method="_on_static_body_3d_input_event"]

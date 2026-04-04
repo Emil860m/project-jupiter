@@ -146,6 +146,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -1.5, 7)
 
 [node name="InteractableComponent" parent="NavigationRegion3D/Interact_test/MeshInstance3D/StaticBody3D" parent_id_path=PackedInt32Array(1883052071, 435631889) index="1" unique_id=386515781]
 time_pass = 11
+object_id = "test_object"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2036067606]
 transform = Transform3D(0.94856006, 0.31211478, 0.053086936, -0.061307922, 0.016578786, 0.99798125, 0.31060454, -0.9498998, 0.034861084, 0, 22, 0)
