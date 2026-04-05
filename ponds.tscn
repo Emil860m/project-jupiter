@@ -9,6 +9,7 @@ script = ExtResource("1_4cuid")
 scene_to_load = "res://Luner_system/2d/test2d.tscn"
 repair_time = 10
 refuel_time = 10
+fuel_upgrade_time = 10
 
 [node name="Timer" type="Timer" parent="." unique_id=358933961]
 
