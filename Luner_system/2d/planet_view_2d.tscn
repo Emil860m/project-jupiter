@@ -57,6 +57,7 @@ starting_angle = 1.5
 eccentricity = 0.7
 sprite = ExtResource("7_ydf4a")
 displayName = "The Ponds"
+travelScenePath = "res://ponds.tscn"
 
 [node name="TheRational" parent="MoonParent" unique_id=591216634 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")

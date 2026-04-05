@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dj8noka8ethct"]
+
+[ext_resource type="Script" uid="uid://c3gpano03c8p1" path="res://ponds.gd" id="1_4cuid"]
+[ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="1_c7y4b"]
+[ext_resource type="Texture2D" uid="uid://c0f3cw25ru6of" path="res://Textures/Dark/texture_07.png" id="3_8l43j"]
+
+[node name="Ponds" type="Node2D" unique_id=673085570]
+script = ExtResource("1_4cuid")
+scene_to_load = "res://Luner_system/2d/test2d.tscn"
+repair_time = 10
+refuel_time = 10
+
+[node name="Timer" type="Timer" parent="." unique_id=358933961]
+
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=372325345]
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=2013609792]
+z_index = -1358
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_c7y4b")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RepairButton" type="Button" parent="MainMenu" unique_id=41956894]
+offset_left = 1286.0
+offset_top = 364.0
+offset_right = 1499.0
+offset_bottom = 444.0
+text = "Repair"
+metadata/_edit_use_anchors_ = true
+
+[node name="UpgradeButton" type="Button" parent="MainMenu" unique_id=172257029]
+offset_left = 518.0
+offset_top = 257.0
+offset_right = 731.0
+offset_bottom = 337.0
+text = "Upgrades"
+metadata/_edit_use_anchors_ = true
+
+[node name="RefuelButton" type="Button" parent="MainMenu" unique_id=4745996]
+offset_left = 787.0
+offset_top = 690.0
+offset_right = 1000.0
+offset_bottom = 770.0
+text = "Refuel"
+metadata/_edit_use_anchors_ = true
+
+[node name="Leave" type="Button" parent="MainMenu" unique_id=618265005]
+offset_left = 101.0
+offset_top = 804.0
+offset_right = 314.0
+offset_bottom = 884.0
+text = "Leave"
+metadata/_edit_use_anchors_ = true
+
+[node name="MainLabel" type="Label" parent="MainMenu" unique_id=74010041]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -261.5
+offset_top = -136.0
+offset_right = 261.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Some Text Now we try some long text"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="UpgradeMenu" type="CanvasLayer" parent="." unique_id=1415186818]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="UpgradeMenu" unique_id=1754337676]
+z_index = -175
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8l43j")
+expand_mode = 1
+
+[node name="BackButton" type="Button" parent="UpgradeMenu" unique_id=1233756472]
+offset_left = 90.0
+offset_top = 891.0
+offset_right = 303.0
+offset_bottom = 971.0
+text = "Back"
+
+[node name="FuelUpgrade" type="Button" parent="UpgradeMenu" unique_id=1290693345]
+offset_left = 612.0
+offset_top = 352.0
+offset_right = 825.0
+offset_bottom = 432.0
+text = "Increase fuel capacity
+"
+
+[node name="StatAllocationUpgrade" type="Button" parent="UpgradeMenu" unique_id=336362321]
+offset_left = 1102.0
+offset_top = 352.0
+offset_right = 1315.0
+offset_bottom = 432.0
+disabled = true
+text = "+3 Allocated Stats"
+
+[node name="UpgradeLabel" type="Label" parent="UpgradeMenu" unique_id=563687871]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -261.5
+offset_top = -136.0
+offset_right = 261.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Some Text Now we try some long text"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_up" from="MainMenu/RepairButton" to="." method="_on_repair_button_button_up"]
+[connection signal="button_up" from="MainMenu/UpgradeButton" to="." method="_on_upgrade_button_button_up"]
+[connection signal="button_up" from="MainMenu/RefuelButton" to="." method="_on_refuel_button_button_up"]
+[connection signal="button_up" from="MainMenu/Leave" to="." method="_on_leave_button_up"]
+[connection signal="button_up" from="UpgradeMenu/BackButton" to="." method="_on_back_button_button_up"]
+[connection signal="button_up" from="UpgradeMenu/FuelUpgrade" to="." method="_on_fuel_upgrade_button_up"]

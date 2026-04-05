@@ -6,7 +6,7 @@ var has_upgraded_fuel_cap = false
 @export var travel_speed: float = 20
 
 var fuel = 50
-var fuel_cap = 10
+var fuel_cap = 50
 
 var damage = 0
 const severity_const = 3
@@ -28,7 +28,7 @@ var Stats = {
 }
 
 func spend_fuel(fuel_spent: int): 
-	#TODO something with fuel consumption stat
+	##TODO something with fuel consumption stat
 	fuel -= fuel_spent
 
 func refuel():
