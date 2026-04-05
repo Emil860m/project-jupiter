@@ -66,6 +66,7 @@ radius = 180.0
 eccentricity = 0.2
 sprite = ExtResource("8_p17up")
 displayName = "The Rational"
+travelScenePath = "res://rationalle.tscn"
 
 [node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("6_hpwom")]
 

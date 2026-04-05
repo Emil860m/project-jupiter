@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://0fw77cmbweff"]
+
+[ext_resource type="Texture2D" uid="uid://digmdsn8qinuw" path="res://Textures/Green/texture_05.png" id="1_j8nc0"]
+[ext_resource type="Script" uid="uid://c2f0gm1b31nr7" path="res://rationalle.gd" id="1_xmvj0"]
+[ext_resource type="Script" uid="uid://cyswcq0ye6jl0" path="res://buff.gd" id="3_ds12f"]
+
+[node name="Rationalle" type="Node2D" unique_id=2143307663]
+script = ExtResource("1_xmvj0")
+scene_to_load = "res://Luner_system/2d/test2d.tscn"
+
+[node name="MainView" type="CanvasLayer" parent="." unique_id=440508569]
+
+[node name="MainBackground" type="TextureRect" parent="MainView" unique_id=417865328]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j8nc0")
+
+[node name="MainLabel" type="Label" parent="MainView" unique_id=2012908595]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -11.5
+offset_right = 28.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Choose the amount of courses"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MainView" unique_id=1656769341]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -30.0
+offset_right = 582.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="1Course" type="Button" parent="MainView/VBoxContainer" unique_id=855555974]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "1 Course
+Main"
+
+[node name="2Courses" type="Button" parent="MainView/VBoxContainer" unique_id=2032675669]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "2 Courses
+Starter + Main"
+
+[node name="3Courses" type="Button" parent="MainView/VBoxContainer" unique_id=1575773606]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "3 Courses
+Starter + Diner + Dessert"
+
+[node name="LeaveButton" type="Button" parent="MainView" unique_id=130683765]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.5
+anchor_bottom = 0.65
+offset_left = -106.5
+offset_top = -40.0
+offset_right = 106.5
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Leave"
+
+[node name="Starters" type="CanvasLayer" parent="." unique_id=980329663]
+visible = false
+
+[node name="StartersBackground" type="TextureRect" parent="Starters" unique_id=526977873]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j8nc0")
+
+[node name="StatersLabel" type="Label" parent="Starters" unique_id=2125324910]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -11.5
+offset_right = 28.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Choose the starter"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Starters" unique_id=312284654]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -30.0
+offset_right = 582.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Starter1" type="Button" parent="Starters/VBoxContainer" unique_id=1880053088]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 1"
+script = ExtResource("3_ds12f")
+
+[node name="Starter2" type="Button" parent="Starters/VBoxContainer" unique_id=1345246647]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 2"
+script = ExtResource("3_ds12f")
+
+[node name="Starter3" type="Button" parent="Starters/VBoxContainer" unique_id=214179695]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 3"
+script = ExtResource("3_ds12f")
+
+[node name="MainCourse" type="CanvasLayer" parent="." unique_id=2090687617]
+visible = false
+
+[node name="MainCourseBagground" type="TextureRect" parent="MainCourse" unique_id=339660427]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j8nc0")
+
+[node name="MainCourseLabel" type="Label" parent="MainCourse" unique_id=2120430184]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -11.5
+offset_right = 28.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Choose the main course"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MainCourse" unique_id=21352588]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -30.0
+offset_right = 582.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Main1" type="Button" parent="MainCourse/VBoxContainer" unique_id=1470415809]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 1"
+script = ExtResource("3_ds12f")
+
+[node name="Main2" type="Button" parent="MainCourse/VBoxContainer" unique_id=1336033789]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 2"
+script = ExtResource("3_ds12f")
+
+[node name="Main3" type="Button" parent="MainCourse/VBoxContainer" unique_id=807808357]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 3"
+script = ExtResource("3_ds12f")
+
+[node name="Dessert" type="CanvasLayer" parent="." unique_id=887218823]
+visible = false
+
+[node name="DessertBackground" type="TextureRect" parent="Dessert" unique_id=454850242]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j8nc0")
+
+[node name="DessertText" type="Label" parent="Dessert" unique_id=1428986075]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -11.5
+offset_right = 28.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Choose the dessert"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Dessert" unique_id=571511732]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -30.0
+offset_right = 582.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Dessert1" type="Button" parent="Dessert/VBoxContainer" unique_id=359589568]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 1"
+script = ExtResource("3_ds12f")
+
+[node name="Dessert2" type="Button" parent="Dessert/VBoxContainer" unique_id=426662796]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 2"
+script = ExtResource("3_ds12f")
+
+[node name="Dessert3" type="Button" parent="Dessert/VBoxContainer" unique_id=456426780]
+custom_minimum_size = Vector2(219, 60)
+layout_mode = 2
+text = "Insert Name 3"
+script = ExtResource("3_ds12f")
+
+[node name="LeaveScene" type="CanvasLayer" parent="." unique_id=1835841461]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="LeaveScene" unique_id=735733816]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j8nc0")
+
+[node name="Label" type="Label" parent="LeaveScene" unique_id=1721184858]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Thank you for dining at The Rationalle"
+
+[node name="LeaveButton" type="Button" parent="LeaveScene" unique_id=1297782458]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.5
+anchor_bottom = 0.65
+offset_left = -106.5
+offset_top = -40.0
+offset_right = 106.5
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Leave"
+
+[connection signal="button_up" from="MainView/VBoxContainer/1Course" to="." method="_on_course_button_up" binds= [1]]
+[connection signal="button_up" from="MainView/VBoxContainer/2Courses" to="." method="_on_course_button_up" binds= [2]]
+[connection signal="button_up" from="MainView/VBoxContainer/3Courses" to="." method="_on_course_button_up" binds= [3]]
+[connection signal="pressed" from="MainView/LeaveButton" to="." method="_on_leave_button_pressed"]
+[connection signal="pressed" from="LeaveScene/LeaveButton" to="." method="_on_leave_button_pressed"]

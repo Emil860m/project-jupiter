@@ -2,10 +2,11 @@ extends Node
 class_name Buff
 
 
-var duration: int
-var time_step_at_buff: int
-var stat: PlayerStats.PlayerStatTypes
-var amount: int
+@export var duration: int
+@export var time_step_at_buff: int
+@export var stat: PlayerStats.PlayerStatTypes
+@export var amount: int
+
 
 func setup(duration: int, stat: PlayerStats.PlayerStatTypes, amount: int):
 	SignalBus.time_step_changed.connect(_on_time_changed)
