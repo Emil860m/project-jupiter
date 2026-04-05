@@ -28,6 +28,7 @@ var Stats = {
 }
 
 func spend_fuel(fuel_spent: int): 
+	#TODO something with fuel consumption stat
 	fuel -= fuel_spent
 
 func refuel():
