@@ -5,7 +5,7 @@ extends Node
 var has_upgraded_fuel_cap = false
 @export var travel_speed: float = 20
 
-var fuel = 10
+var fuel = 50
 var fuel_cap = 10
 
 var damage = 0

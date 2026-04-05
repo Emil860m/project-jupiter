@@ -10,6 +10,7 @@ var selected: Area2D
 @export var currentLocationLabel: Label
 @export var estimatedTravelLabel: Label
 var current_location: moon_2d
+@onready var button: Button = $UiElements/Button
 
 func _ready() -> void:
 	raycast_comp.camera_2d = camera_2d
@@ -22,11 +23,12 @@ func _ready() -> void:
 		for i in range(Globals.max_travel_distance):
 			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= ShipStats.travel_speed * i:
 				m.set_estimated_loc(i, current_location_vector)
-				m.estimated_travel_time = i
+				m.estimated_travel_time = i + pow(ShipStats.severity_const, ShipStats.damage)
 				break
 
 
 func select_moon(hit):
+	button.disabled = false
 	if hit == null:
 		return
 	if hit == current_location:
@@ -41,12 +43,15 @@ func select_moon(hit):
 		estimatedTravelLabel.text = str(hit.estimated_travel_time)
 		for m in moons.get_children():
 			m.set_estimated_loc(hit.estimated_travel_time, current_location.global_position)
+		if selected.estimated_travel_time >= ShipStats.fuel:
+			button.disabled = true
 	
 
 
 func _on_travel_button_up() -> void:
 	if selected:
 		Globals.increment_timestep(selected.estimated_travel_time)
+		ShipStats.spend_fuel(selected.estimated_travel_time)
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
 			SceneController.goto_scene(selected.travelScenePath)
