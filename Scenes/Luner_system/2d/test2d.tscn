@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://br0sx80oa7x8w"]
 
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="1_1l4kd"]
-[ext_resource type="PackedScene" uid="uid://blydwht5d8cue" path="res://Luner_system/2d/planet_view_2d.tscn" id="1_ut2ef"]
+[ext_resource type="PackedScene" uid="uid://blydwht5d8cue" path="res://Scenes/Luner_system/2d/planet_view_2d.tscn" id="1_ut2ef"]
 
 [node name="Test2d" type="Node2D" unique_id=2028741739]
 

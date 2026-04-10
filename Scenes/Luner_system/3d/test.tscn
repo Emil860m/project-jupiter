@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1op1v21qkynr"]
 
-[ext_resource type="PackedScene" uid="uid://d023beam3t7hj" path="res://Luner_system/3d/planet_view.tscn" id="1_pj4ls"]
+[ext_resource type="PackedScene" uid="uid://d023beam3t7hj" path="res://Scenes/Luner_system/3d/planet_view.tscn" id="1_pj4ls"]
 
 [sub_resource type="Environment" id="Environment_b2441"]
 background_mode = 1

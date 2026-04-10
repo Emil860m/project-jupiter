@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d023beam3t7hj"]
 
-[ext_resource type="PackedScene" uid="uid://cnkvgnh8pqno1" path="res://Luner_system/3d/moon.tscn" id="1_p38eq"]
-[ext_resource type="Script" uid="uid://mywdy6s801uv" path="res://Luner_system/3d/planet_view.gd" id="1_pvshp"]
+[ext_resource type="PackedScene" uid="uid://cnkvgnh8pqno1" path="res://Scenes/Luner_system/3d/moon.tscn" id="1_p38eq"]
+[ext_resource type="Script" uid="uid://mywdy6s801uv" path="res://Scenes/Luner_system/3d/planet_view.gd" id="1_pvshp"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="3_hi6cs"]
 [ext_resource type="PackedScene" uid="uid://b56p36sssq7xt" path="res://Components/raycast_component.tscn" id="4_0k8u8"]
 

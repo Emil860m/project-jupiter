@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dj8noka8ethct"]
 
-[ext_resource type="Script" uid="uid://c3gpano03c8p1" path="res://ponds.gd" id="1_4cuid"]
+[ext_resource type="Script" uid="uid://c3gpano03c8p1" path="res://Scenes/Ponds/ponds.gd" id="1_4cuid"]
 [ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="1_c7y4b"]
 [ext_resource type="Texture2D" uid="uid://c0f3cw25ru6of" path="res://Textures/Dark/texture_07.png" id="3_8l43j"]
 
 [node name="Ponds" type="Node2D" unique_id=673085570]
 script = ExtResource("1_4cuid")
-scene_to_load = "res://Luner_system/2d/test2d.tscn"
+scene_to_load = "res://Scenes/Luner_system/2d/test2d.tscn"
 repair_time = 10
 refuel_time = 10
 fuel_upgrade_time = 10

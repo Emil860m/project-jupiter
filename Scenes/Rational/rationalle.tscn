@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://0fw77cmbweff"]
 
 [ext_resource type="Texture2D" uid="uid://digmdsn8qinuw" path="res://Textures/Green/texture_05.png" id="1_j8nc0"]
-[ext_resource type="Script" uid="uid://c2f0gm1b31nr7" path="res://rationalle.gd" id="1_xmvj0"]
-[ext_resource type="Script" uid="uid://dmr4l2ljhpsv8" path="res://buff_button.gd" id="3_ds12f"]
+[ext_resource type="Script" uid="uid://c2f0gm1b31nr7" path="res://Scenes/Rational/rationalle.gd" id="1_xmvj0"]
+[ext_resource type="Script" uid="uid://dmr4l2ljhpsv8" path="res://Buffs/buff_button.gd" id="3_ds12f"]
 
 [node name="Rationalle" type="Node2D" unique_id=2143307663]
 script = ExtResource("1_xmvj0")
-scene_to_load = "res://Luner_system/2d/test2d.tscn"
+scene_to_load = "res://Scenes/Luner_system/2d/test2d.tscn"
 
 [node name="MainView" type="CanvasLayer" parent="." unique_id=440508569]
 

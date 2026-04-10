@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bte2u56r132tv"]
 
-[ext_resource type="Script" uid="uid://btu0m70dy4yfs" path="res://Luner_system/2d/moon_2d.gd" id="1_6xeag"]
+[ext_resource type="Script" uid="uid://btu0m70dy4yfs" path="res://Scenes/Luner_system/2d/moon_2d.gd" id="1_6xeag"]
 [ext_resource type="Texture2D" uid="uid://bqgjdircq5020" path="res://Textures/MapUI/003_MapUI_arrowHead.png" id="2_il48s"]
 [ext_resource type="Texture2D" uid="uid://vb7t2tm832gd" path="res://Textures/MapUI/005_MapUI_selectetPlanet.png" id="2_jbmmh"]
 [ext_resource type="Texture2D" uid="uid://wm7jqjb62tby" path="res://Textures/MapUI/004_MapUI_arrowBody.png" id="3_1rqb0"]
