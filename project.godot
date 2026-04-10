@@ -20,6 +20,7 @@ SignalBus="*uid://b8lo2mbp3e1wt"
 PlayerStats="*uid://ddpa3wdwu0ah3"
 Globals="*uid://ihfy7ewtquwy"
 SceneController="*uid://cdmxc1gx4ekl8"
+YarnSpinner="*uid://bhiw7fae5n1e8"
 ShipStats="*uid://d28t2oxte3qb3"
 
 [display]
@@ -27,6 +28,10 @@ ShipStats="*uid://d28t2oxte3qb3"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/yarn_spinner/plugin.cfg")
 
 [input]
 
@@ -49,3 +54,7 @@ debug_click={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+
+[yarn_spinner]
+
+compiler/ysc_path="/home/emil/.dotnet/tools/ysc"

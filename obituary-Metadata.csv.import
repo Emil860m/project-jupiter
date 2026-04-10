@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b10mf1vtkmyhi"
+
+[deps]
+
+files=["res://obituary-Metadata.node.translation", "res://obituary-Metadata.lineNumber.translation", "res://obituary-Metadata.tags.translation"]
+
+source_file="res://obituary-Metadata.csv"
+dest_files=["res://obituary-Metadata.node.translation", "res://obituary-Metadata.lineNumber.translation", "res://obituary-Metadata.tags.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

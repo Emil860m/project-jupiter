@@ -1,0 +1,42 @@
+title: Fastfoward
+position: -233,-168
+---
+<<if yarn_function() < 10>>
+    Kat tries to punch you
+        ->Try to dodge.
+           <<jump Dodge>>
+        ->Get a punched.
+            <<jump Punched>>
+<<else>>
+    oh hello
+<<endif>>
+===
+title: Dodge
+---
+
+<<if $adPhisical>>
+<<set $roll to random_range(1,6)>>
+    <<if ($roll + $phisical)== 20>>
+        u succeed adv
+    <<else>>
+        you fail adv
+    <<endif>>
+<<else>>
+<<set $roll to random_range(1,6)>>
+    <<if (random_range(1,6) + $phisical)>=8>>
+        you succeed no adv
+    <<else>>
+        you fail no adv
+    <<endif>>
+<<endif>>
+===
+title: Punched
+---
+I deserved it
+===
+title: Node
+style: note
+position: -134,-60
+---
+Advantage does not work atm we're gonna have to implement a custom function to roll dice in godot
+===
