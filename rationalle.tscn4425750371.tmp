@@ -194,9 +194,6 @@ custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
 text = "Insert Name 1"
 script = ExtResource("3_ds12f")
-duration = 30
-stat = 1
-amount = 10
 
 [node name="Main2" type="Button" parent="MainCourse/VBoxContainer" unique_id=1336033789]
 custom_minimum_size = Vector2(219, 60)

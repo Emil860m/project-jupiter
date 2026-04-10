@@ -7,7 +7,6 @@ var max_travel_distance = 360
 var current_moon: String = "Ganymede" # todo: set default moon
 @export_subgroup("Ship stats")
 
-
 func increment_timestep(increment: int):
 	current_timestep += increment
 	SignalBus.time_step_changed.emit()
@@ -15,6 +14,5 @@ func increment_timestep(increment: int):
 
 func add_to_interact_set(item) -> void:
 	interacted_set[item] = null
-	
 func has_interacted(item) -> bool:
 	return interacted_set.has(item)

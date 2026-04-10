@@ -1,30 +1,31 @@
 extends Node
 class_name Buff
 
-
-@export var duration: int
-@export var time_step_at_buff: int
-@export var stat: PlayerStats.PlayerStatTypes
-@export var amount: int
+var _duration: int
+var _stat: PlayerStats.PlayerStatTypes
+var _amount: int
+var _applied: bool = false
+var _time_step_at_buff: int
 
 
 func setup(duration: int, stat: PlayerStats.PlayerStatTypes, amount: int):
 	SignalBus.time_step_changed.connect(_on_time_changed)
-	self.duration = duration
-	self.stat = stat
-	self.amount = amount
-	self.time_step_at_buff = Globals.current_timestep
+	self._duration = duration
+	self._stat = stat
+	self._amount = amount
+	self._time_step_at_buff = Globals.current_timestep
 	apply_buff()
-
+	
 func apply_buff():
-	PlayerStats.Stats[stat] += amount
+	_applied = true
+	PlayerStats.Stats[_stat] += _amount
 
 func _remove_buff():
-	PlayerStats.Stats[stat] -= amount
+	PlayerStats.Stats[_stat] -= _amount
 	self.queue_free()
 	pass
 
 func _on_time_changed():
-	print("noget sker")
-	if Globals.current_timestep - time_step_at_buff >= duration:
-		_remove_buff()
+	if _applied:
+		if Globals.current_timestep - _time_step_at_buff >= _duration:
+			_remove_buff()

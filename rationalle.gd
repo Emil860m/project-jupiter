@@ -7,22 +7,22 @@ extends Node2D
 @onready var main_view: CanvasLayer = $MainView
 @onready var leave_scene: CanvasLayer = $LeaveScene
 #Starters
-@onready var starter_1: Buff = $Starters/VBoxContainer/Starter1
-@onready var starter_2: Buff = $Starters/VBoxContainer/Starter2
-@onready var starter_3: Buff = $Starters/VBoxContainer/Starter3
+@onready var starter_1: Buff_Button = $Starters/VBoxContainer/Starter1
+@onready var starter_2: Buff_Button = $Starters/VBoxContainer/Starter2
+@onready var starter_3: Buff_Button = $Starters/VBoxContainer/Starter3
 #Mains
-@onready var main_1: Buff = $MainCourse/VBoxContainer/Main1
-@onready var main_2: Buff = $MainCourse/VBoxContainer/Main2
-@onready var main_3: Buff = $MainCourse/VBoxContainer/Main3
+@onready var main_1: Buff_Button = $MainCourse/VBoxContainer/Main1
+@onready var main_2: Buff_Button = $MainCourse/VBoxContainer/Main2
+@onready var main_3: Buff_Button = $MainCourse/VBoxContainer/Main3
 #Desserts
-@onready var dessert_1: Buff = $Dessert/VBoxContainer/Dessert1
-@onready var dessert_2: Buff = $Dessert/VBoxContainer/Dessert2
-@onready var dessert_3: Buff = $Dessert/VBoxContainer/Dessert3
+@onready var dessert_1: Buff_Button = $Dessert/VBoxContainer/Dessert1
+@onready var dessert_2: Buff_Button = $Dessert/VBoxContainer/Dessert2
+@onready var dessert_3: Buff_Button = $Dessert/VBoxContainer/Dessert3
 
 @export var scene_to_load: String
 
 var courses
-var buffs: Array[Buff]
+var buffs: Array[Buff_Button]
 
 func _ready() -> void:
 	starter_1.connect("pressed", _dish_chosen.bind(starter_1,1))
@@ -43,12 +43,9 @@ func _on_course_button_up(num_courses: int) -> void:
 		starters.visible = true
 	main_view.visible = false
 	
-func _dish_chosen(buff: Buff, dish_num: int):
+func _dish_chosen(buff: Buff_Button, dish_num: int):
 	buffs.append(buff)
-	print("this is num dishes: %d" %dish_num)
-	print("this is num courses: %d" %courses)
 	if dish_num == courses or courses == 1:
-		print("hvad fanden")
 		main_course.visible = false
 		dessert.visible = false
 		leave_scene.visible = true

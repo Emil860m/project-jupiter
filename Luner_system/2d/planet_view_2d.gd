@@ -43,8 +43,8 @@ func select_moon(hit):
 		estimatedTravelLabel.text = str(hit.estimated_travel_time)
 		for m in moons.get_children():
 			m.set_estimated_loc(hit.estimated_travel_time, current_location.global_position)
-		if selected.estimated_travel_time >= ShipStats.fuel:
-			button.disabled = true
+		#if selected.estimated_travel_time >= ShipStats.fuel:
+		#	button.disabled = true
 	
 
 
