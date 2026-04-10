@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://f4c4q0fbk17t"
+
+[deps]
+
+files=["res://obituary-Lines.text.translation", "res://obituary-Lines.file.translation", "res://obituary-Lines.node.translation", "res://obituary-Lines.lineNumber.translation"]
+
+source_file="res://obituary-Lines.csv"
+dest_files=["res://obituary-Lines.text.translation", "res://obituary-Lines.file.translation", "res://obituary-Lines.node.translation", "res://obituary-Lines.lineNumber.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://bx5pghdq1h11y"
+path="res://.godot/imported/kherStats.yarn-d51eaf96a89113ab9570797f699e3351.res"
+
+[deps]
+
+source_file="res://Dialog/kherStats.yarn"
+dest_files=["res://.godot/imported/kherStats.yarn-d51eaf96a89113ab9570797f699e3351.res"]
+
+[params]
+

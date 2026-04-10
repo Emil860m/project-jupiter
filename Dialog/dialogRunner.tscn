@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b3g1f3g46nex4"]
+
+[ext_resource type="Script" uid="uid://flra500ihbix" path="res://addons/yarn_spinner/dialogue_runner.gd" id="1_1ecfi"]
+[ext_resource type="Resource" uid="uid://djcvicsjdddnx" path="res://obituary.yarnproject" id="2_8jgag"]
+
+[node name="DialogRunner" type="Node" unique_id=189222724]
+script = ExtResource("1_1ecfi")
+yarn_project = ExtResource("2_8jgag")

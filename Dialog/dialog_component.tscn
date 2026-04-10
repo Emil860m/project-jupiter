@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cfw5wvsrdelm8"]
+
+[ext_resource type="Script" uid="uid://bgbv5gpqv2onn" path="res://Dialog/dialog_component.gd" id="1_var2f"]
+[ext_resource type="PackedScene" uid="uid://b3g1f3g46nex4" path="res://Dialog/dialogRunner.tscn" id="2_sm16w"]
+[ext_resource type="Script" uid="uid://cged8u182768u" path="res://addons/yarn_spinner/ui/line_presenter.gd" id="3_3kam2"]
+[ext_resource type="Script" uid="uid://cogqy630mjgv7" path="res://addons/yarn_spinner/ui/options_presenter.gd" id="4_tomcn"]
+[ext_resource type="PackedScene" uid="uid://byt7aunaouofm" path="res://Dialog/optionsButton.tscn" id="5_007lo"]
+
+[node name="DialogComponent" type="Node" unique_id=1464193511]
+script = ExtResource("1_var2f")
+
+[node name="DialogRunner" parent="." unique_id=189222724 instance=ExtResource("2_sm16w")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=780186044]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1621108285]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -118.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LinePresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1812540107 node_paths=PackedStringArray("text_label", "character_label", "continue_indicator")]
+layout_mode = 0
+offset_right = 710.0
+offset_bottom = 115.0
+script = ExtResource("3_3kam2")
+text_label = NodePath("VBoxContainer/TextLabel")
+character_label = NodePath("VBoxContainer/CharacterLabel")
+continue_indicator = NodePath("VBoxContainer/ContinueIndicator")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/LinePresenter" unique_id=822340355]
+layout_mode = 2
+
+[node name="CharacterLabel" type="Label" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=462520019]
+layout_mode = 2
+text = "Char label"
+
+[node name="TextLabel" type="RichTextLabel" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=1716029707]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Textbox"
+
+[node name="ContinueIndicator" type="Label" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=702772141]
+layout_mode = 2
+text = "continue in"
+
+[node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865]
+layout_mode = 0
+offset_left = 713.0
+offset_right = 1150.0
+offset_bottom = 114.0
+script = ExtResource("4_tomcn")
+option_button_scene = ExtResource("5_007lo")
+
+[node name="OptionsContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPresenter" unique_id=1030912164]
+layout_mode = 2
