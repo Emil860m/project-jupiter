@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dm846q37cl6ql"]
 
 [ext_resource type="Shader" uid="uid://dr5xvwejlnd1o" path="res://Shaders/outline_shader_test_interacted.gdshader" id="1_lc66a"]
-[ext_resource type="Script" uid="uid://jao8n5fw48yn" path="res://mesh_instance_3d.gd" id="2_pxa67"]
+[ext_resource type="Script" uid="uid://jao8n5fw48yn" path="res://Prefabs/mesh_instance_3d.gd" id="2_pxa67"]
 [ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="3_djy1k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lc66a"]

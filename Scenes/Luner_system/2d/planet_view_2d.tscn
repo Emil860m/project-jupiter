@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://blydwht5d8cue"]
 
-[ext_resource type="Script" uid="uid://cbpvb7301r142" path="res://Luner_system/2d/planet_view_2d.gd" id="1_l0xxy"]
+[ext_resource type="Script" uid="uid://cbpvb7301r142" path="res://Scenes/Luner_system/2d/planet_view_2d.gd" id="1_l0xxy"]
 [ext_resource type="Texture2D" uid="uid://ctmwb44g78a8k" path="res://Textures/MapUI/000_MapUI_jupiter.png" id="2_iwfgl"]
-[ext_resource type="PackedScene" uid="uid://bte2u56r132tv" path="res://Luner_system/2d/moon_2d.tscn" id="2_s3bh8"]
+[ext_resource type="PackedScene" uid="uid://bte2u56r132tv" path="res://Scenes/Luner_system/2d/moon_2d.tscn" id="2_s3bh8"]
 [ext_resource type="Texture2D" uid="uid://dtg26o84l5jle" path="res://Textures/MapUI/001_MapUI_ganimide.png" id="3_a4yyy"]
 [ext_resource type="PackedScene" uid="uid://cr04mmvo0moc7" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="6_hpwom"]
@@ -39,7 +39,7 @@ radius = 214.0
 starting_angle = 2.0
 sprite = ExtResource("3_a4yyy")
 displayName = "Ganymedes"
-travelScenePath = "res://Hospital/Hospital2.tscn"
+travelScenePath = "res://Scenes/Hospital/Hospital2.tscn"
 
 [node name="Callisto" parent="MoonParent" unique_id=1558893402 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
@@ -47,7 +47,7 @@ speed = 8.2
 radius = 364.0
 sprite = ExtResource("6_l0otk")
 displayName = "Callisto"
-travelScenePath = "res://Workshop/workshop.tscn"
+travelScenePath = "res://Scenes/Workshop/workshop.tscn"
 
 [node name="ThePonds" parent="MoonParent" unique_id=1184550554 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
@@ -57,6 +57,7 @@ starting_angle = 1.5
 eccentricity = 0.7
 sprite = ExtResource("7_ydf4a")
 displayName = "The Ponds"
+travelScenePath = "res://Scenes/Ponds/ponds.tscn"
 
 [node name="TheRational" parent="MoonParent" unique_id=591216634 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
@@ -65,6 +66,7 @@ radius = 180.0
 eccentricity = 0.2
 sprite = ExtResource("8_p17up")
 displayName = "The Rational"
+travelScenePath = "res://Scenes/Rational/rationalle.tscn"
 
 [node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("6_hpwom")]
 

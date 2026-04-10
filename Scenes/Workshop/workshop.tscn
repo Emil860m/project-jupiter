@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://vodb7twlkt1p"]
 
 [ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_ruomw"]
-[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://player.tscn" id="2_mvvd2"]
-[ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://exit.tscn" id="3_0f4vu"]
-[ext_resource type="PackedScene" uid="uid://dwhagy4vc2hld" path="res://UI.tscn" id="4_5y4ig"]
+[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/player.tscn" id="2_mvvd2"]
+[ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://Prefabs/exit.tscn" id="3_0f4vu"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_mvvd2"]
 vertices = PackedVector3Array(-17.5, 1, -15.865498, -16.75, 1, -16.615498, -18.5, 1, -16.615498, -17.5, 1, 1.8845024, -18.5, 1, 18.384502, 15.5, 1, 0.6345024, -9.25, 1, 0.3845024, -9.25, 1, 1.8845024, -16.75, 1, 2.6345024, -10, 1, 2.6345024, 15.5, 1, 18.384502, 15.25, 1, -16.615498, -10, 1, -16.615498, -9.25, 1, -15.865498, -15.5, 6, -14.615498, -15.5, 6, 0.6345024, -11.5, 6, 0.6345024, -11.5, 6, -14.615498, -15.25, 1, -14.365498, -15.25, 1, 0.3845024, -11.5, 1, 0.3845024, -11.5, 1, -14.365498)
@@ -36,5 +35,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.6, -11)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=329004573]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 25, 0)
-
-[node name="UI" parent="." unique_id=1309283280 instance=ExtResource("4_5y4ig")]
