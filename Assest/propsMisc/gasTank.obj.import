@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chvtwbh5o5cum"
+path="res://.godot/imported/gasTank.obj-8a76cb40ca5095dca0b43a430ba9e8c9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gasTank.obj-8a76cb40ca5095dca0b43a430ba9e8c9.mesh"]
+
+source_file="res://Assest/propsMisc/gasTank.obj"
+dest_files=["res://.godot/imported/gasTank.obj-8a76cb40ca5095dca0b43a430ba9e8c9.mesh", "res://.godot/imported/gasTank.obj-8a76cb40ca5095dca0b43a430ba9e8c9.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

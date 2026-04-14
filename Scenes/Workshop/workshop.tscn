@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vodb7twlkt1p"]
 
 [ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_ruomw"]
-[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/player.tscn" id="2_mvvd2"]
+[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/Characters/player.tscn" id="2_mvvd2"]
 [ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://Prefabs/exit.tscn" id="3_0f4vu"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_mvvd2"]
