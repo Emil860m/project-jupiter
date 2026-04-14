@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://c8lklyyis4umu"]
 
 [ext_resource type="Script" uid="uid://bft62ml4aoo5i" path="res://Scenes/Hospital/hospital_2.gd" id="1_8j3s2"]
-[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/player.tscn" id="1_op4ho"]
+[ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/Characters/player.tscn" id="1_op4ho"]
 [ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="2_8j3s2"]
 [ext_resource type="Material" path="res://Textures/GreyboxingTexure_opaque.tres" id="4_fj7dm"]
 [ext_resource type="PackedScene" path="res://Components/interactable_component.tscn" id="4_ispbn"]
 [ext_resource type="Script" uid="uid://bfstw0pt02p3" path="res://Scenes/Hospital/log_system.gd" id="4_utgng"]
 [ext_resource type="Script" uid="uid://dap5xdobtef3w" path="res://Scenes/Hospital/fadeout_test.gd" id="5_o1bgc"]
-[ext_resource type="PackedScene" uid="uid://dm846q37cl6ql" path="res://Prefabs/outline_shader_test.tscn" id="6_7fkrr"]
-[ext_resource type="PackedScene" path="res://Components/fadeout_component.tscn" id="6_o1bgc"]
+[ext_resource type="PackedScene" uid="uid://cltlbsqy63oj" path="res://Components/fadeout_component.tscn" id="6_o1bgc"]
 [ext_resource type="PackedScene" uid="uid://bc4ho6kbeqpy3" path="res://Prefabs/exit.tscn" id="9_natc4"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ispbn"]
@@ -140,17 +139,8 @@ material = ExtResource("2_8j3s2")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.5, 0, -10.5)
 material = ExtResource("4_fj7dm")
 
-[node name="Interact_test" parent="NavigationRegion3D" unique_id=1883052071 instance=ExtResource("6_7fkrr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -1.5, 7)
-
-[node name="InteractableComponent" parent="NavigationRegion3D/Interact_test/MeshInstance3D/StaticBody3D" parent_id_path=PackedInt32Array(1883052071, 435631889) index="1" unique_id=386515781]
-time_pass = 11
-object_id = "test_object"
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2036067606]
 transform = Transform3D(0.94856006, 0.31211478, 0.053086936, -0.061307922, 0.016578786, 0.99798125, 0.31060454, -0.9498998, 0.034861084, 0, 22, 0)
 
 [connection signal="body_entered" from="NavigationRegion3D/CSGCombiner3D/Room/CSGBox3D3/Area3D" to="NavigationRegion3D/CSGCombiner3D/Room/CSGBox3D3" method="_on_area_3d_body_entered"]
 [connection signal="input_event" from="NavigationRegion3D/CSGCombiner3D/LogSystem/Area3D" to="NavigationRegion3D/CSGCombiner3D/LogSystem" method="_on_area_3d_input_event"]
-
-[editable path="NavigationRegion3D/Interact_test"]

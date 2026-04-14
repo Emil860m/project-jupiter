@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwr57ma0y12bj"
+path="res://.godot/imported/termos.obj-94b0842349b7fde0f4e169d16d58bfb3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/termos.obj-94b0842349b7fde0f4e169d16d58bfb3.mesh"]
+
+source_file="res://Assest/propsMisc/termos.obj"
+dest_files=["res://.godot/imported/termos.obj-94b0842349b7fde0f4e169d16d58bfb3.mesh", "res://.godot/imported/termos.obj-94b0842349b7fde0f4e169d16d58bfb3.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
