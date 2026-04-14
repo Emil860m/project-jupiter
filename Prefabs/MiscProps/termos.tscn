@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbhyw7ptbtwe0"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwr57ma0y12bj" path="res://Assest/propsMisc/termos.obj" id="1_kdwps"]
+
+[node name="Termos" type="Node3D" unique_id=500274287]
+
+[node name="Termos" type="MeshInstance3D" parent="." unique_id=254823673]
+mesh = ExtResource("1_kdwps")

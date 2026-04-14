@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b775kktubciyu"]
+
+[ext_resource type="ArrayMesh" uid="uid://bq6tq6nin18fv" path="res://Assest/propsMisc/wrench.obj" id="1_sls0l"]
+
+[node name="Wrench" type="Node3D" unique_id=223653445]
+
+[node name="Wrench" type="MeshInstance3D" parent="." unique_id=1837594503]
+mesh = ExtResource("1_sls0l")

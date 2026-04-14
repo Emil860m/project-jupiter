@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b5juth1r4vger"]
+
+[ext_resource type="ArrayMesh" uid="uid://y7v8gti2osfm" path="res://Assest/industrialLiquidTankA/industrialLiquidTankA.obj" id="1_xftom"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_akr7d"]
+radius = 1.5
+height = 3.5
+
+[node name="IndustrialLiquidTankA" type="StaticBody3D" unique_id=925635222]
+
+[node name="IndustrialLiquidTankA" type="MeshInstance3D" parent="." unique_id=761335970]
+mesh = ExtResource("1_xftom")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1181114814]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_akr7d")

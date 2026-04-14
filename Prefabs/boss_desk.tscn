@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bw0p7nhhu5rhj"]
+
+[ext_resource type="Texture2D" uid="uid://x2bfawsaqb2u" path="res://Assest/bossDesk/bossDesk.png" id="1_amuc2"]
+[ext_resource type="ArrayMesh" uid="uid://clcbsnf0e1edd" path="res://Assest/bossDesk/bossDesk.obj" id="2_27dn7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8x3l"]
+albedo_texture = ExtResource("1_amuc2")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_16fl6"]
+radius = 1.5
+height = 6.75
+
+[node name="BossDesk" type="StaticBody3D" unique_id=1590658083]
+
+[node name="BossDesk" type="MeshInstance3D" parent="." unique_id=413405977]
+material_override = SubResource("StandardMaterial3D_n8x3l")
+mesh = ExtResource("2_27dn7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1026913225]
+transform = Transform3D(1, 0, 0, 0, 0, 1.0000001, 0, -1.0000001, 0, 0, 1, 0.176)
+shape = SubResource("CapsuleShape3D_16fl6")

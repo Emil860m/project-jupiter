@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://t204wnkm60ud"]
+
+[ext_resource type="ArrayMesh" uid="uid://pk03dd5om6ho" path="res://Assest/propsMisc/railing.obj" id="1_pu33x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_srb80"]
+size = Vector3(0.6652832, 2.0702515, 6.581543)
+
+[node name="Railing" type="StaticBody3D" unique_id=1909478892]
+
+[node name="Railing" type="MeshInstance3D" parent="." unique_id=1999420859]
+mesh = ExtResource("1_pu33x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1683661167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.541719, 1.023346, -0.14331055)
+shape = SubResource("BoxShape3D_srb80")

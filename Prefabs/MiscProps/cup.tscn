@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dyk0y6n5h558q"]
+
+[ext_resource type="ArrayMesh" uid="uid://5ti2tog3k875" path="res://Assest/propsMisc/cup.obj" id="1_k2r3o"]
+
+[node name="Cup" type="Node3D" unique_id=385252958]
+
+[node name="Cup" type="MeshInstance3D" parent="." unique_id=1346337075]
+mesh = ExtResource("1_k2r3o")

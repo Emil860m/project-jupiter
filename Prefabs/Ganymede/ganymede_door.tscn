@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ccmhmfvmumi67"]
+
+[ext_resource type="ArrayMesh" uid="uid://cyplkfhsnlqcu" path="res://Assest/ganymedeWalls/ganymedeDoor.obj" id="1_amg6t"]
+[ext_resource type="ArrayMesh" uid="uid://d3rdcqouqjrgq" path="res://Assest/ganymedeWalls/ganymedeDoorFrame.obj" id="2_a3amy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_amg6t"]
+size = Vector3(1, 4, 3)
+
+[node name="GanymedeDoor" type="StaticBody3D" unique_id=729568765]
+
+[node name="GanymedeDoor" type="MeshInstance3D" parent="." unique_id=1704183907]
+mesh = ExtResource("1_amg6t")
+
+[node name="GanymedeDoorFrame" type="MeshInstance3D" parent="." unique_id=643145134]
+mesh = ExtResource("2_a3amy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=161787448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4.75)
+shape = SubResource("BoxShape3D_amg6t")
