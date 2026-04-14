@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dho7etbnyht2k"]
+
+[ext_resource type="Texture2D" uid="uid://c088vslvkrcon" path="res://Assest/button/button.png" id="1_gsfaq"]
+[ext_resource type="ArrayMesh" uid="uid://c18blanl7q8rv" path="res://Assest/button/button.obj" id="2_x1d0f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yo371"]
+albedo_texture = ExtResource("1_gsfaq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m8ttr"]
+size = Vector3(0.25, 2, 1)
+
+[node name="Button" type="StaticBody3D" unique_id=144381337]
+
+[node name="Button" type="MeshInstance3D" parent="." unique_id=711799070]
+material_override = SubResource("StandardMaterial3D_yo371")
+mesh = ExtResource("2_x1d0f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1214591057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_m8ttr")

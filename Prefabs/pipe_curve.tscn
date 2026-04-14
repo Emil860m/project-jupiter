@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctyn0qwsj53a2"]
+
+[ext_resource type="ArrayMesh" uid="uid://bcqbh2k5vmby5" path="res://Assest/pipes/pipe_curve.obj" id="1_c6bkr"]
+
+[node name="PipeCurve" type="Node3D" unique_id=1981491263]
+
+[node name="PipeCurve" type="MeshInstance3D" parent="." unique_id=1440090282]
+mesh = ExtResource("1_c6bkr")

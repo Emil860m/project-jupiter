@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cr23vxbu0hqrd"]
+
+[ext_resource type="Texture2D" uid="uid://b8ddlg078extt" path="res://Assest/elevator/elevator.png" id="1_u2aw6"]
+[ext_resource type="ArrayMesh" uid="uid://7co6tnu1ao2h" path="res://Assest/elevator/elevatorShaft.obj" id="2_ram11"]
+[ext_resource type="ArrayMesh" uid="uid://cpngpl8mwdhge" path="res://Assest/elevator/elevatorMain.obj" id="3_vhy44"]
+[ext_resource type="ArrayMesh" uid="uid://dqg4xf6n4ajwk" path="res://Assest/elevator/elevatorDoor.obj" id="4_woamy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xqjy"]
+albedo_texture = ExtResource("1_u2aw6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7j8k5"]
+albedo_texture = ExtResource("1_u2aw6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8xn5o"]
+size = Vector3(3.5, 8, 5)
+
+[node name="Elevator" type="Area3D" unique_id=1983716301]
+
+[node name="ElevatorShaft" type="MeshInstance3D" parent="." unique_id=1239654593]
+material_override = SubResource("StandardMaterial3D_1xqjy")
+mesh = ExtResource("2_ram11")
+
+[node name="ElevatorMain" type="MeshInstance3D" parent="." unique_id=666202701]
+material_override = SubResource("StandardMaterial3D_7j8k5")
+mesh = ExtResource("3_vhy44")
+
+[node name="ElevatorDoor" type="MeshInstance3D" parent="." unique_id=775712201]
+mesh = ExtResource("4_woamy")
+
+[node name="ElevatorDoor2" type="MeshInstance3D" parent="." unique_id=1515157283]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 4, 0)
+mesh = ExtResource("4_woamy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392060854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 3.5, 0)
+shape = SubResource("BoxShape3D_8xn5o")

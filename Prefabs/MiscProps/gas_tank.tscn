@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bw2sc4dr7iwrb"]
+
+[ext_resource type="ArrayMesh" uid="uid://chvtwbh5o5cum" path="res://Assest/propsMisc/gasTank.obj" id="1_ydhc7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h17f3"]
+radius = 0.3076172
+height = 3.4853516
+
+[node name="GasTank" type="StaticBody3D" unique_id=1297532690]
+
+[node name="GasTank" type="MeshInstance3D" parent="." unique_id=892685772]
+mesh = ExtResource("1_ydhc7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=628704519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5441244, 1.5678508, 4.903124)
+shape = SubResource("CapsuleShape3D_h17f3")

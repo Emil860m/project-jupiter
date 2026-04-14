@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bp8ne2wig32q1"]
+
+[ext_resource type="ArrayMesh" uid="uid://c4qus7cpmkx3a" path="res://Assest/propsMisc/handle.obj" id="1_25kr6"]
+
+[node name="Handle" type="Node3D" unique_id=2011278621]
+
+[node name="Handle" type="MeshInstance3D" parent="." unique_id=1383912745]
+mesh = ExtResource("1_25kr6")

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://63s286xet44"]
+
+[ext_resource type="Texture2D" uid="uid://6flan47pnvba" path="res://Assest/bookShelfStanding/bookShelfStanding.png" id="1_5e1fr"]
+[ext_resource type="ArrayMesh" uid="uid://d3r8ne65ssdgq" path="res://Assest/bookShelfStanding/bookShelfStanding.obj" id="2_iyq8s"]
+[ext_resource type="ArrayMesh" uid="uid://wyk2kja0jiby" path="res://Assest/bookShelfStanding/bookShelfBox.obj" id="3_iyq8s"]
+[ext_resource type="ArrayMesh" uid="uid://eo453wfvy8e7" path="res://Assest/bookShelfStanding/bookShelfSmallBook.obj" id="4_1crc1"]
+[ext_resource type="ArrayMesh" uid="uid://c8axf4dn61bl" path="res://Assest/bookShelfStanding/bookShelfRedBook.obj" id="5_dlfhx"]
+[ext_resource type="ArrayMesh" uid="uid://ct5ftn7dymm6n" path="res://Assest/bookShelfStanding/bookShelfJar.obj" id="6_v06um"]
+[ext_resource type="ArrayMesh" uid="uid://bx6stlva27hw6" path="res://Assest/bookShelfStanding/bookShelfGreenBook.obj" id="7_6x1wj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5e1fr"]
+size = Vector3(1, 6, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gdp4r"]
+albedo_texture = ExtResource("1_5e1fr")
+
+[node name="Bookshelf" type="StaticBody3D" unique_id=771396234]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1703049832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_5e1fr")
+
+[node name="BookShelfStanding" type="MeshInstance3D" parent="." unique_id=1981602927]
+material_override = SubResource("StandardMaterial3D_gdp4r")
+mesh = ExtResource("2_iyq8s")
+
+[node name="BookShelfBox" type="MeshInstance3D" parent="." unique_id=1426076924]
+mesh = ExtResource("3_iyq8s")
+
+[node name="BookShelfSmallBook" type="MeshInstance3D" parent="." unique_id=888162011]
+mesh = ExtResource("4_1crc1")
+
+[node name="BookShelfRedBook" type="MeshInstance3D" parent="." unique_id=320501108]
+mesh = ExtResource("5_dlfhx")
+
+[node name="BookShelfJar" type="MeshInstance3D" parent="." unique_id=798182886]
+mesh = ExtResource("6_v06um")
+
+[node name="BookShelfGreenBook" type="MeshInstance3D" parent="." unique_id=1940752383]
+mesh = ExtResource("7_6x1wj")

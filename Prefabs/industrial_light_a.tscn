@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dfikcd2nt7o6n"]
+
+[ext_resource type="ArrayMesh" uid="uid://de51wog4midv8" path="res://Assest/industrialLightA/industrialLightA.obj" id="1_u4io0"]
+
+[node name="IndustrialLightA" type="Node3D" unique_id=517652082]
+
+[node name="IndustrialLightA" type="MeshInstance3D" parent="." unique_id=1072839003]
+mesh = ExtResource("1_u4io0")
