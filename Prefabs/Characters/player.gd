@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 3
 
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var camera_3d: Camera3D = $Camera3D
