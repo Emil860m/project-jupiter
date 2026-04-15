@@ -7,6 +7,7 @@
 size = Vector3(1, 4, 6)
 
 [node name="GanymedeWall" type="StaticBody3D" unique_id=2030820902]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="GanymedeWall" type="MeshInstance3D" parent="." unique_id=305141270]
 mesh = ExtResource("1_wvsyw")

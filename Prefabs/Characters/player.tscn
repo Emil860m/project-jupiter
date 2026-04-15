@@ -10,7 +10,6 @@
 size = Vector3(0.8, 2, 0.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3pqv"]
-no_depth_test = true
 albedo_texture = ExtResource("1_4flbx")
 
 [sub_resource type="BoxMesh" id="BoxMesh_hqtel"]
@@ -27,14 +26,14 @@ shape = SubResource("BoxShape3D_onrkg")
 mesh = SubResource("BoxMesh_hqtel")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=387184353]
-transform = Transform3D(-0.34202012, -0.53898555, 0.76975113, 0, 0.81915206, 0.57357645, -0.9396926, 0.1961747, -0.28016648, 11, 8, -5)
+transform = Transform3D(-0.34202015, -0.53898555, 0.76975113, 0, 0.81915206, 0.57357645, -0.9396927, 0.1961747, -0.2801665, 45, 33, -16)
 top_level = true
 projection = 1
-size = 13.0
+size = 17.0
 near = 0.001
 
 [node name="CameraMarker" type="Marker3D" parent="." unique_id=1125414468]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 33, -16)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
 debug_enabled = true
