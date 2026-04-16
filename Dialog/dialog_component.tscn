@@ -12,6 +12,7 @@ script = ExtResource("1_var2f")
 [node name="DialogRunner" parent="." unique_id=189222724 instance=ExtResource("2_sm16w")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=780186044]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1621108285]
 layout_mode = 3

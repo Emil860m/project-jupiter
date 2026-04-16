@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://br0o3406h8jvy"
+path="res://.godot/imported/Sally.yarn-b717bcaab323eb6b58c84c4e2486354b.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Sally.yarn"
+dest_files=["res://.godot/imported/Sally.yarn-b717bcaab323eb6b58c84c4e2486354b.res"]
+
+[params]
+

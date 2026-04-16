@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://dxnhk7en0ghvm"
+path="res://.godot/imported/Zoe.yarn-31b9bcaf59bbed9aff2ab1c081754b78.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Zoe.yarn"
+dest_files=["res://.godot/imported/Zoe.yarn-31b9bcaf59bbed9aff2ab1c081754b78.res"]
+
+[params]
+
