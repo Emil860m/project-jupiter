@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cqebp3metcx62"]
+[gd_scene format=3 uid="uid://dlrp615631pqr"]
 
 [ext_resource type="ArrayMesh" uid="uid://dtvw4wpqfi7xm" path="res://Assest/industrialCableA/industrialCableA.obj" id="1_7tdow"]
 
@@ -6,6 +6,7 @@
 size = Vector3(0.2, 11.5, 0.2)
 
 [node name="IndustrialCableA" type="StaticBody3D" unique_id=1215896517]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="IndustrialCableA" type="MeshInstance3D" parent="." unique_id=185399269]
 mesh = ExtResource("1_7tdow")

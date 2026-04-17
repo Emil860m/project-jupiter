@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://ck3kp7mww6mds"]
+[gd_scene format=3 uid="uid://ch4q00k07iu2i"]
 
 [ext_resource type="ArrayMesh" uid="uid://2412u302rpbs" path="res://Assest/plantPot/plantPot.obj" id="1_18y54"]
 
 [node name="Plant" type="Node3D" unique_id=307560978]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
 [node name="PlantPot" type="MeshInstance3D" parent="." unique_id=1681023535]
 mesh = ExtResource("1_18y54")

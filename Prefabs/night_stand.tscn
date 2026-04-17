@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b5m85txohe88e"]
+[gd_scene format=3 uid="uid://baf8yhetm34ci"]
 
 [ext_resource type="ArrayMesh" uid="uid://bxcs81iair0tr" path="res://Assest/nightStand/nightStand.obj" id="1_pku5s"]
 
@@ -6,6 +6,7 @@
 size = Vector3(4, 2.5, 2)
 
 [node name="NightStand" type="StaticBody3D" unique_id=224949238]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="NightStand" type="MeshInstance3D" parent="." unique_id=116249381]
 mesh = ExtResource("1_pku5s")

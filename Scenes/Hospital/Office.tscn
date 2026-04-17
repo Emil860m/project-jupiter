@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://dlw0xaguya6fd"]
+[gd_scene format=3 uid="uid://bm3r67wgt0ga5"]
 
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/Characters/player.tscn" id="1_xwjd6"]
 [ext_resource type="Texture2D" uid="uid://uwfhfsk24ixx" path="res://Assest/metalFloorA/metalFloorA.png" id="2_28we2"]
-[ext_resource type="PackedScene" uid="uid://cr23vxbu0hqrd" path="res://Prefabs/elevator.tscn" id="3_4u55a"]
-[ext_resource type="PackedScene" uid="uid://bw0p7nhhu5rhj" path="res://Prefabs/boss_desk.tscn" id="4_cylq8"]
-[ext_resource type="PackedScene" uid="uid://63s286xet44" path="res://Prefabs/bookshelf.tscn" id="5_6s0xy"]
-[ext_resource type="PackedScene" uid="uid://ck3kp7mww6mds" path="res://Prefabs/plant.tscn" id="6_28we2"]
+[ext_resource type="PackedScene" path="res://Prefabs/elevator.tscn" id="3_4u55a"]
+[ext_resource type="PackedScene" path="res://Prefabs/boss_desk.tscn" id="4_cylq8"]
+[ext_resource type="PackedScene" path="res://Prefabs/bookshelf.tscn" id="5_6s0xy"]
+[ext_resource type="PackedScene" path="res://Prefabs/plant.tscn" id="6_28we2"]
 [ext_resource type="PackedScene" uid="uid://dbhyw7ptbtwe0" path="res://Prefabs/MiscProps/termos.tscn" id="7_4u55a"]
 [ext_resource type="PackedScene" uid="uid://ccmhmfvmumi67" path="res://Prefabs/Ganymede/ganymede_door.tscn" id="8_cylq8"]
 [ext_resource type="PackedScene" uid="uid://dalsdjmiobl4j" path="res://Prefabs/MiscProps/round_light.tscn" id="9_6s0xy"]
@@ -116,7 +116,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 22.7
 mesh = SubResource("PlaneMesh_13t73")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=2066315259]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 21.779648, 4.0000005, 5.72743)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 21.804886, 4.0000005, 5.7771792)
 mesh = SubResource("PlaneMesh_tonup")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1118671043]

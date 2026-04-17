@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cm3ousvydvraw"]
+[gd_scene format=3 uid="uid://bw10nsv4kuf4i"]
 
 [ext_resource type="ArrayMesh" uid="uid://ra170w8dq2oq" path="res://Assest/fireStopper/fireStopper.obj" id="1_wjjhl"]
 
@@ -6,6 +6,7 @@
 size = Vector3(2, 6, 3)
 
 [node name="FireStopper" type="StaticBody3D" unique_id=360190013]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
 [node name="FireStopper" type="MeshInstance3D" parent="." unique_id=1614804004]
 mesh = ExtResource("1_wjjhl")

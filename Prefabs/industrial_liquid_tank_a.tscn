@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b5juth1r4vger"]
+[gd_scene format=3 uid="uid://dg53kqsa2pt0o"]
 
 [ext_resource type="ArrayMesh" uid="uid://y7v8gti2osfm" path="res://Assest/industrialLiquidTankA/industrialLiquidTankA.obj" id="1_xftom"]
 
@@ -7,6 +7,7 @@ radius = 1.5
 height = 3.5
 
 [node name="IndustrialLiquidTankA" type="StaticBody3D" unique_id=925635222]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="IndustrialLiquidTankA" type="MeshInstance3D" parent="." unique_id=761335970]
 mesh = ExtResource("1_xftom")

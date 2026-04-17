@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cqxl1gdhrghvf"]
+[gd_scene format=3 uid="uid://m05mv1lh0y50"]
 
 [ext_resource type="ArrayMesh" uid="uid://crgiewf8j25rs" path="res://Assest/locker/locker.obj" id="1_2gyl2"]
 
@@ -6,6 +6,7 @@
 size = Vector3(1, 4, 1)
 
 [node name="Locker" type="StaticBody3D" unique_id=123317938]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 
 [node name="Locker" type="MeshInstance3D" parent="." unique_id=276880234]
 mesh = ExtResource("1_2gyl2")

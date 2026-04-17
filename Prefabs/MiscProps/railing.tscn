@@ -6,6 +6,7 @@
 size = Vector3(0.6652832, 2.0702515, 6.581543)
 
 [node name="Railing" type="StaticBody3D" unique_id=1909478892]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
 [node name="Railing" type="MeshInstance3D" parent="." unique_id=1999420859]
 mesh = ExtResource("1_pu33x")
