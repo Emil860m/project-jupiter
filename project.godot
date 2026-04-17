@@ -23,6 +23,8 @@ SignalBus="*uid://b8lo2mbp3e1wt"
 PlayerStats="*uid://ddpa3wdwu0ah3"
 SceneController="*uid://byq74vmx84od3"
 ShipStats="*uid://d28t2oxte3qb3"
+NpcScheduler="*uid://cyog6v4j3amoq"
+Flags="*uid://dswc20r1pgpfa"
 
 [display]
 

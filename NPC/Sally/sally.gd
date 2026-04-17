@@ -1,29 +1,15 @@
 extends StaticBody3D
 
 
-@export var defaultYarnNode: String = "SalWorkshopTS1"
+
 @export var time_pass: int = 5
 @onready var dialogComp:= $DialogComponent
 @onready var interactable_component: Node = $InteractableComponent
-@onready var currentYarnNode: String = defaultYarnNode
+var currentYarnNode: String = ""
 func _ready() -> void:
-	if Globals.current_moon == "Ganymede":
-		if Globals.current_timestep >= 4:
-			currentYarnNode = "SalHospitalTS4"
-		else:
-			currentYarnNode = "SalHospitalTS2"
-	
-	elif Globals.current_moon == "Callisto": 
-		if Globals.current_timestep >= 6:
-			currentYarnNode = "SalWorkshopTS6"
-		elif Globals.current_timestep >= 4:
-			currentYarnNode = "SalWorkshopTS4"
-		else:
-			currentYarnNode = "SalWorkshopTS1"
-	elif Globals.current_moon == "office?":
-		if Globals.current_timestep >= 3:
-			currentYarnNode = "SalOfficeTS3"
-		
+	currentYarnNode = NpcScheduler.get_sally_yarn_file(Globals.current_timestep, Globals.current_location)
+	if currentYarnNode == "":
+		visible = false
 	dialogComp.start_node = currentYarnNode
 	interactable_component.time_pass = time_pass
 	interactable_component.interact = _interact
