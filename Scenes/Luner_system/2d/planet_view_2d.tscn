@@ -68,6 +68,14 @@ sprite = ExtResource("8_p17up")
 displayName = "The Rational"
 travelScenePath = "res://Scenes/Rational/rationalle.tscn"
 
+[node name="OutPost" parent="MoonParent" unique_id=829327495 node_paths=PackedStringArray("center") instance=ExtResource("2_s3bh8")]
+visible = false
+center = NodePath("../../Jupiter")
+radius = 400.0
+starting_angle = 1.3
+sprite = ExtResource("10_p17up")
+displayName = "Outpost"
+
 [node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("6_hpwom")]
 
 [node name="UiElements" type="Node2D" parent="." unique_id=1149811133]
