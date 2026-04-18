@@ -7,9 +7,11 @@ var zoe: Dictionary[locations, Array]
 var sally: Dictionary[locations, Array]
 
 enum locations {
+	MAIN_MENU,
+	PLANET_VIEW,
 	HOSPITAL,
 	WORKSHOP,
-	OFFICE
+	OFFICE,
 }
 
 func _ready() -> void:
@@ -19,6 +21,8 @@ func _ready() -> void:
 	# We do not make checks after finding a valid schedule, we just return that one 
 	# the structure is: (start_time, end_time, flags, yarn_node)
 	hickey = {
+	locations.MAIN_MENU: [],
+	locations.PLANET_VIEW: [],
 	locations.HOSPITAL: [
 		NPC_Schedule.new(0, 10, [Flags.get_testflag], "hickWorkshopTS3"),
 		NPC_Schedule.new(45, 52, [], "")

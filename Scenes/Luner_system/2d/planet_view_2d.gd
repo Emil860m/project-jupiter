@@ -13,6 +13,8 @@ var current_location: moon_2d
 @onready var button: Button = $UiElements/Button
 
 func _ready() -> void:
+	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
+	
 	raycast_comp.camera_2d = camera_2d
 	current_location = get_node("MoonParent/" + Globals.current_moon)
 	currentLocationLabel.text = current_location.displayName

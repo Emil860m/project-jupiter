@@ -44,14 +44,4 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1751233288]
-bank_paths = ["res://FmodBank/Desktop/Master.bank"]
-
-[node name="FmodListener2D" type="FmodListener2D" parent="." unique_id=985264659]
-
-[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="." unique_id=888143618]
-event_name = "event:/test"
-event_guid = "{883fa460-03b1-4532-9cd5-5ae467181c62}"
-autoplay = true
-
 [connection signal="button_up" from="CanvasLayer/Control/HBoxContainer/VBoxContainer2/Button" to="." method="_on_startgame_button_up"]

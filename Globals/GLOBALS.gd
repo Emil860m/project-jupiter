@@ -5,7 +5,10 @@ var current_timestep = 0
 @export var moon_movement_per_timestep: float = 60.0/144.0
 var max_travel_distance = 360
 var current_moon: String = "Ganymede" # todo: set default moon
-var current_location: NpcScheduler.locations = NpcScheduler.locations.HOSPITAL
+var current_location: NpcScheduler.locations = NpcScheduler.locations.HOSPITAL:
+	set(new_location):
+		SoundController.set_bgm(new_location)
+		current_location = new_location
 @export_subgroup("Ship stats")
 
 func increment_timestep(increment: int):
