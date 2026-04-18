@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dvn3rj6y2c7a0"]
+
+[ext_resource type="ArrayMesh" uid="uid://ct788hhux4wwp" path="res://Assest/ganymedeWalls/ganymedeCornerRib.obj" id="1_t7edc"]
+[ext_resource type="ArrayMesh" uid="uid://vn1l1vgkk5s5" path="res://Assest/ganymedeWalls/ganymedePillar.obj" id="2_tpvy6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7edc"]
+size = Vector3(1.5, 4, 1)
+
+[node name="CanymedeCornerRib" type="StaticBody3D" unique_id=898998425]
+
+[node name="GanymedeCornerRib" type="MeshInstance3D" parent="." unique_id=555052965]
+mesh = ExtResource("1_t7edc")
+
+[node name="GanymedePillar" type="MeshInstance3D" parent="." unique_id=264193264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.5)
+mesh = ExtResource("2_tpvy6")
+
+[node name="GanymedePillar2" type="MeshInstance3D" parent="." unique_id=1769944246]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -7)
+mesh = ExtResource("2_tpvy6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=389931028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.5, -7)
+shape = SubResource("BoxShape3D_t7edc")

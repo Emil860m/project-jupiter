@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://dqwy1av68vff7"
+path="res://.godot/imported/Kher.yarn-ef818280f4476eb5a3d76623fe9b375e.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Kher.yarn"
+dest_files=["res://.godot/imported/Kher.yarn-ef818280f4476eb5a3d76623fe9b375e.res"]
+
+[params]
+

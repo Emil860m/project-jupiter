@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bbj4anq6eaket"]
+
+[ext_resource type="Script" uid="uid://bjrehgi7ivsvw" path="res://Scenes/main_menu.gd" id="1_tt5f1"]
+
+[node name="MainMenu" type="Node2D" unique_id=153304406]
+script = ExtResource("1_tt5f1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1778695199]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=671625137]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=158680454]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer" unique_id=1151627275]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer" unique_id=1236984624]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer/VBoxContainer2" unique_id=770729082]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/HBoxContainer/VBoxContainer2" unique_id=321424547]
+layout_mode = 2
+text = "Start Game"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer/VBoxContainer2" unique_id=392766657]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer" unique_id=1687417196]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="button_up" from="CanvasLayer/Control/HBoxContainer/VBoxContainer2/Button" to="." method="_on_startgame_button_up"]

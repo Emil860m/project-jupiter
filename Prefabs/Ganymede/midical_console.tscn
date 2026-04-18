@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bdsa300k46exl"]
+
+[ext_resource type="ArrayMesh" uid="uid://bv0hudyxourhg" path="res://Assest/MedicalColsole/medicalConsole.obj" id="1_u3d1p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wepbd"]
+size = Vector3(5, 7, 3)
+
+[node name="MidicalConsole" type="StaticBody3D" unique_id=1574312724]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="MedicalConsole" type="MeshInstance3D" parent="." unique_id=1066243886]
+mesh = ExtResource("1_u3d1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1985914974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_wepbd")

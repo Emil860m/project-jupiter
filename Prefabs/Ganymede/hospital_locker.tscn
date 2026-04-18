@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bd0pymue16sc8"]
+
+[ext_resource type="ArrayMesh" uid="uid://iovc4ff07b5d" path="res://Assest/hospitalLocker/hospitalLocker.obj" id="1_bbuix"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rr4gu"]
+size = Vector3(2, 6.5, 5)
+
+[node name="HospitalLocker" type="StaticBody3D" unique_id=1753657102]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="HospitalLocker" type="MeshInstance3D" parent="." unique_id=1228984707]
+mesh = ExtResource("1_bbuix")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1847226910]
+shape = SubResource("BoxShape3D_rr4gu")

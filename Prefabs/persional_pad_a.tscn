@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://0ouijpfdsunv"]
+
+[ext_resource type="ArrayMesh" uid="uid://b1eqgijs3p30q" path="res://Assest/personalPad_A/personalPad_A.obj" id="1_wcv6c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p8nid"]
+size = Vector3(3, 1, 5)
+
+[node name="PersionalPadA" type="StaticBody3D" unique_id=438864896]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="PersonalPadA" type="MeshInstance3D" parent="." unique_id=545783951]
+mesh = ExtResource("1_wcv6c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1681526509]
+shape = SubResource("BoxShape3D_p8nid")

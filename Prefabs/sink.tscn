@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d2comp0ui6q7v"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5ud1atjm201f" path="res://Assest/sink/sink.obj" id="1_tvt42"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4a48a"]
+size = Vector3(3, 6, 3)
+
+[node name="Sink" type="StaticBody3D" unique_id=96892377]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Sink" type="MeshInstance3D" parent="." unique_id=75830809]
+mesh = ExtResource("1_tvt42")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=341371380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.5, 0)
+shape = SubResource("BoxShape3D_4a48a")

@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://b1fis72cy6tld"
+path="res://.godot/imported/Hickey.yarn-77c0a2ef4131aa92ece7ea7fa85a0053.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Hickey.yarn"
+dest_files=["res://.godot/imported/Hickey.yarn-77c0a2ef4131aa92ece7ea7fa85a0053.res"]
+
+[params]
+

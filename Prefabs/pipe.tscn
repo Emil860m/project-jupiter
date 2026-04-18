@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cklmbjayw8rdu"]
+
+[ext_resource type="ArrayMesh" uid="uid://cxh3yf07qeo7e" path="res://Assest/pipes/pipe.obj" id="1_8b0gk"]
+
+[node name="Pipe" type="Node3D" unique_id=251771990]
+
+[node name="Pipe" type="MeshInstance3D" parent="." unique_id=341551779]
+mesh = ExtResource("1_8b0gk")

@@ -17,6 +17,7 @@ func _ready():
 
 	
 func start_dialog():
+	$CanvasLayer.visible = true
 	dialogue_runner.start_dialogue(start_node)
 
 func add_functions():

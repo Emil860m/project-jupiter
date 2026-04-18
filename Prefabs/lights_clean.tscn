@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://gsd8q0rffkun"]
+
+[ext_resource type="ArrayMesh" uid="uid://e63tvdahnui0" path="res://Assest/cleanLight/lightsClean.obj" id="1_eyrl8"]
+
+[node name="LightsClean" type="Node3D" unique_id=603333058]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="LightsClean" type="MeshInstance3D" parent="." unique_id=71244885]
+transform = Transform3D(-0.9659258, -0.25881913, 0, 0.25881913, -0.9659258, 0, 0, 0, 1, -0.060060382, 0, -0.12885618)
+mesh = ExtResource("1_eyrl8")
