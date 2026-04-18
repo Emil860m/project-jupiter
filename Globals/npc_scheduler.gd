@@ -20,6 +20,7 @@ func _ready() -> void:
 	# the structure is: (start_time, end_time, flags, yarn_node)
 	hickey = {
 	locations.HOSPITAL: [
+		NPC_Schedule.new(0, 10, [Flags.get_testflag], "hickWorkshopTS3"),
 		NPC_Schedule.new(45, 52, [], "")
 		
 	],

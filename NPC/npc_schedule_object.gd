@@ -8,7 +8,7 @@ var flags: Array[Callable]
 var yarn_node: String
 var location: String
 
-func _init(start, end, flag_list, yarn) -> void:
+func _init(start, end, flag_list: Array[Callable], yarn) -> void:
 	start_time = start
 	end_time = end
 	flags = flag_list
