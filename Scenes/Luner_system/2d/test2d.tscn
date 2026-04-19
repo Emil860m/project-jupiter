@@ -2,16 +2,69 @@
 
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="1_1l4kd"]
 [ext_resource type="PackedScene" uid="uid://blydwht5d8cue" path="res://Scenes/Luner_system/2d/planet_view_2d.tscn" id="1_ut2ef"]
+[ext_resource type="Texture2D" uid="uid://d0ot12ogn6tw3" path="res://Textures/MapUI/Ellipse_1.png" id="3_e83a7"]
+[ext_resource type="Texture2D" uid="uid://chaafuvsoal74" path="res://Textures/MapUI/Ellipse_2.png" id="4_3yif1"]
+[ext_resource type="Texture2D" uid="uid://3e3ojqt3tjcm" path="res://Textures/MapUI/Ellipse_3.png" id="5_qvddl"]
+[ext_resource type="Texture2D" uid="uid://bym26c22smd3o" path="res://Textures/MapUI/Ellipse_4.png" id="5_yfw23"]
+[ext_resource type="Texture2D" uid="uid://iqklgrudafhv" path="res://Textures/MapUI/UI_consoleOverlay.png" id="7_782mr"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="8_vx3gg"]
 
 [node name="Test2d" type="Node2D" unique_id=2028741739]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127771672]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(65.00008, -128.5)
+position = Vector2(22, 3.9999995)
 scale = Vector2(23.953125, 12.3671875)
 texture = ExtResource("1_1l4kd")
 
+[node name="Ellipse2" type="Sprite2D" parent="." unique_id=1287267621]
+position = Vector2(285, 0)
+scale = Vector2(0.488, 0.7)
+texture = ExtResource("4_3yif1")
+
+[node name="Ellipse1" type="Sprite2D" parent="." unique_id=270335270]
+position = Vector2(285, -1)
+scale = Vector2(0.494, 0.74)
+texture = ExtResource("3_e83a7")
+
+[node name="Ellipse3" type="Sprite2D" parent="." unique_id=992184270]
+position = Vector2(285, 0)
+scale = Vector2(0.536, 0.8)
+texture = ExtResource("5_qvddl")
+
+[node name="Ellipse4" type="Sprite2D" parent="." unique_id=671328431]
+position = Vector2(285, 0)
+scale = Vector2(0.569, 0.8)
+texture = ExtResource("5_yfw23")
+
 [node name="PlanetView2d" parent="." unique_id=618163059 node_paths=PackedStringArray("camera_2d") instance=ExtResource("1_ut2ef")]
+position = Vector2(285, 0)
 camera_2d = NodePath("../Camera2D")
 
+[node name="UiConsoleOverlay" type="Sprite2D" parent="." unique_id=1773543342]
+position = Vector2(65.00001, -1.0000019)
+scale = Vector2(1.3534435, 1.3534435)
+texture = ExtResource("7_782mr")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1932443995]
+
+[node name="Label" type="Label" parent="." unique_id=558895245]
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -701.0
+offset_top = -403.0
+offset_right = -142.0
+offset_bottom = -347.0
+theme_override_fonts/font = ExtResource("8_vx3gg")
+theme_override_font_sizes/font_size = 40
+text = ">>> NaviJPS     [ build 32.12.1xA0 ]"
+
+[node name="Label2" type="Label" parent="." unique_id=1959191575]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -705.0
+offset_top = -348.0
+offset_right = -219.0
+offset_bottom = -262.0
+theme_override_fonts/font = ExtResource("8_vx3gg")
+theme_override_font_sizes/font_size = 32
+text = "Wellcome to the Jupiter positioning system 
+navigation application."

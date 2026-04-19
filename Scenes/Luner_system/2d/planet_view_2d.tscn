@@ -10,6 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://djljvypx8740c" path="res://Textures/MapUI/007_MapUI_thePonds.png" id="7_ydf4a"]
 [ext_resource type="Texture2D" uid="uid://kh46cvmjlnll" path="res://Textures/MapUI/008_MapUI_theRational.png" id="8_p17up"]
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="10_p17up"]
+[ext_resource type="Texture2D" uid="uid://ctba34acgaowa" path="res://Textures/MapUI/Rectangle_data.png" id="11_f6fv6"]
+[ext_resource type="Texture2D" uid="uid://bup5jewhqwn17" path="res://Textures/MapUI/006_MapUI_selectedDestination.png" id="11_od5kk"]
+[ext_resource type="Texture2D" uid="uid://vb7t2tm832gd" path="res://Textures/MapUI/005_MapUI_selectetPlanet.png" id="12_l8kh0"]
+[ext_resource type="Texture2D" uid="uid://bhyd1bo8i7rgb" path="res://Textures/MapUI/button.png" id="14_l8kh0"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="14_lrbvb"]
+[ext_resource type="Texture2D" uid="uid://dkqg334sy3n36" path="res://Textures/MapUI/button_exit.png" id="16_u6i4c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0xxy"]
 radius = 33.06055
@@ -54,7 +60,6 @@ center = NodePath("../../Jupiter")
 speed = 12.0
 radius = 300.0
 starting_angle = 1.5
-eccentricity = 0.7
 sprite = ExtResource("7_ydf4a")
 displayName = "The Ponds"
 travelScenePath = "res://Scenes/Ponds/ponds.tscn"
@@ -63,7 +68,6 @@ travelScenePath = "res://Scenes/Ponds/ponds.tscn"
 center = NodePath("../../Jupiter")
 speed = 5.0
 radius = 180.0
-eccentricity = 0.2
 sprite = ExtResource("8_p17up")
 displayName = "The Rational"
 travelScenePath = "res://Scenes/Rational/rationalle.tscn"
@@ -81,57 +85,167 @@ displayName = "Outpost"
 [node name="UiElements" type="Node2D" parent="." unique_id=1149811133]
 position = Vector2(678, 7)
 
-[node name="Sprite2D" type="Sprite2D" parent="UiElements" unique_id=150375123]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(-48, -15.000002)
-scale = Vector2(1.75, 4.640625)
-texture = ExtResource("10_p17up")
+[node name="006MapUiSelectedDestination" type="Sprite2D" parent="UiElements" unique_id=1932381437]
+position = Vector2(-1642, 159)
+texture = ExtResource("11_od5kk")
 
-[node name="Label" type="Label" parent="UiElements" unique_id=816355742]
-offset_left = -120.0
-offset_top = -178.0
-offset_right = -1.0
-offset_bottom = -155.0
-text = "Selected Moon:"
+[node name="005MapUiSelectetPlanet" type="Sprite2D" parent="UiElements" unique_id=1985470207]
+position = Vector2(-1642, 231)
+texture = ExtResource("12_l8kh0")
+
+[node name="RectangleData" type="Sprite2D" parent="UiElements" unique_id=1920582294]
+position = Vector2(-1400, -24)
+texture = ExtResource("11_f6fv6")
 
 [node name="SelectedMoon" type="Label" parent="UiElements" unique_id=731282285]
-offset_left = -119.0
-offset_top = -145.0
-offset_right = -79.0
-offset_bottom = -122.0
-text = "None"
-
-[node name="Label2" type="Label" parent="UiElements" unique_id=489156913]
-offset_left = -120.0
-offset_top = -257.0
-offset_right = -80.0
-offset_bottom = -234.0
-text = "Current Location:"
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1352.0
+offset_top = 213.0
+offset_right = -1211.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "not selected"
 
 [node name="currentLocation" type="Label" parent="UiElements" unique_id=1524409408]
-offset_left = -119.0
-offset_top = -224.0
-offset_right = -79.0
-offset_bottom = -201.0
-text = "m"
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1394.0
+offset_top = 140.0
+offset_right = -1261.0
+offset_bottom = 175.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "Place"
 
 [node name="Label3" type="Label" parent="UiElements" unique_id=1781525097]
-offset_left = -120.0
-offset_top = -109.0
-offset_right = 51.0
-offset_bottom = -86.0
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1648.0
+offset_top = -135.0
+offset_right = -1403.0
+offset_bottom = -100.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
 text = "Estimated travel time:"
 
+[node name="Label4" type="Label" parent="UiElements" unique_id=65640951]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1650.0
+offset_top = -61.0
+offset_right = -1405.0
+offset_bottom = -26.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "Estimated fuel cost:"
+
+[node name="Label5" type="Label" parent="UiElements" unique_id=1606294631]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1652.0
+offset_top = 21.0
+offset_right = -1238.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "Current ship technical status [n / 10]:"
+
+[node name="Label7" type="Label" parent="UiElements" unique_id=445109824]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1598.0
+offset_top = 139.0
+offset_right = -1392.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "Current location:"
+
+[node name="Label10" type="Label" parent="UiElements" unique_id=827364796]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1600.0
+offset_top = 212.0
+offset_right = -1365.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "Selected destination:"
+
+[node name="Label6" type="Label" parent="UiElements" unique_id=1084021617]
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1600.0
+offset_top = 57.0
+offset_right = -1186.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "/ 10"
+
+[node name="Label8" type="Label" parent="UiElements" unique_id=1201758560]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1649.0
+offset_top = -101.0
+offset_right = -1404.0
+offset_bottom = -66.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = ">>>>"
+
+[node name="Label9" type="Label" parent="UiElements" unique_id=1712810148]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1651.0
+offset_top = -21.0
+offset_right = -1406.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = ">>>>"
+
+[node name="estimatedFuel" type="Label" parent="UiElements" unique_id=665780288]
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1577.0
+offset_top = -19.0
+offset_right = -1406.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "N/A"
+
+[node name="shipStatus" type="Label" parent="UiElements" unique_id=1934046407]
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1651.0
+offset_top = 58.0
+offset_right = -1605.0
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "N/A"
+
 [node name="estimatedTime" type="Label" parent="UiElements" unique_id=976768864]
-offset_left = -119.0
-offset_top = -76.0
-offset_right = -77.0
-offset_bottom = -53.0
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1577.0
+offset_top = -100.0
+offset_right = -1405.0
+offset_bottom = -65.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
 text = "N/A"
 
 [node name="Button" type="Button" parent="UiElements" unique_id=2141699318]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Travel"
+offset_left = -1675.0
+offset_top = -270.0
+offset_right = -1300.0
+offset_bottom = -175.0
+text = "
+"
+icon = ExtResource("14_l8kh0")
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="UiElements" unique_id=926606263]
+offset_left = -1673.0
+offset_top = 295.0
+offset_right = -1298.0
+offset_bottom = 390.0
+text = "
+"
+icon = ExtResource("16_u6i4c")
+icon_alignment = 1
 
 [connection signal="button_up" from="UiElements/Button" to="." method="_on_travel_button_up"]
+[connection signal="button_up" from="UiElements/Button2" to="." method="_on_travel_button_up"]
