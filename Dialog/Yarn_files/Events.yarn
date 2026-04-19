@@ -60,4 +60,34 @@ You notice a wierd shaped object on your path. When you come closer to it you no
 	<<if damage_ship(1)>><<endif>>
 	<<endif>>
 ===
-
+title: event_carelessness
+color: purple
+position: 0, 0
+---
+Short routes like these have a tendency to make you careless
+-> Trust your instincts
+	<<if simple_m_check(20)>>
+	No thought given yet you land perfectly. You must truly be a natural pilot or in lady luck's good graces.
+	<<else>>
+	You crash. Maybe this will serve as motivation to focus in the future.
+	<<if damage_ship(5)>><<endif>>
+	<<endif>>
+-> Focus
+	<<if simple_m_check(50)>>
+	You land the ship. Lost a bit of time to make sure you do everything up to code but it payed of.
+	<<if pass_time(1)>><<endif>>
+	<<else>>
+	You crash. There is some minor damage but you will be fine. Better focus more next time?
+	<<if pass_time(1)>><<endif>>
+	<<if damage_ship(1)>><<endif>>
+	<<endif>>
+-> Extra focus
+	<<if simple_m_check(70)>>
+	You land the ship. It seems that you only lost time checking every thing trice before the procedure, but you landed safely.
+	<<if pass_time(2)>><<endif>>
+	<<else>>
+	You crash. It seems that borderline paranoia of checking everything thrice may have caused you to perform too slowly. Better chill next time?
+	<<if pass_time(2)>><<endif>>
+	<<if damage_ship(2)>><<endif>>
+	<<endif>>
+===

@@ -1,6 +1,7 @@
 extends Node
 
-@export var long_journey_cutoff: int = 20
+@export var long_journey_cutoff: int = 250
+@export var short_journey_cutoff: int = 100
 
 var events: Array[Event] = []
 
@@ -9,7 +10,7 @@ func _ready() -> void:
 
 
 func fetch_event(start_time, end_time, start_pos, end_pos) -> String:
-	# return "event_oldProbe"
+	# return "event_carelessness"
 	
 	for e in events:
 		if e.is_applicable_to_journey(start_time, end_time, start_pos, end_pos):
@@ -40,12 +41,19 @@ func _load_events():
 	var long_route_callable = func(_start_time, _end_time, start_pos, end_pos):
 		return (end_pos - start_pos).length() >= long_journey_cutoff
 	
+	var short_route_callable = func(_start_time, _end_time, start_pos, end_pos):
+		return (end_pos - start_pos).length() <= short_journey_cutoff
+	
 	# event_spaceDebris
 	var event_to_add = Event.new("event_spaceDebris", default_callable)
 	events.append(event_to_add)
 	
 	# event_oldProbe
 	event_to_add = Event.new("event_oldProbe", long_route_callable)
+	events.append(event_to_add)
+	
+	# event_carelessness
+	event_to_add = Event.new("event_carelessness", short_route_callable)
 	events.append(event_to_add)
 
 
