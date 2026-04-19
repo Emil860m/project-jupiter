@@ -20,14 +20,17 @@ enum ShipStatTypes {
 }
 
 var Stats = {
-	ShipStatTypes.speed: 3,
-	ShipStatTypes.fuel_consumption: 3,
-	ShipStatTypes.durability: 3,
-	ShipStatTypes.maneuverability: 3,
-	ShipStatTypes.radiation_protection: 3,
+	ShipStatTypes.speed: 10,
+	ShipStatTypes.fuel_consumption: 10,
+	ShipStatTypes.durability: 10,
+	ShipStatTypes.maneuverability: 10,
+	ShipStatTypes.radiation_protection: 10,
 }
 
-func spend_fuel(fuel_spent: int): 
+func damage_ship(damage_number: int):
+	damage += damage_number
+
+func spend_fuel(fuel_spent: int):  # Note: also used by events to reduce fuel
 	##TODO something with fuel consumption stat
 	fuel -= fuel_spent
 

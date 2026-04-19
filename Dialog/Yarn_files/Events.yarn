@@ -1,8 +1,43 @@
-title: eventTest
+title: event_test
 color: purple
 position: 0, 0
 ---
 test event
 -> option A
+	you chose option A
 -> option B
+	you chose option B
 ===
+title: event_spaceDebris
+color: purple
+position: 0, 0
+---
+You encounter space debris
+-> Slow down
+	<<if simple_d_check(80)>>
+	You spend some extra time and manage to avoid the worst of it
+	<<if spend_fuel(5)>><<endif>>
+	<<if pass_time(5)>><<endif>>
+	<<else>>
+	In spite of the extra time taken the debris still cause minor damage to the ship
+	<<if damage_ship(1)>><<endif>>
+	<<if spend_fuel(5)>><<endif>>
+	<<if pass_time(5)>><<endif>>
+	<<endif>>
+-> Try to dodge
+	<<if stakes_m_check()>>
+	You make it through the debris unscathed
+	<<else>>
+	You managed to dodge directly into a piece of debris. Your ship takes heavy damage
+	<<if damage_ship(3)>><<endif>>
+	<<endif>>
+-> Keep going
+	<<if stakes_d_check()>>
+	You make it through the debris unscathed
+	<<else>>
+	This was too optimistic. Your ship takes heavy damage
+	<<if damage_ship(3)>><<endif>>
+	<<endif>>
+===
+
+
