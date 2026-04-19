@@ -33,9 +33,9 @@
 [ext_resource type="PackedScene" uid="uid://m05mv1lh0y50" path="res://Prefabs/locker.tscn" id="32_011iu"]
 [ext_resource type="PackedScene" uid="uid://baf8yhetm34ci" path="res://Prefabs/night_stand.tscn" id="33_mlq8q"]
 [ext_resource type="PackedScene" uid="uid://0ouijpfdsunv" path="res://Prefabs/persional_pad_a.tscn" id="34_wli8o"]
-[ext_resource type="PackedScene" path="res://Prefabs/pipe.tscn" id="35_yv3ha"]
-[ext_resource type="PackedScene" path="res://Prefabs/pipe_curve.tscn" id="36_5s88j"]
-[ext_resource type="PackedScene" path="res://Prefabs/pipe_valve.tscn" id="37_t7qoi"]
+[ext_resource type="PackedScene" uid="uid://cklmbjayw8rdu" path="res://Prefabs/pipe.tscn" id="35_yv3ha"]
+[ext_resource type="PackedScene" uid="uid://ctyn0qwsj53a2" path="res://Prefabs/pipe_curve.tscn" id="36_5s88j"]
+[ext_resource type="PackedScene" uid="uid://df7xam4gho5q1" path="res://Prefabs/pipe_valve.tscn" id="37_t7qoi"]
 [ext_resource type="PackedScene" uid="uid://ch4q00k07iu2i" path="res://Prefabs/plant.tscn" id="38_h5aj7"]
 [ext_resource type="PackedScene" uid="uid://bdf7i3bbqacsb" path="res://Prefabs/radio_box.tscn" id="39_prg1r"]
 [ext_resource type="PackedScene" uid="uid://d2comp0ui6q7v" path="res://Prefabs/sink.tscn" id="40_1tglq"]
@@ -88,13 +88,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.538873, 0, 26.590767)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.538873, 0, 32.590767)
 
 [node name="HospitalLocker" parent="." unique_id=1753657102 instance=ExtResource("7_oc8jj")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.0245447, 1.6059189, -7.4092336)
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -7.0245447, 1.6059189, -7.4092336)
 
 [node name="IvRack" parent="." unique_id=52509290 instance=ExtResource("8_jnh05")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -7.133069, 0, -5.4092336)
+transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, -7.133069, 0, -5.4092336)
 
 [node name="MidicalConsole" parent="." unique_id=1574312724 instance=ExtResource("9_msusc")]
-transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-08, -7.5388727, 0, -3.8565226)
+transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, -7.5388727, 0, -3.8565226)
 
 [node name="Barrel" parent="." unique_id=83570398 instance=ExtResource("10_hycun")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -9.019046, 0, -2.1974468)
@@ -142,7 +142,7 @@ transform = Transform3D(-1.3113416e-08, 0, 0.29999998, 0, 0.29999998, 0, -0.2999
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.463583, 0.01570177, 18.650879)
 
 [node name="Elevator" parent="." unique_id=1894959467 instance=ExtResource("25_b285k")]
-transform = Transform3D(0.59999996, 0, 0, 0, 0.59999996, 0, 0, 0, 0.59999996, -6.463583, 0, 21.265635)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -6.463583, 0, 21.265635)
 
 [node name="FireStopper" parent="." unique_id=360190013 instance=ExtResource("27_h1tif")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -7.324375, 0.42437696, 3.64213)
