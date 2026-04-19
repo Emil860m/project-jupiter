@@ -1,7 +1,48 @@
 extends Node
 
-func fetch_event() -> String:
-	return "event_oldProbe"
+@export var long_journey_cutoff: int = 20
+
+var events: Array[Event] = []
+
+func _ready() -> void:
+	_load_events()
+
+
+func fetch_event(start_time, end_time, start_pos, end_pos) -> String:
+	# return "event_oldProbe"
+	
+	for e in events:
+		if e.is_applicable_to_journey(start_time, end_time, start_pos, end_pos):
+			return e.eventID
+	
+	refresh_events()
+	
+	for e in events:
+		if e.is_applicable_to_journey(start_time, end_time, start_pos, end_pos):
+			return e.eventID
+	
+	assert(false)
+	return "event_spaceDebris"
+
+func refresh_events():
+	for e in events:
+		e.refresh()
+	
+	events.shuffle()
+
+
+# auxiliaries
+func _load_events():
+	var default_callable = func(_start_time, _end_time, _start_pos, _end_pos):
+		return true
+	
+	# event_spaceDebris
+	var event_to_add = Event.new("event_spaceDebris", default_callable)
+	events.append(event_to_add)
+	
+	# event_oldProbe
+	event_to_add = Event.new("event_oldProbe", default_callable)
+	events.append(event_to_add)
 
 
 ### EVENT CHECKS ###
