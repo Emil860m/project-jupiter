@@ -39,5 +39,25 @@ You encounter space debris
 	<<if damage_ship(3)>><<endif>>
 	<<endif>>
 ===
-
+title: event_oldProbe
+color: purple
+position: 0, 0
+---
+You notice a wierd shaped object on your path. When you come closer to it you notice its an old probe, probably sent here a sentry ago. You sensors detect some faint radio signals comming from it.
+-> Avoid probe
+	<<if simple_m_check(55)>>
+	Better not to disturb the ghosts of old and their wicked technology.
+	<<else>>
+	You poor stearing makes you smash directly into the probe.. It shatters into tousands littile pieces. A piece of history is now gone... You ask yourself if you maybe did it on purpose...
+	<<if damage_ship(3)>><<endif>>
+	<<endif>>
+-> Investigate
+	<<if simple_m_check(75)>>
+	As you carefully manover over to the probe, you notice that the radio signal you are reciving grows stronger. As binary beeping fills the cabin, you feel some kind of ave for a by-gone era from which this probe must have come from. Your KOMpat decodes the binary data and it seems that the probe is transmitting telematry. It's usless to you, but it does't feel like that. It's like u recived a blessing from the past.
+	<<if pass_time(2)>><<endif>>
+	<<else>>
+	You smash into the probe. It shatters into tousands littile pieces. Maybe you can invastigate a cloud of crumbly, littile metal pieces... better go.
+	<<if damage_ship(1)>><<endif>>
+	<<endif>>
+===
 

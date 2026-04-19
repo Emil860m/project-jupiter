@@ -1,7 +1,7 @@
 extends Node
 
 func fetch_event() -> String:
-	return "event_spaceDebris"
+	return "event_oldProbe"
 
 
 ### EVENT CHECKS ###
