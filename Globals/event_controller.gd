@@ -80,7 +80,7 @@ func _stakes_check(stat: int, base_value=50, stat_impact=10, stat_expectation=10
 	else:
 		return false
 
-func _detriment_check(stat: int, base_value=10, stat_impact=10, stat_expectation=10):
+func _detriment_check(stat: int, base_value=50, stat_impact=10, stat_expectation=10):
 	if base_value - stat_impact * (stat - stat_expectation) >= randi_range(1,100):
 		return true
 	else:

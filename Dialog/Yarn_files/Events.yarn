@@ -43,8 +43,8 @@ title: event_oldProbe
 color: purple
 position: 0, 0
 ---
-You notice a wierd shaped object on your path. When you come closer to it you notice its an old probe, probably sent here a sentry ago. You sensors detect some faint radio signals comming from it.
--> Avoid probe
+You notice a wierdly shaped object on your path. As you approach it you notice it is an old probe, probably sent here a century ago. Your sensors detect faint radio signals emitted from it.
+-> Avoid the probe
 	<<if simple_m_check(55)>>
 	Better not to disturb the ghosts of old and their wicked technology.
 	<<else>>
@@ -53,7 +53,7 @@ You notice a wierd shaped object on your path. When you come closer to it you no
 	<<endif>>
 -> Investigate
 	<<if simple_m_check(75)>>
-	As you carefully manover over to the probe, you notice that the radio signal you are reciving grows stronger. As binary beeping fills the cabin, you feel some kind of ave for a by-gone era from which this probe must have come from. Your KOMpat decodes the binary data and it seems that the probe is transmitting telematry. It's usless to you, but it does't feel like that. It's like u recived a blessing from the past.
+	As you carefully maneuver close to the probe, the radio signal grows stronger. As binary beeping fills the cabin, you feel some kind of awe for a by-gone era this probe must have come from. Your Kompat decodes the binary data and it seems that the probe is transmitting telemetry. It's useless to you, but it doesn't feel like it. It's like you received a blessing from the past.
 	<<if pass_time(2)>><<endif>>
 	<<else>>
 	You smash into the probe. It shatters into tousands littile pieces. Maybe you can invastigate a cloud of crumbly, littile metal pieces... better go.
