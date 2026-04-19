@@ -12,6 +12,8 @@ var selected: Area2D
 var current_location: moon_2d
 @onready var button: Button = $UiElements/Button
 
+var event_scene := preload("res://Scenes/Luner_system/2d/event_display.tscn")
+
 func _ready() -> void:
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
 	
@@ -56,6 +58,11 @@ func _on_travel_button_up() -> void:
 		ShipStats.spend_fuel(selected.estimated_travel_time)
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
-			SceneController.goto_scene(selected.travelScenePath)
+			var event = event_scene.instantiate()
+			event.set_completion_callback(_on_event_completed)
+			add_child(event)
 		else:
 			SceneController.reload_scene()
+
+func _on_event_completed() -> void:
+	SceneController.goto_scene(selected.travelScenePath)
