@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 func fetch_event(start_time, end_time, start_pos, end_pos) -> String:
-	# return "event_carelessness"
+	# return "event_longExposure"
 	
 	for e in events:
 		if e.is_applicable_to_journey(start_time, end_time, start_pos, end_pos):
@@ -55,6 +55,14 @@ func _load_events():
 	# event_carelessness
 	event_to_add = Event.new("event_carelessness", short_route_callable)
 	events.append(event_to_add)
+	
+	# event_marvelAtJupiter
+	event_to_add = Event.new("event_marvelAtJupiter", default_callable)
+	events.append(event_to_add)
+	
+	# event_longExposure
+	event_to_add = Event.new("event_longExposure", long_route_callable)
+	events.append(event_to_add)
 
 
 ### EVENT CHECKS ###
@@ -68,6 +76,12 @@ func _simple_check(stat: int, base_value: int) -> bool:
 
 func _stakes_check(stat: int, base_value=50, stat_impact=10, stat_expectation=10):
 	if base_value + stat_impact * (stat - stat_expectation) >= randi_range(1,100):
+		return true
+	else:
+		return false
+
+func _detriment_check(stat: int, base_value=10, stat_impact=10, stat_expectation=10):
+	if base_value - stat_impact * (stat - stat_expectation) >= randi_range(1,100):
 		return true
 	else:
 		return false
@@ -91,3 +105,6 @@ func stakes_maneuverability_check():
 
 func stakes_radiation_check():
 	return _stakes_check(ShipStats.Stats[ShipStats.ShipStatTypes.radiation_protection])
+
+func detriment_speed_check():
+	return _detriment_check(ShipStats.Stats[ShipStats.ShipStatTypes.speed])

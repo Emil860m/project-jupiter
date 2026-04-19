@@ -91,3 +91,34 @@ Short routes like these have a tendency to make you careless
 	<<if damage_ship(2)>><<endif>>
 	<<endif>>
 ===
+title: event_marvelAtJupiter
+color: purple
+position: 0, 0
+---
+While marvelling at Jupiter in all of his magnificent glory ambivalent feelings consume you...
+-> Marvel at Jupiter
+	You recall stories that Jupiter used to have an eye. You think he may have lost his sight with age.
+===
+title: event_longExposure
+color: purple
+position: 0, 0
+---
+The long route leads to sustained exposure to radiation. This could damage the electronics of the ship.
+-> Increase speed and slow down strategically.
+	<<if detriment_s_check()>>
+	You manage to curb the exposure, but still get affected.
+	<<if spend_fuel(5)>><<endif>>
+	<<if damage_ship(1)>><<endif>>
+	<<else>>
+	You increase the speed beyond what the vessel could support damaging it and making you slower in process.
+	<<if damage_ship(3)>><<endif>>
+	<<if pass_time(5)>><<endif>>
+	<<endif>>
+-> Keep a steady pace.
+	<<if stakes_r_check()>>
+	Luckily your radiation protection seems to have been sufficient.
+	<<else>>
+	Your electronics are heavily damaged but you arrive on time.
+	<<if damage_ship(3)>><<endif>>
+	<<endif>>
+===

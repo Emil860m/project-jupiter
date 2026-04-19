@@ -36,6 +36,8 @@ func add_functions():
 	dialogue_runner.add_function("stakes_d_check", EventController.stakes_durability_check, 0)
 	dialogue_runner.add_function("stakes_m_check", EventController.stakes_maneuverability_check, 0)
 	dialogue_runner.add_function("stakes_r_check", EventController.stakes_radiation_check, 0)
+	
+	dialogue_runner.add_function("detriment_s_check", EventController.detriment_speed_check, 0)
 
 
 func godot_function(string: String):
