@@ -1,0 +1,69 @@
+title: Start
+position: -165,-398
+---
+A cold sad expanse of memories is in front of you, mixed, mashed, tangled in each other.
+Just waiting to be recalled, to be relived and be warmed again. 
+
+from far inside this confused mess, a voice echos...
+
+???: Hi there, It's been a long time.
+
+-> What?
+-> Who?
+
+    ???: No no don't fight it. If you do it's just gonna be harder, just try to relax...
+    and remember.
+
+    something starts warming up in you. little by little like a ice melting under the heat.
+
+    From the darkness a small chamber starts to take shape. A woman is screaming, screams of pain while she pushes.
+    A wail cuts the air, a sigh of relief. 
+    A nurse carries away a new born. 
+    while a doctor rushes to the woman. 
+    ...
+    A man is standing outside a metal door,
+    He's waiting, when the same nurse comes back. 
+
+    -> The man will ask about the woman.
+    <<jump ChA>>
+    -> The man will ask about the child.
+    <<jump ChB>>
+===
+title: ChA
+position: 138,-621
+---
+//description 
+-> A
+    <<jump ChA2>>
+-> B
+    <<jump ChA1>>
+===
+title: ChB
+position: 183,-143
+---
+//description 
+-> A 
+    <<jump ChB1>>
+-> B 
+    <<jump ChB2>>
+===
+title: ChA1
+position: 404,-519
+---
+
+===
+title: ChA2
+position: 404,-712
+---
+
+===
+title: ChB1
+position: 443,-245
+---
+
+===
+title: ChB2
+position: 441,-21
+---
+
+===

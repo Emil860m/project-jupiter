@@ -6,6 +6,7 @@
 size = Vector3(1.7071533, 2.682495, 1.9468079)
 
 [node name="SphericalTank" type="StaticBody3D" unique_id=1914260558]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="SphericalTank" type="MeshInstance3D" parent="." unique_id=1629704263]
 mesh = ExtResource("1_ih1w0")

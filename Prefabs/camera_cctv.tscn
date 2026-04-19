@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://beslnmicxfc4s"]
+[gd_scene format=3 uid="uid://dw6aa86qupbqb"]
 
 [ext_resource type="ArrayMesh" uid="uid://frnmb3rqhmnn" path="res://Assest/cameraCCTV/cameraCCTV.obj" id="1_k2jxq"]
 
 [node name="CameraCctv" type="Node3D" unique_id=1407961669]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="CameraCctv" type="MeshInstance3D" parent="." unique_id=1044124865]
 mesh = ExtResource("1_k2jxq")

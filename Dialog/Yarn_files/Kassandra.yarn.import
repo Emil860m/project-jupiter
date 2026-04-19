@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://1ufbw8efwj3c"
+path="res://.godot/imported/Kassandra.yarn-8956fd81645a1ad3859af99eef4d858d.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Kassandra.yarn"
+dest_files=["res://.godot/imported/Kassandra.yarn-8956fd81645a1ad3859af99eef4d858d.res"]
+
+[params]
+

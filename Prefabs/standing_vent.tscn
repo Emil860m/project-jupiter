@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bpainicjx7l3v"]
+[gd_scene format=3 uid="uid://bqea6cn56en53"]
 
 [ext_resource type="ArrayMesh" uid="uid://c0cgb5uly0dmy" path="res://Assest/standingVent/standingVent.obj" id="1_c1cik"]
 
@@ -6,6 +6,7 @@
 size = Vector3(2, 7, 2)
 
 [node name="StandingVent" type="StaticBody3D" unique_id=621560155]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="StandingVent" type="MeshInstance3D" parent="." unique_id=969067355]
 mesh = ExtResource("1_c1cik")

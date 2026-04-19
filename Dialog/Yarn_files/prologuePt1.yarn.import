@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://bbaqhcvh8rkd"
+path="res://.godot/imported/prologuePt1.yarn-3c02edf3e4292aa06fcaa1aa54d5a0b1.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/prologuePt1.yarn"
+dest_files=["res://.godot/imported/prologuePt1.yarn-3c02edf3e4292aa06fcaa1aa54d5a0b1.res"]
+
+[params]
+

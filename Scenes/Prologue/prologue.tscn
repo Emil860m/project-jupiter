@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://4s8gv01a6u1k"]
+
+[ext_resource type="Script" uid="uid://bmttv4o773xer" path="res://Scenes/Prologue/prologue.gd" id="1_4gcb0"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="1_juf7l"]
+
+[node name="Prologue" type="Node2D" unique_id=816187938]
+script = ExtResource("1_4gcb0")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("1_juf7l")]
+auto_start = true

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://63s286xet44"]
+[gd_scene format=3 uid="uid://byn3osek3b3aq"]
 
 [ext_resource type="Texture2D" uid="uid://6flan47pnvba" path="res://Assest/bookShelfStanding/bookShelfStanding.png" id="1_5e1fr"]
 [ext_resource type="ArrayMesh" uid="uid://d3r8ne65ssdgq" path="res://Assest/bookShelfStanding/bookShelfStanding.obj" id="2_iyq8s"]
@@ -15,6 +15,7 @@ size = Vector3(1, 6, 3)
 albedo_texture = ExtResource("1_5e1fr")
 
 [node name="Bookshelf" type="StaticBody3D" unique_id=771396234]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1703049832]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

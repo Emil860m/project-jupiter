@@ -6,6 +6,7 @@
 size = Vector3(2, 6.5, 5)
 
 [node name="HospitalLocker" type="StaticBody3D" unique_id=1753657102]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="HospitalLocker" type="MeshInstance3D" parent="." unique_id=1228984707]
 mesh = ExtResource("1_bbuix")

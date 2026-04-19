@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://crjc5buia5itj"]
+[gd_scene format=3 uid="uid://0ouijpfdsunv"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1eqgijs3p30q" path="res://Assest/personalPad_A/personalPad_A.obj" id="1_wcv6c"]
 
@@ -6,6 +6,7 @@
 size = Vector3(3, 1, 5)
 
 [node name="PersionalPadA" type="StaticBody3D" unique_id=438864896]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 
 [node name="PersonalPadA" type="MeshInstance3D" parent="." unique_id=545783951]
 mesh = ExtResource("1_wcv6c")
