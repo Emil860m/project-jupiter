@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6bj1lbtxg5po"
-path.s3tc="res://.godot/imported/cleanVent.png-bf9ffc29e538b2b70bc09510e77b63d7.s3tc.ctex"
+uid="uid://v8mdk4t41sm"
+path.s3tc="res://.godot/imported/bossChair.png-21348f4a9c75a36b5a84ec56b9143de5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assest/standingVent_clean/cleanVent.png"
-dest_files=["res://.godot/imported/cleanVent.png-bf9ffc29e538b2b70bc09510e77b63d7.s3tc.ctex"]
+source_file="res://Assest/bossChair/bossChair.png"
+dest_files=["res://.godot/imported/bossChair.png-21348f4a9c75a36b5a84ec56b9143de5.s3tc.ctex"]
 
 [params]
 

@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://bdf7i3bbqacsb" path="res://Prefabs/radio_box.tscn" id="39_prg1r"]
 [ext_resource type="PackedScene" uid="uid://d2comp0ui6q7v" path="res://Prefabs/sink.tscn" id="40_1tglq"]
 [ext_resource type="PackedScene" uid="uid://bqea6cn56en53" path="res://Prefabs/standing_vent.tscn" id="41_oc08o"]
+[ext_resource type="PackedScene" uid="uid://d110b2beiywq7" path="res://Prefabs/Ganymede/medicalBed.tscn" id="42_7wdrn"]
 [ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="42_j4oc1"]
 
 [node name="ScalingScene" type="Node3D" unique_id=1149280770]
@@ -94,7 +95,7 @@ transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -7.0245447, 1.605918
 transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, -7.133069, 0, -5.4092336)
 
 [node name="MidicalConsole" parent="." unique_id=1574312724 instance=ExtResource("9_msusc")]
-transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, -7.5388727, 0, -3.8565226)
+transform = Transform3D(-1.3987644e-08, 0, 0.32, 0, 0.32, 0, -0.32, 0, -1.3987644e-08, -7.5388727, 0, -3.8565226)
 
 [node name="Barrel" parent="." unique_id=83570398 instance=ExtResource("10_hycun")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -9.019046, 0, -2.1974468)
@@ -151,13 +152,13 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -7.324375, 0.42437696, 
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -7.463583, 2, 19.650879)
 
 [node name="IndustrialLightA" parent="." unique_id=517652082 instance=ExtResource("29_nt8rd")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -8.058075, 2.5134254, 3.6508799)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.058075, 2.5134254, 3.6508799)
 
 [node name="IndustrialLiquidTankA" parent="." unique_id=925635222 instance=ExtResource("30_nd7b0")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -7.0185575, 1.8309102, 23.731813)
 
 [node name="LightsClean" parent="." unique_id=603333058 instance=ExtResource("31_oj7p6")]
-transform = Transform3D(-2.6226834e-08, -0.6, 0, 0.6, -2.6226834e-08, 0, 0, 0, 0.6, -7.573463, 2.5003152, 6.185936)
+transform = Transform3D(-1.3113417e-08, -0.3, 0, 0.3, -1.3113417e-08, 0, 0, 0, 0.3, -8.178854, 2.7665496, 7.0478764)
 
 [node name="Locker" parent="." unique_id=123317938 instance=ExtResource("32_011iu")]
 transform = Transform3D(-2.622683e-08, 0, -0.59999996, 0, 0.59999996, 0, 0.59999996, 0, -2.622683e-08, -7.353869, 0, 26.366852)
@@ -191,3 +192,6 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.5224857, 0, -20.1614
 
 [node name="TrashCan" parent="." unique_id=1349536050 instance=ExtResource("42_j4oc1")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.3801637, 0, -22.464815)
+
+[node name="MedicalBed" parent="." unique_id=130115927 instance=ExtResource("42_7wdrn")]
+transform = Transform3D(-0.12508015, 0, -0.48410222, 0, 0.5, 0, 0.48410222, 0, -0.12508015, -5.227442, 0, -1.4152122)

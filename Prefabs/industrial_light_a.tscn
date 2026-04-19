@@ -3,7 +3,13 @@
 [ext_resource type="ArrayMesh" uid="uid://de51wog4midv8" path="res://Assest/industrialLightA/industrialLightA.obj" id="1_u4io0"]
 
 [node name="IndustrialLightA" type="Node3D" unique_id=517652082]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
 [node name="IndustrialLightA" type="MeshInstance3D" parent="." unique_id=1072839003]
 mesh = ExtResource("1_u4io0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=567080784]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.0872943, -0.06837845, 0)
+light_color = Color(1, 0.5, 0.5, 1)
+light_energy = 3.017
+omni_range = 1.180582

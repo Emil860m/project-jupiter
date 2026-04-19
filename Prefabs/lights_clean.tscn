@@ -3,8 +3,25 @@
 [ext_resource type="ArrayMesh" uid="uid://e63tvdahnui0" path="res://Assest/cleanLight/lightsClean.obj" id="1_eyrl8"]
 
 [node name="LightsClean" type="Node3D" unique_id=603333058]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+transform = Transform3D(0.21213202, 0.21213202, 0, -0.21213202, 0.21213202, 0, 0, 0, 0.29999998, 0, 0, 0)
 
 [node name="LightsClean" type="MeshInstance3D" parent="." unique_id=71244885]
 transform = Transform3D(-0.9659258, -0.25881913, 0, 0.25881913, -0.9659258, 0, 0, 0, 1, -0.060060382, 0, -0.12885618)
 mesh = ExtResource("1_eyrl8")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=180636737]
+transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, -0.74206567)
+light_bake_mode = 1
+omni_range = 0.332
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1131808749]
+transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, -2.0895445)
+omni_range = 0.332
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1043568895]
+transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, 0.5745257)
+omni_range = 0.332
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=2008812187]
+transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, 1.9025935)
+omni_range = 0.332
