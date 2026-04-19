@@ -33,15 +33,19 @@ func refresh_events():
 
 # auxiliaries
 func _load_events():
+	# Callables
 	var default_callable = func(_start_time, _end_time, _start_pos, _end_pos):
 		return true
+	
+	var long_route_callable = func(_start_time, _end_time, start_pos, end_pos):
+		return (end_pos - start_pos).length() >= long_journey_cutoff
 	
 	# event_spaceDebris
 	var event_to_add = Event.new("event_spaceDebris", default_callable)
 	events.append(event_to_add)
 	
 	# event_oldProbe
-	event_to_add = Event.new("event_oldProbe", default_callable)
+	event_to_add = Event.new("event_oldProbe", long_route_callable)
 	events.append(event_to_add)
 
 
