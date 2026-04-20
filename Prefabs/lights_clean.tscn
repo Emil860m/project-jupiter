@@ -9,19 +9,30 @@ transform = Transform3D(0.21213202, 0.21213202, 0, -0.21213202, 0.21213202, 0, 0
 transform = Transform3D(-0.9659258, -0.25881913, 0, 0.25881913, -0.9659258, 0, 0, 0, 1, -0.060060382, 0, -0.12885618)
 mesh = ExtResource("1_eyrl8")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=180636737]
-transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, -0.74206567)
-light_bake_mode = 1
-omni_range = 0.332
+[node name="OmniLight3D" type="SpotLight3D" parent="." unique_id=2106051140]
+transform = Transform3D(-2.5344486, -2.1266549, -0.40623176, -0.31119096, -0.26112038, 3.3084874, -2.1426256, 2.5534818, -1.0069223e-07, 0, 0, -0.9829999)
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+spot_range = 6.0
+spot_angle = 20.0
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1131808749]
-transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, -2.0895445)
-omni_range = 0.332
+[node name="OmniLight3D4" type="SpotLight3D" parent="." unique_id=683338175]
+transform = Transform3D(-2.5272293, -2.1352267, -0.40624034, -0.30702364, -0.26606953, 3.3084826, -2.1517344, 2.5458057, 0.005056175, 0, 0, -2.164)
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+spot_range = 6.0
+spot_angle = 20.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1043568895]
-transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, 0.5745257)
-omni_range = 0.332
+[node name="OmniLight3D2" type="SpotLight3D" parent="." unique_id=1511857705]
+transform = Transform3D(-2.5344481, -2.1266546, -0.40623116, -0.3111912, -0.26112044, 3.3084872, -2.1426256, 2.5534818, -5.181041e-15, 0, 0, 0.472)
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+spot_range = 6.0
+spot_angle = 20.0
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=2008812187]
-transform = Transform3D(3.2503052, 0.739346, 0, -0.739346, 3.2503052, 0, 0, 0, 3.333334, -0.41305482, -1.0550084, 1.9025935)
-omni_range = 0.332
+[node name="OmniLight3D3" type="SpotLight3D" parent="." unique_id=297349502]
+transform = Transform3D(-2.5344486, -2.1266549, -0.40623152, -0.31119144, -0.26112056, 3.308488, -2.1426256, 2.5534816, 1.0101571e-07, 0, 0, 1.818)
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+spot_range = 6.0
+spot_angle = 20.0

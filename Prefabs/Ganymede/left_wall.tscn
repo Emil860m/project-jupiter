@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://nmxf5wvoxmcg"]
+
+[ext_resource type="Script" uid="uid://bfv4cgrs58v8f" path="res://Prefabs/Ganymede/left_wall.gd" id="1_m1cfr"]
+[ext_resource type="ArrayMesh" uid="uid://dukaovkerg3ge" path="res://Assest/ganymedeWalls/ganymedeWall.obj" id="2_8cbwt"]
+[ext_resource type="ArrayMesh" uid="uid://vn1l1vgkk5s5" path="res://Assest/ganymedeWalls/ganymedePillar.obj" id="3_ktbjm"]
+[ext_resource type="PackedScene" path="res://Components/fadeout_component.tscn" id="4_0q58w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cf7c8"]
+size = Vector3(1, 2, 6)
+
+[node name="LeftWall" type="StaticBody3D" unique_id=1532951042]
+script = ExtResource("1_m1cfr")
+
+[node name="GanymedeWall" type="MeshInstance3D" parent="." unique_id=1123831446]
+mesh = ExtResource("2_8cbwt")
+
+[node name="GanymedePillar" type="MeshInstance3D" parent="." unique_id=205116534]
+mesh = ExtResource("3_ktbjm")
+
+[node name="GanymedePillar2" type="MeshInstance3D" parent="." unique_id=942797048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.273196)
+mesh = ExtResource("3_ktbjm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=119072293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.023)
+shape = SubResource("BoxShape3D_cf7c8")
+
+[node name="FadeoutComponent" parent="." unique_id=1283104052 instance=ExtResource("4_0q58w")]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 1, -24.628925, 2.4148726, 3)
+
+[connection signal="body_entered" from="FadeoutComponent" to="." method="_on_area_3d_2_body_entered"]
