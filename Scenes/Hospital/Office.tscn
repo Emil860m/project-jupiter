@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://dalsdjmiobl4j" path="res://Prefabs/MiscProps/round_light.tscn" id="9_6s0xy"]
 [ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="9_13t73"]
 [ext_resource type="PackedScene" uid="uid://bg5eco0wxm2pm" path="res://Prefabs/MiscProps/under_construction_sign.tscn" id="10_13t73"]
-[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/bossChair.tscn" id="11_oxwys"]
+[ext_resource type="PackedScene" uid="uid://cfhvocfbqrj4h" path="res://Prefabs/Ganymede/bossChair.tscn" id="11_oxwys"]
 [ext_resource type="PackedScene" uid="uid://cbml54cjrq65a" path="res://Prefabs/Ganymede/boss_book_shelf.tscn" id="11_tonup"]
-[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="12_tonup"]
+[ext_resource type="PackedScene" uid="uid://bpu0d1twhe7y2" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="12_tonup"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_35g8a"]
 sky_top_color = Color(0, 0, 0, 1)

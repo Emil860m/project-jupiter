@@ -6,6 +6,11 @@ extends StaticBody3D
 var isOpen = false
 
 func setOpen() -> void:
-	isOpen = !isOpen
-	ganymede_door.visible = !ganymede_door.visible
-	collision_shape_3d.disabled = !collision_shape_3d.disabled
+	isOpen = true
+	ganymede_door.visible = false
+	collision_shape_3d.disabled = true
+
+func setClosed() -> void:
+	isOpen = false
+	ganymede_door.visible = true
+	collision_shape_3d.disabled = false

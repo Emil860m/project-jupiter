@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dlw0xaguya6fd"]
 
+[ext_resource type="Script" uid="uid://pfvowidjfqp4" path="res://Scenes/Hospital/hospital.gd" id="1_31i0m"]
 [ext_resource type="PackedScene" uid="uid://dvn3rj6y2c7a0" path="res://Prefabs/Ganymede/canymede_corner_rib.tscn" id="1_35g8a"]
 [ext_resource type="PackedScene" uid="uid://b7seqdovo3fj2" path="res://Prefabs/Ganymede/ganymede_wall.tscn" id="1_lm1a6"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/Characters/player.tscn" id="2_osfji"]
@@ -8,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bp4co2t68mcjm" path="res://Prefabs/Ganymede/ganymede_console.tscn" id="6_qr0c3"]
 [ext_resource type="PackedScene" uid="uid://dw6aa86qupbqb" path="res://Prefabs/camera_cctv.tscn" id="6_vb0tx"]
 [ext_resource type="PackedScene" uid="uid://d2h5mp5mne5vx" path="res://Prefabs/Ganymede/right_wall.tscn" id="7_uiugr"]
-[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="8_28yna"]
+[ext_resource type="PackedScene" uid="uid://bpu0d1twhe7y2" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="8_28yna"]
 [ext_resource type="PackedScene" uid="uid://dwlmoxkyj7rkm" path="res://Prefabs/Ganymede/iv_rack.tscn" id="8_x85e5"]
 [ext_resource type="PackedScene" uid="uid://d2comp0ui6q7v" path="res://Prefabs/sink.tscn" id="9_3ekpi"]
 [ext_resource type="PackedScene" uid="uid://bd0pymue16sc8" path="res://Prefabs/Ganymede/hospital_locker.tscn" id="10_ux52s"]
@@ -57,6 +58,7 @@ material = SubResource("StandardMaterial3D_e6j45")
 size = Vector2(8, 14)
 
 [node name="Hospital" type="Node3D" unique_id=1010830156]
+script = ExtResource("1_31i0m")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1277339832]
 environment = SubResource("Environment_7441k")
@@ -65,6 +67,7 @@ environment = SubResource("Environment_7441k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.72, 1, -0.3499999)
 
 [node name="NavigationAgent3D" type="NavigationRegion3D" parent="." unique_id=723621283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027122498, -0.040086746, -0.019291878)
 navigation_mesh = SubResource("NavigationMesh_rt5xv")
 
 [node name="Floor" type="Node" parent="NavigationAgent3D" unique_id=745475719]
@@ -175,12 +178,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.992753, 4.7683716e-07, -6.
 [node name="Entrance" type="Node" parent="NavigationAgent3D" unique_id=1856249303]
 
 [node name="Elevator" parent="NavigationAgent3D/Entrance" unique_id=1894959467 instance=ExtResource("4_qr0c3")]
-transform = Transform3D(0.7, 0, -2.0724165e-15, 0, 0.7, 0, 2.0724165e-15, 0, 0.7, 6.441952, 0, 4.8808107)
+transform = Transform3D(0.7, 0, -3.5527137e-15, 0, 0.7, 0, 3.5527137e-15, 0, 0.7, 6.666322, 0, 8.880811)
 scene_to_load_path = "res://Scenes/Hospital/Office.tscn"
+show_shaft = true
 
 [node name="Elevator2" parent="NavigationAgent3D/Entrance" unique_id=2076910483 instance=ExtResource("4_qr0c3")]
-transform = Transform3D(0.7, 0, -2.0724165e-15, 0, 0.7, 0, 2.0724165e-15, 0, 0.7, 6.441952, 0, 8.880811)
-scene_to_load_path = "res://Scenes/Hospital/Office.tscn"
+transform = Transform3D(0.7, 0, -3.5527137e-15, 0, 0.7, 0, 3.5527137e-15, 0, 0.7, 6.7052, 0, 4.8808107)
+scene_to_load_path = "res://Scenes/Luner_system/2d/test2d.tscn"
 
 [node name="GanymedeWall" parent="NavigationAgent3D/Entrance" unique_id=168181906 instance=ExtResource("1_lm1a6")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.474691, 0, 11.947021)
@@ -548,10 +552,10 @@ mesh = SubResource("PlaneMesh_31i0m")
 [node name="GanymedeDoor2" parent="." unique_id=2127457058 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.690615, 0, 46.57213)
 
-[node name="GanymedeDoor" parent="." unique_id=102163713 instance=ExtResource("4_rt5xv")]
+[node name="DaddyDoor" parent="." unique_id=102163713 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.690615, 0, 32.37672)
 
-[node name="GanymedeDoor3" parent="." unique_id=310328905 instance=ExtResource("4_rt5xv")]
+[node name="WorkerDoor" parent="." unique_id=310328905 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.829254, 0, 2.251935)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=393703045]
