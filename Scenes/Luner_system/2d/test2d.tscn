@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bym26c22smd3o" path="res://Textures/MapUI/Ellipse_4.png" id="5_yfw23"]
 [ext_resource type="Texture2D" uid="uid://iqklgrudafhv" path="res://Textures/MapUI/UI_consoleOverlay.png" id="7_782mr"]
 [ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="8_vx3gg"]
+[ext_resource type="PackedScene" uid="uid://1whnvub5l716" path="res://Scenes/Luner_system/2d/stat_allocator.tscn" id="9_wo8f8"]
 
 [node name="Test2d" type="Node2D" unique_id=2028741739]
 
@@ -68,3 +69,17 @@ theme_override_fonts/font = ExtResource("8_vx3gg")
 theme_override_font_sizes/font_size = 32
 text = "Wellcome to the Jupiter positioning system 
 navigation application."
+
+[node name="Label3" type="Label" parent="." unique_id=723958081]
+modulate = Color(0.8342457, 0.82160056, 0.7583329, 1)
+offset_left = -698.0
+offset_top = -139.0
+offset_right = -212.0
+offset_bottom = -53.0
+theme_override_fonts/font = ExtResource("8_vx3gg")
+theme_override_font_sizes/font_size = 32
+text = "Allocate your stats for the journey:"
+
+[node name="StatAllocator" parent="." unique_id=1155303945 instance=ExtResource("9_wo8f8")]
+position = Vector2(-258, 16)
+scale = Vector2(0.65, 0.65)

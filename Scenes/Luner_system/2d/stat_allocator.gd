@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var stat_polygon := $StatPolygon
-@onready var stat_points_label := $StatPointsLabel
+@onready var stat_points_label := $ButtonGroupMarkers/StatPointsLabel
 var button_groups: Array[StatAllocationButtonGroup] = []
 
 # Markers
@@ -25,8 +25,8 @@ func _ready() -> void:
 	draw_bg_pentagons()
 	
 	# Styling stat web
-	stat_polygon.color = Color.GREEN
-	stat_polygon.color.a = 0.5
+	stat_polygon.color = Color("badf14")
+	stat_polygon.color.a = 0.85
 	refresh_polygon()
 
 
@@ -52,7 +52,7 @@ func draw_bg_pentagons():
 		
 		# Styling
 		new_polygon.width *= 0.5
-		new_polygon.default_color = Color.WEB_GREEN
+		new_polygon.default_color = Color("50b347")
 		if i != inner_line_count:
 			new_polygon.default_color.a = 0.5
 		
