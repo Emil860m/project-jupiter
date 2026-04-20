@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5i4ofe7bgdpu"]
+
+[ext_resource type="Script" uid="uid://1hobx5yka1bn" path="res://Globals/sound_controller.gd" id="1_233hg"]
+
+[node name="SoundManager" type="Node" unique_id=2104988225]
+script = ExtResource("1_233hg")
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1756092586]
+bank_paths = ["res://FmodBank/Desktop/Master.bank"]
+
+[node name="FmodListener2D" type="FmodListener2D" parent="." unique_id=1703815682]
+
+[node name="BgmEmitter" type="FmodEventEmitter2D" parent="." unique_id=1014239079]
+event_name = "event:/test"
+event_guid = "{883fa460-03b1-4532-9cd5-5ae467181c62}"
+autoplay = true
+fmod_parameters/Location/id = 5661514774600387649
+fmod_parameters/Location = 0
+fmod_parameters/Location/variant_type = 2

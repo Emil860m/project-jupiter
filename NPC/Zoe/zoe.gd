@@ -1,21 +1,16 @@
 extends StaticBody3D
 
 
-@export var defaultYarnNode: String = "SalWorkshopTS1"
+
 @export var time_pass: int = 5
 @onready var dialogComp:= $DialogComponent
 @onready var interactable_component: Node = $InteractableComponent
-@onready var currentYarnNode: String = defaultYarnNode
+var currentYarnNode: String = ""
+
 func _ready() -> void:
-	if Globals.current_moon == "Ganymede":
-		if Globals.current_timestep >= 4:
-			currentYarnNode = "zoeHospitalTS4"
-	elif Globals.current_moon == "office?":
-		if Globals.current_timestep >= 5:
-			currentYarnNode = "zoeOfficeTS5"
-		else:
-			currentYarnNode = "zoeOfficeTS2"
-		
+	currentYarnNode = NpcScheduler.get_zoe_yarn_file(Globals.current_timestep, Globals.current_location)
+	if currentYarnNode == "":
+		visible = false
 	dialogComp.start_node = currentYarnNode
 	interactable_component.time_pass = time_pass
 	interactable_component.interact = _interact

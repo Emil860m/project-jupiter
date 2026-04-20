@@ -8,9 +8,14 @@
 
 config_version=5
 
+[Fmod]
+
+General/banks_path="res://FmodBank/Desktop"
+
 [application]
 
 config/name="project-jupiter"
+run/main_scene="uid://bbj4anq6eaket"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +28,11 @@ SignalBus="*uid://b8lo2mbp3e1wt"
 PlayerStats="*uid://ddpa3wdwu0ah3"
 SceneController="*uid://byq74vmx84od3"
 ShipStats="*uid://d28t2oxte3qb3"
+NpcScheduler="*uid://cyog6v4j3amoq"
+Flags="*uid://dswc20r1pgpfa"
+FmodManager="*uid://cds10pm7hwn3p"
+SoundController="*uid://c5i4ofe7bgdpu"
+EventController="*uid://b0jeef8kt67ya"
 
 [display]
 
@@ -32,7 +42,7 @@ window/size/mode=2
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/yarn_spinner/plugin.cfg")
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg", "res://addons/yarn_spinner/plugin.cfg")
 
 [filesystem]
 

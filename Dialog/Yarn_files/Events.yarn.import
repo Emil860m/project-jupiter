@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://bfjc5bfynvtrc"
+path="res://.godot/imported/Events.yarn-538daa5017c3f9cb3938eec0b77757cd.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Events.yarn"
+dest_files=["res://.godot/imported/Events.yarn-538daa5017c3f9cb3938eec0b77757cd.res"]
+
+[params]
+

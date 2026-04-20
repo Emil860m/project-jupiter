@@ -8,4 +8,4 @@ func _ready() -> void:
 	dialogRunner.connect("dialogue_completed", on_dialogue_completed)
 	
 func on_dialogue_completed():
-	SceneController.goto_scene("res://Scenes/Hospital/Hospital2.tscn")
+	SceneController.goto_scene("res://Scenes/Luner_system/2d/test2d.tscn")

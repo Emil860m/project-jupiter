@@ -1,23 +1,15 @@
 extends StaticBody3D
 
 
-@export var defaultYarnNode: String = "hickWorkshopTS3"
+
 @export var time_pass: int = 5
 @onready var dialogComp:= $DialogComponent
 @onready var interactable_component: Node = $InteractableComponent
-@onready var currentYarnNode: String = defaultYarnNode
+var currentYarnNode: String = ""
 func _ready() -> void:
-	if Globals.current_moon == "Ganymede":
-		if Globals.current_timestep >= 6:
-			currentYarnNode = "hickHospitalTS6"
-	
-	elif Globals.current_moon == "Callisto": 
-		if Globals.current_timestep >= 6:
-			currentYarnNode = "hickWorkshopTS6"
-		elif Globals.current_timestep >= 5:
-			currentYarnNode = "hickWorkshopTS5"
-		elif Globals.current_timestep >= 3:
-			currentYarnNode = "hickWorkshopTS3"
+	currentYarnNode = NpcScheduler.get_hickey_yarn_file(Globals.current_timestep, Globals.current_location)
+	if currentYarnNode == "":
+		visible = false
 	dialogComp.start_node = currentYarnNode
 	interactable_component.time_pass = time_pass
 	interactable_component.interact = _interact
