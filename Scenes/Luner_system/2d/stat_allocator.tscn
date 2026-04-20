@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://1whnvub5l716"]
+
+[ext_resource type="Script" uid="uid://c26858p5i84de" path="res://Scenes/Luner_system/2d/stat_allocator.gd" id="1_sfbu2"]
+
+[node name="StatAllocator" type="Node2D" unique_id=1155303945]
+script = ExtResource("1_sfbu2")
+
+[node name="StatPolygon" type="Polygon2D" parent="." unique_id=1205372310]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1287921055]
+
+[node name="StatPointsLabel" type="Label" parent="." unique_id=1491482042]
+offset_left = 348.0
+offset_top = 387.0
+offset_right = 513.0
+offset_bottom = 410.0
+text = "Unused stat points: X"
+
+[node name="Button" type="Button" parent="." unique_id=1572756011]
+offset_left = -359.0
+offset_top = 409.0
+offset_right = -297.0
+offset_bottom = 440.0
+text = "-"
+
+[node name="Button2" type="Button" parent="." unique_id=1848456786]
+offset_left = -359.0
+offset_top = 370.0
+offset_right = -297.0
+offset_bottom = 401.0
+text = "+"
+
+[node name="Button3" type="Button" parent="." unique_id=737879690]
+offset_left = -245.0
+offset_top = 409.0
+offset_right = -183.0
+offset_bottom = 440.0
+text = "-"
+
+[node name="Button4" type="Button" parent="." unique_id=2122790475]
+offset_left = -245.0
+offset_top = 370.0
+offset_right = -183.0
+offset_bottom = 401.0
+text = "+"
+
+[node name="Button5" type="Button" parent="." unique_id=1719033884]
+offset_left = -96.0
+offset_top = 406.0
+offset_right = -34.0
+offset_bottom = 437.0
+text = "-"
+
+[node name="Button6" type="Button" parent="." unique_id=1258959317]
+offset_left = -96.0
+offset_top = 367.0
+offset_right = -34.0
+offset_bottom = 398.0
+text = "+"
+
+[node name="Button7" type="Button" parent="." unique_id=920807064]
+offset_left = 28.0
+offset_top = 408.0
+offset_right = 90.0
+offset_bottom = 439.0
+text = "-"
+
+[node name="Button8" type="Button" parent="." unique_id=1066765813]
+offset_left = 28.0
+offset_top = 369.0
+offset_right = 90.0
+offset_bottom = 400.0
+text = "+"
+
+[node name="Button9" type="Button" parent="." unique_id=1815719318]
+offset_left = 165.0
+offset_top = 407.0
+offset_right = 227.0
+offset_bottom = 438.0
+text = "-"
+
+[node name="Button10" type="Button" parent="." unique_id=32834085]
+offset_left = 165.0
+offset_top = 368.0
+offset_right = 227.0
+offset_bottom = 399.0
+text = "+"
+
+[connection signal="pressed" from="Button" to="." method="_on_r_de_allocate_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_r_allocate_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_d_de_allocate_button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_d_allocate_button_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_m_de_allocate_button_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_m_allocate_button_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_s_de_allocate_button_pressed"]
+[connection signal="pressed" from="Button8" to="." method="_on_s_allocate_button_pressed"]
+[connection signal="pressed" from="Button9" to="." method="_on_f_de_allocate_button_pressed"]
+[connection signal="pressed" from="Button10" to="." method="_on_f_allocate_button_pressed"]
