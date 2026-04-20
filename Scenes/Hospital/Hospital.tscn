@@ -33,6 +33,9 @@ polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Arr
 [sub_resource type="PlaneMesh" id="PlaneMesh_35g8a"]
 size = Vector2(22, 7.5)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_dcae5"]
+size = Vector2(15, 7.5)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_rt5xv"]
 size = Vector3(33, 0.1, 55)
 
@@ -63,8 +66,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.971378, 0, 0)
 mesh = SubResource("PlaneMesh_35g8a")
 
 [node name="Entrance3" type="MeshInstance3D" parent="NavigationAgent3D/Floor/StaticBody3D" unique_id=892293607]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0286217, 0, -7)
-mesh = SubResource("PlaneMesh_35g8a")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0286217, 0, -7)
+mesh = SubResource("PlaneMesh_dcae5")
 
 [node name="Entrance2" type="MeshInstance3D" parent="NavigationAgent3D/Floor/StaticBody3D" unique_id=610721181]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2, 7.9713783, 0, 8)
@@ -81,6 +84,10 @@ mesh = SubResource("PlaneMesh_rt5xv")
 [node name="Lobby" type="MeshInstance3D" parent="NavigationAgent3D/Floor/StaticBody3D" unique_id=2127123783]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5644526, 0, 26.229975)
 mesh = SubResource("PlaneMesh_uiugr")
+
+[node name="RightWall" parent="NavigationAgent3D/Floor/StaticBody3D" unique_id=1532951042 instance=ExtResource("7_uiugr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.175636, 0, 16.009323)
+print_text = "Wall 2"
 
 [node name="WorkerRoom" type="Node" parent="NavigationAgent3D" unique_id=1659569023]
 
@@ -165,6 +172,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.9
 
 [node name="CanymedeCornerRib12" parent="NavigationAgent3D/Entrance" unique_id=75750066 instance=ExtResource("1_35g8a")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.1796956, 0, 4.7313232)
+
+[node name="CanymedeCornerRib15" parent="NavigationAgent3D/Entrance" unique_id=1552421268 instance=ExtResource("1_35g8a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.397144, 0, 11.95391)
 
 [node name="CanymedeCornerRib13" parent="NavigationAgent3D/Entrance" unique_id=807974248 instance=ExtResource("1_35g8a")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 11.719619, 0, 11.993232)
@@ -437,8 +447,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.
 [node name="GanymedeConsole" parent="NavigationAgent3D/Lobby" unique_id=289951264 instance=ExtResource("6_qr0c3")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.575, 0, 2.441)
 
-[node name="RightWall" parent="NavigationAgent3D/Lobby" unique_id=1532951042 instance=ExtResource("7_uiugr")]
+[node name="RightWall" parent="NavigationAgent3D/Lobby" unique_id=1376481515 instance=ExtResource("7_uiugr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.184, 0, 7.751)
+print_text = "Wall 1"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationAgent3D/Lobby" unique_id=666018956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2525795, 1.8729777, 2.4322097)
