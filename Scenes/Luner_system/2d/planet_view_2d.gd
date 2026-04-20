@@ -27,7 +27,7 @@ func _ready() -> void:
 		m.planetview = self
 		for i in range(Globals.max_travel_distance):
 			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= ShipStats.travel_speed * i:
-				m.set_estimated_loc(i, current_location_vector)
+				#m.set_estimated_loc(i, current_location_vector)
 				m.estimated_travel_time = i + pow(ShipStats.severity_const, ShipStats.damage)
 				break
 
@@ -66,4 +66,5 @@ func _on_travel_button_up() -> void:
 
 
 func _on_exit_button_up() -> void:
-	SceneController.goto_scene(current_location.travelScenePath)
+	if not Globals.current_moon == "OutPost":
+		SceneController.goto_scene(current_location.travelScenePath)

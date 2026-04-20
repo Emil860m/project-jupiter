@@ -15,6 +15,7 @@ script = ExtResource("1_6xeag")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2143419481]
 
 [node name="estimated_loc" type="Sprite2D" parent="." unique_id=857844219]
+visible = false
 
 [node name="direction" type="Node2D" parent="estimated_loc" unique_id=1456533699]
 

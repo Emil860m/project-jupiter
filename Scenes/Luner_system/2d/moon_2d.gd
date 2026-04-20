@@ -53,6 +53,7 @@ func set_orbital_position():
 func set_estimated_loc(timestep, current_loc):
 	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + timestep)
 	direction.look_at(current_loc)
+	estimated_loc.visible = true
 	#estimated_travel_time = timestep
 
 func get_position_at_time(timestep) -> Vector2:
