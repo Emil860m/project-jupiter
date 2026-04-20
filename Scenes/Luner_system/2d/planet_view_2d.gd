@@ -30,7 +30,6 @@ func _ready() -> void:
 				m.estimated_travel_time = i + pow(ShipStats.severity_const, ShipStats.damage)
 				break
 
-
 func select_moon(hit):
 	button.disabled = false
 	if hit == null:
@@ -61,6 +60,11 @@ func _on_travel_button_up() -> void:
 			var event = event_scene.instantiate()
 			event.set_completion_callback(_on_event_completed)
 			add_child(event)
+			event.start(
+				Globals.current_timestep,
+				Globals.current_timestep + selected.estimated_travel_time,
+				current_location.global_position,
+				selected.estimated_loc.global_position)
 		else:
 			SceneController.reload_scene()
 

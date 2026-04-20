@@ -8,11 +8,13 @@ var callback: Callable
 
 func _ready():
 	dialog_runner.connect("dialogue_completed", _on_dialog_completed)
-	dialog_component.start_node = EventController.fetch_event()
-	dialog_component.start_dialog()
 	
 	backdrop.size = get_viewport().size
 	backdrop.position -= backdrop.size / 2
+
+func start(start_time, end_time, start_pos, end_pos):
+	dialog_component.start_node = EventController.fetch_event(start_time, end_time, start_pos, end_pos)
+	dialog_component.start_dialog()
 
 func set_completion_callback(new_callback: Callable):
 	callback = new_callback
