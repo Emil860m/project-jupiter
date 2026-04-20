@@ -8,7 +8,7 @@ func get_current_scene_path() -> String:
 	return ""
 
 func get_tow_trucked():
-	goto_scene("")
+	goto_scene("res://Scenes/Luner_system/2d/tow_truck.tscn")
 
 func reload_scene():
 	# Avoid reload_current_scene(); it can leave current_scene transiently invalid.

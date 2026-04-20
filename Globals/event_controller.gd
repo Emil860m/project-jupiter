@@ -68,6 +68,8 @@ func _load_events():
 	# event_longExposure
 	event_to_add = Event.new("event_longExposure", long_route_callable)
 	events.append(event_to_add)
+	
+	events.shuffle()
 
 
 ### EVENT CHECKS ###

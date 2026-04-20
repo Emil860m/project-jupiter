@@ -57,8 +57,7 @@ func damage_ship(damage_number: int):
 func spend_fuel(fuel_spent: int):  # Note: also used by events to reduce fuel
 	var total_fuel_spent = fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
 	if total_fuel_spent > fuel:
-		SceneController
-		print('oh no')
+		SceneController.get_tow_trucked()
 		return
 	fuel -= fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
 
