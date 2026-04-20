@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bpu0d1twhe7y2"]
+
+[ext_resource type="ArrayMesh" uid="uid://vua5cqmvqgif" path="res://Assest/standingVent_clean/standingVent_clean.obj" id="1_g1nma"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l0y0j"]
+size = Vector3(1.227478, 6.9785156, 2.3779297)
+
+[node name="StandingVentClean" type="StaticBody3D" unique_id=1431580851]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="StandingVentClean" type="MeshInstance3D" parent="." unique_id=478631944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061, 0, 0)
+mesh = ExtResource("1_g1nma")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=183231991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05429077, 3.3417969, 0.03857422)
+shape = SubResource("BoxShape3D_l0y0j")
