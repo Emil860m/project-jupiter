@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cfhvocfbqrj4h"]
+
+[ext_resource type="ArrayMesh" uid="uid://dj7oho1whfrrd" path="res://Assest/bossChair/bossChair.obj" id="1_btcdn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qq81g"]
+size = Vector3(3.0892944, 2.736206, 2.489746)
+
+[node name="BossChair" type="StaticBody3D" unique_id=1639493704]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="BossChair" type="MeshInstance3D" parent="." unique_id=1672164839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017, 0, 0)
+mesh = ExtResource("1_btcdn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1162392102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.053863525, 0.868103, 0.015380859)
+shape = SubResource("BoxShape3D_qq81g")
