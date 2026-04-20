@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6bj1lbtxg5po"
-path.s3tc="res://.godot/imported/cleanVent.png-bf9ffc29e538b2b70bc09510e77b63d7.s3tc.ctex"
+uid="uid://ctvrn4kx54xy0"
+path.s3tc="res://.godot/imported/underConstructionSign.png-cf36c775bfc248607b86f7da5f7314be.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assest/standingVent_clean/cleanVent.png"
-dest_files=["res://.godot/imported/cleanVent.png-bf9ffc29e538b2b70bc09510e77b63d7.s3tc.ctex"]
+source_file="res://Assest/signs/underMaintanance/underConstructionSign.png"
+dest_files=["res://.godot/imported/underConstructionSign.png-cf36c775bfc248607b86f7da5f7314be.s3tc.ctex"]
 
 [params]
 

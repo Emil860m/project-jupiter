@@ -2,7 +2,13 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cxh3yf07qeo7e" path="res://Assest/pipes/pipe.obj" id="1_8b0gk"]
 
-[node name="Pipe" type="Node3D" unique_id=251771990]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8b0gk"]
+size = Vector3(1, 1, 4)
+
+[node name="Pipe" type="StaticBody3D" unique_id=1770481423]
 
 [node name="Pipe" type="MeshInstance3D" parent="." unique_id=341551779]
 mesh = ExtResource("1_8b0gk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1507532399]
+shape = SubResource("BoxShape3D_8b0gk")

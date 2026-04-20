@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ccmhmfvmumi67"]
 
+[ext_resource type="Script" uid="uid://c3jki7vykyl1l" path="res://Prefabs/Ganymede/ganymede_door.gd" id="1_a3amy"]
 [ext_resource type="ArrayMesh" uid="uid://cyplkfhsnlqcu" path="res://Assest/ganymedeWalls/ganymedeDoor.obj" id="1_amg6t"]
 [ext_resource type="ArrayMesh" uid="uid://d3rdcqouqjrgq" path="res://Assest/ganymedeWalls/ganymedeDoorFrame.obj" id="2_a3amy"]
 
@@ -7,6 +8,7 @@
 size = Vector3(1, 4, 3)
 
 [node name="GanymedeDoor" type="StaticBody3D" unique_id=729568765]
+script = ExtResource("1_a3amy")
 
 [node name="GanymedeDoor" type="MeshInstance3D" parent="." unique_id=1704183907]
 mesh = ExtResource("1_amg6t")

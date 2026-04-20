@@ -48,6 +48,10 @@ enabled=PackedStringArray("res://addons/fmod/plugin.cfg", "res://addons/yarn_spi
 
 import/blender/enabled=false
 
+[global_group]
+
+Player=""
+
 [input]
 
 move_click={

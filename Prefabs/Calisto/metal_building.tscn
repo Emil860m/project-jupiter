@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://c6dewu4he0gcs"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7rsr42q28e7m" path="res://Assest/metalBuilding/metalBuildingRoof/MetalBuildingRoof.obj" id="1_fd3rr"]
+[ext_resource type="ArrayMesh" uid="uid://c105lbelme7t7" path="res://Assest/metalBuilding/metalBuildingTopRib/MetalBuildingTopRib.obj" id="2_3gp4i"]
+[ext_resource type="ArrayMesh" uid="uid://bk4vb4vnm73h2" path="res://Assest/metalDoor/metalDoor.obj" id="3_j2wct"]
+[ext_resource type="ArrayMesh" uid="uid://bagdjiusweyiq" path="res://Assest/metalDoor/metalDoorFrame.obj" id="4_07ofv"]
+[ext_resource type="ArrayMesh" uid="uid://cay185oqaax2i" path="res://Assest/metalBuilding/metalBuildingRib/metalBuildingRib.obj" id="5_n7227"]
+[ext_resource type="ArrayMesh" uid="uid://fqfaa7pc5xnv" path="res://Assest/metalBuilding/metalBuildingWall/MetalBuildingWall.obj" id="6_f1081"]
+[ext_resource type="PackedScene" uid="uid://bofqbao1he4ha" path="res://Prefabs/electric_box.tscn" id="7_3gp4i"]
+[ext_resource type="PackedScene" uid="uid://bqea6cn56en53" path="res://Prefabs/standing_vent.tscn" id="8_j2wct"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fd3rr"]
+size = Vector3(8, 4, 9)
+
+[node name="MetalBuilding" type="StaticBody3D" unique_id=1512418478]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=832339826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 2, 0)
+shape = SubResource("BoxShape3D_fd3rr")
+
+[node name="ElectricBox" parent="." unique_id=827621083 instance=ExtResource("7_3gp4i")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -1.6933832, -0.62820244, 4.7227287)
+
+[node name="StandingVent" parent="." unique_id=621560155 instance=ExtResource("8_j2wct")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -4.257978, 0, 4.5915456)
+
+[node name="Building" type="Node3D" parent="." unique_id=699460744]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="MetalBuildingRoof" type="MeshInstance3D" parent="Building" unique_id=860597094]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.9601784, 3, 0)
+mesh = ExtResource("1_fd3rr")
+
+[node name="MetalBuildingTopRib" type="MeshInstance3D" parent="Building" unique_id=1921991621]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3.4105558, 0)
+mesh = ExtResource("2_3gp4i")
+
+[node name="Door" type="Node3D" parent="Building" unique_id=740929219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 2)
+
+[node name="MetalDoor" type="MeshInstance3D" parent="Building/Door" unique_id=1889253958]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, -4)
+mesh = ExtResource("3_j2wct")
+
+[node name="MetalDoorFrame" type="MeshInstance3D" parent="Building/Door" unique_id=530237506]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, -4)
+mesh = ExtResource("4_07ofv")
+
+[node name="Wall" type="Node3D" parent="Building" unique_id=1702435255]
+
+[node name="MetalBuildingRib" type="MeshInstance3D" parent="Building/Wall" unique_id=837436789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingRib2" type="MeshInstance3D" parent="Building/Wall" unique_id=1922970783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingWall" type="MeshInstance3D" parent="Building/Wall" unique_id=926209294]
+mesh = ExtResource("6_f1081")
+
+[node name="Wall4" type="Node3D" parent="Building" unique_id=578256548]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6, 0, 0)
+
+[node name="MetalBuildingRib" type="MeshInstance3D" parent="Building/Wall4" unique_id=370786032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingRib2" type="MeshInstance3D" parent="Building/Wall4" unique_id=2060657584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingWall" type="MeshInstance3D" parent="Building/Wall4" unique_id=159765009]
+mesh = ExtResource("6_f1081")
+
+[node name="Wall2" type="Node3D" parent="Building" unique_id=1646944392]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, -3)
+
+[node name="MetalBuildingRib" type="MeshInstance3D" parent="Building/Wall2" unique_id=2066003638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingRib2" type="MeshInstance3D" parent="Building/Wall2" unique_id=281730992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingWall" type="MeshInstance3D" parent="Building/Wall2" unique_id=309151358]
+mesh = ExtResource("6_f1081")
+
+[node name="Wall3" type="Node3D" parent="Building" unique_id=1118478879]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3, 0, 3)
+
+[node name="MetalBuildingRib" type="MeshInstance3D" parent="Building/Wall3" unique_id=1518163498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingRib2" type="MeshInstance3D" parent="Building/Wall3" unique_id=132181648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("5_n7227")
+
+[node name="MetalBuildingWall" type="MeshInstance3D" parent="Building/Wall3" unique_id=126739647]
+mesh = ExtResource("6_f1081")
