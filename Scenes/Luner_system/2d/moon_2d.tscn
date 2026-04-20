@@ -15,6 +15,7 @@ script = ExtResource("1_6xeag")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2143419481]
 
 [node name="estimated_loc" type="Sprite2D" parent="." unique_id=857844219]
+visible = false
 
 [node name="direction" type="Node2D" parent="estimated_loc" unique_id=1456533699]
 
@@ -23,7 +24,8 @@ position = Vector2(40, 0)
 texture = ExtResource("2_il48s")
 
 [node name="Sprite2D" type="Sprite2D" parent="estimated_loc/direction" unique_id=50044397]
-position = Vector2(70, 0)
+position = Vector2(111.99999, 3.8146973e-06)
+scale = Vector2(3.4375, 2.03125)
 texture = ExtResource("3_1rqb0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=296438334]
@@ -31,10 +33,10 @@ shape = SubResource("CircleShape2D_6xeag")
 
 [node name="YouAreHere" type="Sprite2D" parent="." unique_id=177738678]
 visible = false
-texture = ExtResource("2_jbmmh")
+texture = ExtResource("3_caebh")
 
 [node name="selected" type="Sprite2D" parent="." unique_id=1560463259]
 visible = false
-texture = ExtResource("3_caebh")
+texture = ExtResource("2_jbmmh")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

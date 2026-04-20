@@ -3,7 +3,7 @@ class_name StatAllocationButtonGroup
 
 @onready var add_button = $VBoxContainer/AddButton
 @onready var subtract_button = $VBoxContainer/SubtractButton
-@onready var label = $VBoxContainer/Label
+@onready var label = $Label
 
 var type: ShipStats.ShipStatTypes
 var callback: Callable

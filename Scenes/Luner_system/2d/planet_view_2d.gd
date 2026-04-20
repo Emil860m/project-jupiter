@@ -9,12 +9,15 @@ var selected: Area2D
 @export var selectedMoonLabel: Label
 @export var currentLocationLabel: Label
 @export var estimatedTravelLabel: Label
+@export var estimatedFuelLabel: Label
+@export var shipStatusLabel: Label
 var current_location: moon_2d
 @onready var button: Button = $UiElements/Button
 
 var event_scene := preload("res://Scenes/Luner_system/2d/event_display.tscn")
 
 func _ready() -> void:
+	shipStatusLabel.text = str(10 - ShipStats.damage)
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
 	
 	raycast_comp.camera_2d = camera_2d
@@ -26,7 +29,7 @@ func _ready() -> void:
 		m.planetview = self
 		for i in range(Globals.max_travel_distance):
 			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= ShipStats.travel_speed * i:
-				m.set_estimated_loc(i, current_location_vector)
+				#m.set_estimated_loc(i, current_location_vector)
 				m.estimated_travel_time = i + pow(ShipStats.severity_const, ShipStats.damage)
 				break
 
@@ -44,6 +47,7 @@ func select_moon(hit):
 		selected.set_selected(true)
 		selectedMoonLabel.text = hit.displayName
 		estimatedTravelLabel.text = str(hit.estimated_travel_time)
+		estimatedFuelLabel.text = str(hit.estimated_travel_time)
 		for m in moons.get_children():
 			m.set_estimated_loc(hit.estimated_travel_time, current_location.global_position)
 		#if selected.estimated_travel_time >= ShipStats.fuel:
@@ -67,6 +71,11 @@ func _on_travel_button_up() -> void:
 				selected.estimated_loc.global_position)
 		else:
 			SceneController.reload_scene()
+
+
+func _on_exit_button_up() -> void:
+	if not Globals.current_moon == "OutPost":
+		SceneController.goto_scene(current_location.travelScenePath)
 
 func _on_event_completed() -> void:
 	SceneController.goto_scene(selected.travelScenePath)

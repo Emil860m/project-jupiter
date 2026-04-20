@@ -1,34 +1,37 @@
 [gd_scene format=3 uid="uid://1whnvub5l716"]
 
 [ext_resource type="Script" uid="uid://c26858p5i84de" path="res://Scenes/Luner_system/2d/stat_allocator.gd" id="1_sfbu2"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="2_77vud"]
 
 [node name="StatAllocator" type="Node2D" unique_id=1155303945]
 script = ExtResource("1_sfbu2")
 
 [node name="StatPolygon" type="Polygon2D" parent="." unique_id=1205372310]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1287921055]
-
-[node name="StatPointsLabel" type="Label" parent="." unique_id=1491482042]
-offset_left = 404.0
-offset_top = 371.0
-offset_right = 569.0
-offset_bottom = 394.0
-text = "Unused stat points: X"
-
 [node name="ButtonGroupMarkers" type="Node2D" parent="." unique_id=1641395282]
+position = Vector2(-400, -348)
 
 [node name="RMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1041130966]
-position = Vector2(-600, 375)
+position = Vector2(-300, 348)
 
 [node name="DMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1211201089]
-position = Vector2(-400, 375)
+position = Vector2(-150, 348)
 
 [node name="MMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1083709278]
-position = Vector2(-200, 375)
+position = Vector2(0, 348)
 
 [node name="SMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1942097679]
-position = Vector2(0, 375)
+position = Vector2(150, 348)
 
 [node name="FMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=140694118]
-position = Vector2(200, 375)
+position = Vector2(300, 348)
+
+[node name="StatPointsLabel" type="Label" parent="ButtonGroupMarkers" unique_id=1491482042]
+offset_left = -222.0
+offset_top = 512.0
+offset_right = 159.0
+offset_bottom = 568.0
+theme_override_fonts/font = ExtResource("2_77vud")
+theme_override_font_sizes/font_size = 52
+text = "Unused stat points: X"
+metadata/_edit_use_anchors_ = true
