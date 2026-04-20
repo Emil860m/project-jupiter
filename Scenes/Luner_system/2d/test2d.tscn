@@ -50,20 +50,20 @@ texture = ExtResource("7_782mr")
 
 [node name="Label" type="Label" parent="." unique_id=558895245]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -701.0
-offset_top = -403.0
-offset_right = -142.0
-offset_bottom = -347.0
+offset_left = -699.0
+offset_top = -427.0
+offset_right = -140.0
+offset_bottom = -371.0
 theme_override_fonts/font = ExtResource("8_vx3gg")
 theme_override_font_sizes/font_size = 40
 text = ">>> NaviJPS     [ build 32.12.1xA0 ]"
 
 [node name="Label2" type="Label" parent="." unique_id=1959191575]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -705.0
-offset_top = -348.0
-offset_right = -219.0
-offset_bottom = -262.0
+offset_left = -703.0
+offset_top = -380.0
+offset_right = -217.0
+offset_bottom = -294.0
 theme_override_fonts/font = ExtResource("8_vx3gg")
 theme_override_font_sizes/font_size = 32
 text = "Wellcome to the Jupiter positioning system 
