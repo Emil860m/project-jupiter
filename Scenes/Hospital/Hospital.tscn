@@ -103,7 +103,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.053371, 0, -5.3554544)
 mesh = SubResource("PlaneMesh_rt5xv")
 
 [node name="Lobby" type="MeshInstance3D" parent="NavigationAgent3D/Floor/StaticBody3D" unique_id=2127123783]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5644526, 0, 26.229975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4054017, -0.057175636, 26.3023)
 mesh = SubResource("PlaneMesh_uiugr")
 
 [node name="RightWall" parent="NavigationAgent3D/Floor/StaticBody3D" unique_id=1532951042 instance=ExtResource("7_uiugr")]

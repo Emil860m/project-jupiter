@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://ccmhmfvmumi67" path="res://Prefabs/Ganymede/ganymede_door.tscn" id="8_cylq8"]
 [ext_resource type="PackedScene" uid="uid://dalsdjmiobl4j" path="res://Prefabs/MiscProps/round_light.tscn" id="9_6s0xy"]
 [ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="9_13t73"]
-[ext_resource type="PackedScene" uid="uid://bg5eco0wxm2pm" path="res://Prefabs/MiscProps/under_construction_sign.tscn" id="10_13t73"]
 [ext_resource type="PackedScene" uid="uid://cfhvocfbqrj4h" path="res://Prefabs/Ganymede/bossChair.tscn" id="11_oxwys"]
 [ext_resource type="PackedScene" uid="uid://cbml54cjrq65a" path="res://Prefabs/Ganymede/boss_book_shelf.tscn" id="11_tonup"]
 [ext_resource type="PackedScene" uid="uid://bpu0d1twhe7y2" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="12_tonup"]
@@ -166,9 +165,6 @@ transform = Transform3D(-0.49945477, 0.023343971, -1.0203974e-09, 0, -2.1855694e
 [node name="RoundLight5" parent="NavigationRegion3D/Lights" unique_id=391443699 instance=ExtResource("9_6s0xy")]
 transform = Transform3D(-0.49945477, 0.023343971, 1.0203974e-09, 0, -2.1855694e-08, 0.5, 0.023343971, 0.49945477, 2.183186e-08, 7.7554626, 6.5364304, -2.8769772)
 
-[node name="UnderConstructionSign" parent="NavigationRegion3D" unique_id=306960224 instance=ExtResource("10_13t73")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 12.754, 0, 0)
-
 [node name="BossChair" parent="NavigationRegion3D" unique_id=1639493704 instance=ExtResource("11_oxwys")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -18.196, 0, -0.154)
 
@@ -192,7 +188,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.351213, 0.019897226
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=956773002]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 33, 0)
-light_energy = 9.179
+light_energy = 0.0
 
 [node name="GanymedeDoor2" parent="." unique_id=729568765 instance=ExtResource("8_cylq8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4609957, 0.039102726, 3.4913616)
