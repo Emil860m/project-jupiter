@@ -42,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://bqea6cn56en53" path="res://Prefabs/standing_vent.tscn" id="41_oc08o"]
 [ext_resource type="PackedScene" uid="uid://d110b2beiywq7" path="res://Prefabs/Ganymede/medicalBed.tscn" id="42_7wdrn"]
 [ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="42_j4oc1"]
+[ext_resource type="PackedScene" uid="uid://c6dewu4he0gcs" path="res://Prefabs/Calisto/metal_building.tscn" id="43_376kf"]
 
 [node name="ScalingScene" type="Node3D" unique_id=1149280770]
 
@@ -195,3 +196,6 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.3801637, 0, -22.4648
 
 [node name="MedicalBed" parent="." unique_id=130115927 instance=ExtResource("42_7wdrn")]
 transform = Transform3D(-0.12508015, 0, -0.48410222, 0, 0.5, 0, 0.48410222, 0, -0.12508015, -5.227442, 0, -1.4152122)
+
+[node name="MetalBuilding" parent="." unique_id=1512418478 instance=ExtResource("43_376kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6381617, 0, -28.450136)
