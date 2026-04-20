@@ -26,7 +26,8 @@ grow_vertical = 0
 
 [node name="LinePresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1812540107 node_paths=PackedStringArray("text_label", "character_label", "continue_indicator")]
 layout_mode = 0
-offset_right = 710.0
+offset_top = -110.0
+offset_right = 1420.0
 offset_bottom = 115.0
 script = ExtResource("3_3kam2")
 text_label = NodePath("VBoxContainer/TextLabel")
@@ -43,17 +44,19 @@ text = "Char label"
 [node name="TextLabel" type="RichTextLabel" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=1716029707]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 30
 text = "Textbox"
 
 [node name="ContinueIndicator" type="Label" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=702772141]
 layout_mode = 2
-text = "continue in"
+text = "Click to continue"
 
 [node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865]
 layout_mode = 0
-offset_left = 713.0
-offset_right = 1150.0
-offset_bottom = 114.0
+offset_left = 1420.0
+offset_top = -109.0
+offset_right = 1920.0
+offset_bottom = 116.0
 script = ExtResource("4_tomcn")
 option_button_scene = ExtResource("5_007lo")
 
