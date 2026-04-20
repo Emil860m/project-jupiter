@@ -11,12 +11,21 @@ var selected: Area2D
 @export var estimatedTravelLabel: Label
 @export var estimatedFuelLabel: Label
 @export var shipStatusLabel: Label
+@export var noice_max = 15.0
+@export var noice_min = 5.0
 var current_location: moon_2d
 @onready var button: Button = $UiElements/Button
 
 var event_scene := preload("res://Scenes/Luner_system/2d/event_display.tscn")
 
+var traveltime_noice = 0
+var fuel_noice = 0
+
 func _ready() -> void:
+	var travel_positive_noice = 1 == randi_range(0,1)
+	var fuel_positive_noice = 1 == randi_range(0,1)
+	traveltime_noice = randf_range(noice_min, noice_max) * (1 if travel_positive_noice else -1)
+	fuel_noice = randf_range(noice_min, noice_max) * (1 if fuel_positive_noice else -1)
 	shipStatusLabel.text = str(10 - ShipStats.damage)
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
 	
@@ -29,8 +38,8 @@ func _ready() -> void:
 		m.planetview = self
 		for i in range(Globals.max_travel_distance):
 			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= ShipStats.travel_speed * i:
-				#m.set_estimated_loc(i, current_location_vector)
-				m.estimated_travel_time = i + pow(ShipStats.severity_const, ShipStats.damage)
+				m.set_estimated_loc(i, current_location_vector)
+				m.estimated_travel_time = (i + pow(ShipStats.severity_const, ShipStats.damage)) / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
 				break
 
 func select_moon(hit):
@@ -46,14 +55,10 @@ func select_moon(hit):
 		selected = hit
 		selected.set_selected(true)
 		selectedMoonLabel.text = hit.displayName
-		estimatedTravelLabel.text = str(hit.estimated_travel_time)
-		estimatedFuelLabel.text = str(hit.estimated_travel_time)
+		estimatedTravelLabel.text = str(round(hit.estimated_travel_time * (1 + traveltime_noice / 100)))
+		estimatedFuelLabel.text = str(round(hit.estimated_travel_time * (1 + fuel_noice / 100)))
 		for m in moons.get_children():
 			m.set_estimated_loc(hit.estimated_travel_time, current_location.global_position)
-		#if selected.estimated_travel_time >= ShipStats.fuel:
-		#	button.disabled = true
-	
-
 
 func _on_travel_button_up() -> void:
 	if selected:
