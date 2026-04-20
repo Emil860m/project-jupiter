@@ -2,7 +2,14 @@
 
 [ext_resource type="ArrayMesh" uid="uid://bcqbh2k5vmby5" path="res://Assest/pipes/pipe_curve.obj" id="1_c6bkr"]
 
-[node name="PipeCurve" type="Node3D" unique_id=1981491263]
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6bkr"]
+size = Vector3(1, 3, 3)
+
+[node name="PipeCurve" type="StaticBody3D" unique_id=2033087110]
 
 [node name="PipeCurve" type="MeshInstance3D" parent="." unique_id=1440090282]
 mesh = ExtResource("1_c6bkr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2035805954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3.5)
+shape = SubResource("BoxShape3D_c6bkr")

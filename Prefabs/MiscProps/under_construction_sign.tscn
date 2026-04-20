@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bg5eco0wxm2pm"]
+
+[ext_resource type="ArrayMesh" uid="uid://l0alcn8yv80o" path="res://Assest/signs/underMaintanance/underCostructionSign.obj" id="1_ouguv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uk6vo"]
+size = Vector3(1, 5, 22)
+
+[node name="UnderConstructionSign" type="StaticBody3D" unique_id=306960224]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="UnderCostructionSign" type="MeshInstance3D" parent="." unique_id=76934363]
+mesh = ExtResource("1_ouguv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=716672736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_uk6vo")

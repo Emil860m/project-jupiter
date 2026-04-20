@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://cbml54cjrq65a"]
+
+[ext_resource type="ArrayMesh" uid="uid://wyk2kja0jiby" path="res://Assest/bookShelfStanding/bookShelfBox.obj" id="1_uohme"]
+[ext_resource type="ArrayMesh" uid="uid://bx6stlva27hw6" path="res://Assest/bookShelfStanding/bookShelfGreenBook.obj" id="2_rrk73"]
+[ext_resource type="ArrayMesh" uid="uid://ct5ftn7dymm6n" path="res://Assest/bookShelfStanding/bookShelfJar.obj" id="3_6n5l4"]
+[ext_resource type="ArrayMesh" uid="uid://c8axf4dn61bl" path="res://Assest/bookShelfStanding/bookShelfRedBook.obj" id="4_pnrmu"]
+[ext_resource type="ArrayMesh" uid="uid://eo453wfvy8e7" path="res://Assest/bookShelfStanding/bookShelfSmallBook.obj" id="5_oapgb"]
+[ext_resource type="ArrayMesh" uid="uid://d3r8ne65ssdgq" path="res://Assest/bookShelfStanding/bookShelfStanding.obj" id="6_ru468"]
+[ext_resource type="PackedScene" uid="uid://ch4q00k07iu2i" path="res://Prefabs/plant.tscn" id="7_rrk73"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uohme"]
+size = Vector3(1, 6, 3)
+
+[node name="BossBookShelf" type="StaticBody3D" unique_id=1891062108]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="BookShelfBox" type="MeshInstance3D" parent="." unique_id=1301325818]
+mesh = ExtResource("1_uohme")
+
+[node name="BookShelfGreenBook" type="MeshInstance3D" parent="." unique_id=1385196440]
+mesh = ExtResource("2_rrk73")
+
+[node name="BookShelfGreenBook2" type="MeshInstance3D" parent="." unique_id=220257433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.3918145)
+mesh = ExtResource("2_rrk73")
+
+[node name="BookShelfGreenBook7" type="MeshInstance3D" parent="." unique_id=375178811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2334784, -0.15408051)
+mesh = ExtResource("2_rrk73")
+
+[node name="BookShelfJar" type="MeshInstance3D" parent="." unique_id=1187916050]
+mesh = ExtResource("3_6n5l4")
+
+[node name="BookShelfRedBook" type="MeshInstance3D" parent="." unique_id=1171870334]
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfRedBook2" type="MeshInstance3D" parent="." unique_id=846574638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.34843063)
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfRedBook3" type="MeshInstance3D" parent="." unique_id=1460154755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.70468247)
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfGreenBook3" type="MeshInstance3D" parent="." unique_id=1781017221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0730557, -0.85946465)
+mesh = ExtResource("2_rrk73")
+
+[node name="BookShelfGreenBook4" type="MeshInstance3D" parent="." unique_id=1108078472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0730557, -2.251279)
+mesh = ExtResource("2_rrk73")
+
+[node name="BookShelfRedBook4" type="MeshInstance3D" parent="." unique_id=2067230985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0730557, -0.85946465)
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfGreenBook5" type="MeshInstance3D" parent="." unique_id=1732228885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0227227, -0.46222234)
+mesh = ExtResource("2_rrk73")
+
+[node name="BookShelfRedBook7" type="MeshInstance3D" parent="." unique_id=197148338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0227227, -0.46222234)
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfGreenBook6" type="MeshInstance3D" parent="." unique_id=553968658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2334621, -0.46222234)
+mesh = ExtResource("2_rrk73")
+
+[node name="BookShelfRedBook8" type="MeshInstance3D" parent="." unique_id=117507085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2334621, -0.46222234)
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfRedBook5" type="MeshInstance3D" parent="." unique_id=461620877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0730557, -1.2078953)
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfRedBook6" type="MeshInstance3D" parent="." unique_id=1898634545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0730557, -1.5641471)
+mesh = ExtResource("4_pnrmu")
+
+[node name="BookShelfSmallBook" type="MeshInstance3D" parent="." unique_id=841472105]
+mesh = ExtResource("5_oapgb")
+
+[node name="BookShelfSmallBook2" type="MeshInstance3D" parent="." unique_id=632242019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0431974, -1.8499671)
+mesh = ExtResource("5_oapgb")
+
+[node name="BookShelfStanding" type="MeshInstance3D" parent="." unique_id=2146821159]
+mesh = ExtResource("6_ru468")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1864526416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_uohme")
+
+[node name="Plant" parent="." unique_id=307560978 instance=ExtResource("7_rrk73")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.045917094, 4.732987, 0.8626778)

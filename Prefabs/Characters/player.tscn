@@ -16,7 +16,7 @@ albedo_texture = ExtResource("1_4flbx")
 material = SubResource("StandardMaterial3D_i3pqv")
 size = Vector3(0.8, 2, 0.8)
 
-[node name="Player" type="CharacterBody3D" unique_id=134844603]
+[node name="Player" type="CharacterBody3D" unique_id=134844603 groups=["Player"]]
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=651148158]

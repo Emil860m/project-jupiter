@@ -4,4 +4,3 @@
 
 [node name="EventController" type="Node" unique_id=193095194]
 script = ExtResource("1_3weel")
-long_journey_cutoff = 250

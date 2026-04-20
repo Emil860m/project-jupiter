@@ -32,6 +32,11 @@ func refresh_events():
 	events.shuffle()
 
 
+func resolve_outcome(passed_time: int, spent_fuel: int, damage_taken: int):
+	Globals.increment_timestep(passed_time)
+	ShipStats.spend_fuel(spent_fuel)
+	ShipStats.damage_ship(damage_taken)
+
 # auxiliaries
 func _load_events():
 	# Callables
@@ -63,6 +68,8 @@ func _load_events():
 	# event_longExposure
 	event_to_add = Event.new("event_longExposure", long_route_callable)
 	events.append(event_to_add)
+	
+	events.shuffle()
 
 
 ### EVENT CHECKS ###

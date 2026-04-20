@@ -15,6 +15,7 @@ var planetview: Node2D
 @export var travelScenePath: String
 var current_angle: float = 0.0
 var selected: bool = false
+var base_travel_time: int
 var estimated_travel_time: int
 
 @onready var estimated_loc: Sprite2D = $estimated_loc

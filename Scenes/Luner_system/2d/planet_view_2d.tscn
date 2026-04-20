@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ctmwb44g78a8k" path="res://Textures/MapUI/000_MapUI_jupiter.png" id="2_iwfgl"]
 [ext_resource type="PackedScene" uid="uid://bte2u56r132tv" path="res://Scenes/Luner_system/2d/moon_2d.tscn" id="2_s3bh8"]
 [ext_resource type="Texture2D" uid="uid://dtg26o84l5jle" path="res://Textures/MapUI/001_MapUI_ganimide.png" id="3_a4yyy"]
-[ext_resource type="PackedScene" uid="uid://cr04mmvo0moc7" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
+[ext_resource type="PackedScene" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="6_hpwom"]
 [ext_resource type="Texture2D" uid="uid://bkdf436lcp53" path="res://Textures/MapUI/002_MapUI_callisto.png" id="6_l0otk"]
 [ext_resource type="Texture2D" uid="uid://djljvypx8740c" path="res://Textures/MapUI/007_MapUI_thePonds.png" id="7_ydf4a"]
@@ -47,7 +47,7 @@ radius = 214.0
 starting_angle = 2.0
 sprite = ExtResource("3_a4yyy")
 displayName = "Ganymedes"
-travelScenePath = "res://Scenes/Hospital/Hospital2.tscn"
+travelScenePath = "res://Scenes/Hospital/Hospital.tscn"
 
 [node name="Callisto" parent="MoonParent" unique_id=1558893402 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")

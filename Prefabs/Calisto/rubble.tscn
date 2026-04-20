@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://maojlvkx0p48"]
+
+[ext_resource type="PackedScene" uid="uid://bofqbao1he4ha" path="res://Prefabs/electric_box.tscn" id="1_0nqp5"]
+[ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="2_dt8qg"]
+[ext_resource type="PackedScene" uid="uid://bdf7i3bbqacsb" path="res://Prefabs/radio_box.tscn" id="3_6fmps"]
+[ext_resource type="PackedScene" uid="uid://ctyn0qwsj53a2" path="res://Prefabs/pipe_curve.tscn" id="4_aqs2x"]
+[ext_resource type="PackedScene" uid="uid://bw2sc4dr7iwrb" path="res://Prefabs/MiscProps/gas_tank.tscn" id="5_b6ct2"]
+[ext_resource type="PackedScene" uid="uid://cxb2jaomgdav3" path="res://Prefabs/MiscProps/barrel.tscn" id="6_hgker"]
+[ext_resource type="PackedScene" uid="uid://bp8ne2wig32q1" path="res://Prefabs/MiscProps/handle.tscn" id="8_n24mo"]
+[ext_resource type="PackedScene" uid="uid://dlrp615631pqr" path="res://Prefabs/industrial_cable_a.tscn" id="9_dt8qg"]
+[ext_resource type="PackedScene" uid="uid://b775kktubciyu" path="res://Prefabs/MiscProps/wrench.tscn" id="9_jn5ig"]
+[ext_resource type="PackedScene" uid="uid://dg53kqsa2pt0o" path="res://Prefabs/industrial_liquid_tank_a.tscn" id="10_6fmps"]
+[ext_resource type="PackedScene" uid="uid://bqea6cn56en53" path="res://Prefabs/standing_vent.tscn" id="10_aqs2x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0tvya"]
+size = Vector3(7, 4, 11)
+
+[node name="Rubble" type="StaticBody3D" unique_id=1357896612]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, 0, 0, 0)
+
+[node name="Stuff" type="Node3D" parent="." unique_id=940952301]
+
+[node name="ElectricBox" parent="Stuff" unique_id=827621083 instance=ExtResource("1_0nqp5")]
+transform = Transform3D(0.43301266, 0, 0.25, -0.25, -1.8927587e-08, 0.4330127, 0, -0.5, -1.4901161e-08, 0, 0, 0)
+
+[node name="TrashCan" parent="Stuff" unique_id=1349536050 instance=ExtResource("2_dt8qg")]
+transform = Transform3D(0.67614806, 0, -0.18117332, 0, 0.7, 0, 0.18117332, 0, 0.67614806, -1.2305808, 0, -0.04908234)
+
+[node name="RadioBox" parent="Stuff" unique_id=1423128728 instance=ExtResource("3_6fmps")]
+transform = Transform3D(0.4829629, 0, -0.1294095, 0, 0.5, 0, 0.1294095, 0, 0.4829629, 1.1600959, 0, -1.2025961)
+
+[node name="PipeCurve" parent="Stuff" unique_id=2033087110 instance=ExtResource("4_aqs2x")]
+transform = Transform3D(0.25, 0.9330126, 0.258819, -0.9659258, 0.25881907, 0, -0.066987306, -0.24999997, 0.9659257, 0, 0, 0)
+
+[node name="GasTank" parent="Stuff" unique_id=1297532690 instance=ExtResource("5_b6ct2")]
+transform = Transform3D(0.6, 0, -2.9802322e-08, 0, 0.6, 0, 2.9802322e-08, 0, 0.6, 2.3841858e-07, 0, -4.2426405)
+
+[node name="Barrel" parent="Stuff" unique_id=83570398 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.79999995, 0, -2.9802322e-08, 0, 0.8, 0, 2.9802322e-08, 0, 0.79999995, 0, 0, 0)
+
+[node name="Handle" parent="Stuff" unique_id=2011278621 instance=ExtResource("8_n24mo")]
+
+[node name="Barrel2" parent="Stuff" unique_id=411796012 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.79999995, 0, -2.9802322e-08, 0, 0.8, 0, 2.9802322e-08, 0, 0.79999995, 0, 0, 0)
+
+[node name="Wrench" parent="Stuff" unique_id=223653445 instance=ExtResource("9_jn5ig")]
+
+[node name="Wrench2" parent="Stuff" unique_id=32068614 instance=ExtResource("9_jn5ig")]
+
+[node name="Stuff3" type="Node3D" parent="." unique_id=673983231]
+transform = Transform3D(-0.86602527, 0, -0.49999988, 0, 1, 0, 0.49999988, 0, -0.86602527, 2.8284268, 0, -2.8284268)
+
+[node name="ElectricBox" parent="Stuff3" unique_id=611601929 instance=ExtResource("1_0nqp5")]
+transform = Transform3D(0.43301266, 0, 0.25, -0.25, -1.8927587e-08, 0.4330127, 0, -0.5, -1.4901161e-08, 0, 0, 0)
+
+[node name="TrashCan" parent="Stuff3" unique_id=381340947 instance=ExtResource("2_dt8qg")]
+transform = Transform3D(0.67614806, 0, -0.18117332, 0, 0.7, 0, 0.18117332, 0, 0.67614806, -1.2305808, 0, -0.04908234)
+
+[node name="RadioBox" parent="Stuff3" unique_id=1864323815 instance=ExtResource("3_6fmps")]
+transform = Transform3D(0.4829629, 0, -0.1294095, 0, 0.5, 0, 0.1294095, 0, 0.4829629, 1.1600959, 0, -1.2025961)
+
+[node name="GasTank" parent="Stuff3" unique_id=557528790 instance=ExtResource("5_b6ct2")]
+transform = Transform3D(0.6, 0, -2.9802322e-08, 0, 0.6, 0, 2.9802322e-08, 0, 0.6, 2.3841858e-07, 0, -4.2426405)
+
+[node name="Barrel" parent="Stuff3" unique_id=26095037 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.79999995, 0, -2.9802322e-08, 0, 0.8, 0, 2.9802322e-08, 0, 0.79999995, 0, 0, 0)
+
+[node name="Handle" parent="Stuff3" unique_id=1415084223 instance=ExtResource("8_n24mo")]
+
+[node name="Barrel2" parent="Stuff3" unique_id=527758282 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.79999995, 0, -2.9802322e-08, 0, 0.8, 0, 2.9802322e-08, 0, 0.79999995, 0, 0, 0)
+
+[node name="Wrench" parent="Stuff3" unique_id=1480200866 instance=ExtResource("9_jn5ig")]
+
+[node name="Wrench2" parent="Stuff3" unique_id=1308769711 instance=ExtResource("9_jn5ig")]
+
+[node name="Barrel3" parent="Stuff3" unique_id=317090834 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.8000001, 0, 0, 0, 0.8, 0, 0, 0, 0.8000001, 0.18946886, 0, -3.1565971)
+
+[node name="Barrel4" parent="Stuff3" unique_id=935408894 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.8000001, 0, 0, 0, 0.8, 0, 0, 0, 0.8000001, -0.069350004, 0, -4.122524)
+
+[node name="IndustrialLiquidTankA" parent="Stuff3" unique_id=925635222 instance=ExtResource("10_6fmps")]
+transform = Transform3D(0.12940952, 0, -0.48296303, 0, 0.5, 0, 0.48296303, 0, 0.12940952, 0.10021472, 1, -3.5639157)
+
+[node name="StandingVent" parent="Stuff3" unique_id=621560155 instance=ExtResource("10_aqs2x")]
+transform = Transform3D(0.12500001, 0.033493657, -0.48296303, -0.12940955, 0.4829629, 3.7252903e-09, 0.4665065, 0.12500004, 0.12940952, 2.7842531, -2.3022804, -6.652069)
+
+[node name="Stuff2" type="Node3D" parent="." unique_id=1196174994]
+transform = Transform3D(0.49999994, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999994, 2.12132, 0, 3.535534)
+
+[node name="ElectricBox" parent="Stuff2" unique_id=1239347604 instance=ExtResource("1_0nqp5")]
+transform = Transform3D(0.43301266, 0, 0.25, -0.25, -1.8927587e-08, 0.4330127, 0, -0.5, -1.4901161e-08, 0, 0, 0)
+
+[node name="TrashCan" parent="Stuff2" unique_id=708574542 instance=ExtResource("2_dt8qg")]
+transform = Transform3D(0.67614806, 0, -0.18117332, 0, 0.7, 0, 0.18117332, 0, 0.67614806, -1.2305808, 0, -0.04908234)
+
+[node name="RadioBox" parent="Stuff2" unique_id=1957148694 instance=ExtResource("3_6fmps")]
+transform = Transform3D(0.4829629, 0, -0.1294095, 0, 0.5, 0, 0.1294095, 0, 0.4829629, 1.1600959, 0, -1.2025961)
+
+[node name="PipeCurve" parent="Stuff2" unique_id=2005439001 instance=ExtResource("4_aqs2x")]
+transform = Transform3D(0.25, 0.9330126, 0.258819, -0.9659258, 0.25881907, 0, -0.066987306, -0.24999997, 0.9659257, 0, 0, 0)
+
+[node name="GasTank" parent="Stuff2" unique_id=1862937853 instance=ExtResource("5_b6ct2")]
+transform = Transform3D(0.6, 0, -2.9802322e-08, 0, 0.6, 0, 2.9802322e-08, 0, 0.6, 2.3841858e-07, 0, -4.2426405)
+
+[node name="Barrel" parent="Stuff2" unique_id=1991898624 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.79999995, 0, -2.9802322e-08, 0, 0.8, 0, 2.9802322e-08, 0, 0.79999995, 0, 0, 0)
+
+[node name="Handle" parent="Stuff2" unique_id=168722267 instance=ExtResource("8_n24mo")]
+
+[node name="Barrel2" parent="Stuff2" unique_id=1256338842 instance=ExtResource("6_hgker")]
+transform = Transform3D(0.79999995, 0, -2.9802322e-08, 0, 0.8, 0, 2.9802322e-08, 0, 0.79999995, 0, 0, 0)
+
+[node name="Wrench" parent="Stuff2" unique_id=1059235410 instance=ExtResource("9_jn5ig")]
+
+[node name="Wrench2" parent="Stuff2" unique_id=1281409652 instance=ExtResource("9_jn5ig")]
+
+[node name="IndustrialCableA" parent="Stuff2" unique_id=1215896517 instance=ExtResource("9_dt8qg")]
+transform = Transform3D(-2.2351742e-08, 0.40000004, -8.940697e-08, -0.38637033, -2.3448607e-08, -0.10352769, -0.10352774, 1.1175871e-07, 0.3863705, 1.6730332, 0, 1.4835649)
+
+[node name="IndustrialLiquidTankA2" parent="Stuff2" unique_id=1217837931 instance=ExtResource("10_6fmps")]
+transform = Transform3D(0.1294096, 0, 0.4829629, 0, 0.5, 0, -0.4829629, 0, 0.1294096, 5.49029, 1, -4.1767683)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=286203370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999995, 1.5, 1.7881393e-07)
+shape = SubResource("BoxShape3D_0tvya")

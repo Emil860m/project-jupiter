@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://baxhi1d2apapl"]
+
+[ext_resource type="Script" path="res://Scenes/Luner_system/2d/tow_truck.gd" id="1_xtgc5"]
+[ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="2_gu1px"]
+
+[node name="TowTruck" type="Node2D" unique_id=188965670]
+script = ExtResource("1_xtgc5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=518940528]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1194721126]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gu1px")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1110569300]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "You did not have the necessary fuel to reach timeout.
+Your ship has been towtrucked and refueled."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TravelButton" type="Button" parent="CanvasLayer" unique_id=1498793274]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = 122.0
+offset_right = 106.5
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Travel to the Ponds"
+
+[connection signal="button_up" from="CanvasLayer/TravelButton" to="." method="_on_travel_button_button_up"]
