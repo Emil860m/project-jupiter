@@ -2,6 +2,16 @@ extends Node2D
 
 @onready var stat_polygon := $StatPolygon
 @onready var stat_points_label := $StatPointsLabel
+var button_groups: Array[StatAllocationButtonGroup] = []
+
+# Markers
+@onready var r_marker := $ButtonGroupMarkers/RMarker
+@onready var d_marker := $ButtonGroupMarkers/DMarker
+@onready var m_marker := $ButtonGroupMarkers/MMarker
+@onready var s_marker := $ButtonGroupMarkers/SMarker
+@onready var f_marker := $ButtonGroupMarkers/FMarker
+
+var button_group_scene = preload("res://Scenes/Luner_system/2d/stat_allocation_button_group.tscn")
 
 var max_stat: float = ShipStats.max_allowed_stat
 var angle = 2*PI/5
@@ -11,6 +21,32 @@ var min_radius = max_radius / max_stat
 var inner_line_count = 5
 
 func _ready() -> void:
+	init_buttons()
+	draw_bg_pentagons()
+	
+	# Styling stat web
+	stat_polygon.color = Color.GREEN
+	stat_polygon.color.a = 0.5
+	refresh_polygon()
+
+
+# init stuff
+
+func init_buttons():
+	add_button_group(ShipStats.ShipStatTypes.radiation_protection, r_marker)
+	add_button_group(ShipStats.ShipStatTypes.durability, d_marker)
+	add_button_group(ShipStats.ShipStatTypes.maneuverability, m_marker)
+	add_button_group(ShipStats.ShipStatTypes.speed, s_marker)
+	add_button_group(ShipStats.ShipStatTypes.fuel_consumption, f_marker)
+
+func add_button_group(type: ShipStats.ShipStatTypes, marker: Marker2D):
+	var button_group: StatAllocationButtonGroup = button_group_scene.instantiate()
+	button_groups.append(button_group)
+	button_group.global_position = marker.global_position
+	add_child(button_group)
+	button_group.initialize(type, refresh_polygon)
+
+func draw_bg_pentagons():
 	for i in range(1, inner_line_count + 1):
 		var new_polygon = Line2D.new()
 		
@@ -27,16 +63,18 @@ func _ready() -> void:
 		
 		new_polygon.points = PackedVector2Array(vertex_array)
 		add_child(new_polygon)
-	
-	
-	# Styling stat web
-	stat_polygon.color = Color.GREEN
-	stat_polygon.color.a = 0.5
-	refresh_polygon()
+
+
+# update
 
 func refresh_polygon():
 	stat_points_label.text = "Unused stat points: " + str(ShipStats.get_unused_stat_allocation_points())
+	update_buttons()
 	draw_stat_web()
+
+func update_buttons():
+	for b in button_groups:
+		b.update()
 
 func draw_stat_web():
 	var vertex_array = []
@@ -49,51 +87,7 @@ func draw_stat_web():
 	
 	stat_polygon.polygon = PackedVector2Array(vertex_array)
 
+
+# aux
 func get_point_coords(point_number, radius):
 	return Vector2.from_angle(angle * point_number - PI/2) * min_radius * radius
-
-
-# Signals
-func _on_r_allocate_button_pressed():
-	ShipStats.allocate_stat(ShipStats.ShipStatTypes.radiation_protection)
-	refresh_polygon()
-
-func _on_r_de_allocate_button_pressed():
-	ShipStats.de_allocate_stat(ShipStats.ShipStatTypes.radiation_protection)
-	refresh_polygon()
-
-
-func _on_d_allocate_button_pressed():
-	ShipStats.allocate_stat(ShipStats.ShipStatTypes.durability)
-	refresh_polygon()
-
-func _on_d_de_allocate_button_pressed():
-	ShipStats.de_allocate_stat(ShipStats.ShipStatTypes.durability)
-	refresh_polygon()
-
-
-func _on_m_allocate_button_pressed():
-	ShipStats.allocate_stat(ShipStats.ShipStatTypes.maneuverability)
-	refresh_polygon()
-
-func _on_m_de_allocate_button_pressed():
-	ShipStats.de_allocate_stat(ShipStats.ShipStatTypes.maneuverability)
-	refresh_polygon()
-
-
-func _on_s_allocate_button_pressed():
-	ShipStats.allocate_stat(ShipStats.ShipStatTypes.speed)
-	refresh_polygon()
-
-func _on_s_de_allocate_button_pressed():
-	ShipStats.de_allocate_stat(ShipStats.ShipStatTypes.speed)
-	refresh_polygon()
-
-
-func _on_f_allocate_button_pressed():
-	ShipStats.allocate_stat(ShipStats.ShipStatTypes.fuel_consumption)
-	refresh_polygon()
-
-func _on_f_de_allocate_button_pressed():
-	ShipStats.de_allocate_stat(ShipStats.ShipStatTypes.fuel_consumption)
-	refresh_polygon()

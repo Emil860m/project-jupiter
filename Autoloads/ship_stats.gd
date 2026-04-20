@@ -73,3 +73,17 @@ var rng = RandomNumberGenerator.new()
 
 func event_succes_roll(success_chance: int) -> bool:
 	return success_chance >= rng.randi_range(1,100)
+
+
+
+# misc
+func stat_type_to_string(type: ShipStatTypes) -> String:
+	match type:
+		ShipStatTypes.radiation_protection: return "Radiation Protection"
+		ShipStatTypes.durability: return "Durability"
+		ShipStatTypes.maneuverability: return "Maneuverability"
+		ShipStatTypes.speed: return "Speed"
+		ShipStatTypes.fuel_consumption: return "Fuel Efficiency"
+		_:
+			assert(false, "invalid stat type")
+			return ""

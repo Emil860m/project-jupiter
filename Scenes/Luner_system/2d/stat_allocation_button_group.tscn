@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cxnhj7ewrslsh"]
+
+[ext_resource type="Script" uid="uid://cjpd15t3a00k0" path="res://Scenes/Luner_system/2d/stat_allocation_button_group.gd" id="1_6b2fv"]
+
+[node name="StatAllocationButtonGroup" type="Control" unique_id=641305228]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6b2fv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1183421701]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=639859047]
+layout_mode = 2
+text = "PLACEHOLDER"
+
+[node name="AddButton" type="Button" parent="VBoxContainer" unique_id=896405677]
+custom_minimum_size = Vector2(50, 35)
+layout_mode = 2
+text = "+"
+
+[node name="SubtractButton" type="Button" parent="VBoxContainer" unique_id=853952424]
+custom_minimum_size = Vector2(50, 35)
+layout_mode = 2
+text = "-"

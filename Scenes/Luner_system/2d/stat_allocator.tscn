@@ -10,89 +10,25 @@ script = ExtResource("1_sfbu2")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1287921055]
 
 [node name="StatPointsLabel" type="Label" parent="." unique_id=1491482042]
-offset_left = 348.0
-offset_top = 387.0
-offset_right = 513.0
-offset_bottom = 410.0
+offset_left = 404.0
+offset_top = 371.0
+offset_right = 569.0
+offset_bottom = 394.0
 text = "Unused stat points: X"
 
-[node name="Button" type="Button" parent="." unique_id=1572756011]
-offset_left = -359.0
-offset_top = 409.0
-offset_right = -297.0
-offset_bottom = 440.0
-text = "-"
+[node name="ButtonGroupMarkers" type="Node2D" parent="." unique_id=1641395282]
 
-[node name="Button2" type="Button" parent="." unique_id=1848456786]
-offset_left = -359.0
-offset_top = 370.0
-offset_right = -297.0
-offset_bottom = 401.0
-text = "+"
+[node name="RMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1041130966]
+position = Vector2(-600, 375)
 
-[node name="Button3" type="Button" parent="." unique_id=737879690]
-offset_left = -245.0
-offset_top = 409.0
-offset_right = -183.0
-offset_bottom = 440.0
-text = "-"
+[node name="DMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1211201089]
+position = Vector2(-400, 375)
 
-[node name="Button4" type="Button" parent="." unique_id=2122790475]
-offset_left = -245.0
-offset_top = 370.0
-offset_right = -183.0
-offset_bottom = 401.0
-text = "+"
+[node name="MMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1083709278]
+position = Vector2(-200, 375)
 
-[node name="Button5" type="Button" parent="." unique_id=1719033884]
-offset_left = -96.0
-offset_top = 406.0
-offset_right = -34.0
-offset_bottom = 437.0
-text = "-"
+[node name="SMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=1942097679]
+position = Vector2(0, 375)
 
-[node name="Button6" type="Button" parent="." unique_id=1258959317]
-offset_left = -96.0
-offset_top = 367.0
-offset_right = -34.0
-offset_bottom = 398.0
-text = "+"
-
-[node name="Button7" type="Button" parent="." unique_id=920807064]
-offset_left = 28.0
-offset_top = 408.0
-offset_right = 90.0
-offset_bottom = 439.0
-text = "-"
-
-[node name="Button8" type="Button" parent="." unique_id=1066765813]
-offset_left = 28.0
-offset_top = 369.0
-offset_right = 90.0
-offset_bottom = 400.0
-text = "+"
-
-[node name="Button9" type="Button" parent="." unique_id=1815719318]
-offset_left = 165.0
-offset_top = 407.0
-offset_right = 227.0
-offset_bottom = 438.0
-text = "-"
-
-[node name="Button10" type="Button" parent="." unique_id=32834085]
-offset_left = 165.0
-offset_top = 368.0
-offset_right = 227.0
-offset_bottom = 399.0
-text = "+"
-
-[connection signal="pressed" from="Button" to="." method="_on_r_de_allocate_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_r_allocate_button_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_d_de_allocate_button_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_d_allocate_button_pressed"]
-[connection signal="pressed" from="Button5" to="." method="_on_m_de_allocate_button_pressed"]
-[connection signal="pressed" from="Button6" to="." method="_on_m_allocate_button_pressed"]
-[connection signal="pressed" from="Button7" to="." method="_on_s_de_allocate_button_pressed"]
-[connection signal="pressed" from="Button8" to="." method="_on_s_allocate_button_pressed"]
-[connection signal="pressed" from="Button9" to="." method="_on_f_de_allocate_button_pressed"]
-[connection signal="pressed" from="Button10" to="." method="_on_f_allocate_button_pressed"]
+[node name="FMarker" type="Marker2D" parent="ButtonGroupMarkers" unique_id=140694118]
+position = Vector2(200, 375)
