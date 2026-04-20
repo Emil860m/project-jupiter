@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://buaabydjdghjj"]
+
+[ext_resource type="Script" uid="uid://bucbbxnmcugk6" path="res://Scenes/Luner_system/2d/tow_truck.gd" id="1_xtgc5"]
+[ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="2_gu1px"]
+
+[node name="TowTruck" type="Node2D" unique_id=188965670]
+script = ExtResource("1_xtgc5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=518940528]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1194721126]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gu1px")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1110569300]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=93932185]
+
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]

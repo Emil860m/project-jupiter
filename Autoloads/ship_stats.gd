@@ -55,8 +55,12 @@ func damage_ship(damage_number: int):
 	damage += damage_number
 
 func spend_fuel(fuel_spent: int):  # Note: also used by events to reduce fuel
-	##TODO something with fuel consumption stat
-	fuel -= fuel_spent
+	var total_fuel_spent = fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
+	if total_fuel_spent > fuel:
+		SceneController
+		print('oh no')
+		return
+	fuel -= fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
 
 func refuel():
 	fuel = fuel_cap
@@ -67,6 +71,7 @@ func repair():
 func upgrade_fuel_cap():
 	if !has_upgraded_fuel_cap:
 		fuel_cap = fuel_cap * 2
+		refuel()
 
 ## Event Stuff
 var rng = RandomNumberGenerator.new()
