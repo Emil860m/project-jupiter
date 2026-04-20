@@ -1,5 +1,7 @@
 extends Node2D
 
+signal changeStat
+
 @onready var stat_polygon := $StatPolygon
 @onready var stat_points_label := $ButtonGroupMarkers/StatPointsLabel
 var button_groups: Array[StatAllocationButtonGroup] = []
@@ -71,6 +73,8 @@ func refresh_polygon():
 	stat_points_label.text = "Unused stat points: " + str(ShipStats.get_unused_stat_allocation_points())
 	update_buttons()
 	draw_stat_web()
+	changeStat.emit()
+	
 
 func update_buttons():
 	for b in button_groups:
