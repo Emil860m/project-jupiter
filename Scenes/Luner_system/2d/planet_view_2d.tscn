@@ -20,11 +20,13 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0xxy"]
 radius = 33.06055
 
-[node name="PlanetView2d" type="Node2D" unique_id=618163059 node_paths=PackedStringArray("selectedMoonLabel", "currentLocationLabel", "estimatedTravelLabel")]
+[node name="PlanetView2d" type="Node2D" unique_id=618163059 node_paths=PackedStringArray("selectedMoonLabel", "currentLocationLabel", "estimatedTravelLabel", "estimatedFuelLabel", "shipStatusLabel")]
 script = ExtResource("1_l0xxy")
 selectedMoonLabel = NodePath("UiElements/SelectedMoon")
 currentLocationLabel = NodePath("UiElements/currentLocation")
 estimatedTravelLabel = NodePath("UiElements/estimatedTime")
+estimatedFuelLabel = NodePath("UiElements/estimatedFuel")
+shipStatusLabel = NodePath("UiElements/shipStatus")
 
 [node name="Jupiter" type="StaticBody2D" parent="." unique_id=1425320544]
 
@@ -248,4 +250,4 @@ icon = ExtResource("16_u6i4c")
 icon_alignment = 1
 
 [connection signal="button_up" from="UiElements/Button" to="." method="_on_travel_button_up"]
-[connection signal="button_up" from="UiElements/Button2" to="." method="_on_travel_button_up"]
+[connection signal="button_up" from="UiElements/Button2" to="." method="_on_exit_button_up"]

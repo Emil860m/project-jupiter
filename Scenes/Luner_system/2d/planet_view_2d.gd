@@ -9,10 +9,13 @@ var selected: Area2D
 @export var selectedMoonLabel: Label
 @export var currentLocationLabel: Label
 @export var estimatedTravelLabel: Label
+@export var estimatedFuelLabel: Label
+@export var shipStatusLabel: Label
 var current_location: moon_2d
 @onready var button: Button = $UiElements/Button
 
 func _ready() -> void:
+	shipStatusLabel.text = str(10 - ShipStats.damage)
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
 	
 	raycast_comp.camera_2d = camera_2d
@@ -43,6 +46,7 @@ func select_moon(hit):
 		selected.set_selected(true)
 		selectedMoonLabel.text = hit.displayName
 		estimatedTravelLabel.text = str(hit.estimated_travel_time)
+		estimatedFuelLabel.text = str(hit.estimated_travel_time)
 		for m in moons.get_children():
 			m.set_estimated_loc(hit.estimated_travel_time, current_location.global_position)
 		#if selected.estimated_travel_time >= ShipStats.fuel:
@@ -59,3 +63,7 @@ func _on_travel_button_up() -> void:
 			SceneController.goto_scene(selected.travelScenePath)
 		else:
 			SceneController.reload_scene()
+
+
+func _on_exit_button_up() -> void:
+	SceneController.goto_scene(current_location.travelScenePath)
