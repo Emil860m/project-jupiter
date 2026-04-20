@@ -32,6 +32,7 @@ NpcScheduler="*uid://cyog6v4j3amoq"
 Flags="*uid://dswc20r1pgpfa"
 FmodManager="*uid://cds10pm7hwn3p"
 SoundController="*uid://c5i4ofe7bgdpu"
+EventController="*uid://b0jeef8kt67ya"
 
 [display]
 

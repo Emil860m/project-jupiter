@@ -11,10 +11,10 @@ enum PlayerStatTypes {
 }
 
 var Stats = {
-		PlayerStatTypes.physical: 3,
-		PlayerStatTypes.mental: 3,
-		PlayerStatTypes.social: 3,
-		PlayerStatTypes.education: 3,
+		PlayerStatTypes.physical: 10,
+		PlayerStatTypes.mental: 10,
+		PlayerStatTypes.social: 10,
+		PlayerStatTypes.education: 10,
 	}
 
 ## RPG Stuff

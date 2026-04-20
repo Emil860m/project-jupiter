@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b7wlxb5dddnvv"]
+
+[ext_resource type="Script" uid="uid://b48eevyo4p4hj" path="res://Scenes/Luner_system/2d/event_display.gd" id="1_c2sya"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="2_eph83"]
+
+[node name="EventDisplay" type="Node2D" unique_id=791367096]
+script = ExtResource("1_c2sya")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_eph83")]
+start_node = "event_test"
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=454030375]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.6666667)
