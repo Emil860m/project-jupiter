@@ -48,6 +48,14 @@ size = Vector2(7, 11)
 [sub_resource type="PlaneMesh" id="PlaneMesh_uiugr"]
 size = Vector2(18, 60)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6j45"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.85882354)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_31i0m"]
+material = SubResource("StandardMaterial3D_e6j45")
+size = Vector2(8, 14)
+
 [node name="Hospital" type="Node3D" unique_id=1010830156]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1277339832]
@@ -161,6 +169,9 @@ transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -12.0417595, 1.59454
 [node name="StandingVentClean" parent="NavigationAgent3D/WorkerRoom" unique_id=1431580851 instance=ExtResource("8_28yna")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -12, 0, -9)
 
+[node name="LeftWall" parent="NavigationAgent3D/WorkerRoom" unique_id=826444181 instance=ExtResource("21_e6j45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.992753, 4.7683716e-07, -6.9144588)
+
 [node name="Entrance" type="Node" parent="NavigationAgent3D" unique_id=1856249303]
 
 [node name="Elevator" parent="NavigationAgent3D/Entrance" unique_id=1894959467 instance=ExtResource("4_qr0c3")]
@@ -211,7 +222,7 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 11.7
 transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 26.177402, 0, 3.9270525)
 
 [node name="StandingVentClean" parent="NavigationAgent3D/Entrance" unique_id=1117099233 instance=ExtResource("8_28yna")]
-transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 14.527487, 0.06136579, 11.019902)
+transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 10.527487, 0.06136579, 11.019902)
 
 [node name="DeadDaddyRoom" type="Node" parent="NavigationAgent3D" unique_id=1614458887]
 
@@ -385,8 +396,11 @@ transform = Transform3D(-0.21213202, -0.21213202, 2.6226832e-08, -0.21213202, 0.
 [node name="LightsClean9" parent="NavigationAgent3D/Lobby" unique_id=351736481 instance=ExtResource("12_awc2l")]
 transform = Transform3D(2.7817755e-08, 2.7817755e-08, 0.29999998, -0.21213202, 0.21213202, 0, -0.21213202, -0.21213202, 3.9340247e-08, -1.5160236, 3.6407166, -10.626977)
 
+[node name="LightsClean11" parent="NavigationAgent3D/Lobby" unique_id=1321093834 instance=ExtResource("12_awc2l")]
+transform = Transform3D(2.7817755e-08, 2.7817755e-08, 0.29999998, -0.21213202, 0.21213202, 0, -0.21213202, -0.21213202, 3.9340247e-08, -8.516024, 3.6407166, -10.626977)
+
 [node name="LightsClean10" parent="NavigationAgent3D/Lobby" unique_id=808395025 instance=ExtResource("12_awc2l")]
-transform = Transform3D(-4.6362928e-08, -4.6362928e-08, -0.29999998, -0.21213202, 0.21213202, 0, 0.21213202, 0.21213202, -6.556707e-08, 14.483976, 3.6407166, 11.373023)
+transform = Transform3D(-4.6362928e-08, -4.6362928e-08, -0.29999998, -0.21213202, 0.21213202, 0, 0.21213202, 0.21213202, -6.556707e-08, 10.483976, 3.6407166, 11.373023)
 
 [node name="GanymedeWall7" parent="NavigationAgent3D/Lobby" unique_id=654870050 instance=ExtResource("1_lm1a6")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -12.782038, 0, 8.957519)
@@ -527,6 +541,10 @@ transform = Transform3D(0.45254782, 0, 0.53404164, 0, 0.7, 0, -0.53404164, 0, 0.
 [node name="UnderConstructionSign" parent="NavigationAgent3D/Lobby" unique_id=306960224 instance=ExtResource("18_7xnya")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 0, 0, 44)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationAgent3D/Lobby" unique_id=647179580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.946393, 4, 47)
+mesh = SubResource("PlaneMesh_31i0m")
+
 [node name="GanymedeDoor2" parent="." unique_id=2127457058 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.690615, 0, 46.57213)
 
@@ -551,6 +569,3 @@ transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, 0.2, 0, -0.2, -8.742278e-09
 
 [node name="IndustrialLightA2" parent="." unique_id=822953617 instance=ExtResource("18_dcae5")]
 transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, 0.2, 0, -0.2, -8.742278e-09, -4.20897, 3.7105598, 27.59773)
-
-[node name="LeftWall" parent="." unique_id=826444181 instance=ExtResource("21_e6j45")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.992753, 4.7683716e-07, -6.9144588)

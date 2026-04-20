@@ -4,11 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://uwfhfsk24ixx" path="res://Assest/metalFloorA/metalFloorA.png" id="2_28we2"]
 [ext_resource type="PackedScene" uid="uid://copv0004jd2rx" path="res://Prefabs/elevator.tscn" id="3_4u55a"]
 [ext_resource type="PackedScene" uid="uid://cll81ojwxp7ic" path="res://Prefabs/boss_desk.tscn" id="4_cylq8"]
-[ext_resource type="PackedScene" uid="uid://byn3osek3b3aq" path="res://Prefabs/bookshelf.tscn" id="5_6s0xy"]
 [ext_resource type="PackedScene" uid="uid://ch4q00k07iu2i" path="res://Prefabs/plant.tscn" id="6_28we2"]
 [ext_resource type="PackedScene" uid="uid://ccmhmfvmumi67" path="res://Prefabs/Ganymede/ganymede_door.tscn" id="8_cylq8"]
 [ext_resource type="PackedScene" uid="uid://dalsdjmiobl4j" path="res://Prefabs/MiscProps/round_light.tscn" id="9_6s0xy"]
 [ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="9_13t73"]
+[ext_resource type="PackedScene" uid="uid://bg5eco0wxm2pm" path="res://Prefabs/MiscProps/under_construction_sign.tscn" id="10_13t73"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/bossChair.tscn" id="11_oxwys"]
+[ext_resource type="PackedScene" uid="uid://cbml54cjrq65a" path="res://Prefabs/Ganymede/boss_book_shelf.tscn" id="11_tonup"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="12_tonup"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_35g8a"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -29,13 +32,16 @@ vertices = PackedVector3Array(-20.389656, 0.4941287, -1.978962, -18.389656, 0.49
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(6, 5, 4), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 3), PackedInt32Array(4, 2, 3), PackedInt32Array(10, 9, 8), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 12), PackedInt32Array(12, 8, 13), PackedInt32Array(14, 5, 6), PackedInt32Array(17, 16, 8), PackedInt32Array(8, 16, 15), PackedInt32Array(8, 15, 6), PackedInt32Array(6, 15, 14), PackedInt32Array(8, 9, 17), PackedInt32Array(15, 18, 14), PackedInt32Array(14, 18, 19), PackedInt32Array(23, 19, 20), PackedInt32Array(20, 19, 21), PackedInt32Array(21, 19, 18), PackedInt32Array(21, 18, 22), PackedInt32Array(20, 25, 24), PackedInt32Array(24, 25, 1), PackedInt32Array(1, 25, 0), PackedInt32Array(22, 26, 21), PackedInt32Array(20, 24, 23), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 30), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 34), PackedInt32Array(36, 35, 37), PackedInt32Array(37, 35, 38)]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cylq8"]
-size = Vector2(15.5, 10)
+size = Vector2(15.5, 8)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4u55a"]
-size = Vector2(10, 10)
+size = Vector2(10, 8)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oxwys"]
-size = Vector2(4.5, 10)
+size = Vector2(4, 8)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4hwci"]
+size = Vector2(3.7, 8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cylq8"]
 transparency = 1
@@ -43,13 +49,13 @@ albedo_color = Color(1, 1, 1, 0.21568628)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_13t73"]
 material = SubResource("StandardMaterial3D_cylq8")
-size = Vector2(21.5, 10)
+size = Vector2(21.5, 8)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tonup"]
-size = Vector2(21.5, 10)
+size = Vector2(21.5, 8)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6s0xy"]
-size = Vector2(15, 10)
+size = Vector2(15, 8)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lm1a6"]
 size = Vector3(36.831543, 0.001, 29.630127)
@@ -84,7 +90,7 @@ navigation_mesh = SubResource("NavigationMesh_uiugr")
 [node name="Walls" type="Node" parent="NavigationRegion3D" unique_id=487301235]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=733942047]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.1878405, 4, 3.8732557)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.1878405, 4, 3.486782)
 mesh = SubResource("PlaneMesh_cylq8")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1527057633]
@@ -92,15 +98,15 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -15.
 mesh = SubResource("PlaneMesh_4u55a")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=363908916]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -10.987139, 4, 6.063843)
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -10.987139, 4, 5.494466)
 mesh = SubResource("PlaneMesh_oxwys")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=742085725]
-transform = Transform3D(-0.030494286, 0.9995337, 0.0015426325, 0.0026192672, -0.0014634291, 0.9999956, 0.99953145, 0.030498188, -0.002573416, -10.929045, 4, -5.9671493)
-mesh = SubResource("PlaneMesh_oxwys")
+transform = Transform3D(0, 0.99999994, -2.1855698e-08, -3.785517e-08, 2.1855694e-08, 1.0000001, 0.99999994, 0, 3.7855177e-08, -10.978, 4, -5.7)
+mesh = SubResource("PlaneMesh_4hwci")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1645233336]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -16.389656, 4, -7.596102)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -15.981356, 4, -7.5051875)
 mesh = SubResource("PlaneMesh_4u55a")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1616612162]
@@ -112,11 +118,11 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 21.2
 mesh = SubResource("PlaneMesh_13t73")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=2066315259]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 15.227953, 4.000004, 3.8732557)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 15.227953, 4.000004, 3.486782)
 mesh = SubResource("PlaneMesh_tonup")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1118671043]
-transform = Transform3D(-4.4703484e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.4703484e-08, 1.7763568e-15, -21.072912, 4, 0.022420883)
+transform = Transform3D(-4.4703484e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.4703484e-08, 1.7763568e-15, -20.990849, 4, 0.022420883)
 mesh = SubResource("PlaneMesh_6s0xy")
 
 [node name="Plant" parent="NavigationRegion3D" unique_id=307560978 instance=ExtResource("6_28we2")]
@@ -137,14 +143,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
 mesh = SubResource("PlaneMesh_osfji")
 
 [node name="Elevator" parent="NavigationRegion3D/Corridor" unique_id=1983716301 instance=ExtResource("3_4u55a")]
-transform = Transform3D(-2.6226834e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.6226834e-08, 5.727024, 0.03609085, 4.205372)
+transform = Transform3D(-2.6226834e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.6226834e-08, 5.727024, 0.03609085, 3.603444)
 scene_to_load_path = "res://Scenes/Hospital/Hospital.tscn"
 
 [node name="BossDesk" parent="NavigationRegion3D/Corridor" unique_id=1590658083 instance=ExtResource("4_cylq8")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.758963, 0.056960817, -0.005926609)
-
-[node name="Bookshelf" parent="NavigationRegion3D/Corridor" unique_id=771396234 instance=ExtResource("5_6s0xy")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -19.79188, 0.03929282, 5.1576405)
 
 [node name="Lights" type="Node" parent="NavigationRegion3D" unique_id=1111230756]
 
@@ -158,20 +161,47 @@ transform = Transform3D(-0.49945477, 0.023343999, 1.0204041e-09, -0.023343999, -
 transform = Transform3D(-2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0, 0, 0, 0.5, -11.115532, 6.2828627, -5.3209567)
 
 [node name="RoundLight2" parent="NavigationRegion3D/Lights" unique_id=236316053 instance=ExtResource("9_6s0xy")]
-transform = Transform3D(-0.49945477, 0.023343971, -1.0203974e-09, 0, -2.1855694e-08, -0.5, -0.023343971, -0.49945477, 2.183186e-08, 8.734932, 4.4619884, 3.5726337)
+transform = Transform3D(-0.49945477, 0.023343971, -1.0203974e-09, 0, -2.1855694e-08, -0.5, -0.023343971, -0.49945477, 2.183186e-08, 8.734932, 4.4619884, 3.3964524)
 
 [node name="RoundLight5" parent="NavigationRegion3D/Lights" unique_id=391443699 instance=ExtResource("9_6s0xy")]
 transform = Transform3D(-0.49945477, 0.023343971, 1.0203974e-09, 0, -2.1855694e-08, 0.5, 0.023343971, 0.49945477, 2.183186e-08, 7.7554626, 6.5364304, -2.8769772)
 
+[node name="UnderConstructionSign" parent="NavigationRegion3D" unique_id=306960224 instance=ExtResource("10_13t73")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 12.754, 0, 0)
+
+[node name="BossChair" parent="NavigationRegion3D" unique_id=1639493704 instance=ExtResource("11_oxwys")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -18.196, 0, -0.154)
+
+[node name="BossBookShelf" parent="NavigationRegion3D" unique_id=1891062108 instance=ExtResource("11_tonup")]
+transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.353268, 0.021974746, 5.272335)
+
+[node name="BossBookShelf2" parent="NavigationRegion3D" unique_id=1143405125 instance=ExtResource("11_tonup")]
+transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.34916, 0.017819706, 3.2723436)
+
+[node name="BossBookShelf3" parent="NavigationRegion3D" unique_id=769269650 instance=ExtResource("11_tonup")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.351213, 0.019897226, 1.2723393)
+
+[node name="BossBookShelf4" parent="NavigationRegion3D" unique_id=894975529 instance=ExtResource("11_tonup")]
+transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.353268, 0.021974746, -1.727665)
+
+[node name="BossBookShelf5" parent="NavigationRegion3D" unique_id=704236670 instance=ExtResource("11_tonup")]
+transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.34916, 0.017819706, -3.7276564)
+
+[node name="BossBookShelf6" parent="NavigationRegion3D" unique_id=1348572459 instance=ExtResource("11_tonup")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.351213, 0.019897226, -5.7276607)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=956773002]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 33, 0)
-visible = false
+light_energy = 9.179
 
 [node name="GanymedeDoor2" parent="." unique_id=729568765 instance=ExtResource("8_cylq8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4609957, 0.039102726, 3.7487192)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4609957, 0.039102726, 3.4913616)
 
 [node name="GanymedeDoor3" parent="." unique_id=807281379 instance=ExtResource("8_cylq8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.439554, 0.039102726, 3.7487192)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.439554, 0.039102726, 3.4913616)
 
 [node name="Cup" parent="." unique_id=385252958 instance=ExtResource("9_13t73")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.463697, 1.3527904, 1.7606525)
+
+[node name="StandingVentClean" parent="." unique_id=1431580851 instance=ExtResource("12_tonup")]
+transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, -17.504156, 0.011864372, 7.06055)
