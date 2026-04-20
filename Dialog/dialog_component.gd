@@ -24,9 +24,10 @@ func add_functions():
 	dialogue_runner.add_function("yarn_function", godot_function, 1)
 	
 	# Stat Manipulations
-	dialogue_runner.add_function("damage_ship", ShipStats.damage_ship, 1)
-	dialogue_runner.add_function("spend_fuel", ShipStats.spend_fuel, 1)
-	dialogue_runner.add_function("pass_time", Globals.increment_timestep, 1)
+	dialogue_runner.add_function("resolve_outcome", EventController.resolve_outcome, 3)
+	#dialogue_runner.add_function("damage_ship", ShipStats.damage_ship, 1)
+	#dialogue_runner.add_function("spend_fuel", ShipStats.spend_fuel, 1)
+	#dialogue_runner.add_function("pass_time", Globals.increment_timestep, 1)
 	
 	# Checks
 	dialogue_runner.add_function("simple_d_check", EventController.simple_durability_check, 1)
