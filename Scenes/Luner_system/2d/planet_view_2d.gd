@@ -39,7 +39,8 @@ func _ready() -> void:
 		for i in range(Globals.max_travel_distance):
 			if current_location_vector.distance_to(m.get_position_at_time(Globals.current_timestep + i)) <= ShipStats.travel_speed * i:
 				m.set_estimated_loc(i, current_location_vector)
-				m.estimated_travel_time = (i + pow(ShipStats.severity_const, ShipStats.damage)) / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
+				m.base_travel_time = (i + pow(ShipStats.severity_const, ShipStats.damage))
+				m.estimated_travel_time = m.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
 				break
 
 func select_moon(hit):
@@ -55,10 +56,18 @@ func select_moon(hit):
 		selected = hit
 		selected.set_selected(true)
 		selectedMoonLabel.text = hit.displayName
-		estimatedTravelLabel.text = str(round(hit.estimated_travel_time * (1 + traveltime_noice / 100)))
-		estimatedFuelLabel.text = str(round(hit.estimated_travel_time * (1 + fuel_noice / 100)))
-		for m in moons.get_children():
-			m.set_estimated_loc(hit.estimated_travel_time, current_location.global_position)
+		update_travel_time()
+
+func update_travel_time() -> void:
+	if selected == null:
+		return
+	selected.estimated_travel_time = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
+	var estimated_fuel = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.fuel_consumption]) 
+	estimatedTravelLabel.text = str(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)))
+	estimatedFuelLabel.text = str(round(estimated_fuel * (1 + fuel_noice / 100)))
+	for m in moons.get_children():
+			m.set_estimated_loc(selected.estimated_travel_time, current_location.global_position)
+
 
 func _on_travel_button_up() -> void:
 	if selected:
@@ -84,3 +93,8 @@ func _on_exit_button_up() -> void:
 
 func _on_event_completed() -> void:
 	SceneController.goto_scene(selected.travelScenePath)
+
+
+func _on_stat_allocator_change_stat() -> void:
+	update_travel_time()
+	pass # Replace with function body.

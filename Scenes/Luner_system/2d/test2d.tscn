@@ -83,3 +83,5 @@ text = "Allocate your stats for the journey:"
 [node name="StatAllocator" parent="." unique_id=1155303945 instance=ExtResource("9_wo8f8")]
 position = Vector2(-258, 16)
 scale = Vector2(0.65, 0.65)
+
+[connection signal="changeStat" from="StatAllocator" to="PlanetView2d" method="_on_stat_allocator_change_stat"]
