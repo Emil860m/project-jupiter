@@ -20,13 +20,16 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0xxy"]
 radius = 33.06055
 
-[node name="PlanetView2d" type="Node2D" unique_id=618163059 node_paths=PackedStringArray("selectedMoonLabel", "currentLocationLabel", "estimatedTravelLabel", "estimatedFuelLabel", "shipStatusLabel")]
+[node name="PlanetView2d" type="Node2D" unique_id=618163059 node_paths=PackedStringArray("selectedMoonLabel", "currentLocationLabel", "estimatedTravelLabel", "estimatedFuelLabel", "shipStatusLabel", "shipsDeltaV", "shipsMaxDeltaV", "hourLabel")]
 script = ExtResource("1_l0xxy")
 selectedMoonLabel = NodePath("UiElements/SelectedMoon")
 currentLocationLabel = NodePath("UiElements/currentLocation")
 estimatedTravelLabel = NodePath("UiElements/estimatedTime")
 estimatedFuelLabel = NodePath("UiElements/estimatedFuel")
 shipStatusLabel = NodePath("UiElements/shipStatus")
+shipsDeltaV = NodePath("UiElements/shipsDeltaV")
+shipsMaxDeltaV = NodePath("UiElements/shipsMaxDeltaV")
+hourLabel = NodePath("UiElements/hourLabel")
 
 [node name="Jupiter" type="StaticBody2D" parent="." unique_id=1425320544]
 
@@ -100,6 +103,11 @@ position = Vector2(-1496, 229)
 scale = Vector2(0.6102941, 0.81368816)
 texture = ExtResource("11_f6fv6")
 
+[node name="RectangleData2" type="Sprite2D" parent="UiElements" unique_id=1439513614]
+position = Vector2(-678, -448)
+scale = Vector2(0.6102941, 0.24714822)
+texture = ExtResource("11_f6fv6")
+
 [node name="SelectedMoon" type="Label" parent="UiElements" unique_id=731282285]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
 offset_left = -1346.0
@@ -169,6 +177,26 @@ offset_bottom = -314.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 32
 text = "Current location:"
+
+[node name="Label13" type="Label" parent="UiElements" unique_id=196896147]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -832.0
+offset_top = -466.0
+offset_right = -775.0
+offset_bottom = -431.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "TIME:"
+
+[node name="hourLabel" type="Label" parent="UiElements" unique_id=667788569]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -666.0
+offset_top = -483.0
+offset_right = -487.0
+offset_bottom = -413.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 64
+text = "20:00"
 
 [node name="Label10" type="Label" parent="UiElements" unique_id=827364796]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)

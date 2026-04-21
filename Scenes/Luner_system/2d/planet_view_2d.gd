@@ -11,6 +11,9 @@ var selected: Area2D
 @export var estimatedTravelLabel: Label
 @export var estimatedFuelLabel: Label
 @export var shipStatusLabel: Label
+@export var shipsDeltaV: Label
+@export var shipsMaxDeltaV: Label
+@export var hourLabel: Label
 @export var noice_max = 15.0
 @export var noice_min = 5.0
 var current_location: moon_2d
@@ -27,6 +30,9 @@ func _ready() -> void:
 	traveltime_noice = randf_range(noice_min, noice_max) * (1 if travel_positive_noice else -1)
 	fuel_noice = randf_range(noice_min, noice_max) * (1 if fuel_positive_noice else -1)
 	shipStatusLabel.text = str(10 - ShipStats.damage)
+	shipsDeltaV.text = str(float(ShipStats.fuel))
+	shipsMaxDeltaV.text = "/ " + str(float(ShipStats.fuel_cap))
+	hourLabel.text = str(Globals.current_timestep)
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
 	
 	raycast_comp.camera_2d = camera_2d
@@ -63,7 +69,7 @@ func update_travel_time() -> void:
 		return
 	selected.estimated_travel_time = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
 	var estimated_fuel = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.fuel_consumption]) 
-	estimatedTravelLabel.text = str(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)))
+	estimatedTravelLabel.text = str(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)) + Globals.current_timestep)
 	estimatedFuelLabel.text = str(round(estimated_fuel * (1 + fuel_noice / 100)))
 	for m in moons.get_children():
 			m.set_estimated_loc(selected.estimated_travel_time, current_location.global_position)
