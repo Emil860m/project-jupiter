@@ -20,3 +20,18 @@ func add_to_interact_set(item) -> void:
 	interacted_set[item] = null
 func has_interacted(item) -> bool:
 	return interacted_set.has(item)
+
+
+
+# Chapter management
+var current_chapter: int = 1
+var chapter_titles: Array[String] = [
+	"EVEN JUPITER IS BOUND BY TIME",
+	"JUPITER AND THE EAGLE"
+]
+
+func get_current_chapter_title():
+	return chapter_titles[current_chapter - 1]
+
+func advance_chapter():
+	current_chapter += 1
