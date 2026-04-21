@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bu86cs42aawyj"]
+
+[ext_resource type="Script" uid="uid://c63bhctl44h7u" path="res://SceneTransitions/chapter_transition.gd" id="1_txegt"]
+[ext_resource type="FontFile" uid="uid://cdvobtcl8mqjl" path="res://Textures/Transitions/TrajanusRoman-6aEq.ttf" id="2_xlsmy"]
+
+[node name="ChapterTransition" type="Node2D" unique_id=1208388307]
+z_index = -1
+script = ExtResource("1_txegt")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=583532622]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="CenterContainer" unique_id=1664332762]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1264241739]
+layout_mode = 2
+
+[node name="Chapter" type="Label" parent="CenterContainer/VBoxContainer" unique_id=786854509]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xlsmy")
+theme_override_font_sizes/font_size = 84
+text = "CHAPTER I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1618505013]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xlsmy")
+theme_override_font_sizes/font_size = 36
+text = "
+EVEN JUPITER IS BOUND BY TIME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fade" type="ColorRect" parent="CenterContainer" unique_id=158152086]
+layout_mode = 2
+color = Color(0, 0, 0, 1)

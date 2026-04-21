@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bmttv4o773xer" path="res://Scenes/Prologue/prologue.gd" id="1_4gcb0"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="1_juf7l"]
+[ext_resource type="PackedScene" uid="uid://bu86cs42aawyj" path="res://SceneTransitions/chapter_transition.tscn" id="3_fa6pq"]
 
 [node name="Prologue" type="Node2D" unique_id=816187938]
 script = ExtResource("1_4gcb0")
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("1_juf7l")]
-auto_start = true
+
+[node name="ChapterTransition" parent="." unique_id=1208388307 instance=ExtResource("3_fa6pq")]
