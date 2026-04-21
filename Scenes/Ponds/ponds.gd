@@ -55,3 +55,4 @@ func _on_fuel_upgrade_button_up() -> void:
 	upgrade_label.text = 'Fuel capacity increased'
 	timer.start(1.5)
 	ShipStats.upgrade_fuel_cap()
+	$UpgradeMenu/FuelUpgrade.disabled = true #TODO FIX THAT PLS - add a cap to fuel upgradee
