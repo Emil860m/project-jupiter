@@ -29,6 +29,11 @@ func add_functions():
 	#dialogue_runner.add_function("spend_fuel", ShipStats.spend_fuel, 1)
 	#dialogue_runner.add_function("pass_time", Globals.increment_timestep, 1)
 	
+	# Flags
+	dialogue_runner.add_function("set_flag", Flags.set_flag, 1)
+	dialogue_runner.add_function("get_flag", Flags.get_flag, 1)
+	
+	
 	# Checks Conversations
 	dialogue_runner.add_function("physical_check", PlayerStats.physical_check, 1)
 	dialogue_runner.add_function("mental_check", PlayerStats.mental_check, 1)

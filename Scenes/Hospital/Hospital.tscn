@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bg5eco0wxm2pm" path="res://Prefabs/MiscProps/under_construction_sign.tscn" id="18_7xnya"]
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="18_dcae5"]
 [ext_resource type="PackedScene" uid="uid://nmxf5wvoxmcg" path="res://Prefabs/Ganymede/left_wall.tscn" id="21_e6j45"]
+[ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="23_aubca"]
 
 [sub_resource type="Sky" id="Sky_lm1a6"]
 
@@ -607,3 +608,6 @@ transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, 0.2, 0, -0.2, -8.742278e-09
 
 [node name="IndustrialLightA2" parent="." unique_id=822953617 instance=ExtResource("18_dcae5")]
 transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, 0.2, 0, -0.2, -8.742278e-09, -4.20897, 3.7105598, 27.59773)
+
+[node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("23_aubca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.065383, 1.0500011, 19.363615)
