@@ -3,6 +3,7 @@ extends Node2D
 @onready var chapterTrans = $ChapterTransition
 @onready var dialogComp = $DialogComponent
 @onready var dialogRunner = $DialogComponent/DialogRunner
+var location_id: NpcScheduler.locations = NpcScheduler.locations.PROLOGUE
 
 var transition_scene = preload("res://SceneTransitions/chapter_transition.tscn")
 

@@ -1,5 +1,7 @@
 extends Node2D
 
+var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
+
 @export var scene_to_load: String
 @export_category('TimeCosts')
 @export var repair_time: int

@@ -8,10 +8,13 @@ var sally: Dictionary[locations, Array]
 
 enum locations {
 	MAIN_MENU,
+	PROLOGUE,
 	PLANET_VIEW,
 	HOSPITAL,
 	WORKSHOP,
 	OFFICE,
+	RATIONALE,
+	PONS,
 }
 
 func _ready() -> void:
@@ -24,7 +27,7 @@ func _ready() -> void:
 	locations.MAIN_MENU: [],
 	locations.PLANET_VIEW: [],
 	locations.HOSPITAL: [
-		NPC_Schedule.new(0, 10, [Flags.get_testflag], "hickWorkshopTS3"),
+		NPC_Schedule.new(0, 100, [], "hickWorkshopTS3"),
 		NPC_Schedule.new(45, 52, [], "")
 		
 	],

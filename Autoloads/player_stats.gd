@@ -1,5 +1,9 @@
 extends Node
 
+@export var stat_needed_for_advantage: int = 11
+@export var stat_needed_to_not_have_disadvantage: int = 10
+
+
 ## Player stuff
 
 
@@ -41,3 +45,29 @@ func dialog_check(succes: int, roll_kind: RollKind, stats: Array[PlayerStatTypes
 			luck = min(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
 		_: pass
 	return luck + avg >= succes
+
+
+func decide_rollkind(stat_type: PlayerStatTypes) -> RollKind:
+	var rollkind: RollKind = RollKind.normal
+	if Stats[stat_type] >= stat_needed_for_advantage:
+		rollkind = RollKind.advantage
+	elif Stats[stat_type] < stat_needed_to_not_have_disadvantage:
+		rollkind = RollKind.disadvantage
+	
+	return rollkind
+
+func single_check(success: int, stat_type: PlayerStatTypes) -> bool:
+	var rollkind: RollKind = decide_rollkind(stat_type)
+	return dialog_check(success, rollkind, [stat_type])
+
+func physical_check(success: int) -> bool:
+	return single_check(success, PlayerStatTypes.physical)
+
+func mental_check(success: int) -> bool:
+	return single_check(success, PlayerStatTypes.mental)
+
+func social_check(success: int) -> bool:
+	return single_check(success, PlayerStatTypes.social)
+
+func education_check(success: int) -> bool:
+	return single_check(success, PlayerStatTypes.education)
