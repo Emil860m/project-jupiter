@@ -68,6 +68,9 @@ size = Vector2(8, 14)
 [node name="Hospital" type="Node3D" unique_id=1010830156]
 script = ExtResource("1_31i0m")
 
+[node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("23_aubca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.065383, 1.0500011, 19.363615)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1277339832]
 environment = SubResource("Environment_7441k")
 
@@ -608,6 +611,3 @@ transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, 0.2, 0, -0.2, -8.742278e-09
 
 [node name="IndustrialLightA2" parent="." unique_id=822953617 instance=ExtResource("18_dcae5")]
 transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, 0.2, 0, -0.2, -8.742278e-09, -4.20897, 3.7105598, 27.59773)
-
-[node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("23_aubca")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.065383, 1.0500011, 19.363615)

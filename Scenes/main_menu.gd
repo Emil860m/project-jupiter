@@ -1,5 +1,6 @@
 extends Node2D
 
+var location_id: NpcScheduler.locations = NpcScheduler.locations.MAIN_MENU
 func _ready() -> void:
 	Globals.current_location = NpcScheduler.locations.MAIN_MENU
 

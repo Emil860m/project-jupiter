@@ -1,5 +1,6 @@
 extends Node2D
 
+var location_id: NpcScheduler.locations = NpcScheduler.locations.RATIONALE
 #Canvas
 @onready var starters: CanvasLayer = $Starters
 @onready var main_course: CanvasLayer = $MainCourse

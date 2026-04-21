@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://br0sx80oa7x8w"]
 
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="1_1l4kd"]
+[ext_resource type="Script" uid="uid://b74my32uos2ul" path="res://Scenes/Luner_system/2d/test_2d.gd" id="1_gr3x1"]
 [ext_resource type="PackedScene" uid="uid://blydwht5d8cue" path="res://Scenes/Luner_system/2d/planet_view_2d.tscn" id="1_ut2ef"]
 [ext_resource type="Texture2D" uid="uid://d0ot12ogn6tw3" path="res://Textures/MapUI/Ellipse_1.png" id="3_e83a7"]
 [ext_resource type="Texture2D" uid="uid://chaafuvsoal74" path="res://Textures/MapUI/Ellipse_2.png" id="4_3yif1"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://1whnvub5l716" path="res://Scenes/Luner_system/2d/stat_allocator.tscn" id="9_wo8f8"]
 
 [node name="Test2d" type="Node2D" unique_id=2028741739]
+script = ExtResource("1_gr3x1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127771672]
 modulate = Color(0, 0, 0, 1)

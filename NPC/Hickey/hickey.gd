@@ -17,7 +17,6 @@ func _ready() -> void:
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	interactable_component.handle_click(event)
-	print("dsfajdhbsauhd " + dialogComp.start_node)
 	
 	
 func _interact():

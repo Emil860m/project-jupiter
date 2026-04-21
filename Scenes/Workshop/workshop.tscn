@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://vodb7twlkt1p"]
 
+[ext_resource type="Script" uid="uid://pjhppetna7ly" path="res://Scenes/Workshop/workshop.gd" id="1_6kvd0"]
 [ext_resource type="Texture2D" uid="uid://uwfhfsk24ixx" path="res://Assest/metalFloorA/metalFloorA.png" id="1_arkt1"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/Characters/player.tscn" id="1_ij6ys"]
 [ext_resource type="PackedScene" uid="uid://copv0004jd2rx" path="res://Prefabs/elevator.tscn" id="1_lncj0"]
@@ -57,6 +58,7 @@ background_energy_multiplier = 0.0
 sky = SubResource("Sky_lm1a6")
 
 [node name="Workshop" type="Node3D" unique_id=751648388]
+script = ExtResource("1_6kvd0")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1540512367]
 mesh = SubResource("PlaneMesh_ga7uk")
