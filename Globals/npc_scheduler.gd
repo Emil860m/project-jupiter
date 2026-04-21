@@ -15,6 +15,7 @@ enum locations {
 	OFFICE,
 	RATIONALE,
 	PONS,
+	TOWTRUCK,
 }
 
 func _ready() -> void:

@@ -1,5 +1,6 @@
 extends Node2D
 
+var location_id: NpcScheduler.locations = NpcScheduler.locations.TOWTRUCK
 @onready var label: Label = $CanvasLayer/Label
 
 const tow_truck_punishment = 20
