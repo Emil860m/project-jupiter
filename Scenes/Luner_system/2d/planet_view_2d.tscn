@@ -20,13 +20,16 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0xxy"]
 radius = 33.06055
 
-[node name="PlanetView2d" type="Node2D" unique_id=618163059 node_paths=PackedStringArray("selectedMoonLabel", "currentLocationLabel", "estimatedTravelLabel", "estimatedFuelLabel", "shipStatusLabel")]
+[node name="PlanetView2d" type="Node2D" unique_id=618163059 node_paths=PackedStringArray("selectedMoonLabel", "currentLocationLabel", "estimatedTravelLabel", "estimatedFuelLabel", "shipStatusLabel", "shipsDeltaV", "shipsMaxDeltaV", "hourLabel")]
 script = ExtResource("1_l0xxy")
 selectedMoonLabel = NodePath("UiElements/SelectedMoon")
 currentLocationLabel = NodePath("UiElements/currentLocation")
 estimatedTravelLabel = NodePath("UiElements/estimatedTime")
 estimatedFuelLabel = NodePath("UiElements/estimatedFuel")
 shipStatusLabel = NodePath("UiElements/shipStatus")
+shipsDeltaV = NodePath("UiElements/shipsDeltaV")
+shipsMaxDeltaV = NodePath("UiElements/shipsMaxDeltaV")
+hourLabel = NodePath("UiElements/hourLabel")
 
 [node name="Jupiter" type="StaticBody2D" parent="." unique_id=1425320544]
 
@@ -88,163 +91,228 @@ displayName = "Outpost"
 position = Vector2(678, 7)
 
 [node name="006MapUiSelectedDestination" type="Sprite2D" parent="UiElements" unique_id=1932381437]
-position = Vector2(-1634, -252)
+position = Vector2(-1636, -329)
 texture = ExtResource("11_od5kk")
 
 [node name="005MapUiSelectetPlanet" type="Sprite2D" parent="UiElements" unique_id=1985470207]
-position = Vector2(-1634, -180)
+position = Vector2(-1636, -257)
 texture = ExtResource("12_l8kh0")
 
 [node name="RectangleData" type="Sprite2D" parent="UiElements" unique_id=1920582294]
-position = Vector2(-1494, 276)
-scale = Vector2(0.6102941, 0.69961977)
+position = Vector2(-1496, 229)
+scale = Vector2(0.6102941, 0.81368816)
+texture = ExtResource("11_f6fv6")
+
+[node name="RectangleData2" type="Sprite2D" parent="UiElements" unique_id=1439513614]
+position = Vector2(-678, -448)
+scale = Vector2(0.6102941, 0.24714822)
 texture = ExtResource("11_f6fv6")
 
 [node name="SelectedMoon" type="Label" parent="UiElements" unique_id=731282285]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1344.0
-offset_top = -198.0
-offset_right = -1203.0
-offset_bottom = -163.0
+offset_left = -1346.0
+offset_top = -275.0
+offset_right = -1205.0
+offset_bottom = -240.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 32
 text = "not selected"
 
 [node name="currentLocation" type="Label" parent="UiElements" unique_id=1524409408]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1386.0
-offset_top = -271.0
-offset_right = -1253.0
-offset_bottom = -236.0
+offset_left = -1388.0
+offset_top = -348.0
+offset_right = -1255.0
+offset_bottom = -313.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 32
 text = "Place"
 
 [node name="Label3" type="Label" parent="UiElements" unique_id=1781525097]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -1649.0
-offset_top = 192.0
-offset_right = -1404.0
-offset_bottom = 227.0
+offset_left = -1653.0
+offset_top = 125.0
+offset_right = -1408.0
+offset_bottom = 160.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
-text = "Estimated travel time:"
+text = "Estimated time of arrival:"
 
 [node name="Label4" type="Label" parent="UiElements" unique_id=65640951]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -1649.0
-offset_top = 246.0
-offset_right = -1404.0
-offset_bottom = 281.0
+offset_left = -1654.0
+offset_top = 165.0
+offset_right = -1409.0
+offset_bottom = 200.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
-text = "Estimated fuel cost:"
+text = "Estimated fluel [deltaV] cost:"
 
 [node name="Label5" type="Label" parent="UiElements" unique_id=1606294631]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -1649.0
-offset_top = 302.0
-offset_right = -1235.0
-offset_bottom = 337.0
+offset_left = -1655.0
+offset_top = 235.0
+offset_right = -1241.0
+offset_bottom = 270.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 24
+text = "Ship fuel tank [deltaV]:"
+
+[node name="Label11" type="Label" parent="UiElements" unique_id=2036754042]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1654.0
+offset_top = 281.0
+offset_right = -1240.0
+offset_bottom = 316.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
 text = "Current ship technical status [n / 10]:"
 
 [node name="Label7" type="Label" parent="UiElements" unique_id=445109824]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -1590.0
-offset_top = -272.0
-offset_right = -1384.0
-offset_bottom = -237.0
+offset_left = -1592.0
+offset_top = -349.0
+offset_right = -1386.0
+offset_bottom = -314.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 32
 text = "Current location:"
 
+[node name="Label13" type="Label" parent="UiElements" unique_id=196896147]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -832.0
+offset_top = -466.0
+offset_right = -775.0
+offset_bottom = -431.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 32
+text = "TIME:"
+
+[node name="hourLabel" type="Label" parent="UiElements" unique_id=667788569]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -666.0
+offset_top = -483.0
+offset_right = -487.0
+offset_bottom = -413.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 64
+text = "20:00"
+
 [node name="Label10" type="Label" parent="UiElements" unique_id=827364796]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -1592.0
-offset_top = -199.0
-offset_right = -1357.0
-offset_bottom = -164.0
+offset_left = -1594.0
+offset_top = -276.0
+offset_right = -1359.0
+offset_bottom = -241.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 32
 text = "Selected destination:"
 
 [node name="Label6" type="Label" parent="UiElements" unique_id=1084021617]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1618.0
-offset_top = 323.0
-offset_right = -1204.0
-offset_bottom = 358.0
+offset_left = -1623.0
+offset_top = 302.0
+offset_right = -1209.0
+offset_bottom = 337.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
 text = "/ 10"
 
 [node name="Label8" type="Label" parent="UiElements" unique_id=1201758560]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -1649.0
-offset_top = 211.0
-offset_right = -1404.0
-offset_bottom = 246.0
+offset_left = -1653.0
+offset_top = 144.0
+offset_right = -1408.0
+offset_bottom = 179.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
 text = ">>>>"
 
 [node name="Label9" type="Label" parent="UiElements" unique_id=1712810148]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
-offset_left = -1649.0
-offset_top = 266.0
-offset_right = -1404.0
-offset_bottom = 301.0
+offset_left = -1653.0
+offset_top = 184.0
+offset_right = -1408.0
+offset_bottom = 219.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 24
+text = ">>>>"
+
+[node name="Label12" type="Label" parent="UiElements" unique_id=1620952684]
+modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
+offset_left = -1653.0
+offset_top = 260.0
+offset_right = -1408.0
+offset_bottom = 295.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
 text = ">>>>"
 
 [node name="estimatedFuel" type="Label" parent="UiElements" unique_id=665780288]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1596.0
-offset_top = 267.0
-offset_right = -1425.0
-offset_bottom = 294.0
+offset_left = -1600.0
+offset_top = 185.0
+offset_right = -1429.0
+offset_bottom = 212.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
 text = "N/A"
 
+[node name="shipsDeltaV" type="Label" parent="UiElements" unique_id=625410002]
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1601.0
+offset_top = 261.0
+offset_right = -1430.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 24
+text = "N/A"
+
+[node name="shipsMaxDeltaV" type="Label" parent="UiElements" unique_id=1147503867]
+modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
+offset_left = -1561.0
+offset_top = 261.0
+offset_right = -1390.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 24
+text = "/NA"
+
 [node name="shipStatus" type="Label" parent="UiElements" unique_id=1934046407]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1649.0
-offset_top = 323.0
-offset_right = -1603.0
-offset_bottom = 350.0
+offset_left = -1654.0
+offset_top = 302.0
+offset_right = -1608.0
+offset_bottom = 329.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
 text = "N/A"
 
 [node name="estimatedTime" type="Label" parent="UiElements" unique_id=976768864]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1596.0
-offset_top = 210.0
-offset_right = -1424.0
-offset_bottom = 245.0
+offset_left = -1600.0
+offset_top = 143.0
+offset_right = -1428.0
+offset_bottom = 178.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
 text = "N/A"
 
 [node name="Button" type="Button" parent="UiElements" unique_id=2141699318]
-offset_left = -1319.0
-offset_top = 260.0
-offset_right = -1128.0
-offset_bottom = 311.0
+offset_left = -1321.0
+offset_top = 226.0
+offset_right = -1130.0
+offset_bottom = 277.0
 text = "
 "
 icon = ExtResource("15_u6i4c")
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="UiElements" unique_id=926606263]
-offset_left = -1319.0
-offset_top = 320.0
-offset_right = -1128.0
-offset_bottom = 371.0
+offset_left = -1321.0
+offset_top = 286.0
+offset_right = -1130.0
+offset_bottom = 337.0
 text = "
 "
 icon = ExtResource("16_ovvku")
