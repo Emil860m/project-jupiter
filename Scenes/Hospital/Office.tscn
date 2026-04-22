@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bm3r67wgt0ga5"]
 
+[ext_resource type="Script" uid="uid://csrwd06p5b2bw" path="res://Scenes/Hospital/office.gd" id="1_tonup"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/Characters/player.tscn" id="1_xwjd6"]
 [ext_resource type="Texture2D" uid="uid://uwfhfsk24ixx" path="res://Assest/metalFloorA/metalFloorA.png" id="2_28we2"]
 [ext_resource type="PackedScene" uid="uid://copv0004jd2rx" path="res://Prefabs/elevator.tscn" id="3_4u55a"]
@@ -76,6 +77,7 @@ material = SubResource("StandardMaterial3D_osfji")
 size = Vector2(50, 7.5)
 
 [node name="Office" type="Node3D" unique_id=2047228538]
+script = ExtResource("1_tonup")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1929993151]
 environment = SubResource("Environment_qr0c3")
