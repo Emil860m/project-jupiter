@@ -29,7 +29,7 @@ var Stats = {
 	ShipStatTypes.radiation_protection: 10,
 }
 
-var _unused_stat_allocation_points: int = 0
+var _unused_stat_allocation_points: int = 2
 
 func get_unused_stat_allocation_points() -> int:
 	return _unused_stat_allocation_points
