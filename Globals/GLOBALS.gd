@@ -27,7 +27,7 @@ func has_interacted(item) -> bool:
 var current_chapter: int = 1
 var chapter_titles: Array[String] = [
 	"EVEN JUPITER IS BOUND BY TIME",
-	"JUPITER AND THE EAGLE"
+	"GANYMEDE AND THE EAGLE"
 ]
 
 func get_current_chapter_title():
