@@ -9,11 +9,3 @@ script = ExtResource("1_233hg")
 bank_paths = ["res://FmodBank/Desktop/Master.bank"]
 
 [node name="FmodListener2D" type="FmodListener2D" parent="." unique_id=1703815682]
-
-[node name="BgmEmitter" type="FmodEventEmitter2D" parent="." unique_id=1014239079]
-event_name = "event:/test"
-event_guid = "{883fa460-03b1-4532-9cd5-5ae467181c62}"
-autoplay = true
-fmod_parameters/Location/id = 5661514774600387649
-fmod_parameters/Location = 0
-fmod_parameters/Location/variant_type = 2
