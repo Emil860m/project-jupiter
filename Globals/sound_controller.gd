@@ -7,9 +7,14 @@ func _ready():
 
 func set_bgm(location):
 	bgm_emitter.set_parameter("Location", get_location_parameter(location))
-	print(bgm_emitter.get_parameter("Location"))
+
+func set_in_flight(is_in_flight: bool):
+	bgm_emitter.set_parameter("inFlight", is_in_flight)
 
 func get_location_parameter(loc: NpcScheduler.locations) -> String:
+	if loc != NpcScheduler.locations.PONS and loc != NpcScheduler.locations.RATIONALE:
+		set_in_flight(false)
+	
 	match loc:
 		NpcScheduler.locations.MAIN_MENU: return "Title"
 		NpcScheduler.locations.PROLOGUE: return "Title" # TODO add prologue music
