@@ -12,3 +12,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_click"):
 		SceneController.goto_scene("res://Scenes/Luner_system/2d/test2d.tscn")
 	
+
+
+func _on_button_2_button_up() -> void:
+	get_tree().set_auto_accept_quit(false)
+	pass # Replace with function body.

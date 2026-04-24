@@ -81,14 +81,14 @@ modulate = Color(0, 0, 0, 1)
 anchors_preset = -1
 anchor_right = 0.057000004
 anchor_bottom = 0.021000002
-offset_left = 1147.0
-offset_top = 778.0
-offset_right = 1541.5599
-offset_bottom = 808.32
+offset_left = 1162.0
+offset_top = 775.0
+offset_right = 1556.5599
+offset_bottom = 805.32
 rotation = -0.21662469
 theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "and explore further!"
 
 [connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_startgame_button_up"]
-[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_startgame_button_up"]
+[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_button_2_button_up"]
