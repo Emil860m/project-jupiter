@@ -6,6 +6,7 @@ var selected: Area2D
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_2d_component = $Raycast2dComponent
 @onready var moons: Node2D = $MoonParent
+@onready var statPointPopup: Sprite2D = $UiElements/statPointPopup
 @export var selectedMoonLabel: Label
 @export var currentLocationLabel: Label
 @export var estimatedTravelLabel: Label
@@ -77,6 +78,9 @@ func update_travel_time() -> void:
 
 func _on_travel_button_up() -> void:
 	if selected:
+		if ShipStats.get_unused_stat_allocation_points() > 0:
+			statPointPopup.visible = true
+			return
 		Globals.increment_timestep(selected.estimated_travel_time)
 		ShipStats.spend_fuel(selected.base_travel_time)
 		Globals.current_moon = selected.name
@@ -104,4 +108,9 @@ func _on_event_completed() -> void:
 
 func _on_stat_allocator_change_stat() -> void:
 	update_travel_time()
+	pass # Replace with function body.
+
+
+func _on_statpointPopup_button_up() -> void:
+	statPointPopup.visible = false
 	pass # Replace with function body.
