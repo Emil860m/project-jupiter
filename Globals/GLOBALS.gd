@@ -1,5 +1,6 @@
 extends Node
 
+var interacting = false
 var interacted_set = {}
 var current_timestep = 0
 @export var moon_movement_per_timestep: float = 20.0/144.0
@@ -21,7 +22,8 @@ func add_to_interact_set(item) -> void:
 func has_interacted(item) -> bool:
 	return interacted_set.has(item)
 
-
+func set_interacting_false():
+	interacting = false
 
 # Chapter management
 var current_chapter: int = 1

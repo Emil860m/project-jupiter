@@ -302,6 +302,7 @@ func start_dialogue(node_name: String = "") -> void:
 	_is_starting = false
 	_content_complete_pending = false
 	dialogue_started.emit()
+	Globals.interacting = true
 
 	# duplicate to prevent mutation during async iteration
 	var presenters_copy := _presenters.duplicate()
@@ -322,6 +323,7 @@ func stop_dialogue() -> void:
 	_is_running = false
 	_content_complete_pending = false
 	_waiting_for_content = false
+	
 
 	if _current_cancellation_token != null:
 		_current_cancellation_token.request_next_content()
@@ -331,7 +333,6 @@ func stop_dialogue() -> void:
 	for presenter in presenters_copy:
 		if is_instance_valid(presenter):
 			await _safe_notify_presenter(presenter, "on_dialogue_completed")
-
 	dialogue_completed.emit()
 
 
@@ -808,13 +809,11 @@ func _on_node_complete(node_name: String) -> void:
 
 func _on_dialogue_complete() -> void:
 	_is_running = false
-
 	var presenters_copy := _presenters.duplicate()
 	for presenter in presenters_copy:
 		await _safe_notify_presenter(presenter, "on_dialogue_completed")
-
+	Globals.set_interacting_false.call_deferred()
 	dialogue_completed.emit()
-
 
 func _on_prepare_for_lines(line_ids: PackedStringArray) -> void:
 	if _asset_provider != null:
