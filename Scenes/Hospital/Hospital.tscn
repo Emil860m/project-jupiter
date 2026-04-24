@@ -57,7 +57,7 @@ script = ExtResource("1_31i0m")
 environment = SubResource("Environment_7441k")
 
 [node name="Player" parent="." unique_id=134844603 instance=ExtResource("2_osfji")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.72, 1, -0.3499999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.72, 1, 3.65)
 
 [node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("23_aubca")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.065383, 1.0500011, 19.363617)
