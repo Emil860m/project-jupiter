@@ -33,7 +33,7 @@ func _ready() -> void:
 	shipStatusLabel.text = str(10 - ShipStats.damage)
 	shipsDeltaV.text = str(float(ShipStats.fuel))
 	shipsMaxDeltaV.text = "/ " + str(float(ShipStats.fuel_cap))
-	hourLabel.text = str(Globals.current_timestep)
+	hourLabel.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
 	
 	raycast_comp.camera_2d = camera_2d
@@ -70,7 +70,7 @@ func update_travel_time() -> void:
 		return
 	selected.estimated_travel_time = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
 	var estimated_fuel = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.fuel_consumption]) 
-	estimatedTravelLabel.text = str(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)) + Globals.current_timestep)
+	estimatedTravelLabel.text = Globals.convert_timesteps_to_string(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)) + Globals.current_timestep)
 	estimatedFuelLabel.text = str(round(estimated_fuel * (1 + fuel_noice / 100)))
 	for m in moons.get_children():
 			m.set_estimated_loc(selected.estimated_travel_time, current_location.global_position)
