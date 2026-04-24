@@ -78,7 +78,9 @@ func update_travel_time() -> void:
 func _on_travel_button_up() -> void:
 	if selected:
 		Globals.increment_timestep(selected.estimated_travel_time)
-		ShipStats.spend_fuel(selected.base_travel_time)
+		var did_travel = ShipStats.spend_fuel(selected.base_travel_time)
+		if !did_travel:
+			return
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
 			SoundController.set_in_flight(true)

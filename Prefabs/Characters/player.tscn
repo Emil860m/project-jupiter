@@ -43,3 +43,7 @@ script = ExtResource("3_i3pqv")
 [node name="RaycastComponent" parent="." unique_id=693145787 instance=ExtResource("4_sweqy")]
 
 [node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("5_2hs0m")]
+
+[node name="StopMoveTimer" type="Timer" parent="." unique_id=1799042960]
+
+[connection signal="timeout" from="StopMoveTimer" to="." method="_on_stop_move_timer_timeout"]

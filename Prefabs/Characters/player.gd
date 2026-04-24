@@ -8,6 +8,7 @@ const SPEED = 4
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_component = $RaycastComponent
 @onready var movement_component: Node = $MovementComponent
+@onready var stop_move_timer: Timer = $StopMoveTimer
 
 @export var interact_dist = 2.5
 
@@ -19,6 +20,7 @@ var can_move = true
 
 func _ready() -> void:
 	can_move = false
+	stop_move_timer.start(1)
 	raycast_comp.camera_3d = camera_3d
 	SignalBus.object_clicked.connect(_on_object_clicked)
 
@@ -61,3 +63,7 @@ func handle_raycast(hit):
 func _on_object_clicked(object: Node):
 	interact_object = object
 	interact_click = true
+
+
+func _on_stop_move_timer_timeout() -> void:
+	can_move = true
