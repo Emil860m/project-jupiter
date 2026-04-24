@@ -14,6 +14,8 @@ const SPEED = 4
 var interact_object: Node = null
 var interact_click: bool = false
 
+var can_move = true
+
 
 func _ready() -> void:
 	raycast_comp.camera_3d = camera_3d
@@ -22,6 +24,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if interact_object != null:
 		if interact_object.global_position.distance_to(self.global_position) < interact_dist:
+			navigation_agent_3d.target_position = self.global_position
 			interact_object.runner()
 			interact_object = null
 	velocity = movement_component.set_movement_velocity(
@@ -32,6 +35,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func _process(delta: float) -> void:
+	if Globals.interacting:
+		can_move = false
+		return
+	if !can_move:
+		if !Globals.interacting:
+			can_move = true
+		return
 	if input_comp.get_select_input():
 		if !interact_click:
 			interact_object = null
