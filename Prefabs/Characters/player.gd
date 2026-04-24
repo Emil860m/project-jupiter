@@ -18,6 +18,7 @@ var can_move = true
 
 
 func _ready() -> void:
+	can_move = false
 	raycast_comp.camera_3d = camera_3d
 	SignalBus.object_clicked.connect(_on_object_clicked)
 
