@@ -10,10 +10,10 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_sk6rr"]
 animations = [{
 "frames": [{
-"duration": 7.0,
+"duration": 15.0,
 "texture": ExtResource("2_5pidd")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("3_tqsqj")
 }, {
 "duration": 2.0,
@@ -38,7 +38,7 @@ z_index = -4
 position = Vector2(972, 544.99994)
 scale = Vector2(2.1391306, 1.6612183)
 sprite_frames = SubResource("SpriteFrames_sk6rr")
-frame_progress = 0.21687402
+frame_progress = 0.81357896
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("1_juf7l")]
 
