@@ -2,9 +2,37 @@ extends Node
 
 @onready var bgm_emitter = $BgmEmitter
 
+@onready var ui_emitters = $UIEmitters
+
+var master_vol: float = 0.5:
+	set(new_val):
+		assert(new_val <= 1.0)
+		master_vol = new_val
+		set_volumes()
+var music_vol: float = 0.5:
+	set(new_val):
+		assert(new_val <= 1.0)
+		music_vol = new_val
+		set_volumes()
+var sound_vol: float = 0.5:
+	set(new_val):
+		assert(new_val <= 1.0)
+		sound_vol = new_val
+		set_volumes()
+
+
 func _ready():
-	bgm_emitter.volume = 0.4
 	bgm_emitter.play()
+	
+	set_volumes()
+
+func set_volumes():
+	var actual_music = master_vol * music_vol
+	var actual_sound = master_vol * sound_vol
+	
+	bgm_emitter.volume = actual_music
+	for emitter in ui_emitters.get_children():
+		emitter.volume = actual_sound
 
 func set_bgm(location):
 	bgm_emitter.set_parameter("Location", get_location_parameter(location))

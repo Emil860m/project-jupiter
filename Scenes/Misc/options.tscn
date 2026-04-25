@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dw1m83pj8h013"]
+
+[ext_resource type="Script" uid="uid://dmbjp6l25n061" path="res://Scenes/Misc/options.gd" id="1_3d82e"]
+
+[node name="Options" type="Node2D" unique_id=112372254]
+script = ExtResource("1_3d82e")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=948223811]
+follow_viewport_enabled = true
+
+[node name="BG" type="ColorRect" parent="CanvasLayer" unique_id=1377367127]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.78039217, 0.7529412, 0.7176471, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1105712931]
+offset_right = 8.0
+offset_bottom = 36.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer" unique_id=1044563711]
+layout_mode = 2
+
+[node name="MasterContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=451640792]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=821636098]
+layout_mode = 2
+text = "Master volume: "
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=1149777400]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MasterSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=1246706035]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 5.0
+tick_count = 11
+ticks_position = 3
+
+[node name="BgmContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=707556088]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=1913066739]
+layout_mode = 2
+text = "Music:"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=1309868678]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BgmSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=1499444632]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 5.0
+tick_count = 11
+ticks_position = 3
+
+[node name="SfxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=344936721]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=1933298748]
+layout_mode = 2
+text = "Sound:"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=2105141177]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SfxSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=867435300]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 5.0
+tick_count = 11
+ticks_position = 3
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1564229421]
+layout_mode = 2
+text = "Return to menu"
+
+[connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer/BgmSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
