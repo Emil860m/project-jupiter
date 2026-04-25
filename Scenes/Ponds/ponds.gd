@@ -35,6 +35,15 @@ func check_upgrades():
 	fuel_upgrade_button.disabled = Flags.get_flag("HasFuelUpgrade1")
 
 func _on_leave_button_up() -> void:
+	ShipStats.damage = 10
+	if ShipStats.fuel <= 0:
+		main_label.text = 'Your fuel is to low to travel. Please refuel your ship'
+		timer.start(1.5)
+		return
+	if ShipStats.damage >= 10:
+		main_label.text = 'Your ship is to damaged to travel. Please repair your ship'
+		timer.start(1.5)
+		return
 	SceneController.goto_scene(scene_to_load)
 
 
