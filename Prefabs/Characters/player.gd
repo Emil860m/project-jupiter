@@ -8,6 +8,7 @@ const SPEED = 4
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_component = $RaycastComponent
 @onready var movement_component: Node = $MovementComponent
+@onready var movement_timer: Timer = $MovementTimer
 @onready var clock_label := $Camera3D/CanvasLayer/Label
 
 @export var interact_dist = 2.5
@@ -19,9 +20,13 @@ var can_move = true
 
 
 func _ready() -> void:
+	movement_timer.start(0.5)
+	can_move = false
+	SignalBus.object_clicked.connect(_on_object_clicked)
 	clock_label.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 	raycast_comp.camera_3d = camera_3d
 	SignalBus.object_clicked.connect(_on_object_clicked)
+	camera_3d.global_position = camera_marker.global_position
 
 func _physics_process(delta: float) -> void:
 	if interact_object != null:
@@ -41,16 +46,16 @@ func _process(delta: float) -> void:
 	if Globals.interacting:
 		can_move = false
 		return
-	if !can_move:
-		if !Globals.interacting:
-			can_move = true
+	if !can_move && movement_timer.time_left <= 0:
+		can_move = true
 		return
-	if input_comp.get_select_input():
-		if !interact_click:
-			interact_object = null
-		interact_click = false
-		handle_raycast(raycast_comp.send_raycast_from_screen())
-	camera_3d.global_position = camera_marker.global_position
+	if can_move:
+		if input_comp.get_select_input():
+			if !interact_click:
+				interact_object = null
+			interact_click = false
+			handle_raycast(raycast_comp.send_raycast_from_screen())
+		camera_3d.global_position = camera_marker.global_position
 
 func handle_raycast(hit):
 	if hit == null:
@@ -63,3 +68,8 @@ func handle_raycast(hit):
 func _on_object_clicked(object: Node):
 	interact_object = object
 	interact_click = true
+
+
+func _on_movement_timer_timeout() -> void:
+	can_move = true
+	pass # Replace with function body.
