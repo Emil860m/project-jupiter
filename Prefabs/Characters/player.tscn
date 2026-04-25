@@ -66,7 +66,6 @@ text = "20:00"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 33, -16)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
-debug_enabled = true
 
 [node name="MovementComponent" type="Node" parent="." unique_id=1328033895]
 script = ExtResource("3_i3pqv")
