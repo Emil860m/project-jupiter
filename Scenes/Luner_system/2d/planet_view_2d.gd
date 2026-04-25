@@ -85,6 +85,7 @@ func _on_travel_button_up() -> void:
 		ShipStats.spend_fuel(selected.base_travel_time)
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
+			SoundController.play_mid_boop()
 			SoundController.set_in_flight(true)
 			var event = event_scene.instantiate()
 			event.set_completion_callback(_on_event_completed)
@@ -100,6 +101,7 @@ func _on_travel_button_up() -> void:
 
 func _on_exit_button_up() -> void:
 	if not Globals.current_moon == "OutPost":
+		SoundController.play_mid_boop()
 		SceneController.goto_scene(current_location.travelScenePath)
 
 func _on_event_completed() -> void:
