@@ -24,9 +24,13 @@ func update():
 
 # Signals
 func _on_add_button_pressed():
-	ShipStats.allocate_stat(type)
-	callback.call()
+	if !Globals.interacting:
+    SoundController.play_high_boop()
+		ShipStats.allocate_stat(type)
+		callback.call()
 
 func _on_subtract_button_pressed():
-	ShipStats.de_allocate_stat(type)
-	callback.call()
+	if !Globals.interacting:
+    SoundController.play_low_boop()
+		ShipStats.de_allocate_stat(type)
+		callback.call()

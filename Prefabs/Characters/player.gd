@@ -9,6 +9,7 @@ const SPEED = 4
 @onready var raycast_comp: raycast_component = $RaycastComponent
 @onready var movement_component: Node = $MovementComponent
 @onready var movement_timer: Timer = $MovementTimer
+@onready var clock_label := $Camera3D/CanvasLayer/Label
 
 @export var interact_dist = 2.5
 
@@ -22,6 +23,7 @@ func _ready() -> void:
 	movement_timer.start(0.5)
 	can_move = false
 	SignalBus.object_clicked.connect(_on_object_clicked)
+	clock_label.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 	raycast_comp.camera_3d = camera_3d
 	SignalBus.object_clicked.connect(_on_object_clicked)
 	camera_3d.global_position = camera_marker.global_position
@@ -32,6 +34,7 @@ func _physics_process(delta: float) -> void:
 			navigation_agent_3d.target_position = self.global_position
 			interact_object.runner()
 			interact_object = null
+			clock_label.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 	velocity = movement_component.set_movement_velocity(
 		navigation_agent_3d.get_next_path_position(),
 		global_position,

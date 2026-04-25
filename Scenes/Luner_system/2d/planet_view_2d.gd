@@ -6,6 +6,7 @@ var selected: Area2D
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_2d_component = $Raycast2dComponent
 @onready var moons: Node2D = $MoonParent
+@onready var statPointPopup: Sprite2D = $UiElements/statPointPopup
 @export var selectedMoonLabel: Label
 @export var currentLocationLabel: Label
 @export var estimatedTravelLabel: Label
@@ -32,7 +33,7 @@ func _ready() -> void:
 	shipStatusLabel.text = str(10 - ShipStats.damage)
 	shipsDeltaV.text = str(float(ShipStats.fuel))
 	shipsMaxDeltaV.text = "/ " + str(float(ShipStats.fuel_cap))
-	hourLabel.text = str(Globals.current_timestep)
+	hourLabel.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
 	
 	raycast_comp.camera_2d = camera_2d
@@ -69,7 +70,7 @@ func update_travel_time() -> void:
 		return
 	selected.estimated_travel_time = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
 	var estimated_fuel = selected.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.fuel_consumption]) 
-	estimatedTravelLabel.text = str(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)) + Globals.current_timestep)
+	estimatedTravelLabel.text = Globals.convert_timesteps_to_string(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)) + Globals.current_timestep)
 	estimatedFuelLabel.text = str(round(estimated_fuel * (1 + fuel_noice / 100)))
 	for m in moons.get_children():
 			m.set_estimated_loc(selected.estimated_travel_time, current_location.global_position)
@@ -77,12 +78,16 @@ func update_travel_time() -> void:
 
 func _on_travel_button_up() -> void:
 	if selected:
+		if ShipStats.get_unused_stat_allocation_points() > 0:
+			statPointPopup.visible = true
+			return
 		Globals.increment_timestep(selected.estimated_travel_time)
 		var did_travel = ShipStats.spend_fuel(selected.base_travel_time)
 		if !did_travel:
 			return
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
+			SoundController.play_mid_boop()
 			SoundController.set_in_flight(true)
 			var event = event_scene.instantiate()
 			event.set_completion_callback(_on_event_completed)
@@ -98,6 +103,7 @@ func _on_travel_button_up() -> void:
 
 func _on_exit_button_up() -> void:
 	if not Globals.current_moon == "OutPost":
+		SoundController.play_mid_boop()
 		SceneController.goto_scene(current_location.travelScenePath)
 
 func _on_event_completed() -> void:
@@ -106,4 +112,9 @@ func _on_event_completed() -> void:
 
 func _on_stat_allocator_change_stat() -> void:
 	update_travel_time()
+	pass # Replace with function body.
+
+
+func _on_statpointPopup_button_up() -> void:
+	statPointPopup.visible = false
 	pass # Replace with function body.
