@@ -74,6 +74,6 @@ script = ExtResource("3_i3pqv")
 
 [node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("5_2hs0m")]
 
-[node name="StopMoveTimer" type="Timer" parent="." unique_id=1799042960]
+[node name="MovementTimer" type="Timer" parent="." unique_id=489953609]
 
-[connection signal="timeout" from="StopMoveTimer" to="." method="_on_stop_move_timer_timeout"]
+[connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]
