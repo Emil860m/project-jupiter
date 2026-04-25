@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ctmwb44g78a8k" path="res://Textures/MapUI/000_MapUI_jupiter.png" id="2_iwfgl"]
 [ext_resource type="PackedScene" uid="uid://bte2u56r132tv" path="res://Scenes/Luner_system/2d/moon_2d.tscn" id="2_s3bh8"]
 [ext_resource type="Texture2D" uid="uid://dtg26o84l5jle" path="res://Textures/MapUI/001_MapUI_ganimide.png" id="3_a4yyy"]
-[ext_resource type="PackedScene" uid="uid://cr04mmvo0moc7" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
+[ext_resource type="PackedScene" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="6_hpwom"]
 [ext_resource type="Texture2D" uid="uid://bkdf436lcp53" path="res://Textures/MapUI/002_MapUI_callisto.png" id="6_l0otk"]
 [ext_resource type="Texture2D" uid="uid://djljvypx8740c" path="res://Textures/MapUI/007_MapUI_thePonds.png" id="7_ydf4a"]
@@ -308,6 +308,16 @@ text = "
 icon = ExtResource("15_u6i4c")
 icon_alignment = 1
 
+[node name="Button3" type="Button" parent="UiElements" unique_id=1006985811]
+offset_left = -1321.0
+offset_top = 166.0
+offset_right = -1130.0
+offset_bottom = 217.0
+text = "This shoud be
+ \"Call Tow Truck\""
+icon = ExtResource("15_u6i4c")
+icon_alignment = 1
+
 [node name="Button2" type="Button" parent="UiElements" unique_id=926606263]
 offset_left = -1321.0
 offset_top = 286.0
@@ -342,5 +352,6 @@ theme_override_font_sizes/font_size = 31
 text = "You have unallocated stat points"
 
 [connection signal="button_up" from="UiElements/Button" to="." method="_on_travel_button_up"]
+[connection signal="button_up" from="UiElements/Button3" to="." method="_on_tow_truck_button_up"]
 [connection signal="button_up" from="UiElements/Button2" to="." method="_on_exit_button_up"]
 [connection signal="button_up" from="UiElements/statPointPopup/Button" to="." method="_on_statpointPopup_button_up"]

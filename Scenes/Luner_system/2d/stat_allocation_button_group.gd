@@ -19,7 +19,7 @@ func initialize(stat_type: ShipStats.ShipStatTypes, refresh_callback: Callable):
 	update()
 
 func update():
-	add_button.disabled = ShipStats.get_unused_stat_allocation_points() == 0
+	add_button.disabled = ShipStats.get_unused_stat_allocation_points() == 0 or ShipStats.max_allowed_stat <= ShipStats.Stats[type]
 	subtract_button.disabled = ShipStats.stat_min_allowed_value == ShipStats.Stats[type]
 
 # Signals
