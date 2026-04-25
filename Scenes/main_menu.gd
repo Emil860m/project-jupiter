@@ -19,4 +19,5 @@ func _notification(what):
 
 func _on_button_2_button_up() -> void:
 	get_tree().set_auto_accept_quit(false)
+	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 	# EXIT THE GAME
