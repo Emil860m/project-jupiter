@@ -53,6 +53,8 @@ func de_allocate_stat(stat_type: ShipStatTypes, amount = 1):
 
 func damage_ship(damage_number: int):
 	damage += damage_number
+	if damage > 10:
+		SceneController.get_tow_trucked()
 
 func spend_fuel(fuel_spent: int):  # Note: also used by events to reduce fuel
 	var total_fuel_spent = fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
