@@ -30,3 +30,8 @@ func _deferred_goto_scene(path):
 
 	if is_instance_valid(old):
 		old.queue_free()
+
+
+func _notification(what):
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		get_tree().quit() # default behavior

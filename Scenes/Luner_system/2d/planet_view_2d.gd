@@ -60,6 +60,7 @@ func select_moon(hit):
 		selected.set_selected(false)
 		selectedMoonLabel.text = "None"
 	if hit.is_in_group("moon"):
+		SoundController.play_mid_boop()
 		selected = hit
 		selected.set_selected(true)
 		selectedMoonLabel.text = hit.displayName
@@ -78,6 +79,7 @@ func update_travel_time() -> void:
 
 func _on_travel_button_up() -> void:
 	if selected:
+		SoundController.play_mid_boop()
 		if ShipStats.get_unused_stat_allocation_points() > 0:
 			statPointPopup.visible = true
 			return
@@ -87,7 +89,6 @@ func _on_travel_button_up() -> void:
 			return
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
-			SoundController.play_mid_boop()
 			SoundController.set_in_flight(true)
 			var event = event_scene.instantiate()
 			event.set_completion_callback(_on_event_completed)

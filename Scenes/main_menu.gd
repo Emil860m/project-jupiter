@@ -13,10 +13,7 @@ func _process(delta: float) -> void:
 		SceneController.goto_scene("res://Scenes/Luner_system/2d/test2d.tscn")
 	
 
-func _notification(what):
-	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		get_tree().quit() # default behavior
 
 func _on_button_2_button_up() -> void:
-	get_tree().set_auto_accept_quit(false)
+	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 	# EXIT THE GAME
