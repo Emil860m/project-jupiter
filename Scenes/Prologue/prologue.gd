@@ -6,10 +6,11 @@ extends Node2D
 var location_id: NpcScheduler.locations = NpcScheduler.locations.PROLOGUE
 
 var transition_scene = preload("res://SceneTransitions/chapter_transition.tscn")
-
+@onready var _animated_sprite = $CanvasLayer/AnimatedSprite2D
 
 func _ready() -> void:
 	await chapterTrans.transition_finished
+	_animated_sprite.play("default")
 	
 	dialogRunner.connect("dialogue_completed", on_dialogue_completed)
 	dialogComp.start_dialog()
