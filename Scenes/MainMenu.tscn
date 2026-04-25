@@ -27,25 +27,40 @@ texture = ExtResource("2_8saeu")
 [node name="Button" type="Button" parent="CanvasLayer" unique_id=321424547]
 modulate = Color(1, 0, 0, 1)
 offset_left = 329.0
-offset_top = 880.4774
+offset_top = 863.47736
 offset_right = 648.0
-offset_bottom = 941.4774
+offset_bottom = 924.47736
 rotation = -0.21662469
 theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "COME TO JUPITER"
+flat = true
+autowrap_trim_flags = 0
+
+[node name="Button3" type="Button" parent="CanvasLayer" unique_id=2097404355]
+modulate = Color(1, 0, 0, 1)
+offset_left = 660.0
+offset_top = 854.0002
+offset_right = 805.31635
+offset_bottom = 915.0002
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "OPTIONS"
+flat = true
 autowrap_trim_flags = 0
 
 [node name="Button2" type="Button" parent="CanvasLayer" unique_id=652377010]
 modulate = Color(1, 0, 0, 1)
-offset_left = 1044.9999
-offset_top = 796.0
-offset_right = 1135.9999
-offset_bottom = 857.0
+offset_left = 1100.9998
+offset_top = 810.9999
+offset_right = 1191.9998
+offset_bottom = 871.9999
 rotation = -0.21662469
 theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "EXIT"
+flat = true
 autowrap_trim_flags = 0
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1102232932]
@@ -53,42 +68,71 @@ modulate = Color(0, 0, 0, 1)
 anchors_preset = -1
 anchor_right = 0.057000004
 anchor_bottom = 0.021000002
-offset_left = 657.0
-offset_top = 814.00006
-offset_right = 1503.5599
-offset_bottom = 844.32007
+offset_left = 633.99994
+offset_top = 805.00006
+offset_right = 1480.5599
+offset_bottom = 835.32007
 rotation = -0.21662469
 theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "and pursue your dream of frontier exploration!"
+
+[node name="Label5" type="Label" parent="CanvasLayer" unique_id=800965299]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.021000002
+offset_left = 813.00006
+offset_top = 828.99994
+offset_right = 1659.5599
+offset_bottom = 859.31995
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "for relocation TODAY"
 
 [node name="Label2" type="Label" parent="CanvasLayer" unique_id=2143412536]
 modulate = Color(0, 0, 0, 1)
 anchors_preset = -1
 anchor_right = 0.057000004
 anchor_bottom = 0.021000002
-offset_left = 509.0
-offset_top = 919.99994
-offset_right = 939.56
-offset_bottom = 950.31995
+offset_left = 569.00006
+offset_top = 940.0
+offset_right = 999.56
+offset_bottom = 970.32
 rotation = -0.21662469
 theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "Juvian system is the bridge to"
+
+[node name="Label4" type="Label" parent="CanvasLayer" unique_id=1042902237]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.021000002
+offset_left = 461.0
+offset_top = 904.00006
+offset_right = 563.4046
+offset_bottom = 934.32007
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "Review your"
 
 [node name="Label3" type="Label" parent="CanvasLayer" unique_id=562439158]
 modulate = Color(0, 0, 0, 1)
 anchors_preset = -1
 anchor_right = 0.057000004
 anchor_bottom = 0.021000002
-offset_left = 1162.0
-offset_top = 775.0
-offset_right = 1556.5599
-offset_bottom = 805.32
+offset_left = 1203.0
+offset_top = 796.9999
+offset_right = 1597.5599
+offset_bottom = 827.3199
 rotation = -0.21662469
 theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "and explore further!"
 
 [connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_startgame_button_up"]
+[connection signal="button_up" from="CanvasLayer/Button3" to="." method="_on_startgame_button_up"]
 [connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_button_2_button_up"]

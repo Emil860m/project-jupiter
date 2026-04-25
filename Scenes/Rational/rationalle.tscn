@@ -2,21 +2,62 @@
 
 [ext_resource type="Texture2D" uid="uid://digmdsn8qinuw" path="res://Textures/Green/texture_05.png" id="1_j8nc0"]
 [ext_resource type="Script" uid="uid://c2f0gm1b31nr7" path="res://Scenes/Rational/rationalle.gd" id="1_xmvj0"]
+[ext_resource type="Texture2D" uid="uid://nmnilfofbqjm" path="res://Textures/Rationale/Rationale_leftHand.png" id="2_lvfxg"]
 [ext_resource type="Script" uid="uid://dmr4l2ljhpsv8" path="res://Buffs/buff_button.gd" id="3_ds12f"]
+[ext_resource type="Texture2D" uid="uid://d4k5mm7qtni10" path="res://Textures/Rationale/rationale_rightHand.png" id="3_dw8os"]
+[ext_resource type="FontFile" uid="uid://dku1eijo01638" path="res://Textures/MainMenuUI/VT323-Regular.ttf" id="4_wjrc5"]
 
 [node name="Rationalle" type="Node2D" unique_id=2143307663]
 script = ExtResource("1_xmvj0")
 scene_to_load = "res://Scenes/Luner_system/2d/test2d.tscn"
 
-[node name="MainView" type="CanvasLayer" parent="." unique_id=440508569]
+[node name="Background" type="CanvasLayer" parent="." unique_id=180513721]
 
-[node name="MainBackground" type="TextureRect" parent="MainView" unique_id=417865328]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_j8nc0")
+[node name="TextureRectLeft" type="TextureRect" parent="Background" unique_id=147510559]
+offset_left = 152.0
+offset_top = 26.0
+offset_right = 1050.0
+offset_bottom = 1092.375
+rotation = 0.1609729
+texture = ExtResource("2_lvfxg")
+
+[node name="TextureRectRight" type="TextureRect" parent="Background" unique_id=1948962079]
+offset_left = 989.0
+offset_top = 218.0
+offset_right = 1682.0
+offset_bottom = 1100.0
+texture = ExtResource("3_dw8os")
+
+[node name="MainView" type="CanvasLayer" parent="." unique_id=440508569]
+rotation = 0.1605703
+transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
+
+[node name="1Course" type="Button" parent="MainView" unique_id=855555974]
+custom_minimum_size = Vector2(219, 60)
+offset_left = 673.88513
+offset_top = 214.01141
+offset_right = 892.88513
+offset_bottom = 274.0114
+text = "1 Course
+Main"
+
+[node name="2Courses" type="Button" parent="MainView" unique_id=2032675669]
+custom_minimum_size = Vector2(219, 60)
+offset_left = 672.8278
+offset_top = 301.30338
+offset_right = 891.8278
+offset_bottom = 361.30338
+text = "2 Courses
+Starter + Main"
+
+[node name="3Courses" type="Button" parent="MainView" unique_id=1575773606]
+custom_minimum_size = Vector2(219, 60)
+offset_left = 673.58496
+offset_top = 387.28842
+offset_right = 892.58496
+offset_bottom = 447.28842
+text = "3 Courses
+Starter + Diner + Dessert"
 
 [node name="MainLabel" type="Label" parent="MainView" unique_id=2012908595]
 anchors_preset = -1
@@ -24,50 +65,17 @@ anchor_left = 0.5
 anchor_top = 0.25
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.5
-offset_top = -11.5
-offset_right = 28.5
-offset_bottom = 11.5
+offset_left = -329.15906
+offset_top = -134.1116
+offset_right = 28.840942
+offset_bottom = -348.88007
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_wjrc5")
+theme_override_font_sizes/font_size = 28
 text = "Choose the amount of courses"
 vertical_alignment = 1
-
-[node name="VBoxContainer" type="HBoxContainer" parent="MainView" unique_id=1656769341]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -575.0
-offset_top = -30.0
-offset_right = 582.0
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 16
-alignment = 1
-
-[node name="1Course" type="Button" parent="MainView/VBoxContainer" unique_id=855555974]
-custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
-text = "1 Course
-Main"
-
-[node name="2Courses" type="Button" parent="MainView/VBoxContainer" unique_id=2032675669]
-custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
-text = "2 Courses
-Starter + Main"
-
-[node name="3Courses" type="Button" parent="MainView/VBoxContainer" unique_id=1575773606]
-custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
-text = "3 Courses
-Starter + Diner + Dessert"
 
 [node name="LeaveButton" type="Button" parent="MainView" unique_id=130683765]
 anchors_preset = -1
@@ -75,24 +83,18 @@ anchor_left = 0.5
 anchor_top = 0.65
 anchor_right = 0.5
 anchor_bottom = 0.65
-offset_left = -106.5
-offset_top = -40.0
-offset_right = 106.5
-offset_bottom = 40.0
+offset_left = -285.91577
+offset_top = -136.4989
+offset_right = -72.91577
+offset_bottom = -56.4989
 grow_horizontal = 2
 grow_vertical = 2
 text = "Leave"
 
 [node name="Starters" type="CanvasLayer" parent="." unique_id=980329663]
 visible = false
-
-[node name="StartersBackground" type="TextureRect" parent="Starters" unique_id=526977873]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_j8nc0")
+rotation = 0.1605703
+transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
 
 [node name="StatersLabel" type="Label" parent="Starters" unique_id=2125324910]
 anchors_preset = -1
@@ -100,53 +102,47 @@ anchor_left = 0.5
 anchor_top = 0.25
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.5
-offset_top = -11.5
-offset_right = 28.5
-offset_bottom = 11.5
+offset_left = -319.95502
+offset_top = -133.57623
+offset_right = -17.955017
+offset_bottom = -360.57623
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_wjrc5")
+theme_override_font_sizes/font_size = 42
 text = "Choose the starter"
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="HBoxContainer" parent="Starters" unique_id=312284654]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -575.0
-offset_top = -30.0
-offset_right = 582.0
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 16
-alignment = 1
-
-[node name="Starter1" type="Button" parent="Starters/VBoxContainer" unique_id=1880053088]
+[node name="Starter1" type="Button" parent="Starters" unique_id=1880053088]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 672.2584
+offset_top = 210.22276
+offset_right = 891.2584
+offset_bottom = 270.22278
 text = "Flakoc"
 script = ExtResource("3_ds12f")
 duration = 300
 amount = 3
 
-[node name="Starter2" type="Button" parent="Starters/VBoxContainer" unique_id=1345246647]
+[node name="Starter2" type="Button" parent="Starters" unique_id=1345246647]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 670.93713
+offset_top = 283.375
+offset_right = 889.93713
+offset_bottom = 343.375
 text = "Mochleb"
 script = ExtResource("3_ds12f")
 duration = 300
 stat = 1
 amount = 3
 
-[node name="Starter3" type="Button" parent="Starters/VBoxContainer" unique_id=214179695]
+[node name="Starter3" type="Button" parent="Starters" unique_id=214179695]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 671.59015
+offset_top = 356.2075
+offset_right = 890.59015
+offset_bottom = 416.2075
 text = "Ramino"
 script = ExtResource("3_ds12f")
 duration = 300
@@ -155,14 +151,8 @@ amount = 3
 
 [node name="MainCourse" type="CanvasLayer" parent="." unique_id=2090687617]
 visible = false
-
-[node name="MainCourseBagground" type="TextureRect" parent="MainCourse" unique_id=339660427]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_j8nc0")
+rotation = 0.1605703
+transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
 
 [node name="MainCourseLabel" type="Label" parent="MainCourse" unique_id=2120430184]
 anchors_preset = -1
@@ -170,53 +160,47 @@ anchor_left = 0.5
 anchor_top = 0.25
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.5
-offset_top = -11.5
-offset_right = 28.5
-offset_bottom = 11.5
+offset_left = -325.16095
+offset_top = -253.2838
+offset_right = 47.83905
+offset_bottom = -230.28378
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_wjrc5")
+theme_override_font_sizes/font_size = 34
 text = "Choose the main course"
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="HBoxContainer" parent="MainCourse" unique_id=21352588]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -575.0
-offset_top = -30.0
-offset_right = 582.0
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 16
-alignment = 1
-
-[node name="Main1" type="Button" parent="MainCourse/VBoxContainer" unique_id=1470415809]
+[node name="Main1" type="Button" parent="MainCourse" unique_id=1470415809]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 670.60394
+offset_top = 212.51678
+offset_right = 889.60394
+offset_bottom = 272.51678
 text = "NutriMix CompleteShake"
 script = ExtResource("3_ds12f")
 duration = 300
 amount = 5
 
-[node name="Main2" type="Button" parent="MainCourse/VBoxContainer" unique_id=1336033789]
+[node name="Main2" type="Button" parent="MainCourse" unique_id=1336033789]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 668.74725
+offset_top = 294.87305
+offset_right = 887.74725
+offset_bottom = 354.87305
 text = "Barszcz"
 script = ExtResource("3_ds12f")
 duration = 300
 stat = 1
 amount = 5
 
-[node name="Main3" type="Button" parent="MainCourse/VBoxContainer" unique_id=807808357]
+[node name="Main3" type="Button" parent="MainCourse" unique_id=807808357]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 671.3188
+offset_top = 379.5512
+offset_right = 890.3188
+offset_bottom = 439.5512
 text = "Insekczyk"
 script = ExtResource("3_ds12f")
 duration = 300
@@ -225,14 +209,8 @@ amount = 5
 
 [node name="Dessert" type="CanvasLayer" parent="." unique_id=887218823]
 visible = false
-
-[node name="DessertBackground" type="TextureRect" parent="Dessert" unique_id=454850242]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_j8nc0")
+rotation = 0.1605703
+transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
 
 [node name="DessertText" type="Label" parent="Dessert" unique_id=1428986075]
 anchors_preset = -1
@@ -240,53 +218,47 @@ anchor_left = 0.5
 anchor_top = 0.25
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.5
-offset_top = -11.5
-offset_right = 28.5
-offset_bottom = 11.5
+offset_left = -319.9829
+offset_top = -127.49353
+offset_right = -17.98291
+offset_bottom = -354.49353
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_wjrc5")
+theme_override_font_sizes/font_size = 42
 text = "Choose the dessert"
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="HBoxContainer" parent="Dessert" unique_id=571511732]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -575.0
-offset_top = -30.0
-offset_right = 582.0
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 16
-alignment = 1
-
-[node name="Dessert1" type="Button" parent="Dessert/VBoxContainer" unique_id=359589568]
+[node name="Dessert1" type="Button" parent="Dessert" unique_id=359589568]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 676.33905
+offset_top = 216.65305
+offset_right = 895.33905
+offset_bottom = 276.65305
 text = "Ruban de Ganymede"
 script = ExtResource("3_ds12f")
 duration = 300
 amount = 1
 
-[node name="Dessert2" type="Button" parent="Dessert/VBoxContainer" unique_id=426662796]
+[node name="Dessert2" type="Button" parent="Dessert" unique_id=426662796]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 676.0049
+offset_top = 289.64545
+offset_right = 895.0049
+offset_bottom = 349.64545
 text = "Gelatino"
 script = ExtResource("3_ds12f")
 duration = 300
 stat = 1
 amount = 1
 
-[node name="Dessert3" type="Button" parent="Dessert/VBoxContainer" unique_id=456426780]
+[node name="Dessert3" type="Button" parent="Dessert" unique_id=456426780]
 custom_minimum_size = Vector2(219, 60)
-layout_mode = 2
+offset_left = 676.97754
+offset_top = 364.4522
+offset_right = 895.97754
+offset_bottom = 424.4522
 text = "Vacuum dried mango"
 script = ExtResource("3_ds12f")
 duration = 300
@@ -334,8 +306,8 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Leave"
 
-[connection signal="button_up" from="MainView/VBoxContainer/1Course" to="." method="_on_course_button_up" binds= [1]]
-[connection signal="button_up" from="MainView/VBoxContainer/2Courses" to="." method="_on_course_button_up" binds= [2]]
-[connection signal="button_up" from="MainView/VBoxContainer/3Courses" to="." method="_on_course_button_up" binds= [3]]
+[connection signal="button_up" from="MainView/1Course" to="." method="_on_course_button_up" binds= [1]]
+[connection signal="button_up" from="MainView/2Courses" to="." method="_on_course_button_up" binds= [2]]
+[connection signal="button_up" from="MainView/3Courses" to="." method="_on_course_button_up" binds= [3]]
 [connection signal="pressed" from="MainView/LeaveButton" to="." method="_on_leave_button_pressed"]
 [connection signal="pressed" from="LeaveScene/LeaveButton" to="." method="_on_leave_button_pressed"]
