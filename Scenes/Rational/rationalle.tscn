@@ -130,20 +130,28 @@ alignment = 1
 [node name="Starter1" type="Button" parent="Starters/VBoxContainer" unique_id=1880053088]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 1"
+text = "Flakoc"
 script = ExtResource("3_ds12f")
+duration = 300
+amount = 3
 
 [node name="Starter2" type="Button" parent="Starters/VBoxContainer" unique_id=1345246647]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 2"
+text = "Mochleb"
 script = ExtResource("3_ds12f")
+duration = 300
+stat = 1
+amount = 3
 
 [node name="Starter3" type="Button" parent="Starters/VBoxContainer" unique_id=214179695]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 3"
+text = "Ramino"
 script = ExtResource("3_ds12f")
+duration = 300
+stat = 2
+amount = 3
 
 [node name="MainCourse" type="CanvasLayer" parent="." unique_id=2090687617]
 visible = false
@@ -192,23 +200,28 @@ alignment = 1
 [node name="Main1" type="Button" parent="MainCourse/VBoxContainer" unique_id=1470415809]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 1"
+text = "NutriMix CompleteShake"
 script = ExtResource("3_ds12f")
-duration = 30
-stat = 1
-amount = 10
+duration = 300
+amount = 5
 
 [node name="Main2" type="Button" parent="MainCourse/VBoxContainer" unique_id=1336033789]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 2"
+text = "Barszcz"
 script = ExtResource("3_ds12f")
+duration = 300
+stat = 1
+amount = 5
 
 [node name="Main3" type="Button" parent="MainCourse/VBoxContainer" unique_id=807808357]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 3"
+text = "Insekczyk"
 script = ExtResource("3_ds12f")
+duration = 300
+stat = 2
+amount = 5
 
 [node name="Dessert" type="CanvasLayer" parent="." unique_id=887218823]
 visible = false
@@ -257,20 +270,28 @@ alignment = 1
 [node name="Dessert1" type="Button" parent="Dessert/VBoxContainer" unique_id=359589568]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 1"
+text = "Ruban de Ganymede"
 script = ExtResource("3_ds12f")
+duration = 300
+amount = 1
 
 [node name="Dessert2" type="Button" parent="Dessert/VBoxContainer" unique_id=426662796]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 2"
+text = "Gelatino"
 script = ExtResource("3_ds12f")
+duration = 300
+stat = 1
+amount = 1
 
 [node name="Dessert3" type="Button" parent="Dessert/VBoxContainer" unique_id=456426780]
 custom_minimum_size = Vector2(219, 60)
 layout_mode = 2
-text = "Insert Name 3"
+text = "Vacuum dried mango"
 script = ExtResource("3_ds12f")
+duration = 300
+stat = 2
+amount = 1
 
 [node name="LeaveScene" type="CanvasLayer" parent="." unique_id=1835841461]
 visible = false

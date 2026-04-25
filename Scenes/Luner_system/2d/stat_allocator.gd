@@ -70,7 +70,7 @@ func draw_bg_pentagons():
 # update
 
 func refresh_polygon():
-	stat_points_label.text = "Unused stat points: " + str(ShipStats.get_unused_stat_allocation_points())
+	stat_points_label.text = "Unallocated POJ: " + str(ShipStats.get_unused_stat_allocation_points())
 	update_buttons()
 	draw_stat_web()
 	changeStat.emit()
