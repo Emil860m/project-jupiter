@@ -7,6 +7,10 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 @export var repair_time: int
 @export var refuel_time: int
 @export var fuel_upgrade_time: int
+@export var poj_upgrade_time: int
+
+@export var fuel_upgrade_val: int
+@export var poj_upgrade_val: int
 
 @onready var timer: Timer = $Timer
 
@@ -16,9 +20,19 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 @onready var main_menu: CanvasLayer = $MainMenu
 @onready var upgrade_menu: CanvasLayer = $UpgradeMenu
 
+@onready var fuel_upgrade_button = $UpgradeMenu/FuelUpgrade
+@onready var poj_upgrade_button = $UpgradeMenu/StatAllocationUpgrade
+
+
 func _ready() -> void:
 	main_label.text = ''
 	upgrade_label.text = ''
+	
+	check_upgrades()
+
+func check_upgrades():
+	poj_upgrade_button.disabled = Flags.get_flag("HasPOJUpgrade1")
+	fuel_upgrade_button.disabled = Flags.get_flag("HasFuelUpgrade1")
 
 func _on_leave_button_up() -> void:
 	SceneController.goto_scene(scene_to_load)
@@ -54,7 +68,18 @@ func _on_back_button_button_up() -> void:
 
 
 func _on_fuel_upgrade_button_up() -> void:
+	ShipStats.upgrade_fuel_cap(fuel_upgrade_val)
+	Flags.set_flag("HasFuelUpgrade1")
 	upgrade_label.text = 'Fuel capacity increased'
 	timer.start(1.5)
-	ShipStats.upgrade_fuel_cap()
-	$UpgradeMenu/FuelUpgrade.disabled = true #TODO FIX THAT PLS - add a cap to fuel upgradee
+	
+	check_upgrades()
+
+
+func _on_stat_allocation_upgrade_button_up() -> void:
+	ShipStats.upgrade_poj(poj_upgrade_val)
+	Flags.set_flag("HasPOJUpgrade1")
+	upgrade_label.text = 'POJ increased'
+	timer.start(1.5)
+	
+	check_upgrades()
