@@ -21,4 +21,12 @@ offset_right = 1057.0
 offset_bottom = 618.0
 text = "Return to the main menu"
 
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=1771231587]
+offset_left = 910.0
+offset_top = 646.0
+offset_right = 1003.0
+offset_bottom = 677.0
+text = "Quit game!"
+
 [connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_mainmenu_button_up"]
+[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_quit_button_up"]
