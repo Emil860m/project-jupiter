@@ -8,6 +8,18 @@ test event
 -> option B
 	you chose option B
 ===
+title: event_tutorial
+color: purple
+position: 0, 0
+---
+The onset of nostalgia is cut short as you notice the fuel systems got damaged. It seems the jovian system hasn't changed.
+-> Run appropriate protocols
+	The ship casually tries to fix itself to no avail. Jupiter is not kind to those who stand alone.
+	<<if resolve_outcome(10,10,100)>><<endif>>
+-> Call the tow truck
+	You soak in a pool of ambivalence and nostalgia while waiting for the tow truck. The university starts to feel like a hazy dream in your jovian reality.
+	<<if resolve_outcome(0,10,100)>><<endif>>
+===
 title: event_spaceDebris
 color: purple
 position: 0, 0

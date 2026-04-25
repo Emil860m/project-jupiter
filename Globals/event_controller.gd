@@ -12,6 +12,10 @@ func _ready() -> void:
 func fetch_event(start_time, end_time, start_pos, end_pos) -> String:
 	# return "event_longExposure"
 	
+	if not Flags.get_flag("TutorialEventDone"):
+		Flags.set_flag("TutorialEventDone")
+		return "event_tutorial"
+	
 	for e in events:
 		if e.is_applicable_to_journey(start_time, end_time, start_pos, end_pos):
 			return e.eventID
