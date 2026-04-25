@@ -38,7 +38,7 @@ z_index = -4
 position = Vector2(972, 544.99994)
 scale = Vector2(2.1391306, 1.6612183)
 sprite_frames = SubResource("SpriteFrames_sk6rr")
-frame_progress = 0.81357896
+frame_progress = 0.054464173
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("1_juf7l")]
 
