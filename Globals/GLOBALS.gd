@@ -1,7 +1,12 @@
 extends Node
 
+var interacting = false
 var interacted_set = {}
+
 var current_timestep = 0
+var minutes_per_timestep: int = 3
+var minutes_before_timestep_zero: int = 460 # 7:40
+
 @export var moon_movement_per_timestep: float = 20.0/144.0
 var max_travel_distance = 360
 var current_moon: String = "OutPost" # todo: set default moon
@@ -21,7 +26,8 @@ func add_to_interact_set(item) -> void:
 func has_interacted(item) -> bool:
 	return interacted_set.has(item)
 
-
+func set_interacting_false():
+	interacting = false
 
 # Chapter management
 var current_chapter: int = 1
@@ -35,3 +41,14 @@ func get_current_chapter_title():
 
 func advance_chapter():
 	current_chapter += 1
+	
+	
+func convert_timesteps_to_time(timestep: int):
+	var minutes = (timestep * minutes_per_timestep) + minutes_before_timestep_zero
+	var hours = minutes / 60
+	minutes = minutes % 60
+	return [hours, minutes]
+	
+func convert_timesteps_to_string(timestep: int):
+	var timeArr = convert_timesteps_to_time(timestep)
+	return str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])

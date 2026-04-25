@@ -166,7 +166,7 @@ offset_right = -1240.0
 offset_bottom = 316.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
-text = "Current ship technical status [n / 10]:"
+text = "Current ship systems status [n / 10]:"
 
 [node name="Label7" type="Label" parent="UiElements" unique_id=445109824]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
@@ -318,5 +318,29 @@ text = "
 icon = ExtResource("16_ovvku")
 icon_alignment = 1
 
+[node name="statPointPopup" type="Sprite2D" parent="UiElements" unique_id=1774735781]
+visible = false
+z_index = 1
+position = Vector2(-955.00006, -58.000004)
+scale = Vector2(0.6102941, 0.81368816)
+texture = ExtResource("11_f6fv6")
+
+[node name="Button" type="Button" parent="UiElements/statPointPopup" unique_id=1222347272]
+offset_left = -91.75894
+offset_top = 49.158886
+offset_right = 99.24106
+offset_bottom = 100.15889
+icon = ExtResource("15_u6i4c")
+
+[node name="Label" type="Label" parent="UiElements/statPointPopup" unique_id=139011095]
+offset_left = -206.45775
+offset_top = -88.48599
+offset_right = 214.65071
+offset_bottom = -33.182228
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 31
+text = "You have unallocated stat points"
+
 [connection signal="button_up" from="UiElements/Button" to="." method="_on_travel_button_up"]
 [connection signal="button_up" from="UiElements/Button2" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="UiElements/statPointPopup/Button" to="." method="_on_statpointPopup_button_up"]
