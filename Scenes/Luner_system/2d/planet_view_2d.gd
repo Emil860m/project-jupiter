@@ -81,6 +81,7 @@ func _on_travel_button_up() -> void:
 		ShipStats.spend_fuel(selected.base_travel_time)
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
+			SoundController.set_in_flight(true)
 			var event = event_scene.instantiate()
 			event.set_completion_callback(_on_event_completed)
 			add_child(event)
