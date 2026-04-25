@@ -84,9 +84,7 @@ func _on_travel_button_up() -> void:
 			statPointPopup.visible = true
 			return
 		Globals.increment_timestep(selected.estimated_travel_time)
-		var did_travel = ShipStats.spend_fuel(selected.base_travel_time)
-		if !did_travel:
-			return
+		ShipStats.spend_fuel(selected.base_travel_time)
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
 			SoundController.set_in_flight(true)
@@ -108,6 +106,7 @@ func _on_exit_button_up() -> void:
 		SceneController.goto_scene(current_location.travelScenePath)
 
 func _on_event_completed() -> void:
+	Globals.interacting = false
 	SceneController.goto_scene(selected.travelScenePath)
 
 

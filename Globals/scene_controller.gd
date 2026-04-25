@@ -1,5 +1,7 @@
 extends Node
 
+var should_tow_truck = false
+
 func get_current_scene_path() -> String:
 	# Always return a valid path; updates cache when possible
 	var s = get_tree().current_scene
@@ -7,7 +9,7 @@ func get_current_scene_path() -> String:
 		return s.scene_file_path
 	return ""
 
-func get_tow_trucked():
+func _get_tow_trucked():
 	goto_scene("res://Scenes/Luner_system/2d/tow_truck.tscn")
 
 func reload_scene():
@@ -15,7 +17,11 @@ func reload_scene():
 	goto_scene(get_current_scene_path())
 
 func goto_scene(path):
-	_deferred_goto_scene.call_deferred(path)
+	if should_tow_truck:
+		should_tow_truck = false
+		_get_tow_trucked()
+	else:
+		_deferred_goto_scene.call_deferred(path)
 	
 
 
