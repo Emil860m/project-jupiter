@@ -166,7 +166,7 @@ offset_right = -1240.0
 offset_bottom = 316.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
-text = "Current ship technical status [n / 10]:"
+text = "Current ship systems status [n / 10]:"
 
 [node name="Label7" type="Label" parent="UiElements" unique_id=445109824]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
