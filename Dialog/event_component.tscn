@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://dxomiofkc48vm"]
+
+[ext_resource type="Script" uid="uid://bgbv5gpqv2onn" path="res://Dialog/dialog_component.gd" id="1_byhhv"]
+[ext_resource type="PackedScene" uid="uid://b3g1f3g46nex4" path="res://Dialog/dialogRunner.tscn" id="2_0idnk"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="3_0idnk"]
+[ext_resource type="Script" uid="uid://cged8u182768u" path="res://addons/yarn_spinner/ui/line_presenter.gd" id="3_m2q8c"]
+[ext_resource type="Texture2D" uid="uid://ctba34acgaowa" path="res://Textures/MapUI/Rectangle_data.png" id="4_r7rlm"]
+[ext_resource type="Script" uid="uid://cogqy630mjgv7" path="res://addons/yarn_spinner/ui/options_presenter.gd" id="5_5nbbv"]
+[ext_resource type="PackedScene" uid="uid://byt7aunaouofm" path="res://Dialog/optionsButton.tscn" id="6_ugb46"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0idnk"]
+texture = ExtResource("4_r7rlm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2q8c"]
+texture = ExtResource("4_r7rlm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7rlm"]
+texture = ExtResource("4_r7rlm")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_byhhv"]
+content_margin_left = 40.0
+content_margin_top = 25.0
+
+[sub_resource type="Theme" id="Theme_0idnk"]
+Button/colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 1)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("3_0idnk")
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxTexture_0idnk")
+Button/styles/normal = SubResource("StyleBoxTexture_m2q8c")
+Button/styles/pressed = SubResource("StyleBoxTexture_r7rlm")
+RichTextLabel/colors/default_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/selection_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 1)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/paragraph_separation = 0
+RichTextLabel/constants/shadow_offset_x = 0
+RichTextLabel/constants/shadow_offset_y = 0
+RichTextLabel/constants/shadow_outline_size = 0
+RichTextLabel/constants/strikethrough_alpha = 0
+RichTextLabel/constants/table_h_separation = 0
+RichTextLabel/constants/table_v_separation = 0
+RichTextLabel/constants/text_highlight_h_padding = 0
+RichTextLabel/constants/text_highlight_v_padding = 0
+RichTextLabel/constants/underline_alpha = 0
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/bold_italics_font_size = 16
+RichTextLabel/font_sizes/italics_font_size = 16
+RichTextLabel/font_sizes/mono_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 50
+RichTextLabel/fonts/bold_font = null
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = ExtResource("3_0idnk")
+RichTextLabel/icons/horizontal_rule = null
+RichTextLabel/styles/focus = null
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_byhhv")
+
+[node name="EventComponent" type="Node" unique_id=1464193511]
+script = ExtResource("1_byhhv")
+
+[node name="DialogRunner" parent="." unique_id=189222724 instance=ExtResource("2_0idnk")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=780186044]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1621108285]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0idnk")
+
+[node name="LinePresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1812540107 node_paths=PackedStringArray("text_label", "character_label", "continue_indicator")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -710.0
+offset_top = -131.5
+offset_right = 710.0
+offset_bottom = 131.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_m2q8c")
+text_label = NodePath("VBoxContainer/TextLabel")
+character_label = NodePath("VBoxContainer/CharacterLabel")
+continue_indicator = NodePath("VBoxContainer/ContinueIndicator")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/LinePresenter" unique_id=825465775]
+layout_mode = 2
+texture = ExtResource("4_r7rlm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/LinePresenter" unique_id=822340355]
+layout_mode = 2
+
+[node name="CharacterLabel" type="Label" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=462520019]
+visible = false
+layout_mode = 2
+text = "Char label"
+
+[node name="TextLabel" type="RichTextLabel" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=1716029707]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Textbox"
+
+[node name="ContinueIndicator" type="Label" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=702772141]
+visible = false
+layout_mode = 2
+text = "Click to continue"
+
+[node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 156.0
+offset_right = 712.0
+offset_bottom = 381.0
+script = ExtResource("5_5nbbv")
+option_button_scene = ExtResource("6_ugb46")
+
+[node name="OptionsContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPresenter" unique_id=1030912164]
+layout_mode = 2
