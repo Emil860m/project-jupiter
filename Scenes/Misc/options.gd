@@ -34,4 +34,6 @@ func _on_sfx_slider_value_changed(value: float) -> void:
 
 
 func _on_exit_button_pressed() -> void:
+	queue_free()
+	return
 	SceneController.goto_scene("res://Scenes/MainMenu.tscn")

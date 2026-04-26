@@ -14,7 +14,14 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_button_up() -> void:
+
+func _on_resume_button_button_up() -> void:
 	get_tree().paused = false
 	queue_free()
+
+
+func _on_option_button_button_up() -> void:
+	var option_scene = load("res://Scenes/Misc/options.tscn")
+	var option_scene_instance = option_scene.instantiate()
+	add_child(option_scene_instance)
 	pass # Replace with function body.
