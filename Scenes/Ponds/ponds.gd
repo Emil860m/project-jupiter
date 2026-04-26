@@ -15,10 +15,14 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 
 @onready var main_menu: CanvasLayer = $MainMenu
 @onready var upgrade_menu: CanvasLayer = $UpgradeMenu
+@onready var _animated_sprite_1 = $Overlay/BCG1
+@onready var _animated_sprite_2 = $Overlay/BCG2
 
 func _ready() -> void:
 	main_label.text = ''
 	upgrade_label.text = ''
+	_animated_sprite_1.play("default")
+	_animated_sprite_2.play("default")
 
 func _on_leave_button_up() -> void:
 	SceneController.goto_scene(scene_to_load)

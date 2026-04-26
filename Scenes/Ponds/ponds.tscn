@@ -1,8 +1,65 @@
 [gd_scene format=3 uid="uid://dj8noka8ethct"]
 
 [ext_resource type="Script" uid="uid://c3gpano03c8p1" path="res://Scenes/Ponds/ponds.gd" id="1_4cuid"]
-[ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="1_c7y4b"]
+[ext_resource type="Texture2D" uid="uid://dsg2ef34uguap" path="res://Textures/Pons/PonsConsoleOverlay.png" id="2_p04ur"]
 [ext_resource type="Texture2D" uid="uid://c0f3cw25ru6of" path="res://Textures/Dark/texture_07.png" id="3_8l43j"]
+[ext_resource type="Texture2D" uid="uid://d2kegwgu33l33" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_1.png" id="3_qc2re"]
+[ext_resource type="Texture2D" uid="uid://bvlpaljaf8vsc" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_2.png" id="4_jtup0"]
+[ext_resource type="Texture2D" uid="uid://b84277yaj4l61" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_3.png" id="5_5e7q4"]
+[ext_resource type="Texture2D" uid="uid://b0qqxb4p8x64a" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_4.png" id="6_d0o6i"]
+[ext_resource type="Texture2D" uid="uid://cb0dw3foaqnwa" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_5.png" id="7_k6kr1"]
+[ext_resource type="Texture2D" uid="uid://dgj1v3ws0ebgi" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_6.png" id="8_n6evu"]
+[ext_resource type="Texture2D" uid="uid://do3fm7nfbtri7" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_7.png" id="9_cl565"]
+[ext_resource type="Texture2D" uid="uid://bk8juxc8pif0x" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_8.png" id="10_ffaxo"]
+[ext_resource type="Texture2D" uid="uid://b0uaj8oi0y7cd" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_9.png" id="11_k6kr1"]
+[ext_resource type="Texture2D" uid="uid://ltt81vwymc6" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_10.png" id="12_n6evu"]
+[ext_resource type="Texture2D" uid="uid://ckxqqtda0hj64" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_11.png" id="13_cl565"]
+[ext_resource type="Texture2D" uid="uid://dduxxgcb0p8uq" path="res://Textures/Pons/GreenBackgroundAnim/ponsAnimBCG_12.png" id="14_ffaxo"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="15_n6evu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kbvy3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qc2re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jtup0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5e7q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d0o6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k6kr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n6evu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cl565")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ffaxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_k6kr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n6evu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cl565")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ffaxo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
 
 [node name="Ponds" type="Node2D" unique_id=673085570]
 script = ExtResource("1_4cuid")
@@ -11,70 +68,114 @@ repair_time = 10
 refuel_time = 10
 fuel_upgrade_time = 10
 
-[node name="Timer" type="Timer" parent="." unique_id=358933961]
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=104109974]
 
-[node name="MainMenu" type="CanvasLayer" parent="." unique_id=372325345]
-
-[node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=2013609792]
+[node name="TextureRect" type="TextureRect" parent="Overlay" unique_id=2013609792]
 z_index = -1358
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_c7y4b")
+texture = ExtResource("2_p04ur")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="BCG1" type="AnimatedSprite2D" parent="Overlay" unique_id=1309490517]
+z_index = -2000
+position = Vector2(550, 532)
+scale = Vector2(4.4964695, 4.49647)
+sprite_frames = SubResource("SpriteFrames_kbvy3")
+frame_progress = 0.39437044
+
+[node name="BCG2" type="AnimatedSprite2D" parent="Overlay" unique_id=1843419214]
+z_index = -2000
+position = Vector2(1367, 423)
+rotation = -3.1415927
+scale = Vector2(4.1173854, 4.0219736)
+sprite_frames = SubResource("SpriteFrames_kbvy3")
+frame_progress = 0.81711775
+
+[node name="Timer" type="Timer" parent="." unique_id=358933961]
+
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=372325345]
+
 [node name="RepairButton" type="Button" parent="MainMenu" unique_id=41956894]
-offset_left = 1286.0
-offset_top = 364.0
-offset_right = 1499.0
-offset_bottom = 444.0
+offset_left = 274.0
+offset_top = 534.0
+offset_right = 501.0
+offset_bottom = 617.0
 text = "Repair"
-metadata/_edit_use_anchors_ = true
+expand_icon = true
 
 [node name="UpgradeButton" type="Button" parent="MainMenu" unique_id=172257029]
-offset_left = 518.0
-offset_top = 257.0
-offset_right = 731.0
-offset_bottom = 337.0
+offset_left = 1252.0
+offset_top = 193.0
+offset_right = 1465.0
+offset_bottom = 273.0
 text = "Upgrades"
 metadata/_edit_use_anchors_ = true
 
 [node name="RefuelButton" type="Button" parent="MainMenu" unique_id=4745996]
-offset_left = 787.0
-offset_top = 690.0
-offset_right = 1000.0
-offset_bottom = 770.0
+offset_left = 271.0
+offset_top = 636.0
+offset_right = 484.0
+offset_bottom = 716.0
 text = "Refuel"
-metadata/_edit_use_anchors_ = true
 
 [node name="Leave" type="Button" parent="MainMenu" unique_id=618265005]
-offset_left = 101.0
-offset_top = 804.0
-offset_right = 314.0
-offset_bottom = 884.0
-text = "Leave"
+anchors_preset = -1
+anchor_left = -0.023958333
+anchor_top = -0.026851851
+anchor_right = 0.0125
+anchor_bottom = 0.035185184
+offset_left = 1073.0
+offset_top = 840.0
+offset_right = 1286.0
+offset_bottom = 920.0
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="MainLabel" type="Label" parent="MainMenu" unique_id=74010041]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+modulate = Color(0.25517768, 0.6123109, 0.38946944, 1)
+anchors_preset = -1
+anchor_left = 0.46875
+anchor_top = 1.0814815
+anchor_right = 0.53125
 anchor_bottom = 1.0
-offset_left = -261.5
-offset_top = -136.0
-offset_right = 261.5
+offset_left = -673.0
+offset_top = -309.0
+offset_right = -150.0
+offset_bottom = -173.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 44
 text = "Some Text Now we try some long text"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MainMenu" unique_id=700398914]
+modulate = Color(0.7843548, 0.595741, 0.168549, 1)
+offset_left = 257.0
+offset_top = 191.0
+offset_right = 852.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 40
+text = "WELCOME TO THE PONS SELF SERVICE SYSTEM"
+
+[node name="Label2" type="Label" parent="MainMenu" unique_id=549509659]
+modulate = Color(0.25490198, 0.6117647, 0.3882353, 1)
+offset_left = 259.0
+offset_top = 400.0
+offset_right = 854.0
+offset_bottom = 444.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 35
+text = "Choose required service:"
 
 [node name="UpgradeMenu" type="CanvasLayer" parent="." unique_id=1415186818]
 visible = false
