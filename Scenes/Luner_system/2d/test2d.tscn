@@ -149,6 +149,6 @@ self_modulate = Color(0.795152, 1, 0.6600027, 1)
 position = Vector2(-2.7187715, -4)
 scale = Vector2(10.133152, 4.8183236)
 sprite_frames = SubResource("SpriteFrames_gr3x1")
-frame_progress = 0.99408543
+frame_progress = 0.79267645
 
 [connection signal="changeStat" from="StatAllocator" to="PlanetView2d" method="_on_stat_allocator_change_stat"]
