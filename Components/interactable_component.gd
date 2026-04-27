@@ -3,6 +3,16 @@ extends Node
 #@export var interacted = false
 @export var time_pass = 5
 @export var object_id: String
+@export var meshs: Array[MeshInstance3D]
+@export var outline_shader: ShaderMaterial
+
+func show_shader():
+	for mesh in meshs:
+		mesh.material_overlay = outline_shader
+
+func hide_shader():
+	for mesh in meshs:
+		mesh.material_overlay = null
 
 var interact: Callable = func ():
 	pass
