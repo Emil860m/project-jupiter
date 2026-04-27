@@ -58,7 +58,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 15.0
+"speed": 20.0
 }]
 
 [node name="Ponds" type="Node2D" unique_id=673085570]
@@ -86,7 +86,7 @@ z_index = -2000
 position = Vector2(550, 532)
 scale = Vector2(4.4964695, 4.49647)
 sprite_frames = SubResource("SpriteFrames_kbvy3")
-frame_progress = 0.39437044
+frame_progress = 0.25350687
 
 [node name="BCG2" type="AnimatedSprite2D" parent="Overlay" unique_id=1843419214]
 z_index = -2000
@@ -94,17 +94,17 @@ position = Vector2(1367, 423)
 rotation = -3.1415927
 scale = Vector2(4.1173854, 4.0219736)
 sprite_frames = SubResource("SpriteFrames_kbvy3")
-frame_progress = 0.81711775
+frame_progress = 0.67624855
 
 [node name="Timer" type="Timer" parent="." unique_id=358933961]
 
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=372325345]
 
 [node name="RepairButton" type="Button" parent="MainMenu" unique_id=41956894]
-offset_left = 274.0
-offset_top = 534.0
-offset_right = 501.0
-offset_bottom = 617.0
+offset_left = 273.0
+offset_top = 669.0
+offset_right = 500.0
+offset_bottom = 752.0
 text = "Repair"
 expand_icon = true
 
@@ -117,10 +117,10 @@ text = "Upgrades"
 metadata/_edit_use_anchors_ = true
 
 [node name="RefuelButton" type="Button" parent="MainMenu" unique_id=4745996]
-offset_left = 271.0
-offset_top = 636.0
-offset_right = 484.0
-offset_bottom = 716.0
+offset_left = 270.0
+offset_top = 771.0
+offset_right = 483.0
+offset_bottom = 851.0
 text = "Refuel"
 
 [node name="Leave" type="Button" parent="MainMenu" unique_id=618265005]
@@ -169,13 +169,35 @@ text = "WELCOME TO THE PONS SELF SERVICE SYSTEM"
 
 [node name="Label2" type="Label" parent="MainMenu" unique_id=549509659]
 modulate = Color(0.25490198, 0.6117647, 0.3882353, 1)
-offset_left = 259.0
-offset_top = 400.0
-offset_right = 854.0
-offset_bottom = 444.0
+offset_left = 255.0
+offset_top = 614.0
+offset_right = 850.0
+offset_bottom = 658.0
 theme_override_fonts/font = ExtResource("15_n6evu")
 theme_override_font_sizes/font_size = 35
 text = "Choose required service:"
+
+[node name="Label3" type="Label" parent="MainMenu" unique_id=1110654371]
+modulate = Color(0.25490198, 0.6117647, 0.3882353, 1)
+offset_left = 256.0
+offset_top = 231.0
+offset_right = 851.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 30
+text = "This is a self service console. PONS services are avalible to all citizens of the Juvian Colonies."
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="MainMenu" unique_id=1622187815]
+modulate = Color(0.25490198, 0.6117647, 0.3882353, 1)
+offset_left = 256.0
+offset_top = 329.0
+offset_right = 851.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 22
+text = "NOTE TO VISITORS: We do not charge for our services but we kindly ask you to not overuse our facility. If you wish to donate please contact the shift officer in the pilon B."
+autowrap_mode = 3
 
 [node name="UpgradeMenu" type="CanvasLayer" parent="." unique_id=1415186818]
 visible = false
