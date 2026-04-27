@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var bg: ColorRect = $CanvasLayer/BG
 @onready var center_container: CenterContainer = $CanvasLayer/CenterContainer
 @onready var slider_container: VBoxContainer = $CanvasLayer/CenterContainer/VBoxContainer
 
@@ -12,7 +11,6 @@ extends Node2D
 var max_val: float = 10
 
 func _ready():
-	bg.size = get_viewport_rect().size
 	center_container.custom_minimum_size = get_viewport_rect().size
 	slider_container.custom_minimum_size = get_viewport_rect().size / 4
 	
