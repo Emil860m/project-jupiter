@@ -105,6 +105,11 @@ func _on_exit_button_up() -> void:
 		SoundController.play_mid_boop()
 		SceneController.goto_scene(current_location.travelScenePath)
 
+func _on_tow_truck_button_up() -> void:
+	if not Globals.current_moon == "OutPost":
+		SoundController.play_mid_boop()
+		SceneController.goto_scene("res://Scenes/Luner_system/2d/tow_truck.tscn")
+
 func _on_event_completed() -> void:
 	Globals.interacting = false
 	SceneController.goto_scene(selected.travelScenePath)

@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var backdrop := $Backdrop
-@onready var dialog_component := $DialogComponent
-@onready var dialog_runner := $DialogComponent/DialogRunner
+@onready var dialog_component := $EventComponent
+@onready var dialog_runner: YarnDialogueRunner = dialog_component.dialogue_runner
 
 var callback: Callable
 

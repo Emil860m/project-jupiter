@@ -66,7 +66,10 @@ script = ExtResource("1_4cuid")
 scene_to_load = "res://Scenes/Luner_system/2d/test2d.tscn"
 repair_time = 10
 refuel_time = 10
-fuel_upgrade_time = 10
+fuel_upgrade_time = 20
+poj_upgrade_time = 20
+fuel_upgrade_val = 50
+poj_upgrade_val = 2
 
 [node name="Overlay" type="CanvasLayer" parent="." unique_id=104109974]
 
@@ -224,6 +227,7 @@ offset_left = 612.0
 offset_top = 352.0
 offset_right = 825.0
 offset_bottom = 432.0
+disabled = true
 text = "Increase fuel capacity
 "
 
@@ -260,3 +264,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="button_up" from="MainMenu/Leave" to="." method="_on_leave_button_up"]
 [connection signal="button_up" from="UpgradeMenu/BackButton" to="." method="_on_back_button_button_up"]
 [connection signal="button_up" from="UpgradeMenu/FuelUpgrade" to="." method="_on_fuel_upgrade_button_up"]
+[connection signal="button_up" from="UpgradeMenu/StatAllocationUpgrade" to="." method="_on_stat_allocation_upgrade_button_up"]

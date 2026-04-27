@@ -69,10 +69,12 @@ func refuel():
 func repair():
 	damage = 0
 
-func upgrade_fuel_cap():
-	if !has_upgraded_fuel_cap:
-		fuel_cap = fuel_cap * 2
-		refuel()
+func upgrade_fuel_cap(added_fuel: int):
+	fuel_cap += added_fuel
+	refuel()
+
+func upgrade_poj(added_poj: int):
+	_unused_stat_allocation_points += added_poj
 
 ## Event Stuff
 var rng = RandomNumberGenerator.new()
