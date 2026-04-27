@@ -8,6 +8,9 @@
 [ext_resource type="Script" uid="uid://cogqy630mjgv7" path="res://addons/yarn_spinner/ui/options_presenter.gd" id="5_5nbbv"]
 [ext_resource type="PackedScene" uid="uid://byt7aunaouofm" path="res://Dialog/optionsButton.tscn" id="6_ugb46"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5nbbv"]
+texture = ExtResource("4_r7rlm")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0idnk"]
 texture = ExtResource("4_r7rlm")
 
@@ -28,11 +31,11 @@ content_margin_top = 25.0
 [sub_resource type="Theme" id="Theme_0idnk"]
 Button/colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
 Button/colors/font_disabled_color = Color(0, 0, 0, 1)
-Button/colors/font_focus_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-Button/colors/font_outline_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+Button/colors/font_hover_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+Button/colors/font_hover_pressed_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+Button/colors/font_outline_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+Button/colors/font_pressed_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
 Button/colors/icon_disabled_color = Color(0, 0, 0, 1)
 Button/colors/icon_focus_color = Color(0, 0, 0, 1)
 Button/colors/icon_hover_color = Color(0, 0, 0, 1)
@@ -46,7 +49,7 @@ Button/constants/outline_size = 0
 Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("3_0idnk")
 Button/styles/disabled = null
-Button/styles/focus = null
+Button/styles/focus = SubResource("StyleBoxTexture_5nbbv")
 Button/styles/hover = SubResource("StyleBoxTexture_0idnk")
 Button/styles/normal = SubResource("StyleBoxTexture_m2q8c")
 Button/styles/pressed = SubResource("StyleBoxTexture_r7rlm")
@@ -156,4 +159,5 @@ script = ExtResource("5_5nbbv")
 option_button_scene = ExtResource("6_ugb46")
 
 [node name="OptionsContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPresenter" unique_id=1030912164]
+custom_minimum_size = Vector2(500, 400)
 layout_mode = 2
