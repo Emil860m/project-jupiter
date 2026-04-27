@@ -17,6 +17,10 @@ texture = ExtResource("4_r7rlm")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7rlm"]
 texture = ExtResource("4_r7rlm")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0idnk"]
+content_margin_left = 40.0
+content_margin_bottom = 25.0
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_byhhv"]
 content_margin_left = 40.0
 content_margin_top = 25.0
@@ -46,6 +50,10 @@ Button/styles/focus = null
 Button/styles/hover = SubResource("StyleBoxTexture_0idnk")
 Button/styles/normal = SubResource("StyleBoxTexture_m2q8c")
 Button/styles/pressed = SubResource("StyleBoxTexture_r7rlm")
+Label/colors/font_color = Color(0.7294118, 0.8745098, 0.078431375, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("3_0idnk")
+Label/styles/normal = SubResource("StyleBoxEmpty_0idnk")
 RichTextLabel/colors/default_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 1)
