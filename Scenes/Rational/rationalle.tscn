@@ -30,6 +30,7 @@ texture = ExtResource("3_dw8os")
 
 [node name="MainView" type="CanvasLayer" parent="." unique_id=440508569]
 rotation = 0.1605703
+scale = Vector2(0.99999994, 0.99999994)
 transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
 
 [node name="1Course" type="Button" parent="MainView" unique_id=855555974]
@@ -94,6 +95,7 @@ text = "Leave"
 [node name="Starters" type="CanvasLayer" parent="." unique_id=980329663]
 visible = false
 rotation = 0.1605703
+scale = Vector2(0.99999994, 0.99999994)
 transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
 
 [node name="StatersLabel" type="Label" parent="Starters" unique_id=2125324910]
@@ -152,6 +154,7 @@ amount = 3
 [node name="MainCourse" type="CanvasLayer" parent="." unique_id=2090687617]
 visible = false
 rotation = 0.1605703
+scale = Vector2(0.99999994, 0.99999994)
 transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
 
 [node name="MainCourseLabel" type="Label" parent="MainCourse" unique_id=2120430184]
@@ -210,6 +213,7 @@ amount = 5
 [node name="Dessert" type="CanvasLayer" parent="." unique_id=887218823]
 visible = false
 rotation = 0.1605703
+scale = Vector2(0.99999994, 0.99999994)
 transform = Transform2D(0.98713624, 0.15988119, -0.15988119, 0.98713624, 0, 0)
 
 [node name="DessertText" type="Label" parent="Dessert" unique_id=1428986075]
