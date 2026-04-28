@@ -25,19 +25,14 @@ func _ready() -> void:
 	# We do not make checks after finding a valid schedule, we just return that one 
 	# the structure is: (start_time, end_time, flags, yarn_node)
 	hickey = {
-	locations.MAIN_MENU: [],
-	locations.PLANET_VIEW: [],
-	locations.HOSPITAL: [
-		NPC_Schedule.new(0, 100, [], "hickWorkshopTS3"),
-		NPC_Schedule.new(45, 52, [], "")
-		
-	],
-	locations.WORKSHOP: [
-		NPC_Schedule.new(9, 17, [], "hickWorkshopTS3"),
-		NPC_Schedule.new(26, 36, [], "hickWorkshopTS5"),
-		NPC_Schedule.new(45, 48, [], ""),
-		NPC_Schedule.new(53, 56, [], "")
-	]
+		locations.HOSPITAL: [
+			NPC_Schedule.new(td2ts(20, 0), td2ts(22, 0), [], "hickHospitalTS6")
+		],
+		locations.WORKSHOP: [
+			NPC_Schedule.new(td2ts(11, 00), td2ts(12, 15), [], "hickWorkshopTS3"),
+			NPC_Schedule.new(td2ts(15, 15), td2ts(18, 00), [], "hickWorkshopTS5"),
+			NPC_Schedule.new(td2ts(20, 00), td2ts(23, 00), [], "hickWorkshopTS6")
+		]
 	}
 	kass = {
 		
@@ -74,6 +69,8 @@ func get_sally_yarn_file(current_timestep: int, location: locations):
 			return event.get_yarn_node()
 	return ""
 	
-	
-	
-	
+
+# Time of day to in game timestep
+func td2ts(hours: int, mins: int):
+	var minutes: float = mins + 60 * hours
+	return floor(minutes / Globals.time)
