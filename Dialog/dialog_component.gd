@@ -7,7 +7,7 @@ extends Node
 @export var auto_start: bool = false
 @onready var line_presenter := $CanvasLayer/Control/LinePresenter
 @onready var options_presenter := $CanvasLayer/Control/OptionsPresenter
-
+var has_portrait = false
 func _ready():
 	dialogue_runner.add_presenter(line_presenter)
 	dialogue_runner.add_presenter(options_presenter)
@@ -15,9 +15,15 @@ func _ready():
 	if auto_start:
 		start_dialog()
 
-	
+func set_character_portrait(path: String):
+	var portrait = $CanvasLayer/Control/LinePresenter/Control/TextureRect
+	portrait.texture = load(path)
+	has_portrait = true
+
+
 func start_dialog():
 	$CanvasLayer.visible = true
+	$CanvasLayer/Control/LinePresenter/Control.visible = has_portrait
 	dialogue_runner.start_dialogue(start_node)
 
 func add_functions():
