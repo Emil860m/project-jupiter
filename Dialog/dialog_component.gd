@@ -57,6 +57,8 @@ func add_functions():
 	
 	dialogue_runner.add_function("detriment_s_check", EventController.detriment_speed_check, 0)
 
+func add_non_global_function(yarn_func_name, function: Callable):
+	dialogue_runner.add_function(yarn_func_name, function, function.get_argument_count())
 
 func godot_function(string: String):
 	print(string)

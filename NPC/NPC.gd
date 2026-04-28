@@ -24,6 +24,7 @@ func _ready() -> void:
 	interactable_component.time_pass = time_pass
 	interactable_component.interact = _interact
 	interactable_component.object_id = currentYarnNode
+	dialogComp.add_non_global_function("change_mood", change_mood)
 	if current_mood in mood_portrait_dict.keys():
 		dialogComp.set_character_portrait(mood_portrait_dict[current_mood])
 
