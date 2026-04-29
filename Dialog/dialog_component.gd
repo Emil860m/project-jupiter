@@ -27,6 +27,7 @@ func start_dialog():
 	var portrait = $CanvasLayer/Control/LinePresenter/Control
 	if portrait:
 		portrait.visible = has_portrait
+	print(start_node)
 	dialogue_runner.start_dialogue(start_node)
 
 func add_functions():
