@@ -17,13 +17,16 @@ func _ready():
 
 func set_character_portrait(path: String):
 	var portrait = $CanvasLayer/Control/LinePresenter/Control/TextureRect
-	portrait.texture = load(path)
-	has_portrait = true
+	if portrait:
+		portrait.texture = load(path)
+		has_portrait = true
 
 
 func start_dialog():
 	$CanvasLayer.visible = true
-	$CanvasLayer/Control/LinePresenter/Control.visible = has_portrait
+	var portrait = $CanvasLayer/Control/LinePresenter/Control
+	if portrait:
+		portrait.visible = has_portrait
 	dialogue_runner.start_dialogue(start_node)
 
 func add_functions():
