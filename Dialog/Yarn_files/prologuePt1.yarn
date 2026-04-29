@@ -1,44 +1,41 @@
 title: Start
 position: -165,-398
 ---
-A cold sad expanse of memories is in front of you, mixed, mashed, tangled in each other.
-Just waiting to be recalled, to be relived and be warmed again. 
+The  memories are a bit fucked up, everything it's fuzzy when you haven't drenk for a while. 
+The weird part is when the mouth gets so dry that it's actively fighting your ability to drink. 
+Dad is trying to get in contact with the Marsian authorities to get us on a shuttle. he's saying we're gonna be fine, that we have enough water to survive the cut off.
+We're just gonna have to ration correctly. 
 
-from far inside this confused mess, a voice echos...
-
-???: Hi there, It's been a long time.
-
--> What?
--> Who?
-
-    ???: No no don't fight it. If you do it's just gonna be harder, just try to relax...
-    and remember.
-
-    something starts warming up in you. little by little like a ice melting under the heat.
-
-    From the darkness a small chamber starts to take shape. A woman is screaming, screams of pain while she pushes.
-    A wail cuts the air, a sigh of relief. 
-    A nurse carries away a new born. 
-    while a doctor rushes to the woman. 
-    ...
-    A man is standing outside a metal door,
-    He's waiting, when the same nurse comes back. 
-
-    -> The man will ask about the woman.
-    <<jump ChA>>
-    -> The man will ask about the child.
-    <<jump ChB>>
+-> Fuck that!
+    ... I'm not gonna see my friends die. the system is almost out of water at this point. fuck earth,
+    -> and fuck the Marsians!
+        their fucking treaties it's not doing shit for us! 
+        -> I'll call Grig, I want to help however I can.
+            <<jump RecruitReb>>
+        -> Maybe dad's contact knows how I can help. 
+            <<jump RecruitMar>>        
+    -> hopefully the Marsians will help us.
+        <<jump RecruitMar>>
+        
+-> Hopefully he's right
+    I really couldn't handle this on my own.
+    <<jump RecruitMar>>
+    //They will have martian passports
 ===
-title: ChA
+title: RecruitMar
 position: 138,-621
----
-//description 
--> A
-    <<jump ChA2>>
--> B
-    <<jump ChA1>>
+--- 
+The letter came a few weeks later. a few weeks too late, when a lot of people where already gone, we didn't even have the means to support so many eagle flights. 
+But there it was, green pixels on a black screen. 
+
+25-12-2279; 14:50 | Płaskowyż Olimp - Mars
+
+Dear sir Joh M. Johiński, born 2nd of March, 2255, Marowo
+As a martian citizen residing in the  you're called to take action in the ongoing dispute with the earthian. 
+Please report to the closest martian embassy to you. 
+
 ===
-title: ChB
+title: RecruitReb
 position: 183,-143
 ---
 //description 
