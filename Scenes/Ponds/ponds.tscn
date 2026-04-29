@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cbnp62wnbkl4x" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_3.png" id="17_qb6g0"]
 [ext_resource type="Texture2D" uid="uid://bfs6ad7nct3mw" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_4.png" id="18_n0at5"]
 [ext_resource type="Texture2D" uid="uid://ppbql2fiao78" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_5.png" id="19_gdsun"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="19_kbvy3"]
 [ext_resource type="Texture2D" uid="uid://dpf6l203glckq" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_6.png" id="20_0pauf"]
 [ext_resource type="Texture2D" uid="uid://htqsgtvu3ntq" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_7.png" id="21_d2la0"]
 [ext_resource type="Texture2D" uid="uid://b8ollhgys5xji" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_8.png" id="22_pyg1q"]
@@ -124,6 +125,7 @@ icon_alignment = 1
 
 [node name="UpgradeButton" type="Button" parent="MainMenu" unique_id=172257029]
 anchors_preset = -1
+anchor_left = -0.040625
 anchor_right = -0.040625
 offset_left = 1151.0
 offset_top = 201.0
@@ -171,7 +173,7 @@ modulate = Color(0.25517768, 0.6123109, 0.38946944, 1)
 z_index = -1
 anchors_preset = -1
 anchor_left = 0.46875
-anchor_top = 1.050926
+anchor_top = 1.0
 anchor_right = 0.53125
 anchor_bottom = 1.0
 offset_left = -673.0
@@ -357,6 +359,9 @@ offset_top = -137.0
 offset_right = 2156.0
 offset_bottom = 1333.0
 texture = ExtResource("17_cl565")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("19_kbvy3")]
+start_node = "tutorial_pons"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="button_up" from="MainMenu/RepairButton" to="." method="_on_repair_button_button_up"]

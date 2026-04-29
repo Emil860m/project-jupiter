@@ -27,6 +27,8 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 @onready var fuel_upgrade_button = $UpgradeMenu/FuelUpgrade
 @onready var poj_upgrade_button = $UpgradeMenu/StatAllocationUpgrade
 
+@onready var dialog_component = $DialogComponent
+
 
 func _ready() -> void:
 	main_label.text = ''
@@ -37,6 +39,10 @@ func _ready() -> void:
 	_animated_sprite_4.play("default")
 	
 	check_upgrades()
+	
+	if not Flags.get_flag("PonsTutorialComplete"):
+		Flags.set_flag("PonsTutorialComplete")
+		dialog_component.start_dialog()
 
 func check_upgrades():
 	poj_upgrade_button.disabled = Flags.get_flag("HasPOJUpgrade1")
