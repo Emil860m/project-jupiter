@@ -1,27 +1,27 @@
-[gd_scene format=3 uid="uid://d110b2beiywq7"]
+[gd_scene format=3 uid="uid://cvv7l02d6nv7o"]
 
-[ext_resource type="Texture2D" uid="uid://2dfaywsl4o1c" path="res://Assest/medicalBed/medicalBed.png" id="1_2m1sd"]
-[ext_resource type="Script" path="res://Prefabs/Ganymede/medical_bed.gd" id="1_6owqq"]
-[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="2_68tse"]
-[ext_resource type="ArrayMesh" uid="uid://wor78l1nnjjh" path="res://Assest/medicalBed/medicalBed.obj" id="2_qfckt"]
+[ext_resource type="Script" path="res://Prefabs/Ganymede/medical_bed.gd" id="1_g5o7d"]
+[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="2_6kbdl"]
+[ext_resource type="Texture2D" uid="uid://2dfaywsl4o1c" path="res://Assest/medicalBed/medicalBed.png" id="3_n6prs"]
+[ext_resource type="ArrayMesh" uid="uid://k4tor0td22t3" path="res://Assest/medicalBedEmpty/medicalBedEmpty.obj" id="4_g5o7d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6owqq"]
-albedo_texture = ExtResource("1_2m1sd")
+albedo_texture = ExtResource("3_n6prs")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_68tse"]
 size = Vector3(5.5181274, 3.9086304, 2.7263184)
 
 [node name="MedicalBed" type="StaticBody3D" unique_id=130115927]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-script = ExtResource("1_6owqq")
+script = ExtResource("1_g5o7d")
 
-[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_68tse")]
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_6kbdl")]
 meshs = [NodePath("../MedicalBed")]
 
 [node name="MedicalBed" type="MeshInstance3D" parent="." unique_id=2104332763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9925132, 1.5766454, 0.00039339066)
 material_override = SubResource("StandardMaterial3D_6owqq")
-mesh = ExtResource("2_qfckt")
+mesh = ExtResource("4_g5o7d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1410479075]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04916382, 1.839508, 0.032836914)

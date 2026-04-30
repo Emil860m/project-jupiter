@@ -6,6 +6,6 @@
 [resource]
 Button/colors/font_color = Color(0.1927922, 0.12857077, 0.06152861, 1)
 Button/colors/font_hover_color = Color(0.08206589, 0.050974548, 0.024507992, 1)
-Button/font_sizes/font_size = 21
+Button/font_sizes/font_size = 22
 Button/fonts/font = ExtResource("1_obnds")
 Button/icons/icon = ExtResource("2_tngud")
