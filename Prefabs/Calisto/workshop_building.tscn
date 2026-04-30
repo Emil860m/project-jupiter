@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="10_fl2y8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6l51p"]
-size = Vector3(7, 4, 13)
+size = Vector3(6.678993, 4, 14.02655)
 
 [node name="WorkshopBuilding" type="StaticBody3D" unique_id=770807735]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
@@ -100,7 +100,7 @@ mesh = ExtResource("1_6l51p")
 mesh = ExtResource("2_tbajc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1256569406]
-transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -2.999999, 1.9999995, -2.9999983)
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -2.8919675, 1.9999995, -3.5857043)
 shape = SubResource("BoxShape3D_6l51p")
 
 [node name="Roof" type="Node3D" parent="." unique_id=1129961734]

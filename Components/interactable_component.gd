@@ -28,5 +28,5 @@ func runner():
 func handle_click(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if Input.is_action_just_pressed("move_click"):
-			SignalBus.object_clicked.emit(self)
+			SignalBus.object_clicked.emit(self, get_parent().get_node("CollisionShape3D"))
 			
