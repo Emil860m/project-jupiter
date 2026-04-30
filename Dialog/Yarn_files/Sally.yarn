@@ -2,7 +2,19 @@ title: SalWorkshopTS1
 color: green
 position: -273,62
 ---
-New node
+
+<<if get_flag("metSul")>>
+The man acnowledge you without moving his eyes from his work.
+Sully: Hey Kher, can I help you? 
+
+-> Yes I wanted to ask you something
+    <<jump asks>>
+
+<<else>>
+The old man's eyes light up when he sees you 
+Sully: hey kid you made it.
+<<jump meetSully>>
+<<endif>>
 ===
 title: SalHospitalTS2
 color: blue
@@ -33,4 +45,10 @@ color: green
 position: -90,502
 ---
 New node
+===
+
+title: meetSully
+---
+
+<<if set_flag("metSul")>><<endif>>
 ===

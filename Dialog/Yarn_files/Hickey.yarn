@@ -2,28 +2,14 @@ title: hickWorkshopTS3
 color: green
 position: -450,-167
 ---
+<<declare $title = "value">>>>
+<<set $title = "hickWorkshopTS3">>
 <<if get_flag("metHick")>>
 Hickey greats you with his half smirk.
 Hick: Hey dude what can I do you for?
-
-<<once>>
--> How've you been doing?
-    <<detour howYouDoing>>
-<<endonce>>
-<<once>>
--> What's new around?
-    <<detour newAround>>
-<<endonce>>
-<<once>>
--> How's your grandma?
-    <<detour grandma>>
-<<endonce>>
-<<if get_flag("deadDad")>> 
-<<once>>
-->So have you heard about dad?
-    <<detour dad>>
-<<endonce>>
-<<endif>>
+-> Hey can I ask you something?
+    Yeah dude, ask ahead!
+    <<jump asks>>
 ->See you later!
     Sure dude, whenever you want!
 <<else>>
@@ -34,6 +20,7 @@ title: hickWorkshopTS5
 color: green
 position: -447,64
 ---
+<<set $title = "hickWorkshopTS5">>
 <<if get_flag("metHick")>>
 Hickey is packing up a bunch of boxes on a crate.
 Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
@@ -48,6 +35,9 @@ Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you wi
 <<jump drugs>>
 <<endif>>
 <<endonce>>
+-> Hey can I ask you something?
+    Yeah dude, ask ahead!
+    <<jump asks>>
 <<else>>
 <<detour meetHickey>>
 <<endif>>
@@ -56,25 +46,11 @@ title: hickWorkshopTS6
 color: green
 position: -445,457
 ---
+<<set $title = "hickWorkshopTS6">>
 <<if get_flag("metHick")>>
-<<once>>
--> How've you been?
-    <<detour howYouDoing>>
-<<endonce>>
-<<once>>
--> What's new around?
-    <<detour newAround>>
-<<endonce>>
-<<once>>
--> How's your grandma?
-    <<detour grandma>>
-<<endonce>>
-<<if get_flag("deadDad")>> 
-<<once>>
-->So have you heard about dad?
-    <<detour dad>>
-<<endonce>>
-<<endif>>
+-> Hey can I ask you something?
+    Yeah dude, ask ahead!
+    <<jump asks>>
 ->See you later!
     Sure dude, whenever you want!
 <<else>>
@@ -109,6 +85,29 @@ Hickey introduces himself and tells kher they remind him of someone
         probably been better.
 
 <<if set_flag ("metHick")>><<endif>>
+===
+title: asks
+---
+
+<<once>>
+-> How've you been doing?
+    <<detour howYouDoing>>
+<<endonce>>
+<<once>>
+-> What's new around?
+    <<detour newAround>>
+<<endonce>>
+<<once>>
+-> How's your grandma?
+    <<detour grandma>>
+<<endonce>>
+<<if get_flag("deadDad")>> 
+<<once>>
+->So have you heard about dad?
+    <<detour dad>>
+<<endonce>>
+<<endif>>
+-> Sooo, let's talk about something else
 ===
 
 //DIALOGUES

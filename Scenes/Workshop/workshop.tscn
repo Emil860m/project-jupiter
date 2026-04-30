@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://maojlvkx0p48" path="res://Prefabs/Calisto/rubble.tscn" id="9_ga7uk"]
 [ext_resource type="PackedScene" uid="uid://bpk7jqh8nnckm" path="res://Prefabs/MiscProps/spherical_tank.tscn" id="11_6kvd0"]
 [ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="13_8cm3j"]
+[ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="14_q2001"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehkgj"]
 albedo_color = Color(0.9157694, 0.9157693, 0.9157694, 1)
@@ -398,3 +399,6 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.075, 0, -25.247)
 
 [node name="TrashCan3" parent="." unique_id=945792442 instance=ExtResource("13_8cm3j")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.075, 0, -23.247)
+
+[node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("14_q2001")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.928508, 1.0500002, 11.212647)

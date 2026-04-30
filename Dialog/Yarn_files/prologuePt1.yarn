@@ -44,7 +44,7 @@ The Martian administration for a free jovian system.
 
 -> Throw away the paper.
     -> Fuck that! I will find another way to help.
-    <<jump RecruitReb>>
+        <<jump RecruitReb>>
     -> I will just wait for all this to end.
 -> Join the troops.
     DESCRIBE THE OFFICE HERE
