@@ -3,6 +3,7 @@ extends Node
 @onready var bgm_emitter = $BgmEmitter
 
 @onready var ui_emitters = $UIEmitters
+@onready var sfx_emitters = $SFXEmitters
 
 var master_vol: float = 0.5:
 	set(new_val):
@@ -32,6 +33,9 @@ func set_volumes():
 	
 	bgm_emitter.volume = actual_music
 	for emitter in ui_emitters.get_children():
+		emitter.volume = actual_sound
+	
+	for emitter in sfx_emitters.get_children():
 		emitter.volume = actual_sound
 
 func set_bgm(location):
@@ -70,3 +74,16 @@ func play_mid_boop():
 
 func play_high_boop():
 	high_boop.play()
+
+
+# SFX
+
+@onready var dmg = $SFXEmitters/DmgEmitter
+@onready var elevator = $SFXEmitters/ElevatorEmitter
+
+func play_take_damage(amount = 1):
+	dmg.set_parameter("DMGSeverity", amount)
+	dmg.play()
+
+func play_elevator():
+	elevator.play()
