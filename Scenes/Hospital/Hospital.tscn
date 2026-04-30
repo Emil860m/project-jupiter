@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d2comp0ui6q7v" path="res://Prefabs/sink.tscn" id="9_3ekpi"]
 [ext_resource type="PackedScene" uid="uid://bd0pymue16sc8" path="res://Prefabs/Ganymede/hospital_locker.tscn" id="10_ux52s"]
 [ext_resource type="PackedScene" uid="uid://baf8yhetm34ci" path="res://Prefabs/night_stand.tscn" id="11_3ekpi"]
-[ext_resource type="PackedScene" uid="uid://bdsa300k46exl" path="res://Prefabs/Ganymede/midical_console.tscn" id="11_awc2l"]
+[ext_resource type="PackedScene" uid="uid://bdsa300k46exl" path="res://Prefabs/Ganymede/medical_console.tscn" id="11_awc2l"]
 [ext_resource type="PackedScene" uid="uid://gsd8q0rffkun" path="res://Prefabs/lights_clean.tscn" id="12_awc2l"]
 [ext_resource type="PackedScene" uid="uid://d110b2beiywq7" path="res://Prefabs/Ganymede/medicalBed.tscn" id="13_ux52s"]
 [ext_resource type="PackedScene" uid="uid://m05mv1lh0y50" path="res://Prefabs/locker.tscn" id="15_a0rap"]

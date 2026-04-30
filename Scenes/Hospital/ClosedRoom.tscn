@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://xc2dq7qgpaxi"]
-
-[ext_resource type="Material" uid="uid://dptcbq0ivcfgf" path="res://Textures/GreyboxingTexture.tres" id="1_tbttj"]
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" unique_id=1360992036]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1055267237]
-size = Vector3(12, 6, 6)
-material = ExtResource("1_tbttj")

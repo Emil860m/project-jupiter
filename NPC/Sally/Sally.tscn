@@ -18,7 +18,8 @@ shape = SubResource("CapsuleShape3D_4gwob")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=63114137]
 mesh = SubResource("CapsuleMesh_1rfsb")
 
-[node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("2_qbluw")]
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_qbluw")]
+meshs = [NodePath("../MeshInstance3D")]
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("3_y17tw")]
 
