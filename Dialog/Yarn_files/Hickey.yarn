@@ -58,7 +58,7 @@ position: -445,457
 ---
 <<if get_flag("metHick")>>
 <<once>>
--> How've you been doing?
+-> How've you been?
     <<detour howYouDoing>>
 <<endonce>>
 <<once>>
@@ -107,6 +107,8 @@ Hickey introduces himself and tells kher they remind him of someone
     -> I've been good, just a bit tense from the journey. 
     -> Mah with the whole, my dad is dying situation?
         probably been better.
+
+<<if set_flag ("metHick")>><<endif>>
 ===
 
 //DIALOGUES
