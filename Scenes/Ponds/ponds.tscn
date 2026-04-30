@@ -71,6 +71,7 @@ repair_time = 10
 refuel_time = 10
 fuel_upgrade_time = 20
 poj_upgrade_time = 20
+noise_reduction_time = 20
 fuel_upgrade_val = 50
 poj_upgrade_val = 2
 
@@ -283,6 +284,24 @@ icon = ExtResource("17_kbvy3")
 flat = true
 icon_alignment = 1
 
+[node name="NoiseReduction" type="Button" parent="UpgradeMenu" unique_id=2638210]
+offset_left = 261.0
+offset_top = 535.0
+offset_right = 769.0
+offset_bottom = 693.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_colors/font_pressed_color = Color(0.8662156, 2.117753e-06, 1.347661e-06, 1)
+theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
+theme_override_colors/font_disabled_color = Color(0.25490198, 0.6117647, 0.38431373, 0.5254902)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 45
+disabled = true
+text = "Reduce noise in
+time and fuel estimations"
+icon = ExtResource("17_kbvy3")
+flat = true
+icon_alignment = 1
+
 [node name="FuelUpgrade" type="Button" parent="UpgradeMenu" unique_id=1290693345]
 offset_left = 261.0
 offset_top = 364.0
@@ -369,6 +388,7 @@ start_node = "tutorial_pons"
 [connection signal="button_up" from="MainMenu/RefuelButton" to="." method="_on_refuel_button_button_up"]
 [connection signal="button_up" from="MainMenu/Leave" to="." method="_on_leave_button_up"]
 [connection signal="button_up" from="UpgradeMenu/BackButton" to="." method="_on_back_button_button_up"]
+[connection signal="button_up" from="UpgradeMenu/NoiseReduction" to="." method="_on_noise_reduction_button_up"]
 [connection signal="button_up" from="UpgradeMenu/FuelUpgrade" to="." method="_on_fuel_upgrade_button_up"]
 [connection signal="button_up" from="UpgradeMenu/StatAllocationUpgrade" to="." method="_on_stat_allocation_upgrade_button_up"]
 [connection signal="button_up" from="UpgradeMenu/Leave2" to="." method="_on_leave_button_up"]
