@@ -2,9 +2,10 @@ extends Node
 
 #@export var interacted = false
 @export var time_pass = 5
-@export var object_id: String
 @export var meshs: Array[MeshInstance3D]
 @export var outline_shader: ShaderMaterial
+
+var object_id = ""
 
 func show_shader():
 	for mesh in meshs:
@@ -19,8 +20,6 @@ var interact: Callable = func ():
 	
 func runner():
 	if !Globals.has_interacted(object_id):
-		print("First time interaction")
-		print("Do something with the time")
 		Globals.increment_timestep(time_pass)
 	Globals.add_to_interact_set(object_id)
 	interact.call()

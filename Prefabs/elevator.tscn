@@ -31,6 +31,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 script = ExtResource("1_vhy44")
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_woamy")]
+time_pass = 0
 meshs = [NodePath("../ElevatorShaft"), NodePath("../ElevatorMain")]
 
 [node name="ElevatorShaft" type="MeshInstance3D" parent="." unique_id=1239654593]

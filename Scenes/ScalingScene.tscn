@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b7seqdovo3fj2" path="res://Prefabs/Ganymede/ganymede_wall.tscn" id="6_cpmbg"]
 [ext_resource type="PackedScene" uid="uid://bd0pymue16sc8" path="res://Prefabs/Ganymede/hospital_locker.tscn" id="7_oc8jj"]
 [ext_resource type="PackedScene" uid="uid://dwlmoxkyj7rkm" path="res://Prefabs/Ganymede/iv_rack.tscn" id="8_jnh05"]
-[ext_resource type="PackedScene" uid="uid://bdsa300k46exl" path="res://Prefabs/Ganymede/midical_console.tscn" id="9_msusc"]
+[ext_resource type="PackedScene" uid="uid://bdsa300k46exl" path="res://Prefabs/Ganymede/medical_console.tscn" id="9_msusc"]
 [ext_resource type="PackedScene" uid="uid://cxb2jaomgdav3" path="res://Prefabs/MiscProps/barrel.tscn" id="10_hycun"]
 [ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="11_vhqfx"]
 [ext_resource type="PackedScene" uid="uid://xssi2idlokcw" path="res://Prefabs/MiscProps/desk.tscn" id="12_gasc4"]

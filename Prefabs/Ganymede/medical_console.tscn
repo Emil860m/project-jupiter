@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bdsa300k46exl"]
+
+[ext_resource type="Script" uid="uid://dcuvp55q64f7y" path="res://Prefabs/Ganymede/midical_console.gd" id="1_j3opr"]
+[ext_resource type="ArrayMesh" uid="uid://bv0hudyxourhg" path="res://Assest/MedicalColsole/medicalConsole.obj" id="1_u3d1p"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_i3843"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3843"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wepbd"]
+size = Vector3(6, 7, 3)
+
+[node name="MedicalConsole" type="StaticBody3D" unique_id=1574312724]
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, 0, 0)
+script = ExtResource("1_j3opr")
+
+[node name="MedicalConsole" type="MeshInstance3D" parent="." unique_id=1066243886]
+material_overlay = SubResource("ShaderMaterial_i3843")
+mesh = ExtResource("1_u3d1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1985914974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_wepbd")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_i3843")]
+meshs = [NodePath("../MedicalConsole")]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

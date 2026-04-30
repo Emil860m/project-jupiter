@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bu735a64tp7gt" path="res://NPC/Hickey/hickey.gd" id="1_jlog5"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="2_nipkc"]
-[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="3_jcqdm"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_jcqdm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3kkoo"]
 
@@ -13,7 +13,8 @@ script = ExtResource("1_jlog5")
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_nipkc")]
 
-[node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("3_jcqdm")]
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_jcqdm")]
+meshs = [NodePath("../MeshInstance3D")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=76175461]
 shape = SubResource("CapsuleShape3D_3kkoo")
@@ -22,3 +23,5 @@ shape = SubResource("CapsuleShape3D_3kkoo")
 mesh = SubResource("CapsuleMesh_k0l4o")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

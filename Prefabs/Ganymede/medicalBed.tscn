@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://d110b2beiywq7"]
 
 [ext_resource type="Texture2D" uid="uid://2dfaywsl4o1c" path="res://Assest/medicalBed/medicalBed.png" id="1_2m1sd"]
+[ext_resource type="Script" uid="uid://d3wy2y8wmtmyw" path="res://Prefabs/Ganymede/medical_bed.gd" id="1_6owqq"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_68tse"]
 [ext_resource type="ArrayMesh" uid="uid://wor78l1nnjjh" path="res://Assest/medicalBed/medicalBed.obj" id="2_qfckt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6owqq"]
@@ -11,6 +13,10 @@ size = Vector3(5.5181274, 3.9086304, 2.7263184)
 
 [node name="MedicalBed" type="StaticBody3D" unique_id=130115927]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_6owqq")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_68tse")]
+meshs = [NodePath("../MedicalBed")]
 
 [node name="MedicalBed" type="MeshInstance3D" parent="." unique_id=2104332763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9925132, 1.5766454, 0.00039339066)
@@ -20,3 +26,7 @@ mesh = ExtResource("2_qfckt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1410479075]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04916382, 1.839508, 0.032836914)
 shape = SubResource("BoxShape3D_68tse")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

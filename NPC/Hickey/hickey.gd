@@ -1,10 +1,10 @@
 extends StaticBody3D
 
 
+@onready var interactable_component: Node = $InteractableComponent
 
 @export var time_pass: int = 5
 @onready var dialogComp:= $DialogComponent
-@onready var interactable_component: Node = $InteractableComponent
 var currentYarnNode: String = ""
 func _ready() -> void:
 	currentYarnNode = NpcScheduler.get_hickey_yarn_file(Globals.current_timestep, Globals.current_location)
@@ -21,3 +21,12 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	
 func _interact():
 	dialogComp.start_dialog()
+
+
+func _on_mouse_entered() -> void:
+	interactable_component.show_shader()
+	pass # Replace with function body.
+
+
+func _on_mouse_exited() -> void:
+	interactable_component.hide_shader()
