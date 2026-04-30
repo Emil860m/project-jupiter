@@ -18,6 +18,7 @@ var interact_click: bool = false
 
 var can_move = true
 
+var pause_scene = preload("res://Scenes/Misc/pause_menu.tscn")
 
 func _ready() -> void:
 	movement_timer.start(0.5)
@@ -43,6 +44,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("pause"):
+		var pause_scene_instance = pause_scene.instantiate()
+		add_child(pause_scene_instance)
+		get_tree().paused = true
 	if Globals.interacting:
 		can_move = false
 		return

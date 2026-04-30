@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cbumxbxe80yjw"]
 
-[ext_resource type="Script" uid="uid://dmksjvnw7wsvd" path="res://NPC/Zoe/zoe.gd" id="1_x53e5"]
+[ext_resource type="Script" uid="uid://bu735a64tp7gt" path="res://NPC/NPC.gd" id="1_x53e5"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="2_yy023"]
-[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="3_ooeg8"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_ooeg8"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yvym0"]
 
@@ -10,6 +10,7 @@
 
 [node name="Zoe" type="StaticBody3D" unique_id=2096689363]
 script = ExtResource("1_x53e5")
+character_name = "Zoe"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=507308596]
 mesh = SubResource("CapsuleMesh_yvym0")
@@ -20,3 +21,5 @@ shape = SubResource("CapsuleShape3D_7fgy4")
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_yy023")]
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("3_ooeg8")]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

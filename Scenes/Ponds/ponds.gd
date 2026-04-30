@@ -19,23 +19,37 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 
 @onready var main_menu: CanvasLayer = $MainMenu
 @onready var upgrade_menu: CanvasLayer = $UpgradeMenu
+@onready var _animated_sprite_1 = $MainMenu/BCG1
+@onready var _animated_sprite_2 = $MainMenu/BCG2
+@onready var _animated_sprite_3 = $UpgradeMenu/BCG3
+@onready var _animated_sprite_4 = $UpgradeMenu/BCG4
 
 @onready var fuel_upgrade_button = $UpgradeMenu/FuelUpgrade
 @onready var poj_upgrade_button = $UpgradeMenu/StatAllocationUpgrade
+
+@onready var dialog_component = $DialogComponent
 
 
 func _ready() -> void:
 	main_label.text = ''
 	upgrade_label.text = ''
+	_animated_sprite_1.play("default")
+	_animated_sprite_2.play("default")
+	_animated_sprite_3.play("default")
+	_animated_sprite_4.play("default")
 	
 	check_upgrades()
+	
+	if not Flags.get_flag("PonsTutorialComplete"):
+		Flags.set_flag("PonsTutorialComplete")
+		dialog_component.start_dialog()
 
 func check_upgrades():
 	poj_upgrade_button.disabled = Flags.get_flag("HasPOJUpgrade1")
 	fuel_upgrade_button.disabled = Flags.get_flag("HasFuelUpgrade1")
 
 func _on_leave_button_up() -> void:
-	ShipStats.damage = 10
+	#ShipStats.damage = 10
 	if ShipStats.fuel <= 0:
 		main_label.text = 'Your fuel is to low to travel. Please refuel your ship'
 		timer.start(1.5)

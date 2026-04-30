@@ -1,8 +1,68 @@
 [gd_scene format=3 uid="uid://dj8noka8ethct"]
 
 [ext_resource type="Script" uid="uid://c3gpano03c8p1" path="res://Scenes/Ponds/ponds.gd" id="1_4cuid"]
-[ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="1_c7y4b"]
-[ext_resource type="Texture2D" uid="uid://c0f3cw25ru6of" path="res://Textures/Dark/texture_07.png" id="3_8l43j"]
+[ext_resource type="Texture2D" uid="uid://dsg2ef34uguap" path="res://Textures/Pons/PonsConsoleOverlay.png" id="2_p04ur"]
+[ext_resource type="Texture2D" uid="uid://dbidpp22mjevl" path="res://Textures/Pons/button.png" id="15_cl565"]
+[ext_resource type="Texture2D" uid="uid://cl3y2kip6k58s" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_1.png" id="15_hrr2e"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="15_n6evu"]
+[ext_resource type="Texture2D" uid="uid://dnnfmn7s3e2p5" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_2.png" id="16_y6lj5"]
+[ext_resource type="Texture2D" uid="uid://ctba34acgaowa" path="res://Textures/MapUI/Rectangle_data.png" id="17_cl565"]
+[ext_resource type="Texture2D" uid="uid://bsr8bv07buq7v" path="res://Textures/Pons/button_big.png" id="17_kbvy3"]
+[ext_resource type="Texture2D" uid="uid://cbnp62wnbkl4x" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_3.png" id="17_qb6g0"]
+[ext_resource type="Texture2D" uid="uid://bfs6ad7nct3mw" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_4.png" id="18_n0at5"]
+[ext_resource type="Texture2D" uid="uid://ppbql2fiao78" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_5.png" id="19_gdsun"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="19_kbvy3"]
+[ext_resource type="Texture2D" uid="uid://dpf6l203glckq" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_6.png" id="20_0pauf"]
+[ext_resource type="Texture2D" uid="uid://htqsgtvu3ntq" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_7.png" id="21_d2la0"]
+[ext_resource type="Texture2D" uid="uid://b8ollhgys5xji" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_8.png" id="22_pyg1q"]
+[ext_resource type="Texture2D" uid="uid://cq8rnx0hrxr62" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_9.png" id="23_7ijhx"]
+[ext_resource type="Texture2D" uid="uid://do6goleahhg14" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_10.png" id="24_w34nk"]
+[ext_resource type="Texture2D" uid="uid://bcgpaw7txtcl5" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_11.png" id="25_lnuhs"]
+[ext_resource type="Texture2D" uid="uid://cdn0lsvk00bci" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_12.png" id="26_x2vby"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxtne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_hrr2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y6lj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qb6g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_n0at5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gdsun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0pauf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_d2la0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_pyg1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7ijhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_w34nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lnuhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_x2vby")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
 
 [node name="Ponds" type="Node2D" unique_id=673085570]
 script = ExtResource("1_4cuid")
@@ -17,104 +77,246 @@ poj_upgrade_val = 2
 [node name="Timer" type="Timer" parent="." unique_id=358933961]
 
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=372325345]
+layer = 2
 
-[node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=2013609792]
-z_index = -1358
+[node name="OVERLAY" type="TextureRect" parent="MainMenu" unique_id=2013609792]
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_c7y4b")
+texture = ExtResource("2_p04ur")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="BCG1" type="AnimatedSprite2D" parent="MainMenu" unique_id=1417369956]
+modulate = Color(0.23520002, 0.49, 0.2521867, 0.2)
+z_index = 10
+position = Vector2(566.996, 524)
+rotation = -3.1415925
+scale = Vector2(4.5746164, 4.170808)
+sprite_frames = SubResource("SpriteFrames_uxtne")
+frame = 6
+frame_progress = 0.6695502
+
+[node name="BCG2" type="AnimatedSprite2D" parent="MainMenu" unique_id=2067996593]
+modulate = Color(0.23529412, 0.49019608, 0.2509804, 0.2)
+z_index = 10
+position = Vector2(1387, 430.00006)
+scale = Vector2(4.322856, 4.170808)
+sprite_frames = SubResource("SpriteFrames_uxtne")
+frame = 6
+frame_progress = 0.7424274
+
 [node name="RepairButton" type="Button" parent="MainMenu" unique_id=41956894]
-offset_left = 1286.0
-offset_top = 364.0
-offset_right = 1499.0
-offset_bottom = 444.0
+offset_left = 558.0
+offset_top = 585.0
+offset_right = 866.0
+offset_bottom = 743.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 75
 text = "Repair"
-metadata/_edit_use_anchors_ = true
+icon = ExtResource("15_cl565")
+flat = true
+icon_alignment = 1
 
 [node name="UpgradeButton" type="Button" parent="MainMenu" unique_id=172257029]
-offset_left = 518.0
-offset_top = 257.0
-offset_right = 731.0
-offset_bottom = 337.0
+anchors_preset = -1
+anchor_left = -0.040625
+anchor_right = -0.040625
+offset_left = 1151.0
+offset_top = 201.0
+offset_right = 1737.0
+offset_bottom = 359.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 75
 text = "Upgrades"
+icon = ExtResource("17_kbvy3")
+flat = true
+icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="RefuelButton" type="Button" parent="MainMenu" unique_id=4745996]
-offset_left = 787.0
-offset_top = 690.0
-offset_right = 1000.0
-offset_bottom = 770.0
+offset_left = 244.0
+offset_top = 585.0
+offset_right = 552.0
+offset_bottom = 743.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 74
 text = "Refuel"
-metadata/_edit_use_anchors_ = true
+icon = ExtResource("15_cl565")
+flat = true
+icon_alignment = 1
 
 [node name="Leave" type="Button" parent="MainMenu" unique_id=618265005]
-offset_left = 101.0
-offset_top = 804.0
-offset_right = 314.0
-offset_bottom = 884.0
-text = "Leave"
+anchors_preset = -1
+anchor_left = -0.023958333
+anchor_top = -0.026851851
+anchor_right = 0.0125
+anchor_bottom = 0.035185184
+offset_left = 1073.0
+offset_top = 840.0
+offset_right = 1286.0
+offset_bottom = 920.0
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="MainLabel" type="Label" parent="MainMenu" unique_id=74010041]
-anchors_preset = 7
-anchor_left = 0.5
+modulate = Color(0.25517768, 0.6123109, 0.38946944, 1)
+z_index = -1
+anchors_preset = -1
+anchor_left = 0.46875
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.53125
 anchor_bottom = 1.0
-offset_left = -261.5
-offset_top = -136.0
-offset_right = 261.5
+offset_left = -673.0
+offset_top = -309.0
+offset_right = -150.0
+offset_bottom = -173.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 44
 text = "Some Text Now we try some long text"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="MainMenu" unique_id=700398914]
+modulate = Color(0.7843548, 0.595741, 0.168549, 1)
+z_index = -1
+offset_left = 257.0
+offset_top = 191.0
+offset_right = 852.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 40
+text = "WELCOME TO THE PONS SELF SERVICE SYSTEM"
+
+[node name="Label2" type="Label" parent="MainMenu" unique_id=549509659]
+modulate = Color(0.25490198, 0.6117647, 0.3882353, 1)
+z_index = -1
+offset_left = 253.0
+offset_top = 540.0
+offset_right = 848.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 35
+text = "Choose required service:"
+
+[node name="Label3" type="Label" parent="MainMenu" unique_id=1110654371]
+modulate = Color(0.25490198, 0.6117647, 0.3882353, 1)
+z_index = -1
+offset_left = 256.0
+offset_top = 231.0
+offset_right = 851.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 30
+text = "This is a self service console. PONS services are avalible to all citizens of the Juvian Colonies."
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="MainMenu" unique_id=1622187815]
+modulate = Color(0.25490198, 0.6117647, 0.3882353, 1)
+z_index = -1
+offset_left = 256.0
+offset_top = 329.0
+offset_right = 851.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 22
+text = "NOTE TO VISITORS: We do not charge for our services but we kindly ask you to not overuse our facility. If you wish to donate please contact the shift officer in the pilon B."
+autowrap_mode = 3
+
 [node name="UpgradeMenu" type="CanvasLayer" parent="." unique_id=1415186818]
 visible = false
 
-[node name="TextureRect" type="TextureRect" parent="UpgradeMenu" unique_id=1754337676]
-z_index = -175
+[node name="BCG3" type="AnimatedSprite2D" parent="UpgradeMenu" unique_id=782204980]
+modulate = Color(0.23520002, 0.49, 0.2521867, 0.2)
+z_index = 10
+position = Vector2(566.996, 524)
+rotation = -3.1415925
+scale = Vector2(4.5746164, 4.170808)
+sprite_frames = SubResource("SpriteFrames_uxtne")
+frame = 6
+frame_progress = 0.6695502
+
+[node name="BCG4" type="AnimatedSprite2D" parent="UpgradeMenu" unique_id=577121421]
+modulate = Color(0.23529412, 0.49019608, 0.2509804, 0.2)
+z_index = 10
+position = Vector2(1387, 430.00006)
+scale = Vector2(4.322856, 4.170808)
+sprite_frames = SubResource("SpriteFrames_uxtne")
+frame = 6
+frame_progress = 0.7424274
+
+[node name="OVERLAY2" type="TextureRect" parent="UpgradeMenu" unique_id=659987352]
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_8l43j")
+texture = ExtResource("2_p04ur")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="UpgradeMenu" unique_id=1233756472]
-offset_left = 90.0
-offset_top = 891.0
-offset_right = 303.0
-offset_bottom = 971.0
-text = "Back"
+offset_left = 1111.0
+offset_top = 204.0
+offset_right = 1619.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 75
+text = "GO BACK"
+icon = ExtResource("17_kbvy3")
+flat = true
+icon_alignment = 1
 
 [node name="FuelUpgrade" type="Button" parent="UpgradeMenu" unique_id=1290693345]
-offset_left = 612.0
-offset_top = 352.0
-offset_right = 825.0
-offset_bottom = 432.0
+offset_left = 261.0
+offset_top = 364.0
+offset_right = 769.0
+offset_bottom = 522.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_colors/font_pressed_color = Color(0.8662156, 2.117753e-06, 1.347661e-06, 1)
+theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
+theme_override_colors/font_disabled_color = Color(0.25490198, 0.6117647, 0.38431373, 0.5254902)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 45
 disabled = true
 text = "Increase fuel capacity
 "
+icon = ExtResource("17_kbvy3")
+flat = true
+icon_alignment = 1
 
 [node name="StatAllocationUpgrade" type="Button" parent="UpgradeMenu" unique_id=336362321]
-offset_left = 1102.0
-offset_top = 352.0
-offset_right = 1315.0
-offset_bottom = 432.0
+offset_left = 256.0
+offset_top = 193.0
+offset_right = 764.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
+theme_override_colors/font_disabled_color = Color(0.25620002, 0.61, 0.38592663, 0.49803922)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 45
 disabled = true
 text = "+3 Allocated Stats"
+icon = ExtResource("17_kbvy3")
+flat = true
+icon_alignment = 1
 
 [node name="UpgradeLabel" type="Label" parent="UpgradeMenu" unique_id=563687871]
 anchors_preset = 7
@@ -134,6 +336,33 @@ vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="Leave2" type="Button" parent="UpgradeMenu" unique_id=2112803004]
+anchors_preset = -1
+anchor_left = -0.023958333
+anchor_top = -0.026851851
+anchor_right = 0.0125
+anchor_bottom = 0.035185184
+offset_left = 1073.0
+offset_top = 840.0
+offset_right = 1286.0
+offset_bottom = 920.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1627558286]
+layer = -10
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1208777852]
+z_index = -100
+offset_left = -155.0
+offset_top = -137.0
+offset_right = 2156.0
+offset_bottom = 1333.0
+texture = ExtResource("17_cl565")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("19_kbvy3")]
+start_node = "tutorial_pons"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="button_up" from="MainMenu/RepairButton" to="." method="_on_repair_button_button_up"]
 [connection signal="button_up" from="MainMenu/UpgradeButton" to="." method="_on_upgrade_button_button_up"]
@@ -142,3 +371,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="button_up" from="UpgradeMenu/BackButton" to="." method="_on_back_button_button_up"]
 [connection signal="button_up" from="UpgradeMenu/FuelUpgrade" to="." method="_on_fuel_upgrade_button_up"]
 [connection signal="button_up" from="UpgradeMenu/StatAllocationUpgrade" to="." method="_on_stat_allocation_upgrade_button_up"]
+[connection signal="button_up" from="UpgradeMenu/Leave2" to="." method="_on_leave_button_up"]

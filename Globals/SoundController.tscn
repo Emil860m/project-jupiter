@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://1hobx5yka1bn" path="res://Globals/sound_controller.gd" id="1_233hg"]
 
 [node name="SoundManager" type="Node" unique_id=2104988225]
+process_mode = 3
 script = ExtResource("1_233hg")
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1756092586]
