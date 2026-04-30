@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cmj6vjhjd07ov"]
 
 [ext_resource type="ArrayMesh" uid="uid://cay185oqaax2i" path="res://Assest/metalBuilding/metalBuildingRib/metalBuildingRib.obj" id="1_6l51p"]
+[ext_resource type="Script" uid="uid://d2d1m27myjl5h" path="res://Prefabs/Calisto/workshop_building.gd" id="1_oiabf"]
 [ext_resource type="ArrayMesh" uid="uid://fqfaa7pc5xnv" path="res://Assest/metalBuilding/metalBuildingWall/MetalBuildingWall.obj" id="2_tbajc"]
 [ext_resource type="ArrayMesh" uid="uid://bk4vb4vnm73h2" path="res://Assest/metalDoor/metalDoor.obj" id="3_vkggv"]
 [ext_resource type="ArrayMesh" uid="uid://bagdjiusweyiq" path="res://Assest/metalDoor/metalDoorFrame.obj" id="4_lj3pe"]
@@ -9,12 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://bw2sc4dr7iwrb" path="res://Prefabs/MiscProps/gas_tank.tscn" id="7_7m2ac"]
 [ext_resource type="PackedScene" uid="uid://cxb2jaomgdav3" path="res://Prefabs/MiscProps/barrel.tscn" id="8_fl2y8"]
 [ext_resource type="PackedScene" uid="uid://bofqbao1he4ha" path="res://Prefabs/electric_box.tscn" id="9_7m2ac"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="10_fl2y8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6l51p"]
 size = Vector3(7, 4, 13)
 
 [node name="WorkshopBuilding" type="StaticBody3D" unique_id=770807735]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+script = ExtResource("1_oiabf")
 
 [node name="Wall" type="Node3D" parent="." unique_id=1570120025]
 
@@ -131,3 +134,10 @@ transform = Transform3D(0.6666666, 0, 0, 0, 0.6666666, 0, 0, 0, 0.6666666, 0.610
 
 [node name="ElectricBox" parent="." unique_id=827621083 instance=ExtResource("9_7m2ac")]
 transform = Transform3D(-1.821307e-08, 0, 0.41666657, 0, 0.41666657, 0, -0.41666657, 0, -1.821307e-08, -1.6361743, -0.18033499, -10.037914)
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("10_fl2y8")]
+meshs = [NodePath("../Roof/MetalBuildingRoof"), NodePath("../Roof/MetalBuildingRoof2"), NodePath("../Wall3/MetalBuildingRib"), NodePath("../Wall3/MetalBuildingRib2"), NodePath("../Wall3/MetalBuildingWall"), NodePath("../Wall2/MetalBuildingRib"), NodePath("../Wall2/MetalBuildingRib2"), NodePath("../Wall2/MetalBuildingWall"), NodePath("../Door/MetalDoor"), NodePath("../Door/MetalDoorFrame"), NodePath("../Wall4/MetalBuildingRib"), NodePath("../Wall4/MetalBuildingRib2"), NodePath("../Wall4/MetalBuildingRib3"), NodePath("../Wall4/MetalBuildingWall"), NodePath("../Wall4/MetalBuildingWall2"), NodePath("../Wall/MetalBuildingRib"), NodePath("../Wall/MetalBuildingRib2"), NodePath("../Wall/MetalBuildingRib3"), NodePath("../Wall/MetalBuildingWall"), NodePath("../Wall/MetalBuildingWall2")]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

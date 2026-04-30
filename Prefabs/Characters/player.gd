@@ -26,7 +26,6 @@ func _ready() -> void:
 	SignalBus.object_clicked.connect(_on_object_clicked)
 	clock_label.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 	raycast_comp.camera_3d = camera_3d
-	SignalBus.object_clicked.connect(_on_object_clicked)
 	camera_3d.global_position = camera_marker.global_position
 
 func _physics_process(delta: float) -> void:
