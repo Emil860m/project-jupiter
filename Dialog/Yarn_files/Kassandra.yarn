@@ -1,34 +1,126 @@
 
+title: meetKas
+color: blue
+position: 152,-252
+---
+???: Hey, I'm sorry now i really can't I've a lot of stuf...
+Oh, you must be Jey's kid right? You got here just in time,
+
+-> Can I see my father?
+    ???: Wait, you didn't get the message? your father didn't make it. he's passed last, I'm sorry for your loss kiddo.
+-> Where's his room? 
+    ???: Wait, you didn't get the message? your father didn't make it. he's passed last, I'm sorry for your loss kiddo.
+-> *let the woman finish what she's saying"
+    ???: I'm sorry for your loss kiddo. your dad passed last week.
+-> I have been hearing voices, do you know why? 
+    Dad: Why would you tell her that idiot?
+    -> Shut up!
+        Kass: Excuse me? can you shut up?
+        ->Sorry I wasn't talking to you
+            Kass: you just got of the ship? it might be cryosickness.
+        ->I was talking to my dad if you don't mind
+            Kass: you just got of the ship? it might be cryosickness.
+    -> ...
+      Kass: you just got of the ship? it might be cryosickness.
+
+But we do need you for something, your dad's eagle flight is gonna be tonight, and we need your signature on some documents.
+
+-> Wait, what?!
+    I just find out my father's dead and you start with that?!
+    ???: Listen kid, I know it's hard but it's been two weeks since his passing. 
+-> I'm sorry who are you?
+    ???: Oh, I'm Kassandra you can call me Kass. 
+    Kass: I'm a nurse here I helped your father in the last months. 
+
+Kass: we really need your signature Kid.
+
+-> what if I don't sign? 
+    Kass: uff, then you would have until 19 today to find another solution, because then the SDA will be enacted. 
+-> ok let's get this over with...
+
+===
 title: kasHospitalTS1
 color: blue
-position: -51,-18
+position: 149,-57
 ---
--> I have been hearing voices do you know why? 
+<<if get_flag("metKas")>>
+Kass: So kid? 
+<<declare $Bag = false>>
+-> yes let me sign those documents and let's get it over with.
+//End game
+-> What's the SDA? 
+    The sda is the safe disposal act, it makes it so bodies can not be kept for more than two weeks in cryo ba-- ehm cryo suits. 
+    <<set $Bag = true>>
+-> Is there someone else other than you here? 
+ There's Zoe upstairs from nine and sometimes sally swings by.
+
+-> is there a way to delay the SDA? 
+    You can try talking to the boss up stairs, she should be there from 10 onward.
+-> can you help me delay the SDA?
+    <<if social_check(13)>>
+    Kass: sure but let's meet here at 14 
+    <<if set_flag("kassDrugs")>><<endif>>
+    <<else>>
+    no.
+    <<endif>>
+<<else>>
+    <<detour meetKas>>
+<<endif>>
 ===
-title: kasHospitalTS4
+title: kasHospitalTS4A
 color: blue
-position: -43,141
+position: 38,101
 ---
-New node
+Oh hey kid!
+
+-> yes let me sign those documents and let's get it over with.
+//End game
+-> so can you help me? 
+    <<if get_flag("kassDrugs")>>no, i told you I can't. Go to Zoe upstairs maybe she knows.
+    <<else>>Sure but I'm gonna need you to do me a favour.
+    I need you to talk to someone for me.
+    Let's meet on Callisto.
+    <<endif>>
+===
+title: kasHospitalTS4B
+color: blue
+position: 262,103
+---
+Oh hey kid!
+
+-> yes let me sign those documents and let's get it over with.
+//End game
+-> so can you help me? 
 ===
 
 title: kasHospitalTS5
 color: blue
-position: -246,329
+position: 32,320
 ---
-New node
+Oh hey kid, can I help you with something? 
+
+-> yes let me sign those documents and let's get it over with.
+//End game
 ===
 
 title: kasWorkshopTS5
 color: green
-position: 136,333
+position: 250,319
 ---
-New node
+Kass: Ok do you see that guy over there? 
+-> yes... 
+    Kass: go to him and tell him I sent you, he has something for me. 
+-> who? Hickey? 
+    Kass: do you know him?! Oh well whatever. go to him and tell him I sent you, he has something for me.
+<<if set_flag("hickeyKass")>><<endif>>
 ===
 
 title: kasHospitalTS7
 color: blue
 position: -49,553
 ---
-New node
+<<if get_flag("kassDrugsSuccess")>>
+Thanks for before, I really appreciete it
+<<else>>
+<<endif>>
 ===

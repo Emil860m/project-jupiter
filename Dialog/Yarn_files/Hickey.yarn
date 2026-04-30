@@ -1,24 +1,165 @@
 title: hickWorkshopTS3
 color: green
-position: -445,-122
+position: -450,-167
 ---
-test
+<<if get_flag("metHick")>>
+Hickey greats you with his half smirk.
+Hick: Hey dude what can I do you for?
+
+<<once>>
+-> How've you been doing?
+    <<detour howYouDoing>>
+<<endonce>>
+<<once>>
+-> What's new around?
+    <<detour newAround>>
+<<endonce>>
+<<once>>
+-> How's your grandma?
+    <<detour grandma>>
+<<endonce>>
+<<if get_flag("deadDad")>> 
+<<once>>
+->So have you heard about dad?
+    <<detour dad>>
+<<endonce>>
+<<endif>>
+->See you later!
+    Sure dude, whenever you want!
+<<else>>
+<<detour meetHickey>>
+<<endif>>
 ===
 title: hickWorkshopTS5
 color: green
 position: -447,64
 ---
-New node
+<<if get_flag("metHick")>>
+Hickey is packing up a bunch of boxes on a crate.
+Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
+
+<<once>>
+-> Can I help you with those boxes?
+    <<detour boxesCheck>>
+<<endonce>>
+<<once>>
+<<if get_flag("kassDrugs")>>
+-> Listen do you know Kass?
+<<jump drugs>>
+<<endif>>
+<<endonce>>
+<<else>>
+<<detour meetHickey>>
+<<endif>>
 ===
 title: hickWorkshopTS6
 color: green
-position: -590,323
+position: -445,457
 ---
-New node
+<<if get_flag("metHick")>>
+<<once>>
+-> How've you been doing?
+    <<detour howYouDoing>>
+<<endonce>>
+<<once>>
+-> What's new around?
+    <<detour newAround>>
+<<endonce>>
+<<once>>
+-> How's your grandma?
+    <<detour grandma>>
+<<endonce>>
+<<if get_flag("deadDad")>> 
+<<once>>
+->So have you heard about dad?
+    <<detour dad>>
+<<endonce>>
+<<endif>>
+->See you later!
+    Sure dude, whenever you want!
+<<else>>
+<<detour meetHickey>>
+<<endif>>
 ===
 title: hickHospitalTS6
 color: blue
-position: -239,318
+position: -113,450
 ---
 New node
+===
+title: meetHickey
+color: blue
+position: -1021,-15
+---
+Description of hickey and that kher knows him.
+Hickey introduces himself and tells kher they remind him of someone
+
+-> how the fuck can you not remember me? did you smoke your last brain cell? 
+    hickey asks how has kher been doing
+    -> I've been good, just a bit tense from the journey.
+    -> Mah with the whole, my dad is dying situation?
+        probably been better.
+-> Nice to meet you complete stranger
+    Hick: Hey wait a minute... Kher dude! 
+    The guy jumps at you with a big hug. 
+    Dad: Jeez, since when he's so... touchy.
+    Hick: How have you been!
+    -> I've been good, just a bit tense from the journey. 
+    -> Mah with the whole, my dad is dying situation?
+        probably been better.
+===
+
+//DIALOGUES
+
+title: howYouDoing
+position: 137,300
+---
+Hick: I would say pretty good, I've got this lit job flying around the system now, and it's only slightly boring and exhausting. 
+The usual grin brightens the boy's face. <<if social_check(15)>> 
+Behind it a weird undertone of sadness, something not unusual for hickey, but this time it feels different.
+Dad: So what's wrong with the kid? 
+-> Geez, how should I know! I just got here.
+    Dad: Ok ok kid don't get too heated there!.
+-> Mmm, What do you think? should I ask?
+    Dad: Nah, The kid seems distressed just give him some space.
+<<if social_check(12)>> 
+KHER WILL UNDERSTAND THAT THE GUY IS A BIT SAD, THAT IS THE USUAL HICKEY STATUS BUT HE DOESN'T LIKE TO TALK ABOUT IT
+-> ASK WHAT'S UP
+    HICKEY SAYS NOTHING
+-> DON'T ASK
+<<else>>
+HICKEY SEEMS GENUALLY HAPPY
+-> SMILE BACK
+-> TELL HIM YOU SEE HIM WELL
+<<endif>>
+===
+title: dad
+position: 120,-80
+---
+Hick: Yeah I'm sorry Kher, <<if get_flag("KherWorker") or get_flag("noMessages")>> 
+I know he was not the best with you... but... nah forget it, no fucking but.
+Hickey open his arms to hug you 
+    -> Hug him back
+    
+    -> Bro no, that's gay //OK MAYBE NOT
+===
+title: newAround
+position: 118,-295
+---
+
+===
+title: grandma
+position: 123,100
+---
+
+===
+title: boxesCheck
+position: -284,263
+---
+
+===
+title: drugs
+position: -568,265
+---
+
 ===

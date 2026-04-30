@@ -3,12 +3,11 @@
 importer="yarn_spinner.project"
 type="Resource"
 uid="uid://djcvicsjdddnx"
-path="res://.godot/imported/obituary.yarnproject-c575d4639339dcf324c39177265217d5.res"
+valid=false
 
 [deps]
 
 source_file="res://obituary.yarnproject"
-dest_files=["res://.godot/imported/obituary.yarnproject-c575d4639339dcf324c39177265217d5.res"]
 
 [params]
 
