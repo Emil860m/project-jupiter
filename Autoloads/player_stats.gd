@@ -38,7 +38,7 @@ func dialog_check(succes: int, roll_kind: RollKind, stats: Array[PlayerStatTypes
 	var luck = 0
 	match roll_kind:
 		RollKind.normal:
-			luck = rng.randi_range(1,num_sides) >= succes
+			luck = rng.randi_range(1,num_sides)
 		RollKind.advantage:
 			luck = max(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
 		RollKind.disadvantage:

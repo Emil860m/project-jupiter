@@ -81,4 +81,4 @@ func get_sally_yarn_file(current_timestep: int, location: locations):
 # Time of day to in game timestep
 func td2ts(hours: int, mins: int):
 	var minutes: float = mins + 60 * hours
-	return floor(minutes / Globals.current_timestep)
+	return floor((minutes - Globals.minutes_before_timestep_zero) / Globals.minutes_per_timestep) 

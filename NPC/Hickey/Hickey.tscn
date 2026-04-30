@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byp4fkxcmqcr2"]
 
-[ext_resource type="Script" uid="uid://bu735a64tp7gt" path="res://NPC/NPC.gd" id="1_jlog5"]
+[ext_resource type="Script" path="res://NPC/NPC.gd" id="1_jlog5"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="2_nipkc"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_jcqdm"]
 
