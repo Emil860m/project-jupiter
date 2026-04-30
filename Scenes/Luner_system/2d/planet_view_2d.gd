@@ -15,8 +15,8 @@ var selected: Area2D
 @export var shipsDeltaV: Label
 @export var shipsMaxDeltaV: Label
 @export var hourLabel: Label
-@export var noice_max = 15.0
-@export var noice_min = 5.0
+@export var noice_max = ShipStats.noise_max
+@export var noice_min = ShipStats.noise_min
 var current_location: moon_2d
 @onready var button: Button = $UiElements/Button
 
