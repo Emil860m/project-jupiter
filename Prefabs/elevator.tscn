@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ddlg078extt" path="res://Assest/elevator/elevator.png" id="1_u2aw6"]
 [ext_resource type="Script" uid="uid://bf8dbpre1rtj5" path="res://Prefabs/elevator.gd" id="1_vhy44"]
 [ext_resource type="ArrayMesh" uid="uid://7co6tnu1ao2h" path="res://Assest/elevator/elevatorShaft.obj" id="2_ram11"]
-[ext_resource type="PackedScene" path="res://Components/interactable_component.tscn" id="2_woamy"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_woamy"]
 [ext_resource type="ArrayMesh" uid="uid://cpngpl8mwdhge" path="res://Assest/elevator/elevatorMain.obj" id="3_vhy44"]
 [ext_resource type="ArrayMesh" uid="uid://dqg4xf6n4ajwk" path="res://Assest/elevator/elevatorDoor.obj" id="4_woamy"]
 
