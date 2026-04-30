@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bkbvwgs1ahefh"]
+
+[ext_resource type="Texture2D" uid="uid://c14lts3a1yba6" path="res://Assest/sputnik/sputnik.png" id="1_33k85"]
+[ext_resource type="ArrayMesh" uid="uid://73xxw6u51dl4" path="res://Assest/sputnik/sputnik.obj" id="2_177wi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dk2if"]
+albedo_texture = ExtResource("1_33k85")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p83kc"]
+radius = 0.98779297
+height = 4.260254
+
+[node name="Node3D" type="Area3D" unique_id=876726287]
+
+[node name="Sputnik" type="MeshInstance3D" parent="." unique_id=1131053544]
+material_override = SubResource("StandardMaterial3D_dk2if")
+mesh = ExtResource("2_177wi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2000824909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.130127, 0)
+shape = SubResource("CapsuleShape3D_p83kc")

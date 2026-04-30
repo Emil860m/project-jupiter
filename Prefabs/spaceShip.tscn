@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://hsrm2flspp75"]
+
+[ext_resource type="Texture2D" uid="uid://bw5b1nr03vlr" path="res://Assest/spaceShip/spaceShip.png" id="1_qcvxl"]
+[ext_resource type="ArrayMesh" uid="uid://doo2mvrqxhadt" path="res://Assest/spaceShip/spaceShip.obj" id="2_qs11k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lvkvp"]
+albedo_texture = ExtResource("1_qcvxl")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qcvxl"]
+radius = 2.1816406
+height = 7.7874756
+
+[node name="Node3D" type="Area3D" unique_id=1587799082]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="SpaceShip" type="MeshInstance3D" parent="." unique_id=959517816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.027711868, 0, 0.006911516)
+material_override = SubResource("StandardMaterial3D_lvkvp")
+mesh = ExtResource("2_qs11k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2015757699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5326538, 0)
+shape = SubResource("CapsuleShape3D_qcvxl")
