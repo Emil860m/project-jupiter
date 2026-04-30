@@ -8,17 +8,17 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.RATIONALE
 @onready var main_view: CanvasLayer = $MainView
 @onready var leave_scene: CanvasLayer = $LeaveScene
 #Starters
-@onready var starter_1: Buff_Button = $Starters/VBoxContainer/Starter1
-@onready var starter_2: Buff_Button = $Starters/VBoxContainer/Starter2
-@onready var starter_3: Buff_Button = $Starters/VBoxContainer/Starter3
+@onready var starter_1: Buff_Button = $Starters/Starter1
+@onready var starter_2: Buff_Button = $Starters/Starter2
+@onready var starter_3: Buff_Button = $Starters/Starter3
 #Mains
-@onready var main_1: Buff_Button = $MainCourse/VBoxContainer/Main1
-@onready var main_2: Buff_Button = $MainCourse/VBoxContainer/Main2
-@onready var main_3: Buff_Button = $MainCourse/VBoxContainer/Main3
+@onready var main_1: Buff_Button = $MainCourse/Main1
+@onready var main_2: Buff_Button = $MainCourse/Main2
+@onready var main_3: Buff_Button = $MainCourse/Main3
 #Desserts
-@onready var dessert_1: Buff_Button = $Dessert/VBoxContainer/Dessert1
-@onready var dessert_2: Buff_Button = $Dessert/VBoxContainer/Dessert2
-@onready var dessert_3: Buff_Button = $Dessert/VBoxContainer/Dessert3
+@onready var dessert_1: Buff_Button = $Dessert/Dessert1
+@onready var dessert_2: Buff_Button = $Dessert/Dessert2
+@onready var dessert_3: Buff_Button = $Dessert/Dessert3
 
 @export var scene_to_load: String
 

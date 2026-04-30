@@ -9,6 +9,7 @@ extends StaticBody3D
 func _ready() -> void:
 	elevator_shaft.visible = show_shaft
 	interactable_component.interact = _interact
+	SoundController.play_elevator()
 	
 func _interact() -> void:
 	SceneController.goto_scene(scene_to_load_path)

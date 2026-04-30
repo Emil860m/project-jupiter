@@ -15,8 +15,8 @@ var selected: Area2D
 @export var shipsDeltaV: Label
 @export var shipsMaxDeltaV: Label
 @export var hourLabel: Label
-@export var noice_max = 15.0
-@export var noice_min = 5.0
+@export var noice_max = ShipStats.noise_max
+@export var noice_min = ShipStats.noise_min
 var current_location: moon_2d
 @onready var button: Button = $UiElements/Button
 
@@ -81,6 +81,7 @@ func _on_travel_button_up() -> void:
 	if selected:
 		SoundController.play_mid_boop()
 		if ShipStats.get_unused_stat_allocation_points() > 0:
+			$UiElements/statPointPopup/Label.text = "You have unallocated poj!"
 			statPointPopup.visible = true
 			return
 		Globals.increment_timestep(selected.estimated_travel_time)
@@ -98,6 +99,9 @@ func _on_travel_button_up() -> void:
 				selected.estimated_loc.global_position)
 		else:
 			SceneController.reload_scene()
+	else:
+		$UiElements/statPointPopup/Label.text = "Please select a location to travel to!"
+		statPointPopup.visible = true
 
 
 func _on_exit_button_up() -> void:

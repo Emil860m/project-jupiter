@@ -13,6 +13,9 @@ var fuel_cap = 50
 var damage = 0
 const severity_const = 3
 
+var noise_max = 15
+var noise_min = 5
+
 enum ShipStatTypes {
 	speed,
 	fuel_consumption,
@@ -52,6 +55,8 @@ func de_allocate_stat(stat_type: ShipStatTypes, amount = 1):
 
 
 func damage_ship(damage_number: int):
+	SoundController.play_take_damage(damage_number)
+	
 	damage += damage_number
 	if damage > 10:
 		SceneController.should_tow_truck = true
@@ -75,6 +80,10 @@ func upgrade_fuel_cap(added_fuel: int):
 
 func upgrade_poj(added_poj: int):
 	_unused_stat_allocation_points += added_poj
+
+func reduce_noise():
+	noise_max = 5
+	noise_min = 0
 
 ## Event Stuff
 var rng = RandomNumberGenerator.new()

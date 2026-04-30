@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cs55xxpbvxs4e"]
 
-[ext_resource type="Script" uid="uid://kr0vvj187uvi" path="res://NPC/Kassandra/kassandra.gd" id="1_odbrj"]
+[ext_resource type="Script" uid="uid://bu735a64tp7gt" path="res://NPC/NPC.gd" id="1_odbrj"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="2_5txjl"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_1r4dw"]
 
@@ -10,6 +10,7 @@
 
 [node name="Kassandra" type="StaticBody3D" unique_id=1964364760]
 script = ExtResource("1_odbrj")
+character_name = "Kassandra"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=429344779]
 mesh = SubResource("CapsuleMesh_tw3f4")
@@ -19,9 +20,6 @@ shape = SubResource("CapsuleShape3D_6b15a")
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_5txjl")]
 
-[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_1r4dw")]
-meshs = [NodePath("../MeshInstance3D")]
+[node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("3_1r4dw")]
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

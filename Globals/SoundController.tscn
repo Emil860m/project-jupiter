@@ -35,3 +35,16 @@ event_guid = "{2e40bc50-b8c4-44da-983c-484c135d589a}"
 [node name="HighBoop" type="FmodEventEmitter2D" parent="UIEmitters" unique_id=1075407766]
 event_name = "event:/Boops/HighBoop"
 event_guid = "{dc68b1d7-e19c-4b20-813f-b05127ddaf1a}"
+
+[node name="SFXEmitters" type="Node" parent="." unique_id=31679308]
+
+[node name="DmgEmitter" type="FmodEventEmitter2D" parent="SFXEmitters" unique_id=70029398]
+event_name = "event:/SFX/DMG"
+event_guid = "{e349c3a8-cf00-4cde-8a74-addbec16c993}"
+fmod_parameters/DMGSeverity/id = -6968140311765142455
+fmod_parameters/DMGSeverity = 0
+fmod_parameters/DMGSeverity/variant_type = 2
+
+[node name="ElevatorEmitter" type="FmodEventEmitter2D" parent="SFXEmitters" unique_id=603556662]
+event_name = "event:/SFX/ELEVATOR"
+event_guid = "{b7f8b45e-709c-41af-9a67-f8db0d3f16e1}"
