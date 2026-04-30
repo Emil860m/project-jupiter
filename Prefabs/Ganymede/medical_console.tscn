@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdsa300k46exl"]
 
-[ext_resource type="Script" uid="uid://dcuvp55q64f7y" path="res://Prefabs/Ganymede/midical_console.gd" id="1_j3opr"]
+[ext_resource type="Script" path="res://Prefabs/Ganymede/midical_console.gd" id="1_j3opr"]
 [ext_resource type="ArrayMesh" uid="uid://bv0hudyxourhg" path="res://Assest/MedicalColsole/medicalConsole.obj" id="1_u3d1p"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_i3843"]
 

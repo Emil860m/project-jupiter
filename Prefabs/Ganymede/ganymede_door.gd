@@ -5,9 +5,11 @@ extends StaticBody3D
 @onready var interactable_component: Node3D = $InteractableComponent
 
 var isOpen = false
+@export var object_id : String
 
 func _ready() -> void:
 	interactable_component.interact = _interact
+	interactable_component.object_id = object_id
 	
 func _interact() -> void:
 	isOpen = !isOpen

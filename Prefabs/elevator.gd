@@ -5,8 +5,10 @@ extends StaticBody3D
 @onready var elevator_shaft: MeshInstance3D = $ElevatorShaft
 
 @export var show_shaft: bool = false
+@export var object_id : String
 
 func _ready() -> void:
+	interactable_component.object_id = object_id
 	elevator_shaft.visible = show_shaft
 	interactable_component.interact = _interact
 	SoundController.play_elevator()
