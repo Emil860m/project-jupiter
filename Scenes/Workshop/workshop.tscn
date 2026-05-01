@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://uwfhfsk24ixx" path="res://Assest/metalFloorA/metalFloorA.png" id="1_arkt1"]
 [ext_resource type="PackedScene" uid="uid://rtalwl87sm8j" path="res://Prefabs/Characters/player.tscn" id="1_ij6ys"]
 [ext_resource type="PackedScene" uid="uid://copv0004jd2rx" path="res://Prefabs/elevator.tscn" id="1_lncj0"]
+[ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="3_7mn4c"]
 [ext_resource type="PackedScene" uid="uid://t204wnkm60ud" path="res://Prefabs/MiscProps/railing.tscn" id="3_h5e36"]
 [ext_resource type="PackedScene" uid="uid://cmj6vjhjd07ov" path="res://Prefabs/Calisto/workshop_building.tscn" id="3_lww2u"]
 [ext_resource type="PackedScene" uid="uid://cklmbjayw8rdu" path="res://Prefabs/pipe.tscn" id="5_ga7uk"]
@@ -12,12 +13,22 @@
 [ext_resource type="PackedScene" uid="uid://df7xam4gho5q1" path="res://Prefabs/pipe_valve.tscn" id="7_amkcv"]
 [ext_resource type="PackedScene" uid="uid://maojlvkx0p48" path="res://Prefabs/Calisto/rubble.tscn" id="9_ga7uk"]
 [ext_resource type="PackedScene" uid="uid://bpk7jqh8nnckm" path="res://Prefabs/MiscProps/spherical_tank.tscn" id="11_6kvd0"]
+[ext_resource type="PackedScene" uid="uid://cxb2jaomgdav3" path="res://Prefabs/MiscProps/barrel.tscn" id="12_if5wu"]
 [ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="13_8cm3j"]
 [ext_resource type="PackedScene" uid="uid://hsrm2flspp75" path="res://Prefabs/spaceShip.tscn" id="14_q2001"]
 [ext_resource type="PackedScene" uid="uid://ql573cu8ftbd" path="res://Prefabs/Signs/exitSign.tscn" id="15_8cm3j"]
 [ext_resource type="PackedScene" uid="uid://c7037cetqutpk" path="res://Prefabs/Calisto/calisto_console.tscn" id="16_nitod"]
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="17_eoxxw"]
 [ext_resource type="PackedScene" uid="uid://bkbvwgs1ahefh" path="res://Prefabs/sputnik.tscn" id="18_eoxxw"]
+[ext_resource type="PackedScene" uid="uid://xssi2idlokcw" path="res://Prefabs/MiscProps/desk.tscn" id="21_touvs"]
+[ext_resource type="PackedScene" uid="uid://b775kktubciyu" path="res://Prefabs/MiscProps/wrench.tscn" id="22_d36iu"]
+[ext_resource type="PackedScene" uid="uid://bw2sc4dr7iwrb" path="res://Prefabs/MiscProps/gas_tank.tscn" id="23_qfn8v"]
+[ext_resource type="PackedScene" uid="uid://dbhyw7ptbtwe0" path="res://Prefabs/MiscProps/termos.tscn" id="24_uatr3"]
+[ext_resource type="PackedScene" uid="uid://c35r2pgmi3h75" path="res://Prefabs/Signs/warningSign.tscn" id="25_dt0t6"]
+[ext_resource type="PackedScene" uid="uid://dlrnrg02hko8h" path="res://Prefabs/Signs/pipesSign.tscn" id="26_w7kre"]
+[ext_resource type="PackedScene" uid="uid://bw10nsv4kuf4i" path="res://Prefabs/fire_stopper.tscn" id="27_uatr3"]
+[ext_resource type="PackedScene" uid="uid://dg53kqsa2pt0o" path="res://Prefabs/industrial_liquid_tank_a.tscn" id="28_w7kre"]
+[ext_resource type="PackedScene" uid="uid://bdf7i3bbqacsb" path="res://Prefabs/radio_box.tscn" id="29_sfr3q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehkgj"]
 albedo_color = Color(0.9157694, 0.9157693, 0.9157694, 1)
@@ -148,6 +159,9 @@ mesh = SubResource("PlaneMesh_lncj0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
 shape = SubResource("BoxShape3D_lncj0")
 
+[node name="Cup" parent="WORLD/Floor/StaticBody3D" unique_id=385252958 instance=ExtResource("3_7mn4c")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -11.267938, 1.3090665, 23.358688)
+
 [node name="WorkshopBuilding" parent="WORLD" unique_id=770807735 instance=ExtResource("3_lww2u")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -16.29164, -0.002992019, 9.305994)
 
@@ -274,7 +288,25 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.
 [node name="PipeCurve" parent="WORLD/Pipes" unique_id=1981491263 instance=ExtResource("6_0ysvs")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="PipeCurve3" parent="WORLD/Pipes" unique_id=2033087110 instance=ExtResource("6_0ysvs")]
+[node name="PipeCurve8" parent="WORLD/Pipes" unique_id=2033087110 instance=ExtResource("6_0ysvs")]
+transform = Transform3D(-8.742278e-08, -1, 4.371139e-08, -4.3711392e-08, -4.3711385e-08, -1, 1, -8.742278e-08, -4.3711385e-08, -32.618084, 5.5191774, 33.95375)
+
+[node name="PipeCurve9" parent="WORLD/Pipes" unique_id=1293688117 instance=ExtResource("6_0ysvs")]
+transform = Transform3D(-8.742278e-08, -1, 4.371139e-08, -4.3711392e-08, -4.3711385e-08, -1, 1, -8.742278e-08, -4.3711385e-08, -32.618088, 5.5191774, 35.527077)
+
+[node name="PipeCurve10" parent="WORLD/Pipes" unique_id=1373849272 instance=ExtResource("6_0ysvs")]
+transform = Transform3D(1.7484555e-07, 1, -4.37114e-08, -4.3711392e-08, -4.3711385e-08, -1, -1, 1.7484555e-07, 4.3711374e-08, -32.61809, 5.5191774, 35.527077)
+
+[node name="PipeCurve11" parent="WORLD/Pipes" unique_id=646214977 instance=ExtResource("6_0ysvs")]
+transform = Transform3D(1.7484555e-07, 1, -4.37114e-08, -4.3711392e-08, -4.3711385e-08, -1, -1, 1.7484555e-07, 4.3711374e-08, -32.618088, 5.5191774, 33.95375)
+
+[node name="PipeCurve6" parent="WORLD/Pipes" unique_id=566363788 instance=ExtResource("6_0ysvs")]
+transform = Transform3D(-8.742278e-08, -1, 4.371139e-08, -4.3711392e-08, -4.3711385e-08, -1, 1, -8.742278e-08, -4.3711385e-08, -9.150791, -2.2903256, 5.5368176)
+
+[node name="PipeCurve7" parent="WORLD/Pipes" unique_id=1317377477 instance=ExtResource("6_0ysvs")]
+transform = Transform3D(-8.742278e-08, -1, 4.371139e-08, -4.3711392e-08, -4.3711385e-08, -1, 1, -8.742278e-08, -4.3711385e-08, -9.150793, -2.2903256, 4.097534)
+
+[node name="PipeCurve3" parent="WORLD/Pipes" unique_id=1763971067 instance=ExtResource("6_0ysvs")]
 transform = Transform3D(-3.059797e-08, 0.7, -3.059797e-08, 0, -3.059797e-08, -0.7, -0.7, -3.059797e-08, 1.33748e-15, -21.773323, -1.7153262, 31.724821)
 
 [node name="PipeCurve5" parent="WORLD/Pipes" unique_id=478145565 instance=ExtResource("6_0ysvs")]
@@ -454,6 +486,9 @@ transform = Transform3D(0.0065367618, -0.0043823295, -0.9999691, 0.00017519236, 
 [node name="Rubble" parent="WORLD" unique_id=2104201558 instance=ExtResource("9_ga7uk")]
 transform = Transform3D(-0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.49999997, 30.03477, 0.6384535, 16.95408)
 
+[node name="Barrel" parent="WORLD" unique_id=83570398 instance=ExtResource("12_if5wu")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -17.26392, 0.05364979, 16.595713)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=421776166]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03476906, -0.08213806, -0.04591942)
 visible = false
@@ -468,10 +503,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.506323, 1, -20.27634)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=136272658]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 36, 0)
 light_color = Color(0.91333306, 0.7182013, 0.6031431, 1)
-light_energy = 0.719
+light_energy = 0.244
 
 [node name="SphericalTank" parent="." unique_id=1914260558 instance=ExtResource("11_6kvd0")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -18.817352, 0.114392236, 25.872616)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -11.939215, 0.114392236, 24.777555)
+
+[node name="SphericalTank2" parent="." unique_id=1888375559 instance=ExtResource("11_6kvd0")]
+transform = Transform3D(0.60738724, 0, -0.34796658, 0, 0.7, 0, 0.34796658, 0, 0.60738724, -14.115009, 0.114392236, 25.357172)
 
 [node name="TrashCan" parent="." unique_id=1349536050 instance=ExtResource("13_8cm3j")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.075, 0, -27.247)
@@ -490,9 +528,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.236021, 2.954874, -25.9346
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=25128391]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.006962, 1.8338535, -17.944448)
-light_color = Color(0.86117285, 0.8183423, 0.46604812, 1)
+light_color = Color(0.8918154, 0.79758435, 0.56549597, 1)
 omni_range = 2.239
-omni_attenuation = 3.544
+omni_attenuation = 2.158
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1683854382]
 transform = Transform3D(-0.41618565, 0, 0.90927964, 0, 1, 0, -0.90927964, 0, -0.41618565, 25.100256, 1.774533, 8.160692)
@@ -523,6 +561,7 @@ light_energy = 2.333
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1470457489]
 transform = Transform3D(1, 0, 0, 0, 0.32276136, 0.9464804, 0, -0.9464804, 0.32276136, -8.769989, 11.959628, 23.414225)
+visible = false
 light_color = Color(1, 0.7607843, 0.6392157, 1)
 light_bake_mode = 1
 shadow_enabled = true
@@ -557,8 +596,74 @@ spot_range = 19.07786
 spot_attenuation = -0.49
 spot_angle = 39.689068
 
-[node name="SpotLight3D7" type="SpotLight3D" parent="." unique_id=1516226915]
-transform = Transform3D(0.048729975, 0.7823249, 0.6209615, -0.03622026, -0.6199071, 0.78383887, 0.99815506, -0.060687836, -0.0018720443, 20.726538, 9.127582, -15.182613)
+[node name="SpotLight3D7" type="SpotLight3D" parent="." unique_id=2089073390]
+transform = Transform3D(1, 0, 0, 0, -0.261448, 0.9652176, 0, -0.9652176, -0.261448, -1.0942125, 11.959627, -6.908018)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 19.07786
+spot_attenuation = -0.49
+spot_angle = 39.689068
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="." unique_id=27981072]
+transform = Transform3D(0.9687738, -0.064824976, 0.23932183, -0.24754965, -0.1983264, 0.9483594, -0.0140135465, -0.97798985, -0.20818083, 9.020635, 7.6308603, -12.252266)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 19.07786
+spot_attenuation = -0.49
+spot_angle = 29.908049
+spot_angle_attenuation = 2.07053
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="." unique_id=990589610]
+transform = Transform3D(0.96877384, -0.06482498, 0.23932184, -0.24754967, -0.19832642, 0.94835955, -0.014013547, -0.97799, -0.20818084, 9.020635, 7.6308603, -7.1182165)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 19.07786
+spot_attenuation = -0.49
+spot_angle = 33.728416
+spot_angle_attenuation = 2.07053
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="." unique_id=165392069]
+transform = Transform3D(0.96877384, -0.06482498, 0.23932184, -0.24754967, -0.19832642, 0.94835955, -0.014013547, -0.97799, -0.20818084, 9.020635, 7.6308603, -1.3478866)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 19.07786
+spot_attenuation = -0.49
+spot_angle = 32.24102
+spot_angle_attenuation = 2.07053
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="." unique_id=1644323048]
+transform = Transform3D(1, 0, 0, 0, -0.261448, 0.9652176, 0, -0.9652176, -0.261448, 18.097303, 11.959627, -6.908018)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 19.07786
+spot_attenuation = -0.49
+spot_angle = 39.689068
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="." unique_id=261740430]
+transform = Transform3D(1, 0, 0, 0, -0.261448, 0.9652176, 0, -0.9652176, -0.261448, -1.0942125, 11.959627, -21.734806)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 19.07786
+spot_attenuation = -0.49
+spot_angle = 39.689068
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="." unique_id=1041609212]
+transform = Transform3D(1, 0, 0, 0, -0.261448, 0.9652176, 0, -0.9652176, -0.261448, 8.432753, 11.959627, -21.734806)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 19.07786
+spot_attenuation = -0.49
+spot_angle = 39.689068
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="." unique_id=1321308258]
+transform = Transform3D(1, 0, 0, 0, -0.261448, 0.9652176, 0, -0.9652176, -0.261448, 18.097303, 11.959627, -21.734806)
 light_color = Color(1, 0.7607843, 0.6392157, 1)
 light_bake_mode = 1
 shadow_enabled = true
@@ -576,7 +681,7 @@ spot_attenuation = -0.49
 spot_angle = 39.689068
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=835161589]
-transform = Transform3D(1, 0, 0, 0, 0.32276136, 0.9464804, 0, -0.9464804, 0.32276136, -10.380125, 11.959628, 12.879503)
+transform = Transform3D(1, 0, 0, 0, 0.32276136, 0.9464804, 0, -0.9464804, 0.32276136, -10.380125, 11.959628, 7.9001656)
 light_color = Color(1, 0.7607843, 0.6392157, 1)
 light_bake_mode = 1
 shadow_enabled = true
@@ -584,8 +689,19 @@ spot_range = 21.593111
 spot_attenuation = -0.49
 spot_angle = 39.252014
 
+[node name="SpotLight3D14" type="SpotLight3D" parent="." unique_id=810021303]
+transform = Transform3D(0.99575675, -0.021947693, -0.08936891, 0.01610251, -0.9146045, 0.40402904, -0.090604715, -0.40375367, -0.9103701, -17.610165, 3.1760616, 13.614964)
+light_color = Color(1, 0.7607843, 0.6392157, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 17.775713
+spot_attenuation = -1.24
+spot_angle = 44.046608
+spot_angle_attenuation = 0.8122517
+
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1682265140]
 transform = Transform3D(1, 0, 0, 0, 0.32276136, 0.9464804, 0, -0.9464804, 0.32276136, -19.123371, 11.959628, 23.414225)
+visible = false
 light_color = Color(1, 0.7607843, 0.6392157, 1)
 light_bake_mode = 1
 shadow_enabled = true
@@ -600,7 +716,211 @@ transform = Transform3D(0.5630652, 0.6267286, -0.5386732, -0.6536485, -0.0610941
 transform = Transform3D(-8.742278e-09, 0, 0.2, 0.02035364, 0.19896163, 8.896859e-10, -0.19896163, 0.02035364, -8.696889e-09, 20.632183, 2.4101617, 11.606916)
 
 [node name="IndustrialLightA4" parent="." unique_id=431711592 instance=ExtResource("17_eoxxw")]
-transform = Transform3D(-8.742278e-09, 0, 0.2, 0.02035364, 0.19896163, 8.896859e-10, -0.19896163, 0.02035364, -8.696889e-09, 10.712568, 2.4101617, 11.606916)
+transform = Transform3D(-8.742278e-09, 0, 0.2, 0.02035364, 0.19896163, 8.896859e-10, -0.19896163, 0.02035364, -8.696889e-09, 10.8547125, 2.4101617, 11.606916)
 
 [node name="IndustrialLightA5" parent="." unique_id=1250319004 instance=ExtResource("17_eoxxw")]
 transform = Transform3D(-8.742278e-09, 0, 0.2, 0.02035364, 0.19896163, 8.896859e-10, -0.19896163, 0.02035364, -8.696889e-09, 0.7084367, 2.4101617, 11.606916)
+
+[node name="Desk" parent="." unique_id=10184086 instance=ExtResource("21_touvs")]
+transform = Transform3D(0.54570496, 0, -0.43841314, 0, 0.7, 0, 0.43841314, 0, 0.54570496, -10.83705, 0.05383829, 20.95089)
+
+[node name="Wrench" parent="." unique_id=223653445 instance=ExtResource("22_d36iu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.238401, 1.2935337, 22.812813)
+
+[node name="Wrench2" parent="." unique_id=1095564390 instance=ExtResource("22_d36iu")]
+transform = Transform3D(0.28848508, 0, -0.08231869, 0, 0.3, 0, 0.08231869, 0, 0.28848508, -12.188757, 1.2935342, 22.744867)
+
+[node name="GasTank" parent="." unique_id=1297532690 instance=ExtResource("23_qfn8v")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -17.542564, 0.12503919, 16.51854)
+
+[node name="GasTank2" parent="." unique_id=825093584 instance=ExtResource("23_qfn8v")]
+transform = Transform3D(0.0037427102, -0.5105665, -0.31513152, 0.5999839, 0.0043981853, 0, 0.0023100113, -0.31512305, 0.5105802, -16.440565, 1.2182068, 17.65802)
+
+[node name="Termos" parent="." unique_id=500274287 instance=ExtResource("24_uatr3")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.993775, 1.5603673, 15.64028)
+
+[node name="Node3D4" parent="." unique_id=384342951 instance=ExtResource("25_dt0t6")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -15.71824, 2.5905795, 11.646576)
+
+[node name="Node3D5" parent="." unique_id=158490456 instance=ExtResource("26_w7kre")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 8.01946, 1.016695, -9.911655)
+
+[node name="FireStopper" parent="." unique_id=360190013 instance=ExtResource("27_uatr3")]
+transform = Transform3D(0.09437785, 0, 0.17633156, 0, 0.2, 0, -0.17633156, 0, 0.09437785, -11.099806, 0.62043697, 21.51148)
+
+[node name="IndustrialLiquidTankA" parent="." unique_id=925635222 instance=ExtResource("28_w7kre")]
+transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, 17.948944, 3.118585, 11.234605)
+
+[node name="IndustrialLiquidTankA2" parent="." unique_id=1698866514 instance=ExtResource("28_w7kre")]
+transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, 19.295233, 3.118585, 11.234605)
+
+[node name="RadioBox" parent="." unique_id=1423128728 instance=ExtResource("29_sfr3q")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.421111, 2.7732897, -14.289262)
+
+[node name="Pipe" parent="." unique_id=1933763195 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.816107, 5.8115587, -14.449774)
+
+[node name="Pipe2" parent="." unique_id=2136621727 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.815489, 5.8115587, -16.060913)
+
+[node name="Pipe3" parent="." unique_id=36825917 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.816107, 9.755264, -14.449774)
+
+[node name="Pipe4" parent="." unique_id=1434072254 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.815489, 9.755264, -16.060913)
+
+[node name="Pipe13" parent="." unique_id=1112409753 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, 0, -4.371139e-08, -1, 0.99999994, -0.00038384198, 1.6778268e-11, 9.689803, 2.0315924, 2.5712366)
+
+[node name="Pipe14" parent="." unique_id=360400087 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, 0, -4.371139e-08, -1, 0.99999994, -0.00038384198, 1.6778268e-11, 8.078664, 2.0315924, 2.5706186)
+
+[node name="Pipe15" parent="." unique_id=2101636692 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, 0, -4.371139e-08, -1, 0.99999994, -0.00038384198, 1.6778268e-11, 9.689803, 5.975298, 2.5712366)
+
+[node name="Pipe16" parent="." unique_id=271881242 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, 0, -4.371139e-08, -1, 0.99999994, -0.00038384198, 1.6778268e-11, 8.078664, 5.975298, 2.5706186)
+
+[node name="Pipe17" parent="." unique_id=179047980 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.761986, 10.347943, 6.9284115)
+
+[node name="Pipe18" parent="." unique_id=1230250705 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.1508465, 10.348561, 6.9284115)
+
+[node name="Pipe19" parent="." unique_id=2017305809 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.761986, 10.347943, 10.872117)
+
+[node name="Pipe20" parent="." unique_id=2138653855 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.1508465, 10.348561, 10.872117)
+
+[node name="Pipe21" parent="." unique_id=756011527 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.788022, 10.347943, 14.825684)
+
+[node name="Pipe22" parent="." unique_id=665127959 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.176883, 10.348561, 14.825684)
+
+[node name="Pipe23" parent="." unique_id=1198258214 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.788022, 10.347943, 18.769388)
+
+[node name="Pipe24" parent="." unique_id=986980329 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.176883, 10.348561, 18.769388)
+
+[node name="Pipe25" parent="." unique_id=2129169300 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.761986, 10.347943, 22.48249)
+
+[node name="Pipe26" parent="." unique_id=2033330875 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.1508465, 10.348561, 22.48249)
+
+[node name="Pipe31" parent="." unique_id=467218349 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.761986, 10.347943, -17.328302)
+
+[node name="Pipe32" parent="." unique_id=1705621524 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.1508465, 10.348561, -17.328302)
+
+[node name="Pipe33" parent="." unique_id=2143518194 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.761986, 10.347943, -13.384598)
+
+[node name="Pipe34" parent="." unique_id=74801383 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.1508465, 10.348561, -13.384598)
+
+[node name="Pipe35" parent="." unique_id=188104493 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.788022, 10.347943, -9.431031)
+
+[node name="Pipe36" parent="." unique_id=1627562889 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.176883, 10.348561, -9.431031)
+
+[node name="Pipe37" parent="." unique_id=570279900 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.788022, 10.347943, -5.4873266)
+
+[node name="Pipe38" parent="." unique_id=460549087 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.176883, 10.348561, -5.4873266)
+
+[node name="Pipe41" parent="." unique_id=2105865623 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.739179, 10.347943, -33.199898)
+
+[node name="Pipe42" parent="." unique_id=177241577 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.128039, 10.348561, -33.199898)
+
+[node name="Pipe43" parent="." unique_id=1508197158 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.739179, 10.347943, -29.256193)
+
+[node name="Pipe44" parent="." unique_id=725735471 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.128039, 10.348561, -29.256193)
+
+[node name="Pipe45" parent="." unique_id=2102512456 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.765215, 10.347943, -25.302626)
+
+[node name="Pipe46" parent="." unique_id=1736762317 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.154076, 10.348561, -25.302626)
+
+[node name="Pipe47" parent="." unique_id=287614624 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.765215, 10.347943, -21.358923)
+
+[node name="Pipe48" parent="." unique_id=1031590679 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.154076, 10.348561, -21.358923)
+
+[node name="Pipe49" parent="." unique_id=1238880919 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.739179, 10.347943, -44.118633)
+
+[node name="Pipe50" parent="." unique_id=17676106 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.128039, 10.348561, -44.118633)
+
+[node name="Pipe51" parent="." unique_id=1087745135 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.739179, 10.347943, -40.174927)
+
+[node name="Pipe52" parent="." unique_id=1880660762 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.128039, 10.348561, -40.174927)
+
+[node name="Pipe53" parent="." unique_id=651298787 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.765215, 10.347943, -36.221363)
+
+[node name="Pipe54" parent="." unique_id=996887273 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.154076, 10.348561, -36.221363)
+
+[node name="Pipe55" parent="." unique_id=1658295129 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.765215, 10.347943, -32.277657)
+
+[node name="Pipe56" parent="." unique_id=340873184 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.154076, 10.348561, -32.277657)
+
+[node name="Pipe39" parent="." unique_id=663283453 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.761986, 10.347943, -1.7742243)
+
+[node name="Pipe40" parent="." unique_id=1712920200 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.1508465, 10.348561, -1.7742243)
+
+[node name="Pipe27" parent="." unique_id=992002898 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.788022, 10.347943, 26.436056)
+
+[node name="Pipe28" parent="." unique_id=56251553 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.176883, 10.348561, 26.436056)
+
+[node name="Pipe29" parent="." unique_id=520341843 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 9.788022, 10.347943, 30.37976)
+
+[node name="Pipe30" parent="." unique_id=173751741 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.00038384198, -0.99999994, 4.3711385e-08, -0.99999994, 0.00038384198, 4.369461e-08, -4.3711385e-08, -4.369461e-08, -1, 8.176883, 10.348561, 30.37976)
+
+[node name="Pipe5" parent="." unique_id=877332897 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.816107, 13.716792, -14.449774)
+
+[node name="Pipe6" parent="." unique_id=844898712 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.815489, 13.716792, -16.060913)
+
+[node name="Pipe7" parent="." unique_id=1811593778 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.816107, 17.660498, -14.449774)
+
+[node name="Pipe8" parent="." unique_id=118169514 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.815489, 17.660498, -16.060913)
+
+[node name="Pipe9" parent="." unique_id=49257852 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.816107, 21.609554, -14.449774)
+
+[node name="Pipe10" parent="." unique_id=1568717248 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.815489, 21.609554, -16.060913)
+
+[node name="Pipe11" parent="." unique_id=415080433 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.816107, 25.553259, -14.449774)
+
+[node name="Pipe12" parent="." unique_id=255167099 instance=ExtResource("5_ga7uk")]
+transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.815489, 25.553259, -16.060913)

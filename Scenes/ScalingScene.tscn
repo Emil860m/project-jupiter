@@ -96,9 +96,6 @@ transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -7.0245447, 1.605918
 [node name="IvRack" parent="." unique_id=52509290 instance=ExtResource("8_jnh05")]
 transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, -7.133069, 0, -5.4092336)
 
-[node name="MidicalConsole" parent="." unique_id=1574312724]
-transform = Transform3D(-1.3987644e-08, 0, 0.32, 0, 0.32, 0, -0.32, 0, -1.3987644e-08, -7.5388727, 0, -3.8565226)
-
 [node name="Barrel" parent="." unique_id=83570398 instance=ExtResource("10_hycun")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -9.019046, 0, -2.1974468)
 
