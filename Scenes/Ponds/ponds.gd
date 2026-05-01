@@ -20,10 +20,10 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 
 @onready var main_menu: CanvasLayer = $MainMenu
 @onready var upgrade_menu: CanvasLayer = $UpgradeMenu
-@onready var _animated_sprite_1 = $MainMenu/BCG1
-@onready var _animated_sprite_2 = $MainMenu/BCG2
-@onready var _animated_sprite_3 = $UpgradeMenu/BCG3
-@onready var _animated_sprite_4 = $UpgradeMenu/BCG4
+@onready var _animated_sprite_1 = $Background/BCG1
+@onready var _animated_sprite_2 = $Background/BCG2
+@onready var _animated_sprite_3 = $Background/BCG3
+@onready var _animated_sprite_4 = $Background/BCG4
 
 @onready var fuel_upgrade_button = $UpgradeMenu/FuelUpgrade
 @onready var poj_upgrade_button = $UpgradeMenu/StatAllocationUpgrade
@@ -58,7 +58,8 @@ func check_upgrades():
 	noise_reduction_button.disabled = Flags.get_flag("HasNoiseReduction1")
 
 func _on_leave_button_up() -> void:
-	#ShipStats.damage = 10
+	if Globals.interacting:
+		return
 	if ShipStats.fuel <= 0:
 		main_label.text = 'Your fuel is to low to travel. Please refuel your ship'
 		timer.start(1.5)
@@ -71,6 +72,8 @@ func _on_leave_button_up() -> void:
 
 
 func _on_refuel_button_button_up() -> void:
+	if Globals.interacting:
+		return
 	main_label.text = 'Your ship has been refueled'
 	timer.start(1.5)
 	ShipStats.refuel()
@@ -78,6 +81,8 @@ func _on_refuel_button_button_up() -> void:
 
 
 func _on_repair_button_button_up() -> void:
+	if Globals.interacting:
+		return
 	main_label.text = 'Your ship has been repaired'
 	timer.start(1.5)
 	ShipStats.repair()
@@ -90,13 +95,23 @@ func _on_timer_timeout() -> void:
 
 
 func _on_upgrade_button_button_up() -> void:
+	if Globals.interacting:
+		return
 	upgrade_menu.visible = true
 	main_menu.visible = false
+	_animated_sprite_1.visible = false
+	_animated_sprite_2.visible = false
+	_animated_sprite_3.visible = true
+	_animated_sprite_4.visible = true
 
 
 func _on_back_button_button_up() -> void:
 	main_menu.visible = true
 	upgrade_menu.visible = false
+	_animated_sprite_1.visible = true
+	_animated_sprite_2.visible = true
+	_animated_sprite_3.visible = false
+	_animated_sprite_4.visible = false
 
 
 func _on_fuel_upgrade_button_up() -> void:
