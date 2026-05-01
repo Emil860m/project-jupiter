@@ -2,10 +2,11 @@ extends StaticBody3D
 
 @onready var interactable_component: Node3D = $InteractableComponent
 
+@export var object_id : String
 
 func _ready() -> void:
-	interactable_component.object_id = "medical_console"
 	interactable_component.interact = _interact
+	interactable_component.object_id = object_id
 
 func _interact() -> void:
 	pass

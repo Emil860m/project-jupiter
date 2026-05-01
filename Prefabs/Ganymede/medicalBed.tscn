@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://2dfaywsl4o1c" path="res://Assest/medicalBed/medicalBed.png" id="1_2m1sd"]
 [ext_resource type="Script" path="res://Prefabs/Ganymede/medical_bed.gd" id="1_6owqq"]
-[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="2_68tse"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_68tse"]
 [ext_resource type="ArrayMesh" uid="uid://wor78l1nnjjh" path="res://Assest/medicalBed/medicalBed.obj" id="2_qfckt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6owqq"]

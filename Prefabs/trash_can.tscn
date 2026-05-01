@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1a8sytgeteyq"]
 
 [ext_resource type="ArrayMesh" uid="uid://d057gtv6jrs2b" path="res://Assest/trashcan/trash.obj" id="1_33aq7"]
-[ext_resource type="Script" uid="uid://mklebkcbq6sk" path="res://Prefabs/trash_can.gd" id="1_dphm6"]
+[ext_resource type="Script" path="res://Prefabs/trash_can.gd" id="1_dphm6"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_sg2t7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_el3j0"]

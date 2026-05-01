@@ -24,7 +24,7 @@ offset_right = 1669.5822
 offset_bottom = 1047.0
 texture = ExtResource("2_8saeu")
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=321424547]
+[node name="Start" type="Button" parent="CanvasLayer" unique_id=321424547]
 offset_left = 329.0
 offset_top = 863.47736
 offset_right = 648.0
@@ -38,7 +38,7 @@ text = "COME TO JUPITER"
 flat = true
 autowrap_trim_flags = 0
 
-[node name="Button3" type="Button" parent="CanvasLayer" unique_id=2097404355]
+[node name="Option" type="Button" parent="CanvasLayer" unique_id=2097404355]
 offset_left = 660.0
 offset_top = 854.0002
 offset_right = 805.31635
@@ -52,7 +52,7 @@ text = "OPTIONS"
 flat = true
 autowrap_trim_flags = 0
 
-[node name="Button2" type="Button" parent="CanvasLayer" unique_id=652377010]
+[node name="Exit" type="Button" parent="CanvasLayer" unique_id=652377010]
 offset_left = 1100.9998
 offset_top = 810.9999
 offset_right = 1191.9998
@@ -136,6 +136,6 @@ theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "and explore further!"
 
-[connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_startgame_button_up"]
-[connection signal="button_up" from="CanvasLayer/Button3" to="." method="_on_startgame_button_up"]
-[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="CanvasLayer/Start" to="." method="_on_startgame_button_up"]
+[connection signal="button_up" from="CanvasLayer/Option" to="." method="_on_option_button_up"]
+[connection signal="button_up" from="CanvasLayer/Exit" to="." method="_on_exit_button_up"]

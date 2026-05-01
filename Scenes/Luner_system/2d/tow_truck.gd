@@ -6,7 +6,6 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.TOWTRUCK
 const tow_truck_punishment = 20
 
 func _ready() -> void:
-	ShipStats.refuel()
 	Globals.increment_timestep(tow_truck_punishment)
 
 func _on_travel_button_button_up() -> void:
