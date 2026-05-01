@@ -28,11 +28,17 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 @onready var fuel_upgrade_button = $UpgradeMenu/FuelUpgrade
 @onready var poj_upgrade_button = $UpgradeMenu/StatAllocationUpgrade
 @onready var noise_reduction_button = $UpgradeMenu/NoiseReduction
+@onready var repair_button: Button = $MainMenu/RepairButton
+@onready var refuel_button: Button = $MainMenu/RefuelButton
+
 
 @onready var dialog_component = $DialogComponent
 
 
+
 func _ready() -> void:
+	refuel_button.disabled = ShipStats.fuel == ShipStats.fuel_cap
+	repair_button.disabled = ShipStats.damage == 0
 	main_label.text = ''
 	upgrade_label.text = ''
 	_animated_sprite_1.play("default")
