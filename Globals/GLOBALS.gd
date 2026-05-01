@@ -56,4 +56,4 @@ func convert_timesteps_to_time(timestep: int):
 	
 func convert_timesteps_to_string(timestep: int):
 	var timeArr = convert_timesteps_to_time(timestep)
-	return str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])
+	return ("" if timeArr[0] >= 10  else "0") + str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])

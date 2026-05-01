@@ -96,13 +96,10 @@ flat = true
 icon_alignment = 1
 
 [node name="UpgradeButton" type="Button" parent="MainMenu" unique_id=172257029]
-anchors_preset = -1
-anchor_left = -0.040625
-anchor_right = -0.040625
-offset_left = 1151.0
-offset_top = 201.0
-offset_right = 1737.0
-offset_bottom = 359.0
+offset_left = 1111.0
+offset_top = 204.0
+offset_right = 1619.0
+offset_bottom = 362.0
 theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
 theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
 theme_override_fonts/font = ExtResource("15_n6evu")
@@ -271,6 +268,18 @@ scale = Vector2(4.322856, 4.170808)
 sprite_frames = SubResource("SpriteFrames_uxtne")
 frame = 6
 frame_progress = 0.7424274
+
+[node name="time_label" type="Label" parent="Background" unique_id=859296746]
+offset_left = 1078.0
+offset_top = 575.0
+offset_right = 1623.0
+offset_bottom = 730.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 70
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="UpgradeMenu" type="CanvasLayer" parent="." unique_id=1415186818]
 layer = 4
