@@ -2,8 +2,6 @@ title: hickWorkshopTS3
 color: green
 position: -450,-167
 ---
-<<declare $title = "value">>>>
-<<set $title = "hickWorkshopTS3">>
 <<if get_flag("metHick")>>
 Hickey greats you with his half smirk.
 Hick: Hey dude what can I do you for?
@@ -88,24 +86,25 @@ Hickey introduces himself and tells kher they remind him of someone
 ===
 title: asks
 ---
-
-<<once>>
+<<if get_flag ("hickHYD")>>
+<<else>>
 -> How've you been doing?
     <<detour howYouDoing>>
-<<endonce>>
-<<once>>
+<<endif>>
+<<if get_flag ("hickNA")>>
+<<else>>
 -> What's new around?
     <<detour newAround>>
-<<endonce>>
-<<once>>
+<<endif>>
+<<if get_flag("hickGrandma")>>
+<<else>>
 -> How's your grandma?
     <<detour grandma>>
-<<endonce>>
-<<if get_flag("deadDad")>> 
-<<once>>
+<<endif>>
+<<if get_flag("deadDad") and get_flag("hickDad")>> 
+<<elseif get_flag("deadDad")>>
 ->So have you heard about dad?
     <<detour dad>>
-<<endonce>>
 <<endif>>
 -> Sooo, let's talk about something else
 ===
