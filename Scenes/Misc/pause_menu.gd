@@ -61,7 +61,7 @@ func _on_exit_button_button_up() -> void:
 
 
 func _on_confirm_exit_button_button_up() -> void:
-	get_tree().quit()
+	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 	pass # Replace with function body.
 
 
