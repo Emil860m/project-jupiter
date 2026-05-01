@@ -77,6 +77,7 @@ func _on_refuel_button_button_up() -> void:
 	main_label.text = 'Your ship has been refueled'
 	timer.start(1.5)
 	ShipStats.refuel()
+	refuel_button.disabled = true
 	Globals.increment_timestep(refuel_time)
 
 
@@ -86,6 +87,7 @@ func _on_repair_button_button_up() -> void:
 	main_label.text = 'Your ship has been repaired'
 	timer.start(1.5)
 	ShipStats.repair()
+	repair_button.disabled = true
 	Globals.increment_timestep(repair_time)
 
 
