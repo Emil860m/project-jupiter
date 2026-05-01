@@ -75,40 +75,11 @@ noise_reduction_time = 20
 fuel_upgrade_val = 50
 poj_upgrade_val = 2
 
-[node name="Timer" type="Timer" parent="." unique_id=358933961]
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("19_kbvy3")]
+start_node = "tutorial_pons"
 
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=372325345]
-layer = 2
-
-[node name="OVERLAY" type="TextureRect" parent="MainMenu" unique_id=2013609792]
-z_index = 100
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_p04ur")
-expand_mode = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="BCG1" type="AnimatedSprite2D" parent="MainMenu" unique_id=1417369956]
-modulate = Color(0.23520002, 0.49, 0.2521867, 0.2)
-z_index = 10
-position = Vector2(566.996, 524)
-rotation = -3.1415925
-scale = Vector2(4.5746164, 4.170808)
-sprite_frames = SubResource("SpriteFrames_uxtne")
-frame = 6
-frame_progress = 0.6695502
-
-[node name="BCG2" type="AnimatedSprite2D" parent="MainMenu" unique_id=2067996593]
-modulate = Color(0.23529412, 0.49019608, 0.2509804, 0.2)
-z_index = 10
-position = Vector2(1387, 430.00006)
-scale = Vector2(4.322856, 4.170808)
-sprite_frames = SubResource("SpriteFrames_uxtne")
-frame = 6
-frame_progress = 0.7424274
+layer = 4
 
 [node name="RepairButton" type="Button" parent="MainMenu" unique_id=41956894]
 offset_left = 558.0
@@ -125,13 +96,10 @@ flat = true
 icon_alignment = 1
 
 [node name="UpgradeButton" type="Button" parent="MainMenu" unique_id=172257029]
-anchors_preset = -1
-anchor_left = -0.040625
-anchor_right = -0.040625
-offset_left = 1151.0
-offset_top = 201.0
-offset_right = 1737.0
-offset_bottom = 359.0
+offset_left = 1111.0
+offset_top = 204.0
+offset_right = 1619.0
+offset_bottom = 362.0
 theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
 theme_override_colors/font_hover_color = Color(0.78431374, 0.59607846, 0.16862746, 1)
 theme_override_fonts/font = ExtResource("15_n6evu")
@@ -155,19 +123,6 @@ text = "Refuel"
 icon = ExtResource("15_cl565")
 flat = true
 icon_alignment = 1
-
-[node name="Leave" type="Button" parent="MainMenu" unique_id=618265005]
-anchors_preset = -1
-anchor_left = -0.023958333
-anchor_top = -0.026851851
-anchor_right = 0.0125
-anchor_bottom = 0.035185184
-offset_left = 1073.0
-offset_top = 840.0
-offset_right = 1286.0
-offset_bottom = 920.0
-flat = true
-metadata/_edit_use_anchors_ = true
 
 [node name="MainLabel" type="Label" parent="MainMenu" unique_id=74010041]
 modulate = Color(0.25517768, 0.6123109, 0.38946944, 1)
@@ -237,10 +192,44 @@ theme_override_font_sizes/font_size = 22
 text = "NOTE TO VISITORS: We do not charge for our services but we kindly ask you to not overuse our facility. If you wish to donate please contact the shift officer in the pilon B."
 autowrap_mode = 3
 
-[node name="UpgradeMenu" type="CanvasLayer" parent="." unique_id=1415186818]
-visible = false
+[node name="Leave" type="Button" parent="MainMenu" unique_id=618265005]
+z_index = 11
+anchors_preset = -1
+anchor_left = -0.023958333
+anchor_top = -0.030555556
+anchor_right = -0.019791666
+anchor_bottom = -0.030555556
+offset_left = 1096.0
+offset_top = 854.0
+offset_right = 1326.0
+offset_bottom = 979.0
+flat = true
+metadata/_edit_use_anchors_ = true
 
-[node name="BCG3" type="AnimatedSprite2D" parent="UpgradeMenu" unique_id=782204980]
+[node name="Background" type="CanvasLayer" parent="." unique_id=578887180]
+layer = 0
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1208777852]
+z_index = -100
+offset_left = -155.0
+offset_top = -137.0
+offset_right = 2156.0
+offset_bottom = 1333.0
+texture = ExtResource("17_cl565")
+
+[node name="OVERLAY2" type="TextureRect" parent="Background" unique_id=659987352]
+z_index = 11
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_p04ur")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BCG1" type="AnimatedSprite2D" parent="Background" unique_id=1417369956]
 modulate = Color(0.23520002, 0.49, 0.2521867, 0.2)
 z_index = 10
 position = Vector2(566.996, 524)
@@ -250,7 +239,7 @@ sprite_frames = SubResource("SpriteFrames_uxtne")
 frame = 6
 frame_progress = 0.6695502
 
-[node name="BCG4" type="AnimatedSprite2D" parent="UpgradeMenu" unique_id=577121421]
+[node name="BCG2" type="AnimatedSprite2D" parent="Background" unique_id=2067996593]
 modulate = Color(0.23529412, 0.49019608, 0.2509804, 0.2)
 z_index = 10
 position = Vector2(1387, 430.00006)
@@ -259,16 +248,42 @@ sprite_frames = SubResource("SpriteFrames_uxtne")
 frame = 6
 frame_progress = 0.7424274
 
-[node name="OVERLAY2" type="TextureRect" parent="UpgradeMenu" unique_id=659987352]
-z_index = 100
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_p04ur")
-expand_mode = 1
-metadata/_edit_use_anchors_ = true
+[node name="BCG3" type="AnimatedSprite2D" parent="Background" unique_id=782204980]
+visible = false
+modulate = Color(0.23520002, 0.49, 0.2521867, 0.2)
+z_index = 10
+position = Vector2(566.996, 524)
+rotation = -3.1415925
+scale = Vector2(4.5746164, 4.170808)
+sprite_frames = SubResource("SpriteFrames_uxtne")
+frame = 6
+frame_progress = 0.6695502
+
+[node name="BCG4" type="AnimatedSprite2D" parent="Background" unique_id=577121421]
+visible = false
+modulate = Color(0.23529412, 0.49019608, 0.2509804, 0.2)
+z_index = 10
+position = Vector2(1387, 430.00006)
+scale = Vector2(4.322856, 4.170808)
+sprite_frames = SubResource("SpriteFrames_uxtne")
+frame = 6
+frame_progress = 0.7424274
+
+[node name="time_label" type="Label" parent="Background" unique_id=859296746]
+offset_left = 1078.0
+offset_top = 575.0
+offset_right = 1623.0
+offset_bottom = 730.0
+theme_override_colors/font_color = Color(0.25490198, 0.6117647, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("15_n6evu")
+theme_override_font_sizes/font_size = 70
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeMenu" type="CanvasLayer" parent="." unique_id=1415186818]
+layer = 4
+visible = false
 
 [node name="BackButton" type="Button" parent="UpgradeMenu" unique_id=1233756472]
 offset_left = 1111.0
@@ -355,34 +370,22 @@ vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Leave2" type="Button" parent="UpgradeMenu" unique_id=2112803004]
+[node name="Leave2" type="Button" parent="UpgradeMenu" unique_id=416002337]
+z_index = 11
 anchors_preset = -1
 anchor_left = -0.023958333
-anchor_top = -0.026851851
-anchor_right = 0.0125
-anchor_bottom = 0.035185184
-offset_left = 1073.0
-offset_top = 840.0
-offset_right = 1286.0
-offset_bottom = 920.0
+anchor_top = -0.030555556
+anchor_right = -0.019791666
+anchor_bottom = -0.030555556
+offset_left = 1096.0
+offset_top = 854.0
+offset_right = 1326.0
+offset_bottom = 979.0
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1627558286]
-layer = -10
+[node name="Timer" type="Timer" parent="." unique_id=358933961]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1208777852]
-z_index = -100
-offset_left = -155.0
-offset_top = -137.0
-offset_right = 2156.0
-offset_bottom = 1333.0
-texture = ExtResource("17_cl565")
-
-[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("19_kbvy3")]
-start_node = "tutorial_pons"
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="button_up" from="MainMenu/RepairButton" to="." method="_on_repair_button_button_up"]
 [connection signal="button_up" from="MainMenu/UpgradeButton" to="." method="_on_upgrade_button_button_up"]
 [connection signal="button_up" from="MainMenu/RefuelButton" to="." method="_on_refuel_button_button_up"]
@@ -392,3 +395,4 @@ start_node = "tutorial_pons"
 [connection signal="button_up" from="UpgradeMenu/FuelUpgrade" to="." method="_on_fuel_upgrade_button_up"]
 [connection signal="button_up" from="UpgradeMenu/StatAllocationUpgrade" to="." method="_on_stat_allocation_upgrade_button_up"]
 [connection signal="button_up" from="UpgradeMenu/Leave2" to="." method="_on_leave_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

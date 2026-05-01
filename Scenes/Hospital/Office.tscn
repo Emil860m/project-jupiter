@@ -204,9 +204,11 @@ light_energy = 0.0
 
 [node name="GanymedeDoor2" parent="." unique_id=729568765 instance=ExtResource("8_cylq8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4609957, 0.039102726, 3.4913616)
+can_interact = false
 
 [node name="GanymedeDoor3" parent="." unique_id=807281379 instance=ExtResource("8_cylq8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.439554, 0.039102726, 3.4913616)
+can_interact = false
 
 [node name="Cup" parent="." unique_id=385252958 instance=ExtResource("9_13t73")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.463697, 1.3527904, 1.7606525)

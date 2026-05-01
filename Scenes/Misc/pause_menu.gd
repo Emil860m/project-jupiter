@@ -8,6 +8,10 @@ extends Node2D
 @onready var bgm_slider: HSlider = $CanvasLayer/CenterContainer/VBoxContainer/BgmContainer/BgmSlider
 @onready var sfx_slider: HSlider = $CanvasLayer/CenterContainer/VBoxContainer/SfxContainer/SfxSlider
 
+@onready var center_container_2: CenterContainer = $CanvasLayer/CenterContainer2
+@onready var cancel_button: Button = $CanvasLayer/CancelButton
+@onready var confirm_exit_button: Button = $CanvasLayer/ConfirmExitButton
+
 
 var max_val: float = 10
 
@@ -46,4 +50,23 @@ func _on_resume_button_button_up() -> void:
 
 func _on_sfx_slider_drag_ended(value_changed: bool) -> void:
 	SoundController.play_mid_boop()
+	pass # Replace with function body.
+
+
+func _on_exit_button_button_up() -> void:
+	center_container_2.visible = true
+	confirm_exit_button.visible = true
+	cancel_button.visible = true
+	pass # Replace with function body.
+
+
+func _on_confirm_exit_button_button_up() -> void:
+	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
+	pass # Replace with function body.
+
+
+func _on_cancel_button_button_up() -> void:
+	center_container_2.visible = false
+	confirm_exit_button.visible = false
+	cancel_button.visible = false
 	pass # Replace with function body.

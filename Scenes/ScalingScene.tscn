@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://b7seqdovo3fj2" path="res://Prefabs/Ganymede/ganymede_wall.tscn" id="6_cpmbg"]
 [ext_resource type="PackedScene" uid="uid://bd0pymue16sc8" path="res://Prefabs/Ganymede/hospital_locker.tscn" id="7_oc8jj"]
 [ext_resource type="PackedScene" uid="uid://dwlmoxkyj7rkm" path="res://Prefabs/Ganymede/iv_rack.tscn" id="8_jnh05"]
-[ext_resource type="PackedScene" uid="uid://bdsa300k46exl" path="res://Prefabs/Ganymede/medical_console.tscn" id="9_msusc"]
 [ext_resource type="PackedScene" uid="uid://cxb2jaomgdav3" path="res://Prefabs/MiscProps/barrel.tscn" id="10_hycun"]
 [ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="11_vhqfx"]
 [ext_resource type="PackedScene" uid="uid://xssi2idlokcw" path="res://Prefabs/MiscProps/desk.tscn" id="12_gasc4"]
@@ -44,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="42_j4oc1"]
 [ext_resource type="PackedScene" uid="uid://c6dewu4he0gcs" path="res://Prefabs/Calisto/metal_building.tscn" id="43_376kf"]
 [ext_resource type="PackedScene" uid="uid://bg5eco0wxm2pm" path="res://Prefabs/MiscProps/under_construction_sign.tscn" id="44_1j4al"]
+[ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="44_wq0p7"]
 
 [node name="ScalingScene" type="Node3D" unique_id=1149280770]
 
@@ -95,9 +95,6 @@ transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -7.0245447, 1.605918
 
 [node name="IvRack" parent="." unique_id=52509290 instance=ExtResource("8_jnh05")]
 transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, -7.133069, 0, -5.4092336)
-
-[node name="MidicalConsole" parent="." unique_id=1574312724 instance=ExtResource("9_msusc")]
-transform = Transform3D(-1.3987644e-08, 0, 0.32, 0, 0.32, 0, -0.32, 0, -1.3987644e-08, -7.5388727, 0, -3.8565226)
 
 [node name="Barrel" parent="." unique_id=83570398 instance=ExtResource("10_hycun")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -9.019046, 0, -2.1974468)
@@ -203,3 +200,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6381617, 0, -28.450136)
 
 [node name="UnderConstructionSign" parent="." unique_id=306960224 instance=ExtResource("44_1j4al")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -7.319668, 0, -12.082863)
+
+[node name="Node3D" parent="." unique_id=1459250551 instance=ExtResource("44_wq0p7")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -8.005259, 2.6850548, 14.907319)

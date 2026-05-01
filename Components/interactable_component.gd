@@ -19,10 +19,10 @@ var interact: Callable = func ():
 	pass
 	
 func runner():
+	interact.call()
 	if !Globals.has_interacted(object_id):
 		Globals.increment_timestep(time_pass)
 	Globals.add_to_interact_set(object_id)
-	interact.call()
 	
 
 func handle_click(event: InputEvent) -> void:

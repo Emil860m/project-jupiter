@@ -51,6 +51,9 @@ starting_angle = 2.0
 sprite = ExtResource("3_a4yyy")
 displayName = "Ganymede"
 travelScenePath = "res://Scenes/Hospital/Hospital.tscn"
+loading_screen = true
+main_poster = "res://Textures/Transitions/ganymedePoster.png"
+other_posters = Array[String](["res://Textures/Transitions/ponsPoster.png", "res://Textures/Transitions/rationalePoster.png"])
 
 [node name="Callisto" parent="MoonParent" unique_id=1558893402 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
@@ -59,6 +62,9 @@ radius = 364.0
 sprite = ExtResource("6_l0otk")
 displayName = "Kallisto"
 travelScenePath = "res://Scenes/Workshop/workshop.tscn"
+loading_screen = true
+main_poster = "res://Textures/Transitions/kallistoPoster.png"
+other_posters = Array[String](["res://Textures/Transitions/ponsPoster.png", "res://Textures/Transitions/rationalePoster.png"])
 
 [node name="ThePonds" parent="MoonParent" unique_id=1184550554 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")

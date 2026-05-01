@@ -8,7 +8,29 @@ extends StaticBody3D
 @onready var dialogComp:= $DialogComponent
 @onready var interactable_component: Node = $InteractableComponent
 var currentYarnNode: String = ""
+var interacting := false
 func _ready() -> void:
+	SignalBus.connect("time_step_changed", check_time_and_flags)
+	$DialogComponent/DialogRunner.connect("dialogue_completed", dialog_complete)
+	check_time_and_flags()
+	interactable_component.time_pass = time_pass
+	interactable_component.interact = _interact
+	interactable_component.object_id = currentYarnNode
+	dialogComp.add_non_global_function("change_mood", change_mood)
+	if current_mood in mood_portrait_dict.keys():
+		dialogComp.set_character_portrait(mood_portrait_dict[current_mood])
+
+func dialog_complete():
+	print("dialog is completed")
+	interacting = false
+	check_time_and_flags()
+
+func check_time_and_flags():
+	print("checking time and flags")
+	if interacting: 
+		print("is interacting so no check")
+		$Timer.start(3)
+		return
 	match character_name:
 		"Hickey":
 			currentYarnNode = NpcScheduler.get_hickey_yarn_file(Globals.current_timestep, Globals.current_location)
@@ -20,13 +42,8 @@ func _ready() -> void:
 			currentYarnNode = NpcScheduler.get_zoe_yarn_file(Globals.current_timestep, Globals.current_location)
 	if currentYarnNode == "":
 		visible = false
-	dialogComp.start_node = currentYarnNode
-	interactable_component.time_pass = time_pass
-	interactable_component.interact = _interact
 	interactable_component.object_id = currentYarnNode
-	dialogComp.add_non_global_function("change_mood", change_mood)
-	if current_mood in mood_portrait_dict.keys():
-		dialogComp.set_character_portrait(mood_portrait_dict[current_mood])
+	dialogComp.start_node = currentYarnNode
 
 func change_mood(mood: String):
 	current_mood = mood
@@ -41,5 +58,5 @@ func _on_mouse_exited():
 	interactable_component.hide_shader()
 
 func _interact():
-	print(character_name)
+	interacting = true
 	dialogComp.start_dialog()

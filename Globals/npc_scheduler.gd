@@ -16,6 +16,8 @@ enum locations {
 	RATIONALE,
 	PONS,
 	TOWTRUCK,
+	ENDING,
+	LOADING
 }
 
 func _ready() -> void:

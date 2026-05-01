@@ -13,6 +13,9 @@
 [node name="Rationalle" type="Node2D" unique_id=2143307663]
 script = ExtResource("1_xmvj0")
 scene_to_load = "res://Scenes/Luner_system/2d/test2d.tscn"
+one_meal_time = 20
+two_meal_time = 30
+three_meal_time = 35
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=180513721]
 
