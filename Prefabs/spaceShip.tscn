@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://hsrm2flspp75"]
+[gd_scene format=3 uid="uid://8kq3y3ghok4i"]
 
 [ext_resource type="Texture2D" uid="uid://bw5b1nr03vlr" path="res://Assest/spaceShip/spaceShip.png" id="1_qcvxl"]
 [ext_resource type="ArrayMesh" uid="uid://doo2mvrqxhadt" path="res://Assest/spaceShip/spaceShip.obj" id="2_qs11k"]
@@ -10,7 +10,7 @@ albedo_texture = ExtResource("1_qcvxl")
 radius = 2.1816406
 height = 7.7874756
 
-[node name="Node3D" type="Area3D" unique_id=1587799082]
+[node name="Node3D" type="StaticBody3D" unique_id=507217212]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
 [node name="SpaceShip" type="MeshInstance3D" parent="." unique_id=959517816]

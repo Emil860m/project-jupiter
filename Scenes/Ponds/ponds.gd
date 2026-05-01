@@ -33,19 +33,17 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 
 
 @onready var dialog_component = $DialogComponent
+@onready var time_label = $Background/time_label
 
 
 
 func _ready() -> void:
-	refuel_button.disabled = ShipStats.fuel == ShipStats.fuel_cap
-	repair_button.disabled = ShipStats.damage == 0
 	main_label.text = ''
 	upgrade_label.text = ''
 	_animated_sprite_1.play("default")
 	_animated_sprite_2.play("default")
 	_animated_sprite_3.play("default")
 	_animated_sprite_4.play("default")
-	
 	check_upgrades()
 	
 	if not Flags.get_flag("PonsTutorialComplete"):
@@ -53,6 +51,9 @@ func _ready() -> void:
 		dialog_component.start_dialog()
 
 func check_upgrades():
+	time_label.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
+	refuel_button.disabled = ShipStats.fuel == ShipStats.fuel_cap
+	repair_button.disabled = ShipStats.damage == 0
 	poj_upgrade_button.disabled = Flags.get_flag("HasPOJUpgrade1")
 	fuel_upgrade_button.disabled = Flags.get_flag("HasFuelUpgrade1")
 	noise_reduction_button.disabled = Flags.get_flag("HasNoiseReduction1")
@@ -77,8 +78,8 @@ func _on_refuel_button_button_up() -> void:
 	main_label.text = 'Your ship has been refueled'
 	timer.start(1.5)
 	ShipStats.refuel()
-	refuel_button.disabled = true
 	Globals.increment_timestep(refuel_time)
+	check_upgrades()
 
 
 func _on_repair_button_button_up() -> void:
@@ -87,8 +88,8 @@ func _on_repair_button_button_up() -> void:
 	main_label.text = 'Your ship has been repaired'
 	timer.start(1.5)
 	ShipStats.repair()
-	repair_button.disabled = true
 	Globals.increment_timestep(repair_time)
+	check_upgrades()
 
 
 func _on_timer_timeout() -> void:

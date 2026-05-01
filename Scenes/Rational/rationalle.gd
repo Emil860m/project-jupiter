@@ -22,6 +22,10 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.RATIONALE
 
 @export var scene_to_load: String
 
+@export var one_meal_time: int
+@export var two_meal_time: int
+@export var three_meal_time: int
+
 var courses
 var buffs: Array[Buff_Button]
 
@@ -37,6 +41,7 @@ func _ready() -> void:
 	dessert_3.connect("pressed", _dish_chosen.bind(dessert_3,3))
 
 func _on_course_button_up(num_courses: int) -> void:
+	
 	courses = num_courses
 	if num_courses == 1:
 		main_course.visible = true
@@ -52,6 +57,9 @@ func _dish_chosen(buff: Buff_Button, dish_num: int):
 		leave_scene.visible = true
 		for b in buffs:
 			b.apply_buff()
+		Globals.increment_timestep(one_meal_time if courses == 1 
+									else two_meal_time if courses == 2 
+									else three_meal_time)
 	if dish_num == 1:
 		starters.visible = false
 		main_course.visible = true
