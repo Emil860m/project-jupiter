@@ -80,6 +80,14 @@ poj_upgrade_val = 2
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=372325345]
 layer = 2
 
+[node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=1208777852]
+z_index = -100
+offset_left = -155.0
+offset_top = -137.0
+offset_right = 2156.0
+offset_bottom = 1333.0
+texture = ExtResource("17_cl565")
+
 [node name="OVERLAY" type="TextureRect" parent="MainMenu" unique_id=2013609792]
 z_index = 100
 anchors_preset = 15
@@ -367,17 +375,6 @@ offset_right = 1286.0
 offset_bottom = 920.0
 flat = true
 metadata/_edit_use_anchors_ = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1627558286]
-layer = -10
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1208777852]
-z_index = -100
-offset_left = -155.0
-offset_top = -137.0
-offset_right = 2156.0
-offset_bottom = 1333.0
-texture = ExtResource("17_cl565")
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("19_kbvy3")]
 start_node = "tutorial_pons"
