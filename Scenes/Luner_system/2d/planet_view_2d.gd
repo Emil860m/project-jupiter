@@ -116,7 +116,10 @@ func _on_tow_truck_button_up() -> void:
 
 func _on_event_completed() -> void:
 	Globals.interacting = false
-	SceneController.goto_scene(selected.travelScenePath)
+	if selected.loading_screen:
+		SceneController.goto_loading_screen(selected.travelScenePath, selected.main_poster, selected.other_posters)
+	else:
+		SceneController.goto_scene(selected.travelScenePath)
 
 
 func _on_stat_allocator_change_stat() -> void:
