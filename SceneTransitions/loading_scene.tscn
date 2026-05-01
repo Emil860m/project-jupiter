@@ -43,7 +43,7 @@ theme_override_font_sizes/font_size = 64
 text = "20:00"
 
 [node name="transition_timer" type="Timer" parent="." unique_id=808444325]
-wait_time = 1.5
+wait_time = 4.0
 autostart = true
 
 [node name="blink_timer" type="Timer" parent="." unique_id=1593460386]
