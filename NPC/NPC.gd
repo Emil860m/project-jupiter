@@ -34,7 +34,12 @@ func change_mood(mood: String):
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	interactable_component.handle_click(event)
 	
+func _on_mouse_entered():
+	interactable_component.show_shader()
 	
+func _on_mouse_exited():
+	interactable_component.hide_shader()
+
 func _interact():
 	print(character_name)
 	dialogComp.start_dialog()

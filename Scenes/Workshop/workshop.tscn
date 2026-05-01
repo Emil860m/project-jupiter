@@ -377,7 +377,7 @@ transform = Transform3D(0.0065367618, -0.0043823295, -0.9999691, 0.00017519236, 
 transform = Transform3D(0.0065367618, -0.0043823295, -0.9999691, 0.00017519236, 0.99999046, -0.0043812776, 0.99997866, -0.00014653387, 0.0065374672, -1.9999485, -0.021906385, 40.0109)
 
 [node name="Rubble" parent="NavigationRegion3D" unique_id=2104201558 instance=ExtResource("9_ga7uk")]
-transform = Transform3D(-0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.49999997, 30, 0, 17)
+transform = Transform3D(-0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.49999997, 30, 0.72059155, 17)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=810356272]
 environment = SubResource("Environment_arkt1")

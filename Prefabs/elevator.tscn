@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b8ddlg078extt" path="res://Assest/elevator/elevator.png" id="1_u2aw6"]
 [ext_resource type="Script" uid="uid://bf8dbpre1rtj5" path="res://Prefabs/elevator.gd" id="1_vhy44"]
 [ext_resource type="ArrayMesh" uid="uid://7co6tnu1ao2h" path="res://Assest/elevator/elevatorShaft.obj" id="2_ram11"]
-[ext_resource type="PackedScene" path="res://Components/interactable_component.tscn" id="2_woamy"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_woamy"]
 [ext_resource type="ArrayMesh" uid="uid://cpngpl8mwdhge" path="res://Assest/elevator/elevatorMain.obj" id="3_vhy44"]
+[ext_resource type="Shader" uid="uid://dlqjseaxc16nh" path="res://Shaders/outline_shader_test.gdshader" id="4_1xqjy"]
 [ext_resource type="ArrayMesh" uid="uid://dqg4xf6n4ajwk" path="res://Assest/elevator/elevatorDoor.obj" id="4_woamy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xqjy"]
@@ -13,6 +14,15 @@ albedo_texture = ExtResource("1_u2aw6")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7j8k5"]
 albedo_texture = ExtResource("1_u2aw6")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7j8k5"]
+render_priority = 0
+shader = ExtResource("4_1xqjy")
+shader_parameter/thickness = 2.0
+shader_parameter/outline_color = Color(73, 152, 95, 1)
+shader_parameter/samples = 4
+shader_parameter/sensitivity = 0.1
+shader_parameter/edge_fade = 0.015
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_8xn5o"]
 size = Vector3(3.5, 8, 5)
 
@@ -20,7 +30,9 @@ size = Vector3(3.5, 8, 5)
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 script = ExtResource("1_vhy44")
 
-[node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("2_woamy")]
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_woamy")]
+time_pass = 0
+meshs = [NodePath("../ElevatorShaft"), NodePath("../ElevatorMain")]
 
 [node name="ElevatorShaft" type="MeshInstance3D" parent="." unique_id=1239654593]
 material_override = SubResource("StandardMaterial3D_1xqjy")
@@ -31,10 +43,12 @@ material_override = SubResource("StandardMaterial3D_7j8k5")
 mesh = ExtResource("3_vhy44")
 
 [node name="ElevatorDoor" type="MeshInstance3D" parent="." unique_id=775712201]
+material_overlay = SubResource("ShaderMaterial_7j8k5")
 mesh = ExtResource("4_woamy")
 
 [node name="ElevatorDoor2" type="MeshInstance3D" parent="." unique_id=1515157283]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 4, 0)
+material_overlay = SubResource("ShaderMaterial_7j8k5")
 mesh = ExtResource("4_woamy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392060854]
@@ -42,3 +56,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 3.5, 0)
 shape = SubResource("BoxShape3D_8xn5o")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
