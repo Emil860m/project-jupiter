@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="18_dcae5"]
 [ext_resource type="PackedScene" uid="uid://nmxf5wvoxmcg" path="res://Prefabs/Ganymede/left_wall.tscn" id="21_e6j45"]
 [ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="23_aubca"]
-[ext_resource type="PackedScene" uid="uid://cvv7l02d6nv7o" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
 [ext_resource type="PackedScene" uid="uid://jlpqaxd3k3fj" path="res://Prefabs/button.tscn" id="24_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="25_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://ql573cu8ftbd" path="res://Prefabs/Signs/exitSign.tscn" id="26_y0jcu"]
@@ -52,6 +52,9 @@ size = Vector2(7, 11)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uiugr"]
 size = Vector2(23, 75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y0jcu"]
+size = Vector3(8, 3, 1)
 
 [node name="Hospital" type="Node3D" unique_id=1010830156]
 script = ExtResource("1_31i0m")
@@ -254,28 +257,6 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -15.066304, 1.7011212, 
 
 [node name="Sink2" parent="NavigationAgent3D/DeadDaddyRoom" unique_id=1358460931 instance=ExtResource("9_3ekpi")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -14.710248, 1.7011212, 41.917675)
-
-[node name="MidicalConsole" parent="NavigationAgent3D/DeadDaddyRoom" unique_id=1574312724]
-transform = Transform3D(-0.08301092, 0, 0.30904558, 0, 0.32, 0, -0.30904558, 0, -0.08301092, -14.129674, 0.1055827, 32.897816)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="NavigationAgent3D/DeadDaddyRoom/MidicalConsole" unique_id=1522717193]
-transform = Transform3D(-0.34319106, 0, -3.1060984, 0, 3.1250002, 0, 3.1060984, 0, -0.34319106, 0.14440155, 6.0327907, 0.76584244)
-light_color = Color(0.638845, 0.7621127, 0.57423335, 1)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.9
-omni_range = 1.41
-
-[node name="MidicalConsole2" parent="NavigationAgent3D/DeadDaddyRoom" unique_id=299133936]
-transform = Transform3D(0.0012286752, 0, 0.3199976, 0, 0.32, 0, -0.3199976, 0, 0.0012286752, -14.512543, 0.10558222, 48.20021)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="NavigationAgent3D/DeadDaddyRoom/MidicalConsole2" unique_id=1137580936]
-transform = Transform3D(-0.34319106, 0, -3.1060984, 0, 3.1250002, 0, 3.1060984, 0, -0.34319106, 0.14440155, 6.0327907, 0.76584244)
-light_color = Color(0.638845, 0.7621127, 0.57423335, 1)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.9
-omni_range = 1.41
 
 [node name="NightStand" parent="NavigationAgent3D/DeadDaddyRoom" unique_id=224949238 instance=ExtResource("11_3ekpi")]
 transform = Transform3D(-0.39752272, 0, 0.044448882, 0, 0.4, 0, -0.044448882, 0, -0.39752272, -11.152273, 0.06489083, 37.97788)
@@ -645,8 +626,31 @@ transform = Transform3D(0.23566161, 0, 0.3232083, 0, 0.4, 0, -0.3232083, 0, 0.23
 [node name="UnderConstructionSign2" parent="NavigationAgent3D/Lobby" unique_id=1407407071 instance=ExtResource("18_7xnya")]
 transform = Transform3D(-0.4, 0, -3.4969112e-08, 0, 0.4, 0, 3.4969112e-08, 0, -0.4, 19, 0, 0)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationAgent3D/Lobby" unique_id=2033287257]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationAgent3D/Lobby/StaticBody3D" unique_id=885982953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 44)
+shape = SubResource("BoxShape3D_y0jcu")
+
+[node name="NavigationAgent3D_DeadDaddyRoom_MidicalConsole#OmniLight3D" type="OmniLight3D" parent="." unique_id=1522717193]
+transform = Transform3D(-0.34319106, 0, -3.1060984, 0, 3.1250002, 0, 3.1060984, 0, -0.34319106, 0.14440155, 6.0327907, 0.76584244)
+light_color = Color(0.638845, 0.7621127, 0.57423335, 1)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.9
+omni_range = 1.41
+
+[node name="NavigationAgent3D_DeadDaddyRoom_MidicalConsole2#OmniLight3D" type="OmniLight3D" parent="." unique_id=1137580936]
+transform = Transform3D(-0.34319106, 0, -3.1060984, 0, 3.1250002, 0, 3.1060984, 0, -0.34319106, 0.14440155, 6.0327907, 0.76584244)
+light_color = Color(0.638845, 0.7621127, 0.57423335, 1)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.9
+omni_range = 1.41
+
 [node name="GanymedeDoor2" parent="." unique_id=2127457058 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.690615, 0, 46.57213)
+can_interact = false
 
 [node name="DaddyDoor" parent="." unique_id=102163713 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.690615, 0, 32.37672)
