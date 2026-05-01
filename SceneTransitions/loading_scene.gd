@@ -23,7 +23,7 @@ func _ready() -> void:
 		load_posters(offset_x, (i * 882 * poster_size_scale) + offset_y, load(poster))
 		
 	timeArr = Globals.convert_timesteps_to_time(Globals.current_timestep)
-	timeLabel.text = str(timeArr[0]) + ":" + ("" if timeArr[1] >= 11  else "0") + str(timeArr[1]-1)
+	timeLabel.text = ("" if timeArr[0] >= 10  else "0") + str(timeArr[0]) + ":" + ("" if timeArr[1] >= 11  else "0") + str(timeArr[1]-1)
 
 func load_posters(start_x, start_y, poster):
 	for i in range(poster_amount_x):
@@ -43,7 +43,7 @@ func _on_timer_timeout() -> void:
 	if not time_changed:
 		timeLabel.visible = true
 		time_changed = true
-		timeLabel.text = str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])
+		timeLabel.text = ("" if timeArr[0] >= 10  else "0") + str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])
 		transition_timer.start(transition_timer.wait_time)
 	else:
 		SceneController.goto_scene(next_scene)
