@@ -3,7 +3,7 @@ render_mode blend_mix, unshaded, cull_back;
 
 uniform sampler2D depth_texture : hint_depth_texture;
 uniform float thickness : hint_range(0.5, 20.0, 0.1) = 2.0;
-uniform vec4 outline_color : source_color = vec4(0.267, 0.612, 0.361, 1.0);
+uniform vec4 outline_color : source_color = vec4(1, 1, 1, 1.0);//vec4(0.267, 0.612, 0.361, 1.0);
 uniform int samples : hint_range(4, 32) = 4;
 
 uniform float sensitivity : hint_range(0.01, 1.0, 0.01) = 0.1;
