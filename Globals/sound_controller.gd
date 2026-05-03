@@ -1,6 +1,7 @@
 extends Node
 
 @onready var bgm_emitter = $BgmEmitter
+@onready var amb_emitter = $AmbianceEmitter
 
 @onready var ui_emitters = $UIEmitters
 @onready var sfx_emitters = $SFXEmitters
@@ -32,6 +33,7 @@ func set_volumes():
 	var actual_sound = master_vol * sound_vol
 	
 	bgm_emitter.volume = actual_music
+	amb_emitter.volume = actual_music * 0.5
 	for emitter in ui_emitters.get_children():
 		emitter.volume = actual_sound
 	
@@ -40,6 +42,7 @@ func set_volumes():
 
 func set_bgm(location):
 	bgm_emitter.set_parameter("Location", get_location_parameter(location))
+	amb_emitter.set_parameter("Location", get_location_parameter(location))
 
 func set_in_flight(is_in_flight: bool):
 	bgm_emitter.set_parameter("inFlight", is_in_flight)
