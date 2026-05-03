@@ -1,7 +1,7 @@
 extends Node
 
-@export var long_journey_cutoff: int = 250
-@export var short_journey_cutoff: int = 100
+@export var long_journey_cutoff: int = 300
+@export var short_journey_cutoff: int = 200
 
 var events: Array[Event] = []
 
