@@ -14,12 +14,12 @@ position: 0, 0
 ---
 The onset of nostalgia is cut short as you notice the fuel systems got damaged. It seems the jovian system hasn't changed.
 -> Run appropriate protocols
-	<<if simple_d_check(150)>>
+	<<if true>>
 	<<if resolve_outcome(10,10,100)>><<endif>>
 	The ship casually tries to fix itself to no avail. Jupiter is not kind to those who stand alone.
 	<<endif>>
 -> Call the tow truck
-	<<if simple_d_check(150)>>
+	<<if true>>
 	<<if resolve_outcome(0,10,100)>><<endif>>
 	You soak in a pool of ambivalence and nostalgia while waiting for the tow truck. The university starts to feel like a hazy dream in your jovian reality.
 	<<endif>>
@@ -42,7 +42,7 @@ You encounter space debris.
 	You make it through the debris unscathed
 	<<else>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
-	You managed to dodge directly into a piece of debris. Your ship takes heavy damage
+	You managed to dodge directly into a piece of debris. Your ship takes heavy damage.
 	<<endif>>
 -> Keep going
 	<<if stakes_d_check()>>
