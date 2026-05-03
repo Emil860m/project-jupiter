@@ -33,21 +33,21 @@ You encounter space debris.
 	<<if simple_d_check(80)>>
 	<<if resolve_outcome(5,5,0)>><<endif>>
 	You spend some extra time and manage to avoid the worst of it
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(5,5,1)>><<endif>>
 	In spite of the extra time taken the debris still cause minor damage to the ship
 	<<endif>>
 -> Try to dodge
 	<<if stakes_m_check()>>
 	You make it through the debris unscathed
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
 	You managed to dodge directly into a piece of debris. Your ship takes heavy damage.
 	<<endif>>
 -> Keep going
 	<<if stakes_d_check()>>
 	You make it through the debris unscathed
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
 	This was too optimistic. Your ship takes heavy damage
 	<<endif>>
@@ -60,7 +60,7 @@ You notice a wierdly shaped object on your path. As you approach it you notice i
 -> Avoid the probe
 	<<if simple_m_check(55)>>
 	Better not to disturb the ghosts of old and their wicked technology.
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
 	You poor stearing makes you smash directly into the probe.. It shatters into tousands littile pieces. A piece of history is now gone... You ask yourself if you maybe did it on purpose...
 	<<endif>>
@@ -68,7 +68,7 @@ You notice a wierdly shaped object on your path. As you approach it you notice i
 	<<if simple_m_check(75)>>
 	<<if resolve_outcome(2,0,0)>><<endif>>
 	As you carefully maneuver close to the probe, the radio signal grows stronger. As binary beeping fills the cabin, you feel some kind of awe for a by-gone era this probe must have come from. Your Kompat decodes the binary data and it seems that the probe is transmitting telemetry. It's useless to you, but it doesn't feel like it. It's like you received a blessing from the past.
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(0,0,1)>><<endif>>
 	You smash into the probe. It shatters into tousands little pieces. Maybe you can invastigate a cloud of crumbly, littile metal pieces... better go.
 	<<endif>>
@@ -81,7 +81,7 @@ Short routes like these have a tendency to make you careless
 -> Trust your instincts
 	<<if simple_m_check(20)>>
 	No thought given yet you land perfectly. You must truly be a natural pilot or in lady luck's good graces.
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(0,0,5)>><<endif>>
 	You crash. Maybe this will serve as motivation to focus in the future.
 	<<endif>>
@@ -89,7 +89,7 @@ Short routes like these have a tendency to make you careless
 	<<if simple_m_check(50)>>
 	<<if resolve_outcome(1,0,0)>><<endif>>
 	You land the ship. Lost a bit of time to make sure you do everything up to code but it payed of.
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(1,0,1)>><<endif>>
 	You crash. There is some minor damage but you will be fine. Better focus more next time?
 	<<endif>>
@@ -97,7 +97,7 @@ Short routes like these have a tendency to make you careless
 	<<if simple_m_check(70)>>
 	<<if resolve_outcome(2,0,0)>><<endif>>
 	You land the ship. It seems that you only lost time checking every thing trice before the procedure, but you landed safely.
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(2,0,2)>><<endif>>
 	You crash. It seems that borderline paranoia of checking everything thrice may have caused you to perform too slowly. Better chill next time?
 	<<endif>>
@@ -119,14 +119,14 @@ The long route leads to sustained exposure to radiation. This could damage the e
 	<<if detriment_s_check()>>
 	<<if resolve_outcome(0,5,1)>><<endif>>
 	You manage to curb the exposure, but still get affected.
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(5,0,3)>><<endif>>
 	You increase the speed beyond what the vessel could support damaging it and making you slower in process.
 	<<endif>>
 -> Keep a steady pace.
 	<<if stakes_r_check()>>
 	Luckily your radiation protection seems to have been sufficient.
-	<<else>>
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
 	Your electronics are heavily damaged but you arrive on time.
 	<<endif>>
