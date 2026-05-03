@@ -21,8 +21,9 @@ Hick: Hey dude what can I do you for?
 	Sure dude, whenever you want!
 	<<return>>
 <<jump hickWorkshopTS3>>
-<<else>>
+<<elseif true>>
 	<<detour meetHickey>>
+	<<jump hickWorkshopTS3>>
 <<endif>>
 ===
 title: hickWorkshopTS5
@@ -32,14 +33,11 @@ position: -555,14
 <<if get_flag("metHick")>>
 Hickey is packing up a bunch of boxes on a crate.
 Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
-<<once>>
-	-> Can I help you with those boxes?
-		<<detour boxesCheck>>
-<<endonce>>
-<<once>>
-	-> Listen do you know Kass?<<if get_flag("hickeyKass")>>
-	<<jump drugs>>
-<<endonce>>
+
+-> Can I help you with those boxes?<<if get_flag_uncheck("hickBoxes")>>
+	<<detour boxesCheck>>
+-> Listen do you know Kass?<<if get_flag("hickeyKass") and get_flag_uncheck("hickDrugs")>>
+	<<detour drugs>>
 -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
 	<<detour howYouDoing>>
 -> What's new around?<<if get_flag_uncheck ("hickNA")>>
@@ -56,8 +54,9 @@ Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you wi
 	Sure dude, whenever you want!
 	<<return>>
 <<jump hickWorkshopTS5>>
-<<else>>
+<<elseif true>>
 	<<detour meetHickey>>
+	<<jump hickWorkshopTS5>>
 <<endif>>
 ===
 title: hickWorkshopTS6
@@ -81,8 +80,9 @@ position: -531,371
 	Sure dude, whenever you want!
 	<<return>>
 <<jump hickWorkshopTS6>>
-<<else>>
+<<elseif true>>
 	<<detour meetHickey>>
+	<<jump hickWorkshopTS6>>
 <<endif>>
 ===
 title: hickHospitalTS6
@@ -108,17 +108,25 @@ Hickey introduces himself and tells kher they remind him of someone
 -> how the fuck can you not remember me? did you smoke your last brain cell? 
 	hickey asks how has kher been doing
 	-> I've been good, just a bit tense from the journey.
+		<<if set_flag ("metHick")>><<endif>>
+		<<return>>
 	-> Mah with the whole, my dad is dying situation?
 		probably been better.
+		<<if set_flag ("metHick")>><<endif>>
+		<<return>>
 -> Nice to meet you complete stranger
 	Hick: Hey wait a minute... Kher dude! 
 	The guy jumps at you with a big hug. 
 	Dad: Jeez, since when he's so... touchy.
 	Hick: How have you been!
 	-> I've been good, just a bit tense from the journey. 
+		<<if set_flag ("metHick")>><<endif>>
+		<<return>>
 	-> Mah with the whole, my dad is dying situation?
 		probably been better.
-<<if set_flag ("metHick")>><<endif>>
+		<<if set_flag ("metHick")>><<endif>>
+		<<return>>
+
 ===
 //DIALOGUES
 title: howYouDoing
@@ -147,7 +155,7 @@ The usual grin brightens the boy's face.
 						-> Ok man, I won't push it
 							The guy looks at you genuinely relived. 
 							Hick: Thanks dude. 
-					<<else>>
+					<<elseif true>>
 					-> Are you sure? 
 							Hick voice cuts the air sharply. 
 							Hick: I told you I'm fine Kher. 
@@ -356,7 +364,7 @@ Hickey open his arms to hug you .
 								Hick: oh yeah sorry, I also got a lot of work.
 					-> Listen I know it sound sad and all, but I've stuff to do.
 						Hick: oh yeah sorry, I also got a lot of work.
-				<<else>>
+				<<elseif true>>
 				You try your best to wiggle yourself out of his arms to no avail. 
 				After what it feels like an eternity the boy frees you.
 					->Are you ok?
@@ -419,7 +427,7 @@ Hickey open his arms to hug you .
 			Hick: Yeah dude, I'm fine. Just worried about you 
 			He's not ok, that you're sure of.
 			-> have you been to the hospital? 
-				 Hick: No, I kinda didn't have time...
+				Hick: No, I kinda didn't have time...
 				-> You should go before the flight.
 					<<if get_flag_uncheck("boxesSuccess")>>
 						Hick: That would be nice, but I can't just drop work. 
@@ -486,12 +494,13 @@ title: boxesCheck
 position: -270,194
 ---
 HEY MAN CAN YOU HELP ME
+<<if set_flag("hickBoxes")>><<endif>>
 -> Yes
 	<<if physical_check(13)>>
 		<<if set_flag("boxesSuccess")>><<endif>>
 		Hick: Look at us we're so good.
 		-> High five
-	<<else>>
+	<<elseif true>>
 		You drop the boxes and hear something breaking.
 		Hick: Ok myabe lets not do that
 		-> yeah I think It's not for me.
@@ -502,7 +511,7 @@ title: drugs
 position: -784,175
 ---
 //HERE YOU WILL HELP KASS GET THE DRUGS
-
+<<if set_flag("hickDrugs")>><<endif>>
 Hick: yes I know kass, why? 
 hickey looks at you weird.
 
@@ -516,9 +525,10 @@ hickey looks at you weird.
 				->jeez this is dangerous
 		<<elseif education_check(13)>> 
 			GET MORE GENERIC KNOWLEDGE
-		<<else>>
+		<<elseif true>>
 			IT'S DRUG, IT DOES DRUG STUFF
 		<<endif>>
+		<<if set_flag("GotDrugs")>><<endif>>
 -> Dude what the fuck are you doing
 	Hick: listen I have to survive somehow.
 	-> Man you can't do this kind of stuff, and why? you're not getting money from this
@@ -528,7 +538,7 @@ hickey looks at you weird.
 			I don't know, I just don't like the vibe in the jovian lately. 
 			<<if social_check(13)>> 
 				something else is going on
-			<<else>>
+			<<elseif true>>
 				he seems sincere
 			<<endif>>
 			-> What's wrong with the lots?
@@ -538,7 +548,7 @@ hickey looks at you weird.
 						GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
 					<<elseif education_check(13)>> 
 						GET MORE GENERIC KNOWLEDGE
-					<<else>>
+					<<elseif true>>
 						IT'S DRUG, IT DOES DRUG STUFF
 					<<endif>>
 					<<if set_flag("GotDrugs")>><<endif>>
@@ -549,7 +559,7 @@ hickey looks at you weird.
 					GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
 				<<elseif education_check(13)>> 
 					GET MORE GENERIC KNOWLEDGE
-				<<else>>
+				<<elseif true>>
 					IT'S DRUG, IT DOES DRUG STUFF
 				<<endif>>
 				<<if set_flag("GotDrugs")>><<endif>>
@@ -562,7 +572,7 @@ hickey looks at you weird.
 				I don't know, I just don't like the vibe in the jovian lately. 
 				<<if social_check(13)>> 
 					something else is going on
-				<<else>>
+				<<elseif true>>
 					he seems sincere
 				<<endif>>
 				-> yeah sure, just give me the stuff
@@ -570,7 +580,7 @@ hickey looks at you weird.
 						GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
 					<<elseif education_check(13)>> 
 						GET MORE GENERIC KNOWLEDGE
-					<<else>>
+					<<elseif true>>
 						IT'S DRUG, IT DOES DRUG STUFF
 					<<endif>>
 					<<if set_flag("GotDrugs")>><<endif>>
@@ -581,7 +591,7 @@ hickey looks at you weird.
 					GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
 				<<elseif education_check(13)>> 
 					GET MORE GENERIC KNOWLEDGE
-				<<else>>
+				<<elseif true>>
 					IT'S DRUG, IT DOES DRUG STUFF
 				<<endif>>
 				<<if set_flag("GotDrugs")>><<endif>>
@@ -593,7 +603,7 @@ hickey looks at you weird.
 				GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
 			<<elseif education_check(13)>> 
 				GET MORE GENERIC KNOWLEDGE
-			<<else>>
+			<<elseif true>>
 				IT'S DRUG, IT DOES DRUG STUFF
 			<<endif>>
 			<<if set_flag("GotDrugs")>><<endif>>
@@ -605,7 +615,7 @@ hickey looks at you weird.
 			GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
 		<<elseif education_check(13)>> 
 			GET MORE GENERIC KNOWLEDGE
-		<<else>>
+		<<elseif true>>
 			IT'S DRUG, IT DOES DRUG STUFF
 		<<endif>>
 		<<if set_flag("GotDrugs")>><<endif>>

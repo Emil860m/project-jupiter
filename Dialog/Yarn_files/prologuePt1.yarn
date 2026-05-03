@@ -125,3 +125,11 @@ KHER JUST LEFT, IS DADDY GONNA SEND MESSAGES?
 -> DON'T SEND MESSAGES
 	<<if set_flag("noMessages")>><<endif>>
 ===
+title: alphaDialogue
+---
+For the sakes of this alpha build the opening dialogue of chapter 2 is going to be replaced with this quick introduction. 
+
+You're playing as Kher the kid of the character you just played as in chapter 1, Kher wakes up after six months of cryostasis in his trip from Mars to the Joivan system.
+You grew up on Kallisto with you dad, how's now sick and hospitalized in Ganymede. For this reason you decided to come back from Mars to have a final goodby.
+As soon as they wake up, Kher hears what it seems to be the voice of their father telling him something. But they don't have time to waste, hurry up.
+===
