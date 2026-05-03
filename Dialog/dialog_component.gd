@@ -42,6 +42,8 @@ func add_functions():
 	# Flags
 	dialogue_runner.add_function("set_flag", Flags.set_flag, 1)
 	dialogue_runner.add_function("get_flag", Flags.get_flag, 1)
+	dialogue_runner.add_function("get_flag_uncheck", Flags.get_flag_uncheck, 1)
+	dialogue_runner.add_function("unset_flag", Flags.unset_flag, 1)
 	
 	
 	# Checks Conversations

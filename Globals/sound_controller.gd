@@ -1,6 +1,7 @@
 extends Node
 
 @onready var bgm_emitter = $BgmEmitter
+@onready var amb_emitter = $AmbianceEmitter
 
 @onready var ui_emitters = $UIEmitters
 @onready var sfx_emitters = $SFXEmitters
@@ -37,17 +38,30 @@ func set_volumes():
 	
 	for emitter in sfx_emitters.get_children():
 		emitter.volume = actual_sound
+	
+	set_ambient_volume()
 
-func set_bgm(location):
+func set_ambient_volume():
+	amb_emitter.volume = master_vol * music_vol * 0.5 # ambience is half as loud as music
+
+func set_bgm(location, loading=false):
+	if location != NpcScheduler.locations.PONS and location != NpcScheduler.locations.RATIONALE:
+		set_in_flight(false)
+	
+	if loading:
+		amb_emitter.volume = 0.0
+	else:
+		set_ambient_volume()
+	
 	bgm_emitter.set_parameter("Location", get_location_parameter(location))
+	amb_emitter.set_parameter("Location", get_location_parameter(location))
+	
+	set_ambient_volume()
 
 func set_in_flight(is_in_flight: bool):
 	bgm_emitter.set_parameter("inFlight", is_in_flight)
 
 func get_location_parameter(loc: NpcScheduler.locations) -> String:
-	if loc != NpcScheduler.locations.PONS and loc != NpcScheduler.locations.RATIONALE:
-		set_in_flight(false)
-	
 	match loc:
 		NpcScheduler.locations.MAIN_MENU: return "Title"
 		NpcScheduler.locations.PROLOGUE: return "Title" # TODO add prologue music

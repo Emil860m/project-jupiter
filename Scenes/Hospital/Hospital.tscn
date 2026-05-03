@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="18_dcae5"]
 [ext_resource type="PackedScene" uid="uid://nmxf5wvoxmcg" path="res://Prefabs/Ganymede/left_wall.tscn" id="21_e6j45"]
 [ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="23_aubca"]
-[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
+[ext_resource type="PackedScene" uid="uid://cvv7l02d6nv7o" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
 [ext_resource type="PackedScene" uid="uid://jlpqaxd3k3fj" path="res://Prefabs/button.tscn" id="24_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="25_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://ql573cu8ftbd" path="res://Prefabs/Signs/exitSign.tscn" id="26_y0jcu"]
@@ -710,10 +710,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9252195, 3.2655904, 8.86548
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9252195, 3.2655904, 4.950675)
 
 [node name="Node3D" parent="." unique_id=1459250551 instance=ExtResource("25_tn6kv")]
-transform = Transform3D(0.6, 0, 0, 0, -2.6226834e-08, -0.6, 0, 0.6, -2.6226834e-08, 7.5818415, 2.3390522, 7.6577663)
+transform = Transform3D(0.6, 0, 0, 0, -2.6226834e-08, -0.6, 0, 0.6, -2.6226834e-08, 7.5818415, 2.3390522, 3.6807294)
 
 [node name="Node3D2" parent="." unique_id=1698224391 instance=ExtResource("25_tn6kv")]
-transform = Transform3D(0.6, 0, 0, 0, -2.6226834e-08, 0.6, 0, -0.6, -2.6226834e-08, 7.5818415, 2.3390522, 6.063731)
+transform = Transform3D(0.6, 0, 0, 0, -2.6226834e-08, 0.6, 0, -0.6, -2.6226834e-08, 7.5818415, 2.3390522, 7.6902437)
 
 [node name="Node3D3" parent="." unique_id=395495939 instance=ExtResource("26_y0jcu")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 7.3599424, 3.8084562, 4.9564915)

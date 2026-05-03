@@ -44,6 +44,8 @@
 [ext_resource type="PackedScene" uid="uid://c6dewu4he0gcs" path="res://Prefabs/Calisto/metal_building.tscn" id="43_376kf"]
 [ext_resource type="PackedScene" uid="uid://bg5eco0wxm2pm" path="res://Prefabs/MiscProps/under_construction_sign.tscn" id="44_1j4al"]
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="44_wq0p7"]
+[ext_resource type="PackedScene" uid="uid://dqekt5rttkm8v" path="res://Prefabs/Posters/ganymedePoster.tscn" id="45_raeed"]
+[ext_resource type="PackedScene" uid="uid://2pk26aftwmc8" path="res://Prefabs/Posters/ponsPoster.tscn" id="46_cpmbg"]
 
 [node name="ScalingScene" type="Node3D" unique_id=1149280770]
 
@@ -203,3 +205,9 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -7.319668, 0, -12.08286
 
 [node name="Node3D" parent="." unique_id=1459250551 instance=ExtResource("44_wq0p7")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -8.005259, 2.6850548, 14.907319)
+
+[node name="Node3D2" parent="." unique_id=548216174 instance=ExtResource("45_raeed")]
+transform = Transform3D(-4.3551832e-08, -0.08536476, 0.99634975, -3.731412e-09, 0.99634975, 0.08536476, -1, 0, -4.371139e-08, -8.1755085, 1.9271436, 31.233303)
+
+[node name="Node3D3" parent="." unique_id=578344689 instance=ExtResource("46_cpmbg")]
+transform = Transform3D(-4.3585537e-08, -0.0758315, 0.9971208, -3.3147005e-09, 0.9971208, 0.0758315, -1, -5.2267153e-16, -4.371139e-08, -8.18939, 1.9590008, 33.92493)

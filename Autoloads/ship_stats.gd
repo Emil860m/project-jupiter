@@ -55,7 +55,8 @@ func de_allocate_stat(stat_type: ShipStatTypes, amount = 1):
 
 
 func damage_ship(damage_number: int):
-	SoundController.play_take_damage(damage_number)
+	if damage_number > 0:
+		SoundController.play_take_damage(damage_number)
 	
 	damage += damage_number
 	if damage > 10:
