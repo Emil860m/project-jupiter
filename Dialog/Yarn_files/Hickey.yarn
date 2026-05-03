@@ -38,20 +38,20 @@ position: -555,14
         -> Listen do you know Kass?<<if get_flag("kassWorkshop")>>
         <<jump drugs>>
     <<endonce>>
-        -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
-            <<detour howYouDoing>>
-        -> What's new around?<<if get_flag_uncheck ("hickNA")>>
-            <<detour newAround>>
-        -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
-            <<detour grandma>>
-        ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
-            <<detour dad>>
-        ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
-            <<detour hickSully>>
-        ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
-            <<detour hickDocs>>
-        ->See you later!
-            Sure dude, whenever you want!
+    -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
+        <<detour howYouDoing>>
+    -> What's new around?<<if get_flag_uncheck ("hickNA")>>
+        <<detour newAround>>
+    -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
+        <<detour grandma>>
+    ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
+        <<detour dad>>
+    ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+        <<detour hickSully>>
+    ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+        <<detour hickDocs>>
+    ->See you later!
+        Sure dude, whenever you want!
 <<else>>
     <<detour meetHickey>>
 <<endif>>
@@ -454,6 +454,7 @@ Hickey open his arms to hug you .
                         -> Hickey, you should do it for yourself, not for me, bor for him.
                             <<if social_check(14)>>
                                 <<if set_flag("hickHospital")>><<endif>>
+                                <<if unset_flag("hickWorkshop")>><<endif>>
                             <<endif>>
                             Hick: I will try my best to be there.
                     <<endif>>
@@ -482,8 +483,12 @@ HEY MAN CAN YOU HELP ME
 -> Yes
     <<if physical_check(13)>>
         <<if set_flag("boxesSuccess")>><<endif>>
+        Hick: Look at us we're so good.
+        -> High five
     <<else>>
-    
+        You drop the boxes and hear something breaking.
+        Hick: Ok myabe lets not do that
+        -> yeah I think It's not for me.
     <<endif>>
 -> No sorry I can't
 ===

@@ -7,10 +7,10 @@ position: -389,105
 Oh, you must be Jey's kid right? You got here just in time,
 
 -> Can I see my father?
-    ???: Wait, you didn't get the message? your father didn't make it. he's passed last, I'm sorry for your loss kiddo.
+    ???: Wait, you didn't get the message? your father didn't make it. he's passed last week, I'm sorry for your loss kiddo.
 -> Where's his room? 
     ???: Wait, you didn't get the message? your father didn't make it. he's passed last, I'm sorry for your loss kiddo.
--> *let the woman finish what she's saying"
+-> let the woman finish what she's saying
     ???: I'm sorry for your loss kiddo. your dad passed last week.
 -> I have been hearing voices, do you know why? 
     Dad: Why would you tell her that idiot?
@@ -33,11 +33,12 @@ But we do need you for something, your dad's eagle flight is gonna be tonight, a
     Kass: I'm a nurse here I helped your father in the last months. 
 
 Kass: we really need your signature Kid.
-
+<<if set_flag("metKas")>><<endif>>
 -> what if I don't sign? 
-    Kass: uff, then you would have until 19 today to find another solution, because then the SDA will be enacted. 
+    Kass: uff, then you would have until 25 today to find another solution, because then the SDA will be enacted. 
+    <<return>>
 -> ok let's get this over with...
-
+    <<return>>
 ===
 title: kasHospitalTS1
 color: blue
@@ -56,8 +57,7 @@ Kass: So kid?
     <<detour kassDelay>>
 -> can you help me delay the SDA?<<if get_flag_uncheck("kassHelp")>>
     <<detour kassHelp>>
-    
-<<else>>
+<<elseif true>>
     <<detour meetKas>>
 <<endif>>
 ===
@@ -77,7 +77,7 @@ position: 314,98
         <<detour kassDelay>>
     -> so can you help me with the SDA?<<if get_flag_uncheck("kassHelp2")>>
         <<detour kassHelp2>>
-<<else>>
+<<elseif true>>
     <<detour meetKas>>
 <<endif>>
 ===
@@ -143,6 +143,7 @@ position: 761,47
 ---
     The sda is the safe disposal act, it makes it so bodies can not be kept for more than two weeks in cryo ba-- ehm cryo suits. 
     <<set $Bag = true>>
+    <<return>>
 ===
 title: kassSchedule
 position: 763,201
@@ -170,7 +171,7 @@ title: kassHelp2
     <<if get_flag("kassDrugs")>>
         Sure but I'm gonna need you to do me a favour.
         I need you to talk to someone for me.
-        Let's meet on Callisto at 16.30.
+        I'll be on Callisto from 16.30 to 18. let's meet there
         <<if set_flag("kassWorkshop")>><<endif>>    
     <<else>>
         no, i told you I can't. Go to Zoe upstairs maybe she knows.

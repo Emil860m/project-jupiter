@@ -46,8 +46,10 @@ position: -460,293
 title: meetZoe
 position: -947,-14
 ---
-Zoe: Hi I'm zoe
-<<if set_flag("meetZoe")>><<endif>>
+Zoe: Hi I'm zoe 
+<<if set_flag("metZoe")>><<endif>>
+-> Hi, I'm Kher
+    <<return>>
 ===
 //DIALOGUE
 title:zoeSDA
