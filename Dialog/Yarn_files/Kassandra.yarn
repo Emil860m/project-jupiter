@@ -57,6 +57,9 @@ Kass: So kid?
 	<<detour kassDelay>>
 -> can you help me delay the SDA?<<if get_flag_uncheck("kassHelp")>>
 	<<detour kassHelp>>
+-> Bye
+	<<return>>
+<<jump kasHospitalTS1>>
 <<elseif true>>
 	<<detour meetKas>>
 <<endif>>
@@ -66,17 +69,20 @@ color: blue
 position: 314,98
 ---
 <<if get_flag("metKas")>>
-	Kass: So kid? 
-	-> yes let me sign those documents and let's get it over with. <<if $Bag>>
-		<<detour kassSign>>
-	-> What's the SDA? 
-		<<detour kassSDA>>
-	-> Is there someone else other than you here? 
-		<<detour kassSchedule>>
-	-> is there a way to delay the SDA? <<if $Bag>>
-		<<detour kassDelay>>
-	-> so can you help me with the SDA?<<if get_flag_uncheck("kassHelp2")>>
-		<<detour kassHelp2>>
+Kass: So kid? 
+-> yes let me sign those documents and let's get it over with. <<if $Bag>>
+    <<detour kassSign>>
+-> What's the SDA? 
+    <<detour kassSDA>>
+-> Is there someone else other than you here? 
+    <<detour kassSchedule>>
+-> is there a way to delay the SDA? <<if $Bag>>
+    <<detour kassDelay>>
+-> so can you help me with the SDA?<<if get_flag_uncheck("kassHelp2")>>
+    <<detour kassHelp2>>
+-> Bye
+    <<return>>
+<<jump kasHospitalTS1>>
 <<elseif true>>
 	<<detour meetKas>>
 <<endif>>

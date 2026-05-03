@@ -62,13 +62,18 @@ offset_top = -136.0
 offset_right = 160.0
 offset_bottom = -8.0
 
-[node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865]
+[node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865 node_paths=PackedStringArray("options_container")]
 layout_mode = 0
 offset_left = 1420.0
 offset_right = 1920.0
 offset_bottom = 225.0
 script = ExtResource("4_tomcn")
+options_container = NodePath("ScrollContainer/OptionsContainer")
 option_button_scene = ExtResource("5_007lo")
+hide_unavailable = true
 
-[node name="OptionsContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPresenter" unique_id=1030912164]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/OptionsPresenter" unique_id=1872827053]
+layout_mode = 2
+
+[node name="OptionsContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPresenter/ScrollContainer" unique_id=1030912164]
 layout_mode = 2

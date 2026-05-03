@@ -3,22 +3,24 @@ color: green
 position: -538,-230
 ---
 <<if get_flag("metHick")>>
-	Hickey greats you with his half smirk.
-	Hick: Hey dude what can I do you for?
-	-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
-		<<detour howYouDoing>>
-	-> What's new around?<<if get_flag_uncheck ("hickNA")>>
-		<<detour newAround>>
-	-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
-		<<detour grandma>>
-	->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
-		<<detour dad>>
-	->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
-		<<detour hickSully>>
-	->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
-		<<detour hickDocs>>
-	->See you later!
-		Sure dude, whenever you want!
+Hickey greats you with his half smirk.
+Hick: Hey dude what can I do you for?
+-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
+	<<detour howYouDoing>>
+-> What's new around?<<if get_flag_uncheck ("hickNA")>>
+	<<detour newAround>>
+-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
+	<<detour grandma>>
+->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
+	<<detour dad>>
+->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+	<<detour hickSully>>
+->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+	<<detour hickDocs>>
+->See you later!
+	Sure dude, whenever you want!
+	<<return>>
+<<jump hickWorkshopTS3>>
 <<else>>
 	<<detour meetHickey>>
 <<endif>>
@@ -28,30 +30,32 @@ color: green
 position: -555,14
 ---
 <<if get_flag("metHick")>>
-	Hickey is packing up a bunch of boxes on a crate.
-	Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
-	<<once>>
-		-> Can I help you with those boxes?
-			<<detour boxesCheck>>
-	<<endonce>>
-	<<once>>
-		-> Listen do you know Kass?<<if get_flag("kassWorkshop")>>
-		<<jump drugs>>
-	<<endonce>>
-	-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
-		<<detour howYouDoing>>
-	-> What's new around?<<if get_flag_uncheck ("hickNA")>>
-		<<detour newAround>>
-	-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
-		<<detour grandma>>
-	->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
-		<<detour dad>>
-	->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
-		<<detour hickSully>>
-	->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
-		<<detour hickDocs>>
-	->See you later!
-		Sure dude, whenever you want!
+Hickey is packing up a bunch of boxes on a crate.
+Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
+<<once>>
+	-> Can I help you with those boxes?
+		<<detour boxesCheck>>
+<<endonce>>
+<<once>>
+	-> Listen do you know Kass?<<if get_flag("hickeyKass")>>
+	<<jump drugs>>
+<<endonce>>
+-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
+	<<detour howYouDoing>>
+-> What's new around?<<if get_flag_uncheck ("hickNA")>>
+	<<detour newAround>>
+-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
+	<<detour grandma>>
+->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
+	<<detour dad>>
+->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+	<<detour hickSully>>
+->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+	<<detour hickDocs>>
+->See you later!
+	Sure dude, whenever you want!
+	<<return>>
+<<jump hickWorkshopTS5>>
 <<else>>
 	<<detour meetHickey>>
 <<endif>>
@@ -61,20 +65,22 @@ color: green
 position: -531,371
 ---
 <<if get_flag("metHick")>>
-		-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
-			<<detour howYouDoing>>
-		-> What's new around?<<if get_flag_uncheck ("hickNA")>>
-			<<detour newAround>>
-		-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
-			<<detour grandma>>
-		->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
-			<<detour dad>>
-		->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
-			<<detour hickSully>>
-		->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
-			<<detour hickDocs>>
-		->See you later!
-			Sure dude, whenever you want!
+-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
+	<<detour howYouDoing>>
+-> What's new around?<<if get_flag_uncheck ("hickNA")>>
+	<<detour newAround>>
+-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
+	<<detour grandma>>
+->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
+	<<detour dad>>
+->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+	<<detour hickSully>>
+->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+	<<detour hickDocs>>
+->See you later!
+	Sure dude, whenever you want!
+	<<return>>
+<<jump hickWorkshopTS6>>
 <<else>>
 	<<detour meetHickey>>
 <<endif>>

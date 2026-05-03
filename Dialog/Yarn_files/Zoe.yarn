@@ -3,14 +3,17 @@ color: yellow
 position: -463,-268
 ---
 <<if get_flag("metZoe")>>
-	-> how can I get an extation? <<if get_flag_uncheck("SDA")>>
-		<<detour zoeSDA>>
-	-> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
-		<<detour zoeExtension>>
-	-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
-		<<detour zoeKeys>>
-	-> can I help you somehow? 
-		<<detour zoeHelp>>
+-> how can I get an extation? <<if get_flag_uncheck("SDA")>>
+	<<detour zoeSDA>>
+-> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+	<<detour zoeExtension>>
+-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
+	<<detour zoeKeys>>
+-> can I help you somehow? 
+	<<detour zoeHelp>>
+-> Thanks, see you later
+	<<return>>
+<<jump zoeOfficeTS2>>
 <<else>>
 	<<detour meetZoe>>
 <<endif>>
@@ -31,14 +34,17 @@ color: yellow
 position: -460,293
 ---
 <<if get_flag("metZoe")>>
-	-> how can I get an extation? <<if get_flag_uncheck("SDA")>>
-		<<detour zoeSDA>>
-	-> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
-		<<detour zoeExtension>>
-	-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
-		<<detour zoeKeys>>
-	-> can I help you somehow? 
-		<<detour zoeHelp>>
+-> how can I get an extation? <<if get_flag_uncheck("SDA")>>
+	<<detour zoeSDA>>
+-> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+	<<detour zoeExtension>>
+-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
+	<<detour zoeKeys>>
+-> can I help you somehow? 
+	<<detour zoeHelp>>
+-> Thanks, see you later
+	<<return>>
+<<jump zoeOfficeTS2>>
 <<else>>
 	<<detour meetZoe>>
 <<endif>>

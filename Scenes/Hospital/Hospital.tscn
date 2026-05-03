@@ -23,10 +23,12 @@
 [ext_resource type="PackedScene" uid="uid://nmxf5wvoxmcg" path="res://Prefabs/Ganymede/left_wall.tscn" id="21_e6j45"]
 [ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="23_aubca"]
 [ext_resource type="PackedScene" uid="uid://cvv7l02d6nv7o" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
+[ext_resource type="PackedScene" uid="uid://cs55xxpbvxs4e" path="res://NPC/Kassandra/Kassandra.tscn" id="24_rxpas"]
 [ext_resource type="PackedScene" uid="uid://jlpqaxd3k3fj" path="res://Prefabs/button.tscn" id="24_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="25_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://ql573cu8ftbd" path="res://Prefabs/Signs/exitSign.tscn" id="26_y0jcu"]
-[ext_resource type="PackedScene" uid="uid://cs55xxpbvxs4e" path="res://NPC/Kassandra/Kassandra.tscn" id="24_rxpas"]
+[ext_resource type="PackedScene" uid="uid://cjgyb4jmguhna" path="res://NPC/Sally/Sally.tscn" id="28_vxxnl"]
+[ext_resource type="PackedScene" uid="uid://cbumxbxe80yjw" path="res://NPC/Zoe/Zoe.tscn" id="29_0yi24"]
 
 [sub_resource type="Sky" id="Sky_lm1a6"]
 
@@ -68,7 +70,7 @@ environment = SubResource("Environment_7441k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.302002, 1.000001, 4.0865746)
 
 [node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("23_aubca")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.065383, 1.0500011, 19.363617)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.415967, 0.7903018, 34.191563)
 
 [node name="NavigationAgent3D" type="NavigationRegion3D" parent="." unique_id=723621283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013459206, -0.040087223, -0.10386753)
@@ -719,4 +721,10 @@ transform = Transform3D(0.6, 0, 0, 0, -2.6226834e-08, 0.6, 0, -0.6, -2.6226834e-
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 7.3599424, 3.8084562, 4.9564915)
 
 [node name="Kassandra" parent="." unique_id=1964364760 instance=ExtResource("24_rxpas")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2802544, 1.0500011, 16.080414)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.838169, 1.0500011, 21.476227)
+
+[node name="Zoe" parent="." unique_id=2096689363 instance=ExtResource("29_0yi24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.76475, 1.0500002, 33.782196)
+
+[node name="Sally" parent="." unique_id=764589073 instance=ExtResource("28_vxxnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.155514, 1.0500002, -8.176869)

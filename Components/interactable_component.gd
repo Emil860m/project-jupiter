@@ -21,7 +21,8 @@ var interact: Callable = func ():
 func runner():
 	interact.call()
 	if !Globals.has_interacted(object_id):
-		Globals.increment_timestep(time_pass)
+		if time_pass > 0:
+			Globals.increment_timestep(time_pass)
 	Globals.add_to_interact_set(object_id)
 	
 
