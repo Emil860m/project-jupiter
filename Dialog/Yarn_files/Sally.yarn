@@ -4,25 +4,25 @@ position: -237,-112
 ---
 
 <<if get_flag("metSul")>>
-    The man acnowledge you without moving his eyes from his work.
-    Sully: Hey Kher, can I help you? 
+	The man acnowledge you without moving his eyes from his work.
+	Sully: Hey Kher, can I help you? 
 
-    -> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
-        <<detour sullyGetIn>>
-    -> Can you give me your keys?<<if get_flag("sullyKeys")>>
-        <<detour sullyKey>>
-    -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
-        <<detour sulOfficeReq>>
-    -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
-        <<detour sullyExtension>>
-    -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
-        <<detour sullyHick>>
-    -> Thanks, see you later
+	-> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+		<<detour sullyGetIn>>
+	-> Can you give me your keys?<<if get_flag("sullyKeys")>>
+		<<detour sullyKey>>
+	-> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+		<<detour sulOfficeReq>>
+	-> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
+		<<detour sullyExtension>>
+	-> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+		<<detour sullyHick>>
+	-> Thanks, see you later
 
 <<else>>
-    The old man's eyes light up when he sees you 
-    Sully: hey kid you made it.
-    <<detour meetSully>>
+	The old man's eyes light up when he sees you 
+	Sully: hey kid you made it.
+	<<detour meetSully>>
 <<endif>>
 ===
 title: SalHospitalTS2
@@ -34,15 +34,15 @@ The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
 -> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
-    <<detour sullyGetIn>>
+	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
-    <<detour sullyKey>>
+	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
-    <<detour sulOfficeReq>>
+	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad")>>
-    <<detour sullyExtension>>
+	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
-    <<detour sullyHick>>
+	<<detour sullyHick>>
 -> Thanks, see you later
 
 <<else>>
@@ -56,10 +56,10 @@ color: yellow
 position: -1089,258
 ---
 <<if get_flag("docs") and get_flag("log")>>
-    Zoe: Here's the extantion
-    <<if set_flag("gotExtension")>><<endif>>
+	Zoe: Here's the extantion
+	<<if set_flag("gotExtension")>><<endif>>
 <<else>>
-    Sully is talking to Zoe
+	Sully is talking to Zoe
 <<endif>>
 ===
 title: SalHospitalTS4
@@ -71,15 +71,15 @@ The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
 -> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
-    <<detour sullyGetIn>>
+	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
-    <<detour sullyKey>>
+	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
-    <<detour sulOfficeReq>>
+	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad")>>
-    <<detour sullyExtension>>
+	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
-    <<detour sullyHick>>
+	<<detour sullyHick>>
 -> Thanks, see you later
 
 <<else>>
@@ -97,13 +97,13 @@ The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
 -> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
-    <<detour sullyGetIn>>
+	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
-    <<detour sullyKey>>
+	<<detour sullyKey>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad")>>
-    <<detour sullyExtension>>
+	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
-    <<detour sullyHick>>
+	<<detour sullyHick>>
 -> Thanks, see you later
 
 <<else>>
@@ -121,15 +121,15 @@ The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
 -> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
-    <<detour sullyGetIn>>
+	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
-    <<detour sullyKey>>
+	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
-    <<detour sulOfficeReq>>
+	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad")>>
-    <<detour sullyExtension>>
+	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
-    <<detour sullyHick>>
+	<<detour sullyHick>>
 -> Thanks, see you later
 
 <<else>>

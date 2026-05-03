@@ -3,16 +3,16 @@ color: yellow
 position: -463,-268
 ---
 <<if get_flag("metZoe")>>
-    -> how can I get an extation? <<if get_flag_uncheck("SDA")>>
-        <<detour zoeSDA>>
-    -> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
-        <<detour zoeExtension>>
-    -> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
-        <<detour zoeKeys>>
-    -> can I help you somehow? 
-        <<detour zoeHelp>>
+	-> how can I get an extation? <<if get_flag_uncheck("SDA")>>
+		<<detour zoeSDA>>
+	-> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+		<<detour zoeExtension>>
+	-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
+		<<detour zoeKeys>>
+	-> can I help you somehow? 
+		<<detour zoeHelp>>
 <<else>>
-    <<detour meetZoe>>
+	<<detour meetZoe>>
 <<endif>>
 ===
 title: zoeHospitalTS4
@@ -20,10 +20,10 @@ color: blue
 position: -464,-2
 ---
 <<if get_flag("docs") and get_flag("log")>>
-    Here's the extantion
-    <<if set_flag("gotExtension")>><<endif>>
+	Here's the extantion
+	<<if set_flag("gotExtension")>><<endif>>
 <<else>>
-    Zoe is sharing a private moment with the corpse.
+	Zoe is sharing a private moment with the corpse.
 <<endif>>
 ===
 title: zoeOfficeTS5
@@ -31,16 +31,16 @@ color: yellow
 position: -460,293
 ---
 <<if get_flag("metZoe")>>
-    -> how can I get an extation? <<if get_flag_uncheck("SDA")>>
-        <<detour zoeSDA>>
-    -> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
-        <<detour zoeExtension>>
-    -> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
-        <<detour zoeKeys>>
-    -> can I help you somehow? 
-        <<detour zoeHelp>>
+	-> how can I get an extation? <<if get_flag_uncheck("SDA")>>
+		<<detour zoeSDA>>
+	-> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+		<<detour zoeExtension>>
+	-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
+		<<detour zoeKeys>>
+	-> can I help you somehow? 
+		<<detour zoeHelp>>
 <<else>>
-    <<detour meetZoe>>
+	<<detour meetZoe>>
 <<endif>>
 ===
 title: meetZoe
@@ -49,7 +49,7 @@ position: -947,-14
 Zoe: Hi I'm zoe 
 <<if set_flag("metZoe")>><<endif>>
 -> Hi, I'm Kher
-    <<return>>
+	<<return>>
 ===
 //DIALOGUE
 title:zoeSDA
@@ -69,13 +69,13 @@ tell sully to come here <<if set_flag("zoeAsk")>>
 title:zoeExtension
 ---
 <<if get_flag("docs") and get_flag("log")>>
-    here's the extantion
-    <<if set_flag("gotExtension")>><<endif>>
+	here's the extantion
+	<<if set_flag("gotExtension")>><<endif>>
 <<elseif get_flag_uncheck("docs") and get_flag_uncheck("log")>>
-    you're missing both
+	you're missing both
 <<elseif get_flag_uncheck("docs")>>
-    You're missing the docs
+	You're missing the docs
 <<elseif get_flag_uncheck("log")>>
-    you're missing the log
+	you're missing the log
 <<endif>>
 ===

@@ -3,24 +3,24 @@ color: green
 position: -538,-230
 ---
 <<if get_flag("metHick")>>
-    Hickey greats you with his half smirk.
-    Hick: Hey dude what can I do you for?
-    -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
-        <<detour howYouDoing>>
-    -> What's new around?<<if get_flag_uncheck ("hickNA")>>
-        <<detour newAround>>
-    -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
-        <<detour grandma>>
-    ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
-        <<detour dad>>
-    ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
-        <<detour hickSully>>
-    ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
-        <<detour hickDocs>>
-    ->See you later!
-        Sure dude, whenever you want!
+	Hickey greats you with his half smirk.
+	Hick: Hey dude what can I do you for?
+	-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
+		<<detour howYouDoing>>
+	-> What's new around?<<if get_flag_uncheck ("hickNA")>>
+		<<detour newAround>>
+	-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
+		<<detour grandma>>
+	->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
+		<<detour dad>>
+	->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+		<<detour hickSully>>
+	->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+		<<detour hickDocs>>
+	->See you later!
+		Sure dude, whenever you want!
 <<else>>
-    <<detour meetHickey>>
+	<<detour meetHickey>>
 <<endif>>
 ===
 title: hickWorkshopTS5
@@ -28,32 +28,32 @@ color: green
 position: -555,14
 ---
 <<if get_flag("metHick")>>
-    Hickey is packing up a bunch of boxes on a crate.
-    Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
-    <<once>>
-        -> Can I help you with those boxes?
-            <<detour boxesCheck>>
-    <<endonce>>
-    <<once>>
-        -> Listen do you know Kass?<<if get_flag("kassWorkshop")>>
-        <<jump drugs>>
-    <<endonce>>
-    -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
-        <<detour howYouDoing>>
-    -> What's new around?<<if get_flag_uncheck ("hickNA")>>
-        <<detour newAround>>
-    -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
-        <<detour grandma>>
-    ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
-        <<detour dad>>
-    ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
-        <<detour hickSully>>
-    ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
-        <<detour hickDocs>>
-    ->See you later!
-        Sure dude, whenever you want!
+	Hickey is packing up a bunch of boxes on a crate.
+	Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
+	<<once>>
+		-> Can I help you with those boxes?
+			<<detour boxesCheck>>
+	<<endonce>>
+	<<once>>
+		-> Listen do you know Kass?<<if get_flag("kassWorkshop")>>
+		<<jump drugs>>
+	<<endonce>>
+	-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
+		<<detour howYouDoing>>
+	-> What's new around?<<if get_flag_uncheck ("hickNA")>>
+		<<detour newAround>>
+	-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
+		<<detour grandma>>
+	->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
+		<<detour dad>>
+	->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+		<<detour hickSully>>
+	->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+		<<detour hickDocs>>
+	->See you later!
+		Sure dude, whenever you want!
 <<else>>
-    <<detour meetHickey>>
+	<<detour meetHickey>>
 <<endif>>
 ===
 title: hickWorkshopTS6
@@ -61,22 +61,22 @@ color: green
 position: -531,371
 ---
 <<if get_flag("metHick")>>
-        -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
-            <<detour howYouDoing>>
-        -> What's new around?<<if get_flag_uncheck ("hickNA")>>
-            <<detour newAround>>
-        -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
-            <<detour grandma>>
-        ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
-            <<detour dad>>
-        ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
-            <<detour hickSully>>
-        ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
-            <<detour hickDocs>>
-        ->See you later!
-            Sure dude, whenever you want!
+		-> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
+			<<detour howYouDoing>>
+		-> What's new around?<<if get_flag_uncheck ("hickNA")>>
+			<<detour newAround>>
+		-> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
+			<<detour grandma>>
+		->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
+			<<detour dad>>
+		->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+			<<detour hickSully>>
+		->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+			<<detour hickDocs>>
+		->See you later!
+			Sure dude, whenever you want!
 <<else>>
-    <<detour meetHickey>>
+	<<detour meetHickey>>
 <<endif>>
 ===
 title: hickHospitalTS6
@@ -100,18 +100,18 @@ Description of hickey and that kher knows him.
 Hickey introduces himself and tells kher they remind him of someone
 
 -> how the fuck can you not remember me? did you smoke your last brain cell? 
-    hickey asks how has kher been doing
-    -> I've been good, just a bit tense from the journey.
-    -> Mah with the whole, my dad is dying situation?
-        probably been better.
+	hickey asks how has kher been doing
+	-> I've been good, just a bit tense from the journey.
+	-> Mah with the whole, my dad is dying situation?
+		probably been better.
 -> Nice to meet you complete stranger
-    Hick: Hey wait a minute... Kher dude! 
-    The guy jumps at you with a big hug. 
-    Dad: Jeez, since when he's so... touchy.
-    Hick: How have you been!
-    -> I've been good, just a bit tense from the journey. 
-    -> Mah with the whole, my dad is dying situation?
-        probably been better.
+	Hick: Hey wait a minute... Kher dude! 
+	The guy jumps at you with a big hug. 
+	Dad: Jeez, since when he's so... touchy.
+	Hick: How have you been!
+	-> I've been good, just a bit tense from the journey. 
+	-> Mah with the whole, my dad is dying situation?
+		probably been better.
 <<if set_flag ("metHick")>><<endif>>
 ===
 //DIALOGUES
@@ -121,113 +121,113 @@ position: 113,382
 Hick: I would say pretty good, I've got this lit job flying around the system now, and it's only slightly boring and exhausting. 
 The usual grin brightens the boy's face. 
 <<if social_check(15)>> 
-    Behind it a weird undertone of sadness, something not unusual for hickey, but this time it feels different.
-    Dad: So what's wrong with the kid? 
-    -> Geez, how should I know! I just got here.
-        Dad: Eheh don't get too heated there. what are you not all chummy with him anymore? 
-        You can feel your father's wink in your head
-            -> ignore him.
-                -> Are you ok Hick? you seem... I don't know, not ok...
-                    Hick: Yeah, I just need to filter down a couple of enhancers to get through today's shift. 
-                    Hick keeps on wearing the same disarming smile.
-                    <<if mental_check(12)>> But his eyes are now as cold as an ice-miner's ass after a long shift. 
-                    Dad: So that was a do not ask again if I ever saw one.
-                        -> Are you sure? 
-                            Hick voice cuts the air sharply. 
-                            Hick: I told you I'm fine Kher. 
-                            Dad: I did tell you to drop it. 
-                            As if nothing ever happened hick shakes off the tension built up, with his usual smile
-                            Hick: I'm sorry dude, I just have a lot of work to do Eheh.
-                        -> Ok man, I won't push it
-                            The guy looks at you genuinely relived. 
-                            Hick: Thanks dude. 
-                    <<else>>
-                    -> Are you sure? 
-                            Hick voice cuts the air sharply. 
-                            Hick: I told you I'm fine Kher. 
-                            Dad: I did tell you to drop it. 
-                            As if nothing ever happened hick shakes off the tension built up, with his usual smile
-                            Hick: I'm sorry dude, I just have a lot of work to do Eheh.
-                        -> Ok man, I won't push it
-                            The guy looks at you genuinely relived. 
-                            Hick: Thanks dude. 
-                    <<endif>>
-                -> Ok man, I won't push it
-                            The guy looks at you genuinely relived. 
-                            Hick: Thanks dude. 
-            -> what are you even talking about?!
-                You think this so loudly that you actually shout it outloud.
-                Hick looks at you confused and concerned
-                Hick: Honestly dude, I should be the one concerned here. Are you ok? 
-                    -> Forget it
-                        Hickey gives you a weird look, but he drops it.
-                    -> No, having your dad's voice in your head is fucking weird.
-                        Hickey now looks very concerned. 
-                        Hick: Dude, I really think you should go to the hospital if you're hearing voices
-                            -> At least I'm honest about what the fuck is going on. 
-                                Hickey looks shook by the answer, in a very unpleasant way
-                                Hick: listen, lets change subject.
-                            -> Yeah maybe I will.
-                                Hickey pats you shoulder.
-                                Hick: Good dude. 
-                                Dad: Uhh, look at that, physical contact, that's progress.
-                                You repress the impulse to flip off the air.
-                            -> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("kassCrazy")>>
-                                Hick: Yeah that sounds about right, but maybe go get checked. I can ask a friend to visit you tomorrow. 
-                            -> Forget it.
-                                Hickey really doesn't like your answer, but accepts it.
-    -> Mmm, What do you think? should I ask?
-        Dad: Nah, The kid seems distressed just give him some space.
-    -> Are you sure? 
-                            Hick voice cuts the air sharply. 
-                            Hick: I told you I'm fine Kher. 
-                            Dad: I did tell you to drop it. 
-                            As if nothing ever happened hick shakes off the tension built up, with his usual smile
-                            Hick: I'm sorry dude, I just have a lot of work to do Eheh.
-                        -> Ok man, I won't push it
-                            The guy looks at you genuinely relived. 
-                            Hick: Thanks dude.
-    -> Don't ask anything
-        Dad: I see, my child has grown to be a great person. 
+	Behind it a weird undertone of sadness, something not unusual for hickey, but this time it feels different.
+	Dad: So what's wrong with the kid? 
+	-> Geez, how should I know! I just got here.
+		Dad: Eheh don't get too heated there. what are you not all chummy with him anymore? 
+		You can feel your father's wink in your head
+			-> ignore him.
+				-> Are you ok Hick? you seem... I don't know, not ok...
+					Hick: Yeah, I just need to filter down a couple of enhancers to get through today's shift. 
+					Hick keeps on wearing the same disarming smile.
+					<<if mental_check(12)>> But his eyes are now as cold as an ice-miner's ass after a long shift. 
+					Dad: So that was a do not ask again if I ever saw one.
+						-> Are you sure? 
+							Hick voice cuts the air sharply. 
+							Hick: I told you I'm fine Kher. 
+							Dad: I did tell you to drop it. 
+							As if nothing ever happened hick shakes off the tension built up, with his usual smile
+							Hick: I'm sorry dude, I just have a lot of work to do Eheh.
+						-> Ok man, I won't push it
+							The guy looks at you genuinely relived. 
+							Hick: Thanks dude. 
+					<<else>>
+					-> Are you sure? 
+							Hick voice cuts the air sharply. 
+							Hick: I told you I'm fine Kher. 
+							Dad: I did tell you to drop it. 
+							As if nothing ever happened hick shakes off the tension built up, with his usual smile
+							Hick: I'm sorry dude, I just have a lot of work to do Eheh.
+						-> Ok man, I won't push it
+							The guy looks at you genuinely relived. 
+							Hick: Thanks dude. 
+					<<endif>>
+				-> Ok man, I won't push it
+							The guy looks at you genuinely relived. 
+							Hick: Thanks dude. 
+			-> what are you even talking about?!
+				You think this so loudly that you actually shout it outloud.
+				Hick looks at you confused and concerned
+				Hick: Honestly dude, I should be the one concerned here. Are you ok? 
+					-> Forget it
+						Hickey gives you a weird look, but he drops it.
+					-> No, having your dad's voice in your head is fucking weird.
+						Hickey now looks very concerned. 
+						Hick: Dude, I really think you should go to the hospital if you're hearing voices
+							-> At least I'm honest about what the fuck is going on. 
+								Hickey looks shook by the answer, in a very unpleasant way
+								Hick: listen, lets change subject.
+							-> Yeah maybe I will.
+								Hickey pats you shoulder.
+								Hick: Good dude. 
+								Dad: Uhh, look at that, physical contact, that's progress.
+								You repress the impulse to flip off the air.
+							-> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("kassCrazy")>>
+								Hick: Yeah that sounds about right, but maybe go get checked. I can ask a friend to visit you tomorrow. 
+							-> Forget it.
+								Hickey really doesn't like your answer, but accepts it.
+	-> Mmm, What do you think? should I ask?
+		Dad: Nah, The kid seems distressed just give him some space.
+	-> Are you sure? 
+							Hick voice cuts the air sharply. 
+							Hick: I told you I'm fine Kher. 
+							Dad: I did tell you to drop it. 
+							As if nothing ever happened hick shakes off the tension built up, with his usual smile
+							Hick: I'm sorry dude, I just have a lot of work to do Eheh.
+						-> Ok man, I won't push it
+							The guy looks at you genuinely relived. 
+							Hick: Thanks dude.
+	-> Don't ask anything
+		Dad: I see, my child has grown to be a great person. 
 <<elseif social_check(12)>>
-    HICKEY SEEMS GENUALLY HAPPY
-    -> Smile back
-    -> You look well man.
-        Hick: thanks dude. and how've you been doing?
-        -> Apart from the current situation? all good.
-            Hick: I know... If I can do anythi-
-                -> Don't worry.
-                    Hickey looks down. 
-                    It's the first time you don't see him smile... when was the last time you sow him without a smile?
-                -> I know, thanks man. 
-                    Hickey looks at you with a bittersweet smile.
-        -> Weirdly relived <<if get_flag("deadDad") and get_flag("dadNeutral") or get_flag("dadBad")>>
-             Hick: That makes sense... But you know that If I can do anythi-
-                -> Don't worry.
-                    Hickey looks down. 
-                    It's the first time you don't see him smile... when was the last time you sow him without a smile?
-                -> I know, thanks man. 
-                    Hickey looks at you with a bittersweet smile.
-        -> Honestly? like shit <<if get_flag("deadDad")>>
-            Hick: I know... If I can do anythi-
-                -> Don't worry.
-                    Hickey looks down. 
-                    It's the first time you don't see him smile... when was the last time you sow him without a smile?
-                -> I know, thanks man. 
-                    Hickey looks at you with a bittersweet smile.
-        -> Great! It's amazing hearing voices.
-             Hick: Dude, I really think you should go to the hospital if you're hearing voices
-                            -> Yeah maybe I will.
-                                Hickey pats you shoulder.
-                                Hick: Good dude. 
-                                Dad: Uhh, look at that, physical contact, that's progress.
-                                You repress the impulse to flip off the air.
-                            -> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("kassCrazy")>>
-                                Hick: Yeah that sounds about right, but maybe go get checked. I can ask a friend to visit you tomorrow.
-                                    ->Sure, why not
-                                    ->No thanks, I've too much stuff going on 
-                            -> Forget it.
-                                Hickey really doesn't like your answer but he accepts it.
+	HICKEY SEEMS GENUALLY HAPPY
+	-> Smile back
+	-> You look well man.
+		Hick: thanks dude. and how've you been doing?
+		-> Apart from the current situation? all good.
+			Hick: I know... If I can do anythi-
+				-> Don't worry.
+					Hickey looks down. 
+					It's the first time you don't see him smile... when was the last time you sow him without a smile?
+				-> I know, thanks man. 
+					Hickey looks at you with a bittersweet smile.
+		-> Weirdly relived <<if get_flag("deadDad") and get_flag("dadNeutral") or get_flag("dadBad")>>
+			 Hick: That makes sense... But you know that If I can do anythi-
+				-> Don't worry.
+					Hickey looks down. 
+					It's the first time you don't see him smile... when was the last time you sow him without a smile?
+				-> I know, thanks man. 
+					Hickey looks at you with a bittersweet smile.
+		-> Honestly? like shit <<if get_flag("deadDad")>>
+			Hick: I know... If I can do anythi-
+				-> Don't worry.
+					Hickey looks down. 
+					It's the first time you don't see him smile... when was the last time you sow him without a smile?
+				-> I know, thanks man. 
+					Hickey looks at you with a bittersweet smile.
+		-> Great! It's amazing hearing voices.
+			 Hick: Dude, I really think you should go to the hospital if you're hearing voices
+							-> Yeah maybe I will.
+								Hickey pats you shoulder.
+								Hick: Good dude. 
+								Dad: Uhh, look at that, physical contact, that's progress.
+								You repress the impulse to flip off the air.
+							-> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("kassCrazy")>>
+								Hick: Yeah that sounds about right, but maybe go get checked. I can ask a friend to visit you tomorrow.
+									->Sure, why not
+									->No thanks, I've too much stuff going on 
+							-> Forget it.
+								Hickey really doesn't like your answer but he accepts it.
 
 <<endif>>
 <<if set_flag ("hickHYD")>><<endif>>
@@ -238,230 +238,230 @@ position: 120,-80
 Hick: Yeah I'm sorry Kher, 
 Hick: I know he was not the best with you... but... nah forget it, no fucking but. <<if get_flag("KherWorker") or get_flag("noMessages")>> 
 Hickey open his arms to hug you .
-    -> Hug him back.
-        Hickey hugs you firmly, and keeps doing so for way too long
-        Dad: It almost seems he needed that hug more then you did kid. <<if social_check(13)>>
-            ->Wait for him to stop hugging you
-                After what it feels like an eternity the boy frees you.
-                    ->Are you ok?
-                        Hick: Yeah dude, I'm fine. Just worried about you 
-                        He's not ok, that you're sure of.
-                            -> have you been to the hospital? 
-                                Hick: No, I kinda didn't have time...
-                                -> You should go before the flight.
-                                <<if get_flag_uncheck("boxesSuccess")>>
-                                    Hick: That would be nice, but I can't just drop work. 
-                                    -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                                        Hick: I know but...
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                    -> At least try going there in the week <<if get_flag("gotExtension")>>
-                                        Hick: Ok I will try.
-                                    -> You do you man.
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                <<elseif get_flag("boxesSuccess")>>
-                                    Hick: I guess I could go. But what's the point. but I you really think I should.
-                                    -> Hickey, you should do it for yourself, not for me, bor for him.
-                                        <<if social_check(14)>>
-                                            <<if set_flag("hickHospital")>><<endif>>
-                                        <<endif>>
-                                <<endif>>
-                            -> Listen I know it sound sad and all, but I've stuff to do.
-                                Hick: oh yeah sorry, I also got a lot of work.
-                    ->Thanks man, but can we not talk about it? 
-                        Hick: Yeah dude, I just thought you might need an hug. 
-                        He says holding back what it feels like sadness. 
-                        That hug was for himself more than for you. <<if social_check(14)>>
-                            -> have you been to the hospital? 
-                                Hick: No, I kinda didn't have time...
-                                -> You should go before the flight.
-                                <<if get_flag_uncheck("boxesSuccess")>>
-                                    Hick: That would be nice, but I can't just drop work. 
-                                    -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                                        Hick: I know but...
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                    -> At least try going there in the week <<if get_flag("gotExtension")>>
-                                        Hick: Ok I will try.
-                                    -> You do you man.
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                <<elseif get_flag("boxesSuccess")>>
-                                    Hick: I guess I could go. But what's the point. but I you really think I should.
-                                    -> Hickey, you should do it for yourself, not for me, bor for him.
-                                        <<if social_check(14)>>
-                                            <<if set_flag("hickHospital")>><<endif>>
-                                        <<endif>>
-                                        Hick: I will try my best to be there.
-                                <<endif>>
-                            -> Listen I know it sound sad and all, but I've stuff to do.
-                                Hick: oh yeah sorry, I also got a lot of work.
-                    -> Listen I know it sound sad and all, but I've stuff to do.
-                        Hick: oh yeah sorry, I also got a lot of work.
-            ->Get out of the hug 
-                <<if physical_check(13)>>
-                you manage to escape the boy's arms.
-                    ->Are you ok?
-                        Hick: Yeah dude, I'm fine. Just worried about you 
-                        He's not ok, that you're sure of.
-                            -> have you been to the hospital? 
-                                Hick: No, I kinda didn't have time...
-                                -> You should go before the flight.
-                                <<if get_flag_uncheck("boxesSuccess")>>
-                                    Hick: That would be nice, but I can't just drop work. 
-                                    -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                                        Hick: I know but...
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                    -> At least try going there in the week <<if get_flag("gotExtension")>>
-                                        Hick: Ok I will try.
-                                    -> You do you man.
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                <<elseif get_flag("boxesSuccess")>>
-                                    Hick: I guess I could go. But what's the point. but I you really think I should.
-                                    -> Hickey, you should do it for yourself, not for me, bor for him.
-                                        <<if social_check(14)>>
-                                            <<if set_flag("hickHospital")>><<endif>>
-                                        <<endif>>
-                                <<endif>>
-                            -> Listen I know it sound sad and all, but I've stuff to do.
-                                Hick: oh yeah sorry, I also got a lot of work.
-                    ->Thanks man, but can we not talk about it? 
-                        Hick: Yeah dude, I just thought you might need an hug. 
-                        He says holding back what it feels like sadness. 
-                        That hug was for himself more than for you. <<if social_check(14)>>
-                            -> have you been to the hospital? 
-                                Hick: No, I kinda didn't have time...
-                                -> You should go before the flight.
-                                <<if get_flag_uncheck("boxesSuccess")>>
-                                    Hick: That would be nice, but I can't just drop work. 
-                                    -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                                        Hick: I know but...
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                    -> At least try going there in the week <<if get_flag("gotExtension")>>
-                                        Hick: Ok I will try.
-                                    -> You do you man.
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                <<elseif get_flag("boxesSuccess")>>
-                                    Hick: I guess I could go. But what's the point. but I you really think I should.
-                                    -> Hickey, you should do it for yourself, not for me, bor for him.
-                                        <<if social_check(14)>>
-                                            <<if set_flag("hickHospital")>><<endif>>
-                                        <<endif>>
-                                        Hick: I will try my best to be there.
-                                <<endif>>
-                            -> Listen I know it sound sad and all, but I've stuff to do.
-                                Hick: oh yeah sorry, I also got a lot of work.
-                    -> Listen I know it sound sad and all, but I've stuff to do.
-                        Hick: oh yeah sorry, I also got a lot of work.
-                <<else>>
-                You try your best to wiggle yourself out of his arms to no avail. 
-                After what it feels like an eternity the boy frees you.
-                    ->Are you ok?
-                        Hick: Yeah dude, I'm fine. Just worried about you 
-                        He's not ok, that you're sure of.
-                            -> have you been to the hospital? 
-                                Hick: No, I kinda didn't have time...
-                                -> You should go before the flight.
-                                <<if get_flag_uncheck("boxesSuccess")>>
-                                    Hick: That would be nice, but I can't just drop work. 
-                                    -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                                        Hick: I know but...
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                    -> At least try going there in the week <<if get_flag("gotExtension")>>
-                                        Hick: Ok I will try.
-                                    -> You do you man.
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                <<elseif get_flag("boxesSuccess")>>
-                                    Hick: I guess I could go. But what's the point. but I you really think I should.
-                                    -> Hickey, you should do it for yourself, not for me, bor for him.
-                                        <<if social_check(14)>>
-                                            <<if set_flag("hickHospital")>><<endif>>
-                                        <<endif>>
-                                <<endif>>
-                            -> Listen I know it sound sad and all, but I've stuff to do.
-                                Hick: oh yeah sorry, I also got a lot of work.
-                    ->Thanks man, but can we not talk about it? 
-                        Hick: Yeah dude, I just thought you might need an hug. 
-                        He says holding back what it feels like sadness. 
-                        That hug was for himself more than for you. <<if social_check(14)>>
-                            -> have you been to the hospital? 
-                                Hick: No, I kinda didn't have time...
-                                -> You should go before the flight.
-                                <<if get_flag_uncheck("boxesSuccess")>>
-                                    Hick: That would be nice, but I can't just drop work. 
-                                    -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                                        Hick: I know but...
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                    -> At least try going there in the week <<if get_flag("gotExtension")>>
-                                        Hick: Ok I will try.
-                                    -> You do you man.
-                                        the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                                <<elseif get_flag("boxesSuccess")>>
-                                    Hick: I guess I could go. But what's the point. but I you really think I should.
-                                    -> Hickey, you should do it for yourself, not for me, bor for him.
-                                        <<if social_check(14)>>
-                                            <<if set_flag("hickHospital")>><<endif>>
-                                        <<endif>>
-                                        Hick: I will try my best to be there.
-                                <<endif>>
-                            -> Listen I know it sound sad and all, but I've stuff to do.
-                                Hick: oh yeah sorry, I also got a lot of work.
-                    -> Listen I know it sound sad and all, but I've stuff to do.
-                        Hick: oh yeah sorry, I also got a lot of work.
-                <<endif>>
-    -> Bro no, really, I'm fine.
-        Judging by Hickey's look he's the one that's not fine.
-        Dad: It almost seems he needed that hug more then you did kid. <<if social_check(13)>>
-        ->Are you ok?
-            Hick: Yeah dude, I'm fine. Just worried about you 
-            He's not ok, that you're sure of.
-            -> have you been to the hospital? 
-                 Hick: No, I kinda didn't have time...
-                -> You should go before the flight.
-                    <<if get_flag_uncheck("boxesSuccess")>>
-                        Hick: That would be nice, but I can't just drop work. 
-                        -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                            Hick: I know but...
-                            the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                        -> At least try going there in the week <<if get_flag("gotExtension")>>
-                            Hick: Ok I will try.
-                        -> You do you man.
-                            the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                    <<elseif get_flag("boxesSuccess")>>
-                        Hick: I guess I could go. But what's the point. but I you really think I should.
-                        -> Hickey, you should do it for yourself, not for me, bor for him.
-                            <<if social_check(14)>>
-                                <<if set_flag("hickHospital")>><<endif>>
-                            <<endif>>
-                    <<endif>>
-            -> Listen I know it sound sad and all, but I've stuff to do.
-                Hick: oh yeah sorry, I also got a lot of work.
-        ->Thanks man, but can we not talk about it? 
-            Hick: Yeah dude, I just thought you might need an hug. 
-            He says holding back what it feels like sadness. 
-            That hug was for himself more than for you. <<if social_check(14)>>
-            -> have you been to the hospital? 
-                Hick: No, I kinda didn't have time...
-                -> You should go before the flight.
-                    <<if get_flag_uncheck("boxesSuccess")>>
-                        Hick: That would be nice, but I can't just drop work. 
-                            -> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
-                                Hick: I know but...
-                                the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                            -> At least try going there in the week <<if get_flag("gotExtension")>>
-                                Hick: Ok I will try.
-                            -> You do you man.
-                                the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
-                    <<elseif get_flag("boxesSuccess")>>
-                        Hick: I guess I could go. But what's the point. but I you really think I should.
-                        -> Hickey, you should do it for yourself, not for me, bor for him.
-                            <<if social_check(14)>>
-                                <<if set_flag("hickHospital")>><<endif>>
-                                <<if unset_flag("hickWorkshop")>><<endif>>
-                            <<endif>>
-                            Hick: I will try my best to be there.
-                    <<endif>>
-                -> Listen I know it sound sad and all, but I've stuff to do.
-                    Hick: oh yeah sorry, I also got a lot of work.
-        -> Listen I know it sound sad and all, but I've stuff to do.
-            Hick: oh yeah sorry, I also got a lot of work.
+	-> Hug him back.
+		Hickey hugs you firmly, and keeps doing so for way too long
+		Dad: It almost seems he needed that hug more then you did kid. <<if social_check(13)>>
+			->Wait for him to stop hugging you
+				After what it feels like an eternity the boy frees you.
+					->Are you ok?
+						Hick: Yeah dude, I'm fine. Just worried about you 
+						He's not ok, that you're sure of.
+							-> have you been to the hospital? 
+								Hick: No, I kinda didn't have time...
+								-> You should go before the flight.
+								<<if get_flag_uncheck("boxesSuccess")>>
+									Hick: That would be nice, but I can't just drop work. 
+									-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+										Hick: I know but...
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+									-> At least try going there in the week <<if get_flag("gotExtension")>>
+										Hick: Ok I will try.
+									-> You do you man.
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+								<<elseif get_flag("boxesSuccess")>>
+									Hick: I guess I could go. But what's the point. but I you really think I should.
+									-> Hickey, you should do it for yourself, not for me, bor for him.
+										<<if social_check(14)>>
+											<<if set_flag("hickHospital")>><<endif>>
+										<<endif>>
+								<<endif>>
+							-> Listen I know it sound sad and all, but I've stuff to do.
+								Hick: oh yeah sorry, I also got a lot of work.
+					->Thanks man, but can we not talk about it? 
+						Hick: Yeah dude, I just thought you might need an hug. 
+						He says holding back what it feels like sadness. 
+						That hug was for himself more than for you. <<if social_check(14)>>
+							-> have you been to the hospital? 
+								Hick: No, I kinda didn't have time...
+								-> You should go before the flight.
+								<<if get_flag_uncheck("boxesSuccess")>>
+									Hick: That would be nice, but I can't just drop work. 
+									-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+										Hick: I know but...
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+									-> At least try going there in the week <<if get_flag("gotExtension")>>
+										Hick: Ok I will try.
+									-> You do you man.
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+								<<elseif get_flag("boxesSuccess")>>
+									Hick: I guess I could go. But what's the point. but I you really think I should.
+									-> Hickey, you should do it for yourself, not for me, bor for him.
+										<<if social_check(14)>>
+											<<if set_flag("hickHospital")>><<endif>>
+										<<endif>>
+										Hick: I will try my best to be there.
+								<<endif>>
+							-> Listen I know it sound sad and all, but I've stuff to do.
+								Hick: oh yeah sorry, I also got a lot of work.
+					-> Listen I know it sound sad and all, but I've stuff to do.
+						Hick: oh yeah sorry, I also got a lot of work.
+			->Get out of the hug 
+				<<if physical_check(13)>>
+				you manage to escape the boy's arms.
+					->Are you ok?
+						Hick: Yeah dude, I'm fine. Just worried about you 
+						He's not ok, that you're sure of.
+							-> have you been to the hospital? 
+								Hick: No, I kinda didn't have time...
+								-> You should go before the flight.
+								<<if get_flag_uncheck("boxesSuccess")>>
+									Hick: That would be nice, but I can't just drop work. 
+									-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+										Hick: I know but...
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+									-> At least try going there in the week <<if get_flag("gotExtension")>>
+										Hick: Ok I will try.
+									-> You do you man.
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+								<<elseif get_flag("boxesSuccess")>>
+									Hick: I guess I could go. But what's the point. but I you really think I should.
+									-> Hickey, you should do it for yourself, not for me, bor for him.
+										<<if social_check(14)>>
+											<<if set_flag("hickHospital")>><<endif>>
+										<<endif>>
+								<<endif>>
+							-> Listen I know it sound sad and all, but I've stuff to do.
+								Hick: oh yeah sorry, I also got a lot of work.
+					->Thanks man, but can we not talk about it? 
+						Hick: Yeah dude, I just thought you might need an hug. 
+						He says holding back what it feels like sadness. 
+						That hug was for himself more than for you. <<if social_check(14)>>
+							-> have you been to the hospital? 
+								Hick: No, I kinda didn't have time...
+								-> You should go before the flight.
+								<<if get_flag_uncheck("boxesSuccess")>>
+									Hick: That would be nice, but I can't just drop work. 
+									-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+										Hick: I know but...
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+									-> At least try going there in the week <<if get_flag("gotExtension")>>
+										Hick: Ok I will try.
+									-> You do you man.
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+								<<elseif get_flag("boxesSuccess")>>
+									Hick: I guess I could go. But what's the point. but I you really think I should.
+									-> Hickey, you should do it for yourself, not for me, bor for him.
+										<<if social_check(14)>>
+											<<if set_flag("hickHospital")>><<endif>>
+										<<endif>>
+										Hick: I will try my best to be there.
+								<<endif>>
+							-> Listen I know it sound sad and all, but I've stuff to do.
+								Hick: oh yeah sorry, I also got a lot of work.
+					-> Listen I know it sound sad and all, but I've stuff to do.
+						Hick: oh yeah sorry, I also got a lot of work.
+				<<else>>
+				You try your best to wiggle yourself out of his arms to no avail. 
+				After what it feels like an eternity the boy frees you.
+					->Are you ok?
+						Hick: Yeah dude, I'm fine. Just worried about you 
+						He's not ok, that you're sure of.
+							-> have you been to the hospital? 
+								Hick: No, I kinda didn't have time...
+								-> You should go before the flight.
+								<<if get_flag_uncheck("boxesSuccess")>>
+									Hick: That would be nice, but I can't just drop work. 
+									-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+										Hick: I know but...
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+									-> At least try going there in the week <<if get_flag("gotExtension")>>
+										Hick: Ok I will try.
+									-> You do you man.
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+								<<elseif get_flag("boxesSuccess")>>
+									Hick: I guess I could go. But what's the point. but I you really think I should.
+									-> Hickey, you should do it for yourself, not for me, bor for him.
+										<<if social_check(14)>>
+											<<if set_flag("hickHospital")>><<endif>>
+										<<endif>>
+								<<endif>>
+							-> Listen I know it sound sad and all, but I've stuff to do.
+								Hick: oh yeah sorry, I also got a lot of work.
+					->Thanks man, but can we not talk about it? 
+						Hick: Yeah dude, I just thought you might need an hug. 
+						He says holding back what it feels like sadness. 
+						That hug was for himself more than for you. <<if social_check(14)>>
+							-> have you been to the hospital? 
+								Hick: No, I kinda didn't have time...
+								-> You should go before the flight.
+								<<if get_flag_uncheck("boxesSuccess")>>
+									Hick: That would be nice, but I can't just drop work. 
+									-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+										Hick: I know but...
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+									-> At least try going there in the week <<if get_flag("gotExtension")>>
+										Hick: Ok I will try.
+									-> You do you man.
+										the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+								<<elseif get_flag("boxesSuccess")>>
+									Hick: I guess I could go. But what's the point. but I you really think I should.
+									-> Hickey, you should do it for yourself, not for me, bor for him.
+										<<if social_check(14)>>
+											<<if set_flag("hickHospital")>><<endif>>
+										<<endif>>
+										Hick: I will try my best to be there.
+								<<endif>>
+							-> Listen I know it sound sad and all, but I've stuff to do.
+								Hick: oh yeah sorry, I also got a lot of work.
+					-> Listen I know it sound sad and all, but I've stuff to do.
+						Hick: oh yeah sorry, I also got a lot of work.
+				<<endif>>
+	-> Bro no, really, I'm fine.
+		Judging by Hickey's look he's the one that's not fine.
+		Dad: It almost seems he needed that hug more then you did kid. <<if social_check(13)>>
+		->Are you ok?
+			Hick: Yeah dude, I'm fine. Just worried about you 
+			He's not ok, that you're sure of.
+			-> have you been to the hospital? 
+				 Hick: No, I kinda didn't have time...
+				-> You should go before the flight.
+					<<if get_flag_uncheck("boxesSuccess")>>
+						Hick: That would be nice, but I can't just drop work. 
+						-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+							Hick: I know but...
+							the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+						-> At least try going there in the week <<if get_flag("gotExtension")>>
+							Hick: Ok I will try.
+						-> You do you man.
+							the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+					<<elseif get_flag("boxesSuccess")>>
+						Hick: I guess I could go. But what's the point. but I you really think I should.
+						-> Hickey, you should do it for yourself, not for me, bor for him.
+							<<if social_check(14)>>
+								<<if set_flag("hickHospital")>><<endif>>
+							<<endif>>
+					<<endif>>
+			-> Listen I know it sound sad and all, but I've stuff to do.
+				Hick: oh yeah sorry, I also got a lot of work.
+		->Thanks man, but can we not talk about it? 
+			Hick: Yeah dude, I just thought you might need an hug. 
+			He says holding back what it feels like sadness. 
+			That hug was for himself more than for you. <<if social_check(14)>>
+			-> have you been to the hospital? 
+				Hick: No, I kinda didn't have time...
+				-> You should go before the flight.
+					<<if get_flag_uncheck("boxesSuccess")>>
+						Hick: That would be nice, but I can't just drop work. 
+							-> Man it's your last chance <<if get_flag_uncheck("gotExtension")>>
+								Hick: I know but...
+								the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+							-> At least try going there in the week <<if get_flag("gotExtension")>>
+								Hick: Ok I will try.
+							-> You do you man.
+								the boy just looks down, and for a second he looks like the fifteen years old you left in the jovian.
+					<<elseif get_flag("boxesSuccess")>>
+						Hick: I guess I could go. But what's the point. but I you really think I should.
+						-> Hickey, you should do it for yourself, not for me, bor for him.
+							<<if social_check(14)>>
+								<<if set_flag("hickHospital")>><<endif>>
+								<<if unset_flag("hickWorkshop")>><<endif>>
+							<<endif>>
+							Hick: I will try my best to be there.
+					<<endif>>
+				-> Listen I know it sound sad and all, but I've stuff to do.
+					Hick: oh yeah sorry, I also got a lot of work.
+		-> Listen I know it sound sad and all, but I've stuff to do.
+			Hick: oh yeah sorry, I also got a lot of work.
 <<if set_flag ("hickDad")>><<endif>>
 ===
 title: newAround
@@ -481,15 +481,15 @@ position: -270,194
 ---
 HEY MAN CAN YOU HELP ME
 -> Yes
-    <<if physical_check(13)>>
-        <<if set_flag("boxesSuccess")>><<endif>>
-        Hick: Look at us we're so good.
-        -> High five
-    <<else>>
-        You drop the boxes and hear something breaking.
-        Hick: Ok myabe lets not do that
-        -> yeah I think It's not for me.
-    <<endif>>
+	<<if physical_check(13)>>
+		<<if set_flag("boxesSuccess")>><<endif>>
+		Hick: Look at us we're so good.
+		-> High five
+	<<else>>
+		You drop the boxes and hear something breaking.
+		Hick: Ok myabe lets not do that
+		-> yeah I think It's not for me.
+	<<endif>>
 -> No sorry I can't
 ===
 title: drugs
@@ -501,110 +501,110 @@ Hick: yes I know kass, why?
 hickey looks at you weird.
 
 -> Kass ask me to meet here
-    Hick: Oh, sure
-    He starts frantically searching something amongst the boxes.
-    Hick: Here it is.
-        <<if education_check(16)>> 
-            GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
-                ->why does kass want this stuff? 
-                ->jeez this is dangerous
-        <<elseif education_check(13)>> 
-            GET MORE GENERIC KNOWLEDGE
-        <<else>>
-            IT'S DRUG, IT DOES DRUG STUFF
-        <<endif>>
+	Hick: Oh, sure
+	He starts frantically searching something amongst the boxes.
+	Hick: Here it is.
+		<<if education_check(16)>> 
+			GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
+				->why does kass want this stuff? 
+				->jeez this is dangerous
+		<<elseif education_check(13)>> 
+			GET MORE GENERIC KNOWLEDGE
+		<<else>>
+			IT'S DRUG, IT DOES DRUG STUFF
+		<<endif>>
 -> Dude what the fuck are you doing
-    Hick: listen I have to survive somehow.
-    -> Man you can't do this kind of stuff, and why? you're not getting money from this
-        Hick: Ok mom... I need to have some fallback, in case something happens. 
-        Hick: I don't want Gran to move back to the lot. 
-        -> What should happen man 
-            I don't know, I just don't like the vibe in the jovian lately. 
-            <<if social_check(13)>> 
-                something else is going on
-            <<else>>
-                he seems sincere
-            <<endif>>
-            -> What's wrong with the lots?
-                Hick: That place is shit, they treat them like animals
-                -> yeah sure, just give me the stuff
-                    <<if education_check(16)>> 
-                        GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
-                    <<elseif education_check(13)>> 
-                        GET MORE GENERIC KNOWLEDGE
-                    <<else>>
-                        IT'S DRUG, IT DOES DRUG STUFF
-                    <<endif>>
-                    <<if set_flag("GotDrugs")>><<endif>>
-                ->you know what forget it 
-                    <<if set_flag("NoDrugs")>><<endif>>
-            -> yeah sure, just give me the stuff
-                <<if education_check(16)>> 
-                    GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
-                <<elseif education_check(13)>> 
-                    GET MORE GENERIC KNOWLEDGE
-                <<else>>
-                    IT'S DRUG, IT DOES DRUG STUFF
-                <<endif>>
-                <<if set_flag("GotDrugs")>><<endif>>
-            ->you know what forget it 
-                <<if set_flag("NoDrugs")>><<endif>>
-        
-        -> what's wrong with the lots? 
-            Hick: That place is shit, they treat them like animals
-            -> What should happen man 
-                I don't know, I just don't like the vibe in the jovian lately. 
-                <<if social_check(13)>> 
-                    something else is going on
-                <<else>>
-                    he seems sincere
-                <<endif>>
-                -> yeah sure, just give me the stuff
-                    <<if education_check(16)>> 
-                        GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
-                    <<elseif education_check(13)>> 
-                        GET MORE GENERIC KNOWLEDGE
-                    <<else>>
-                        IT'S DRUG, IT DOES DRUG STUFF
-                    <<endif>>
-                    <<if set_flag("GotDrugs")>><<endif>>
-                ->you know what forget it 
-                    <<if set_flag("NoDrugs")>><<endif>>
-            -> yeah sure, just give me the stuff
-                <<if education_check(16)>> 
-                    GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
-                <<elseif education_check(13)>> 
-                    GET MORE GENERIC KNOWLEDGE
-                <<else>>
-                    IT'S DRUG, IT DOES DRUG STUFF
-                <<endif>>
-                <<if set_flag("GotDrugs")>><<endif>>
-            ->you know what forget it 
-                <<if set_flag("NoDrugs")>><<endif>>
-        
-        -> yeah sure, just give me the stuff
-            <<if education_check(16)>> 
-                GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
-            <<elseif education_check(13)>> 
-                GET MORE GENERIC KNOWLEDGE
-            <<else>>
-                IT'S DRUG, IT DOES DRUG STUFF
-            <<endif>>
-            <<if set_flag("GotDrugs")>><<endif>>
-        ->you know what forget it 
-            <<if set_flag("NoDrugs")>><<endif>>
-        
-    -> listen, just give me the stuff I can't be bothered.     
-        <<if education_check(16)>> 
-            GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
-        <<elseif education_check(13)>> 
-            GET MORE GENERIC KNOWLEDGE
-        <<else>>
-            IT'S DRUG, IT DOES DRUG STUFF
-        <<endif>>
-        <<if set_flag("GotDrugs")>><<endif>>
-    ->you know what forget it 
-        <<if set_flag("NoDrugs")>><<endif>>
+	Hick: listen I have to survive somehow.
+	-> Man you can't do this kind of stuff, and why? you're not getting money from this
+		Hick: Ok mom... I need to have some fallback, in case something happens. 
+		Hick: I don't want Gran to move back to the lot. 
+		-> What should happen man 
+			I don't know, I just don't like the vibe in the jovian lately. 
+			<<if social_check(13)>> 
+				something else is going on
+			<<else>>
+				he seems sincere
+			<<endif>>
+			-> What's wrong with the lots?
+				Hick: That place is shit, they treat them like animals
+				-> yeah sure, just give me the stuff
+					<<if education_check(16)>> 
+						GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
+					<<elseif education_check(13)>> 
+						GET MORE GENERIC KNOWLEDGE
+					<<else>>
+						IT'S DRUG, IT DOES DRUG STUFF
+					<<endif>>
+					<<if set_flag("GotDrugs")>><<endif>>
+				->you know what forget it 
+					<<if set_flag("NoDrugs")>><<endif>>
+			-> yeah sure, just give me the stuff
+				<<if education_check(16)>> 
+					GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
+				<<elseif education_check(13)>> 
+					GET MORE GENERIC KNOWLEDGE
+				<<else>>
+					IT'S DRUG, IT DOES DRUG STUFF
+				<<endif>>
+				<<if set_flag("GotDrugs")>><<endif>>
+			->you know what forget it 
+				<<if set_flag("NoDrugs")>><<endif>>
+		
+		-> what's wrong with the lots? 
+			Hick: That place is shit, they treat them like animals
+			-> What should happen man 
+				I don't know, I just don't like the vibe in the jovian lately. 
+				<<if social_check(13)>> 
+					something else is going on
+				<<else>>
+					he seems sincere
+				<<endif>>
+				-> yeah sure, just give me the stuff
+					<<if education_check(16)>> 
+						GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
+					<<elseif education_check(13)>> 
+						GET MORE GENERIC KNOWLEDGE
+					<<else>>
+						IT'S DRUG, IT DOES DRUG STUFF
+					<<endif>>
+					<<if set_flag("GotDrugs")>><<endif>>
+				->you know what forget it 
+					<<if set_flag("NoDrugs")>><<endif>>
+			-> yeah sure, just give me the stuff
+				<<if education_check(16)>> 
+					GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
+				<<elseif education_check(13)>> 
+					GET MORE GENERIC KNOWLEDGE
+				<<else>>
+					IT'S DRUG, IT DOES DRUG STUFF
+				<<endif>>
+				<<if set_flag("GotDrugs")>><<endif>>
+			->you know what forget it 
+				<<if set_flag("NoDrugs")>><<endif>>
+		
+		-> yeah sure, just give me the stuff
+			<<if education_check(16)>> 
+				GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
+			<<elseif education_check(13)>> 
+				GET MORE GENERIC KNOWLEDGE
+			<<else>>
+				IT'S DRUG, IT DOES DRUG STUFF
+			<<endif>>
+			<<if set_flag("GotDrugs")>><<endif>>
+		->you know what forget it 
+			<<if set_flag("NoDrugs")>><<endif>>
+		
+	-> listen, just give me the stuff I can't be bothered.   
+		<<if education_check(16)>> 
+			GET SPECIFIC KNOWLEDGE ABOUT THE DRUG 
+		<<elseif education_check(13)>> 
+			GET MORE GENERIC KNOWLEDGE
+		<<else>>
+			IT'S DRUG, IT DOES DRUG STUFF
+		<<endif>>
+		<<if set_flag("GotDrugs")>><<endif>>
+	->you know what forget it 
+		<<if set_flag("NoDrugs")>><<endif>>
 ===
 title: hickSully
 position: 127,-498

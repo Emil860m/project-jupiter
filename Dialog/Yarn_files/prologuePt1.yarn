@@ -10,20 +10,20 @@ Dad trying to get in contact with the Martian authorities to get us on a shuttle
 We're just gonna have to ration water correctly. 
 
 -> Fuck that!
-    ... I'm not gonna see my friends die. the system is almost out of water at this point. fuck earth,
-    -> and fuck the Martians!
-        their fucking treaties are not doing shit for us! 
-        -> I'll find another way to help, we don't need them.
-            <<jump RecruitReb>>
-        -> Maybe dad's contact knows how I can help. 
-            <<jump RecruitMar>>        
-    -> hopefully the Martians will help us.
-        <<jump RecruitMar>>
-        
+	... I'm not gonna see my friends die. the system is almost out of water at this point. fuck earth,
+	-> and fuck the Martians!
+		their fucking treaties are not doing shit for us! 
+		-> I'll find another way to help, we don't need them.
+			<<jump RecruitReb>>
+		-> Maybe dad's contact knows how I can help. 
+			<<jump RecruitMar>>  
+	-> hopefully the Martians will help us.
+		<<jump RecruitMar>>
+		
 -> Hopefully he's right
-    I really couldn't handle this on my own.
-    <<jump RecruitMar>>
-    //They will have martian passports
+	I really couldn't handle this on my own.
+	<<jump RecruitMar>>
+	//They will have martian passports
 ===
 title: RecruitMar
 position: 38,-633
@@ -43,17 +43,17 @@ Best Regards,
 The Martian administration for a free jovian system. 
 
 -> Throw away the paper.
-    -> Fuck that! I will find another way to help.
-        <<jump RecruitReb>>
-    -> I will just wait for all this to end.
+	-> Fuck that! I will find another way to help.
+		<<jump RecruitReb>>
+	-> I will just wait for all this to end.
 -> Join the troops.
-    DESCRIBE THE OFFICE HERE
-    
-    -> I will Help as much as I can
-    
-    <<jump Ch2>>
-    -> I will do the bare minimum 
-    <<jump Ch2>>
+	DESCRIBE THE OFFICE HERE
+	
+	-> I will Help as much as I can
+	
+	<<jump Ch2>>
+	-> I will do the bare minimum 
+	<<jump Ch2>>
 ===
 title: RecruitReb
 position: 26,-338
@@ -62,9 +62,9 @@ I've never been no ones puppet, and that was the good thing about the rebellion,
 HERE JOH WILL DESCRIBE HOW HE CONTACTS THE REBELLION AND WE GET INTRODUCED TO GRIG
 <<if set_flag("Martian")>><<endif>>
 -> Join the Rebellion against both mars and earth.
-    <<jump Ch2>>
+	<<jump Ch2>>
 -> Just help people. 
-    <<jump Ch2>>
+	<<jump Ch2>>
 ===
 title: Ch2
 position: 404,-519
@@ -84,11 +84,11 @@ WE FAST FORWARD TO A DAILY SLICE OF LIFE IN KHER AND JOH'S LIFE.
 GRIG IT's HERE AGAIN AND JOH HAS TO LEAVE TO DO SOME BUISNESS. JOH GIVES A TOY TO KHER
 
 -> TELL THE KID TO READ THE MENU //+2 Phisical +1 Social
-    <<jump Ch4>>
+	<<jump Ch4>>
 -> TELL THE KID TO ORDER WHILE HE'S DOING BUISSNES //+2 Social +1 Mental
-    <<jump Ch4>>
+	<<jump Ch4>>
 -> LET THE KID PLAY WITH THEIR THING //+2 Education +1 Mental
-    <<jump Ch4>>
+	<<jump Ch4>>
 ===
 title: Ch4
 position: 690,-135
@@ -96,23 +96,23 @@ position: 690,-135
 DESCRIBE HOW KHER WANTS TO MOVE OUT AND GO TO MARS
 <<if get_flag("martian")>>
 RELUCTUNT BUT PROWD MARTIAN.
-    ->I WILL HELP THEM HOWEVER I CAN //+2 EDUCATION +1 MIND
-        <<if set_flag("KherStudent")>><<endif>>
-        <<jump Ch5>>
-    ->FUCK THEM THEY'RE ABBANDONING ME. //+2 Phisical +1 SOCIAL
-        <<if set_flag("KherWorker")>><<endif>>
-        <<jump Ch5>>
+	->I WILL HELP THEM HOWEVER I CAN //+2 EDUCATION +1 MIND
+		<<if set_flag("KherStudent")>><<endif>>
+		<<jump Ch5>>
+	->FUCK THEM THEY'RE ABBANDONING ME. //+2 Phisical +1 SOCIAL
+		<<if set_flag("KherWorker")>><<endif>>
+		<<jump Ch5>>
 <<else>>
 WHY THE FUCK AND FUCK MARS!
-    ->I WILL HELP THEM ANYWAYS //+2 EDUCATION +1 MIND
-        <<if set_flag("KherStudent")>><<endif>>
-        <<jump Ch5>>
-    ->I WILL TRY TO MAKE THEM CHANGE THEIR MIND //+2 MIND +1EDUCATION
-        <<if set_flag("KherStudent")>><<endif>>
-        <<jump Ch5>>
-    ->FUCK THAT! //+2 Phisical +1 SOCIAL
-        <<if set_flag("KherWorker")>><<endif>>
-        <<jump Ch5>>
+	->I WILL HELP THEM ANYWAYS //+2 EDUCATION +1 MIND
+		<<if set_flag("KherStudent")>><<endif>>
+		<<jump Ch5>>
+	->I WILL TRY TO MAKE THEM CHANGE THEIR MIND //+2 MIND +1EDUCATION
+		<<if set_flag("KherStudent")>><<endif>>
+		<<jump Ch5>>
+	->FUCK THAT! //+2 Phisical +1 SOCIAL
+		<<if set_flag("KherWorker")>><<endif>>
+		<<jump Ch5>>
 <<endif>>
 ===
 title: Ch5
@@ -121,7 +121,7 @@ position: 1104,-522
 KHER JUST LEFT, IS DADDY GONNA SEND MESSAGES? 
 
 -> SEND MESSAGES
-    <<if set_flag("messages")>><<endif>>
+	<<if set_flag("messages")>><<endif>>
 -> DON'T SEND MESSAGES
-    <<if set_flag("noMessages")>><<endif>>
+	<<if set_flag("noMessages")>><<endif>>
 ===
