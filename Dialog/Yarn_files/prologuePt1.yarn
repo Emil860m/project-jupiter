@@ -1,8 +1,8 @@
 title: Start
 position: -336,-546
 ---
-The  memories are a bit fucked up, everything it's fuzzy when you haven't drank in a while. 
-When you're mouth gets so fucking dry that your body actively fight you swallowing, and it feels like having a swamp instead of a palate. 
+The  memories are a bit fucked up. Everything it's fuzzy when you haven't drank in a while. 
+When your mouth gets so dry that your body actively fight you swallowing, and it feels like having a swamp instead of a palate. 
 Everyone was like that back then in the jovian system. The shutter really got us all desperate.
 
 I remember it like it was yesterday.
@@ -50,21 +50,21 @@ The Martian administration for a free jovian system.
 	DESCRIBE THE OFFICE HERE
 	
 	-> I will Help as much as I can
-	
-	<<jump Ch2>>
+		<<jump Ch2>>
 	-> I will do the bare minimum 
-	<<jump Ch2>>
+		<<jump Ch2>>
 ===
 title: RecruitReb
 position: 26,-338
 ---
 I've never been no ones puppet, and that was the good thing about the rebellion, they did not care if you were helping by blasting holes into earthians or by feeding the poor.
 HERE JOH WILL DESCRIBE HOW HE CONTACTS THE REBELLION AND WE GET INTRODUCED TO GRIG
+
+	-> Join the Rebellion against both mars and earth.
+		<<jump Ch2>>
+	-> Just help people. 
+		<<jump Ch2>>
 <<if set_flag("Martian")>><<endif>>
--> Join the Rebellion against both mars and earth.
-	<<jump Ch2>>
--> Just help people. 
-	<<jump Ch2>>
 ===
 title: Ch2
 position: 404,-519
