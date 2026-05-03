@@ -21,6 +21,14 @@ var Stats = {
 		PlayerStatTypes.education: 10,
 	}
 
+
+func adjust_stats(d_physical: int, d_mental: int, d_social: int, d_education: int):
+	Stats[PlayerStatTypes.physical] += d_physical
+	Stats[PlayerStatTypes.mental] += d_mental
+	Stats[PlayerStatTypes.social] += d_social
+	Stats[PlayerStatTypes.education] += d_education
+
+
 ## RPG Stuff
 
 var rng = RandomNumberGenerator.new()
