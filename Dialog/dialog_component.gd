@@ -9,6 +9,7 @@ extends Node
 @onready var options_presenter := $CanvasLayer/Control/OptionsPresenter
 var has_portrait = false
 func _ready():
+	dialogue_runner.connect("dialogue_completed", dialog_complete)
 	dialogue_runner.add_presenter(line_presenter)
 	dialogue_runner.add_presenter(options_presenter)
 	add_functions()
@@ -21,6 +22,8 @@ func set_character_portrait(path: String):
 		portrait.texture = load(path)
 		has_portrait = true
 
+func dialog_complete():
+	$CanvasLayer.visible = false
 
 func start_dialog():
 	$CanvasLayer.visible = true
