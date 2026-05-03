@@ -131,3 +131,24 @@ The long route leads to sustained exposure to radiation. This could damage the e
 	Your electronics are heavily damaged but you arrive on time.
 	<<endif>>
 ===
+title: event_landingOnTheRationale
+color: purple
+position: 0, 0
+---
+Landing on the rationale is one of the harder trips within the jovian systems. Who thought such a small station would be suitable for so much traffic.
+-> Slow down to a crawl.
+	<<if detriment_s_check()>>
+	<<if resolve_outcome(5,0,0)>><<endif>>
+	It is a close call, but the ship was already not too fast.
+	<<elseif true>>
+	<<if resolve_outcome(15,5,0)>><<endif>>
+	You desperately try to brake but the speed is too great to manage. You manage to land, but not before overshooting the station a couple of times.
+	<<endif>>
+-> Exploit your maneuverability.
+	<<if stakes_m_check()>>
+	You manage a stylish landing.
+	<<elseif true>>
+	<<if resolve_outcome(15,5,0)>><<endif>>
+	Your insufficient maneuverability leads you to overshoot the rationale. You eventually make it but end up spending extra time.
+	<<endif>>
+===

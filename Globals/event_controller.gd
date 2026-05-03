@@ -53,6 +53,9 @@ func _load_events():
 	var short_route_callable = func(_start_time, _end_time, start_pos, end_pos):
 		return calculate_distance(start_pos, end_pos) <= short_journey_cutoff
 	
+	var rationale_callable = func(_start_time, _end_time, _start_pos, end_pos: moon_2d):
+		return end_pos.displayName == "The Rationale"
+	
 	# event_spaceDebris
 	var event_to_add = Event.new("event_spaceDebris", default_callable)
 	events.append(event_to_add)
@@ -72,6 +75,11 @@ func _load_events():
 	# event_longExposure
 	event_to_add = Event.new("event_longExposure", long_route_callable)
 	events.append(event_to_add)
+	
+	# event_landingOnTheRationale
+	event_to_add = Event.new("event_landingOnTheRationale", rationale_callable)
+	events.append(event_to_add)
+	
 	
 	events.shuffle()
 
