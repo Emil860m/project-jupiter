@@ -1,14 +1,49 @@
 title: SalWorkshopTS1
 color: green
-position: -273,62
+position: -237,-112
 ---
 
+<<if get_flag("metSul")>>
+    The man acnowledge you without moving his eyes from his work.
+    Sully: Hey Kher, can I help you? 
+
+    -> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+        <<detour sullyGetIn>>
+    -> Can you give me your keys?<<if get_flag("sullyKeys")>>
+        <<detour sullyKey>>
+    -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+        <<detour sulOfficeReq>>
+    -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
+        <<detour sullyExtension>>
+    -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+        <<detour sullyHick>>
+    -> Thanks, see you later
+
+<<else>>
+    The old man's eyes light up when he sees you 
+    Sully: hey kid you made it.
+    <<detour meetSully>>
+<<endif>>
+===
+title: SalHospitalTS2
+color: blue
+position: -217,73
+---
 <<if get_flag("metSul")>>
 The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
--> Yes I wanted to ask you something
-    <<jump asks>>
+-> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+    <<detour sullyGetIn>>
+-> Can you give me your keys?<<if get_flag("sullyKeys")>>
+    <<detour sullyKey>>
+-> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+    <<detour sulOfficeReq>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+    <<detour sullyExtension>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+    <<detour sullyHick>>
+-> Thanks, see you later
 
 <<else>>
 The old man's eyes light up when he sees you 
@@ -16,39 +51,127 @@ Sully: hey kid you made it.
 <<jump meetSully>>
 <<endif>>
 ===
-title: SalHospitalTS2
-color: blue
-position: -271,213
----
-New node
-===
 title: SalOfficeTS3
 color: yellow
-position: -383,367
+position: -1089,258
 ---
-New node
+<<if get_flag("docs") and get_flag("log")>>
+    Zoe: Here's the extantion
+    <<if set_flag("gotExtension")>><<endif>>
+<<else>>
+    Sully is talking to Zoe
+<<endif>>
 ===
 title: SalHospitalTS4
 color: blue
-position: -386,521
+position: -212,235
 ---
-New node
+<<if get_flag("metSul")>>
+The man acnowledge you without moving his eyes from his work.
+Sully: Hey Kher, can I help you? 
+
+-> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+    <<detour sullyGetIn>>
+-> Can you give me your keys?<<if get_flag("sullyKeys")>>
+    <<detour sullyKey>>
+-> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+    <<detour sulOfficeReq>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+    <<detour sullyExtension>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+    <<detour sullyHick>>
+-> Thanks, see you later
+
+<<else>>
+The old man's eyes light up when he sees you 
+Sully: hey kid you made it.
+<<jump meetSully>>
+<<endif>>
 ===
 title: SalWorkshopTS6
 color: green
-position: -386,659
+position: -250,648
 ---
-New node
+<<if get_flag("metSul")>>
+The man acnowledge you without moving his eyes from his work.
+Sully: Hey Kher, can I help you? 
+
+-> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+    <<detour sullyGetIn>>
+-> Can you give me your keys?<<if get_flag("sullyKeys")>>
+    <<detour sullyKey>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+    <<detour sullyExtension>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+    <<detour sullyHick>>
+-> Thanks, see you later
+
+<<else>>
+The old man's eyes light up when he sees you 
+Sully: hey kid you made it.
+<<jump meetSully>>
+<<endif>>
 ===
 title: SalWorkshopTS4
 color: green
-position: -90,502
+position: -252,413
 ---
-New node
+<<if get_flag("metSul")>>
+The man acnowledge you without moving his eyes from his work.
+Sully: Hey Kher, can I help you? 
+
+-> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+    <<detour sullyGetIn>>
+-> Can you give me your keys?<<if get_flag("sullyKeys")>>
+    <<detour sullyKey>>
+-> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+    <<detour sulOfficeReq>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+    <<detour sullyExtension>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+    <<detour sullyHick>>
+-> Thanks, see you later
+
+<<else>>
+The old man's eyes light up when he sees you 
+Sully: hey kid you made it.
+<<jump meetSully>>
+<<endif>>
+===
+title: meetSully
+position: -796,253
+---
+Hi I'm sully
+<<if set_flag("metSul")>><<endif>>
 ===
 
-title: meetSully
+//DIALOGUES
+title:sullyHick
 ---
+Hickey should have them
+<<if set_flag("hickDocs")>><<endif>>
+===
 
-<<if set_flag("metSul")>><<endif>>
+title:sullyExtension
+---
+Sully tells you to ask zoe
+===
+
+title:sullyGetIn
+---
+Here are the keys, go ask zoe for a copy please
+<<if set_flag("keys")>><<endif>>
+===
+
+title:sullyKey
+---
+Here are the keys, go ask zoe for a copy please
+<<if set_flag("keys")>><<endif>>
+===
+
+title: sulOfficeReq
+position: 91,539
+---
+Oh thanks, my kompat must be out of power.
+<<if set_flag("zoeHospital")>><<endif>><<if set_flag("sullyOffice")>><<endif>>
 ===

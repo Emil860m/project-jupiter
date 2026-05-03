@@ -3,16 +3,6 @@
 [ext_resource type="Script" uid="uid://bu735a64tp7gt" path="res://NPC/NPC.gd" id="1_jlog5"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="2_nipkc"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_jcqdm"]
-[ext_resource type="Shader" uid="uid://dlqjseaxc16nh" path="res://Shaders/outline_shader_test.gdshader" id="4_nipkc"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcqdm"]
-render_priority = 0
-shader = ExtResource("4_nipkc")
-shader_parameter/thickness = 2.0
-shader_parameter/outline_color = Color(0.267, 0.612, 0.361, 1)
-shader_parameter/samples = 4
-shader_parameter/sensitivity = 0.1
-shader_parameter/edge_fade = 0.015
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3kkoo"]
 

@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cfhvocfbqrj4h" path="res://Prefabs/Ganymede/bossChair.tscn" id="11_oxwys"]
 [ext_resource type="PackedScene" uid="uid://cbml54cjrq65a" path="res://Prefabs/Ganymede/boss_book_shelf.tscn" id="11_tonup"]
 [ext_resource type="PackedScene" uid="uid://bpu0d1twhe7y2" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="12_tonup"]
+[ext_resource type="PackedScene" uid="uid://cbumxbxe80yjw" path="res://NPC/Zoe/Zoe.tscn" id="13_0wpqt"]
+[ext_resource type="PackedScene" uid="uid://cjgyb4jmguhna" path="res://NPC/Sally/Sally.tscn" id="14_lwabn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_35g8a"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -215,3 +217,9 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.463697, 1.3527904, 
 
 [node name="StandingVentClean" parent="." unique_id=1431580851 instance=ExtResource("12_tonup")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, -17.504156, 0.011864372, 7.06055)
+
+[node name="Zoe" parent="." unique_id=2096689363 instance=ExtResource("13_0wpqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.19976, 1.8944826, -0.25553226)
+
+[node name="Sally" parent="." unique_id=764589073 instance=ExtResource("14_lwabn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.238873, 1.0004997, -1.1580932)

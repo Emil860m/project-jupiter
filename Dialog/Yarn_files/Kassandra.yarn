@@ -1,7 +1,7 @@
 
 title: meetKas
 color: blue
-position: 152,-252
+position: -389,105
 ---
 ???: Hey, I'm sorry now i really can't I've a lot of stuf...
 Oh, you must be Jey's kid right? You got here just in time,
@@ -41,86 +41,149 @@ Kass: we really need your signature Kid.
 ===
 title: kasHospitalTS1
 color: blue
-position: 149,-57
+position: 162,-189
 ---
 <<if get_flag("metKas")>>
 Kass: So kid? 
 <<declare $Bag = false>>
--> yes let me sign those documents and let's get it over with.
-//End game
+-> yes let me sign those documents and let's get it over with. <<if $Bag>>
+    <<detour kassSign>>
 -> What's the SDA? 
-    The sda is the safe disposal act, it makes it so bodies can not be kept for more than two weeks in cryo ba-- ehm cryo suits. 
-    <<set $Bag = true>>
+    <<detour kassSDA>>
 -> Is there someone else other than you here? 
- There's Zoe upstairs from nine and sometimes sally swings by.
-
--> is there a way to delay the SDA? 
-    You can try talking to the boss up stairs, she should be there from 10 onward.
--> can you help me delay the SDA?
-    <<if social_check(13)>>
-    Kass: sure but let's meet here at 14 
-    <<if set_flag("kassDrugs")>><<endif>>
-    <<else>>
-    no.
-    <<endif>>
+    <<detour kassSchedule>>
+-> is there a way to delay the SDA? <<if $Bag>>
+    <<detour kassDelay>>
+-> can you help me delay the SDA?<<if get_flag_uncheck("kassHelp")>>
+    <<detour kassHelp>>
+    
 <<else>>
     <<detour meetKas>>
 <<endif>>
 ===
-title: kasHospitalTS4A
+title: kasHospitalTS4
 color: blue
-position: 38,101
+position: 314,98
 ---
-Oh hey kid!
-
--> yes let me sign those documents and let's get it over with.
-//End game
--> so can you help me? 
-    <<if get_flag("kassDrugs")>>no, i told you I can't. Go to Zoe upstairs maybe she knows.
-    <<else>>Sure but I'm gonna need you to do me a favour.
-    I need you to talk to someone for me.
-    Let's meet on Callisto.
-    <<endif>>
-===
-title: kasHospitalTS4B
-color: blue
-position: 262,103
----
-Oh hey kid!
-
--> yes let me sign those documents and let's get it over with.
-//End game
--> so can you help me? 
-===
-
-title: kasHospitalTS5
-color: blue
-position: 32,320
----
-Oh hey kid, can I help you with something? 
-
--> yes let me sign those documents and let's get it over with.
-//End game
+<<if get_flag("metKas")>>
+    Kass: So kid? 
+    -> yes let me sign those documents and let's get it over with. <<if $Bag>>
+        <<detour kassSign>>
+    -> What's the SDA? 
+        <<detour kassSDA>>
+    -> Is there someone else other than you here? 
+        <<detour kassSchedule>>
+    -> is there a way to delay the SDA? <<if $Bag>>
+        <<detour kassDelay>>
+    -> so can you help me with the SDA?<<if get_flag_uncheck("kassHelp2")>>
+        <<detour kassHelp2>>
+<<else>>
+    <<detour meetKas>>
+<<endif>>
 ===
 
 title: kasWorkshopTS5
 color: green
-position: 250,319
+position: 29,246
 ---
-Kass: Ok do you see that guy over there? 
--> yes... 
-    Kass: go to him and tell him I sent you, he has something for me. 
--> who? Hickey? 
-    Kass: do you know him?! Oh well whatever. go to him and tell him I sent you, he has something for me.
-<<if set_flag("hickeyKass")>><<endif>>
+<<if get_flag_uncheck("GotDrugs") and get_flag_uncheck("NoDrugs")>>
+    Kass: Ok do you see that guy over there? 
+    -> yes... 
+        Kass: go to him and tell him I sent you, he has something for me. 
+    -> who? Hickey? 
+        Kass: do you know him?! Oh well whatever. go to him and tell him I sent you, he has something for me.
+    <<if set_flag("hickeyKass")>><<endif>>
+<<elseif get_flag("GotDrugs")>>
+    Kass: do you have it? 
+        ->Yes here it is.
+            Thanks
+            <<if set_flag("kassDrugsSuccess")>><<endif>>
+        ->Yes but I'm not gonna give it to you. 
+            Kass: well thanks for nothing moron. 
+            <<if set_flag("kassDrugsFail")>><<endif>>
+<<elseif get_flag("NoDrugs")>>
+    Kass: so you didn't manage to get it? well thanks for nothing!
+    <<if set_flag("kassDrugsFail")>><<endif>>
+<<endif>>
 ===
 
 title: kasHospitalTS7
 color: blue
-position: -49,553
+position: 305,409
 ---
 <<if get_flag("kassDrugsSuccess")>>
-Thanks for before, I really appreciete it
+    Kass: Thanks for before, I really appreciete it.
+    Kass: I will pull my strings don't worry about it
+    <<if set_flag("gotExtension")>><<endif>>
+<<elseif get_flag("kassDrugsFail")>>
+    Kass side eyes you and goes back to work.
+    -> give her the drugs<<if get_flag("GotDrugs")>>
+        Kass: Thanks, I really appreciete it.
+        <<if set_flag("kassDrugsSuccess")>><<endif>><<if unset_flag("kassDrugsFail")>><<endif>>
+        Kass: I will pull my strings don't worry about it
+        <<if set_flag("gotExtension")>><<endif>>
+    -> leave<<if get_flag("GotDrugs")>>
 <<else>>
+    Kass seems very busy and slightly distressed better not to interrupt her.
 <<endif>>
+===
+//DIALOGUES
+title: kassSign
+position: 775,-130
+---
+Dad: kid are you sure? I'm gonna be gone gone
+Dad: no turning back.
+-> yes let's sign this 
+    <<if set_flag("endGame")>><<endif>>
+-> ok maybe I can try doing something about it.
+    Kass: suit yourself
+===
+title: kassSDA
+position: 761,47
+---
+    The sda is the safe disposal act, it makes it so bodies can not be kept for more than two weeks in cryo ba-- ehm cryo suits. 
+    <<set $Bag = true>>
+===
+title: kassSchedule
+position: 763,201
+---
+There's Zoe upstairs from 9 and sometimes sally swings by.
+===
+title: kassDelay
+position: 766,362
+---
+You can try talking to the boss up stairs, she should be there from 9 onward.
+===
+title: kassHelp
+---
+<<if social_check(13)>>
+    Kass: sure but let's meet here at 14 
+    <<if set_flag("kassDrugs")>><<endif>>
+<<else>>
+    no.
+<<endif>>
+<<if set_flag("kassHelp")>><<endif>>
+===
+title: kassHelp2
+---
+<<if get_flag("kassHelp")>>
+    <<if get_flag("kassDrugs")>>
+        Sure but I'm gonna need you to do me a favour.
+        I need you to talk to someone for me.
+        Let's meet on Callisto at 16.30.
+        <<if set_flag("kassWorkshop")>><<endif>>    
+    <<else>>
+        no, i told you I can't. Go to Zoe upstairs maybe she knows.
+    <<endif>>
+<<else>>
+    <<if social_check(13)>>
+        Kass: sure but I'm gonna need you to do me a favour.
+        Kass: I need you to talk to someone for me.
+        Kass: Let's meet on Callisto at 16.30. 
+        <<if set_flag("kassWorkshop")>><<endif>>
+    <<else>>
+        no. Go to Zoe upstairs maybe she knows.
+    <<endif>>
+<<endif>>
+<<if set_flag("kassHelp2")>><<endif>>
 ===

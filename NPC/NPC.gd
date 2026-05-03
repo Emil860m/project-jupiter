@@ -29,7 +29,6 @@ func check_time_and_flags():
 	print("checking time and flags")
 	if interacting: 
 		print("is interacting so no check")
-		$Timer.start(3)
 		return
 	match character_name:
 		"Hickey":
