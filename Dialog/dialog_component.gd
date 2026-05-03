@@ -34,6 +34,7 @@ func add_functions():
 	dialogue_runner.add_function("yarn_function", godot_function, 1)
 	
 	# Stat Manipulations
+	dialogue_runner.add_function("adjust_stats", PlayerStats.adjust_stats, 4)
 	dialogue_runner.add_function("resolve_outcome", EventController.resolve_outcome, 3)
 	#dialogue_runner.add_function("damage_ship", ShipStats.damage_ship, 1)
 	#dialogue_runner.add_function("spend_fuel", ShipStats.spend_fuel, 1)
