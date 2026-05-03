@@ -22,6 +22,15 @@ fmod_parameters/inFlight/id = -5108033378003122391
 fmod_parameters/inFlight = 0.0
 fmod_parameters/inFlight/variant_type = 2
 
+[node name="AmbianceEmitter" type="FmodEventEmitter2D" parent="." unique_id=2073497909]
+event_name = "event:/ATMOS"
+event_guid = "{ff24efb7-7905-44b4-888b-729a060797ef}"
+autoplay = true
+fmod_parameters/Location/id = 5661514774600387649
+fmod_parameters/Location = "Title"
+fmod_parameters/Location/labels = PackedStringArray("Title", "Travel", "Ganymede", "Kallisto", "Pons", "Rationale")
+fmod_parameters/Location/variant_type = 4
+
 [node name="UIEmitters" type="Node" parent="." unique_id=14722126]
 
 [node name="LowBoop" type="FmodEventEmitter2D" parent="UIEmitters" unique_id=1593928422]

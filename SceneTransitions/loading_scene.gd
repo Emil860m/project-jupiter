@@ -20,9 +20,9 @@ var time_changed: bool = false
 
 func _ready() -> void:
 	if next_scene.to_lower().contains("hospital"):
-		SoundController.set_bgm(NpcScheduler.locations.HOSPITAL)
+		SoundController.set_bgm(NpcScheduler.locations.HOSPITAL, true)
 	elif next_scene.to_lower().contains("workshop"):
-		SoundController.set_bgm(NpcScheduler.locations.WORKSHOP)
+		SoundController.set_bgm(NpcScheduler.locations.WORKSHOP, true)
 	
 	for i in range(poster_amount_y):
 		load_posters(offset_x, (i * 882 * poster_size_scale) + offset_y, load(poster))
