@@ -11,7 +11,7 @@ signal transition_finished
 
 @export var fade_in_time: float = 3.0
 @export var fade_out_time: float = 2.0
-
+var _clickable = false
 
 func _ready() -> void:
 	container.custom_minimum_size = get_viewport_rect().size
@@ -27,10 +27,18 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_confirm"):
+	if Input.is_action_just_pressed("ui_confirm") and _clickable:
+		_clickable = false
 		# Fade out
 		var tween = get_tree().create_tween()
 		await tween.tween_property(fade, "modulate", Color.BLACK, fade_out_time).finished
 		
-		transition_finished.emit()
-		queue_free()
+		transition_done.call_deferred()
+
+func transition_done():
+	transition_finished.emit()
+	queue_free()
+
+
+func _on_timer_timeout() -> void:
+	_clickable = true
