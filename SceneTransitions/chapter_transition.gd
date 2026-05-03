@@ -9,9 +9,10 @@ signal transition_finished
 @onready var chapter_label: Label = $CenterContainer/VBoxContainer/Chapter
 @onready var title_label: Label = $CenterContainer/VBoxContainer/Title
 
-@export var fade_in_time: float = 3.0
+@export var fade_in_time: float = 2.0
 @export var fade_out_time: float = 2.0
 var _clickable = false
+var fading_out = false
 
 func _ready() -> void:
 	container.custom_minimum_size = get_viewport_rect().size
@@ -24,16 +25,24 @@ func _ready() -> void:
 	# Fade in
 	var tween = get_tree().create_tween()
 	await tween.tween_property(fade, "modulate", Color.TRANSPARENT, fade_in_time).finished
-
+	#_clickable = true
+	if not fading_out:
+		_fade_out()
+	
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_confirm") and _clickable:
 		_clickable = false
-		# Fade out
-		var tween = get_tree().create_tween()
-		await tween.tween_property(fade, "modulate", Color.BLACK, fade_out_time).finished
+		_fade_out()
 		
-		transition_done.call_deferred()
+
+func _fade_out():
+	fading_out = true
+	# Fade out
+	var tween = get_tree().create_tween()
+	await tween.tween_property(fade, "modulate", Color.BLACK, fade_out_time).finished
+	
+	transition_done.call_deferred()
 
 func transition_done():
 	transition_finished.emit()
