@@ -95,8 +95,8 @@ func _on_travel_button_up() -> void:
 			event.start(
 				Globals.current_timestep,
 				Globals.current_timestep + selected.estimated_travel_time,
-				current_location.global_position,
-				selected.estimated_loc.global_position)
+				current_location,
+				selected)
 		else:
 			SceneController.reload_scene()
 	else:

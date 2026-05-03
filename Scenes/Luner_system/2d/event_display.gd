@@ -12,7 +12,7 @@ func _ready():
 	backdrop.size = get_viewport().size
 	backdrop.position -= backdrop.size / 2
 
-func start(start_time, end_time, start_pos, end_pos):
+func start(start_time: int, end_time: int, start_pos: moon_2d, end_pos: moon_2d):
 	dialog_component.start_node = EventController.fetch_event(start_time, end_time, start_pos, end_pos)
 	dialog_component.start_dialog()
 
