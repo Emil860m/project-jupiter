@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1waqlf05dd86"
-path.s3tc="res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"
+uid="uid://d2dbneevbr7p0"
+path.s3tc="res://.godot/imported/Hick_0.png-9c9bef70a8fa3113d81360bc43bd6cb9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "5b861e13113768f15cb1da0dc5b8ca6a"
-}
 
 [deps]
 
-source_file="res://Assest/characterModels/Zoe/Zoe_0.png"
-dest_files=["res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"]
+source_file="res://Assest/characterModels/Hickey/Hick_0.png"
+dest_files=["res://.godot/imported/Hick_0.png-9c9bef70a8fa3113d81360bc43bd6cb9.s3tc.ctex"]
 
 [params]
 

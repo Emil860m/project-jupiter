@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1waqlf05dd86"
-path.s3tc="res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"
+uid="uid://dw6bacx8u5vmb"
+path.s3tc="res://.godot/imported/Kass_0.png-a368df342a0b4236fa20c21fc9829778.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "5b861e13113768f15cb1da0dc5b8ca6a"
+"md5": "15ff55be1c604e7d098502a9b49a87f8"
 }
 
 [deps]
 
-source_file="res://Assest/characterModels/Zoe/Zoe_0.png"
-dest_files=["res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"]
+source_file="res://Assest/characterModels/Kassandra/Kass_0.png"
+dest_files=["res://.godot/imported/Kass_0.png-a368df342a0b4236fa20c21fc9829778.s3tc.ctex"]
 
 [params]
 

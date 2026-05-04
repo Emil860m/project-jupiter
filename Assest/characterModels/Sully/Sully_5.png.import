@@ -2,24 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1waqlf05dd86"
-path.s3tc="res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"
+uid="uid://bi8xadweiax6c"
+path="res://.godot/imported/Sully_5.png-799408609cf7da9b9f9953e0b05ce9e7.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
-"md5": "5b861e13113768f15cb1da0dc5b8ca6a"
+"md5": "21722b447c2a31482a3f2d82e05cc767"
 }
 
 [deps]
 
-source_file="res://Assest/characterModels/Zoe/Zoe_0.png"
-dest_files=["res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"]
+source_file="res://Assest/characterModels/Sully/Sully_5.png"
+dest_files=["res://.godot/imported/Sully_5.png-799408609cf7da9b9f9953e0b05ce9e7.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -41,4 +40,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

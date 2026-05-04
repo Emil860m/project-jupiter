@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1waqlf05dd86"
-path.s3tc="res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"
+uid="uid://14eisa7g7v4p"
+path.s3tc="res://.godot/imported/idle_1.png-9fc8ef2a651f309d8123bee05b349be0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "5b861e13113768f15cb1da0dc5b8ca6a"
+"md5": "07cc5ccbb1d36973e9b3085d53fee8f1"
 }
 
 [deps]
 
-source_file="res://Assest/characterModels/Zoe/Zoe_0.png"
-dest_files=["res://.godot/imported/Zoe_0.png-38ec66ac3bc5bdae7ce5d6de5566100b.s3tc.ctex"]
+source_file="res://Assest/characterModels/Kher/idle_1.png"
+dest_files=["res://.godot/imported/idle_1.png-9fc8ef2a651f309d8123bee05b349be0.s3tc.ctex"]
 
 [params]
 
