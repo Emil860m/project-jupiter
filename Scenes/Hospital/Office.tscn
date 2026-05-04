@@ -9,11 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://ccmhmfvmumi67" path="res://Prefabs/Ganymede/ganymede_door.tscn" id="8_cylq8"]
 [ext_resource type="PackedScene" uid="uid://dalsdjmiobl4j" path="res://Prefabs/MiscProps/round_light.tscn" id="9_6s0xy"]
 [ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="9_13t73"]
+[ext_resource type="PackedScene" uid="uid://d0gla8byhul7q" path="res://Prefabs/probeModel.tscn" id="10_lwabn"]
 [ext_resource type="PackedScene" uid="uid://cfhvocfbqrj4h" path="res://Prefabs/Ganymede/bossChair.tscn" id="11_oxwys"]
 [ext_resource type="PackedScene" uid="uid://cbml54cjrq65a" path="res://Prefabs/Ganymede/boss_book_shelf.tscn" id="11_tonup"]
 [ext_resource type="PackedScene" uid="uid://bpu0d1twhe7y2" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="12_tonup"]
 [ext_resource type="PackedScene" uid="uid://cbumxbxe80yjw" path="res://NPC/Zoe/Zoe.tscn" id="13_0wpqt"]
 [ext_resource type="PackedScene" uid="uid://cjgyb4jmguhna" path="res://NPC/Sally/Sally.tscn" id="14_lwabn"]
+[ext_resource type="PackedScene" uid="uid://g818sf3tp82a" path="res://Prefabs/Ganymede/uglyStatue.tscn" id="16_iq2su"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_35g8a"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -119,7 +121,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -15.
 mesh = SubResource("PlaneMesh_4u55a")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1616612162]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.19878745, 4.0000005, -3.8971345)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.18801332, 3.9828699, -3.9071457)
 mesh = SubResource("PlaneMesh_13t73")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1591213467]
@@ -179,22 +181,22 @@ transform = Transform3D(-0.49945477, 0.023343971, 1.0203974e-09, 0, -2.1855694e-
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -18.196, 0, -0.154)
 
 [node name="BossBookShelf" parent="NavigationRegion3D" unique_id=1891062108 instance=ExtResource("11_tonup")]
-transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.353268, 0.021974746, 5.272335)
+transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.353268, 0.021974746, 5.975191)
 
 [node name="BossBookShelf2" parent="NavigationRegion3D" unique_id=1143405125 instance=ExtResource("11_tonup")]
-transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.34916, 0.017819706, 3.2723436)
+transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.34916, 0.017819706, 3.9751997)
 
 [node name="BossBookShelf3" parent="NavigationRegion3D" unique_id=769269650 instance=ExtResource("11_tonup")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.351213, 0.019897226, 1.2723393)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.351213, 0.019897226, 1.9751954)
 
 [node name="BossBookShelf4" parent="NavigationRegion3D" unique_id=894975529 instance=ExtResource("11_tonup")]
-transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.353268, 0.021974746, -1.727665)
+transform = Transform3D(0.49999985, -5.649105e-05, -0.00038532657, 5.6987854e-05, 0.49999967, 0.0006168664, 0.00038524804, -0.0006169207, 0.49999952, -20.351984, 0.02113096, -2.3838358)
 
 [node name="BossBookShelf5" parent="NavigationRegion3D" unique_id=704236670 instance=ExtResource("11_tonup")]
-transform = Transform3D(0.4999988, -0.00034456622, -0.0010268674, 0.00034671093, 0.4999988, 0.0010387597, 0.0010261452, -0.0010394731, 0.49999785, -20.34916, 0.017819706, -3.7276564)
+transform = Transform3D(0.49999985, -5.649105e-05, -0.00038532657, 5.6987854e-05, 0.49999967, 0.0006168664, 0.00038524804, -0.0006169207, 0.49999952, -20.350443, 0.018663492, -4.383834)
 
 [node name="BossBookShelf6" parent="NavigationRegion3D" unique_id=1348572459 instance=ExtResource("11_tonup")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.351213, 0.019897226, -5.7276607)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.351213, 0.019897226, -6.383835)
 
 [node name="InvisWall" type="StaticBody3D" parent="NavigationRegion3D" unique_id=618580292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3, 0)
@@ -202,6 +204,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/InvisWall" unique_id=290070832]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49950027, -1.5, -0.5)
 shape = SubResource("BoxShape3D_tonup")
+
+[node name="Node3D" parent="NavigationRegion3D" unique_id=78836367 instance=ExtResource("10_lwabn")]
+transform = Transform3D(-3.4969112e-08, -0.8, 0, 0.8, -3.4969112e-08, 0, 0, 0, 0.8, -20.61681, 2.8401153, -0.3185234)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=956773002]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 33, 0)
@@ -230,5 +235,8 @@ shape = SubResource("BoxShape3D_0wpqt")
 
 [node name="Sally" parent="." unique_id=764589073 instance=ExtResource("14_lwabn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.238873, 1.0004997, -1.1580932)
+
+[node name="UglyStatue" parent="." unique_id=283069863 instance=ExtResource("16_iq2su")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.18765593, 0.05586779, 2.2540777)
 
 [editable path="Zoe"]

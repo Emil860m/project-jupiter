@@ -38,6 +38,8 @@
 [ext_resource type="PackedScene" uid="uid://d4nrqmjt8rn5q" path="res://Prefabs/paperSheet.tscn" id="36_svaw3"]
 [ext_resource type="PackedScene" uid="uid://dqekt5rttkm8v" path="res://Prefabs/Posters/ganymedePoster.tscn" id="37_mmrm4"]
 [ext_resource type="PackedScene" uid="uid://et422gwslsse" path="res://Prefabs/Calisto/pileOfBoxes.tscn" id="38_mmrm4"]
+[ext_resource type="PackedScene" uid="uid://dn76p03h1oorx" path="res://Prefabs/Posters/rationalPoster.tscn" id="39_x87e5"]
+[ext_resource type="PackedScene" uid="uid://2pk26aftwmc8" path="res://Prefabs/Posters/ponsPoster.tscn" id="40_11saj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehkgj"]
 albedo_color = Color(0.9157694, 0.9157693, 0.9157694, 1)
@@ -1166,3 +1168,12 @@ transform = Transform3D(0.047597982, -0.06419831, 0.99680144, 0.0036912134, 0.99
 
 [node name="Node3D6" parent="." unique_id=1577123262 instance=ExtResource("38_mmrm4")]
 transform = Transform3D(0.8490547, 0, 0.528305, 0, 1, 0, -0.528305, 0, 0.8490547, -26.20502, 0.14670883, -21.228806)
+
+[node name="Node3D8" parent="." unique_id=955251640 instance=ExtResource("39_x87e5")]
+transform = Transform3D(-0.9996477, 0, 0.026543273, 0.001241567, 0.9989054, 0.046758723, -0.02651422, 0.046775203, -0.99855345, -1.467561, 1.8401158, 11.554721)
+
+[node name="Node3D9" parent="." unique_id=1732493247 instance=ExtResource("40_11saj")]
+transform = Transform3D(-0.99931747, 0, -0.036940187, -0.0030685882, 0.99654377, 0.0830124, 0.036812514, 0.0830691, -0.9958636, 9.262804, 1.7308819, 11.495144)
+
+[node name="Node3D10" parent="." unique_id=1239620911 instance=ExtResource("34_bw3j0")]
+transform = Transform3D(-0.59773254, 0, 0.25537384, 0, 0.65, 0, -0.25537384, 0, -0.59773254, 17.250242, 0.14670978, 10.909568)
