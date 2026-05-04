@@ -1,14 +1,31 @@
 [gd_scene format=3 uid="uid://2pk26aftwmc8"]
 
+[ext_resource type="Script" uid="uid://bke64gshpg2d8" path="res://Prefabs/Posters/pons_poster.gd" id="1_cctmb"]
 [ext_resource type="Texture2D" uid="uid://b81c8oj5eay18" path="res://Assest/posters/PONS_TEXTURE.png" id="1_tvkmt"]
 [ext_resource type="ArrayMesh" uid="uid://vfcdydu4pu2j" path="res://Assest/posters/poster.obj" id="2_xl65p"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="4_fdytg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xl65p"]
 albedo_texture = ExtResource("1_tvkmt")
 
-[node name="Node3D" type="Node3D" unique_id=548216174]
+[sub_resource type="BoxShape3D" id="BoxShape3D_cg62l"]
+size = Vector3(1.4162598, 1.9963379, 0.13238525)
+
+[node name="Node3D" type="StaticBody3D" unique_id=902910214]
+script = ExtResource("1_cctmb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=331595598]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.0050884485, 0.0031211376, -0.0047801733)
 material_override = SubResource("StandardMaterial3D_xl65p")
 mesh = ExtResource("2_xl65p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1918637211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004272461, -0.0010986328, -0.001739502)
+shape = SubResource("BoxShape3D_cg62l")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_fdytg")]
+meshs = [NodePath("../MeshInstance3D")]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
