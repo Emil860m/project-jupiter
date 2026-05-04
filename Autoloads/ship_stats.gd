@@ -11,7 +11,7 @@ var fuel = 50
 var fuel_cap = 50
 
 var damage = 0
-const severity_const = 3
+const severity_const = 2
 
 var noise_max = 15
 var noise_min = 5
