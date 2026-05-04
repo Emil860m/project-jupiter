@@ -7,7 +7,7 @@ const tow_truck_punishment = 20
 
 func _ready() -> void:
 	if ShipStats.fuel <= 0:
-		label.text = "You did not have the necessary fuel to reach timeout.\nYour ship has been towtrucked."
+		label.text = "You did not have the necessary fuel to reach your destination.\nYour ship has been towtrucked."
 	if ShipStats.damage > 10:
 		label.text = "Your ship has taken serious damage, and systems are no longer operational.\nYour ship has been towtrucked."
 	else:
