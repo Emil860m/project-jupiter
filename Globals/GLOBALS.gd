@@ -6,6 +6,8 @@ var interacted_set = {}
 var current_timestep = 0
 var minutes_per_timestep: int = 3
 var minutes_before_timestep_zero: int = 460 # 7:40
+var max_hour = 25
+
 
 @export var moon_movement_per_timestep: float = 20.0/144.0
 var max_travel_distance = 360
@@ -19,6 +21,9 @@ var current_location: NpcScheduler.locations = NpcScheduler.locations.HOSPITAL:
 func increment_timestep(increment: int):
 	current_timestep += increment
 	SignalBus.time_step_changed.emit()
+	
+	if convert_timesteps_to_time(current_timestep)[0] >= max_hour:
+		SceneController.goto_scene("res://Scenes/EndingScene.tscn")
 
 
 func add_to_interact_set(item) -> void:
@@ -51,4 +56,4 @@ func convert_timesteps_to_time(timestep: int):
 	
 func convert_timesteps_to_string(timestep: int):
 	var timeArr = convert_timesteps_to_time(timestep)
-	return str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])
+	return ("" if timeArr[0] >= 10  else "0") + str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])

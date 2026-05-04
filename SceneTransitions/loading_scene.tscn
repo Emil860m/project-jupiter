@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c354rphw1sytp"]
+
+[ext_resource type="Script" uid="uid://o1fj7sey58si" path="res://SceneTransitions/loading_scene.gd" id="1_cn1pg"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="2_spi1n"]
+[ext_resource type="Texture2D" uid="uid://cvynuj7t0bny5" path="res://Textures/MapUI/UI_clock_final.png" id="3_volvl"]
+
+[node name="LoadingScene" type="Node2D" unique_id=480993062]
+script = ExtResource("1_cn1pg")
+poster_amount_x = 10
+poster_amount_y = 4
+offset_x = -250
+offset_y = -100
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1682432290]
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1062183641]
+z_index = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -222.0
+offset_top = -168.0
+offset_right = 74.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_volvl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect2" unique_id=466565002]
+modulate = Color(0.44692475, 0.80494845, 0.61928964, 1)
+layout_mode = 0
+offset_left = 76.0
+offset_top = 23.0
+offset_right = 186.0
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("2_spi1n")
+theme_override_font_sizes/font_size = 64
+text = "20:00"
+
+[node name="transition_timer" type="Timer" parent="." unique_id=808444325]
+wait_time = 4.0
+autostart = true
+
+[node name="blink_timer" type="Timer" parent="." unique_id=1593460386]
+wait_time = 0.25
+autostart = true
+
+[connection signal="timeout" from="transition_timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="blink_timer" to="." method="_on_timer_2_timeout"]

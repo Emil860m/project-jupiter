@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://d2a05bx81qyr1"]
 
 [ext_resource type="Script" uid="uid://dkvqw5hjccwb1" path="res://Components/interactable_component.gd" id="1_opbag"]
+[ext_resource type="Shader" uid="uid://dlqjseaxc16nh" path="res://Shaders/outline_shader_test.gdshader" id="2_tg4w3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mfcnu"]
+render_priority = 0
+shader = ExtResource("2_tg4w3")
+shader_parameter/thickness = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/samples = 4
+shader_parameter/sensitivity = 0.1
+shader_parameter/edge_fade = 0.015
 
 [node name="InteractableComponent" type="Node3D" unique_id=1146505506]
 script = ExtResource("1_opbag")
+outline_shader = SubResource("ShaderMaterial_mfcnu")

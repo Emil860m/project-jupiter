@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://b2e2upu1200i0"]
+
+[ext_resource type="Texture2D" uid="uid://ctba34acgaowa" path="res://Textures/MapUI/Rectangle_data.png" id="1_cxi0g"]
+[ext_resource type="Script" uid="uid://kkhphk8vafwv" path="res://Scenes/Misc/pause_menu.gd" id="1_fj8d5"]
+[ext_resource type="Texture2D" uid="uid://dkqg334sy3n36" path="res://Textures/MapUI/button_exit.png" id="2_lvmo5"]
+[ext_resource type="Texture2D" uid="uid://bhyd1bo8i7rgb" path="res://Textures/MapUI/button.png" id="4_l1ybc"]
+
+[node name="PauseMenu" type="Node2D" unique_id=829336649]
+process_mode = 2
+script = ExtResource("1_fj8d5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1436536275]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=1064586283]
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.25
+anchor_bottom = 0.25
+offset_left = -272.0
+offset_top = -131.5
+offset_right = 272.0
+offset_bottom = 131.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cxi0g")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=23808664]
+offset_right = 141.0
+offset_bottom = 77.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer" unique_id=1450867105]
+layout_mode = 2
+
+[node name="MasterContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=15965866]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=1492405050]
+layout_mode = 2
+text = "Master volume: "
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=1159591806]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MasterSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=119690191]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 5.0
+tick_count = 11
+ticks_position = 3
+
+[node name="BgmContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1608694257]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=734598286]
+layout_mode = 2
+text = "Music:"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=599794694]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BgmSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=1835706600]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 5.0
+tick_count = 11
+ticks_position = 3
+
+[node name="SfxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1267485964]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=2046013491]
+layout_mode = 2
+text = "Sound:"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=790807828]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SfxSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=1206359703]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 5.0
+tick_count = 11
+ticks_position = 3
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer" unique_id=1543274245]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.5
+anchor_bottom = 0.65
+offset_left = -187.5
+offset_top = -47.5
+offset_right = 187.5
+offset_bottom = 47.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "This should be \"Resume\""
+icon = ExtResource("2_lvmo5")
+icon_alignment = 1
+
+[node name="ExitButton" type="Button" parent="CanvasLayer" unique_id=1344555747]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.75
+anchor_right = 0.5
+anchor_bottom = 0.75
+offset_left = -187.5
+offset_top = -47.5
+offset_right = 187.5
+offset_bottom = 47.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "This should be \"Exit Game\""
+icon = ExtResource("2_lvmo5")
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1826969155]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.25
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Your game is paused."
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=112472412]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -131.5
+offset_right = 272.0
+offset_bottom = 131.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer2" unique_id=2016578359]
+layout_mode = 2
+texture = ExtResource("1_cxi0g")
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer2" unique_id=1296136594]
+layout_mode = 2
+text = "Warning
+Your progress will not be saved"
+horizontal_alignment = 1
+
+[node name="ConfirmExitButton" type="Button" parent="CanvasLayer" unique_id=1237168030]
+visible = false
+clip_contents = true
+offset_left = 758.0
+offset_top = 597.0
+offset_right = 1133.0
+offset_bottom = 692.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+icon = ExtResource("4_l1ybc")
+icon_alignment = 1
+
+[node name="CancelButton" type="Button" parent="CanvasLayer" unique_id=307812477]
+visible = false
+clip_contents = true
+offset_left = 990.0
+offset_top = 597.0
+offset_right = 1365.0
+offset_bottom = 692.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 32
+text = "CANCEL"
+icon = ExtResource("4_l1ybc")
+icon_alignment = 1
+
+[connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer/BgmSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="drag_ended" from="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer/SfxSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="button_up" from="CanvasLayer/ResumeButton" to="." method="_on_resume_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/ConfirmExitButton" to="." method="_on_confirm_exit_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/CancelButton" to="." method="_on_cancel_button_button_up"]

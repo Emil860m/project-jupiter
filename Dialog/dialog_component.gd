@@ -7,23 +7,37 @@ extends Node
 @export var auto_start: bool = false
 @onready var line_presenter := $CanvasLayer/Control/LinePresenter
 @onready var options_presenter := $CanvasLayer/Control/OptionsPresenter
-
+var has_portrait = false
 func _ready():
+	dialogue_runner.connect("dialogue_completed", dialog_complete)
 	dialogue_runner.add_presenter(line_presenter)
 	dialogue_runner.add_presenter(options_presenter)
 	add_functions()
 	if auto_start:
 		start_dialog()
 
-	
+func set_character_portrait(path: String):
+	var portrait = $CanvasLayer/Control/LinePresenter/Control/TextureRect
+	if portrait:
+		portrait.texture = load(path)
+		has_portrait = true
+
+func dialog_complete():
+	$CanvasLayer.visible = false
+
 func start_dialog():
 	$CanvasLayer.visible = true
+	var portrait = $CanvasLayer/Control/LinePresenter/Control
+	if portrait:
+		portrait.visible = has_portrait
+	print(start_node)
 	dialogue_runner.start_dialogue(start_node)
 
 func add_functions():
 	dialogue_runner.add_function("yarn_function", godot_function, 1)
 	
 	# Stat Manipulations
+	dialogue_runner.add_function("adjust_stats", PlayerStats.adjust_stats, 4)
 	dialogue_runner.add_function("resolve_outcome", EventController.resolve_outcome, 3)
 	#dialogue_runner.add_function("damage_ship", ShipStats.damage_ship, 1)
 	#dialogue_runner.add_function("spend_fuel", ShipStats.spend_fuel, 1)
@@ -32,6 +46,8 @@ func add_functions():
 	# Flags
 	dialogue_runner.add_function("set_flag", Flags.set_flag, 1)
 	dialogue_runner.add_function("get_flag", Flags.get_flag, 1)
+	dialogue_runner.add_function("get_flag_uncheck", Flags.get_flag_uncheck, 1)
+	dialogue_runner.add_function("unset_flag", Flags.unset_flag, 1)
 	
 	
 	# Checks Conversations
@@ -51,6 +67,8 @@ func add_functions():
 	
 	dialogue_runner.add_function("detriment_s_check", EventController.detriment_speed_check, 0)
 
+func add_non_global_function(yarn_func_name, function: Callable):
+	dialogue_runner.add_function(yarn_func_name, function, function.get_argument_count())
 
 func godot_function(string: String):
 	print(string)

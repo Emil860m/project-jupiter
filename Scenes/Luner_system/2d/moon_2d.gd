@@ -13,10 +13,14 @@ var planetview: Node2D
 @export var sprite: Texture2D
 @export var displayName: String
 @export var travelScenePath: String
+@export var loading_screen: bool = false
+@export var main_poster: String
+@export var other_posters: Array[String]
 var current_angle: float = 0.0
 var selected: bool = false
 var base_travel_time: int
 var estimated_travel_time: int
+
 
 @onready var estimated_loc: Sprite2D = $estimated_loc
 @onready var youAreHere: Sprite2D = $YouAreHere
