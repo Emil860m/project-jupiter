@@ -81,6 +81,9 @@ size = Vector2(50, 7.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tonup"]
 size = Vector3(0.001, 4, 8)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wpqt"]
+size = Vector3(2.5985107, 1, 4.191437)
+
 [node name="Office" type="Node3D" unique_id=2047228538]
 script = ExtResource("1_tonup")
 
@@ -221,5 +224,11 @@ transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-
 [node name="Zoe" parent="." unique_id=2096689363 instance=ExtResource("13_0wpqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.19976, 1.8944826, -0.25553226)
 
+[node name="CollisionShape3D" parent="Zoe" index="1" unique_id=2073171143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7992554, 0, 0.007858276)
+shape = SubResource("BoxShape3D_0wpqt")
+
 [node name="Sally" parent="." unique_id=764589073 instance=ExtResource("14_lwabn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.238873, 1.0004997, -1.1580932)
+
+[editable path="Zoe"]
