@@ -7,8 +7,8 @@ var has_upgraded_fuel_cap = false
 @export var stat_min_allowed_value = 8
 @export var max_allowed_stat = 20
 
-var fuel = 50
-var fuel_cap = 50
+var fuel: int = 50
+var fuel_cap: int = 50
 
 var damage = 0
 const severity_const = 2
@@ -63,11 +63,12 @@ func damage_ship(damage_number: int):
 		SceneController.should_tow_truck = true
 
 func spend_fuel(fuel_spent: int):  # Note: also used by events to reduce fuel
-	var total_fuel_spent = fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
+	var total_fuel_spent = round(fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption]))
 	if total_fuel_spent > fuel:
+		fuel = 0
 		SceneController.should_tow_truck = true
 		return
-	fuel -= fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
+	fuel -= total_fuel_spent
 
 func refuel():
 	fuel = fuel_cap

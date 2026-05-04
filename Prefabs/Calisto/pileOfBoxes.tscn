@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://et422gwslsse"]
+
+[ext_resource type="PackedScene" uid="uid://c3dldt5thtlrr" path="res://Prefabs/Calisto/box.tscn" id="1_tftvq"]
+
+[node name="Node3D" type="Node3D" unique_id=1577123262]
+
+[node name="Node3D" parent="." unique_id=1953588564 instance=ExtResource("1_tftvq")]
+transform = Transform3D(0.6278518, 0, -0.16823237, 0, 0.65, 0, 0.16823237, 0, 0.6278518, -0.6276424, 0, 0.31816626)
+
+[node name="Node3D2" parent="." unique_id=1720154581 instance=ExtResource("1_tftvq")]
+transform = Transform3D(-0.47039086, 0, 0.44858947, 0, 0.65, 0, -0.44858947, 0, -0.47039086, 0.586033, 0, -0.13509154)
+
+[node name="Node3D3" parent="." unique_id=1171378684 instance=ExtResource("1_tftvq")]
+transform = Transform3D(-0.6496127, 0, -0.022435308, 0, 0.65, 0, 0.022435308, 0, -0.6496127, 0.63775545, 0, 1.0630031)
+
+[node name="Node3D5" parent="." unique_id=1098431514 instance=ExtResource("1_tftvq")]
+transform = Transform3D(-0.54964435, 0, -0.34697422, 0, 0.65, 0, 0.34697422, 0, -0.54964435, -0.45666802, 0.8362856, -0.028357208)
+
+[node name="Node3D4" parent="." unique_id=827954365 instance=ExtResource("1_tftvq")]
+transform = Transform3D(0.47513223, 0, 0.4435644, 0, 0.65, 0, -0.4435644, 0, 0.47513223, 0.3599438, 0.85189533, 0.53133273)

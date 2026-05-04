@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d4nrqmjt8rn5q"]
+
+[ext_resource type="Texture2D" uid="uid://dlysn1ol3b5a" path="res://Assest/paperSheet/miscItems2.png" id="1_nfwfv"]
+[ext_resource type="ArrayMesh" uid="uid://ch70yqwyx7l88" path="res://Assest/paperSheet/paperSheetA.obj" id="2_eeuht"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68vdw"]
+albedo_texture = ExtResource("1_nfwfv")
+
+[node name="Node3D" type="Node3D" unique_id=847548939]
+
+[node name="PaperSheetA" type="MeshInstance3D" parent="." unique_id=850518077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7635221, 3.0539813)
+material_override = SubResource("StandardMaterial3D_68vdw")
+mesh = ExtResource("2_eeuht")

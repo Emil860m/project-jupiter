@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://g818sf3tp82a"]
+
+[ext_resource type="ArrayMesh" uid="uid://3tn1yti7vxa" path="res://Assest/uglyStatue/uglyStatue.obj" id="1_c8aup"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c8aup"]
+radius = 1.0024414
+height = 5.5
+
+[node name="UglyStatue" type="Area3D" unique_id=283069863]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="UglyStatue" type="MeshInstance3D" parent="." unique_id=469917692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037050486, 2.5782099, -3.3012772)
+mesh = ExtResource("1_c8aup")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1930888370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023858547, 1.75, 0)
+shape = SubResource("CapsuleShape3D_c8aup")
