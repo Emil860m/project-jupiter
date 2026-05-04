@@ -7,15 +7,15 @@
 albedo_texture = ExtResource("1_33k85")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p83kc"]
-radius = 0.98779297
+radius = 1.0
 height = 4.260254
 
-[node name="Node3D" type="Area3D" unique_id=876726287]
+[node name="Sputnik" type="StaticBody3D" unique_id=1320933123]
 
 [node name="Sputnik" type="MeshInstance3D" parent="." unique_id=1131053544]
 material_override = SubResource("StandardMaterial3D_dk2if")
 mesh = ExtResource("2_177wi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2000824909]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.130127, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7032151, 0)
 shape = SubResource("CapsuleShape3D_p83kc")
