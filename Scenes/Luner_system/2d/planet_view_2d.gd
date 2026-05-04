@@ -54,7 +54,7 @@ func _ready() -> void:
 				m.base_travel_time = (i + pow(ShipStats.severity_const, ShipStats.damage))
 				m.estimated_travel_time = m.base_travel_time / (0.1 * ShipStats.Stats[ShipStats.ShipStatTypes.speed]) 
 				if m.displayName == "The Pons":
-					pons_distance = m.estimated_travel_time
+					pons_distance = m.base_travel_time
 				break
 
 func select_moon(hit):
@@ -118,9 +118,9 @@ func _on_exit_button_up() -> void:
 
 func _on_tow_truck_button_up() -> void:
 	if not Globals.current_moon == "OutPost":
-		print(pons_distance)
 		tow_truck_popup.visible = true
-		tow_truck_time_label.text = "Estimated time of arrival at The Ponds:\n %s" % Globals.convert_timesteps_to_string(round(pons_distance * (1 + traveltime_noice / 100)) + Globals.current_timestep)
+		var time_string = Globals.convert_timesteps_to_string(round(pons_distance * (1 + traveltime_noice / 100)) + Globals.current_timestep)
+		tow_truck_time_label.text = "Estimated time of arrival at The Ponds:\n %s" % time_string
 
 func _on_event_completed() -> void:
 	Globals.interacting = false
@@ -148,5 +148,4 @@ func _on_confirm_button_up() -> void:
 
 func _on_cancel_button_up() -> void:
 	tow_truck_popup.visible = false
-	tow_truck_time_label.text = ""
 	pass # Replace with function body.

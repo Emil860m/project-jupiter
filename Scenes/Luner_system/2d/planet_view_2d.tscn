@@ -369,14 +369,18 @@ offset_left = 36.759186
 offset_top = 49.158886
 offset_right = 227.75919
 offset_bottom = 100.15889
+text = "Confirm"
 icon = ExtResource("15_u6i4c")
+icon_alignment = 1
 
 [node name="Cancel" type="Button" parent="UiElements/towTruckPopup" unique_id=226310095]
 offset_left = -206.45776
 offset_top = 49.158886
 offset_right = -15.457764
 offset_bottom = 100.15889
+text = "Cancel"
 icon = ExtResource("15_u6i4c")
+icon_alignment = 1
 
 [node name="Label" type="Label" parent="UiElements/towTruckPopup" unique_id=988394570]
 offset_left = -206.45775
