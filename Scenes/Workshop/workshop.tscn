@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bpk7jqh8nnckm" path="res://Prefabs/MiscProps/spherical_tank.tscn" id="11_6kvd0"]
 [ext_resource type="PackedScene" uid="uid://cxb2jaomgdav3" path="res://Prefabs/MiscProps/barrel.tscn" id="12_if5wu"]
 [ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="13_8cm3j"]
-[ext_resource type="PackedScene" uid="uid://d18nefn3ce88k" path="res://Prefabs/Calisto/workshopSign.tscn" id="14_1okqn"]
+[ext_resource type="PackedScene" uid="uid://8kq3y3ghok4i" path="res://Prefabs/spaceShip.tscn" id="14_1okqn"]
 [ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="14_q2001"]
 [ext_resource type="PackedScene" uid="uid://ql573cu8ftbd" path="res://Prefabs/Signs/exitSign.tscn" id="15_8cm3j"]
 [ext_resource type="PackedScene" uid="uid://c7037cetqutpk" path="res://Prefabs/Calisto/calisto_console.tscn" id="16_nitod"]
@@ -554,9 +554,6 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -17.26392, 0.05364979, 
 
 [node name="Node3D3" parent="NavigationRegion3D/WORLD" unique_id=876726287 instance=ExtResource("18_eoxxw")]
 transform = Transform3D(0.5630652, 0.6267286, -0.5386732, -0.6536485, -0.06109418, -0.75432813, -0.5056689, 0.77683914, 0.37526017, 25.586628, 0.8249123, 9.258293)
-
-[node name="Node3D" parent="NavigationRegion3D/WORLD" unique_id=181024586 instance=ExtResource("14_1okqn")]
-transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -15.504938, 5.3622065, 1.2128458)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=810356272]
 environment = SubResource("Environment_arkt1")
@@ -1128,7 +1125,7 @@ input_ray_pickable = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.536159, 1.0500002, 10.262529)
 
 [node name="Sally" parent="." unique_id=764589073 instance=ExtResource("30_if1d2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.113843, 1.0500002, 21.245623)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.202981, 1.0500002, 22.137577)
 
 [node name="Kassandra" parent="." unique_id=1964364760 instance=ExtResource("30_sfr3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.278146, 1.0499992, -11.181408)
