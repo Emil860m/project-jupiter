@@ -21,6 +21,14 @@ var Stats = {
 		PlayerStatTypes.education: 10,
 	}
 
+
+func adjust_stats(d_physical: int, d_mental: int, d_social: int, d_education: int):
+	Stats[PlayerStatTypes.physical] += d_physical
+	Stats[PlayerStatTypes.mental] += d_mental
+	Stats[PlayerStatTypes.social] += d_social
+	Stats[PlayerStatTypes.education] += d_education
+
+
 ## RPG Stuff
 
 var rng = RandomNumberGenerator.new()
@@ -38,7 +46,7 @@ func dialog_check(succes: int, roll_kind: RollKind, stats: Array[PlayerStatTypes
 	var luck = 0
 	match roll_kind:
 		RollKind.normal:
-			luck = rng.randi_range(1,num_sides) >= succes
+			luck = rng.randi_range(1,num_sides)
 		RollKind.advantage:
 			luck = max(rng.randi_range(1,num_sides), rng.randi_range(1,num_sides))
 		RollKind.disadvantage:

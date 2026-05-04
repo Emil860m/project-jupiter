@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://do6goleahhg14" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_10.png" id="20_24cg5"]
 [ext_resource type="Texture2D" uid="uid://bcgpaw7txtcl5" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_11.png" id="21_octm2"]
 [ext_resource type="Texture2D" uid="uid://cdn0lsvk00bci" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_12.png" id="22_wh2fw"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="23_5py0a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gr3x1"]
 animations = [{
@@ -150,5 +151,8 @@ position = Vector2(-2.7187715, -4)
 scale = Vector2(10.133152, 4.8183236)
 sprite_frames = SubResource("SpriteFrames_gr3x1")
 frame_progress = 0.79267645
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("23_5py0a")]
+start_node = "alphaDialogue"
 
 [connection signal="changeStat" from="StatAllocator" to="PlanetView2d" method="_on_stat_allocator_change_stat"]

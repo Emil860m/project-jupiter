@@ -340,7 +340,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_wjrc5")
 theme_override_font_sizes/font_size = 79
-text = "Thank you for dining at The Rationalle"
+text = "Thank you for dining at the Rationale"
 
 [node name="Label2" type="Label" parent="LeaveScene" unique_id=798803920]
 anchors_preset = 8
@@ -357,7 +357,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.7, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_wjrc5")
 theme_override_font_sizes/font_size = 79
-text = "Thank you for dining at The Rationalle"
+text = "Thank you for dining at the Rationale"
 
 [node name="LeaveButton" type="Button" parent="LeaveScene" unique_id=1297782458]
 modulate = Color(0.7142435, 0.94184476, 0.87618417, 1)

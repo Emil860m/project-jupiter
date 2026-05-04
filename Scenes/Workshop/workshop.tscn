@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bpk7jqh8nnckm" path="res://Prefabs/MiscProps/spherical_tank.tscn" id="11_6kvd0"]
 [ext_resource type="PackedScene" uid="uid://cxb2jaomgdav3" path="res://Prefabs/MiscProps/barrel.tscn" id="12_if5wu"]
 [ext_resource type="PackedScene" uid="uid://c1a8sytgeteyq" path="res://Prefabs/trash_can.tscn" id="13_8cm3j"]
-[ext_resource type="PackedScene" uid="uid://8kq3y3ghok4i" path="res://Prefabs/spaceShip.tscn" id="14_q2001"]
+[ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="14_q2001"]
 [ext_resource type="PackedScene" uid="uid://ql573cu8ftbd" path="res://Prefabs/Signs/exitSign.tscn" id="15_8cm3j"]
 [ext_resource type="PackedScene" uid="uid://c7037cetqutpk" path="res://Prefabs/Calisto/calisto_console.tscn" id="16_nitod"]
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="17_eoxxw"]
@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://bw10nsv4kuf4i" path="res://Prefabs/fire_stopper.tscn" id="27_uatr3"]
 [ext_resource type="PackedScene" uid="uid://dg53kqsa2pt0o" path="res://Prefabs/industrial_liquid_tank_a.tscn" id="28_w7kre"]
 [ext_resource type="PackedScene" uid="uid://bdf7i3bbqacsb" path="res://Prefabs/radio_box.tscn" id="29_sfr3q"]
+[ext_resource type="PackedScene" uid="uid://cjgyb4jmguhna" path="res://NPC/Sally/Sally.tscn" id="30_if1d2"]
+[ext_resource type="PackedScene" uid="uid://cs55xxpbvxs4e" path="res://NPC/Kassandra/Kassandra.tscn" id="30_sfr3q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehkgj"]
 albedo_color = Color(0.9157694, 0.9157693, 0.9157694, 1)
@@ -540,9 +542,6 @@ transform = Transform3D(-0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.49
 
 [node name="Barrel" parent="NavigationRegion3D/WORLD" unique_id=83570398 instance=ExtResource("12_if5wu")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -17.26392, 0.05364979, 16.595713)
-
-[node name="Node3D" parent="NavigationRegion3D" unique_id=1587799082 instance=ExtResource("14_q2001")]
-transform = Transform3D(-0.41709113, 0, 0.62332577, 0, 0.75, 0, -0.62332577, 0, -0.41709113, -15.204246, 1.4708211, 20.938047)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=810356272]
 environment = SubResource("Environment_arkt1")
@@ -1103,3 +1102,12 @@ input_ray_pickable = false
 [node name="Pipe12" parent="." unique_id=255167099 instance=ExtResource("5_ga7uk")]
 transform = Transform3D(-0.99999994, 0.0003838857, -1.6780178e-11, 0, -4.371139e-08, -1, -0.0003838857, -0.99999994, 4.3711385e-08, -20.815489, 25.553259, -16.060913)
 input_ray_pickable = false
+
+[node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("14_q2001")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.536159, 1.0500002, 10.262529)
+
+[node name="Sally" parent="." unique_id=764589073 instance=ExtResource("30_if1d2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.113843, 1.0500002, 21.245623)
+
+[node name="Kassandra" parent="." unique_id=1964364760 instance=ExtResource("30_sfr3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.278146, 1.0499992, -9.95804)
