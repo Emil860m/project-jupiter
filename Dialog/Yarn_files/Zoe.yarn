@@ -3,19 +3,20 @@ color: yellow
 position: -463,-268
 ---
 <<if get_flag("metZoe")>>
--> how can I get an extation? <<if get_flag_uncheck("SDA")>>
+-> how can I get an extation for the SDA? <<if get_flag_uncheck("SDA")>>
 	<<detour zoeSDA>>
--> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+-> about the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeExtension>>
 -> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
 	<<detour zoeKeys>>
--> can I help you somehow? 
+-> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
 	<<detour zoeHelp>>
 -> Thanks, see you later
 	<<return>>
 <<jump zoeOfficeTS2>>
-<<else>>
+<<elseif true>>
 	<<detour meetZoe>>
+	<<jump zoeOfficeTS2>>
 <<endif>>
 ===
 title: zoeHospitalTS4
@@ -25,7 +26,7 @@ position: -464,-2
 <<if get_flag("docs") and get_flag("log")>>
 	Here's the extantion
 	<<if set_flag("gotExtension")>><<endif>>
-<<else>>
+<<elseif true>>
 	Zoe is sharing a private moment with the corpse.
 <<endif>>
 ===
@@ -34,19 +35,20 @@ color: yellow
 position: -460,293
 ---
 <<if get_flag("metZoe")>>
--> how can I get an extation? <<if get_flag_uncheck("SDA")>>
+-> how can I get an extation for the SDA? <<if get_flag_uncheck("SDA")>>
 	<<detour zoeSDA>>
 -> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeExtension>>
 -> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
 	<<detour zoeKeys>>
--> can I help you somehow? 
+-> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
 	<<detour zoeHelp>>
 -> Thanks, see you later
 	<<return>>
-<<jump zoeOfficeTS2>>
-<<else>>
+<<jump zoeOfficeTS5>>
+<<elseif true>>
 	<<detour meetZoe>>
+	<<jump zoeOfficeTS5>>
 <<endif>>
 ===
 title: meetZoe
@@ -70,7 +72,9 @@ yes come pick them up tomorrow, for now keep using sully's
 ===
 title:zoeHelp
 ---
-tell sully to come here <<if set_flag("zoeAsk")>>
+tell sully to come here 
+<<if set_flag("zoeAsk")>><<endif>>
+<<if set_flag("zoeHelp")>><<endif>>
 ===
 title:zoeExtension
 ---

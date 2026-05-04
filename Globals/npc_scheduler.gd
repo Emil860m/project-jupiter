@@ -28,7 +28,7 @@ func _ready() -> void:
 	# the structure is: (start_time, end_time, flags, yarn_node)
 	hickey = {
 		locations.HOSPITAL: [
-			NPC_Schedule.new(td2ts(20, 0), td2ts(22, 0), ["hickHospital"],[], "hickHospitalTS6")
+			NPC_Schedule.new(td2ts(20, 0), td2ts(25, 0), ["hickHospital"],[], "hickHospitalTS6")
 		],
 		locations.WORKSHOP: [
 			NPC_Schedule.new(td2ts(11, 00), td2ts(12, 15), [],[], "hickWorkshopTS3"),
@@ -55,7 +55,7 @@ func _ready() -> void:
 			NPC_Schedule.new(td2ts(9, 00), td2ts(16, 00), [],["sullyOffice"],"zoeOfficeTS2"),
 			NPC_Schedule.new(td2ts(9, 00), td2ts(12, 30), ["sullyOffice"],[],"SalOfficeTS3"),
 			NPC_Schedule.new(td2ts(12, 45), td2ts(16, 00), [],["zoeHospital"],"zoeOfficeTS5"),
-			NPC_Schedule.new(td2ts(16, 15), td2ts(20, 00), [],[],"zoeOfficeTS5"),
+			NPC_Schedule.new(td2ts(16, 01), td2ts(20, 00), [],[],"zoeOfficeTS5"),
 		]
 	}
 	sally = {

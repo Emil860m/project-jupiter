@@ -38,3 +38,9 @@ vertical_alignment = 1
 [node name="Fade" type="ColorRect" parent="CenterContainer" unique_id=158152086]
 layout_mode = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=2054005140]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

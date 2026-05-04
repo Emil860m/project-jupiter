@@ -3,8 +3,9 @@ title: meetKas
 color: blue
 position: -389,105
 ---
+<<if set_flag("deadDad")>><<endif>>
 ???: Hey, I'm sorry now i really can't I've a lot of stuf...
-Oh, you must be Jey's kid right? You got here just in time,
+Oh, you must be Joh's kid right? You got here just in time,
 
 -> Can I see my father?
 	???: Wait, you didn't get the message? your father didn't make it. he's passed last week, I'm sorry for your loss kiddo.
@@ -62,6 +63,7 @@ Kass: So kid?
 <<jump kasHospitalTS1>>
 <<elseif true>>
 	<<detour meetKas>>
+	<<jump kasHospitalTS1>>
 <<endif>>
 ===
 title: kasHospitalTS4
@@ -82,9 +84,10 @@ Kass: So kid?
     <<detour kassHelp2>>
 -> Bye
     <<return>>
-<<jump kasHospitalTS1>>
+<<jump kasHospitalTS4>>
 <<elseif true>>
 	<<detour meetKas>>
+	<<jump kasHospitalTS4>>
 <<endif>>
 ===
 
@@ -129,7 +132,7 @@ position: 305,409
 		Kass: I will pull my strings don't worry about it
 		<<if set_flag("gotExtension")>><<endif>>
 	-> leave<<if get_flag("GotDrugs")>>
-<<else>>
+<<elseif true>>
 	Kass seems very busy and slightly distressed better not to interrupt her.
 <<endif>>
 ===
@@ -166,7 +169,7 @@ title: kassHelp
 <<if social_check(13)>>
 	Kass: sure but let's meet here at 14 
 	<<if set_flag("kassDrugs")>><<endif>>
-<<else>>
+<<elseif true>>
 	no.
 <<endif>>
 <<if set_flag("kassHelp")>><<endif>>
@@ -179,16 +182,16 @@ title: kassHelp2
 		I need you to talk to someone for me.
 		I'll be on Callisto from 16.30 to 18. let's meet there
 		<<if set_flag("kassWorkshop")>><<endif>>    
-	<<else>>
+	<<elseif true>>
 		no, i told you I can't. Go to Zoe upstairs maybe she knows.
 	<<endif>>
-<<else>>
+<<elseif true>>
 	<<if social_check(13)>>
 		Kass: sure but I'm gonna need you to do me a favour.
 		Kass: I need you to talk to someone for me.
 		Kass: Let's meet on Callisto at 16.30. 
 		<<if set_flag("kassWorkshop")>><<endif>>
-	<<else>>
+	<<elseif true>>
 		no. Go to Zoe upstairs maybe she knows.
 	<<endif>>
 <<endif>>

@@ -41,6 +41,8 @@ func check_time_and_flags():
 			currentYarnNode = NpcScheduler.get_zoe_yarn_file(Globals.current_timestep, Globals.current_location)
 	if currentYarnNode == "":
 		visible = false
+	else:
+		visible = true
 	interactable_component.object_id = currentYarnNode
 	dialogComp.start_node = currentYarnNode
 

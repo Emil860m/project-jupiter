@@ -20,4 +20,5 @@ func on_dialogue_completed():
 	var transition = transition_scene.instantiate()
 	add_child(transition)
 	await transition.transition_finished
+	Globals.interacting = false
 	SceneController.goto_scene("res://Scenes/Luner_system/2d/test2d.tscn")

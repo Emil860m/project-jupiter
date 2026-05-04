@@ -1,8 +1,8 @@
 title: Start
 position: -336,-546
 ---
-The  memories are a bit fucked up, everything it's fuzzy when you haven't drank in a while. 
-When you're mouth gets so fucking dry that your body actively fight you swallowing, and it feels like having a swamp instead of a palate. 
+The  memories are a bit fucked up. Everything it's fuzzy when you haven't drank in a while. 
+When your mouth gets so dry that your body actively fight you swallowing, and it feels like having a swamp instead of a palate. 
 Everyone was like that back then in the jovian system. The shutter really got us all desperate.
 
 I remember it like it was yesterday.
@@ -50,21 +50,21 @@ The Martian administration for a free jovian system.
 	DESCRIBE THE OFFICE HERE
 	
 	-> I will Help as much as I can
-	
-	<<jump Ch2>>
+		<<jump Ch2>>
 	-> I will do the bare minimum 
-	<<jump Ch2>>
+		<<jump Ch2>>
 ===
 title: RecruitReb
 position: 26,-338
 ---
 I've never been no ones puppet, and that was the good thing about the rebellion, they did not care if you were helping by blasting holes into earthians or by feeding the poor.
 HERE JOH WILL DESCRIBE HOW HE CONTACTS THE REBELLION AND WE GET INTRODUCED TO GRIG
+
+	-> Join the Rebellion against both mars and earth.
+		<<jump Ch2>>
+	-> Just help people. 
+		<<jump Ch2>>
 <<if set_flag("Martian")>><<endif>>
--> Join the Rebellion against both mars and earth.
-	<<jump Ch2>>
--> Just help people. 
-	<<jump Ch2>>
 ===
 title: Ch2
 position: 404,-519
@@ -124,4 +124,12 @@ KHER JUST LEFT, IS DADDY GONNA SEND MESSAGES?
 	<<if set_flag("messages")>><<endif>>
 -> DON'T SEND MESSAGES
 	<<if set_flag("noMessages")>><<endif>>
+===
+title: alphaDialogue
+---
+For the sakes of this alpha build the opening dialogue of chapter 2 is going to be replaced with this quick introduction. 
+
+You're playing as Kher the kid of the character you just played as in chapter 1, Kher wakes up after six months of cryostasis in his trip from Mars to the Joivan system.
+You grew up on Kallisto with you dad, how's now sick and hospitalized in Ganymede. For this reason you decided to come back from Mars to have a final goodby.
+As soon as they wake up, Kher hears what it seems to be the voice of their father telling him something. But they don't have time to waste, hurry up.
 ===

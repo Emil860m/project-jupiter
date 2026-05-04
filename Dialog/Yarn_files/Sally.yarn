@@ -5,7 +5,7 @@ position: -237,-112
 <<if get_flag("metSul")>>
 The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
--> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
@@ -19,10 +19,11 @@ Sully: Hey Kher, can I help you?
 	<<return>>
 <<jump SalWorkshopTS1>>
 
-<<else>>
+<<elseif true>>
 	The old man's eyes light up when he sees you 
 	Sully: hey kid you made it.
 	<<detour meetSully>>
+	<<jump SalWorkshopTS1>>
 <<endif>>
 ===
 title: SalHospitalTS2
@@ -33,7 +34,7 @@ position: -217,73
 The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
--> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
@@ -46,10 +47,11 @@ Sully: Hey Kher, can I help you?
 -> Thanks, see you later
 	<<return>>
 <<jump SalHospitalTS2>>
-<<else>>
-The old man's eyes light up when he sees you 
-Sully: hey kid you made it.
-<<jump meetSully>>
+<<elseif true>>
+	The old man's eyes light up when he sees you 
+	Sully: hey kid you made it.
+	<<detour meetSully>>
+	<<jump SalHospitalTS2>>
 <<endif>>
 ===
 title: SalOfficeTS3
@@ -59,7 +61,7 @@ position: -1089,258
 <<if get_flag("docs") and get_flag("log")>>
 	Zoe: Here's the extantion
 	<<if set_flag("gotExtension")>><<endif>>
-<<else>>
+<<elseif true>>
 	Sully is talking to Zoe
 <<endif>>
 ===
@@ -71,7 +73,7 @@ position: -212,235
 The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
--> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
@@ -85,10 +87,11 @@ Sully: Hey Kher, can I help you?
 	<<return>>
 <<jump SalHospitalTS4>>
 
-<<else>>
-The old man's eyes light up when he sees you 
-Sully: hey kid you made it.
-<<jump meetSully>>
+<<elseif true>>
+	The old man's eyes light up when he sees you 
+	Sully: hey kid you made it.
+	<<detour meetSully>>
+	<<jump SalHospitalTS4>>
 <<endif>>
 ===
 title: SalWorkshopTS6
@@ -99,7 +102,7 @@ position: -250,648
 The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
--> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
@@ -110,7 +113,7 @@ Sully: Hey Kher, can I help you?
 -> Thanks, see you later
 	<<return>>
 <<jump SalWorkshopTS6>>
-<<else>>
+<<elseif true>>
 The old man's eyes light up when he sees you 
 Sully: hey kid you made it.
 <<jump meetSully>>
@@ -124,7 +127,7 @@ position: -252,413
 The man acnowledge you without moving his eyes from his work.
 Sully: Hey Kher, can I help you? 
 
--> How can I get in the workshop?<<if get_flag_uncheck("sullyKeys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
@@ -137,7 +140,7 @@ Sully: Hey Kher, can I help you?
 -> Thanks, see you later
 	<<return>>
 <<jump SalWorkshopTS4>>
-<<else>>
+<<elseif true>>
 The old man's eyes light up when he sees you 
 Sully: hey kid you made it.
 <<jump meetSully>>
@@ -178,5 +181,5 @@ title: sulOfficeReq
 position: 91,539
 ---
 Oh thanks, my kompat must be out of power.
-<<if set_flag("zoeHospital")>><<endif>><<if set_flag("sullyOffice")>><<endif>>
+<<if set_flag("zoeHospital")>><<endif>><<if set_flag("sullyOffice")>><<endif>><<if unset_flag("zoeAsk")>><<endif>>
 ===
