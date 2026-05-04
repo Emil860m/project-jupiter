@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://iy588oef8q2c"
-path="res://.godot/imported/Sully.fbx-7d80d3b5abdaa2fa012a2b02aa012a82.scn"
+uid="uid://d21ynsfdriwec"
+path="res://.godot/imported/Idle Crouching Aiming.fbx-954586d2d8bd001db0fd476927cef93e.scn"
 
 [deps]
 
-source_file="res://Assest/characterModels/Sully/Sully.fbx"
-dest_files=["res://.godot/imported/Sully.fbx-7d80d3b5abdaa2fa012a2b02aa012a82.scn"]
+source_file="res://Assest/characterModels/Sully/Idle Crouching Aiming.fbx"
+dest_files=["res://.godot/imported/Idle Crouching Aiming.fbx-954586d2d8bd001db0fd476927cef93e.scn"]
 
 [params]
 
