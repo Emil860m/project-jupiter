@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dn76p03h1oorx"]
 
 [ext_resource type="Texture2D" uid="uid://dn00hrlge1dd5" path="res://Assest/posters/RATIONALE_TEXTURE.png" id="1_of3yr"]
-[ext_resource type="Script" uid="uid://diab7g0nxruob" path="res://Prefabs/Posters/rational_poster.gd" id="1_ue56k"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_y3slc"]
 [ext_resource type="ArrayMesh" uid="uid://vfcdydu4pu2j" path="res://Assest/posters/poster.obj" id="2_11pr0"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_11pr0"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_3cnff"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11pr0"]
 albedo_texture = ExtResource("1_of3yr")
@@ -12,7 +13,8 @@ albedo_texture = ExtResource("1_of3yr")
 size = Vector3(1.4100952, 1.8918457, 0.24121094)
 
 [node name="Node3D" type="StaticBody3D" unique_id=1018485615]
-script = ExtResource("1_ue56k")
+script = ExtResource("1_y3slc")
+object_id = "RationalPoster"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=331595598]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.0050884485, 0.0031211376, -0.0047801733)
@@ -26,6 +28,4 @@ shape = SubResource("BoxShape3D_ue56k")
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_11pr0")]
 meshs = [NodePath("../MeshInstance3D")]
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_3cnff")]
