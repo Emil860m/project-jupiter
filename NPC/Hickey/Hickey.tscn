@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_jcqdm"]
 [ext_resource type="PackedScene" uid="uid://b0ekex4iil0gu" path="res://Assest/characterModels/Hickey/Hickey.fbx" id="4_nipkc"]
 [ext_resource type="Animation" uid="uid://c6kk67vxbww24" path="res://Assest/characterModels/Animations/Crouch.anim" id="5_jcqdm"]
+[ext_resource type="Animation" uid="uid://dd04ax8l02cpl" path="res://Assest/characterModels/Animations/RelaxedIdle.anim" id="6_k0l4o"]
+[ext_resource type="Animation" uid="uid://qipwnrn8y2ku" path="res://Assest/characterModels/Animations/Working.anim" id="7_xh84q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3kkoo"]
 height = 3.0336914
@@ -13,34 +15,38 @@ height = 3.0336914
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3kkoo"]
 _data = {
-&"Crouch": ExtResource("5_jcqdm")
+&"Crouch": ExtResource("5_jcqdm"),
+&"RelaxedIdle": ExtResource("6_k0l4o"),
+&"Working": ExtResource("7_xh84q")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k0l4o"]
-animation = &"HickAnim/Crouch"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hihhu"]
+animation = &"HickAnim/RelaxedIdle"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nipkc"]
-animation = &"mixamo_com"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ids8k"]
+animation = &"HickAnim/Working"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xh84q"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w8xsj"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hihhu"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ecp5"]
 advance_mode = 2
-advance_condition = &"Boxes"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ids8k"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bcrcy"]
 advance_mode = 2
-advance_condition = &"Speaking"
+advance_condition = &"Working"
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jcqdm"]
-states/HickAnim_Crouch/node = SubResource("AnimationNodeAnimation_k0l4o")
-states/HickAnim_Crouch/position = Vector2(608.8, 99.756805)
-states/Start/position = Vector2(124.8, 99.2)
-states/mixamo_com/node = SubResource("AnimationNodeAnimation_nipkc")
-states/mixamo_com/position = Vector2(307.4, 100.776)
-transitions = ["Start", "mixamo_com", SubResource("AnimationNodeStateMachineTransition_xh84q"), "mixamo_com", "HickAnim_Crouch", SubResource("AnimationNodeStateMachineTransition_hihhu"), "HickAnim_Crouch", "mixamo_com", SubResource("AnimationNodeStateMachineTransition_ids8k")]
-graph_offset = Vector2(50, -20)
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n0frs"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gjjni"]
+states/HickAnim_RelaxedIdle/node = SubResource("AnimationNodeAnimation_hihhu")
+states/HickAnim_RelaxedIdle/position = Vector2(328.4, 168)
+states/HickAnim_Working/node = SubResource("AnimationNodeAnimation_ids8k")
+states/HickAnim_Working/position = Vector2(350.80002, 63.200005)
+states/Start/position = Vector2(100.8, 110.4)
+transitions = ["Start", "HickAnim_Working", SubResource("AnimationNodeStateMachineTransition_w8xsj"), "Start", "HickAnim_RelaxedIdle", SubResource("AnimationNodeStateMachineTransition_5ecp5"), "HickAnim_RelaxedIdle", "HickAnim_Working", SubResource("AnimationNodeStateMachineTransition_bcrcy"), "HickAnim_Working", "HickAnim_RelaxedIdle", SubResource("AnimationNodeStateMachineTransition_n0frs")]
 
 [node name="Hickey" type="StaticBody3D" unique_id=1285645448]
 script = ExtResource("1_jlog5")
@@ -62,51 +68,51 @@ mesh = SubResource("CapsuleMesh_k0l4o")
 [node name="Neutral Idle" parent="." unique_id=1720952861 instance=ExtResource("4_nipkc")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.026022017, -0.9973855, -0.025953889)
 
-[node name="Skeleton3D" parent="Neutral Idle" index="0" unique_id=554789933]
-bones/0/position = Vector3(-0.014426351, 1.0233796, 0.0108052455)
-bones/0/rotation = Quaternion(-0.027838543, -0.054930076, -0.041893736, 0.99722254)
-bones/1/rotation = Quaternion(-0.07919967, -0.01535529, 0.044977657, 0.9957253)
-bones/2/rotation = Quaternion(-0.0009925895, -0.02545704, 0.05463545, 0.9981814)
-bones/3/rotation = Quaternion(-0.0004074992, -0.023523474, 0.05550303, 0.9981814)
-bones/4/rotation = Quaternion(0.10479087, 0.0062180883, -0.02338135, 0.99420005)
-bones/5/rotation = Quaternion(0.0184421, 0.038763802, -0.088643976, 0.99513793)
-bones/7/rotation = Quaternion(-0.56566066, -0.40307343, 0.62484753, -0.35654646)
-bones/8/rotation = Quaternion(0.52935284, 0.19309612, -0.010902256, 0.8260633)
-bones/9/rotation = Quaternion(0.01078744, -0.054646313, 0.11488612, 0.99181587)
-bones/10/rotation = Quaternion(-0.0010985743, 0.29418337, 0.101775214, 0.95031404)
-bones/11/rotation = Quaternion(0.10649328, 0.058200832, 0.115487695, 0.98586744)
-bones/12/rotation = Quaternion(0.00683695, -0.037100397, -0.16787103, 0.9850869)
-bones/13/rotation = Quaternion(0.046402927, -0.044088338, 0.025568942, 0.9976218)
-bones/15/rotation = Quaternion(0.077221975, -0.018806206, 0.13116641, 0.98816925)
-bones/16/rotation = Quaternion(0.215512, 0.0016303007, -0.11045228, 0.97023314)
-bones/17/rotation = Quaternion(0.1343708, 0.020005604, 0.05145847, 0.989392)
-bones/19/rotation = Quaternion(0.62276745, -0.35469025, 0.59802157, 0.35878375)
-bones/20/rotation = Quaternion(0.34472325, -0.17624468, 0.09021964, 0.9175861)
-bones/21/rotation = Quaternion(0.0062642596, 0.0778421, -0.09735193, 0.9921815)
-bones/22/rotation = Quaternion(0.008596405, -0.18320388, -0.00074427295, 0.98303705)
-bones/23/rotation = Quaternion(0.09440526, -0.008420206, -0.17813902, 0.97943)
-bones/24/rotation = Quaternion(0.04998141, -0.019149931, 0.21655786, 0.97480154)
-bones/25/rotation = Quaternion(0.04413165, -0.0020862804, -0.059407037, 0.9972557)
-bones/27/rotation = Quaternion(0.08243544, 0.022495268, -0.14019652, 0.98642963)
-bones/28/rotation = Quaternion(0.17013502, -0.0038830526, 0.1215147, 0.9778922)
-bones/29/rotation = Quaternion(0.08695099, -0.00901882, -0.011123845, 0.9961097)
-bones/31/rotation = Quaternion(0.1435155, 0.15981522, 0.96894526, -0.1225059)
-bones/32/rotation = Quaternion(-0.14762826, 0.040957592, 0.024574757, 0.9878889)
-bones/33/rotation = Quaternion(0.47641158, -0.04720974, -0.04185869, 0.87695557)
-bones/34/rotation = Quaternion(0.22061405, -0.020470953, 0.0050671916, 0.9751332)
-bones/36/rotation = Quaternion(-0.07317167, 0.02207638, 0.99492884, -0.065385684)
-bones/37/rotation = Quaternion(-0.20614372, 0.06632574, 0.0025403418, 0.976268)
-bones/38/rotation = Quaternion(0.63309187, -0.005538851, -0.049289197, 0.772486)
-bones/39/rotation = Quaternion(0.24477053, 0.020927032, -0.0052218973, 0.96934116)
+[node name="Skeleton3D" parent="Neutral Idle" index="0" unique_id=429042913]
+bones/0/position = Vector3(-0.013386965, 1.0122977, 0.012545969)
+bones/0/rotation = Quaternion(-0.030168064, -0.06582128, -0.04240925, 0.9964733)
+bones/1/rotation = Quaternion(-0.07113593, -0.012419535, 0.04230935, 0.9964916)
+bones/2/rotation = Quaternion(0.0072247144, -0.019675996, 0.05160679, 0.9984476)
+bones/3/rotation = Quaternion(0.007617168, -0.017770886, 0.052311197, 0.99844366)
+bones/4/rotation = Quaternion(0.103765905, 0.006585568, -0.02442395, 0.99428004)
+bones/5/rotation = Quaternion(-0.0014374795, 0.033636242, -0.07595752, 0.9965426)
+bones/7/rotation = Quaternion(-0.5702806, -0.39903215, 0.62314844, -0.35670644)
+bones/8/rotation = Quaternion(0.5190411, 0.20273069, 0.00060640747, 0.83035916)
+bones/9/rotation = Quaternion(0.009113886, -0.074854046, 0.11588972, 0.99039555)
+bones/10/rotation = Quaternion(-0.008352093, 0.28565392, 0.10875337, 0.95210546)
+bones/11/rotation = Quaternion(0.10588962, 0.06124532, 0.10965536, 0.98641384)
+bones/12/rotation = Quaternion(0.009166365, -0.03743751, -0.16089088, 0.9862194)
+bones/13/rotation = Quaternion(0.04792703, -0.044152614, 0.027902475, 0.9974843)
+bones/15/rotation = Quaternion(0.07864654, -0.019125666, 0.1318294, 0.9879626)
+bones/16/rotation = Quaternion(0.21514352, 0.0016343072, -0.10982493, 0.9703861)
+bones/17/rotation = Quaternion(0.13411957, 0.020036053, 0.05225431, 0.98938364)
+bones/19/rotation = Quaternion(0.6322786, -0.34589365, 0.5934854, 0.3582688)
+bones/20/rotation = Quaternion(0.3439719, -0.17359418, 0.06682545, 0.920371)
+bones/21/rotation = Quaternion(0.005805032, 0.085146934, -0.08638181, 0.99259984)
+bones/22/rotation = Quaternion(0.014822623, -0.18300922, -0.005725976, 0.9829829)
+bones/23/rotation = Quaternion(0.09221164, -0.0071622934, -0.1648969, 0.98196477)
+bones/24/rotation = Quaternion(0.04546811, -0.01676573, 0.21429358, 0.9755665)
+bones/25/rotation = Quaternion(0.039738435, 0.005411031, -0.08411415, 0.9956488)
+bones/27/rotation = Quaternion(0.07849215, 0.012756362, -0.12363754, 0.9891361)
+bones/28/rotation = Quaternion(0.16811725, -0.0020761848, 0.09026588, 0.9816234)
+bones/29/rotation = Quaternion(0.08808807, -0.006326613, -0.0042028227, 0.9960838)
+bones/31/rotation = Quaternion(0.14689508, 0.1516195, 0.96907735, -0.12775977)
+bones/32/rotation = Quaternion(-0.1458243, 0.03248157, 0.020548841, 0.9885636)
+bones/33/rotation = Quaternion(0.47786602, -0.047773957, -0.0411816, 0.8761654)
+bones/34/rotation = Quaternion(0.22049615, -0.019209037, 0.0047815703, 0.97518694)
+bones/36/rotation = Quaternion(-0.07378086, 0.013278279, 0.995184, -0.06315824)
+bones/37/rotation = Quaternion(-0.19867858, 0.055481035, 0.0068579777, 0.978469)
+bones/38/rotation = Quaternion(0.6312926, -0.0061383275, -0.051051117, 0.7738384)
+bones/39/rotation = Quaternion(0.24413435, 0.019620217, -0.004893154, 0.9695306)
 
-[node name="AnimationPlayer" parent="Neutral Idle" index="1" unique_id=1712522006]
+[node name="AnimationPlayer" parent="Neutral Idle" index="1" unique_id=1181491474]
 libraries/HickAnim = SubResource("AnimationLibrary_3kkoo")
 
 [node name="AnimationTree" type="AnimationTree" parent="Neutral Idle" unique_id=1971070130]
-tree_root = SubResource("AnimationNodeStateMachine_jcqdm")
+tree_root = SubResource("AnimationNodeStateMachine_gjjni")
 anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/Boxes = false
-parameters/conditions/Speaking = true
+parameters/conditions/Working = false
+parameters/conditions/idle = true
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
