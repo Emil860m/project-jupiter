@@ -7,11 +7,14 @@ var has_upgraded_fuel_cap = false
 @export var stat_min_allowed_value = 8
 @export var max_allowed_stat = 20
 
-var fuel = 50
-var fuel_cap = 50
+var fuel: int = 50
+var fuel_cap: int = 50
 
 var damage = 0
-const severity_const = 3
+const severity_const = 2
+
+var noise_max = 15
+var noise_min = 5
 
 enum ShipStatTypes {
 	speed,
@@ -29,7 +32,7 @@ var Stats = {
 	ShipStatTypes.radiation_protection: 10,
 }
 
-var _unused_stat_allocation_points: int = 0
+var _unused_stat_allocation_points: int = 2
 
 func get_unused_stat_allocation_points() -> int:
 	return _unused_stat_allocation_points
@@ -52,14 +55,20 @@ func de_allocate_stat(stat_type: ShipStatTypes, amount = 1):
 
 
 func damage_ship(damage_number: int):
+	if damage_number > 0:
+		SoundController.play_take_damage(damage_number)
+	
 	damage += damage_number
+	if damage > 10:
+		SceneController.should_tow_truck = true
 
 func spend_fuel(fuel_spent: int):  # Note: also used by events to reduce fuel
-	var total_fuel_spent = fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
+	var total_fuel_spent = round(fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption]))
 	if total_fuel_spent > fuel:
-		SceneController.get_tow_trucked()
+		fuel = 0
+		SceneController.should_tow_truck = true
 		return
-	fuel -= fuel_spent / (0.1 * Stats[ShipStatTypes.fuel_consumption])
+	fuel -= total_fuel_spent
 
 func refuel():
 	fuel = fuel_cap
@@ -67,10 +76,16 @@ func refuel():
 func repair():
 	damage = 0
 
-func upgrade_fuel_cap():
-	if !has_upgraded_fuel_cap:
-		fuel_cap = fuel_cap * 2
-		refuel()
+func upgrade_fuel_cap(added_fuel: int):
+	fuel_cap += added_fuel
+	refuel()
+
+func upgrade_poj(added_poj: int):
+	_unused_stat_allocation_points += added_poj
+
+func reduce_noise():
+	noise_max = 5
+	noise_min = 0
 
 ## Event Stuff
 var rng = RandomNumberGenerator.new()

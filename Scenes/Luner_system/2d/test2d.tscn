@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://br0sx80oa7x8w"]
 
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="1_1l4kd"]
+[ext_resource type="Script" uid="uid://b74my32uos2ul" path="res://Scenes/Luner_system/2d/test_2d.gd" id="1_gr3x1"]
 [ext_resource type="PackedScene" uid="uid://blydwht5d8cue" path="res://Scenes/Luner_system/2d/planet_view_2d.tscn" id="1_ut2ef"]
 [ext_resource type="Texture2D" uid="uid://d0ot12ogn6tw3" path="res://Textures/MapUI/Ellipse_1.png" id="3_e83a7"]
 [ext_resource type="Texture2D" uid="uid://chaafuvsoal74" path="res://Textures/MapUI/Ellipse_2.png" id="4_3yif1"]
@@ -9,8 +10,66 @@
 [ext_resource type="Texture2D" uid="uid://iqklgrudafhv" path="res://Textures/MapUI/UI_consoleOverlay.png" id="7_782mr"]
 [ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="8_vx3gg"]
 [ext_resource type="PackedScene" uid="uid://1whnvub5l716" path="res://Scenes/Luner_system/2d/stat_allocator.tscn" id="9_wo8f8"]
+[ext_resource type="Texture2D" uid="uid://cl3y2kip6k58s" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_1.png" id="11_nd0dn"]
+[ext_resource type="Texture2D" uid="uid://dnnfmn7s3e2p5" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_2.png" id="12_5py0a"]
+[ext_resource type="Texture2D" uid="uid://cbnp62wnbkl4x" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_3.png" id="13_77oub"]
+[ext_resource type="Texture2D" uid="uid://bfs6ad7nct3mw" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_4.png" id="14_qh0uu"]
+[ext_resource type="Texture2D" uid="uid://ppbql2fiao78" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_5.png" id="15_wnn2c"]
+[ext_resource type="Texture2D" uid="uid://dpf6l203glckq" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_6.png" id="16_8srw8"]
+[ext_resource type="Texture2D" uid="uid://htqsgtvu3ntq" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_7.png" id="17_78qa4"]
+[ext_resource type="Texture2D" uid="uid://b8ollhgys5xji" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_8.png" id="18_pg3od"]
+[ext_resource type="Texture2D" uid="uid://cq8rnx0hrxr62" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_9.png" id="19_bik1c"]
+[ext_resource type="Texture2D" uid="uid://do6goleahhg14" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_10.png" id="20_24cg5"]
+[ext_resource type="Texture2D" uid="uid://bcgpaw7txtcl5" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_11.png" id="21_octm2"]
+[ext_resource type="Texture2D" uid="uid://cdn0lsvk00bci" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_12.png" id="22_wh2fw"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="23_5py0a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gr3x1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_nd0dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5py0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_77oub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qh0uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wnn2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8srw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_78qa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_pg3od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bik1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_24cg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_octm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_wh2fw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
 
 [node name="Test2d" type="Node2D" unique_id=2028741739]
+script = ExtResource("1_gr3x1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127771672]
 modulate = Color(0, 0, 0, 1)
@@ -43,6 +102,7 @@ position = Vector2(278.4105, 58)
 camera_2d = NodePath("../Camera2D")
 
 [node name="UiConsoleOverlay" type="Sprite2D" parent="." unique_id=1773543342]
+z_index = 1
 position = Vector2(65.00001, -1.0000019)
 scale = Vector2(1.3534435, 1.3534435)
 texture = ExtResource("7_782mr")
@@ -83,5 +143,16 @@ text = "Allocate your stats for the journey:"
 [node name="StatAllocator" parent="." unique_id=1155303945 instance=ExtResource("9_wo8f8")]
 position = Vector2(-258, 16)
 scale = Vector2(0.65, 0.65)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1239086387]
+modulate = Color(1, 1, 1, 0.043137256)
+self_modulate = Color(0.795152, 1, 0.6600027, 1)
+position = Vector2(-2.7187715, -4)
+scale = Vector2(10.133152, 4.8183236)
+sprite_frames = SubResource("SpriteFrames_gr3x1")
+frame_progress = 0.79267645
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("23_5py0a")]
+start_node = "alphaDialogue"
 
 [connection signal="changeStat" from="StatAllocator" to="PlanetView2d" method="_on_stat_allocator_change_stat"]

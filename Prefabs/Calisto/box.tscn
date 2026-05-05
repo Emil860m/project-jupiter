@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c3dldt5thtlrr"]
+
+[ext_resource type="Texture2D" uid="uid://rxbo56l25jg7" path="res://Assest/boxCarrier/boxCarrier.png" id="1_c6acm"]
+[ext_resource type="ArrayMesh" uid="uid://cow1tfg4rfnjo" path="res://Assest/boxCarrier/box.obj" id="2_b8txa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlke2"]
+albedo_texture = ExtResource("1_c6acm")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ibx24"]
+size = Vector3(2.1965332, 1.3609009, 1.2431641)
+
+[node name="Node3D" type="Area3D" unique_id=1953588564]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="Box" type="MeshInstance3D" parent="." unique_id=1030536454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048509955, 0, -0.039824963)
+material_override = SubResource("StandardMaterial3D_nlke2")
+mesh = ExtResource("2_b8txa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1746747616]
+transform = Transform3D(0.9999967, 0.00086685165, 0.0024033685, -0.0008777573, 0.9999893, 0.00454926, -0.002399407, -0.0045513506, 0.99998677, 0.11241108, 0.5135911, -0.03676206)
+shape = SubResource("BoxShape3D_ibx24")

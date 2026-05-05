@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cij2hpejmtgn6"]
+
+[ext_resource type="Texture2D" uid="uid://ny6w0wcytwwe" path="res://Assest/signs/signs.png" id="1_voyk5"]
+[ext_resource type="ArrayMesh" uid="uid://dq23mit3sdts5" path="res://Assest/signs/arrowSign.obj" id="2_3kyrs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ri6ox"]
+albedo_texture = ExtResource("1_voyk5")
+
+[node name="Node3D" type="Node3D" unique_id=1459250551]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="ArrowSign" type="MeshInstance3D" parent="." unique_id=642367985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0342965, -2.8114133, 7.79685)
+material_override = SubResource("StandardMaterial3D_ri6ox")
+mesh = ExtResource("2_3kyrs")

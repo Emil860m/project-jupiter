@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ctmwb44g78a8k" path="res://Textures/MapUI/000_MapUI_jupiter.png" id="2_iwfgl"]
 [ext_resource type="PackedScene" uid="uid://bte2u56r132tv" path="res://Scenes/Luner_system/2d/moon_2d.tscn" id="2_s3bh8"]
 [ext_resource type="Texture2D" uid="uid://dtg26o84l5jle" path="res://Textures/MapUI/001_MapUI_ganimide.png" id="3_a4yyy"]
-[ext_resource type="PackedScene" uid="uid://cr04mmvo0moc7" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
+[ext_resource type="PackedScene" path="res://Components/raycast_2d_component.tscn" id="3_sgy7y"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="6_hpwom"]
 [ext_resource type="Texture2D" uid="uid://bkdf436lcp53" path="res://Textures/MapUI/002_MapUI_callisto.png" id="6_l0otk"]
 [ext_resource type="Texture2D" uid="uid://djljvypx8740c" path="res://Textures/MapUI/007_MapUI_thePonds.png" id="7_ydf4a"]
@@ -51,6 +51,9 @@ starting_angle = 2.0
 sprite = ExtResource("3_a4yyy")
 displayName = "Ganymede"
 travelScenePath = "res://Scenes/Hospital/Hospital.tscn"
+loading_screen = true
+main_poster = "res://Textures/Transitions/ganymedePoster.png"
+other_posters = Array[String](["res://Textures/Transitions/ponsPoster.png", "res://Textures/Transitions/rationalePoster.png"])
 
 [node name="Callisto" parent="MoonParent" unique_id=1558893402 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
@@ -59,6 +62,9 @@ radius = 364.0
 sprite = ExtResource("6_l0otk")
 displayName = "Kallisto"
 travelScenePath = "res://Scenes/Workshop/workshop.tscn"
+loading_screen = true
+main_poster = "res://Textures/Transitions/kallistoPoster.png"
+other_posters = Array[String](["res://Textures/Transitions/ponsPoster.png", "res://Textures/Transitions/rationalePoster.png"])
 
 [node name="ThePonds" parent="MoonParent" unique_id=1184550554 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
@@ -146,7 +152,7 @@ offset_right = -1409.0
 offset_bottom = 200.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
-text = "Estimated fluel [deltaV] cost:"
+text = "Estimated fuel [deltaV] cost:"
 
 [node name="Label5" type="Label" parent="UiElements" unique_id=1606294631]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
@@ -166,7 +172,7 @@ offset_right = -1240.0
 offset_bottom = 316.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
-text = "Current ship technical status [n / 10]:"
+text = "Current ship systems status [n / 10]:"
 
 [node name="Label7" type="Label" parent="UiElements" unique_id=445109824]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
@@ -260,7 +266,7 @@ text = "N/A"
 
 [node name="shipsDeltaV" type="Label" parent="UiElements" unique_id=625410002]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1601.0
+offset_left = -1598.0
 offset_top = 261.0
 offset_right = -1430.0
 offset_bottom = 288.0
@@ -270,7 +276,7 @@ text = "N/A"
 
 [node name="shipsMaxDeltaV" type="Label" parent="UiElements" unique_id=1147503867]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1561.0
+offset_left = -1572.0
 offset_top = 261.0
 offset_right = -1390.0
 offset_bottom = 288.0
@@ -308,6 +314,16 @@ text = "
 icon = ExtResource("15_u6i4c")
 icon_alignment = 1
 
+[node name="Button3" type="Button" parent="UiElements" unique_id=1006985811]
+offset_left = -1321.0
+offset_top = 166.0
+offset_right = -1130.0
+offset_bottom = 217.0
+text = "This shoud be
+ \"Call Tow Truck\""
+icon = ExtResource("15_u6i4c")
+icon_alignment = 1
+
 [node name="Button2" type="Button" parent="UiElements" unique_id=926606263]
 offset_left = -1321.0
 offset_top = 286.0
@@ -318,5 +334,67 @@ text = "
 icon = ExtResource("16_ovvku")
 icon_alignment = 1
 
+[node name="statPointPopup" type="Sprite2D" parent="UiElements" unique_id=1774735781]
+visible = false
+z_index = 1
+position = Vector2(-955.00006, -58.000004)
+scale = Vector2(0.6102941, 0.81368816)
+texture = ExtResource("11_f6fv6")
+
+[node name="Button" type="Button" parent="UiElements/statPointPopup" unique_id=1222347272]
+offset_left = -91.75894
+offset_top = 49.158886
+offset_right = 99.24106
+offset_bottom = 100.15889
+icon = ExtResource("15_u6i4c")
+
+[node name="Label" type="Label" parent="UiElements/statPointPopup" unique_id=139011095]
+offset_left = -206.45775
+offset_top = -88.48599
+offset_right = 214.65071
+offset_bottom = -33.182228
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 31
+text = "You have unallocated stat points"
+
+[node name="towTruckPopup" type="Sprite2D" parent="UiElements" unique_id=959061655]
+visible = false
+z_index = 1
+position = Vector2(-955.00006, -58.000004)
+scale = Vector2(0.6102941, 0.81368816)
+texture = ExtResource("11_f6fv6")
+
+[node name="Confirm" type="Button" parent="UiElements/towTruckPopup" unique_id=306871382]
+offset_left = 36.759186
+offset_top = 49.158886
+offset_right = 227.75919
+offset_bottom = 100.15889
+text = "Confirm"
+icon = ExtResource("15_u6i4c")
+icon_alignment = 1
+
+[node name="Cancel" type="Button" parent="UiElements/towTruckPopup" unique_id=226310095]
+offset_left = -206.45776
+offset_top = 49.158886
+offset_right = -15.457764
+offset_bottom = 100.15889
+text = "Cancel"
+icon = ExtResource("15_u6i4c")
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="UiElements/towTruckPopup" unique_id=988394570]
+offset_left = -206.45775
+offset_top = -88.48599
+offset_right = 214.65071
+offset_bottom = -33.182228
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 31
+text = "You have unallocated stat points"
+horizontal_alignment = 1
+
 [connection signal="button_up" from="UiElements/Button" to="." method="_on_travel_button_up"]
+[connection signal="button_up" from="UiElements/Button3" to="." method="_on_tow_truck_button_up"]
 [connection signal="button_up" from="UiElements/Button2" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="UiElements/statPointPopup/Button" to="." method="_on_statpointPopup_button_up"]
+[connection signal="button_up" from="UiElements/towTruckPopup/Confirm" to="." method="_on_confirm_button_up"]
+[connection signal="button_up" from="UiElements/towTruckPopup/Cancel" to="." method="_on_cancel_button_up"]

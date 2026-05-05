@@ -2,10 +2,43 @@
 
 [ext_resource type="Script" uid="uid://bmttv4o773xer" path="res://Scenes/Prologue/prologue.gd" id="1_4gcb0"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="1_juf7l"]
+[ext_resource type="Texture2D" uid="uid://q0ahgvial1w0" path="res://Textures/CH1/frame1.png" id="2_5pidd"]
 [ext_resource type="PackedScene" uid="uid://bu86cs42aawyj" path="res://SceneTransitions/chapter_transition.tscn" id="3_fa6pq"]
+[ext_resource type="Texture2D" uid="uid://b3foudof2hhrb" path="res://Textures/CH1/frame2.png" id="3_tqsqj"]
+[ext_resource type="Texture2D" uid="uid://cjx2vi1l7t1wr" path="res://Textures/CH1/frame3.png" id="4_3c6hh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sk6rr"]
+animations = [{
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("2_5pidd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tqsqj")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_3c6hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tqsqj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Prologue" type="Node2D" unique_id=816187938]
 script = ExtResource("1_4gcb0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1143941589]
+layer = -5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=2101225603]
+z_index = -4
+position = Vector2(972, 544.99994)
+scale = Vector2(2.1391306, 1.6612183)
+sprite_frames = SubResource("SpriteFrames_sk6rr")
+frame_progress = 0.054464173
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("1_juf7l")]
 

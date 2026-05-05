@@ -1,7 +1,7 @@
 extends Node
 
-@export var long_journey_cutoff: int = 250
-@export var short_journey_cutoff: int = 100
+@export var long_journey_cutoff: int = 300
+@export var short_journey_cutoff: int = 200
 
 var events: Array[Event] = []
 
@@ -9,8 +9,12 @@ func _ready() -> void:
 	_load_events()
 
 
-func fetch_event(start_time, end_time, start_pos, end_pos) -> String:
+func fetch_event(start_time: int, end_time: int, start_pos: moon_2d, end_pos: moon_2d) -> String:
 	# return "event_longExposure"
+	
+	if not Flags.get_flag("TutorialEventDone"):
+		Flags.set_flag("TutorialEventDone")
+		return "event_tutorial"
 	
 	for e in events:
 		if e.is_applicable_to_journey(start_time, end_time, start_pos, end_pos):
@@ -43,11 +47,14 @@ func _load_events():
 	var default_callable = func(_start_time, _end_time, _start_pos, _end_pos):
 		return true
 	
-	var long_route_callable = func(_start_time, _end_time, start_pos, end_pos):
-		return (end_pos - start_pos).length() >= long_journey_cutoff
+	var long_route_callable = func(_start_time, _end_time, start_pos: moon_2d, end_pos: moon_2d):
+		return calculate_distance(start_pos, end_pos) >= long_journey_cutoff
 	
 	var short_route_callable = func(_start_time, _end_time, start_pos, end_pos):
-		return (end_pos - start_pos).length() <= short_journey_cutoff
+		return calculate_distance(start_pos, end_pos) <= short_journey_cutoff
+	
+	var rationale_callable = func(_start_time, _end_time, _start_pos, end_pos: moon_2d):
+		return end_pos.displayName == "The Rationale"
 	
 	# event_spaceDebris
 	var event_to_add = Event.new("event_spaceDebris", default_callable)
@@ -69,7 +76,15 @@ func _load_events():
 	event_to_add = Event.new("event_longExposure", long_route_callable)
 	events.append(event_to_add)
 	
+	# event_landingOnTheRationale
+	event_to_add = Event.new("event_landingOnTheRationale", rationale_callable)
+	events.append(event_to_add)
+	
+	
 	events.shuffle()
+
+func calculate_distance(start_pos: moon_2d, end_pos: moon_2d) -> float:
+	return (end_pos.estimated_loc.global_position - start_pos.global_position).length()
 
 
 ### EVENT CHECKS ###

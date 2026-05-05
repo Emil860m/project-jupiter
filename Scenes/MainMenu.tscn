@@ -1,47 +1,141 @@
 [gd_scene format=3 uid="uid://bbj4anq6eaket"]
 
 [ext_resource type="Script" uid="uid://bjrehgi7ivsvw" path="res://Scenes/main_menu.gd" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://bedcc8gve20s8" path="res://Textures/MainMenuUI/poster_NoText.png" id="2_8saeu"]
+[ext_resource type="Texture2D" uid="uid://cy4ohdq3pnna0" path="res://Textures/MainMenuUI/bcgWall.png" id="2_ghw46"]
+[ext_resource type="FontFile" uid="uid://dku1eijo01638" path="res://Textures/MainMenuUI/VT323-Regular.ttf" id="3_ghw46"]
 
 [node name="MainMenu" type="Node2D" unique_id=153304406]
 script = ExtResource("1_tt5f1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1778695199]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=671625137]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="BCG" type="TextureRect" parent="CanvasLayer" unique_id=729802741]
+offset_left = -16.0
+offset_top = -144.0
+offset_right = 1964.3334
+offset_bottom = 1315.0
+texture = ExtResource("2_ghw46")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=158680454]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1295324394]
+offset_left = 236.0
+offset_top = 30.0
+offset_right = 1669.5822
+offset_bottom = 1047.0
+texture = ExtResource("2_8saeu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer" unique_id=1151627275]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="Start" type="Button" parent="CanvasLayer" unique_id=321424547]
+offset_left = 329.0
+offset_top = 863.47736
+offset_right = 648.0
+offset_bottom = 924.47736
+rotation = -0.21662469
+theme_override_colors/font_color = Color(0.88, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.91833335, 0.95, 0, 1)
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "COME TO JUPITER"
+flat = true
+autowrap_trim_flags = 0
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer" unique_id=1236984624]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="Option" type="Button" parent="CanvasLayer" unique_id=2097404355]
+offset_left = 660.0
+offset_top = 854.0002
+offset_right = 805.31635
+offset_bottom = 915.0002
+rotation = -0.21662469
+theme_override_colors/font_color = Color(0.88, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.91764706, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "OPTIONS"
+flat = true
+autowrap_trim_flags = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer/VBoxContainer2" unique_id=770729082]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="Exit" type="Button" parent="CanvasLayer" unique_id=652377010]
+offset_left = 1100.9998
+offset_top = 810.9999
+offset_right = 1191.9998
+offset_bottom = 871.9999
+rotation = -0.21662469
+theme_override_colors/font_color = Color(0.88, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.91764706, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "EXIT"
+flat = true
+autowrap_trim_flags = 0
 
-[node name="Button" type="Button" parent="CanvasLayer/Control/HBoxContainer/VBoxContainer2" unique_id=321424547]
-layout_mode = 2
-text = "Start Game"
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1102232932]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.021000002
+offset_left = 633.99994
+offset_top = 805.00006
+offset_right = 1480.5599
+offset_bottom = 835.32007
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "and pursue your dream of frontier exploration!"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer/VBoxContainer2" unique_id=392766657]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="Label5" type="Label" parent="CanvasLayer" unique_id=800965299]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.021000002
+offset_left = 813.00006
+offset_top = 828.99994
+offset_right = 1659.5599
+offset_bottom = 859.31995
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "for relocation TODAY"
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control/HBoxContainer" unique_id=1687417196]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=2143412536]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.021000002
+offset_left = 569.00006
+offset_top = 940.0
+offset_right = 999.56
+offset_bottom = 970.32
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "Juvian system is the bridge to"
 
-[connection signal="button_up" from="CanvasLayer/Control/HBoxContainer/VBoxContainer2/Button" to="." method="_on_startgame_button_up"]
+[node name="Label4" type="Label" parent="CanvasLayer" unique_id=1042902237]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.021000002
+offset_left = 461.0
+offset_top = 904.00006
+offset_right = 563.4046
+offset_bottom = 934.32007
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "Review your"
+
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=562439158]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.021000002
+offset_left = 1203.0
+offset_top = 796.9999
+offset_right = 1597.5599
+offset_bottom = 827.3199
+rotation = -0.21662469
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 45
+text = "and explore further!"
+
+[connection signal="button_up" from="CanvasLayer/Start" to="." method="_on_startgame_button_up"]
+[connection signal="button_up" from="CanvasLayer/Option" to="." method="_on_option_button_up"]
+[connection signal="button_up" from="CanvasLayer/Exit" to="." method="_on_exit_button_up"]

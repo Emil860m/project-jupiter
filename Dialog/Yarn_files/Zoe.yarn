@@ -2,17 +2,90 @@ title: zoeOfficeTS2
 color: yellow
 position: -463,-268
 ---
-New node
+<<if get_flag("metZoe")>>
+-> how can I get an extation for the SDA? <<if get_flag_uncheck("SDA")>>
+	<<detour zoeSDA>>
+-> about the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+	<<detour zoeExtension>>
+-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
+	<<detour zoeKeys>>
+-> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
+	<<detour zoeHelp>>
+-> Thanks, see you later
+	<<return>>
+<<jump zoeOfficeTS2>>
+<<elseif true>>
+	<<detour meetZoe>>
+	<<jump zoeOfficeTS2>>
+<<endif>>
 ===
 title: zoeHospitalTS4
 color: blue
-position: -695,16
+position: -464,-2
 ---
-New node
+<<if get_flag("docs") and get_flag("log")>>
+	Here's the extantion
+	<<if set_flag("gotExtension")>><<endif>>
+<<elseif true>>
+	Zoe is sharing a private moment with the corpse.
+<<endif>>
 ===
 title: zoeOfficeTS5
 color: yellow
 position: -460,293
 ---
-New node
+<<if get_flag("metZoe")>>
+-> how can I get an extation for the SDA? <<if get_flag_uncheck("SDA")>>
+	<<detour zoeSDA>>
+-> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+	<<detour zoeExtension>>
+-> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
+	<<detour zoeKeys>>
+-> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
+	<<detour zoeHelp>>
+-> Thanks, see you later
+	<<return>>
+<<jump zoeOfficeTS5>>
+<<elseif true>>
+	<<detour meetZoe>>
+	<<jump zoeOfficeTS5>>
+<<endif>>
+===
+title: meetZoe
+position: -947,-14
+---
+Zoe: Hi I'm zoe 
+<<if set_flag("metZoe")>><<endif>>
+-> Hi, I'm Kher
+	<<return>>
+===
+//DIALOGUE
+title:zoeSDA
+---
+Yes, you need your a log report of your arrival and your father's docs.
+<<if set_flag("SDA")>><<endif>>
+===
+title:zoeKeys
+---
+yes come pick them up tomorrow, for now keep using sully's 
+<<if set_flag("zoeKeys")>><<endif>>
+===
+title:zoeHelp
+---
+tell sully to come here 
+<<if set_flag("zoeAsk")>><<endif>>
+<<if set_flag("zoeHelp")>><<endif>>
+===
+title:zoeExtension
+---
+<<if get_flag("docs") and get_flag("log")>>
+	here's the extantion
+	<<if set_flag("gotExtension")>><<endif>>
+<<elseif get_flag_uncheck("docs") and get_flag_uncheck("log")>>
+	you're missing both
+<<elseif get_flag_uncheck("docs")>>
+	You're missing the docs
+<<elseif get_flag_uncheck("log")>>
+	you're missing the log
+<<endif>>
 ===

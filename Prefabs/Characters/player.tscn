@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ceis1xx8wo0sy" path="res://Prefabs/Characters/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cvynuj7t0bny5" path="res://Textures/MapUI/UI_clock_final.png" id="3_25cl6"]
 [ext_resource type="Script" uid="uid://7jddkljk15i1" path="res://Components/movement.gd" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://drec0s3wtys4v" path="res://Textures/MapUI/vinette.png" id="3_jmcfr"]
 [ext_resource type="PackedScene" uid="uid://b56p36sssq7xt" path="res://Components/raycast_component.tscn" id="4_sweqy"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="5_2hs0m"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="5_ahvcc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
 size = Vector3(0.8, 2, 0.8)
@@ -16,14 +19,32 @@ albedo_texture = ExtResource("1_4flbx")
 material = SubResource("StandardMaterial3D_i3pqv")
 size = Vector3(0.8, 2, 0.8)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ahvcc"]
+radius = 1.4153984
+
 [node name="Player" type="CharacterBody3D" unique_id=134844603 groups=["Player"]]
 script = ExtResource("1_onrkg")
+interact_dist = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=651148158]
 shape = SubResource("BoxShape3D_onrkg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=512896130]
 mesh = SubResource("BoxMesh_hqtel")
+
+[node name="CameraMarker" type="Marker3D" parent="." unique_id=1125414468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 33, -16)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
+
+[node name="MovementComponent" type="Node" parent="." unique_id=1328033895]
+script = ExtResource("3_i3pqv")
+
+[node name="RaycastComponent" parent="." unique_id=693145787 instance=ExtResource("4_sweqy")]
+
+[node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("5_2hs0m")]
+
+[node name="MovementTimer" type="Timer" parent="." unique_id=489953609]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=387184353]
 transform = Transform3D(-0.34202015, -0.53898555, 0.76975113, 0, 0.81915206, 0.57357645, -0.9396927, 0.1961747, -0.2801665, 45, 33, -16)
@@ -32,15 +53,40 @@ projection = 1
 size = 17.0
 near = 0.001
 
-[node name="CameraMarker" type="Marker3D" parent="." unique_id=1125414468]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 33, -16)
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera3D" unique_id=1194187654]
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=596717680]
-debug_enabled = true
+[node name="TextureRect2" type="TextureRect" parent="Camera3D/CanvasLayer" unique_id=1274954701]
+modulate = Color(1, 1, 1, 0.8235294)
+offset_right = 1921.0
+offset_bottom = 1082.0
+texture = ExtResource("3_jmcfr")
 
-[node name="MovementComponent" type="Node" parent="." unique_id=1328033895]
-script = ExtResource("3_i3pqv")
+[node name="TextureRect" type="TextureRect" parent="Camera3D/CanvasLayer" unique_id=1324977744]
+offset_left = 1625.0
+offset_top = 967.0
+offset_right = 1921.0
+offset_bottom = 1081.0
+texture = ExtResource("3_25cl6")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="RaycastComponent" parent="." unique_id=693145787 instance=ExtResource("4_sweqy")]
+[node name="Label" type="Label" parent="Camera3D/CanvasLayer" unique_id=1067069041]
+modulate = Color(0.44692475, 0.80494845, 0.61928964, 1)
+offset_left = 1701.0
+offset_top = 990.0
+offset_right = 1811.0
+offset_bottom = 1060.0
+theme_override_fonts/font = ExtResource("5_ahvcc")
+theme_override_font_sizes/font_size = 64
+text = "20:00"
 
-[node name="InputComponent" parent="." unique_id=840703200 instance=ExtResource("5_2hs0m")]
+[node name="Area3D" type="Area3D" parent="." unique_id=1628919757]
+collision_mask = 3
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=319550115]
+shape = SubResource("SphereShape3D_ahvcc")
+
+[connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -8,32 +8,48 @@ test event
 -> option B
 	you chose option B
 ===
+title: event_tutorial
+color: purple
+position: 0, 0
+---
+The onset of nostalgia is cut short as you notice the fuel systems got damaged. It seems the jovian system hasn't changed.
+-> Run appropriate protocols
+	<<if true>>
+	<<if resolve_outcome(10,10,100)>><<endif>>
+	The ship casually tries to fix itself to no avail. Jupiter is not kind to those who stand alone.
+	<<endif>>
+-> Call the tow truck
+	<<if true>>
+	<<if resolve_outcome(0,10,100)>><<endif>>
+	You soak in a pool of ambivalence and nostalgia while waiting for the tow truck. The university starts to feel like a hazy dream in your jovian reality.
+	<<endif>>
+===
 title: event_spaceDebris
 color: purple
 position: 0, 0
 ---
-You encounter space debris
+You encounter space debris.
 -> Slow down
 	<<if simple_d_check(80)>>
-	You spend some extra time and manage to avoid the worst of it
 	<<if resolve_outcome(5,5,0)>><<endif>>
-	<<else>>
-	In spite of the extra time taken the debris still cause minor damage to the ship
+	You spend some extra time and manage to avoid the worst of it
+	<<elseif true>>
 	<<if resolve_outcome(5,5,1)>><<endif>>
+	In spite of the extra time taken the debris still cause minor damage to the ship
 	<<endif>>
 -> Try to dodge
 	<<if stakes_m_check()>>
 	You make it through the debris unscathed
-	<<else>>
-	You managed to dodge directly into a piece of debris. Your ship takes heavy damage
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
+	You managed to dodge directly into a piece of debris. Your ship takes heavy damage.
 	<<endif>>
 -> Keep going
 	<<if stakes_d_check()>>
 	You make it through the debris unscathed
-	<<else>>
-	This was too optimistic. Your ship takes heavy damage
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
+	This was too optimistic. Your ship takes heavy damage
 	<<endif>>
 ===
 title: event_oldProbe
@@ -44,17 +60,17 @@ You notice a wierdly shaped object on your path. As you approach it you notice i
 -> Avoid the probe
 	<<if simple_m_check(55)>>
 	Better not to disturb the ghosts of old and their wicked technology.
-	<<else>>
-	You poor stearing makes you smash directly into the probe.. It shatters into tousands littile pieces. A piece of history is now gone... You ask yourself if you maybe did it on purpose...
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
+	You poor stearing makes you smash directly into the probe.. It shatters into tousands littile pieces. A piece of history is now gone... You ask yourself if you maybe did it on purpose...
 	<<endif>>
 -> Investigate
 	<<if simple_m_check(75)>>
-	As you carefully maneuver close to the probe, the radio signal grows stronger. As binary beeping fills the cabin, you feel some kind of awe for a by-gone era this probe must have come from. Your Kompat decodes the binary data and it seems that the probe is transmitting telemetry. It's useless to you, but it doesn't feel like it. It's like you received a blessing from the past.
 	<<if resolve_outcome(2,0,0)>><<endif>>
-	<<else>>
-	You smash into the probe. It shatters into tousands littile pieces. Maybe you can invastigate a cloud of crumbly, littile metal pieces... better go.
+	As you carefully maneuver close to the probe, the radio signal grows stronger. As binary beeping fills the cabin, you feel some kind of awe for a by-gone era this probe must have come from. Your Kompat decodes the binary data and it seems that the probe is transmitting telemetry. It's useless to you, but it doesn't feel like it. It's like you received a blessing from the past.
+	<<elseif true>>
 	<<if resolve_outcome(0,0,1)>><<endif>>
+	You smash into the probe. It shatters into tousands little pieces. Maybe you can invastigate a cloud of crumbly, littile metal pieces... better go.
 	<<endif>>
 ===
 title: event_carelessness
@@ -65,25 +81,25 @@ Short routes like these have a tendency to make you careless
 -> Trust your instincts
 	<<if simple_m_check(20)>>
 	No thought given yet you land perfectly. You must truly be a natural pilot or in lady luck's good graces.
-	<<else>>
-	You crash. Maybe this will serve as motivation to focus in the future.
+	<<elseif true>>
 	<<if resolve_outcome(0,0,5)>><<endif>>
+	You crash. Maybe this will serve as motivation to focus in the future.
 	<<endif>>
 -> Focus
 	<<if simple_m_check(50)>>
-	You land the ship. Lost a bit of time to make sure you do everything up to code but it payed of.
 	<<if resolve_outcome(1,0,0)>><<endif>>
-	<<else>>
-	You crash. There is some minor damage but you will be fine. Better focus more next time?
+	You land the ship. Lost a bit of time to make sure you do everything up to code but it payed of.
+	<<elseif true>>
 	<<if resolve_outcome(1,0,1)>><<endif>>
+	You crash. There is some minor damage but you will be fine. Better focus more next time?
 	<<endif>>
 -> Extra focus
 	<<if simple_m_check(70)>>
-	You land the ship. It seems that you only lost time checking every thing trice before the procedure, but you landed safely.
 	<<if resolve_outcome(2,0,0)>><<endif>>
-	<<else>>
-	You crash. It seems that borderline paranoia of checking everything thrice may have caused you to perform too slowly. Better chill next time?
+	You land the ship. It seems that you only lost time checking every thing trice before the procedure, but you landed safely.
+	<<elseif true>>
 	<<if resolve_outcome(2,0,2)>><<endif>>
+	You crash. It seems that borderline paranoia of checking everything thrice may have caused you to perform too slowly. Better chill next time?
 	<<endif>>
 ===
 title: event_marvelAtJupiter
@@ -101,17 +117,38 @@ position: 0, 0
 The long route leads to sustained exposure to radiation. This could damage the electronics of the ship.
 -> Increase speed and slow down strategically.
 	<<if detriment_s_check()>>
-	You manage to curb the exposure, but still get affected.
 	<<if resolve_outcome(0,5,1)>><<endif>>
-	<<else>>
-	You increase the speed beyond what the vessel could support damaging it and making you slower in process.
+	You manage to curb the exposure, but still get affected.
+	<<elseif true>>
 	<<if resolve_outcome(5,0,3)>><<endif>>
+	You increase the speed beyond what the vessel could support damaging it and making you slower in process.
 	<<endif>>
 -> Keep a steady pace.
 	<<if stakes_r_check()>>
 	Luckily your radiation protection seems to have been sufficient.
-	<<else>>
-	Your electronics are heavily damaged but you arrive on time.
+	<<elseif true>>
 	<<if resolve_outcome(0,0,3)>><<endif>>
+	Your electronics are heavily damaged but you arrive on time.
+	<<endif>>
+===
+title: event_landingOnTheRationale
+color: purple
+position: 0, 0
+---
+Landing on the rationale is one of the harder trips within the jovian systems. Who thought such a small station would be suitable for so much traffic.
+-> Slow down to a crawl.
+	<<if detriment_s_check()>>
+	<<if resolve_outcome(5,0,0)>><<endif>>
+	It is a close call, but the ship was already not too fast.
+	<<elseif true>>
+	<<if resolve_outcome(15,5,0)>><<endif>>
+	You desperately try to brake but the speed is too great to manage. You manage to land, but not before overshooting the station a couple of times.
+	<<endif>>
+-> Exploit your maneuverability.
+	<<if stakes_m_check()>>
+	You manage a stylish landing.
+	<<elseif true>>
+	<<if resolve_outcome(15,5,0)>><<endif>>
+	Your insufficient maneuverability leads you to overshoot the rationale. You eventually make it but end up spending extra time.
 	<<endif>>
 ===

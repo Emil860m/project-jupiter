@@ -1,5 +1,6 @@
 extends Node2D
 
+var location_id: NpcScheduler.locations = NpcScheduler.locations.RATIONALE
 #Canvas
 @onready var starters: CanvasLayer = $Starters
 @onready var main_course: CanvasLayer = $MainCourse
@@ -7,19 +8,23 @@ extends Node2D
 @onready var main_view: CanvasLayer = $MainView
 @onready var leave_scene: CanvasLayer = $LeaveScene
 #Starters
-@onready var starter_1: Buff_Button = $Starters/VBoxContainer/Starter1
-@onready var starter_2: Buff_Button = $Starters/VBoxContainer/Starter2
-@onready var starter_3: Buff_Button = $Starters/VBoxContainer/Starter3
+@onready var starter_1: Buff_Button = $Starters/Starter1
+@onready var starter_2: Buff_Button = $Starters/Starter2
+@onready var starter_3: Buff_Button = $Starters/Starter3
 #Mains
-@onready var main_1: Buff_Button = $MainCourse/VBoxContainer/Main1
-@onready var main_2: Buff_Button = $MainCourse/VBoxContainer/Main2
-@onready var main_3: Buff_Button = $MainCourse/VBoxContainer/Main3
+@onready var main_1: Buff_Button = $MainCourse/Main1
+@onready var main_2: Buff_Button = $MainCourse/Main2
+@onready var main_3: Buff_Button = $MainCourse/Main3
 #Desserts
-@onready var dessert_1: Buff_Button = $Dessert/VBoxContainer/Dessert1
-@onready var dessert_2: Buff_Button = $Dessert/VBoxContainer/Dessert2
-@onready var dessert_3: Buff_Button = $Dessert/VBoxContainer/Dessert3
+@onready var dessert_1: Buff_Button = $Dessert/Dessert1
+@onready var dessert_2: Buff_Button = $Dessert/Dessert2
+@onready var dessert_3: Buff_Button = $Dessert/Dessert3
 
 @export var scene_to_load: String
+
+@export var one_meal_time: int
+@export var two_meal_time: int
+@export var three_meal_time: int
 
 var courses
 var buffs: Array[Buff_Button]
@@ -36,6 +41,7 @@ func _ready() -> void:
 	dessert_3.connect("pressed", _dish_chosen.bind(dessert_3,3))
 
 func _on_course_button_up(num_courses: int) -> void:
+	
 	courses = num_courses
 	if num_courses == 1:
 		main_course.visible = true
@@ -51,6 +57,9 @@ func _dish_chosen(buff: Buff_Button, dish_num: int):
 		leave_scene.visible = true
 		for b in buffs:
 			b.apply_buff()
+		Globals.increment_timestep(one_meal_time if courses == 1 
+									else two_meal_time if courses == 2 
+									else three_meal_time)
 	if dish_num == 1:
 		starters.visible = false
 		main_course.visible = true

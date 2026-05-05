@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://baxhi1d2apapl"]
 
-[ext_resource type="Script" path="res://Scenes/Luner_system/2d/tow_truck.gd" id="1_xtgc5"]
+[ext_resource type="Script" uid="uid://bucbbxnmcugk6" path="res://Scenes/Luner_system/2d/tow_truck.gd" id="1_xtgc5"]
 [ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="2_gu1px"]
 
 [node name="TowTruck" type="Node2D" unique_id=188965670]
@@ -30,7 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 26
 text = "You did not have the necessary fuel to reach timeout.
-Your ship has been towtrucked and refueled."
+Your ship has been towtrucked."
 horizontal_alignment = 1
 vertical_alignment = 1
 

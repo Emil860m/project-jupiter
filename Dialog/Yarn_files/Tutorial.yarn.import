@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://cfybj56sdqwly"
+path="res://.godot/imported/Tutorial.yarn-df4f7fc09497cdce5915c998fefdedab.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Tutorial.yarn"
+dest_files=["res://.godot/imported/Tutorial.yarn-df4f7fc09497cdce5915c998fefdedab.res"]
+
+[params]
+
