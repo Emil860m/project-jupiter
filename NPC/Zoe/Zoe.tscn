@@ -3,19 +3,54 @@
 [ext_resource type="Script" uid="uid://bu735a64tp7gt" path="res://NPC/NPC.gd" id="1_x53e5"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="2_yy023"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_ooeg8"]
+[ext_resource type="PackedScene" uid="uid://b2ge1dm5umsjv" path="res://Assest/characterModels/Zoe/Zoe.fbx" id="4_ooeg8"]
+[ext_resource type="Animation" uid="uid://defg11lfxjpsk" path="res://Assest/characterModels/Animations/SittingOnChair.anim" id="5_yvym0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yvym0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7fgy4"]
+height = 2.9389648
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7fgy4"]
+_data = {
+&"SittingOnChair": ExtResource("5_yvym0")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tmly1"]
+animation = &"ZoeAnim/SittingOnChair"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bjulu"]
+animation = &"mixamo_com"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5cems"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pp4rk"]
+advance_mode = 2
+advance_condition = &"Standing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f01ye"]
+advance_mode = 2
+advance_condition = &"Sitting"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_tpthn"]
+states/ZoeAnim_SittingOnChair/node = SubResource("AnimationNodeAnimation_tmly1")
+states/ZoeAnim_SittingOnChair/position = Vector2(455.6, 100.799995)
+states/mixamo_com/node = SubResource("AnimationNodeAnimation_bjulu")
+states/mixamo_com/position = Vector2(711, 99.8)
+transitions = ["Start", "ZoeAnim_SittingOnChair", SubResource("AnimationNodeStateMachineTransition_5cems"), "ZoeAnim_SittingOnChair", "mixamo_com", SubResource("AnimationNodeStateMachineTransition_pp4rk"), "mixamo_com", "ZoeAnim_SittingOnChair", SubResource("AnimationNodeStateMachineTransition_f01ye")]
+graph_offset = Vector2(153, 14)
 
 [node name="Zoe" type="StaticBody3D" unique_id=2096689363]
 script = ExtResource("1_x53e5")
 character_name = "Zoe"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=507308596]
+visible = false
 mesh = SubResource("CapsuleMesh_yvym0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2073171143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14282227, 0)
 shape = SubResource("CapsuleShape3D_7fgy4")
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_yy023")]
@@ -23,6 +58,58 @@ shape = SubResource("CapsuleShape3D_7fgy4")
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_ooeg8")]
 meshs = [NodePath("../MeshInstance3D")]
 
+[node name="Zoe" parent="." unique_id=273873353 instance=ExtResource("4_ooeg8")]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Zoe" index="0" unique_id=632114816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9935807, 0)
+bones/0/position = Vector3(0.047861338, 1.0411209, -0.0051975753)
+bones/0/rotation = Quaternion(-0.005871816, -0.040688653, -0.022598881, 0.99889904)
+bones/1/rotation = Quaternion(-0.039154075, 0.005375852, 0.012709441, 0.99913794)
+bones/2/rotation = Quaternion(0.02123234, 0.009803549, 0.02684399, 0.99936604)
+bones/3/rotation = Quaternion(0.02123239, 0.009803553, 0.026844002, 0.99936604)
+bones/4/rotation = Quaternion(-0.040656786, 0.0018234221, -0.0030402455, 0.99916697)
+bones/5/rotation = Quaternion(0.037361685, 0.006383727, -0.040171146, 0.99847364)
+bones/7/rotation = Quaternion(-0.6205256, -0.36637163, 0.5762335, -0.38558376)
+bones/8/rotation = Quaternion(0.45499083, 0.2041452, 0.0933532, 0.8617386)
+bones/9/rotation = Quaternion(0.007118481, -0.081136204, 0.0738492, 0.9939379)
+bones/10/rotation = Quaternion(-0.14319788, 0.124346286, 0.14703482, 0.97077966)
+bones/11/rotation = Quaternion(0.15801305, -0.024015175, 0.18149374, 0.97031707)
+bones/12/rotation = Quaternion(0.011121973, 0.010929742, -0.13234542, 0.99108106)
+bones/13/rotation = Quaternion(0.00014641881, 0.0038358727, 0.15238978, 0.988313)
+bones/15/rotation = Quaternion(0.16071455, -0.09927903, 0.086750194, 0.97815585)
+bones/16/rotation = Quaternion(0.09561068, 0.015099749, -0.19729856, 0.9755531)
+bones/17/rotation = Quaternion(-0.0011848435, 0.007776487, 0.035262365, 0.99934715)
+bones/19/rotation = Quaternion(0.59526104, -0.39328635, 0.58124274, 0.39134023)
+bones/20/rotation = Quaternion(0.4503198, -0.26813707, -0.07167577, 0.8486326)
+bones/21/rotation = Quaternion(0.009733773, 0.07322327, -0.08655329, 0.993505)
+bones/22/rotation = Quaternion(-0.23057163, -0.021750413, -0.090814844, 0.96856403)
+bones/23/rotation = Quaternion(0.14363253, 0.05494499, -0.1703874, 0.9733031)
+bones/24/rotation = Quaternion(0.040161602, -0.0049968148, 0.16257785, 0.98586535)
+bones/25/rotation = Quaternion(3.322959e-05, -0.0012656357, -0.12959665, 0.99156606)
+bones/27/rotation = Quaternion(0.1411665, 0.08702167, -0.10549987, 0.9804944)
+bones/28/rotation = Quaternion(0.04418789, -0.007672414, 0.1931662, 0.9801405)
+bones/29/rotation = Quaternion(-0.0009373912, -0.006449577, -0.033281963, 0.9994248)
+bones/31/rotation = Quaternion(0.023837399, 0.114212304, 0.991022, -0.065290324)
+bones/32/rotation = Quaternion(-0.13768761, 0.00026176416, 0.0073174294, 0.9904487)
+bones/33/rotation = Quaternion(0.4018358, -0.13567938, 0.053744115, 0.9040081)
+bones/34/rotation = Quaternion(0.26581115, -0.09538538, 0.036755178, 0.9585902)
+bones/36/rotation = Quaternion(-0.05813601, 0.003103475, 0.9963309, -0.06273156)
+bones/37/rotation = Quaternion(-0.07003982, 0.000505092, -0.01011629, 0.9974928)
+bones/38/rotation = Quaternion(0.45965695, 0.06842408, -0.091812536, 0.88068396)
+bones/39/rotation = Quaternion(0.29463306, 0.05910816, -0.013739871, 0.95368177)
+
+[node name="AnimationPlayer" parent="Zoe" index="1" unique_id=25762751]
+libraries/ZoeAnim = SubResource("AnimationLibrary_7fgy4")
+
+[node name="AnimationTree" type="AnimationTree" parent="Zoe" unique_id=1170954245]
+tree_root = SubResource("AnimationNodeStateMachine_tpthn")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Sitting = false
+parameters/conditions/Standing = false
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+
+[editable path="Zoe"]

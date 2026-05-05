@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c5v7gkd41wytv"
-path="res://.godot/imported/idle.fbx-dff0225ec6c3891960968c3800817221.scn"
+uid="uid://b8hmtkmfqhsfs"
+path="res://.godot/imported/Kassandra.fbx-40d5b9cc5c0f2a7a5ae3d13244ecb692.scn"
 
 [deps]
 
-source_file="res://Assest/characterModels/Kher/idle.fbx"
-dest_files=["res://.godot/imported/idle.fbx-dff0225ec6c3891960968c3800817221.scn"]
+source_file="res://Assest/characterModels/Kassandra/Kassandra.fbx"
+dest_files=["res://.godot/imported/Kassandra.fbx-40d5b9cc5c0f2a7a5ae3d13244ecb692.scn"]
 
 [params]
 

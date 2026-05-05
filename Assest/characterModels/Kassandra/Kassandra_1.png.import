@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn0k08u2jisfc"
-path.s3tc="res://.godot/imported/idle_0.png-362f62c678b62fe997aa7a7cfe238d66.s3tc.ctex"
+uid="uid://wuugxot2qxa5"
+path.s3tc="res://.godot/imported/Kassandra_1.png-e2cde2e8e0b14af9eb5f24f839b898c5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "15ff55be1c604e7d098502a9b49a87f8"
+"md5": "33c8d470dc84467d98dcd30f68258f2b"
 }
 
 [deps]
 
-source_file="res://Assest/characterModels/Kher/idle_0.png"
-dest_files=["res://.godot/imported/idle_0.png-362f62c678b62fe997aa7a7cfe238d66.s3tc.ctex"]
+source_file="res://Assest/characterModels/Kassandra/Kassandra_1.png"
+dest_files=["res://.godot/imported/Kassandra_1.png-e2cde2e8e0b14af9eb5f24f839b898c5.s3tc.ctex"]
 
 [params]
 

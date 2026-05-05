@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx4ytsxluy8nv"
-path.s3tc="res://.godot/imported/Hick_1.png-48719c1060c1798907fd96bf1e8e94a3.s3tc.ctex"
+uid="uid://dxfkbadek4rax"
+path.s3tc="res://.godot/imported/Kher_2.png-44d5b57d6bd5284e5e3417afd9c0158d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "4e84a2794f0236a5e2dc1ac9bf4c7dd6"
+"md5": "a9ca2441d4aa4fed643fbd0e68249a87"
 }
 
 [deps]
 
-source_file="res://Assest/characterModels/Hickey/Hick_1.png"
-dest_files=["res://.godot/imported/Hick_1.png-48719c1060c1798907fd96bf1e8e94a3.s3tc.ctex"]
+source_file="res://Assest/characterModels/Kher/Kher_2.png"
+dest_files=["res://.godot/imported/Kher_2.png-44d5b57d6bd5284e5e3417afd9c0158d.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Assest/characterModels/Kher/Kher_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b2ge1dm5umsjv"
-path="res://.godot/imported/Zoe.fbx-c267d6aa6fd61f494578d257fef48ffb.scn"
+uid="uid://b0ekex4iil0gu"
+path="res://.godot/imported/Hickey.fbx-fda0145eb1e301ebbb1d5b61c0dd3344.scn"
 
 [deps]
 
-source_file="res://Assest/characterModels/Zoe/Zoe.fbx"
-dest_files=["res://.godot/imported/Zoe.fbx-c267d6aa6fd61f494578d257fef48ffb.scn"]
+source_file="res://Assest/characterModels/Hickey/Hickey.fbx"
+dest_files=["res://.godot/imported/Hickey.fbx-fda0145eb1e301ebbb1d5b61c0dd3344.scn"]
 
 [params]
 

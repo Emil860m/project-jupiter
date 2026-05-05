@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hc2fyt3xl705"
-path.s3tc="res://.godot/imported/Idle (2)_0.png-4a8c1b64af09232f19263d66950050e2.s3tc.ctex"
+uid="uid://c85opwpmehi0f"
+path.s3tc="res://.godot/imported/Kher_0.png-496b172ad3f6b72de1f12a35bd0b24eb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assest/characterModels/Kassandra/Idle (2)_0.png"
-dest_files=["res://.godot/imported/Idle (2)_0.png-4a8c1b64af09232f19263d66950050e2.s3tc.ctex"]
+source_file="res://Assest/characterModels/Kher/Kher_0.png"
+dest_files=["res://.godot/imported/Kher_0.png-496b172ad3f6b72de1f12a35bd0b24eb.s3tc.ctex"]
 
 [params]
 

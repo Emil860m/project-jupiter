@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2dbneevbr7p0"
-path.s3tc="res://.godot/imported/Hick_0.png-9c9bef70a8fa3113d81360bc43bd6cb9.s3tc.ctex"
+uid="uid://cuwn36x00d0h4"
+path.s3tc="res://.godot/imported/Hickey_0.png-807b5f2075308dd6e7ba7ae86d4f4a02.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "693ac3684869f5000173c7f373d6b2bb"
+}
 
 [deps]
 
-source_file="res://Assest/characterModels/Hickey/Hick_0.png"
-dest_files=["res://.godot/imported/Hick_0.png-9c9bef70a8fa3113d81360bc43bd6cb9.s3tc.ctex"]
+source_file="res://Assest/characterModels/Hickey/Hickey_0.png"
+dest_files=["res://.godot/imported/Hickey_0.png-807b5f2075308dd6e7ba7ae86d4f4a02.s3tc.ctex"]
 
 [params]
 

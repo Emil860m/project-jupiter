@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://14eisa7g7v4p"
-path.s3tc="res://.godot/imported/idle_1.png-9fc8ef2a651f309d8123bee05b349be0.s3tc.ctex"
+uid="uid://dboykj6wdkjfu"
+path.s3tc="res://.godot/imported/Kher_1.png-f10e8a403421df38356389fcabbe852b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assest/characterModels/Kher/idle_1.png"
-dest_files=["res://.godot/imported/idle_1.png-9fc8ef2a651f309d8123bee05b349be0.s3tc.ctex"]
+source_file="res://Assest/characterModels/Kher/Kher_1.png"
+dest_files=["res://.godot/imported/Kher_1.png-f10e8a403421df38356389fcabbe852b.s3tc.ctex"]
 
 [params]
 
