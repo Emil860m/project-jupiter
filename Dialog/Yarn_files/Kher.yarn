@@ -9,7 +9,9 @@ title: cactus_office
 color: green
 position: -273,60
 ---
-How is this cactus even alive in this enviroment? This does not seem to be a proper light for it.
+How is this cactus even alive!
+In this enviroment?
+This does not seem to be a proper light for it.
 -> Maybe it's fake
     Cheep polimare mold, but suprisingly convincing.
 -> Maybe it's special
@@ -65,7 +67,7 @@ A trash disposal unit labeled "Bodies".
 -> What?
     You realise that someone skillfully wrote over the label. It looks just the real thing, but there is some residue of the old label.
 -> Ok.
-
+    ...
 ===
 
 title: trashPile_workshop
@@ -90,10 +92,10 @@ title: sink_Hospital
 color: green
 position: -273,58
 ---
-My hands are clean, no need to wash em again.
+My hands are clean, no need to wash them again.
 ===
 
-title: uglyStatue_office
+title: uglyStatue_Office
 color: green
 position: -273,58
 ---
@@ -110,10 +112,62 @@ I think this is sopposed to be a statue...
     We could talk about balls.
 ===
 
+title: probe_Office
+color: green
+position: -273,58
+---
+What an interesting artefact to keep in your office.
+It looks like one of the Jovita probes sent here nearly 70 years ago...
+This must have been hard to get.
+-> Do I remember anything about that?
+    I think the Martian goverment sent around fourty of these here. They where surveying the moons for possible habitat and industrial spots.
+    Many of them actually ended up frying in the radioation belt while trying to analise Io.
+    A true land of the dead if even the robots can't survive there.
+-> True piece of history.
+    Even smells like history.
+===
+
 title: _Hospital
 color: green
 position: -273,58
 ---
 test
+===
+
+title: posterPons
+color: green
+position: -273,58
+---
+PONS
+Our bridge to the Solar System.
+The finest technical station in the world.
+===
+
+title: posterRationale
+color: green
+position: -273,58
+---
+RATIONALE
+Fine dine in space.
+Best meals in middile ring.
+===
+
+title: posterGanemede
+color: green
+position: -273,58
+---
+GANYMEDE
+Eye gazing into the future.
+Home of the minds of tommorow. The key to colonise beyond Jupiter!
+===
+
+title: posterKalisto
+color: green
+position: -273,58
+---
+KALLISTO
+The root. The trength. The industry.
+The root of our colonising power.
+Where every worker shall be treated equally.
 ===
 

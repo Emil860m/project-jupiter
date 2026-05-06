@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bpu0d1twhe7y2" path="res://Prefabs/Ganymede/standingVentClean.tscn" id="12_tonup"]
 [ext_resource type="PackedScene" uid="uid://cbumxbxe80yjw" path="res://NPC/Zoe/Zoe.tscn" id="13_0wpqt"]
 [ext_resource type="PackedScene" uid="uid://cjgyb4jmguhna" path="res://NPC/Sally/Sally.tscn" id="14_lwabn"]
-[ext_resource type="PackedScene" uid="uid://g818sf3tp82a" path="res://Prefabs/Ganymede/uglyStatue.tscn" id="16_iq2su"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_35g8a"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -235,8 +234,5 @@ shape = SubResource("BoxShape3D_0wpqt")
 
 [node name="Sally" parent="." unique_id=764589073 instance=ExtResource("14_lwabn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.238873, 1.0004997, -1.1580932)
-
-[node name="UglyStatue" parent="." unique_id=283069863 instance=ExtResource("16_iq2su")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.18765593, 0.05586779, 2.2540777)
 
 [editable path="Zoe"]

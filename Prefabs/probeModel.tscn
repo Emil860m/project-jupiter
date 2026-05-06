@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://d0gla8byhul7q"]
 
 [ext_resource type="Texture2D" uid="uid://tf5nvbb1ecsm" path="res://Assest/probeModel/miscItems2.png" id="1_nabqd"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_y7ap4"]
 [ext_resource type="ArrayMesh" uid="uid://bqwehwwiiubqr" path="res://Assest/probeModel/sateliteModel.obj" id="2_c53mj"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_xk4i5"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="5_ds0h3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42lb7"]
 albedo_texture = ExtResource("1_nabqd")
@@ -11,6 +14,9 @@ height = 0.94433594
 radius = 1.6083984
 
 [node name="Node3D" type="Area3D" unique_id=78836367]
+script = ExtResource("1_y7ap4")
+object_id = "probe"
+dialog_node = "probe_Office"
 
 [node name="SateliteModel" type="MeshInstance3D" parent="." unique_id=1001924599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.061141253, 0, -7.116688)
@@ -20,3 +26,8 @@ mesh = ExtResource("2_c53mj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=723671426]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06298828, 0)
 shape = SubResource("CylinderShape3D_y7ap4")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("4_xk4i5")]
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("5_ds0h3")]
+meshs = [NodePath("../SateliteModel")]

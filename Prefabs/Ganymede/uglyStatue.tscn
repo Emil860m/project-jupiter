@@ -9,10 +9,11 @@
 radius = 1.0024414
 height = 5.5
 
-[node name="UglyStatue" type="StaticBody3D" unique_id=1645489204]
+[node name="UglyStatue" type="StaticBody3D" unique_id=1997030565]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 script = ExtResource("1_43v5b")
 object_id = "statue"
+dialog_node = "uglyStatue_Office"
 
 [node name="UglyStatue" type="MeshInstance3D" parent="." unique_id=469917692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037050486, 2.5782099, -3.3012772)

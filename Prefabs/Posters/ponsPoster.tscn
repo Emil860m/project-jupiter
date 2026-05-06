@@ -17,6 +17,7 @@ size = Vector3(1.4162598, 1.9963379, 0.13238525)
 [node name="ponsPoster" type="StaticBody3D" unique_id=902910214]
 script = ExtResource("1_fdytg")
 object_id = "PonsPoster"
+dialog_node = "posterPons"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=331595598]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.0050884485, 0.0031211376, -0.0047801733)
