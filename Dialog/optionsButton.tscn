@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://byt7aunaouofm"]
 
 [node name="OptionsButton" type="Button" unique_id=229690265]
-offset_right = 64.0
-offset_bottom = 64.0
+offset_right = 109.0
+offset_bottom = 31.0
 text = "Example text"
+alignment = 2
+autowrap_mode = 3

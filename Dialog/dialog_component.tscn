@@ -3,8 +3,52 @@
 [ext_resource type="Script" uid="uid://bgbv5gpqv2onn" path="res://Dialog/dialog_component.gd" id="1_var2f"]
 [ext_resource type="PackedScene" uid="uid://b3g1f3g46nex4" path="res://Dialog/dialogRunner.tscn" id="2_sm16w"]
 [ext_resource type="Script" uid="uid://cged8u182768u" path="res://addons/yarn_spinner/ui/line_presenter.gd" id="3_3kam2"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="3_mwnmx"]
 [ext_resource type="Script" uid="uid://cogqy630mjgv7" path="res://addons/yarn_spinner/ui/options_presenter.gd" id="4_tomcn"]
 [ext_resource type="PackedScene" uid="uid://byt7aunaouofm" path="res://Dialog/optionsButton.tscn" id="5_007lo"]
+[ext_resource type="Texture2D" uid="uid://b4p68vhm2j2qs" path="res://icon.svg" id="5_xrhsp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwnmx"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0, 0, 0, 0.47400004)
+border_width_left = 20
+border_width_top = 5
+border_width_right = 20
+border_width_bottom = 5
+border_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6pkm"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qg68"]
+content_margin_left = 30.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_yoexn"]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("3_mwnmx")
+Button/styles/normal = SubResource("StyleBoxFlat_mwnmx")
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("3_mwnmx")
+Label/styles/normal = SubResource("StyleBoxEmpty_w6pkm")
+RichTextLabel/fonts/normal_font = ExtResource("3_mwnmx")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_2qg68")
+
+[sub_resource type="Gradient" id="Gradient_ycefy"]
+colors = PackedColorArray(0.05882353, 0.05882353, 0.05882353, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wax0d"]
+gradient = SubResource("Gradient_ycefy")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrhsp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yoexn"]
 
 [node name="DialogComponent" type="Node" unique_id=1464193511]
 script = ExtResource("1_var2f")
@@ -13,7 +57,6 @@ script = ExtResource("1_var2f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=780186044]
 layer = 3
-visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1621108285]
 layout_mode = 3
@@ -24,22 +67,26 @@ anchor_bottom = 1.0
 offset_top = -225.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = SubResource("Theme_yoexn")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=715113717]
+layout_mode = 0
+offset_right = 1927.0
+offset_bottom = 225.0
+texture = SubResource("GradientTexture1D_wax0d")
 
 [node name="LinePresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1812540107 node_paths=PackedStringArray("text_label", "character_label", "continue_indicator")]
 layout_mode = 0
 offset_right = 1420.0
 offset_bottom = 225.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xrhsp")
 script = ExtResource("3_3kam2")
 text_label = NodePath("VBoxContainer/TextLabel")
-character_label = NodePath("VBoxContainer/CharacterLabel")
+character_label = NodePath("Control/CharacterLabel")
 continue_indicator = NodePath("VBoxContainer/ContinueIndicator")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/LinePresenter" unique_id=822340355]
 layout_mode = 2
-
-[node name="CharacterLabel" type="Label" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=462520019]
-layout_mode = 2
-text = "Char label"
 
 [node name="TextLabel" type="RichTextLabel" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=1716029707]
 layout_mode = 2
@@ -52,21 +99,28 @@ layout_mode = 2
 text = "Click to continue"
 
 [node name="Control" type="Control" parent="CanvasLayer/Control/LinePresenter" unique_id=1284911799]
-visible = false
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/LinePresenter/Control" unique_id=1544814007]
 layout_mode = 0
-offset_left = 32.0
-offset_top = -136.0
-offset_right = 160.0
-offset_bottom = -8.0
+offset_top = -285.0
+offset_right = 287.0
+offset_bottom = 2.0
+texture = ExtResource("5_xrhsp")
+stretch_mode = 4
+
+[node name="CharacterLabel" type="Label" parent="CanvasLayer/Control/LinePresenter/Control" unique_id=462520019]
+layout_mode = 0
+offset_top = -47.0
+offset_right = 1420.0
+text = "Char label"
 
 [node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865 node_paths=PackedStringArray("options_container")]
 layout_mode = 0
 offset_left = 1420.0
 offset_right = 1920.0
 offset_bottom = 225.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yoexn")
 script = ExtResource("4_tomcn")
 options_container = NodePath("ScrollContainer/OptionsContainer")
 option_button_scene = ExtResource("5_007lo")
@@ -77,3 +131,5 @@ layout_mode = 2
 
 [node name="OptionsContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPresenter/ScrollContainer" unique_id=1030912164]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

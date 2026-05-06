@@ -9,15 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://byt7aunaouofm" path="res://Dialog/optionsButton.tscn" id="6_ugb46"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5nbbv"]
+content_margin_left = 20.0
+content_margin_right = 20.0
 texture = ExtResource("4_r7rlm")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0idnk"]
+content_margin_left = 20.0
+content_margin_right = 20.0
 texture = ExtResource("4_r7rlm")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2q8c"]
+content_margin_left = 20.0
+content_margin_right = 20.0
 texture = ExtResource("4_r7rlm")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7rlm"]
+content_margin_left = 20.0
+content_margin_right = 20.0
 texture = ExtResource("4_r7rlm")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0idnk"]
@@ -97,6 +105,7 @@ script = ExtResource("1_byhhv")
 [node name="DialogRunner" parent="." unique_id=189222724 instance=ExtResource("2_0idnk")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=780186044]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1621108285]
 layout_mode = 3
