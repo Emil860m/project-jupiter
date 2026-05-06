@@ -45,6 +45,13 @@ Wait... is that a SPUTNIK satelite! What is it doing here?
     Speaking of trash.. This is an impressive trash pile they colected over here. 
 ===
 
+title: paperNotice_workshop
+color: green
+position: -273,58
+---
+Workshop temporarly halted due to personel termination.
+===
+
 title: trash1_workshop
 color: green
 position: -273,58
@@ -99,8 +106,9 @@ title: uglyStatue_Office
 color: green
 position: -273,58
 ---
-I think this is sopposed to be a statue...
--> Every office needs an ugly piece of art.
+I think this is supposed to be a statue...
+-> I don't like it.
+    Every office needs an ugly piece of art.
     Yes. I especially enjoy the shape... a ball.
     A lot of meaning hidden in there I'm sure.
 -> It's okay.
@@ -132,6 +140,14 @@ color: green
 position: -273,58
 ---
 test
+===
+
+title: cafe_Hospital
+color: green
+position: -273,58
+---
+Cafinated wheat instant bevrage.
+Someone on the staff is grinding.. these things are so strong, they will keep you up for up to 25 hours.
 ===
 
 title: posterPons

@@ -13,7 +13,7 @@ albedo_texture = ExtResource("1_nabqd")
 height = 0.94433594
 radius = 1.6083984
 
-[node name="Node3D" type="Area3D" unique_id=78836367]
+[node name="Node3D" type="StaticBody3D" unique_id=384604267]
 script = ExtResource("1_y7ap4")
 object_id = "probe"
 dialog_node = "probe_Office"
