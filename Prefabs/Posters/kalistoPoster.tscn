@@ -1,14 +1,31 @@
 [gd_scene format=3 uid="uid://dayv64fxqgsru"]
 
 [ext_resource type="Texture2D" uid="uid://byjcx8q3b5uop" path="res://Assest/posters/KALISTO_TEXTURE.png" id="1_oh2lk"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_rd0dl"]
 [ext_resource type="ArrayMesh" uid="uid://vfcdydu4pu2j" path="res://Assest/posters/poster.obj" id="2_l5sto"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="4_rd0dl"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_d2bro"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5sto"]
 albedo_texture = ExtResource("1_oh2lk")
 
-[node name="Node3D" type="Node3D" unique_id=548216174]
+[sub_resource type="BoxShape3D" id="BoxShape3D_d2bro"]
+size = Vector3(1.392334, 1.9650879, 0.22247314)
+
+[node name="Node3D" type="StaticBody3D" unique_id=1678531539]
+script = ExtResource("1_rd0dl")
+object_id = "KallistoPoster"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=331595598]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.0050884485, 0.0031211376, -0.0047801733)
 material_override = SubResource("StandardMaterial3D_l5sto")
 mesh = ExtResource("2_l5sto")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1199000998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0045166016, 0.015991211, -0.046905518)
+shape = SubResource("BoxShape3D_d2bro")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_rd0dl")]
+meshs = [NodePath("../MeshInstance3D")]
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_d2bro")]

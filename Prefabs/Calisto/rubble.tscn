@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://maojlvkx0p48"]
 
-[ext_resource type="Script" uid="uid://ciqhdep2i8yqq" path="res://Prefabs/Calisto/rubble.gd" id="1_72san"]
 [ext_resource type="ArrayMesh" uid="uid://chn6akia2asr1" path="res://Assest/electricBox/ElectricBox.obj" id="1_dj6uq"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_n24mo"]
 [ext_resource type="ArrayMesh" uid="uid://ra170w8dq2oq" path="res://Assest/fireStopper/fireStopper.obj" id="2_4vkfe"]
 [ext_resource type="ArrayMesh" uid="uid://dtvw4wpqfi7xm" path="res://Assest/industrialCableA/industrialCableA.obj" id="3_aqs2x"]
 [ext_resource type="ArrayMesh" uid="uid://bcqbh2k5vmby5" path="res://Assest/pipes/pipe_curve.obj" id="4_b6ct2"]
@@ -15,13 +15,14 @@
 [ext_resource type="ArrayMesh" uid="uid://y7v8gti2osfm" path="res://Assest/industrialLiquidTankA/industrialLiquidTankA.obj" id="12_518ku"]
 [ext_resource type="ArrayMesh" uid="uid://bagdjiusweyiq" path="res://Assest/metalDoor/metalDoorFrame.obj" id="13_b6ct2"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="14_hgker"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="16_jn5ig"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0tvya"]
 size = Vector3(7, 4, 11)
 
 [node name="Rubble" type="StaticBody3D" unique_id=1357896612]
 transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, 0, 0, 0)
-script = ExtResource("1_72san")
+script = ExtResource("1_n24mo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=286203370]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999995, 1.5, 1.7881393e-07)
@@ -130,6 +131,4 @@ mesh = ExtResource("13_b6ct2")
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("14_hgker")]
 meshs = [NodePath("../ElectricBox"), NodePath("../ElectricBox2"), NodePath("../FireStopper"), NodePath("../FireStopper2"), NodePath("../IndustrialCableA"), NodePath("../PipeCurve"), NodePath("../PipeCurve2"), NodePath("../PipeCurve3"), NodePath("../Barrel"), NodePath("../Barrel2"), NodePath("../Barrel3"), NodePath("../GasTank"), NodePath("../GasTank2"), NodePath("../Railing"), NodePath("../Railing2"), NodePath("../SphericalTank"), NodePath("../Wrench"), NodePath("../Wrench2"), NodePath("../RadioBox"), NodePath("../RadioBox2"), NodePath("../Trash"), NodePath("../Trash2"), NodePath("../IndustrialLiquidTankA"), NodePath("../MetalDoorFrame"), NodePath("../MetalDoorFrame2")]
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("16_jn5ig")]

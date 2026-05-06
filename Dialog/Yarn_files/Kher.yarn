@@ -4,3 +4,65 @@ position: -273,62
 ---
 New node
 ===
+
+title: cactus_office
+color: green
+position: -273,60
+---
+How is this cactus even alive in this enviroment? This does not seem to be a proper light for it.
+-> Maybe it's fake
+    Cheep polimare mold, but suprisingly convincing.
+-> Maybe it's special
+    And they water it with sunshine and kisses. I wonder what chemical coctail is keeping it alive.
+===
+
+title: bookShelf_office
+color: green
+position: -273,58
+---
+These are all just records... what a boring library to have.
+-> Maybe I can still find something interesting?
+    After careful analisys of the bookshelfs, you conclude that there is in fact nothing interesting in there.
+-> Nothing to see here.
+===
+
+title: wrench_workshop
+color: green
+position: -273,58
+---
+Could use one of these standard wrenches on my spaceship... Maybe I can ask around if they have a spare.
+===
+
+title: sputnik_workshop
+color: green
+position: -273,58
+---
+Wait... is that a SPUTNIK satelite! What is it doing here?
+-> Maybe someone is making replicas here?
+-> The kind of trash you can find here.
+    Speaking of trash.. This is an impressive trash pile they colected over here. 
+===
+
+title: thermos_workshop
+color: green
+position: -273,58
+---
+I think dad had the same thermos when I was a child.
+-> The best Kallisto industries can provide!
+    I remember that it could keep a liter of soup scolding hot for at least 10 hours. How many times did I burn myself with that shit...
+===
+
+title: sink_Hospital
+color: green
+position: -273,58
+---
+My hands are clean, no need to wash em again.
+===
+
+title: _Hospital
+color: green
+position: -273,58
+---
+test
+===
+

@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cmj6vjhjd07ov"]
 
 [ext_resource type="ArrayMesh" uid="uid://cay185oqaax2i" path="res://Assest/metalBuilding/metalBuildingRib/metalBuildingRib.obj" id="1_6l51p"]
-[ext_resource type="Script" uid="uid://d2d1m27myjl5h" path="res://Prefabs/Calisto/workshop_building.gd" id="1_oiabf"]
 [ext_resource type="ArrayMesh" uid="uid://fqfaa7pc5xnv" path="res://Assest/metalBuilding/metalBuildingWall/MetalBuildingWall.obj" id="2_tbajc"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="3_arxxe"]
 [ext_resource type="ArrayMesh" uid="uid://bk4vb4vnm73h2" path="res://Assest/metalDoor/metalDoor.obj" id="3_vkggv"]
 [ext_resource type="ArrayMesh" uid="uid://bagdjiusweyiq" path="res://Assest/metalDoor/metalDoorFrame.obj" id="4_lj3pe"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_c3fol"]
 [ext_resource type="ArrayMesh" uid="uid://b7rsr42q28e7m" path="res://Assest/metalBuilding/metalBuildingRoof/MetalBuildingRoof.obj" id="5_tbajc"]
 [ext_resource type="PackedScene" uid="uid://bqea6cn56en53" path="res://Prefabs/standing_vent.tscn" id="6_dqfxx"]
 [ext_resource type="PackedScene" uid="uid://bw2sc4dr7iwrb" path="res://Prefabs/MiscProps/gas_tank.tscn" id="7_7m2ac"]
@@ -12,12 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://bofqbao1he4ha" path="res://Prefabs/electric_box.tscn" id="9_7m2ac"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="10_fl2y8"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_arxxe"]
+size = Vector3(1, 5.6798706, 3.7080078)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_6l51p"]
 size = Vector3(6.678993, 4, 14.02655)
 
 [node name="WorkshopBuilding" type="StaticBody3D" unique_id=770807735]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
-script = ExtResource("1_oiabf")
 
 [node name="Wall" type="Node3D" parent="." unique_id=1570120025]
 
@@ -62,14 +65,26 @@ mesh = ExtResource("2_tbajc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 mesh = ExtResource("2_tbajc")
 
-[node name="Door" type="Node3D" parent="." unique_id=885159642]
+[node name="Door" type="StaticBody3D" parent="." unique_id=1434063252]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 1.5, -7.5)
+script = ExtResource("3_arxxe")
+has_dialog = false
+
+[node name="InteractableComponent" parent="Door" unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("10_fl2y8")]
+transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.99999994, -2.9999998, 14.999998)
+meshs = [NodePath("../MetalDoor"), NodePath("../MetalDoorFrame")]
+
+[node name="DialogComponent" parent="Door" unique_id=1464193511 instance=ExtResource("5_c3fol")]
 
 [node name="MetalDoor" type="MeshInstance3D" parent="Door" unique_id=1191352831]
 mesh = ExtResource("3_vkggv")
 
 [node name="MetalDoorFrame" type="MeshInstance3D" parent="Door" unique_id=474156812]
 mesh = ExtResource("4_lj3pe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=565319328]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.14413452, -0.044433594)
+shape = SubResource("BoxShape3D_arxxe")
 
 [node name="Wall2" type="Node3D" parent="." unique_id=1520555079]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, -9)
@@ -118,7 +133,7 @@ mesh = ExtResource("5_tbajc")
 transform = Transform3D(-1.821307e-08, 0, 0.41666657, 0, 0.41666657, 0, -0.41666657, 0, -1.821307e-08, -4.937025, 3.973642e-07, -9.963481)
 
 [node name="GasTank" parent="." unique_id=1297532690 instance=ExtResource("7_7m2ac")]
-transform = Transform3D(0.49999988, 0, 0, 0, 0.49999988, 0, 0, 0, 0.49999988, 1.5971025, 0, -4.939872)
+transform = Transform3D(0.46079946, 0, -0.19407143, 0, 0.49999988, 0, 0.19407143, 0, 0.46079946, 2.5048687, 0, -4.063598)
 
 [node name="GasTank2" parent="." unique_id=1229104001 instance=ExtResource("7_7m2ac")]
 transform = Transform3D(0.49999988, 0, 0, 0, 0.49999988, 0, 0, 0, 0.49999988, 1.5971024, 0, -4.1065383)
@@ -134,10 +149,3 @@ transform = Transform3D(0.6666666, 0, 0, 0, 0.6666666, 0, 0, 0, 0.6666666, 0.610
 
 [node name="ElectricBox" parent="." unique_id=827621083 instance=ExtResource("9_7m2ac")]
 transform = Transform3D(-1.821307e-08, 0, 0.41666657, 0, 0.41666657, 0, -0.41666657, 0, -1.821307e-08, -1.6361743, -0.18033499, -10.037914)
-
-[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("10_fl2y8")]
-meshs = [NodePath("../Roof/MetalBuildingRoof"), NodePath("../Roof/MetalBuildingRoof2"), NodePath("../Wall3/MetalBuildingRib"), NodePath("../Wall3/MetalBuildingRib2"), NodePath("../Wall3/MetalBuildingWall"), NodePath("../Wall2/MetalBuildingRib"), NodePath("../Wall2/MetalBuildingRib2"), NodePath("../Wall2/MetalBuildingWall"), NodePath("../Door/MetalDoor"), NodePath("../Door/MetalDoorFrame"), NodePath("../Wall4/MetalBuildingRib"), NodePath("../Wall4/MetalBuildingRib2"), NodePath("../Wall4/MetalBuildingRib3"), NodePath("../Wall4/MetalBuildingWall"), NodePath("../Wall4/MetalBuildingWall2"), NodePath("../Wall/MetalBuildingRib"), NodePath("../Wall/MetalBuildingRib2"), NodePath("../Wall/MetalBuildingRib3"), NodePath("../Wall/MetalBuildingWall"), NodePath("../Wall/MetalBuildingWall2")]
-
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
