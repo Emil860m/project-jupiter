@@ -133,10 +133,10 @@ mesh = ExtResource("5_tbajc")
 transform = Transform3D(-1.821307e-08, 0, 0.41666657, 0, 0.41666657, 0, -0.41666657, 0, -1.821307e-08, -4.937025, 3.973642e-07, -9.963481)
 
 [node name="GasTank" parent="." unique_id=1297532690 instance=ExtResource("7_7m2ac")]
-transform = Transform3D(0.46079946, 0, -0.19407143, 0, 0.49999988, 0, 0.19407143, 0, 0.46079946, 2.5048687, 0, -4.063598)
+transform = Transform3D(-0.49880198, -0.0010291272, 0.03457422, -0.0008036934, 0.49998844, 0.003287464, -0.0345802, 0.00322401, -0.49879232, -0.35094133, 0, 0.12982924)
 
 [node name="GasTank2" parent="." unique_id=1229104001 instance=ExtResource("7_7m2ac")]
-transform = Transform3D(0.49999988, 0, 0, 0, 0.49999988, 0, 0, 0, 0.49999988, 1.5971024, 0, -4.1065383)
+transform = Transform3D(0.4356667, 0, -0.24534535, 0, 0.49999988, 0, 0.24534535, 0, 0.4356667, 2.6110067, 0, -3.612443)
 
 [node name="Barrel" parent="." unique_id=83570398 instance=ExtResource("8_fl2y8")]
 transform = Transform3D(0.6666666, 0, 0, 0, 0.6666666, 0, 0, 0, 0.6666666, -0.22243607, 0, 2.4433765)

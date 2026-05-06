@@ -29,10 +29,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028686523, 0.0018463135, 0.
 shape = SubResource("BoxShape3D_v8rt2")
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_hu885")]
-meshs = [NodePath("../MeshInstance3D"), NodePath("../MeshInstance3D2")]
+meshs = [NodePath("../gowno"), NodePath("../MeshInstance3D")]
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_n1g1v")]
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1046004568]
+[node name="gowno" type="MeshInstance3D" parent="." unique_id=1046004568]
 transform = Transform3D(1.4055719, 0, 0, 0, 1.9381571, 0, 0, 0, 0.06257655, 0, 0, -0.037847817)
 mesh = SubResource("BoxMesh_hu885")

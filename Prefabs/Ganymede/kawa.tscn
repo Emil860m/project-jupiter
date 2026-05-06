@@ -9,7 +9,7 @@
 height = 0.71447754
 radius = 0.44433594
 
-[node name="Node3D" type="StaticBody3D" unique_id=66114354]
+[node name="kawa" type="StaticBody3D" unique_id=66114354]
 script = ExtResource("1_kau14")
 object_id = "kafe"
 dialog_node = "cafe_Hospital"
