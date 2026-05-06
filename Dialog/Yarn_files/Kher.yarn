@@ -30,7 +30,7 @@ title: wrench_workshop
 color: green
 position: -273,58
 ---
-Could use one of these standard wrenches on my spaceship... Maybe I can ask around if they have a spare.
+Could use one of these standard wrenches on dad's spaceship... Maybe I can ask around if they have a spare.
 ===
 
 title: sputnik_workshop
@@ -41,6 +41,40 @@ Wait... is that a SPUTNIK satelite! What is it doing here?
 -> Maybe someone is making replicas here?
 -> The kind of trash you can find here.
     Speaking of trash.. This is an impressive trash pile they colected over here. 
+===
+
+title: trash1_workshop
+color: green
+position: -273,58
+---
+A trash disposal unit labeled "Polimers type A,B,C and D"
+===
+
+title: trash2_workshop
+color: green
+position: -273,58
+---
+A trash disposal unit labeled "All metals"
+===
+
+title: trash3_workshop
+color: green
+position: -273,58
+---
+A trash disposal unit labeled "Bodies".
+-> What?
+    You realise that someone skillfully wrote over the label. It looks just the real thing, but there is some residue of the old label.
+-> Ok.
+
+===
+
+title: trashPile_workshop
+color: green
+position: -273,58
+---
+Yes. This is a proper trash pile.
+Damn... I think there is a High Power Radio module behind these old gas tanks.
+Wish there was a way toget to it...
 ===
 
 title: thermos_workshop
@@ -57,6 +91,23 @@ color: green
 position: -273,58
 ---
 My hands are clean, no need to wash em again.
+===
+
+title: uglyStatue_office
+color: green
+position: -273,58
+---
+I think this is sopposed to be a statue...
+-> Every office needs an ugly piece of art.
+    Yes. I especially enjoy the shape... a ball.
+    A lot of meaning hidden in there I'm sure.
+-> It's okay.
+    Kinda boring but I think that's what you need in an office setting.
+    No distractions.
+-> I love it.
+    The shape. The color. It speaks to me!
+    I would love to meet the artist that made this.
+    We could talk about balls.
 ===
 
 title: _Hospital

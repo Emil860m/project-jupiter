@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="17_eoxxw"]
 [ext_resource type="PackedScene" uid="uid://bkbvwgs1ahefh" path="res://Prefabs/sputnik.tscn" id="18_eoxxw"]
 [ext_resource type="PackedScene" uid="uid://xssi2idlokcw" path="res://Prefabs/MiscProps/desk.tscn" id="21_touvs"]
-[ext_resource type="PackedScene" uid="uid://b775kktubciyu" path="res://Prefabs/MiscProps/wrench.tscn" id="22_d36iu"]
 [ext_resource type="PackedScene" uid="uid://bw2sc4dr7iwrb" path="res://Prefabs/MiscProps/gas_tank.tscn" id="23_qfn8v"]
 [ext_resource type="PackedScene" uid="uid://dbhyw7ptbtwe0" path="res://Prefabs/MiscProps/termos.tscn" id="24_uatr3"]
 [ext_resource type="PackedScene" uid="uid://c35r2pgmi3h75" path="res://Prefabs/Signs/warningSign.tscn" id="25_dt0t6"]
@@ -37,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://d4nrqmjt8rn5q" path="res://Prefabs/paperSheet.tscn" id="36_svaw3"]
 [ext_resource type="PackedScene" uid="uid://dqekt5rttkm8v" path="res://Prefabs/Posters/ganymedePoster.tscn" id="37_mmrm4"]
 [ext_resource type="PackedScene" uid="uid://et422gwslsse" path="res://Prefabs/Calisto/pileOfBoxes.tscn" id="38_mmrm4"]
+[ext_resource type="PackedScene" uid="uid://gn4isqkou71c" path="res://Prefabs/Calisto/wrenchs_workshop.tscn" id="39_11saj"]
 [ext_resource type="PackedScene" uid="uid://dn76p03h1oorx" path="res://Prefabs/Posters/rationalPoster.tscn" id="39_x87e5"]
 [ext_resource type="PackedScene" uid="uid://2pk26aftwmc8" path="res://Prefabs/Posters/ponsPoster.tscn" id="40_11saj"]
 
@@ -575,17 +575,17 @@ transform = Transform3D(0.60738724, 0, -0.34796658, 0, 0.7, 0, 0.34796658, 0, 0.
 [node name="TrashCan" parent="." unique_id=1349536050 instance=ExtResource("13_8cm3j")]
 transform = Transform3D(0.6999915, 0.0013206375, 0.0031799735, -0.0013101628, 0.699995, -0.0023044965, -0.0031843034, 0.00229851, 0.69998896, -27.075, 0, -27.247)
 object_id = "trash3"
-dialog_node = "sputnik_workshop"
+dialog_node = "trash3_workshop"
 
 [node name="TrashCan2" parent="." unique_id=222786855 instance=ExtResource("13_8cm3j")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.075, 0, -25.247)
 object_id = "trash2"
-dialog_node = "wrench_workshop"
+dialog_node = "trash2_workshop"
 
 [node name="TrashCan3" parent="." unique_id=945792442 instance=ExtResource("13_8cm3j")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.075, 0, -23.247)
 object_id = "trash1"
-dialog_node = "cactus_office"
+dialog_node = "trash1_workshop"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=470130874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.236021, 2.954874, -25.934603)
@@ -794,12 +794,6 @@ transform = Transform3D(-8.742278e-09, 0, 0.2, 0.02035364, 0.19896163, 8.896859e
 [node name="Desk" parent="." unique_id=10184086 instance=ExtResource("21_touvs")]
 transform = Transform3D(0.54570496, 0, -0.43841314, 0, 0.7, 0, 0.43841314, 0, 0.54570496, -10.83705, 0.05383829, 20.95089)
 
-[node name="Wrench" parent="." unique_id=223653445 instance=ExtResource("22_d36iu")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.238401, 1.2935337, 22.812813)
-
-[node name="Wrench2" parent="." unique_id=1095564390 instance=ExtResource("22_d36iu")]
-transform = Transform3D(0.28848508, 0, -0.08231869, 0, 0.3, 0, 0.08231869, 0, 0.28848508, -12.188757, 1.2935342, 22.744867)
-
 [node name="GasTank" parent="." unique_id=1297532690 instance=ExtResource("23_qfn8v")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -17.542564, 0.12503919, 16.51854)
 
@@ -816,7 +810,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -15.71824, 2.5905795, 6
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 8.01946, 1.016695, -9.911655)
 
 [node name="FireStopper" parent="." unique_id=360190013 instance=ExtResource("27_uatr3")]
-transform = Transform3D(0.09437785, 0, 0.17633156, 0, 0.2, 0, -0.17633156, 0, 0.09437785, -11.099806, 0.62043697, 21.51148)
+transform = Transform3D(0.09437785, 0, 0.17633156, 0, 0.2, 0, -0.17633156, 0, 0.09437785, -18.79717, 0.62043697, 18.850666)
 has_dialog = false
 
 [node name="IndustrialLiquidTankA" parent="." unique_id=925635222 instance=ExtResource("28_w7kre")]
@@ -1166,7 +1160,7 @@ transform = Transform3D(0.68024766, 0, 0.73298234, 0, 1, 0, -0.73298234, 0, 0.68
 transform = Transform3D(-0.26886937, 0, 0.96317667, 0, 1, 0, -0.96317667, 0, -0.26886937, -0.43835258, 0, -0.71588707)
 
 [node name="Node3D" parent="HisBoxes" unique_id=847548939 instance=ExtResource("36_svaw3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4452648, 3.0286202, -6.0549555)
+transform = Transform3D(0.9896789, -0.14330262, 0, 0.14330262, 0.9896789, 0, 0, 0, 1, -1.4798985, 2.4583986, -5.848715)
 
 [node name="Node3D3" parent="." unique_id=548216174 instance=ExtResource("37_mmrm4")]
 transform = Transform3D(0.047597982, -0.06419831, 0.99680144, 0.0036912134, 0.99793696, 0.06409519, -0.9988597, 0.00062860374, 0.047736764, 10.060069, 1.756171, -15.101547)
@@ -1176,7 +1170,7 @@ has_dialog = false
 transform = Transform3D(0.8490547, 0, 0.528305, 0, 1, 0, -0.528305, 0, 0.8490547, -26.20502, 0.14670883, -21.228806)
 
 [node name="Node3D8" parent="." unique_id=955251640 instance=ExtResource("39_x87e5")]
-transform = Transform3D(-0.9996477, 0, 0.026543273, 0.001241567, 0.9989054, 0.046758723, -0.02651422, 0.046775203, -0.99855345, -1.467561, 1.8401158, 11.554721)
+transform = Transform3D(-0.85279155, -0.023362156, 0.5217287, 0.0012415664, 0.99890554, 0.046758726, -0.5222502, 0.040523194, -0.85182893, 9.979979, 2.1177857, 2.0377786)
 has_dialog = false
 
 [node name="Node3D9" parent="." unique_id=1732493247 instance=ExtResource("40_11saj")]
@@ -1185,3 +1179,6 @@ has_dialog = false
 
 [node name="Node3D10" parent="." unique_id=1239620911 instance=ExtResource("34_bw3j0")]
 transform = Transform3D(-0.59773254, 0, 0.25537384, 0, 0.65, 0, -0.25537384, 0, -0.59773254, 17.250242, 0.14670978, 10.909568)
+
+[node name="StaticBody3D" parent="." unique_id=1254217436 instance=ExtResource("39_11saj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.457511, 1.3589056, 22.847603)

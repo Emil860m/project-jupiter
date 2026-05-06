@@ -12,7 +12,9 @@ albedo_texture = ExtResource("1_v8rt2")
 [sub_resource type="BoxShape3D" id="BoxShape3D_v8rt2"]
 size = Vector3(1.4104004, 2.007782, 0.20361328)
 
-[node name="Node3D" type="StaticBody3D" unique_id=1342800584]
+[sub_resource type="BoxMesh" id="BoxMesh_hu885"]
+
+[node name="GanymedePoster" type="StaticBody3D" unique_id=1342800584]
 script = ExtResource("1_hu885")
 object_id = "GanymedePoster"
 
@@ -26,6 +28,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028686523, 0.0018463135, 0.
 shape = SubResource("BoxShape3D_v8rt2")
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_hu885")]
-meshs = [NodePath("../MeshInstance3D")]
+meshs = [NodePath("../MeshInstance3D"), NodePath("../MeshInstance3D2")]
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_n1g1v")]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1046004568]
+transform = Transform3D(1.4055719, 0, 0, 0, 1.9381571, 0, 0, 0, 0.06257655, 0, 0, -0.037847817)
+mesh = SubResource("BoxMesh_hu885")

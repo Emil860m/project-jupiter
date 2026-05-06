@@ -12,7 +12,9 @@ albedo_texture = ExtResource("1_of3yr")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ue56k"]
 size = Vector3(1.4100952, 1.8918457, 0.24121094)
 
-[node name="Node3D" type="StaticBody3D" unique_id=1018485615]
+[sub_resource type="BoxMesh" id="BoxMesh_y3slc"]
+
+[node name="rationalePoster" type="StaticBody3D" unique_id=1018485615]
 script = ExtResource("1_y3slc")
 object_id = "RationalPoster"
 
@@ -26,6 +28,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015533447, 0.040893555, -0.
 shape = SubResource("BoxShape3D_ue56k")
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_11pr0")]
-meshs = [NodePath("../MeshInstance3D")]
+meshs = [NodePath("../MeshInstance3D2"), NodePath("../MeshInstance3D")]
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_3cnff")]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1764857639]
+transform = Transform3D(1.3985915, 0, 0, 0, 1.9687061, 0, 0, 0, 0.04571861, 0, 0, -0.048042953)
+mesh = SubResource("BoxMesh_y3slc")
