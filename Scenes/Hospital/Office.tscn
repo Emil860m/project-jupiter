@@ -227,16 +227,54 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.463697, 1.3527904, 
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, -17.504156, 0.011864372, 7.06055)
 
 [node name="Zoe" parent="." unique_id=2096689363 instance=ExtResource("13_0wpqt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.19976, 1.8944826, -0.25553226)
+transform = Transform3D(-0.009826069, 0, 0.9999517, 0, 1, 0, -0.9999517, 0, -0.009826069, -18.155848, 1.8426275, -0.25553226)
 
 [node name="CollisionShape3D" parent="Zoe" index="1" unique_id=2073171143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7992554, 0, 0.007858276)
 shape = SubResource("BoxShape3D_0wpqt")
 
+[node name="Skeleton3D" parent="Zoe/Zoe" parent_id_path=PackedInt32Array(2096689363, 273873353) index="0" unique_id=1966376543]
+bones/0/position = Vector3(0.0025923252, 0.6089243, -0.022965813)
+bones/0/rotation = Quaternion(-0.17558773, -0.029149588, -0.030196413, 0.9835688)
+bones/1/rotation = Quaternion(0.08761529, 0.013805142, 0.030120498, 0.9956032)
+bones/2/rotation = Quaternion(0.022189802, -0.0008296888, 0.0081783235, 0.99972)
+bones/3/rotation = Quaternion(0.022221267, -0.0017305219, 0.008214192, 0.9997179)
+bones/4/rotation = Quaternion(-0.0018241857, 0.0010029549, 0.0043172305, 0.9999886)
+bones/5/rotation = Quaternion(0.004780894, 0.01781766, -0.00530275, 0.99981576)
+bones/7/rotation = Quaternion(-0.68402284, -0.3209423, 0.39984676, -0.5188752)
+bones/8/rotation = Quaternion(0.58774185, 0.056836136, -0.15665314, 0.79170007)
+bones/9/rotation = Quaternion(0.060257226, -0.056466307, 0.6640758, 0.74309087)
+bones/10/rotation = Quaternion(-0.18517075, 0.6985697, 0.40006036, 0.5636169)
+bones/11/rotation = Quaternion(0.21078774, 0.06837677, 0.50149024, 0.8363019)
+bones/12/rotation = Quaternion(0.04747901, -0.05502331, -0.14063446, 0.9873906)
+bones/13/rotation = Quaternion(0.16821818, -0.07728392, 0.121907614, 0.9751249)
+bones/15/rotation = Quaternion(0.48232305, -0.0799882, 0.18189147, 0.85316)
+bones/16/rotation = Quaternion(0.16986956, 0.0068621794, -0.17887771, 0.9690718)
+bones/17/rotation = Quaternion(0.056160636, 0.01621161, 0.056850262, 0.9966701)
+bones/19/rotation = Quaternion(0.63149905, -0.39269453, 0.42962232, 0.51227397)
+bones/20/rotation = Quaternion(0.39344898, -0.29765022, -0.34355563, 0.7991069)
+bones/21/rotation = Quaternion(0.051053025, 0.056315955, -0.49255687, 0.86695445)
+bones/22/rotation = Quaternion(-0.37718183, -0.5261269, -0.17758541, 0.741207)
+bones/23/rotation = Quaternion(0.024413217, 0.02854749, -0.4994168, 0.86554724)
+bones/24/rotation = Quaternion(0.079894, 0.07079477, 0.4745382, 0.8737382)
+bones/25/rotation = Quaternion(0.11575158, 0.11116204, -0.052080307, 0.98566335)
+bones/27/rotation = Quaternion(0.44648883, 0.10379743, -0.24052519, 0.8555826)
+bones/28/rotation = Quaternion(0.17095856, -0.0024972043, 0.15779766, 0.97255695)
+bones/29/rotation = Quaternion(0.084820114, -0.01723988, -0.0727053, 0.9935906)
+bones/31/rotation = Quaternion(0.048077453, 0.64236665, 0.75713825, 0.10860723)
+bones/32/rotation = Quaternion(-0.67945415, -0.029508406, -0.08298176, 0.7284129)
+bones/33/rotation = Quaternion(0.22316925, -0.005744156, -0.054408725, 0.9732432)
+bones/34/rotation = Quaternion(0.2674841, -0.0676349, 0.018974409, 0.96099836)
+bones/36/rotation = Quaternion(0.09737208, 0.534322, 0.8162771, -0.1967498)
+bones/37/rotation = Quaternion(-0.60493577, 0.06799423, -0.04158306, 0.7922755)
+bones/38/rotation = Quaternion(0.3258421, 0.103152595, -0.11684837, 0.93248755)
+bones/39/rotation = Quaternion(0.26391378, 0.066825286, -0.018920282, 0.96204257)
+
 [node name="Sally" parent="." unique_id=764589073 instance=ExtResource("14_lwabn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.238873, 1.0004997, -1.1580932)
+transform = Transform3D(0.57869774, 0, -0.8155421, 0, 1, 0, 0.8155421, 0, 0.57869774, -15.162803, 1.4405749, -1.6725377)
 
 [node name="UglyStatue" parent="." unique_id=283069863 instance=ExtResource("16_iq2su")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.18765593, 0.05586779, 2.2540777)
 
 [editable path="Zoe"]
+[editable path="Zoe/Zoe"]
