@@ -36,6 +36,29 @@ position: -273,58
 Could use one of these standard wrenches on dad's spaceship... Maybe I can ask around if they have a spare.
 ===
 
+title: workshopSign_workshop
+color: green
+position: -273,58
+---
+Johiński workshop.
+This is Dad's place of work.
+===
+
+title: fireStopper_workshop
+color: green
+position: -273,58
+---
+Safety first of course.
+What do they call them on Earth again..?
+-> Fire Extinguishers
+    So sofisticated.
+-> Flame Quenchers
+    Like a dwarf killing a dragon.
+-> Fire Snuffer
+    Like a drugger, snuffing all that fire.
+Why can't they just say Fire Stopper like us?
+===
+
 title: sputnik_workshop
 color: green
 position: -273,58

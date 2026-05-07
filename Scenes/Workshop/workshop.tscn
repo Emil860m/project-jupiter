@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://dqekt5rttkm8v" path="res://Prefabs/Posters/ganymedePoster.tscn" id="37_mmrm4"]
 [ext_resource type="PackedScene" uid="uid://et422gwslsse" path="res://Prefabs/Calisto/pileOfBoxes.tscn" id="38_mmrm4"]
 [ext_resource type="PackedScene" uid="uid://gn4isqkou71c" path="res://Prefabs/Calisto/wrenchs_workshop.tscn" id="39_11saj"]
+[ext_resource type="PackedScene" uid="uid://d18nefn3ce88k" path="res://Prefabs/Calisto/workshopSign.tscn" id="39_x87e5"]
 [ext_resource type="PackedScene" uid="uid://2pk26aftwmc8" path="res://Prefabs/Posters/ponsPoster.tscn" id="40_11saj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehkgj"]
@@ -156,6 +157,7 @@ mesh = SubResource("PlaneMesh_q2001")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=421776166]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03476906, -0.08213806, -0.04591942)
+visible = false
 navigation_mesh = SubResource("NavigationMesh_lncj0")
 
 [node name="WORLD" type="Node" parent="NavigationRegion3D" unique_id=1470359968]
@@ -546,7 +548,8 @@ transform = Transform3D(0.0065367618, -0.0043823295, -0.9999691, 0.00017519236, 
 
 [node name="Rubble" parent="NavigationRegion3D/WORLD" unique_id=2104201558 instance=ExtResource("9_ga7uk")]
 transform = Transform3D(-0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.49999997, 30.03477, 0.6384535, 16.95408)
-has_dialog = false
+object_id = "trashPile"
+dialog_node = "trashPile_workshop"
 
 [node name="Barrel" parent="NavigationRegion3D/WORLD" unique_id=83570398 instance=ExtResource("12_if5wu")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -17.26392, 0.05364979, 16.595713)
@@ -747,7 +750,7 @@ spot_attenuation = -0.49
 spot_angle = 39.689068
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=835161589]
-transform = Transform3D(1, 0, 0, 0, 0.32276136, 0.9464804, 0, -0.9464804, 0.32276136, -10.380125, 11.959628, 7.9001656)
+transform = Transform3D(0.9967915, -0.025834579, -0.07575852, 0.07795297, 0.09848492, 0.9920806, -0.018168915, -0.9948032, 0.10018279, -10.380125, 11.959628, 7.9001656)
 light_color = Color(1, 0.7607843, 0.6392157, 1)
 light_bake_mode = 1
 shadow_enabled = true
@@ -756,7 +759,7 @@ spot_attenuation = -0.49
 spot_angle = 39.252014
 
 [node name="SpotLight3D9" type="SpotLight3D" parent="." unique_id=726472852]
-transform = Transform3D(0.728646, -0.019183004, 0.68462193, -0.6300615, 0.37311965, 0.6810318, -0.26851013, -0.92758495, 0.25978562, -7.3087406, 12.615039, 4.0385056)
+transform = Transform3D(0.86522645, -0.11369691, 0.4883199, -0.42342132, 0.35589212, 0.83309966, -0.2685101, -0.9275848, 0.2597856, -7.3087406, 12.615039, 4.0385056)
 light_color = Color(1, 0.7607843, 0.6392157, 1)
 light_bake_mode = 1
 shadow_enabled = true
@@ -813,7 +816,8 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 8.01946, 1.016695, -9.9
 
 [node name="FireStopper" parent="." unique_id=360190013 instance=ExtResource("27_uatr3")]
 transform = Transform3D(0.09437785, 0, 0.17633156, 0, 0.2, 0, -0.17633156, 0, 0.09437785, -18.79717, 0.62043697, 18.850666)
-has_dialog = false
+object_id = "fireStopper1"
+dialog_node = "fireStopper_workshop"
 
 [node name="IndustrialLiquidTankA" parent="." unique_id=925635222 instance=ExtResource("28_w7kre")]
 transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, 17.948944, 3.118585, 11.234605)
@@ -1140,6 +1144,9 @@ has_dialog = false
 [node name="Node3D7" parent="." unique_id=1953588564 instance=ExtResource("34_bw3j0")]
 transform = Transform3D(0.04856652, 0, 0.64818305, 0, 0.65, 0, -0.64818305, 0, 0.04856652, -15.599843, 0.14670978, -2.3903146)
 
+[node name="PaperNotice" parent="." unique_id=847548939 instance=ExtResource("36_svaw3")]
+transform = Transform3D(0.63733035, -0.092283554, 0.08828256, 0.10097614, 0.63922656, -0.060771413, -0.078191325, 0.07330138, 0.6411029, -15.487406, 1.7446688, -1.3217773)
+
 [node name="HisBoxes" type="Node3D" parent="." unique_id=1920080306]
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -14.808685, 0.14670978, 2.4798872)
 
@@ -1161,9 +1168,6 @@ transform = Transform3D(0.68024766, 0, 0.73298234, 0, 1, 0, -0.73298234, 0, 0.68
 [node name="Node3D6" parent="HisBoxes" unique_id=47735830 instance=ExtResource("34_bw3j0")]
 transform = Transform3D(-0.26886937, 0, 0.96317667, 0, 1, 0, -0.96317667, 0, -0.26886937, -0.43835258, 0, -0.71588707)
 
-[node name="Node3D" parent="HisBoxes" unique_id=847548939 instance=ExtResource("36_svaw3")]
-transform = Transform3D(0.9896789, -0.14330262, 0, 0.14330262, 0.9896789, 0, 0, 0, 1, -1.4798985, 2.4583986, -5.848715)
-
 [node name="Node3D3" parent="." unique_id=548216174 instance=ExtResource("37_mmrm4")]
 transform = Transform3D(-0.009124163, -0.06405934, 0.9979045, 0.0036912132, 0.99793696, 0.0640952, -0.9999516, 0.0042682914, -0.008868884, 10.305863, 1.756171, -15.101547)
 
@@ -1184,3 +1188,17 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -14.495004, 0.05364979,
 
 [node name="Barrel2" parent="." unique_id=1307657006 instance=ExtResource("12_if5wu")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -15.481729, 0.05364979, 10.563885)
+
+[node name="JohinskiSign" parent="." unique_id=181024586 instance=ExtResource("39_x87e5")]
+transform = Transform3D(0.99304795, -0.11771072, 0, 0.11771072, 0.99304795, 0, 0, 0, 1, -15.611101, 2.5243335, 3.4847026)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="JohinskiSign" unique_id=2082770008]
+transform = Transform3D(0.8745012, 0, 0.48502335, 0.18519582, 0.92423314, -0.33390963, -0.44827464, 0.38182867, 0.80824304, 1.4574585, 0, 3.1871734)
+spot_range = 7.28224
+spot_angle = 35.937435
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="JohinskiSign" unique_id=655960361]
+transform = Transform3D(-0.74731934, 0.067665935, 0.66101086, -0.15200718, 0.95101064, -0.26920724, -0.64684457, -0.30166203, -0.7004229, 1.4574585, 0, -2.6082845)
+spot_range = 7.28224
+spot_attenuation = -0.14
+spot_angle = 35.937435

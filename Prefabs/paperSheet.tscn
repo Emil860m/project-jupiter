@@ -25,10 +25,11 @@ material_override = SubResource("StandardMaterial3D_68vdw")
 mesh = ExtResource("2_eeuht")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1859646711]
-transform = Transform3D(0.029599108, 0, 0, 0, 1.4604619, 0, 0, 0, 0.85548234, -0.06537205, 0, -0.016253471)
+transform = Transform3D(0.07049419, 0.058814697, 0, -0.0028411977, 1.459277, 0, 0, 0, 0.93639654, -0.05957383, 0.06245166, -0.036225557)
 mesh = SubResource("BoxMesh_nfwfv")
 
-[node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("4_cpbbq")]
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_cpbbq")]
+meshs = [NodePath("../MeshInstance3D")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=411725430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025024414, 0.09729004, 0)
