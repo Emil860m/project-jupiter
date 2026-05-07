@@ -13,7 +13,6 @@ size = Vector3(3, 7, 5)
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 script = ExtResource("1_myes0")
 item_name = "console"
-has_dialog = false
 
 [node name="GanymedeColnsole" type="MeshInstance3D" parent="." unique_id=386450553]
 mesh = ExtResource("1_welf1")

@@ -18,5 +18,5 @@ func check_schedule():
 	if should_be_invisible:
 		visible = !dialog_node == ""
 	$CollisionShape3D.disabled = !visible
-	has_dialog = false
+	has_dialog = !dialog_node == "" and has_dialog
 	
