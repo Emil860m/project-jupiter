@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="18_dcae5"]
 [ext_resource type="PackedScene" uid="uid://nmxf5wvoxmcg" path="res://Prefabs/Ganymede/left_wall.tscn" id="21_e6j45"]
 [ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="23_aubca"]
-[ext_resource type="PackedScene" uid="uid://cvv7l02d6nv7o" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
 [ext_resource type="PackedScene" uid="uid://cs55xxpbvxs4e" path="res://NPC/Kassandra/Kassandra.tscn" id="24_rxpas"]
 [ext_resource type="PackedScene" uid="uid://jlpqaxd3k3fj" path="res://Prefabs/button.tscn" id="24_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="25_tn6kv"]
@@ -67,13 +67,14 @@ script = ExtResource("1_31i0m")
 environment = SubResource("Environment_7441k")
 
 [node name="Player" parent="." unique_id=134844603 instance=ExtResource("2_osfji")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.302002, 1.000001, 4.0865746)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.302002, 1.0200794, 4.0865746)
+axis_lock_angular_x = true
 
 [node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("23_aubca")]
 transform = Transform3D(0.99999666, 9.519834e-05, 0.002603985, -8.88364e-05, 0.999997, -0.0024519968, -0.0026042098, 0.002451758, 0.9999936, -12.415967, 0.7903018, 34.191563)
 
 [node name="NavigationAgent3D" type="NavigationRegion3D" parent="." unique_id=723621283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013459206, -0.040087223, -0.10386753)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024052143, -0.040087223, -0.14380932)
 navigation_mesh = SubResource("NavigationMesh_rt5xv")
 
 [node name="Floor" type="Node" parent="NavigationAgent3D" unique_id=745475719]
