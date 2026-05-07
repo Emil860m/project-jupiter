@@ -43,7 +43,7 @@ func check_time_and_flags():
 		visible = false
 	else:
 		visible = true
-	$CollisionShape3D.disabled = visible
+	$CollisionShape3D.disabled = !visible
 	interactable_component.object_id = currentYarnNode
 	dialogComp.start_node = currentYarnNode
 
