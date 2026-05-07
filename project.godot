@@ -15,7 +15,7 @@ General/banks_path="res://FmodBank/Desktop"
 [application]
 
 config/name="project-jupiter"
-run/main_scene="uid://bbj4anq6eaket"
+run/main_scene="uid://dss84wsv2xl0e"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
