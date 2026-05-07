@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://dss84wsv2xl0e"]
+
+[ext_resource type="Script" path="res://Scenes/splash_screen.gd" id="1_7m5qv"]
+[ext_resource type="Texture2D" uid="uid://bf6fjqfseobjw" path="res://Textures/SplashScreen/IconMonoDark.svg" id="1_pufkq"]
+[ext_resource type="Texture2D" uid="uid://r6ffl8bwmu2j" path="res://Textures/SplashScreen/fmod-svgrepo-com (1).svg" id="3_7m5qv"]
+[ext_resource type="Texture2D" uid="uid://cup6r8phrt34t" path="res://Textures/SplashScreen/iupiter fin (1).svg" id="4_7m5qv"]
+
+[sub_resource type="Animation" id="Animation_lus2m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("CanvasLayer/Iupiter:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("CanvasLayer/FmodYarn:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pufkq"]
+resource_name = "fade_out"
+length = 9.933333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Iupiter:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.9333334, 6.633333, 7.6666665, 9.066667),
+"transitions": PackedFloat32Array(1, -0.5, -0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/FmodYarn:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5666667, 2.5333333, 4.0333333),
+"transitions": PackedFloat32Array(-0.5, 2, 2, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7m5qv"]
+_data = {
+&"RESET": SubResource("Animation_lus2m"),
+&"fade_out": SubResource("Animation_pufkq")
+}
+
+[node name="SplashScreen" type="Node2D" unique_id=580461135]
+script = ExtResource("1_7m5qv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=17644676]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=37136169]
+offset_left = -81.0
+offset_top = -50.0
+offset_right = 1990.0
+offset_bottom = 1129.0
+color = Color(0, 0, 0, 1)
+
+[node name="FmodYarn" type="Node2D" parent="CanvasLayer" unique_id=707369625]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(940, 520)
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/FmodYarn" unique_id=1830582701]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Yarn" type="Sprite2D" parent="CanvasLayer/FmodYarn/HSplitContainer" unique_id=1566085955]
+position = Vector2(481, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("1_pufkq")
+
+[node name="Fmod" type="Sprite2D" parent="CanvasLayer/FmodYarn/HSplitContainer" unique_id=1089010030]
+position = Vector2(-349, 4)
+texture = ExtResource("3_7m5qv")
+
+[node name="Iupiter" type="Node2D" parent="CanvasLayer" unique_id=608233672]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(940, 520)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Iupiter" unique_id=1474417195]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Iupiter/CenterContainer" unique_id=1702675422]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_7m5qv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1229069054]
+libraries/ = SubResource("AnimationLibrary_7m5qv")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

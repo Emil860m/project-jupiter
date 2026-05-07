@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp4co2t68mcjm"]
 
-[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_myes0"]
+[ext_resource type="Script" uid="uid://bhac8f3mjweov" path="res://Prefabs/Scripts/scheduled_interactable_object.gd" id="1_myes0"]
 [ext_resource type="ArrayMesh" uid="uid://cqxpu41uf84ir" path="res://Assest/GanymedeConsole/ganymedeColnsole.obj" id="1_welf1"]
 [ext_resource type="ArrayMesh" uid="uid://e0rvlekinlv" path="res://Assest/GanymedeConsole/ganymedeColnsoleHousing.obj" id="2_fb3gw"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="4_myes0"]
@@ -12,6 +12,7 @@ size = Vector3(3, 7, 5)
 [node name="GanymedeConsole" type="StaticBody3D" unique_id=746988006]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 script = ExtResource("1_myes0")
+item_name = "console"
 
 [node name="GanymedeColnsole" type="MeshInstance3D" parent="." unique_id=386450553]
 mesh = ExtResource("1_welf1")

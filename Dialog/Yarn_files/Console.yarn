@@ -1,0 +1,230 @@
+title: console_0740to0900
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_crashesAtRationale>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_0900to1000
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_crashesAtRationale>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1000to1100
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_crashesAtRationale>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1100to1200
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_crashesAtRationale>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1200to1300
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_meteorWarning>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1300to1400
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_meteorWarning>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1400to1500
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_insekczyk>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1500to1600
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_insekczyk>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1600to1700
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_gestionPrize>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1700to1800
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_gestionPrize>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1800to1900
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_missingColour>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_1900to2000
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_missingColour>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_2000to2100
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_missingColour>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_2100to2200
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_natureNurture>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_2200to2300
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_natureNurture>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_2300to2400
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_natureNurture>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+title: console_2400to2500
+color: purple
+position: 0,0
+---
+Would you like to read the news or check the log?
+-> The news
+	<<jump news_natureNurture>>
+-> The log
+	Hospital arrivals within the last hour: INSERT HERE
+	Courtyard arrivals within the last hour: INSERT HERE
+===
+
+// News
+
+title: news_crashesAtRationale
+color: blue
+position: 0,0
+---
+Kallistians' collision by The Rationale highlights need for restrictions on ship permits.
+Until then remember to use POJ for maneuverability when dining out.
+===
+title: news_meteorWarning
+color: blue
+position: 0,0
+---
+Meteor warning from 17 to 20.
+Remember to allocate POJ for durability to protect from the scatter.
+===
+title: news_insekczyk
+color: blue
+position: 0,0
+---
+The latest report from the unified studies have concluded that a single serving of Insekczyk can provide a significant increase to social interpretation and comportment for at least 12 hours post consumption.
+===
+title: news_gestionPrize
+color: blue
+position: 0,0
+---
+Zoë Eklekta from Ganymede to receive prize for excellent gestion. Your time is valuable so do like Zoë and make the most of it.
+===
+title: news_missingColour
+color: blue
+position: 0,0
+---
+Colouring supplies still missing.
+In spite of the recent search, the rainbow building, as it is colloquially called, advises anyone visiting Kallisto to keep their eye out.
+===
+title: news_natureNurture
+color: blue
+position: 0,0
+---
+After extensive research, the unified studies have finally found a conclusive answer to the question of nature versus nuture.
+It seems the actions of a parent shape the child significantly more than their genes, so be on your best behaviour if you want to raise them well.
+===

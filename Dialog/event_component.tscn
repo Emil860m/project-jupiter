@@ -97,6 +97,7 @@ script = ExtResource("1_byhhv")
 [node name="DialogRunner" parent="." unique_id=189222724 instance=ExtResource("2_0idnk")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=780186044]
+layer = 2
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1621108285]
 layout_mode = 3
