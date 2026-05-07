@@ -1,15 +1,18 @@
 extends StaticBody3D
 
-
+@export var blend_animation: bool = false
 @export var character_name: = ""
 @export var time_pass: int = 5
 @export var mood_portrait_dict: Dictionary[String, String]
 @export var current_mood: String = "Happy"
 @onready var dialogComp:= $DialogComponent
 @onready var interactable_component: Node = $InteractableComponent
+@onready var animation_tree: AnimationTree = %AnimationTree
 var currentYarnNode: String = ""
 var interacting := false
+var animation_blend_value
 func _ready() -> void:
+	self.set_process(false)
 	SignalBus.connect("time_step_changed", check_time_and_flags)
 	$DialogComponent/DialogRunner.connect("dialogue_completed", dialog_complete)
 	check_time_and_flags()
@@ -25,6 +28,20 @@ func dialog_complete():
 	interacting = false
 	check_time_and_flags()
 
+func _process(delta: float) -> void:
+	var current_blend_value = animation_tree.get("parameters/BlendSpace1D/blend_position")
+	if animation_blend_value < 0:
+		if current_blend_value <= animation_blend_value:
+			self.set_process(false)
+	else:
+		if current_blend_value >= animation_blend_value:
+			self.set_process(false)
+	if blend_animation:
+		animation_tree.set("parameters/BlendSpace1D/blend_position", current_blend_value + (animation_blend_value * delta * 2))
+	else:
+		animation_tree.set("parameters/BlendSpace1D/blend_position", animation_blend_value)
+	
+	
 func check_time_and_flags():
 	print("checking time and flags")
 	if interacting: 
@@ -57,6 +74,10 @@ func _on_mouse_entered():
 	
 func _on_mouse_exited():
 	interactable_component.hide_shader()
+
+func change_animation(blend_value: float) -> void:
+	animation_blend_value = blend_value
+	self.set_process(true)
 
 func _interact():
 	interacting = true

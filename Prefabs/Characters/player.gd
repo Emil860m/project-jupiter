@@ -24,7 +24,7 @@ var interact_click: bool = false
 var nodes_in_interact_range: Array[Node3D]
 var animation_state_machine
 var can_move = true
-
+var can_click = true
 var pause_scene = preload("res://Scenes/Misc/pause_menu.tscn")
 
 func _ready() -> void:
@@ -54,6 +54,8 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("debug_click"):
+		Globals.increment_timestep(100)
 	if Input.is_action_just_pressed("pause"):
 		var pause_scene_instance = pause_scene.instantiate()
 		add_child(pause_scene_instance)
@@ -65,7 +67,7 @@ func _process(delta: float) -> void:
 		can_move = true
 		return
 	if can_move:
-		if input_comp.get_select_input():
+		if input_comp.get_select_input() && can_click:
 			if !interact_click:
 				interact_object = null
 			interact_click = false
@@ -90,7 +92,9 @@ func _on_object_clicked(object: Node, collision: CollisionShape3D):
 func _interact():
 	navigation_agent_3d.target_position = self.global_position
 	animation_state_machine.travel("Push")
+	can_click = false
 	await push_done
+	can_click = true
 	interact_object.runner()
 	interact_object = null
 	clock_label.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
