@@ -5,6 +5,7 @@ extends Node
 @onready var dialogue_runner := $DialogRunner# YarnDialogueRunner
 @export var start_node: String = "Start"
 @export var auto_start: bool = false
+@export var target_portrait_height := 200
 @onready var line_presenter := $CanvasLayer/Control/LinePresenter
 @onready var options_presenter := $CanvasLayer/Control/OptionsPresenter
 var has_portrait = false
@@ -29,7 +30,11 @@ func start_dialog():
 	$CanvasLayer.visible = true
 	var portrait = $CanvasLayer/Control/LinePresenter/Control
 	if portrait:
+		var _portrait = $CanvasLayer/Control/LinePresenter/Control/TextureRect
+		if _portrait.size.y > target_portrait_height:
+			_portrait.scale *= target_portrait_height/_portrait.size.y
 		portrait.visible = has_portrait
+
 	print(start_node)
 	dialogue_runner.start_dialogue(start_node)
 

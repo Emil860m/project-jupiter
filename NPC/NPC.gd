@@ -48,6 +48,8 @@ func check_time_and_flags():
 
 func change_mood(mood: String):
 	current_mood = mood
+	if current_mood in mood_portrait_dict.keys():
+		dialogComp.set_character_portrait(mood_portrait_dict[current_mood])
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	interactable_component.handle_click(event)
