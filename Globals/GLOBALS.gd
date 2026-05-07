@@ -23,8 +23,7 @@ func increment_timestep(increment: int):
 	SignalBus.time_step_changed.emit()
 	
 	if convert_timesteps_to_time(current_timestep)[0] >= max_hour:
-		SceneController.goto_scene("res://Scenes/EndingScene.tscn")
-
+		trigger_end_of_game("You ran out of time. Your dad is yeeted into Jupiter!")
 
 func add_to_interact_set(item) -> void:
 	interacted_set[item] = null
@@ -57,3 +56,8 @@ func convert_timesteps_to_time(timestep: int):
 func convert_timesteps_to_string(timestep: int):
 	var timeArr = convert_timesteps_to_time(timestep)
 	return ("" if timeArr[0] >= 10  else "0") + str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])
+
+
+func trigger_end_of_game(message: String):
+	SceneController.goto_ending_scene(message)
+	
