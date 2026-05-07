@@ -50,18 +50,15 @@ Apparently they took control of some abandoned building in the lower city right 
 You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn't comply. 
 
 -> This is too risky, and for what? Mars doesn't care about us.
-But you know the risk of throwing away the paper. Not answering mean losing your citizenship. 
-but what else could you do? would you really be willing to risk your life like that. 
-And that's only to go at the Embassy. what will happen after that?
-
+	But you know the risk of throwing away the paper. Not answering mean losing your citizenship. 
+	but what else could you do? would you really be willing to risk your life like that. 
+	And that's only to go at the Embassy. what will happen after that?
 	-> It's not like there's other any choice.
 		So you decide to go to the Embassy.
 		The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
 		In the corridor sitting while waiting for their faith three dozens of people, between men and women spanning from 17 to 40. 
 		When you enter the commander's office a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
-
 		Commander: So kid, what are you good at? How can you be of service?
-		
 		-> I'm a mechanic, I'm pretty good at repairing stuff.
 			The commander smirks at you, a smirk that set upon you a sense of unease. 
 			Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones, 
@@ -80,7 +77,6 @@ And that's only to go at the Embassy. what will happen after that?
 	-> I've heard of a group of people. not military just normal people, that want a change. Maybe I can be of help there. 
 		Maybe you can make a difference.
 		<<jump RecruitReb>>
-
 -> You're not scared of those Ziemniak.
 	The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
 	In the corridor sitting while waiting for their faith three dozens of people, between men and women spanning from 17 to 40. 
@@ -122,14 +118,12 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 				Grig: You're more than welcome to join our little club, we're always looking to expand here.
 				He leans in closer. 
 				Grig: But how can you help?	
-
 				-> I can hold a gun.
 					The man starts laughing. 
 					Grig: that was a fun joke kid.
 					Grig: look at you, you don't look like someone who's ready to take someones life.
 					His face is now harsh and with a sliver of empathy towards you.
 					Grig: not even a Ziemniak's one.
-			
 					-> I can do it sir.
 						Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
 						Grig: Secondly are you sure? we can find you some other job on the station.
@@ -151,12 +145,10 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 						Grig: Good, We're always in need for good mechanics.
 						<<if set_flag("dadMech")>><<endif>>
 						<<jump Ch2>>	
-
 			-> I just wanted to know more about this place
 				Grig: listen kid. you don't just run into a place like this. 
 				His face is as harsh as it can possibly be. 
 				Grig: Now you're either with us or not.
-				
 				-> I'm here to help sir. 
 					The man sighs, losening up the built up tension 
 					Grig: Ok then, what can you do? we can indeed find you some job on the station or on the field.
@@ -176,14 +168,12 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 			Grig: You're more than welcome to join our little club, we're always looking to expand here.
 			He leans in closer. 
 			Grig: But how can you help?	
-
 			-> I can hold a gun.
 				The man starts laughing. 
 				Grig: that was a fun joke kid.
 				Grig: look at you, you don't look like someone who's ready to take someones life.
 				His face is now harsh and with a sliver of empathy towards you.
 				Grig: not even a Ziemniak's one.
-		
 				-> I can do it sir.
 					Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
 					Grig: Secondly are you sure? we can find you some other job on the station.
@@ -195,7 +185,7 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 						Grig: Good thinking. 
 						Grig: We're always in need for good mechanics.
 						<<if set_flag("dadMech")>><<endif>>
-						<<jump Ch2>>						
+						<<jump Ch2>>
 				-> ehm I...
 					Grig: Listen, we can find you some other job on the station.
 					Grig: I really don't want you to die kid.
@@ -204,13 +194,11 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 			-> I know how to repair stuff 
 					Grig: Good, We're always in need for good mechanics.
 					<<if set_flag("dadMech")>><<endif>>
-					<<jump Ch2>>	
-
+					<<jump Ch2>>
 		-> I just wanted to know more about this place
 			Grig: listen kid. you don't just run into a place like this. 
 			His face is as harsh as it can possibly be. 
 			Grig: Now you're either with us or not.
-			
 			-> I'm here to help sir. 
 				The man sighs, loosening up the built up tension 
 				Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
