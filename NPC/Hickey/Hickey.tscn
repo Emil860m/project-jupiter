@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_jcqdm"]
 [ext_resource type="PackedScene" uid="uid://b0ekex4iil0gu" path="res://Assest/characterModels/Hickey/Hickey.fbx" id="4_nipkc"]
 [ext_resource type="Animation" uid="uid://c6kk67vxbww24" path="res://Assest/characterModels/Animations/Crouch.anim" id="5_jcqdm"]
-[ext_resource type="Animation" uid="uid://dd04ax8l02cpl" path="res://Assest/characterModels/Animations/RelaxedIdle.anim" id="6_k0l4o"]
-[ext_resource type="Animation" uid="uid://qipwnrn8y2ku" path="res://Assest/characterModels/Animations/Working.anim" id="7_xh84q"]
+[ext_resource type="Animation" uid="uid://dbb0dy3r4tulx" path="res://Assest/characterModels/Animations/RelaxedIdle.anim" id="6_k0l4o"]
+[ext_resource type="Animation" uid="uid://b1lgbyg4xgtq8" path="res://Assest/characterModels/Animations/Working.anim" id="7_xh84q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3kkoo"]
 height = 3.0336914
@@ -20,33 +20,26 @@ _data = {
 &"Working": ExtResource("7_xh84q")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hihhu"]
-animation = &"HickAnim/RelaxedIdle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ids8k"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k0l4o"]
 animation = &"HickAnim/Working"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w8xsj"]
-advance_mode = 2
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xh84q"]
+animation = &"HickAnim/RelaxedIdle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ecp5"]
-advance_mode = 2
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_hihhu"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_k0l4o")
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_xh84q")
+blend_point_1/pos = 0.0
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bcrcy"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ids8k"]
 advance_mode = 2
-advance_condition = &"Working"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n0frs"]
-advance_mode = 2
-advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gjjni"]
-states/HickAnim_RelaxedIdle/node = SubResource("AnimationNodeAnimation_hihhu")
-states/HickAnim_RelaxedIdle/position = Vector2(328.4, 168)
-states/HickAnim_Working/node = SubResource("AnimationNodeAnimation_ids8k")
-states/HickAnim_Working/position = Vector2(350.80002, 63.200005)
+states/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_hihhu")
+states/BlendSpace1D/position = Vector2(278.8, 110.208)
 states/Start/position = Vector2(100.8, 110.4)
-transitions = ["Start", "HickAnim_Working", SubResource("AnimationNodeStateMachineTransition_w8xsj"), "Start", "HickAnim_RelaxedIdle", SubResource("AnimationNodeStateMachineTransition_5ecp5"), "HickAnim_RelaxedIdle", "HickAnim_Working", SubResource("AnimationNodeStateMachineTransition_bcrcy"), "HickAnim_Working", "HickAnim_RelaxedIdle", SubResource("AnimationNodeStateMachineTransition_n0frs")]
+transitions = ["Start", "BlendSpace1D", SubResource("AnimationNodeStateMachineTransition_ids8k")]
 
 [node name="Hickey" type="StaticBody3D" unique_id=1285645448]
 script = ExtResource("1_jlog5")
@@ -69,41 +62,41 @@ mesh = SubResource("CapsuleMesh_k0l4o")
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.026022017, -0.9973855, -0.025953889)
 
 [node name="Skeleton3D" parent="Neutral Idle" index="0" unique_id=429042913]
-bones/0/position = Vector3(-0.013386965, 1.0122977, 0.012545969)
-bones/0/rotation = Quaternion(-0.030168064, -0.06582128, -0.04240925, 0.9964733)
-bones/1/rotation = Quaternion(-0.07113593, -0.012419535, 0.04230935, 0.9964916)
-bones/2/rotation = Quaternion(0.0072247144, -0.019675996, 0.05160679, 0.9984476)
-bones/3/rotation = Quaternion(0.007617168, -0.017770886, 0.052311197, 0.99844366)
-bones/4/rotation = Quaternion(0.103765905, 0.006585568, -0.02442395, 0.99428004)
-bones/5/rotation = Quaternion(-0.0014374795, 0.033636242, -0.07595752, 0.9965426)
-bones/7/rotation = Quaternion(-0.5702806, -0.39903215, 0.62314844, -0.35670644)
-bones/8/rotation = Quaternion(0.5190411, 0.20273069, 0.00060640747, 0.83035916)
-bones/9/rotation = Quaternion(0.009113886, -0.074854046, 0.11588972, 0.99039555)
-bones/10/rotation = Quaternion(-0.008352093, 0.28565392, 0.10875337, 0.95210546)
+bones/0/position = Vector3(-0.007840991, 1.0137217, 0.012284476)
+bones/0/rotation = Quaternion(-0.03225189, -0.0682569, -0.03846267, 0.9964043)
+bones/1/rotation = Quaternion(-0.0613512, -0.012272976, 0.04309003, 0.9971102)
+bones/2/rotation = Quaternion(0.018201826, -0.019301487, 0.050107833, 0.9983914)
+bones/3/rotation = Quaternion(0.018618612, -0.017440885, 0.050649557, 0.9983906)
+bones/4/rotation = Quaternion(0.1025102, 0.0071677202, -0.030203791, 0.99424756)
+bones/5/rotation = Quaternion(-0.015044147, 0.031679623, -0.08899093, 0.9954149)
+bones/7/rotation = Quaternion(-0.58227634, -0.38716376, 0.6224842, -0.35152796)
+bones/8/rotation = Quaternion(0.50130224, 0.18059671, 0.0010548601, 0.84621495)
+bones/9/rotation = Quaternion(0.009062478, -0.07485966, 0.11523653, 0.99047184)
+bones/10/rotation = Quaternion(0.016896024, 0.27273652, 0.09314936, 0.9574198)
 bones/11/rotation = Quaternion(0.10588962, 0.06124532, 0.10965536, 0.98641384)
 bones/12/rotation = Quaternion(0.009166365, -0.03743751, -0.16089088, 0.9862194)
 bones/13/rotation = Quaternion(0.04792703, -0.044152614, 0.027902475, 0.9974843)
 bones/15/rotation = Quaternion(0.07864654, -0.019125666, 0.1318294, 0.9879626)
 bones/16/rotation = Quaternion(0.21514352, 0.0016343072, -0.10982493, 0.9703861)
 bones/17/rotation = Quaternion(0.13411957, 0.020036053, 0.05225431, 0.98938364)
-bones/19/rotation = Quaternion(0.6322786, -0.34589365, 0.5934854, 0.3582688)
-bones/20/rotation = Quaternion(0.3439719, -0.17359418, 0.06682545, 0.920371)
-bones/21/rotation = Quaternion(0.005805032, 0.085146934, -0.08638181, 0.99259984)
-bones/22/rotation = Quaternion(0.014822623, -0.18300922, -0.005725976, 0.9829829)
-bones/23/rotation = Quaternion(0.09221164, -0.0071622934, -0.1648969, 0.98196477)
-bones/24/rotation = Quaternion(0.04546811, -0.01676573, 0.21429358, 0.9755665)
-bones/25/rotation = Quaternion(0.039738435, 0.005411031, -0.08411415, 0.9956488)
-bones/27/rotation = Quaternion(0.07849215, 0.012756362, -0.12363754, 0.9891361)
-bones/28/rotation = Quaternion(0.16811725, -0.0020761848, 0.09026588, 0.9816234)
-bones/29/rotation = Quaternion(0.08808807, -0.006326613, -0.0042028227, 0.9960838)
-bones/31/rotation = Quaternion(0.14689508, 0.1516195, 0.96907735, -0.12775977)
-bones/32/rotation = Quaternion(-0.1458243, 0.03248157, 0.020548841, 0.9885636)
-bones/33/rotation = Quaternion(0.47786602, -0.047773957, -0.0411816, 0.8761654)
-bones/34/rotation = Quaternion(0.22049615, -0.019209037, 0.0047815703, 0.97518694)
-bones/36/rotation = Quaternion(-0.07378086, 0.013278279, 0.995184, -0.06315824)
-bones/37/rotation = Quaternion(-0.19867858, 0.055481035, 0.0068579777, 0.978469)
-bones/38/rotation = Quaternion(0.6312926, -0.0061383275, -0.051051117, 0.7738384)
-bones/39/rotation = Quaternion(0.24413435, 0.019620217, -0.004893154, 0.9695306)
+bones/19/rotation = Quaternion(0.63436764, -0.344481, 0.5911788, 0.35974777)
+bones/20/rotation = Quaternion(0.34102634, -0.17833036, 0.06277621, 0.9208467)
+bones/21/rotation = Quaternion(0.007551145, 0.08492408, -0.112365745, 0.99000245)
+bones/22/rotation = Quaternion(0.018660832, -0.17893232, 0.0037901243, 0.9836771)
+bones/23/rotation = Quaternion(0.09198905, -0.0073014637, -0.16507417, 0.9819549)
+bones/24/rotation = Quaternion(0.046107832, -0.016268224, 0.21472082, 0.9754509)
+bones/25/rotation = Quaternion(0.040277507, 0.0046192557, -0.08409121, 0.99563307)
+bones/27/rotation = Quaternion(0.078646764, 0.012765474, -0.123591505, 0.9891294)
+bones/28/rotation = Quaternion(0.1692415, -0.0020166526, 0.08989475, 0.9814644)
+bones/29/rotation = Quaternion(0.088382825, -0.0063612172, -0.0042964397, 0.9960571)
+bones/31/rotation = Quaternion(0.14727244, 0.1455131, 0.97069925, -0.12198288)
+bones/32/rotation = Quaternion(-0.1403978, 0.027503178, 0.01866458, 0.9895372)
+bones/33/rotation = Quaternion(0.4770259, -0.045396965, -0.037482332, 0.8769154)
+bones/34/rotation = Quaternion(0.21993579, -0.019181209, 0.0047757607, 0.97531414)
+bones/36/rotation = Quaternion(-0.07830648, 0.011864255, 0.9953241, -0.055292964)
+bones/37/rotation = Quaternion(-0.19823097, 0.048493873, 0.007279783, 0.9789279)
+bones/38/rotation = Quaternion(0.62987345, -0.0048002065, -0.049158733, 0.7751257)
+bones/39/rotation = Quaternion(0.24320565, 0.019573923, -0.004883427, 0.969765)
 
 [node name="AnimationPlayer" parent="Neutral Idle" index="1" unique_id=1181491474]
 libraries/HickAnim = SubResource("AnimationLibrary_3kkoo")
@@ -111,8 +104,7 @@ libraries/HickAnim = SubResource("AnimationLibrary_3kkoo")
 [node name="AnimationTree" type="AnimationTree" parent="Neutral Idle" unique_id=1971070130]
 tree_root = SubResource("AnimationNodeStateMachine_gjjni")
 anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/Working = false
-parameters/conditions/idle = true
+parameters/BlendSpace1D/blend_position = 0.0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
