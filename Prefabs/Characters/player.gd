@@ -83,19 +83,20 @@ func handle_raycast(hit):
 	
 	
 func _on_object_clicked(object: Node, collision: CollisionShape3D):
-	interact_object = object
-	interact_collision_object = collision
-	interact_click = true
-	if nodes_in_interact_range.reduce(func(accum, node): return accum || node.get_node("CollisionShape3D") == interact_collision_object, false):
-		_interact()
+	if can_click:
+		interact_object = object
+		interact_collision_object = collision
+		interact_click = true
+		if nodes_in_interact_range.reduce(func(accum, node): return accum || node.get_node("CollisionShape3D") == interact_collision_object, false):
+			_interact()
 
 func _interact():
+	can_click = false
 	navigation_agent_3d.target_position = self.global_position
 	animation_state_machine.travel("Push")
-	can_click = false
 	await push_done
-	can_click = true
 	interact_object.runner()
+	can_click = true
 	interact_object = null
 	clock_label.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 

@@ -9,7 +9,7 @@
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("CanvasLayer/Iupiter:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -21,7 +21,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("CanvasLayer/FmodYarn:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -79,6 +79,7 @@ offset_bottom = 1129.0
 color = Color(0, 0, 0, 1)
 
 [node name="FmodYarn" type="Node2D" parent="CanvasLayer" unique_id=707369625]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(940, 520)
 
 [node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/FmodYarn" unique_id=1830582701]
@@ -104,6 +105,7 @@ position = Vector2(-349, 4)
 texture = ExtResource("3_7m5qv")
 
 [node name="Iupiter" type="Node2D" parent="CanvasLayer" unique_id=608233672]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(940, 520)
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Iupiter" unique_id=1474417195]
