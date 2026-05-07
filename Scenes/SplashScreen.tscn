@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dss84wsv2xl0e"]
 
-[ext_resource type="Script" path="res://Scenes/splash_screen.gd" id="1_7m5qv"]
-[ext_resource type="Texture2D" uid="uid://bf6fjqfseobjw" path="res://Textures/SplashScreen/IconMonoDark.svg" id="1_pufkq"]
-[ext_resource type="Texture2D" uid="uid://r6ffl8bwmu2j" path="res://Textures/SplashScreen/fmod-svgrepo-com (1).svg" id="3_7m5qv"]
+[ext_resource type="Script" uid="uid://chspvwpoj758j" path="res://Scenes/splash_screen.gd" id="1_7m5qv"]
+[ext_resource type="Texture2D" uid="uid://27d5xt3sgaio" path="res://Textures/SplashScreen/FMOD Logo White - Transparent Background.png" id="2_pufkq"]
 [ext_resource type="Texture2D" uid="uid://cup6r8phrt34t" path="res://Textures/SplashScreen/iupiter fin (1).svg" id="4_7m5qv"]
 
 [sub_resource type="Animation" id="Animation_lus2m"]
@@ -95,14 +94,9 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Yarn" type="Sprite2D" parent="CanvasLayer/FmodYarn/HSplitContainer" unique_id=1566085955]
-position = Vector2(481, 0)
-scale = Vector2(3, 3)
-texture = ExtResource("1_pufkq")
-
 [node name="Fmod" type="Sprite2D" parent="CanvasLayer/FmodYarn/HSplitContainer" unique_id=1089010030]
-position = Vector2(-349, 4)
-texture = ExtResource("3_7m5qv")
+position = Vector2(21.11, 36.3)
+texture = ExtResource("2_pufkq")
 
 [node name="Iupiter" type="Node2D" parent="CanvasLayer" unique_id=608233672]
 modulate = Color(1, 1, 1, 0)
@@ -120,7 +114,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Iupiter/CenterContainer" unique_id=1702675422]
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.45146194, 0.45146197)
 texture = ExtResource("4_7m5qv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1229069054]
