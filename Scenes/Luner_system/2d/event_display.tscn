@@ -6,10 +6,15 @@
 [node name="EventDisplay" type="Node2D" unique_id=791367096]
 script = ExtResource("1_c2sya")
 
-[node name="EventComponent" parent="." unique_id=1464193511 instance=ExtResource("2_sk2a7")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1245654033]
+
+[node name="EventComponent" parent="CanvasLayer" unique_id=1464193511 instance=ExtResource("2_sk2a7")]
 start_node = "event_test"
 
-[node name="Backdrop" type="ColorRect" parent="." unique_id=454030375]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Backdrop" type="ColorRect" parent="CanvasLayer" unique_id=454030375]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.6666667)
