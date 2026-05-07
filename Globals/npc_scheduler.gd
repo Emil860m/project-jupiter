@@ -42,8 +42,8 @@ func _ready() -> void:
 	}
 	kass = {
 		locations.HOSPITAL: [
-			NPC_Schedule.new(td2ts(9, 00), td2ts(12, 30), [],[], "kasHospitalTS1"),
-			NPC_Schedule.new(td2ts(14, 00), td2ts(20, 00), [],["kassWorkshop"],"kasHospitalTS4"),
+			NPC_Schedule.new(td2ts(9, 00), td2ts(14, 00), [],[], "kasHospitalTS1"),
+			NPC_Schedule.new(td2ts(14, 01), td2ts(20, 00), [],["kassWorkshop"],"kasHospitalTS4"),
 			NPC_Schedule.new(td2ts(18, 00), td2ts(20, 00), [],[],"kasHospitalTS7"),
 		],
 		locations.WORKSHOP: [

@@ -82,14 +82,14 @@ script = ExtResource("1_31i0m")
 environment = SubResource("Environment_7441k")
 
 [node name="Player" parent="." unique_id=134844603 instance=ExtResource("2_osfji")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.302002, 1.000001, 4.0865746)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.302002, 1.0200794, 4.0865746)
+axis_lock_angular_x = true
 
 [node name="Hickey" parent="." unique_id=1285645448 instance=ExtResource("23_aubca")]
 transform = Transform3D(0.99999666, 9.519834e-05, 0.002603985, -8.88364e-05, 0.999997, -0.0024519968, -0.0026042098, 0.002451758, 0.9999936, -12.415967, 0.7903018, 34.191563)
 
 [node name="NavigationAgent3D" type="NavigationRegion3D" parent="." unique_id=723621283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013459206, -0.040087223, -0.10386753)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024052143, -0.040087223, -0.14380932)
 navigation_mesh = SubResource("NavigationMesh_rt5xv")
 
 [node name="Floor" type="Node" parent="NavigationAgent3D" unique_id=745475719]
@@ -653,7 +653,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.
 
 [node name="GanymedeConsole" parent="NavigationAgent3D/Lobby" unique_id=289951264 instance=ExtResource("6_qr0c3")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.575, 0, 2.441)
-has_dialog = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationAgent3D/Lobby" unique_id=666018956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2525795, 1.8729777, 2.4322097)
@@ -705,10 +704,6 @@ transform = Transform3D(-0.4, 0, -3.4969112e-08, 0, 0.4, 0, 3.4969112e-08, 0, -0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationAgent3D/Lobby/StaticBody3D" unique_id=885982953]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 44)
 shape = SubResource("BoxShape3D_y0jcu")
-
-[node name="MedicalBed" parent="NavigationAgent3D" unique_id=963841555 instance=ExtResource("23_rxpas")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.042898, 0.022592545, 23.277035)
-has_dialog = false
 
 [node name="NavigationAgent3D_DeadDaddyRoom_MidicalConsole#OmniLight3D" type="OmniLight3D" parent="." unique_id=1522717193]
 transform = Transform3D(-0.34319106, 0, -3.1060984, 0, 3.1250002, 0, 3.1060984, 0, -0.34319106, 0.14440155, 6.0327907, 0.76584244)
@@ -812,7 +807,6 @@ transform = Transform3D(0.4104899, 2.4957334e-08, 0.2854786, 0, -0.5, 4.371139e-
 
 [node name="MedicalConsole" parent="." unique_id=1574312724 instance=ExtResource("33_48os6")]
 transform = Transform3D(-0.23246169, 0, 0.21991262, 0, 0.32, 0, -0.21991262, 0, -0.23246169, -11.833609, 0.10928771, 36.99059)
-has_dialog = false
 
 [node name="Cup" parent="." unique_id=385252958 instance=ExtResource("35_2j7xw")]
 transform = Transform3D(0.5398807, 0, -0.44556576, 0, 0.7, 0, 0.44556576, 0, 0.5398807, -12.202895, 0.7262548, -5.2171054)
