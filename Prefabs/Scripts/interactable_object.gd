@@ -7,6 +7,8 @@ class_name interactable_object
 @export var dialog_node : String
 @export var has_dialog : bool = true
 @export var has_outline: bool = true
+@export var portrait_path: String = ""
+
 
 
 func _ready() -> void:
@@ -19,6 +21,8 @@ func _ready() -> void:
 	if has_dialog:
 		assert(dialog_node != "", "Missing dialog node on object: " + name)
 		dialog_component.start_node = dialog_node
+	if portrait_path != "":
+		dialog_component.set_character_portrait(portrait_path)
 	
 	
 func _interact() -> void:
