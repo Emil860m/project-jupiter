@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14209652, 1.7686119, -5.438
 shape = SubResource("BoxShape3D_lj0om")
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_wx26b")]
-meshs = [NodePath(""), NodePath("../BookShelfStanding2"), NodePath("../BookShelfStanding3"), NodePath("../BookShelfStanding4"), NodePath("../BookShelfStanding5"), NodePath("")]
+meshs = [NodePath("../BookShelfStanding2"), NodePath("../BookShelfStanding3"), NodePath("../BookShelfStanding4"), NodePath("../BookShelfStanding5")]
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("3_2qg5n")]
 

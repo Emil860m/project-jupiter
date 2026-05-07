@@ -2,8 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://ctba34acgaowa" path="res://Textures/MapUI/Rectangle_data.png" id="1_cxi0g"]
 [ext_resource type="Script" uid="uid://kkhphk8vafwv" path="res://Scenes/Misc/pause_menu.gd" id="1_fj8d5"]
-[ext_resource type="Texture2D" uid="uid://dkqg334sy3n36" path="res://Textures/MapUI/button_exit.png" id="2_lvmo5"]
-[ext_resource type="Texture2D" uid="uid://bhyd1bo8i7rgb" path="res://Textures/MapUI/button.png" id="4_l1ybc"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="3_2wn1d"]
+[ext_resource type="Texture2D" uid="uid://bc0ek3nxu5yin" path="res://Textures/MapUI/button_travel.png" id="4_5q00k"]
+[ext_resource type="Texture2D" uid="uid://b4s52qv1oo388" path="res://Textures/sliders/slider.png" id="4_hyuo0"]
+[ext_resource type="Texture2D" uid="uid://c03ji5tuf7jxg" path="res://Textures/sliders/slider_grab.png" id="5_334oy"]
+[ext_resource type="Texture2D" uid="uid://du1qr0c7ncrhb" path="res://Textures/sliders/sider_tick.png" id="5_tofxj"]
 
 [node name="PauseMenu" type="Node2D" unique_id=829336649]
 process_mode = 2
@@ -37,6 +40,8 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=1492405050]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 22
 text = "Master volume: "
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=1159591806]
@@ -46,6 +51,10 @@ size_flags_horizontal = 3
 [node name="MasterSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer" unique_id=119690191]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_icons/grabber = ExtResource("4_hyuo0")
+theme_override_icons/grabber_highlight = ExtResource("5_334oy")
+theme_override_icons/grabber_disabled = ExtResource("4_hyuo0")
+theme_override_icons/tick = ExtResource("5_tofxj")
 max_value = 10.0
 value = 5.0
 tick_count = 11
@@ -56,6 +65,8 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=734598286]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 22
 text = "Music:"
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=599794694]
@@ -65,6 +76,10 @@ size_flags_horizontal = 3
 [node name="BgmSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer" unique_id=1835706600]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_icons/grabber = ExtResource("4_hyuo0")
+theme_override_icons/grabber_highlight = ExtResource("5_334oy")
+theme_override_icons/grabber_disabled = ExtResource("4_hyuo0")
+theme_override_icons/tick = ExtResource("5_tofxj")
 max_value = 10.0
 value = 5.0
 tick_count = 11
@@ -75,6 +90,8 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=2046013491]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 22
 text = "Sound:"
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=790807828]
@@ -84,6 +101,10 @@ size_flags_horizontal = 3
 [node name="SfxSlider" type="HSlider" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=1206359703]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_icons/grabber = ExtResource("4_hyuo0")
+theme_override_icons/grabber_highlight = ExtResource("5_334oy")
+theme_override_icons/grabber_disabled = ExtResource("4_hyuo0")
+theme_override_icons/tick = ExtResource("5_tofxj")
 max_value = 10.0
 value = 5.0
 tick_count = 11
@@ -101,8 +122,12 @@ offset_right = 187.5
 offset_bottom = 47.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "This should be \"Resume\""
-icon = ExtResource("2_lvmo5")
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.7372549, 0, 1)
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 52
+text = "Resume GAME"
+icon = ExtResource("4_5q00k")
 icon_alignment = 1
 
 [node name="ExitButton" type="Button" parent="CanvasLayer" unique_id=1344555747]
@@ -117,8 +142,12 @@ offset_right = 187.5
 offset_bottom = 47.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "This should be \"Exit Game\""
-icon = ExtResource("2_lvmo5")
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 52
+text = "Exit Game"
+icon = ExtResource("4_5q00k")
 icon_alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1826969155]
@@ -131,11 +160,11 @@ offset_left = -82.5
 offset_right = 82.5
 offset_bottom = 23.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 42
 text = "Your game is paused."
 
 [node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=112472412]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -153,35 +182,41 @@ layout_mode = 2
 texture = ExtResource("1_cxi0g")
 
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer2" unique_id=1296136594]
+modulate = Color(0.94509804, 0.23137255, 0, 1)
 layout_mode = 2
-text = "Warning
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 26
+text = "Warning !
 Your progress will not be saved"
 horizontal_alignment = 1
 
 [node name="ConfirmExitButton" type="Button" parent="CanvasLayer" unique_id=1237168030]
-visible = false
 clip_contents = true
 offset_left = 758.0
 offset_top = 597.0
 offset_right = 1133.0
 offset_bottom = 692.0
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(0.94509804, 0.23137255, 0, 1)
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 52
 text = "EXIT"
-icon = ExtResource("4_l1ybc")
+icon = ExtResource("4_5q00k")
 icon_alignment = 1
 
 [node name="CancelButton" type="Button" parent="CanvasLayer" unique_id=307812477]
-visible = false
 clip_contents = true
 offset_left = 990.0
 offset_top = 597.0
 offset_right = 1365.0
 offset_bottom = 692.0
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("3_2wn1d")
+theme_override_font_sizes/font_size = 52
 text = "CANCEL"
-icon = ExtResource("4_l1ybc")
+icon = ExtResource("4_5q00k")
 icon_alignment = 1
 
 [connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]

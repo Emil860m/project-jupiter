@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dn76p03h1oorx" path="res://Prefabs/Posters/rationalPoster.tscn" id="19_723ao"]
 [ext_resource type="PackedScene" uid="uid://dqekt5rttkm8v" path="res://Prefabs/Posters/ganymedePoster.tscn" id="20_6dwed"]
 [ext_resource type="PackedScene" uid="uid://dwnpymibwm1r2" path="res://Prefabs/Ganymede/bosses_shelfs.tscn" id="20_fofm0"]
+[ext_resource type="PackedScene" uid="uid://xssi2idlokcw" path="res://Prefabs/MiscProps/desk.tscn" id="21_pqbx1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_35g8a"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -135,6 +136,7 @@ mesh = SubResource("PlaneMesh_oxwys")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=1591213467]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 21.289518, 4, -3.8975642)
+visible = false
 mesh = SubResource("PlaneMesh_13t73")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="NavigationRegion3D/Walls" unique_id=2066315259]
@@ -171,20 +173,78 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.758963, 0.056960817
 
 [node name="Lights" type="Node" parent="NavigationRegion3D" unique_id=1111230756]
 
-[node name="RoundLight" parent="NavigationRegion3D/Lights" unique_id=319968974 instance=ExtResource("9_6s0xy")]
-transform = Transform3D(0.49945477, -0.023344012, 1.0203992e-09, 0, -2.1855694e-08, -0.5, 0.023344012, 0.49945477, -2.183186e-08, -1.3961071, 4, -3.5395644)
-
 [node name="RoundLight3" parent="NavigationRegion3D/Lights" unique_id=2023325801 instance=ExtResource("9_6s0xy")]
 transform = Transform3D(-0.49945477, 0.023343999, 1.0204041e-09, -0.023343999, -0.49945477, -4.3687557e-08, -1.0204002e-09, -4.368756e-08, 0.5, -18.7117, 13.570031, 0.90136194)
-
-[node name="RoundLight4" parent="NavigationRegion3D/Lights" unique_id=2124890129 instance=ExtResource("9_6s0xy")]
-transform = Transform3D(-2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0, 0, 0, 0.5, -11.115532, 6.2828627, -5.3209567)
 
 [node name="RoundLight2" parent="NavigationRegion3D/Lights" unique_id=236316053 instance=ExtResource("9_6s0xy")]
 transform = Transform3D(-0.49945477, 0.023343971, -1.0203974e-09, 0, -2.1855694e-08, -0.5, -0.023343971, -0.49945477, 2.183186e-08, 8.734932, 4.4619884, 3.3964524)
 
-[node name="RoundLight5" parent="NavigationRegion3D/Lights" unique_id=391443699 instance=ExtResource("9_6s0xy")]
-transform = Transform3D(-0.49945477, 0.023343971, 1.0203974e-09, 0, -2.1855694e-08, 0.5, 0.023343971, 0.49945477, 2.183186e-08, 7.7554626, 6.5364304, -2.8769772)
+[node name="SpotLight3D" type="SpotLight3D" parent="NavigationRegion3D/Lights" unique_id=1058025096]
+transform = Transform3D(1, 0, 0, 0, -0.90988886, 0.4148522, 0, -0.41485217, -0.90988886, 10.193016, 4.250742, -3.1116962)
+light_color = Color(0.99999946, 0.8666901, 0.8126989, 1)
+spot_range = 18.68862
+spot_attenuation = -0.23
+spot_angle = 62.18
+spot_angle_attenuation = 3.1383314
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="NavigationRegion3D/Lights" unique_id=728967355]
+transform = Transform3D(1, 0, 0, 0, -0.90988886, 0.41485217, 0, -0.41485217, -0.90988886, -1.261797, 4.250742, -3.1116962)
+light_color = Color(0.99999946, 0.8666901, 0.8126989, 1)
+spot_range = 12.511
+spot_attenuation = 0.47
+spot_angle = 89.99
+spot_angle_attenuation = 0.03589684
+
+[node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Lights" unique_id=1713453439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.130462, 5.4739213, 1.1857347)
+light_color = Color(0.99999994, 0.6665822, 0.35758606, 1)
+omni_range = 3.717
+omni_attenuation = 0.211
+
+[node name="RoundLight4" parent="NavigationRegion3D/Lights" unique_id=319968974 instance=ExtResource("9_6s0xy")]
+transform = Transform3D(-0.49945477, 0.023343971, -1.0203974e-09, 0, -2.1855694e-08, -0.5, -0.023343971, -0.49945477, 2.183186e-08, -0.94339085, 4.4619884, 3.3964524)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="NavigationRegion3D/Lights" unique_id=468306321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4521389, 5.4739213, 1.1857347)
+light_color = Color(0.99999994, 0.6665822, 0.35758606, 1)
+omni_range = 3.717
+omni_attenuation = 0.211
+
+[node name="RoundLight5" parent="NavigationRegion3D/Lights" unique_id=409592431 instance=ExtResource("9_6s0xy")]
+transform = Transform3D(0.023343993, 0.49945477, -2.183186e-08, 0, -2.1855694e-08, -0.5, -0.49945477, 0.023343993, -1.0203984e-09, -20.791946, 4.949565, 1.8286114)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="NavigationRegion3D/Lights" unique_id=1904263606]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.58123, 5.961498, 3.2241402)
+light_color = Color(0.99999994, 0.6665822, 0.35758606, 1)
+omni_range = 3.717
+omni_attenuation = 0.211
+
+[node name="RoundLight6" parent="NavigationRegion3D/Lights" unique_id=1181682699 instance=ExtResource("9_6s0xy")]
+transform = Transform3D(0.023343993, 0.49945477, -2.183186e-08, 0, -2.1855694e-08, -0.5, -0.49945477, 0.023343993, -1.0203984e-09, -20.791946, 4.949565, -5.0816293)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="NavigationRegion3D/Lights" unique_id=1013011623]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.58123, 5.961498, -3.6861005)
+light_color = Color(0.99999994, 0.6665822, 0.35758606, 1)
+omni_range = 3.717
+omni_attenuation = 0.211
+
+[node name="RoundLight7" parent="NavigationRegion3D/Lights" unique_id=269846186 instance=ExtResource("9_6s0xy")]
+transform = Transform3D(-0.49945477, 0.023343971, -1.0203974e-09, 0, -2.1855694e-08, -0.5, -0.023343971, -0.49945477, 2.183186e-08, -17.180893, 4.949565, 7.2702847)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="NavigationRegion3D/Lights" unique_id=823903699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.785367, 5.961498, 5.0595684)
+light_color = Color(0.99999994, 0.6665822, 0.35758606, 1)
+omni_range = 3.717
+omni_attenuation = 0.211
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="NavigationRegion3D/Lights" unique_id=1323179203]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -16.628101, 19.21604, 0)
+light_color = Color(1, 0.8392157, 0.6666667, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 49.854
+spot_attenuation = 0.21
+spot_angle = 39.46
 
 [node name="BossChair" parent="NavigationRegion3D" unique_id=1639493704 instance=ExtResource("11_oxwys")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -18.196, 0, -0.154)
@@ -244,5 +304,8 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.32
 
 [node name="Node3D2" parent="." unique_id=881185904 instance=ExtResource("20_fofm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.657932, 0.019897703, 0.22884703)
+
+[node name="Desk" parent="." unique_id=10184086 instance=ExtResource("21_pqbx1")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -12.443015, 0.0043378253, 4.1424055)
 
 [editable path="Zoe"]
