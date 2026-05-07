@@ -1,7 +1,6 @@
 extends Node2D
 
-@onready var backdrop := $Backdrop
-@onready var dialog_component := $EventComponent
+@onready var dialog_component := $CanvasLayer/EventComponent
 @onready var dialog_runner: YarnDialogueRunner = dialog_component.dialogue_runner
 
 var callback: Callable
@@ -9,8 +8,6 @@ var callback: Callable
 func _ready():
 	dialog_runner.connect("dialogue_completed", _on_dialog_completed)
 	
-	backdrop.size = get_viewport().size
-	backdrop.position -= backdrop.size / 2
 
 func start(start_time: int, end_time: int, start_pos: moon_2d, end_pos: moon_2d):
 	dialog_component.start_node = EventController.fetch_event(start_time, end_time, start_pos, end_pos)
