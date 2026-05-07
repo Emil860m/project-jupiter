@@ -1,9 +1,27 @@
 [gd_scene format=3 uid="uid://ch4q00k07iu2i"]
 
 [ext_resource type="ArrayMesh" uid="uid://2412u302rpbs" path="res://Assest/plantPot/plantPot.obj" id="1_18y54"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_qg7ms"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_ucdjb"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_uxlik"]
 
-[node name="Plant" type="Node3D" unique_id=307560978]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ym8n5"]
+height = 1.3623047
+
+[node name="Plant" type="StaticBody3D" unique_id=1421599851]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+script = ExtResource("1_qg7ms")
+object_id = "cactus"
+dialog_node = "cactus_office"
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_ucdjb")]
+meshs = [NodePath("../PlantPot")]
 
 [node name="PlantPot" type="MeshInstance3D" parent="." unique_id=1681023535]
 mesh = ExtResource("1_18y54")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1396633161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34521487, 0)
+shape = SubResource("CylinderShape3D_ym8n5")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("4_uxlik")]

@@ -71,7 +71,9 @@ func add_functions():
 	dialogue_runner.add_function("stakes_r_check", EventController.stakes_radiation_check, 0)
 	
 	dialogue_runner.add_function("detriment_s_check", EventController.detriment_speed_check, 0)
-
+	
+	dialogue_runner.add_function("trigger_end_of_game", Globals.trigger_end_of_game, 1)
+	
 func add_non_global_function(yarn_func_name, function: Callable):
 	dialogue_runner.add_function(yarn_func_name, function, function.get_argument_count())
 

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://di2od257535r2"]
+
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_kau14"]
+[ext_resource type="ArrayMesh" uid="uid://ct5ftn7dymm6n" path="res://Assest/bookShelfStanding/bookShelfJar.obj" id="2_l6v76"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_fh4m0"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_tunx3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4qiq8"]
+height = 0.71447754
+radius = 0.44433594
+
+[node name="kawa" type="StaticBody3D" unique_id=66114354]
+script = ExtResource("1_kau14")
+object_id = "kafe"
+dialog_node = "cafe_Hospital"
+
+[node name="BookShelfJar" type="MeshInstance3D" parent="." unique_id=1307014901]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -2.5289435, 0.58785105)
+mesh = ExtResource("2_l6v76")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1329192049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1930542, 0)
+shape = SubResource("CylinderShape3D_4qiq8")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_fh4m0")]
+meshs = [NodePath("../BookShelfJar")]
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("4_tunx3")]

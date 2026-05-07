@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c44fwuoq0w1b3"]
 
 [ext_resource type="Texture2D" uid="uid://rxbo56l25jg7" path="res://Assest/boxCarrier/boxCarrier.png" id="1_4xy5v"]
+[ext_resource type="Script" uid="uid://bhac8f3mjweov" path="res://Prefabs/Scripts/scheduled_interactable_object.gd" id="1_sbccl"]
 [ext_resource type="ArrayMesh" uid="uid://b14d30ust4op4" path="res://Assest/boxCarrier/boxCarrier.obj" id="2_sbccl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3ei6"]
@@ -9,8 +10,13 @@ albedo_texture = ExtResource("1_4xy5v")
 [sub_resource type="BoxShape3D" id="BoxShape3D_2jnwv"]
 size = Vector3(2.8204346, 4.605591, 2.3913574)
 
-[node name="Node3D" type="Area3D" unique_id=1634277503]
+[node name="Node3D" type="StaticBody3D" unique_id=1010380943]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("1_sbccl")
+should_be_invisible = true
+item_name = "box"
+has_dialog = false
+has_outline = false
 
 [node name="BoxCarrier" type="MeshInstance3D" parent="." unique_id=794459523]
 material_override = SubResource("StandardMaterial3D_s3ei6")

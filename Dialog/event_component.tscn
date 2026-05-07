@@ -106,6 +106,7 @@ script = ExtResource("1_byhhv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=780186044]
 visible = false
+layer = 2
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1621108285]
 layout_mode = 3

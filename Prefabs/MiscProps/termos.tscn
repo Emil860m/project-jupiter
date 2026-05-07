@@ -1,9 +1,28 @@
 [gd_scene format=3 uid="uid://dbhyw7ptbtwe0"]
 
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_4wnvj"]
 [ext_resource type="ArrayMesh" uid="uid://bwr57ma0y12bj" path="res://Assest/propsMisc/termos.obj" id="1_kdwps"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_7jxar"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="3_3vf7k"]
 
-[node name="Termos" type="Node3D" unique_id=500274287]
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4opu"]
+size = Vector3(1, 1.8554688, 1)
+
+[node name="Termos" type="StaticBody3D" unique_id=1565024007]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_4wnvj")
+object_id = "thermos"
+dialog_node = "thermos_workshop"
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_7jxar")]
+meshs = [NodePath("../Termos")]
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("3_3vf7k")]
 
 [node name="Termos" type="MeshInstance3D" parent="." unique_id=254823673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.393383, 0, -1.9283271)
 mesh = ExtResource("1_kdwps")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1727553381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8515625, 0)
+shape = SubResource("BoxShape3D_t4opu")

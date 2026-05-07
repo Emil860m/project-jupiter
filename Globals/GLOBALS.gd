@@ -23,8 +23,7 @@ func increment_timestep(increment: int):
 	SignalBus.time_step_changed.emit()
 	
 	if convert_timesteps_to_time(current_timestep)[0] >= max_hour:
-		SceneController.goto_scene("res://Scenes/EndingScene.tscn")
-
+		trigger_end_of_game("You ran out of time. Your dad is yeeted into Jupiter!", false)
 
 func add_to_interact_set(item) -> void:
 	interacted_set[item] = null
@@ -38,7 +37,8 @@ func set_interacting_false():
 var current_chapter: int = 1
 var chapter_titles: Array[String] = [
 	"EVEN JUPITER IS BOUND BY TIME",
-	"GANYMEDE AND THE EAGLE"
+	"GANYMEDE AND THE EAGLE",
+	"CHAPTER3TITLE_PLACEHOLER"
 ]
 
 func get_current_chapter_title():
@@ -47,6 +47,42 @@ func get_current_chapter_title():
 func advance_chapter():
 	current_chapter += 1
 	
+var ch1_saved_values: Dictionary[String, Dictionary]
+func save_ch1_values():
+	ch1_saved_values["Flags"] = Flags.flags
+	ch1_saved_values["Stats"] = PlayerStats.Stats
+	
+func load_ch1_values():
+	current_chapter = 2
+	Flags.flags = ch1_saved_values["Flags"]
+	PlayerStats.Stats = ch1_saved_values["Stats"]
+	
+func reset_all_values():
+	current_chapter = 1
+	interacted_set = {}
+	interacting = false
+	current_timestep = 0
+	current_moon = "OutPost" 
+	current_location = NpcScheduler.locations.HOSPITAL
+	Flags.flags = {}
+	PlayerStats.Stats = {
+		PlayerStats.PlayerStatTypes.physical: 10,
+		PlayerStats.PlayerStatTypes.mental: 10,
+		PlayerStats.PlayerStatTypes.social: 10,
+		PlayerStats.PlayerStatTypes.education: 10,
+	}
+	ShipStats.Stats = {
+		ShipStats.ShipStatTypes.speed: 10,
+		ShipStats.ShipStatTypes.fuel_consumption: 10, # High stat means low consumption
+		ShipStats.ShipStatTypes.durability: 10,
+		ShipStats.ShipStatTypes.maneuverability: 10,
+		ShipStats.ShipStatTypes.radiation_protection: 10,
+	}
+	ShipStats.fuel = 50
+	ShipStats.fuel_cap = 50
+	ShipStats._unused_stat_allocation_points = 2
+	ShipStats.damage = 0
+	ShipStats.has_upgraded_fuel_cap = false
 	
 func convert_timesteps_to_time(timestep: int):
 	var minutes = (timestep * minutes_per_timestep) + minutes_before_timestep_zero
@@ -57,3 +93,8 @@ func convert_timesteps_to_time(timestep: int):
 func convert_timesteps_to_string(timestep: int):
 	var timeArr = convert_timesteps_to_time(timestep)
 	return ("" if timeArr[0] >= 10  else "0") + str(timeArr[0]) + ":" + ("" if timeArr[1] >= 10  else "0") + str(timeArr[1])
+
+
+func trigger_end_of_game(message: String, ch3: bool = false):
+	SceneController.goto_ending_scene(message, ch3)
+	

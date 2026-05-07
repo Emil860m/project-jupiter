@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://ct0lcgh4xq8fe"]
 
 [ext_resource type="Script" uid="uid://cspdeo5p7bn1q" path="res://Scenes/ending_scene.gd" id="1_4l0lt"]
+[ext_resource type="PackedScene" uid="uid://bu86cs42aawyj" path="res://SceneTransitions/chapter_transition.tscn" id="2_ulnso"]
 
 [node name="EndingScene" type="Node2D" unique_id=1409394007]
 script = ExtResource("1_4l0lt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1712826689]
+visible = false
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=503305846]
 offset_left = 879.0
@@ -27,6 +29,8 @@ offset_top = 646.0
 offset_right = 1003.0
 offset_bottom = 677.0
 text = "Quit game!"
+
+[node name="ChapterTransition" parent="." unique_id=1208388307 instance=ExtResource("2_ulnso")]
 
 [connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_mainmenu_button_up"]
 [connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_quit_button_up"]

@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bkbvwgs1ahefh"]
 
 [ext_resource type="Texture2D" uid="uid://c14lts3a1yba6" path="res://Assest/sputnik/sputnik.png" id="1_33k85"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_p83kc"]
 [ext_resource type="ArrayMesh" uid="uid://73xxw6u51dl4" path="res://Assest/sputnik/sputnik.obj" id="2_177wi"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_xrkg0"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_lt4ke"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dk2if"]
 albedo_texture = ExtResource("1_33k85")
@@ -11,6 +14,12 @@ radius = 1.0
 height = 4.260254
 
 [node name="Sputnik" type="StaticBody3D" unique_id=1320933123]
+script = ExtResource("1_p83kc")
+object_id = "sputnik"
+dialog_node = "sputnik_workshop"
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_xrkg0")]
+meshs = [NodePath("../Sputnik")]
 
 [node name="Sputnik" type="MeshInstance3D" parent="." unique_id=1131053544]
 material_override = SubResource("StandardMaterial3D_dk2if")
@@ -19,3 +28,5 @@ mesh = ExtResource("2_177wi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2000824909]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7032151, 0)
 shape = SubResource("CapsuleShape3D_p83kc")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_lt4ke")]
