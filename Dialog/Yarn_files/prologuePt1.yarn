@@ -37,7 +37,7 @@ But there it was, the unusual sight of black ink on lab grown cellulose. I don't
 25-12-2279; 14:50 | Płaskowyż Olimp - Mars
 
 Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, Mars. 
-As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the Terrestians for the control of the Jovian settlements on Callisto and Ganymede. 
+As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the Terrestians for the control of the Jovian settlements on Kallisto and Ganymede. 
 Your services will be explained to you as soon as you get in contact with your command officer.
 Please report to the martian embassy to you enclosed in this letter, you will be given more information about your tasks on location. 
 Do not disclose this convocation with no one.
@@ -235,7 +235,7 @@ position: 404,-519
 	<<endif>>
 	These people really believed in what they were doing and so did you.
 	And they might even have had a shot at creating a free Jovian system. 
-	But unfortunately with the come of the successful treaty that stopped the Shatter, the Blinds lose a lot of their followers. 
+	But unfortunately with the come of the successful treaty that stopped the Shatter, the Blind lose a lot of their followers. 
 	That on top of the opening of the Pons and the arrival of both Venuvian and Martian military force, drove the rebellion on the ground.
 <<elseif get_flag("Martian")>>
 	Apart from some minor incidents here and there the conflict never exploded into a real war. 
@@ -248,7 +248,7 @@ position: 404,-519
 	The latter would open back up the water supplies to the jovian, and give them partial freedom while remaining in control of europa and io's resources.
 	While martian and Venuvian would delopy troops in the system so to avoid father endangerment in the jovian. 	
 <<endif>>
-Everything that happened those days it's now a fudge. From back then you remember the relief. 
+Everything that happened those days it's now a hazy. From back then you remember the relief. 
 Not having to worry about water anymore. 
 You remember the sorrow.
 For those you lost. 
@@ -258,7 +258,7 @@ Of knowing all that could have been avoided
 But you also remember her.
 How safe she made you feel. 
 You remember that old sofa, where you grew closer. 
-where you hopped you'd have grown old together.
+where you hoped you'd grow old together.
 
 But here it is again, the memories are getting fuzzy.
 Everything spinning. 
@@ -267,14 +267,15 @@ Everything spinning.
 ->Try to relax
 
 The hospital was cold. 
-You always liked hospitals, how sterile they're. 
+You always liked hospitals, how sterile they are. 
 In how they're designed to be as efficient and secure as possible.
-there's something calming such an environment.
+there's something calming about such an environment.
 But nothing is calming right now. 
-The overused plastic chair is too Squeaky and stigg to be sitting in. 
+The overused plastic chair is too Squeaky and stiff to be sitting in. 
 The lights too flickery. 
+the faulty thermos full of hot soup in your hands, warms them up.
 When the doctor asked you to leave, and the nurse escorted you out, you knew something was wrong. 
-You compiled, but now you regret it.
+You complied, but now you regret it.
 
 The next thing you know the doctor is in front of you
 -> Aks how's your Wife doing.
@@ -288,16 +289,73 @@ position: 641,-656
 ---
 Time really flies. 
 Twelve years went by in a second. 
-You kept working as a mechanic, being a single dad it's not the easiest. 
-But having your own workshop helps with that. 
-So much that you're even able to bring your kid and 
+You kept working as a mechanic, raising Kher as best as you could.
+Being a single dad it's not always the easiest. 
+But having your own workshop helps with that.
+So much that you're even able to have enough time to bring your kid to the rational.
+It took them two weeks of annoying you and interrupting you mid work to convince you 
 
--> TELL THE KID TO READ THE MENU //+2 Phisical +1 Social
-	<<jump Ch4>>
--> TELL THE KID TO ORDER WHILE HE'S DOING BUISSNES //+2 Social +1 Mental
-	<<jump Ch4>>
--> LET THE KID PLAY WITH THEIR THING //+2 Education +1 Mental
-	<<jump Ch4>>
+When you go pick them up from school on ganymede to finally go there, they look at you.
+Kher: Hey dad, can Kazimierz hang out with us today?
+
+-> No kiddo, today it's just the two of us. 
+	The calming sound of the ship turning on helps you ignore your kid's upset face. 
+
+	-> so Kher how did it go today? 
+		Kher: ok.
+		-> Just drive silently 
+		-> Listen kid I know you wanted your friend with us 
+			But I really wanted to spend some time just you and me
+			is that ok? 
+			you smile at them. 
+			Kher: I said ok. don't worry.
+			<<jump rational>>
+	-> Just silently drive towards the rational.
+		<<jump rational>>
+
+-> Sure I don't see why not.
+	The calming sound of the ship turning on, cover your kid and their friend's chatter.
+	<<if set_flag("hick")>><<endif>>
+	<<jump rational>>
+===
+title: rational
+---
+You arrive at the rational, the place is packed full and it took you a minute for them to find you a seat. 
+<<if get_flag("hick")>> 
+The three of you sit in the fake leather chair, while the waitress serves you your menu. 
+<<elseif true>>
+The two of you sit in the fake leather chair, while the waitress serves you your menu. 
+<<endif>>
+You pick up the menu and read through it.
+-> pick the Barszcz 
+	It doesn't take you that long to settle on the Barszcz, you always felt more focused after good plate of it.
+-> pick the Barszcz 
+	It doesn't take you that long to settle on the NutriMix, you always felt stronger after good shake.
+-> pick the Barszcz 
+	It doesn't take you that long to settle on the Insekczyk, you can actually find people more tolerable after it.
+
+The evening flies by in a second. 
+You find yourself in the ship right outside the workshop, your kids get out of the ship, while you finish turning down all the systems.
+You see them enter the place and turning on the light.
+You're about to switch of the JPS when you get a message from the integrated log.
+<<if get_flag("Martian")>>
+The commander's contact pops up in your messages with a location attached.
+you wonder what job will she have for you this time.
+<<elseif get_flag("Blind")>>
+Grig's contact pops up in your messages with a location attached.
+you wonder what job will he have for you this time.
+<<endif>>
+
+-> Go to the location. 
+	When you get back home you find the kid sleeping with their book still in their hand.
+	Another day has past
+	<<if adjust_status(0,0,0,1)>><<endif>><<jump alphaDialogue>>
+-> Turn the system down and go back home.
+	You get in the house and get to work to finish a project you've been stuck on 
+	Kher decides to help you out, and so you two work together. 
+	By the end of the day you tuck them into bed and you know,
+	another day is over.
+	<<if adjust_status(1,0,0,0)>><<endif>><<jump alphaDialogue>>
 ===
 title: Ch4
 position: 690,-135
@@ -336,9 +394,30 @@ KHER JUST LEFT, IS DADDY GONNA SEND MESSAGES?
 ===
 title: alphaDialogue
 ---
-For the sakes of this alpha build the opening dialogue of chapter 2 is going to be replaced with this quick introduction. 
+Everything is wet when you wake up from cryosleep. 
+When you first took the spacecraft to get out of the jovian system you promised yourself you would never go back. 
+But here you are, the prodigal child back in their homeland. 
 
-You're playing as Kher the kid of the character you just played as in chapter 1, Kher wakes up after six months of cryostasis in his trip from Mars to the Joivan system.
-You grew up on Kallisto with you dad, how's now sick and hospitalized in Ganymede. For this reason you decided to come back from Mars to have a final goodby.
-As soon as they wake up, Kher hears what it seems to be the voice of their father telling him something. But they don't have time to waste, hurry up.
+Memories are weird when you wake up from cryo. 
+
+-> why was I even here? 
+	Dad: You were here for me kiddo. 
+	You look around but see no one. And then remember the message.
+
+	It came by mail what, 6 months ago now? they wrote you about your dad's sickness. 
+	Dad: Came here to say your final goodbye to your old man?
+	Dad: What a lucky father I am.
+
+	-> What's happening?
+		Dad: Don't worry about it.
+		Then you remember, he is being treated in Febris hospital in Ganymede. 
+
+	-> What sickness was it again?
+		Dad: I don't think it's that important now kiddo.
+		Then you remember, he is being treated in Febris hospital in Ganymede. 
+
+	-> Where was he staying.
+		You frantically look through your messages. 
+		Six months of spam are a lot to sift through. 
+		But here it is... He is being in Febris hospital in Ganymede. 
 ===
