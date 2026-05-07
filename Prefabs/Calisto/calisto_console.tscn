@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://c7037cetqutpk"]
 
+[ext_resource type="Script" uid="uid://bhac8f3mjweov" path="res://Prefabs/Scripts/scheduled_interactable_object.gd" id="1_2eio3"]
 [ext_resource type="Texture2D" uid="uid://5hi4mpcw3tmm" path="res://Assest/CalistoConsole/CalistoConsole.png" id="1_w5177"]
 [ext_resource type="ArrayMesh" uid="uid://dnt2l5e36skc2" path="res://Assest/CalistoConsole/calistoColnsole.obj" id="2_immy3"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_bolmv"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="5_mi4aw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5177"]
 albedo_texture = ExtResource("1_w5177")
@@ -10,6 +13,8 @@ albedo_texture = ExtResource("1_w5177")
 size = Vector3(1.5, 3, 5)
 
 [node name="CalistoConsole" type="StaticBody3D" unique_id=1258166439]
+script = ExtResource("1_2eio3")
+item_name = "console"
 
 [node name="CalistoColnsole" type="MeshInstance3D" parent="." unique_id=1569871636]
 material_override = SubResource("StandardMaterial3D_w5177")
@@ -18,3 +23,8 @@ mesh = ExtResource("2_immy3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=882978618]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.3, 0.8)
 shape = SubResource("BoxShape3D_w5177")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("4_bolmv")]
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("5_mi4aw")]
+meshs = [NodePath("../CalistoColnsole")]

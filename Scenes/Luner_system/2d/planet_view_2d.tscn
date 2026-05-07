@@ -14,8 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bup5jewhqwn17" path="res://Textures/MapUI/006_MapUI_selectedDestination.png" id="11_od5kk"]
 [ext_resource type="Texture2D" uid="uid://vb7t2tm832gd" path="res://Textures/MapUI/005_MapUI_selectetPlanet.png" id="12_l8kh0"]
 [ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="14_lrbvb"]
-[ext_resource type="Texture2D" uid="uid://c08inrlva5w6u" path="res://Textures/MapUI/button_travel_smoll.png" id="15_u6i4c"]
-[ext_resource type="Texture2D" uid="uid://bfs5xu0f08dlg" path="res://Textures/MapUI/button_exit_smoll.png" id="16_ovvku"]
+[ext_resource type="Texture2D" uid="uid://bdk2ni4fj7oo7" path="res://Textures/MapUI/button_smoll.png" id="15_ovvku"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0xxy"]
 radius = 33.06055
@@ -152,7 +151,7 @@ offset_right = -1409.0
 offset_bottom = 200.0
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 24
-text = "Estimated fluel [deltaV] cost:"
+text = "Estimated fuel [deltaV] cost:"
 
 [node name="Label5" type="Label" parent="UiElements" unique_id=1606294631]
 modulate = Color(0.3137255, 0.7019608, 0.2784314, 1)
@@ -266,7 +265,7 @@ text = "N/A"
 
 [node name="shipsDeltaV" type="Label" parent="UiElements" unique_id=625410002]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1601.0
+offset_left = -1598.0
 offset_top = 261.0
 offset_right = -1430.0
 offset_bottom = 288.0
@@ -276,7 +275,7 @@ text = "N/A"
 
 [node name="shipsMaxDeltaV" type="Label" parent="UiElements" unique_id=1147503867]
 modulate = Color(0.7294118, 0.8745098, 0.078431375, 1)
-offset_left = -1561.0
+offset_left = -1572.0
 offset_top = 261.0
 offset_right = -1390.0
 offset_bottom = 288.0
@@ -305,59 +304,124 @@ theme_override_font_sizes/font_size = 24
 text = "N/A"
 
 [node name="Button" type="Button" parent="UiElements" unique_id=2141699318]
-offset_left = -1321.0
-offset_top = 226.0
-offset_right = -1130.0
-offset_bottom = 277.0
-text = "
-"
-icon = ExtResource("15_u6i4c")
+offset_left = -1328.0
+offset_top = 118.0
+offset_right = -1137.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(0.7294118, 0.8745098, 0.078431375, 1)
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 29
+text = "TRAVEL"
+icon = ExtResource("15_ovvku")
 icon_alignment = 1
 
 [node name="Button3" type="Button" parent="UiElements" unique_id=1006985811]
-offset_left = -1321.0
-offset_top = 166.0
-offset_right = -1130.0
-offset_bottom = 217.0
-text = "This shoud be
- \"Call Tow Truck\""
-icon = ExtResource("15_u6i4c")
+offset_left = -1328.0
+offset_top = 289.0
+offset_right = -1137.0
+offset_bottom = 340.0
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(0.7294118, 0.8745098, 0.078431375, 1)
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 24
+text = "Call tow track"
+icon = ExtResource("15_ovvku")
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="UiElements" unique_id=926606263]
-offset_left = -1321.0
-offset_top = 286.0
-offset_right = -1130.0
-offset_bottom = 337.0
-text = "
-"
-icon = ExtResource("16_ovvku")
+offset_left = -1328.0
+offset_top = 173.0
+offset_right = -1137.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_pressed_color = Color(0.7294118, 0.8745098, 0.078431375, 1)
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 29
+text = "EXIT"
+icon = ExtResource("15_ovvku")
 icon_alignment = 1
 
 [node name="statPointPopup" type="Sprite2D" parent="UiElements" unique_id=1774735781]
 visible = false
 z_index = 1
-position = Vector2(-955.00006, -58.000004)
-scale = Vector2(0.6102941, 0.81368816)
+position = Vector2(-912.5, -58.000004)
+scale = Vector2(0.76654404, 0.81368816)
 texture = ExtResource("11_f6fv6")
 
 [node name="Button" type="Button" parent="UiElements/statPointPopup" unique_id=1222347272]
-offset_left = -91.75894
-offset_top = 49.158886
-offset_right = 99.24106
-offset_bottom = 100.15889
-icon = ExtResource("15_u6i4c")
+offset_left = -99.79855
+offset_top = 38.098137
+offset_right = 91.20145
+offset_bottom = 89.098145
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6862745, 0, 1)
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 34
+text = "OK"
+icon = ExtResource("15_ovvku")
+flat = true
+icon_alignment = 1
 
 [node name="Label" type="Label" parent="UiElements/statPointPopup" unique_id=139011095]
-offset_left = -206.45775
-offset_top = -88.48599
-offset_right = 214.65071
-offset_bottom = -33.182228
+offset_left = -172.85371
+offset_top = -73.73831
+offset_right = 187.2039
+offset_bottom = -18.434547
+theme_override_colors/font_color = Color(1, 0.6862745, 0, 1)
 theme_override_fonts/font = ExtResource("14_lrbvb")
 theme_override_font_sizes/font_size = 31
-text = "You have unallocated stat points"
+text = "You have unallocated POJ points"
+
+[node name="towTruckPopup" type="Sprite2D" parent="UiElements" unique_id=959061655]
+visible = false
+z_index = 1
+position = Vector2(-899.5, -58.000004)
+scale = Vector2(0.8143384, 0.81368816)
+texture = ExtResource("11_f6fv6")
+
+[node name="Confirm" type="Button" parent="UiElements/towTruckPopup" unique_id=306871382]
+offset_left = 14.121891
+offset_top = 49.158886
+offset_right = 205.12189
+offset_bottom = 100.15889
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6862745, 0, 1)
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 30
+text = "OK"
+icon = ExtResource("15_ovvku")
+icon_alignment = 1
+
+[node name="Cancel" type="Button" parent="UiElements/towTruckPopup" unique_id=226310095]
+offset_left = -206.45776
+offset_top = 49.15889
+offset_right = -15.457764
+offset_bottom = 100.15889
+theme_override_colors/font_color = Color(0.3137255, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_hover_color = Color(1, 0.6862745, 0, 1)
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 30
+text = "Cancel"
+icon = ExtResource("15_ovvku")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="UiElements/towTruckPopup" unique_id=988394570]
+offset_left = -206.91644
+offset_top = -78.6542
+offset_right = 214.19202
+offset_bottom = -23.350433
+theme_override_colors/font_color = Color(1, 0.6862745, 0, 1)
+theme_override_fonts/font = ExtResource("14_lrbvb")
+theme_override_font_sizes/font_size = 31
+text = "Do you want to call the tow truck?
+It will take more time than travel."
+horizontal_alignment = 1
 
 [connection signal="button_up" from="UiElements/Button" to="." method="_on_travel_button_up"]
 [connection signal="button_up" from="UiElements/Button3" to="." method="_on_tow_truck_button_up"]
 [connection signal="button_up" from="UiElements/Button2" to="." method="_on_exit_button_up"]
 [connection signal="button_up" from="UiElements/statPointPopup/Button" to="." method="_on_statpointPopup_button_up"]
+[connection signal="button_up" from="UiElements/towTruckPopup/Confirm" to="." method="_on_confirm_button_up"]
+[connection signal="button_up" from="UiElements/towTruckPopup/Cancel" to="." method="_on_cancel_button_up"]

@@ -1,7 +1,26 @@
 [gd_scene format=3 uid="uid://baxhi1d2apapl"]
 
 [ext_resource type="Script" uid="uid://bucbbxnmcugk6" path="res://Scenes/Luner_system/2d/tow_truck.gd" id="1_xtgc5"]
-[ext_resource type="Texture2D" uid="uid://b6qmitcc31ov2" path="res://Textures/Dark/texture_08.png" id="2_gu1px"]
+[ext_resource type="Texture2D" uid="uid://bwk30e48i6ujt" path="res://Textures/Dark/dark.png" id="2_7gr2o"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="3_x17bs"]
+[ext_resource type="Texture2D" uid="uid://bc0ek3nxu5yin" path="res://Textures/MapUI/button_travel.png" id="4_fufr7"]
+[ext_resource type="Texture2D" uid="uid://0cn3l60ubnh7" path="res://Textures/MapUI/towTruck/towTruck2.png" id="5_fufr7"]
+[ext_resource type="Texture2D" uid="uid://chf7x7gkm1wgl" path="res://Textures/MapUI/towTruck/towTruck.png" id="5_sayk5"]
+[ext_resource type="Texture2D" uid="uid://djljvypx8740c" path="res://Textures/MapUI/007_MapUI_thePonds.png" id="6_x17bs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sayk5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fufr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sayk5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="TowTruck" type="Node2D" unique_id=188965670]
 script = ExtResource("1_xtgc5")
@@ -14,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_gu1px")
+texture = ExtResource("2_7gr2o")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1110569300]
 anchors_preset = 8
@@ -28,7 +47,9 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.29803923, 0.8117647, 0.38039216, 1)
+theme_override_fonts/font = ExtResource("3_x17bs")
+theme_override_font_sizes/font_size = 56
 text = "You did not have the necessary fuel to reach timeout.
 Your ship has been towtrucked."
 horizontal_alignment = 1
@@ -46,6 +67,26 @@ offset_right = 106.5
 offset_bottom = 202.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.29803923, 0.8117647, 0.38039216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.72156864, 0, 1)
+theme_override_fonts/font = ExtResource("3_x17bs")
+theme_override_font_sizes/font_size = 42
 text = "Travel to the Ponds"
+icon = ExtResource("4_fufr7")
+flat = true
+icon_alignment = 1
+
+[node name="chuj" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=372384874]
+position = Vector2(982, 308)
+scale = Vector2(2.8733335, 2.8733332)
+sprite_frames = SubResource("SpriteFrames_sayk5")
+frame_progress = 0.86333793
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=1235038004]
+offset_left = 856.0
+offset_top = 811.0
+offset_right = 1055.0
+offset_bottom = 1010.0
+texture = ExtResource("6_x17bs")
 
 [connection signal="button_up" from="CanvasLayer/TravelButton" to="." method="_on_travel_button_button_up"]

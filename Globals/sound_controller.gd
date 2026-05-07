@@ -42,7 +42,8 @@ func set_volumes():
 	set_ambient_volume()
 
 func set_ambient_volume():
-	amb_emitter.volume = master_vol * music_vol * 0.5 # ambience is half as loud as music
+	var ambience_softening: float = 1.0
+	amb_emitter.volume = master_vol * music_vol * ambience_softening
 
 func set_bgm(location, loading=false):
 	if location != NpcScheduler.locations.PONS and location != NpcScheduler.locations.RATIONALE:

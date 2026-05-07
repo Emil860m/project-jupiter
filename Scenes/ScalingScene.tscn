@@ -46,6 +46,8 @@
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="44_wq0p7"]
 [ext_resource type="PackedScene" uid="uid://dqekt5rttkm8v" path="res://Prefabs/Posters/ganymedePoster.tscn" id="45_raeed"]
 [ext_resource type="PackedScene" uid="uid://2pk26aftwmc8" path="res://Prefabs/Posters/ponsPoster.tscn" id="46_cpmbg"]
+[ext_resource type="PackedScene" uid="uid://c3dldt5thtlrr" path="res://Prefabs/Calisto/box.tscn" id="47_cpmbg"]
+[ext_resource type="PackedScene" uid="uid://c44fwuoq0w1b3" path="res://Prefabs/Calisto/boxCarrier.tscn" id="48_oc8jj"]
 
 [node name="ScalingScene" type="Node3D" unique_id=1149280770]
 
@@ -211,3 +213,9 @@ transform = Transform3D(-4.3551832e-08, -0.08536476, 0.99634975, -3.731412e-09, 
 
 [node name="Node3D3" parent="." unique_id=578344689 instance=ExtResource("46_cpmbg")]
 transform = Transform3D(-4.3585537e-08, -0.0758315, 0.9971208, -3.3147005e-09, 0.9971208, 0.0758315, -1, -5.2267153e-16, -4.371139e-08, -8.18939, 1.9590008, 33.92493)
+
+[node name="Node3D4" parent="." unique_id=1953588564 instance=ExtResource("47_cpmbg")]
+transform = Transform3D(0.28142852, 0, 0.58591634, 0, 0.65, 0, -0.58591634, 0, 0.28142852, -3.6277897, 0, 12.815273)
+
+[node name="Node3D5" parent="." unique_id=1634277503 instance=ExtResource("48_oc8jj")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -3.3620563, 0, 11.465121)

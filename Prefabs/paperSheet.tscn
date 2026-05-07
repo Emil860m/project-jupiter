@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://d4nrqmjt8rn5q"]
+
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_lf21n"]
+[ext_resource type="Texture2D" uid="uid://dlysn1ol3b5a" path="res://Assest/paperSheet/miscItems2.png" id="1_nfwfv"]
+[ext_resource type="ArrayMesh" uid="uid://ch70yqwyx7l88" path="res://Assest/paperSheet/paperSheetA.obj" id="2_eeuht"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="4_cpbbq"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_capno"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68vdw"]
+albedo_texture = ExtResource("1_nfwfv")
+
+[sub_resource type="BoxMesh" id="BoxMesh_nfwfv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebo63"]
+size = Vector3(0.08483887, 1.3532715, 1)
+
+[node name="Node3D" type="StaticBody3D" unique_id=601691877]
+script = ExtResource("1_lf21n")
+object_id = "paper1"
+dialog_node = "paperNotice_workshop"
+
+[node name="PaperSheetA" type="MeshInstance3D" parent="." unique_id=850518077]
+transform = Transform3D(0.9999972, -0.0023736455, 0, 0.0023736455, 0.9999972, 0, 0, 0, 1, 0, -1.7635221, 3.0539813)
+material_override = SubResource("StandardMaterial3D_68vdw")
+mesh = ExtResource("2_eeuht")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1859646711]
+transform = Transform3D(0.07049419, 0.058814697, 0, -0.0028411977, 1.459277, 0, 0, 0, 0.93639654, -0.05957383, 0.06245166, -0.036225557)
+mesh = SubResource("BoxMesh_nfwfv")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_cpbbq")]
+meshs = [NodePath("../MeshInstance3D")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=411725430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025024414, 0.09729004, 0)
+shape = SubResource("BoxShape3D_ebo63")
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_capno")]

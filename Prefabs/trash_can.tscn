@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://c1a8sytgeteyq"]
 
 [ext_resource type="ArrayMesh" uid="uid://d057gtv6jrs2b" path="res://Assest/trashcan/trash.obj" id="1_33aq7"]
-[ext_resource type="Script" path="res://Prefabs/trash_can.gd" id="1_dphm6"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_sg2t7"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_sg2t7"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_m0ww6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_el3j0"]
 size = Vector3(1.5, 3, 1.5)
 
 [node name="TrashCan" type="StaticBody3D" unique_id=1349536050]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
-script = ExtResource("1_dphm6")
+script = ExtResource("1_sg2t7")
 
 [node name="Trash" type="MeshInstance3D" parent="." unique_id=1339361883]
 mesh = ExtResource("1_33aq7")
@@ -21,6 +22,4 @@ shape = SubResource("BoxShape3D_el3j0")
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_sg2t7")]
 meshs = [NodePath("../Trash")]
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("4_m0ww6")]

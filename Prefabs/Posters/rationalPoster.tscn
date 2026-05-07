@@ -1,14 +1,38 @@
 [gd_scene format=3 uid="uid://dn76p03h1oorx"]
 
 [ext_resource type="Texture2D" uid="uid://dn00hrlge1dd5" path="res://Assest/posters/RATIONALE_TEXTURE.png" id="1_of3yr"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_y3slc"]
 [ext_resource type="ArrayMesh" uid="uid://vfcdydu4pu2j" path="res://Assest/posters/poster.obj" id="2_11pr0"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_11pr0"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_3cnff"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11pr0"]
 albedo_texture = ExtResource("1_of3yr")
 
-[node name="Node3D" type="Node3D" unique_id=548216174]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ue56k"]
+size = Vector3(1.4100952, 1.8918457, 0.24121094)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y3slc"]
+
+[node name="rationalePoster" type="StaticBody3D" unique_id=1018485615]
+script = ExtResource("1_y3slc")
+object_id = "RationalPoster"
+dialog_node = "posterRationale"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=331595598]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.0050884485, 0.0031211376, -0.0047801733)
 material_override = SubResource("StandardMaterial3D_11pr0")
 mesh = ExtResource("2_11pr0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1713373151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015533447, 0.040893555, -0.016113281)
+shape = SubResource("BoxShape3D_ue56k")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_11pr0")]
+meshs = [NodePath("../MeshInstance3D2"), NodePath("../MeshInstance3D")]
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_3cnff")]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1764857639]
+transform = Transform3D(1.3985915, 0, 0, 0, 1.9687061, 0, 0, 0, 0.04571861, 0, 0, -0.048042953)
+mesh = SubResource("BoxMesh_y3slc")
