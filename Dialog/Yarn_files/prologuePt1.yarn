@@ -9,18 +9,21 @@ I remember it like it was yesterday.
 Dad trying to get in contact with the Martian authorities to get us on a shuttle. He saying we're gonna be fine, that we have enough water to survive the cut off.
 We're just gonna have to ration water correctly. 
 
--> Fuck that!
+-> Like that's going to help.
 	... I'm not gonna see my friends die. the system is almost out of water at this point. fuck earth,
 	-> and fuck the Martians!
-		their fucking treaties are not doing shit for us! 
-		-> I'll find another way to help, we don't need them.
+		Their fucking treaties are not doing shit for us! I don't care about their stupid citizenship
+		->I don't care about their stupid citizenship
+			I'll find another way to help, we don't need them.
 			<<jump RecruitReb>>
-		-> Maybe dad's contact knows how I can help. 
+		->I've heard they're drafting people.
+			Dad told me they're being quiet about it, 
+			but hopefully we're gonna know something soon
 			<<jump RecruitMar>>  
 	-> hopefully the Martians will help us.
 		<<jump RecruitMar>>
 		
--> Hopefully he's right
+-> Hopefully he's right.
 	I really couldn't handle this on my own.
 	<<jump RecruitMar>>
 	//They will have martian passports
@@ -34,7 +37,7 @@ But there it was, the unusual sight of black ink on lab grown cellulose. I don't
 25-12-2279; 14:50 | Płaskowyż Olimp - Mars
 
 Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, Mars. 
-As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the earthians for the control of the Jovian settlements on Callisto and Ganymede. 
+As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the Terrestians for the control of the Jovian settlements on Callisto and Ganymede. 
 Your services will be explained to you as soon as you get in contact with your command officer.
 Please report to the martian embassy to you enclosed in this letter, you will be given more information about your tasks on location. 
 Do not disclose this convocation with no one.
@@ -42,46 +45,252 @@ Do not disclose this convocation with no one.
 Best Regards,
 The Martian administration for a free jovian system. 
 
--> Throw away the paper.
-	-> Fuck that! I will find another way to help.
+The "embassy". You've heard of this, a resistance of sort put together by the stationary martian military in the system.
+Apparently they took control of some abandoned building in the lower city right by the almost empty water tanks.
+You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn't comply. 
+
+-> This is too risky, and for what? Mars doesn't care about us.
+But you know the risk of throwing away the paper. Not answering mean losing your citizenship. 
+but what else could you do? would you really be willing to risk your life like that. 
+And that's only to go at the Embassy. what will happen after that?
+
+	-> It's not like there's other any choice.
+		So you decide to go to the Embassy.
+		The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
+		In the corridor sitting while waiting for their faith three dozens of people, between men and women spanning from 17 to 40. 
+		When you enter the commander's office a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
+
+		Commander: So kid, what are you good at? How can you be of service?
+		
+		-> I'm a mechanic, I'm pretty good at repairing stuff.
+			The commander smirks at you, a smirk that set upon you a sense of unease. 
+			Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones, 
+			And so you spent the next two months repairing machines and helping people. 
+			<<if set_flag("dadMech")>><<endif>>
+			<<jump Ch2>>
+		-> I know how to hold a gun mam. 
+			The commander smirks at you, a smirk that set upon you a sense of unease. 
+			Commander: Ok sure kid.
+			She scans you from head to toe.
+			Commander: Maybe. 
+			Commander: Go to colonel Birkos he will see what to do with you.
+			And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
+			<<if set_flag("dadSoldier")>> <<endif>>
+			<<jump Ch2>>
+	-> I've heard of a group of people. not military just normal people, that want a change. Maybe I can be of help there. 
+		Maybe you can make a difference.
 		<<jump RecruitReb>>
-	-> I will just wait for all this to end.
--> Join the troops.
-	DESCRIBE THE OFFICE HERE
+
+-> You're not scared of those Ziemniak.
+	The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
+	In the corridor sitting while waiting for their faith three dozens of people, between men and women spanning from 17 to 40. 
+	When you enter the commander's office a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
+
+	Commander: So kid, what are you good at? How can you be of service?
 	
-	-> I will Help as much as I can
+	-> I'm a mechanic, I'm pretty good at repairing stuff.
+		The commander smirks at you, a smirk that set upon you a sense of unease. 
+		Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones, 
+		And so you spent the next two months repairing machines and helping people. 
+		<<if set_flag("dadMech")>><<endif>>
 		<<jump Ch2>>
-	-> I will do the bare minimum 
+	-> I know how to hold a gun mam. 
+		The commander smirks at you, a smirk that set upon you a sense of unease. 
+		Commander: Ok sure kid.
+		She scans you from head to toe.
+		Commander: Maybe. 
+		Commander: Go to colonel Birkos he will see what to do with you.
+		And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
+		<<if set_flag("dadSoldier")>> <<endif>>
 		<<jump Ch2>>
+<<if set_flag("Martian")>><<endif>>
 ===
 title: RecruitReb
 position: 26,-338
 ---
-I've never been no ones puppet, and that was the good thing about the rebellion, they did not care if you were helping by blasting holes into earthians or by feeding the poor.
-HERE JOH WILL DESCRIBE HOW HE CONTACTS THE REBELLION AND WE GET INTRODUCED TO GRIG
+You would imagine that contacting such a group would  be more difficult, but it turned out to be pretty easy.
+Just a matter of cashing in some favours here and there.
+The Blinded, resided in a small abandoned space station, bound to make an eagle flight into the gas giant of it's own in a couple of years.
+The once sterile interior was now filled with graffiti and vandalized propaganda posters. 
+The chief of the place, a small framed man with an obviously broken nose and dark slacked back hair, welcomes you with a smile.
+???: Salve, the name is Grig, with who do I've the pleasure? 
+	->My name's Joh
+		Grig: Welcome.
+		Now that the presentation are done his face gets less welcoming and more focused. 
+		Grig: Why are you here Joh?
+			-> I came here to help. I want to help! 
+				Grig: You're more than welcome to join our little club, we're always looking to expand here.
+				He leans in closer. 
+				Grig: But how can you help?	
 
-	-> Join the Rebellion against both mars and earth.
-		<<jump Ch2>>
-	-> Just help people. 
-		<<jump Ch2>>
-<<if set_flag("Martian")>><<endif>>
+				-> I can hold a gun.
+					The man starts laughing. 
+					Grig: that was a fun joke kid.
+					Grig: look at you, you don't look like someone who's ready to take someones life.
+					His face is now harsh and with a sliver of empathy towards you.
+					Grig: not even a Ziemniak's one.
+			
+					-> I can do it sir.
+						Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
+						Grig: Secondly are you sure? we can find you some other job on the station.
+						-> Yes I'm sure.
+							Grig: ok then ask Murphy, she will get you up to date. 
+							<<if set_flag("dadSoldier")>><<endif>>
+							<<jump Ch2>>
+						-> Maybe I should stick to being a mechanic.
+							Grig: Good thinking. 
+							Grig: We're always in need for good mechanics.
+							<<if set_flag("dadMech")>><<endif>>
+							<<jump Ch2>>						
+					-> ehm I...
+						Grig: Listen, we can find you some other job on the station.
+						Grig: I really don't want you to die kid.
+						<<if set_flag("dadMech")>><<endif>>
+						<<jump Ch2>>
+				-> I know how to repair stuff 
+						Grig: Good, We're always in need for good mechanics.
+						<<if set_flag("dadMech")>><<endif>>
+						<<jump Ch2>>	
+
+			-> I just wanted to know more about this place
+				Grig: listen kid. you don't just run into a place like this. 
+				His face is as harsh as it can possibly be. 
+				Grig: Now you're either with us or not.
+				
+				-> I'm here to help sir. 
+					The man sighs, losening up the built up tension 
+					Grig: Ok then, what can you do? we can indeed find you some job on the station or on the field.
+					-> I can hold a gun.
+						Grig: ok then ask Murphy, she will get you up to date. 
+						<<if set_flag("dadSoldier")>><<endif>>
+						<<jump Ch2>>
+					-> I know how to repair stuff 
+						Grig: That's Good, We're always in need for good mechanics.
+						<<if set_flag("dadMech")>><<endif>>
+						<<jump Ch2>>	
+	->Joh M. Johiński
+		Grig: Someone's the serious kind.
+		His smile fades leaving a serious expression. 
+		Grig: So why are you here sir. Johiński.
+		-> I came here to help. I want to help! 
+			Grig: You're more than welcome to join our little club, we're always looking to expand here.
+			He leans in closer. 
+			Grig: But how can you help?	
+
+			-> I can hold a gun.
+				The man starts laughing. 
+				Grig: that was a fun joke kid.
+				Grig: look at you, you don't look like someone who's ready to take someones life.
+				His face is now harsh and with a sliver of empathy towards you.
+				Grig: not even a Ziemniak's one.
+		
+				-> I can do it sir.
+					Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
+					Grig: Secondly are you sure? we can find you some other job on the station.
+					-> Yes I'm sure.
+						Grig: ok then ask Murphy, she will get you up to date. 
+						<<if set_flag("dadSoldier")>><<endif>>
+						<<jump Ch2>>
+					-> Maybe I should stick to being a mechanic.
+						Grig: Good thinking. 
+						Grig: We're always in need for good mechanics.
+						<<if set_flag("dadMech")>><<endif>>
+						<<jump Ch2>>						
+				-> ehm I...
+					Grig: Listen, we can find you some other job on the station.
+					Grig: I really don't want you to die kid.
+					<<if set_flag("dadMech")>><<endif>>
+					<<jump Ch2>>
+			-> I know how to repair stuff 
+					Grig: Good, We're always in need for good mechanics.
+					<<if set_flag("dadMech")>><<endif>>
+					<<jump Ch2>>	
+
+		-> I just wanted to know more about this place
+			Grig: listen kid. you don't just run into a place like this. 
+			His face is as harsh as it can possibly be. 
+			Grig: Now you're either with us or not.
+			
+			-> I'm here to help sir. 
+				The man sighs, loosening up the built up tension 
+				Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
+				Grig: Secondly what can you do? we can find you some job on the station or on the field.
+				-> I can hold a gun.
+					Grig: ok then ask Murphy, she will get you up to date. 
+					<<if set_flag("dadSoldier")>><<endif>>
+					<<jump Ch2>>
+				-> I know how to repair stuff 
+					Grig: That's Good, We're always in need for good mechanics.
+					<<if set_flag("dadMech")>><<endif>>
+					<<jump Ch2>>	
+<<if set_flag("Blind")>><<endif>>
 ===
 title: Ch2
 position: 404,-519
 ---
-WE TALK ABOUT THE END OF THE SHUTTER, AND THE ESTABLISHMENT OF THE PONS
+<<if get_flag("Blind")>>
+	The work was hard, but it came with its rewards. 
+	<<if get_flag("dadMech")>>
+	Your help was essential in keeping the whole station running.
+	<<endif>>
+	These people really believed in what they were doing and so did you.
+	And they might even have had a shot at creating a free Jovian system. 
+	But unfortunately with the come of the successful treaty that stopped the Shatter, the Blinds lose a lot of their followers. 
+	That on top of the opening of the Pons and the arrival of both Venuvian and Martian military force, drove the rebellion on the ground.
+<<elseif get_flag("Martian")>>
+	Apart from some minor incidents here and there the conflict never exploded into a real war. 
+	<<if get_flag ("dadSoldier")>>
+	Your job was mostly containing small uprising here and there in the system, but not much more. 
+	<<elseif get_flag("dadMech")>>
+	Your job ended up being fixing and refurbishing old spy drones from earth into full fledged support systems for the inhabitants of the jovian system.
+	<<endif>>
+	But luckly those days ended when the Marsuvian alliance managed to secure a successful treaty with earth. 
+	The latter would open back up the water supplies to the jovian, and give them partial freedom while remaining in control of europa and io's resources.
+	While martian and Venuvian would delopy troops in the system so to avoid father endangerment in the jovian. 	
+<<endif>>
+Everything that happened those days it's now a fudge. From back then you remember the relief. 
+Not having to worry about water anymore. 
+You remember the sorrow.
+For those you lost. 
+The anger.
+Of knowing all that could have been avoided
 
-WE FAST FORWARD TO KHER BEING BORN AND THE MOM DIEING
+But you also remember her.
+How safe she made you feel. 
+You remember that old sofa, where you grew closer. 
+where you hopped you'd have grown old together.
 
--> JOH CAN ASK ABOUT THE WIFE //THIS WILL IMPACT THE +1 MENTAL
--> JOH CAN ASK ABOUT THE KID //THIS WILL IMPACT THE +1 SOCIAL
+But here it is again, the memories are getting fuzzy.
+Everything spinning. 
+
+->What is happening
+->Try to relax
+
+The hospital was cold. 
+You always liked hospitals, how sterile they're. 
+In how they're designed to be as efficient and secure as possible.
+there's something calming such an environment.
+But nothing is calming right now. 
+The overused plastic chair is too Squeaky and stigg to be sitting in. 
+The lights too flickery. 
+When the doctor asked you to leave, and the nurse escorted you out, you knew something was wrong. 
+You compiled, but now you regret it.
+
+The next thing you know the doctor is in front of you
+-> Aks how's your Wife doing.
+	<<if adjust_status(0,1,0,0)>><<endif>>
+-> Ask how's your child doing.
+	<<if adjust_status(0,0,1,0)>><<endif>>
 <<jump Ch3>>
 ===
 title: Ch3
 position: 641,-656
 ---
-WE FAST FORWARD TO A DAILY SLICE OF LIFE IN KHER AND JOH'S LIFE. 
-GRIG IT's HERE AGAIN AND JOH HAS TO LEAVE TO DO SOME BUISNESS. JOH GIVES A TOY TO KHER
+Time really flies. 
+Twelve years went by in a second. 
+You kept working as a mechanic, being a single dad it's not the easiest. 
+But having your own workshop helps with that. 
+So much that you're even able to bring your kid and 
 
 -> TELL THE KID TO READ THE MENU //+2 Phisical +1 Social
 	<<jump Ch4>>
