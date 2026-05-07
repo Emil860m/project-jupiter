@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cvv7l02d6nv7o"]
 
-[ext_resource type="Script" path="res://Prefabs/Ganymede/medical_bed.gd" id="1_g5o7d"]
-[ext_resource type="PackedScene" uid="uid://bslafaxjcrjkr" path="res://Components/interactable_component.tscn" id="2_6kbdl"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_6kbdl"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="2_6kbdl"]
 [ext_resource type="Texture2D" uid="uid://2dfaywsl4o1c" path="res://Assest/medicalBed/medicalBed.png" id="3_n6prs"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_6kbdl"]
 [ext_resource type="ArrayMesh" uid="uid://k4tor0td22t3" path="res://Assest/medicalBedEmpty/medicalBedEmpty.obj" id="4_g5o7d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6owqq"]
@@ -13,7 +14,8 @@ size = Vector3(5.5181274, 3.9086304, 2.7263184)
 
 [node name="MedicalBed" type="StaticBody3D" unique_id=130115927]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-script = ExtResource("1_g5o7d")
+script = ExtResource("1_6kbdl")
+dialog_node = "_Hospital"
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_6kbdl")]
 meshs = [NodePath("../MedicalBed")]
@@ -27,6 +29,4 @@ mesh = ExtResource("4_g5o7d")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04916382, 1.839508, 0.032836914)
 shape = SubResource("BoxShape3D_68tse")
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("4_6kbdl")]

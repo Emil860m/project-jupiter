@@ -6,6 +6,9 @@ var kass: Dictionary[locations, Array]
 var zoe: Dictionary[locations, Array]
 var sally: Dictionary[locations, Array]
 
+var consoles: Dictionary[locations, Array]
+var boxes: Dictionary[locations, Array]
+
 enum locations {
 	MAIN_MENU,
 	PROLOGUE,
@@ -72,6 +75,20 @@ func _ready() -> void:
 			NPC_Schedule.new(td2ts(9, 00), td2ts(12, 30), ["sullyOffice"],[],"SalOfficeTS3"),
 		]
 	}
+	consoles = {
+		locations.HOSPITAL: [
+			
+		]
+		# add more schedules here
+	}
+	boxes = {
+		locations.HOSPITAL: [],
+		locations.WORKSHOP: [
+			NPC_Schedule.new(td2ts(15, 00), td2ts(25, 00), [],[],"box"),
+
+		]
+		# add schedules here
+	}
 	
 	
 func get_hickey_yarn_file(current_timestep: int, location: locations):
@@ -94,6 +111,18 @@ func get_zoe_yarn_file(current_timestep: int, location: locations):
 	
 func get_sally_yarn_file(current_timestep: int, location: locations):
 	for event in sally[location]:
+		if event.check_valid(current_timestep):
+			return event.get_yarn_node()
+	return ""
+	
+func get_consoles_yarn_file(current_timestep: int, location: locations):
+	for event in consoles[location]:
+		if event.check_valid(current_timestep):
+			return event.get_yarn_node()
+	return ""
+	
+func get_boxes_yarn_file(current_timestep: int, location: locations):
+	for event in boxes[location]:
 		if event.check_valid(current_timestep):
 			return event.get_yarn_node()
 	return ""

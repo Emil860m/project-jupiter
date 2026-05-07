@@ -1,17 +1,28 @@
 [gd_scene format=3 uid="uid://g818sf3tp82a"]
 
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_43v5b"]
 [ext_resource type="ArrayMesh" uid="uid://3tn1yti7vxa" path="res://Assest/uglyStatue/uglyStatue.obj" id="1_c8aup"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_653ak"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_ubo16"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c8aup"]
 radius = 1.0024414
 height = 5.5
 
-[node name="UglyStatue" type="Area3D" unique_id=283069863]
+[node name="UglyStatue" type="StaticBody3D" unique_id=1997030565]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("1_43v5b")
+object_id = "statue"
+dialog_node = "uglyStatue_Office"
 
 [node name="UglyStatue" type="MeshInstance3D" parent="." unique_id=469917692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037050486, 2.5782099, -3.3012772)
 mesh = ExtResource("1_c8aup")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_653ak")]
+meshs = [NodePath("../UglyStatue")]
+
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("4_ubo16")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1930888370]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023858547, 1.75, 0)

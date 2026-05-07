@@ -16,6 +16,25 @@ func reload_scene():
 	# Avoid reload_current_scene(); it can leave current_scene transiently invalid.
 	goto_scene(get_current_scene_path())
 
+func goto_ending_scene(message: String, ch3: bool):
+	_deferred_goto_ending_scene.call_deferred(message, ch3)
+	
+func _deferred_goto_ending_scene(message: String, ch3: bool):
+	var old = get_tree().current_scene
+	var s = ResourceLoader.load("res://Scenes/EndingScene.tscn")
+	var inst = s.instantiate()
+	inst.message = message
+	inst.ch3 = ch3
+	if ch3:
+		Globals.advance_chapter()
+	Globals.current_location = inst.location_id
+
+	get_tree().root.add_child(inst)
+	get_tree().current_scene = inst
+
+	if is_instance_valid(old):
+		old.queue_free()
+
 func goto_scene(path):
 	if should_tow_truck:
 		should_tow_truck = false

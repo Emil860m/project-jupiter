@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://8kq3y3ghok4i"]
+[gd_scene format=3 uid="uid://cc70xbqlsbvjh"]
 
-[ext_resource type="Script" uid="uid://coc32lqoylxfq" path="res://Prefabs/space_ship.gd" id="1_lvkvp"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_nu23k"]
 [ext_resource type="Texture2D" uid="uid://bw5b1nr03vlr" path="res://Assest/spaceShip/spaceShip.png" id="1_qcvxl"]
 [ext_resource type="ArrayMesh" uid="uid://doo2mvrqxhadt" path="res://Assest/spaceShip/spaceShip.obj" id="2_qs11k"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="4_nu23k"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_ygyq4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lvkvp"]
 albedo_texture = ExtResource("1_qcvxl")
@@ -14,7 +15,7 @@ height = 7.7874756
 
 [node name="Node3D" type="StaticBody3D" unique_id=507217212]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-script = ExtResource("1_lvkvp")
+script = ExtResource("1_nu23k")
 
 [node name="SpaceShip" type="MeshInstance3D" parent="." unique_id=959517816]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.027711868, 0, 0.006911516)
@@ -28,6 +29,4 @@ shape = SubResource("CapsuleShape3D_qcvxl")
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_nu23k")]
 meshs = [NodePath("../SpaceShip")]
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_ygyq4")]
