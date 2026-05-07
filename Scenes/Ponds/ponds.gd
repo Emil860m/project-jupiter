@@ -34,6 +34,7 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.PONS
 
 @onready var dialog_component = $DialogComponent
 @onready var time_label = $Background/time_label
+@export var miko_portrait_path := ""
 
 
 
@@ -48,6 +49,8 @@ func _ready() -> void:
 	
 	if not Flags.get_flag("PonsTutorialComplete"):
 		Flags.set_flag("PonsTutorialComplete")
+		if miko_portrait_path != "":
+			dialog_component.set_character_portrait(miko_portrait_path)
 		dialog_component.start_dialog()
 
 func check_upgrades():
