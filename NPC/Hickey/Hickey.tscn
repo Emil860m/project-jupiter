@@ -11,6 +11,11 @@
 [node name="Hickey" type="StaticBody3D" unique_id=1285645448]
 script = ExtResource("1_jlog5")
 character_name = "Hickey"
+mood_portrait_dict = Dictionary[String, String]({
+"concern": "res://Textures/Portraits/Hickey/pier_concern.png",
+"happy": "res://Textures/Portraits/Hickey/pier_happy.png",
+"think": "res://Textures/Portraits/Hickey/pier_think.png"
+})
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_nipkc")]
 

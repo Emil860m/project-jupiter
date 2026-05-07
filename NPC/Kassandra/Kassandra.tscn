@@ -11,6 +11,11 @@
 [node name="Kassandra" type="StaticBody3D" unique_id=1964364760]
 script = ExtResource("1_odbrj")
 character_name = "Kassandra"
+mood_portrait_dict = Dictionary[String, String]({
+"concern": "res://Textures/Portraits/Kass/eli_concern.png",
+"detached": "res://Textures/Portraits/Kass/eli_detached.png",
+"irritated": "res://Textures/Portraits/Kass/eli_irritated.png"
+})
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=429344779]
 mesh = SubResource("CapsuleMesh_tw3f4")

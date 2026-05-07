@@ -11,6 +11,11 @@
 [node name="Sally" type="StaticBody3D" unique_id=764589073]
 script = ExtResource("1_82rkw")
 character_name = "Sally"
+mood_portrait_dict = Dictionary[String, String]({
+"busy": "res://Textures/Portraits/Sully/juljus_busy.png",
+"happy": "res://Textures/Portraits/Sully/juljus_happy.png",
+"irritated": "res://Textures/Portraits/Sully/juljus_irritated.png"
+})
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=202929474]
 shape = SubResource("CapsuleShape3D_4gwob")
