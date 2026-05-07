@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarn_spinner.yarn_file"
+type="Resource"
+uid="uid://c1en7aecfnxr"
+path="res://.godot/imported/Console.yarn-9ee2549960ddf4064dde420f90c3d891.res"
+
+[deps]
+
+source_file="res://Dialog/Yarn_files/Console.yarn"
+dest_files=["res://.godot/imported/Console.yarn-9ee2549960ddf4064dde420f90c3d891.res"]
+
+[params]
+
