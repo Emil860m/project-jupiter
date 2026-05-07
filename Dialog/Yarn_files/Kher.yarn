@@ -4,3 +4,210 @@ position: -273,62
 ---
 New node
 ===
+
+title: cactus_office
+color: green
+position: -273,60
+---
+How is this cactus even alive!
+In this enviroment?
+In this economy?
+This doesn't seem to be even the proper light for it.
+-> Maybe it's fake
+    Cheep polimare mold, but suprisingly convincing.
+-> Maybe it's special
+    They water it with sunshine and kisses. I wonder what chem coctail is keeping it alive.
+===
+
+title: bookShelf_office
+color: green
+position: -273,58
+---
+These are all just records... what a boring library to have.
+-> Maybe I can still find something interesting?
+    After careful analisys of the bookshelfs, you conclude that there is in fact nothing interesting in there.
+-> Nothing to see here.
+===
+
+title: wrench_workshop
+color: green
+position: -273,58
+---
+Could use one of these standard wrenches on dad's spaceship... Maybe I can ask around if they have a spare.
+===
+
+title: workshopSign_workshop
+color: green
+position: -273,58
+---
+Johiński workshop.
+This is Dad's place of work.
+===
+
+title: fireStopper_workshop
+color: green
+position: -273,58
+---
+Safety first of course.
+What do they call them on Earth again..?
+-> Fire Extinguishers
+    So sofisticated.
+-> Flame Quenchers
+    Like a dwarf killing a dragon.
+-> Fire Snuffer
+    Like a drugger, snuffing all that fire.
+Why can't they just say Fire Stopper like us?
+===
+
+title: sputnik_workshop
+color: green
+position: -273,58
+---
+Wait... is that a SPUTNIK satelite! What is it doing here?
+-> Maybe someone is making replicas here?
+-> The kind of trash you can find here.
+    Speaking of trash.. This is an impressive trash pile they colected over here. 
+===
+
+title: paperNotice_workshop
+color: green
+position: -273,58
+---
+Workshop temporarly halted due to personel termination.
+===
+
+title: trash1_workshop
+color: green
+position: -273,58
+---
+A trash disposal unit labeled "Polimers type A,B,C and D"
+===
+
+title: trash2_workshop
+color: green
+position: -273,58
+---
+A trash disposal unit labeled "All metals"
+===
+
+title: trash3_workshop
+color: green
+position: -273,58
+---
+A trash disposal unit labeled "Bodies".
+-> What?
+    You realise that someone skillfully wrote over the label. It looks just the real thing, but there is some residue of the old label.
+-> Ok.
+    ...
+===
+
+title: trashPile_workshop
+color: green
+position: -273,58
+---
+Yes. This is a proper trash pile.
+Damn... I think there is a High Power Radio module behind these old gas tanks.
+Wish there was a way toget to it...
+===
+
+title: thermos_workshop
+color: green
+position: -273,58
+---
+I think dad had the same thermos when I was a child.
+-> The best Kallisto industries can provide!
+    I remember that it could keep a liter of soup scolding hot for at least 10 hours. How many times did I burn myself with that shit...
+===
+
+title: sink_Hospital
+color: green
+position: -273,58
+---
+My hands are clean, no need to wash them again.
+===
+
+title: uglyStatue_Office
+color: green
+position: -273,58
+---
+I think this is supposed to be a statue...
+-> I don't like it.
+    Every office needs an ugly piece of art.
+    Yes. I especially enjoy the shape... a ball.
+    A lot of meaning hidden in there I'm sure.
+-> It's okay.
+    Kinda boring but I think that's what you need in an office setting.
+    No distractions.
+-> I love it.
+    The shape. The color. It speaks to me!
+    I would love to meet the artist that made this.
+    We could talk about balls.
+===
+
+title: probe_Office
+color: green
+position: -273,58
+---
+What an interesting artefact to keep in your office.
+It looks like one of the Jovita probes sent here nearly 70 years ago...
+This must have been hard to get.
+-> Do I remember anything about that?
+    I think the Martian goverment sent around fourty of these here. They where surveying the moons for possible habitat and industrial spots.
+    Many of them actually ended up frying in the radioation belt while trying to analise Io.
+    A true land of the dead if even the robots can't survive there.
+-> True piece of history.
+    Even smells like history.
+===
+
+title: _Hospital
+color: green
+position: -273,58
+---
+test
+===
+
+title: cafe_Hospital
+color: green
+position: -273,58
+---
+Cafinated wheat instant bevrage.
+Someone on the staff is grinding.. these things are so strong, they will keep you up for up to 25 hours.
+===
+
+title: posterPons
+color: green
+position: -273,58
+---
+PONS
+Our bridge to the Solar System.
+The finest technical station in the world.
+===
+
+title: posterRationale
+color: green
+position: -273,58
+---
+RATIONALE
+Fine dine in space.
+Best meals in middile ring.
+===
+
+title: posterGanemede
+color: green
+position: -273,58
+---
+GANYMEDE
+Eye gazing into the future.
+Home of the minds of tommorow. The key to colonise beyond Jupiter!
+===
+
+title: posterKalisto
+color: green
+position: -273,58
+---
+KALLISTO
+The root. The trength. The industry.
+The root of our colonising power.
+Where every worker shall be treated equally.
+===
+

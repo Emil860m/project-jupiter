@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://bp4co2t68mcjm"]
 
-[ext_resource type="Script" path="res://Prefabs/Ganymede/ganymede_console.gd" id="1_cj6xc"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_myes0"]
 [ext_resource type="ArrayMesh" uid="uid://cqxpu41uf84ir" path="res://Assest/GanymedeConsole/ganymedeColnsole.obj" id="1_welf1"]
 [ext_resource type="ArrayMesh" uid="uid://e0rvlekinlv" path="res://Assest/GanymedeConsole/ganymedeColnsoleHousing.obj" id="2_fb3gw"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="4_myes0"]
+[ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="5_svlum"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cj6xc"]
 size = Vector3(3, 7, 5)
 
 [node name="GanymedeConsole" type="StaticBody3D" unique_id=746988006]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
-script = ExtResource("1_cj6xc")
+script = ExtResource("1_myes0")
 
 [node name="GanymedeColnsole" type="MeshInstance3D" parent="." unique_id=386450553]
 mesh = ExtResource("1_welf1")
@@ -25,6 +26,4 @@ shape = SubResource("BoxShape3D_cj6xc")
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_myes0")]
 meshs = [NodePath("../GanymedeColnsole"), NodePath("../GanymedeColnsoleHousing")]
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_svlum")]
