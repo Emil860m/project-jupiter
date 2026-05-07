@@ -161,8 +161,11 @@ offset_right = 82.5
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_2wn1d")
-theme_override_font_sizes/font_size = 42
-text = "Your game is paused."
+theme_override_font_sizes/font_size = 50
+text = "Your game is paused. 
+The time stands still."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=112472412]
 visible = false
