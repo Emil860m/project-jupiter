@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bedcc8gve20s8" path="res://Textures/MainMenuUI/poster_NoText.png" id="2_8saeu"]
 [ext_resource type="Texture2D" uid="uid://cy4ohdq3pnna0" path="res://Textures/MainMenuUI/bcgWall.png" id="2_ghw46"]
 [ext_resource type="FontFile" uid="uid://dku1eijo01638" path="res://Textures/MainMenuUI/VT323-Regular.ttf" id="3_ghw46"]
+[ext_resource type="Texture2D" uid="uid://ctba34acgaowa" path="res://Textures/MapUI/Rectangle_data.png" id="5_8um5k"]
+[ext_resource type="Texture2D" uid="uid://bhyd1bo8i7rgb" path="res://Textures/MapUI/button.png" id="6_xim88"]
 
 [node name="MainMenu" type="Node2D" unique_id=153304406]
 script = ExtResource("1_tt5f1")
@@ -136,6 +138,47 @@ theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 45
 text = "and explore further!"
 
+[node name="ch2Skip" type="TextureRect" parent="CanvasLayer" unique_id=1898541528]
+visible = false
+offset_left = 505.0
+offset_top = 448.0
+offset_right = 1322.0
+offset_bottom = 711.0
+texture = ExtResource("5_8um5k")
+
+[node name="Label" type="Label" parent="CanvasLayer/ch2Skip" unique_id=1248100047]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 37.0
+offset_right = 789.0
+offset_bottom = 125.0
+text = "You have already played through chapter 1. Do you wish to skip to chapter 2 and keep the same choices you made last time?"
+autowrap_mode = 2
+
+[node name="Yes" type="Button" parent="CanvasLayer/ch2Skip" unique_id=548304708]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 145.0
+offset_right = 416.0
+offset_bottom = 240.0
+text = "Yes, Keep my choices"
+icon = ExtResource("6_xim88")
+flat = true
+icon_alignment = 1
+
+[node name="No" type="Button" parent="CanvasLayer/ch2Skip" unique_id=1283992234]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 145.0
+offset_right = 803.0
+offset_bottom = 240.0
+text = "No, I want to make new choices"
+icon = ExtResource("6_xim88")
+flat = true
+icon_alignment = 1
+
 [connection signal="button_up" from="CanvasLayer/Start" to="." method="_on_startgame_button_up"]
 [connection signal="button_up" from="CanvasLayer/Option" to="." method="_on_option_button_up"]
 [connection signal="button_up" from="CanvasLayer/Exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="CanvasLayer/ch2Skip/Yes" to="." method="_on_ch2skip_yes_button_up"]
+[connection signal="button_up" from="CanvasLayer/ch2Skip/No" to="." method="_on_ch2skip_no_button_up"]

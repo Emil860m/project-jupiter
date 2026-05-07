@@ -16,6 +16,7 @@ func _ready() -> void:
 	dialogComp.start_dialog()
 
 func on_dialogue_completed():
+	Globals.save_ch1_values()
 	Globals.advance_chapter()
 	var transition = transition_scene.instantiate()
 	add_child(transition)
