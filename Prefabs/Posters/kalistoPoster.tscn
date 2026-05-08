@@ -30,10 +30,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0045166016, 0.015991211, -0
 shape = SubResource("BoxShape3D_d2bro")
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("4_rd0dl")]
-meshs = [NodePath("../MeshInstance3D2")]
+meshs = [NodePath("../MeshInstance3D"), NodePath("../MeshInstance3D2")]
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("5_d2bro")]
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1149269175]
 transform = Transform3D(1.3796437, 0, 0, 0, 1.930212, 0, 0, 0, 0.0629887, 0, 0.054543138, -0.04723674)
 mesh = SubResource("BoxMesh_rd0dl")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
