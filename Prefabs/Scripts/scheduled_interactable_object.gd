@@ -13,8 +13,6 @@ func check_schedule():
 	dialog_node = ""
 	match item_name:
 		"console":
-			print("det her sker")
-			print(Globals.convert_timesteps_to_time(Globals.current_timestep))
 			dialog_node = NpcScheduler.get_consoles_yarn_file(Globals.current_timestep, Globals.current_location)
 		"box":
 			dialog_node = NpcScheduler.get_boxes_yarn_file(Globals.current_timestep, Globals.current_location)
