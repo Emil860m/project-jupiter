@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://rxbo56l25jg7" path="res://Assest/boxCarrier/boxCarrier.png" id="1_4xy5v"]
 [ext_resource type="Script" uid="uid://bhac8f3mjweov" path="res://Prefabs/Scripts/scheduled_interactable_object.gd" id="1_sbccl"]
 [ext_resource type="ArrayMesh" uid="uid://b14d30ust4op4" path="res://Assest/boxCarrier/boxCarrier.obj" id="2_sbccl"]
+[ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="4_s3ei6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3ei6"]
 albedo_texture = ExtResource("1_4xy5v")
@@ -25,3 +26,5 @@ mesh = ExtResource("2_sbccl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=276673424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26361084, 1.8027954, -0.21960449)
 shape = SubResource("BoxShape3D_2jnwv")
+
+[node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("4_s3ei6")]

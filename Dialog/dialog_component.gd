@@ -9,6 +9,7 @@ extends Node
 @onready var line_presenter := $CanvasLayer/Control/LinePresenter
 @onready var options_presenter := $CanvasLayer/Control/OptionsPresenter
 var has_portrait = false
+var portrait_scaled = false
 func _ready():
 	dialogue_runner.connect("dialogue_completed", dialog_complete)
 	dialogue_runner.add_presenter(line_presenter)
@@ -31,8 +32,9 @@ func start_dialog():
 	var portrait = $CanvasLayer/Control/LinePresenter/Control
 	if portrait:
 		var _portrait = $CanvasLayer/Control/LinePresenter/Control/TextureRect
-		if _portrait.size.y > target_portrait_height:
+		if _portrait.size.y > target_portrait_height and !portrait_scaled:
 			_portrait.scale *= target_portrait_height/_portrait.size.y
+			portrait_scaled = true
 		portrait.visible = has_portrait
 
 	print(start_node)
