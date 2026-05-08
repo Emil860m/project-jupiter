@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bwk30e48i6ujt" path="res://Textures/Dark/dark.png" id="4_id1ug"]
 [ext_resource type="PackedScene" uid="uid://copv0004jd2rx" path="res://Prefabs/elevator.tscn" id="4_qr0c3"]
 [ext_resource type="PackedScene" uid="uid://ccmhmfvmumi67" path="res://Prefabs/Ganymede/ganymede_door.tscn" id="4_rt5xv"]
-[ext_resource type="PackedScene" uid="uid://di2od257535r2" path="res://Prefabs/Ganymede/kawa.tscn" id="6_of3lc"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/kawa.tscn" id="6_of3lc"]
 [ext_resource type="PackedScene" uid="uid://bp4co2t68mcjm" path="res://Prefabs/Ganymede/ganymede_console.tscn" id="6_qr0c3"]
 [ext_resource type="PackedScene" uid="uid://dw6aa86qupbqb" path="res://Prefabs/camera_cctv.tscn" id="6_vb0tx"]
 [ext_resource type="PackedScene" uid="uid://d2h5mp5mne5vx" path="res://Prefabs/Ganymede/right_wall.tscn" id="7_uiugr"]
@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="18_dcae5"]
 [ext_resource type="PackedScene" uid="uid://nmxf5wvoxmcg" path="res://Prefabs/Ganymede/left_wall.tscn" id="21_e6j45"]
 [ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="23_aubca"]
-[ext_resource type="PackedScene" uid="uid://cvv7l02d6nv7o" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
 [ext_resource type="PackedScene" uid="uid://cs55xxpbvxs4e" path="res://NPC/Kassandra/Kassandra.tscn" id="24_rxpas"]
 [ext_resource type="PackedScene" uid="uid://jlpqaxd3k3fj" path="res://Prefabs/button.tscn" id="24_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="25_tn6kv"]
@@ -33,8 +33,8 @@
 [ext_resource type="PackedScene" uid="uid://cbumxbxe80yjw" path="res://NPC/Zoe/Zoe.tscn" id="29_0yi24"]
 [ext_resource type="PackedScene" uid="uid://b775kktubciyu" path="res://Prefabs/MiscProps/wrench.tscn" id="30_r63l5"]
 [ext_resource type="PackedScene" uid="uid://bpk7jqh8nnckm" path="res://Prefabs/MiscProps/spherical_tank.tscn" id="31_id1ug"]
-[ext_resource type="PackedScene" uid="uid://xli3ykov281e" path="res://Prefabs/Ganymede/medicalBedEmptyPROP.tscn" id="32_x8f6i"]
-[ext_resource type="PackedScene" uid="uid://cws47xva5lu74" path="res://Prefabs/Ganymede/medical_console.tscn" id="33_48os6"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/medicalBedEmptyPROP.tscn" id="32_x8f6i"]
+[ext_resource type="PackedScene" uid="uid://bdsa300k46exl" path="res://Prefabs/Ganymede/medical_console.tscn" id="33_48os6"]
 [ext_resource type="PackedScene" uid="uid://dyk0y6n5h558q" path="res://Prefabs/MiscProps/cup.tscn" id="35_2j7xw"]
 [ext_resource type="PackedScene" uid="uid://bw2sc4dr7iwrb" path="res://Prefabs/MiscProps/gas_tank.tscn" id="36_of3lc"]
 [ext_resource type="PackedScene" uid="uid://xssi2idlokcw" path="res://Prefabs/MiscProps/desk.tscn" id="37_aqt3n"]
@@ -383,6 +383,7 @@ omni_range = 17.729
 
 [node name="MedicalBed" parent="NavigationAgent3D/DeadDaddyRoom" unique_id=130115927 instance=ExtResource("13_ux52s")]
 transform = Transform3D(-0.067001745, 0, -0.4954904, 0, 0.5, 0, 0.4954904, 0, -0.067001745, -13.33271, -0.094171524, 31.076984)
+object_id = "DeadDad"
 
 [node name="RightWall" parent="NavigationAgent3D/DeadDaddyRoom" unique_id=1522072397 instance=ExtResource("7_uiugr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.802319, 0, 35.574505)
@@ -392,6 +393,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, -4.791277, -4.7683716e-07, 
 
 [node name="MedicalBed2" parent="NavigationAgent3D/DeadDaddyRoom" unique_id=16288265 instance=ExtResource("23_rxpas")]
 transform = Transform3D(0.49157488, 0, -0.09140091, 0, 0.5, 0, 0.09140091, 0, 0.49157488, -9.535421, -0.020400286, 23.139921)
+object_id = "MedicalBed"
 has_dialog = false
 
 [node name="Lobby" type="Node" parent="NavigationAgent3D" unique_id=468129557]
@@ -653,6 +655,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.
 
 [node name="GanymedeConsole" parent="NavigationAgent3D/Lobby" unique_id=289951264 instance=ExtResource("6_qr0c3")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.575, 0, 2.441)
+object_id = "Console 2"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationAgent3D/Lobby" unique_id=666018956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2525795, 1.8729777, 2.4322097)
@@ -807,6 +810,7 @@ transform = Transform3D(0.4104899, 2.4957334e-08, 0.2854786, 0, -0.5, 4.371139e-
 
 [node name="MedicalConsole" parent="." unique_id=1574312724 instance=ExtResource("33_48os6")]
 transform = Transform3D(-0.23246169, 0, 0.21991262, 0, 0.32, 0, -0.21991262, 0, -0.23246169, -11.833609, 0.10928771, 36.99059)
+object_id = "Console 1"
 
 [node name="Cup" parent="." unique_id=385252958 instance=ExtResource("35_2j7xw")]
 transform = Transform3D(0.5398807, 0, -0.44556576, 0, 0.7, 0, 0.44556576, 0, 0.5398807, -12.202895, 0.7262548, -5.2171054)
