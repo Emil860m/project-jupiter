@@ -10,6 +10,7 @@ func _ready() -> void:
 	
 		
 func check_schedule():
+	print("det her sker")
 	dialog_node = ""
 	match item_name:
 		"console":
