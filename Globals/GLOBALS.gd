@@ -7,7 +7,7 @@ var current_timestep = 0
 var minutes_per_timestep: int = 3
 var minutes_before_timestep_zero: int = 460 # 7:40
 var max_hour = 25
-
+const tow_truck_punishment = 20
 
 @export var moon_movement_per_timestep: float = 20.0/144.0
 var max_travel_distance = 360

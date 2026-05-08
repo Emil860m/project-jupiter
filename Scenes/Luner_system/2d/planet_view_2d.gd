@@ -119,7 +119,7 @@ func _on_exit_button_up() -> void:
 func _on_tow_truck_button_up() -> void:
 	if not Globals.current_moon == "OutPost":
 		tow_truck_popup.visible = true
-		var time_string = Globals.convert_timesteps_to_string(round(pons_distance * (1 + traveltime_noice / 100)) + Globals.current_timestep)
+		var time_string = Globals.convert_timesteps_to_string(round(pons_distance + Globals.tow_truck_punishment) + Globals.current_timestep)
 		tow_truck_time_label.text = "Estimated time of arrival at The Ponds:\n %s" % time_string
 
 func _on_event_completed() -> void:
