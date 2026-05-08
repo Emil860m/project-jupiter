@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://2pk26aftwmc8" path="res://Prefabs/Posters/ponsPoster.tscn" id="18_pqbx1"]
 [ext_resource type="PackedScene" uid="uid://dn76p03h1oorx" path="res://Prefabs/Posters/rationalPoster.tscn" id="19_723ao"]
 [ext_resource type="PackedScene" uid="uid://dqekt5rttkm8v" path="res://Prefabs/Posters/ganymedePoster.tscn" id="20_6dwed"]
-[ext_resource type="PackedScene" uid="uid://dwnpymibwm1r2" path="res://Prefabs/Ganymede/bosses_shelfs.tscn" id="20_fofm0"]
+[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/bosses_shelfs.tscn" id="20_fofm0"]
 [ext_resource type="PackedScene" uid="uid://xssi2idlokcw" path="res://Prefabs/MiscProps/desk.tscn" id="21_pqbx1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_35g8a"]
@@ -86,7 +86,7 @@ size = Vector2(50, 7.5)
 size = Vector3(0.001, 4, 8)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0wpqt"]
-size = Vector3(2.5985107, 1, 4.191437)
+size = Vector3(4.2759705, 1, 4.191437)
 
 [node name="Office" type="Node3D" unique_id=2047228538]
 script = ExtResource("1_tonup")
@@ -283,46 +283,45 @@ transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-
 [node name="Zoe" parent="." unique_id=2096689363 instance=ExtResource("13_0wpqt")]
 transform = Transform3D(-0.009826069, 0, 0.9999517, 0, 1, 0, -0.9999517, 0, -0.009826069, -18.155848, 1.8426275, -0.25553226)
 
-[node name="CollisionShape3D" parent="Zoe" index="1" unique_id=2073171143]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7992554, 0, 0.007858276)
+[node name="CollisionShape3D" parent="Zoe" index="0" unique_id=2073171143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22535703, 0, 0.007858276)
 shape = SubResource("BoxShape3D_0wpqt")
 
-[node name="Skeleton3D" parent="Zoe/Zoe" parent_id_path=PackedInt32Array(2096689363, 273873353) index="0" unique_id=1966376543]
-bones/0/position = Vector3(0.0025923252, 0.6089243, -0.022965813)
-bones/0/rotation = Quaternion(-0.17558773, -0.029149588, -0.030196413, 0.9835688)
-bones/1/rotation = Quaternion(0.08761529, 0.013805142, 0.030120498, 0.9956032)
-bones/2/rotation = Quaternion(0.022189802, -0.0008296888, 0.0081783235, 0.99972)
-bones/3/rotation = Quaternion(0.022221267, -0.0017305219, 0.008214192, 0.9997179)
-bones/4/rotation = Quaternion(-0.0018241857, 0.0010029549, 0.0043172305, 0.9999886)
-bones/5/rotation = Quaternion(0.004780894, 0.01781766, -0.00530275, 0.99981576)
-bones/7/rotation = Quaternion(-0.68402284, -0.3209423, 0.39984676, -0.5188752)
-bones/8/rotation = Quaternion(0.58774185, 0.056836136, -0.15665314, 0.79170007)
-bones/9/rotation = Quaternion(0.060257226, -0.056466307, 0.6640758, 0.74309087)
-bones/10/rotation = Quaternion(-0.18517075, 0.6985697, 0.40006036, 0.5636169)
-bones/11/rotation = Quaternion(0.21078774, 0.06837677, 0.50149024, 0.8363019)
-bones/12/rotation = Quaternion(0.04747901, -0.05502331, -0.14063446, 0.9873906)
-bones/13/rotation = Quaternion(0.16821818, -0.07728392, 0.121907614, 0.9751249)
-bones/15/rotation = Quaternion(0.48232305, -0.0799882, 0.18189147, 0.85316)
-bones/16/rotation = Quaternion(0.16986956, 0.0068621794, -0.17887771, 0.9690718)
-bones/17/rotation = Quaternion(0.056160636, 0.01621161, 0.056850262, 0.9966701)
-bones/19/rotation = Quaternion(0.63149905, -0.39269453, 0.42962232, 0.51227397)
-bones/20/rotation = Quaternion(0.39344898, -0.29765022, -0.34355563, 0.7991069)
-bones/21/rotation = Quaternion(0.051053025, 0.056315955, -0.49255687, 0.86695445)
-bones/22/rotation = Quaternion(-0.37718183, -0.5261269, -0.17758541, 0.741207)
-bones/23/rotation = Quaternion(0.024413217, 0.02854749, -0.4994168, 0.86554724)
-bones/24/rotation = Quaternion(0.079894, 0.07079477, 0.4745382, 0.8737382)
-bones/25/rotation = Quaternion(0.11575158, 0.11116204, -0.052080307, 0.98566335)
-bones/27/rotation = Quaternion(0.44648883, 0.10379743, -0.24052519, 0.8555826)
-bones/28/rotation = Quaternion(0.17095856, -0.0024972043, 0.15779766, 0.97255695)
-bones/29/rotation = Quaternion(0.084820114, -0.01723988, -0.0727053, 0.9935906)
-bones/31/rotation = Quaternion(0.048077453, 0.64236665, 0.75713825, 0.10860723)
-bones/32/rotation = Quaternion(-0.67945415, -0.029508406, -0.08298176, 0.7284129)
-bones/33/rotation = Quaternion(0.22316925, -0.005744156, -0.054408725, 0.9732432)
-bones/34/rotation = Quaternion(0.2674841, -0.0676349, 0.018974409, 0.96099836)
-bones/36/rotation = Quaternion(0.09737208, 0.534322, 0.8162771, -0.1967498)
-bones/37/rotation = Quaternion(-0.60493577, 0.06799423, -0.04158306, 0.7922755)
-bones/38/rotation = Quaternion(0.3258421, 0.103152595, -0.11684837, 0.93248755)
-bones/39/rotation = Quaternion(0.26391378, 0.066825286, -0.018920282, 0.96204257)
+[node name="Skeleton3D" parent="Zoe/Zoe" parent_id_path=PackedInt32Array(2096689363, 273873353) index="0" unique_id=215659845]
+bones/0/position = Vector3(0.0026211739, 0.6096062, -0.022683831)
+bones/0/rotation = Quaternion(-0.17092125, -0.03037719, -0.030509656, 0.9843437)
+bones/1/rotation = Quaternion(0.0900837, 0.0130529385, 0.028847475, 0.9954308)
+bones/2/rotation = Quaternion(0.0111273425, -0.00083865953, 0.009793841, 0.99988985)
+bones/3/rotation = Quaternion(0.011179498, -0.0017977837, 0.009835054, 0.9998875)
+bones/4/rotation = Quaternion(-0.0024476282, 0.0010813095, 0.0042862673, 0.9999873)
+bones/5/rotation = Quaternion(0.01277452, 0.019560348, -0.007938639, 0.99969554)
+bones/7/rotation = Quaternion(-0.6742071, -0.33739012, 0.38117987, -0.5350839)
+bones/8/rotation = Quaternion(0.62054217, 0.0547925, -0.15689969, 0.76636004)
+bones/9/rotation = Quaternion(0.059320558, -0.057159383, 0.65375143, 0.752212)
+bones/10/rotation = Quaternion(-0.18645905, 0.7004722, 0.4039344, 0.5580402)
+bones/11/rotation = Quaternion(0.21224035, 0.08239718, 0.5010896, 0.8349096)
+bones/12/rotation = Quaternion(0.052060097, -0.056637116, -0.13824338, 0.98740613)
+bones/13/rotation = Quaternion(0.16672106, -0.076228276, 0.1243795, 0.97515285)
+bones/15/rotation = Quaternion(0.48662388, -0.08047245, 0.18277045, 0.8504801)
+bones/16/rotation = Quaternion(0.17016006, 0.0068467306, -0.17877583, 0.9690397)
+bones/17/rotation = Quaternion(0.05629428, 0.016231654, 0.056895897, 0.9966597)
+bones/19/rotation = Quaternion(0.6199309, -0.40663543, 0.41028044, 0.5310397)
+bones/20/rotation = Quaternion(0.43048382, -0.28739488, -0.3472751, 0.78197694)
+bones/21/rotation = Quaternion(0.049774848, 0.056766495, -0.48022497, 0.8738903)
+bones/22/rotation = Quaternion(-0.37792924, -0.52632797, -0.18632118, 0.7385342)
+bones/23/rotation = Quaternion(0.025042288, 0.028404327, -0.4904993, 0.87061846)
+bones/24/rotation = Quaternion(0.074917264, 0.05811648, 0.4741496, 0.8753241)
+bones/25/rotation = Quaternion(0.122055866, 0.11549081, -0.04685519, 0.98466694)
+bones/27/rotation = Quaternion(0.45050225, 0.1048555, -0.24172543, 0.8530075)
+bones/28/rotation = Quaternion(0.1710097, -0.0024952034, 0.1577799, 0.97255075)
+bones/29/rotation = Quaternion(0.08487125, -0.0172467, -0.07272205, 0.993585)
+bones/31/rotation = Quaternion(0.04924337, 0.6451001, 0.75475574, 0.10846619)
+bones/32/rotation = Quaternion(-0.6794675, -0.02821431, -0.08375551, 0.72836316)
+bones/33/rotation = Quaternion(0.22236842, -0.0046432246, -0.0529089, 0.97351503)
+bones/34/rotation = Quaternion(0.2675506, -0.06763641, 0.01897442, 0.96097976)
+bones/36/rotation = Quaternion(0.0973273, 0.53721017, 0.8142379, -0.197356)
+bones/37/rotation = Quaternion(-0.6041161, 0.06692306, -0.041396357, 0.7930016)
+bones/38/rotation = Quaternion(0.32565174, 0.102442265, -0.11761288, 0.9325362)
 
 [node name="Sally" parent="." unique_id=764589073 instance=ExtResource("14_lwabn")]
 transform = Transform3D(0.57869774, 0, -0.8155421, 0, 1, 0, 0.8155421, 0, 0.57869774, -15.162803, 1.4405749, -1.6725377)
