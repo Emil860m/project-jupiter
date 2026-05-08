@@ -10,10 +10,11 @@ func _ready() -> void:
 	
 		
 func check_schedule():
-	print("det her sker")
 	dialog_node = ""
 	match item_name:
 		"console":
+			print("det her sker")
+			print(Globals.convert_timesteps_to_time(Globals.current_timestep))
 			dialog_node = NpcScheduler.get_consoles_yarn_file(Globals.current_timestep, Globals.current_location)
 		"box":
 			dialog_node = NpcScheduler.get_boxes_yarn_file(Globals.current_timestep, Globals.current_location)
@@ -21,4 +22,6 @@ func check_schedule():
 		visible = !dialog_node == ""
 	$CollisionShape3D.disabled = !visible
 	has_dialog = !dialog_node == "" and has_dialog
+	if has_dialog:
+		super._set_dialog()
 	

@@ -18,9 +18,7 @@ func _ready() -> void:
 	if has_outline:
 		interactable_component.interact = _interact
 		interactable_component.object_id = object_id
-	if has_dialog:
-		assert(dialog_node != "", "Missing dialog node on object: " + name)
-		dialog_component.start_node = dialog_node
+	_set_dialog()
 	if portrait_path != "":
 		dialog_component.set_character_portrait(portrait_path)
 	
@@ -28,7 +26,11 @@ func _ready() -> void:
 func _interact() -> void:
 	if has_dialog:
 		dialog_component.start_dialog()
-	
+
+func _set_dialog() -> void:
+	if has_dialog:
+		assert(dialog_node != "", "Missing dialog node on object: " + name)
+		dialog_component.start_node = dialog_node
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	interactable_component.handle_click(event)
