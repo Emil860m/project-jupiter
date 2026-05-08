@@ -4,6 +4,7 @@ extends interactable_object
 @export var item_name: String
 
 func _ready() -> void:
+	SignalBus.time_step_changed.connect(check_schedule)
 	check_schedule()
 	super()
 	

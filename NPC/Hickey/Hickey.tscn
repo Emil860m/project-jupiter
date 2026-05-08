@@ -11,8 +11,6 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3kkoo"]
 height = 3.0336914
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_k0l4o"]
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3kkoo"]
 _data = {
 &"Crouch": ExtResource("5_jcqdm"),
@@ -49,15 +47,11 @@ character_name = "Hickey"
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_nipkc")]
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_jcqdm")]
-meshs = [NodePath("../MeshInstance3D")]
+meshs = [NodePath("../Neutral Idle/Skeleton3D/SKM_Hickey_BodyMesh_LOD3"), NodePath("../Neutral Idle/Skeleton3D/SKM_Hickey_BodyMesh_LOD3_001"), NodePath("../Neutral Idle/Skeleton3D/SKM_Hickey_BodyMesh_LOD3_002"), NodePath("../Neutral Idle/Skeleton3D/SKM_Hickey_FaceMesh_LOD6"), NodePath("../Neutral Idle/Skeleton3D/Hair_S_Casual_Helmet_LOD5")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=76175461]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5168457, 0)
 shape = SubResource("CapsuleShape3D_3kkoo")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1751625873]
-visible = false
-mesh = SubResource("CapsuleMesh_k0l4o")
 
 [node name="Neutral Idle" parent="." unique_id=1720952861 instance=ExtResource("4_nipkc")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.026022017, -0.9973855, -0.025953889)
@@ -104,6 +98,7 @@ libraries/HickAnim = SubResource("AnimationLibrary_3kkoo")
 
 [node name="AnimationTree" type="AnimationTree" parent="Neutral Idle" unique_id=1971070130]
 unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
 tree_root = SubResource("AnimationNodeStateMachine_gjjni")
 anim_player = NodePath("../AnimationPlayer")
 parameters/BlendSpace1D/blend_position = 1.0

@@ -5,8 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_1r4dw"]
 [ext_resource type="PackedScene" uid="uid://b8hmtkmfqhsfs" path="res://Assest/characterModels/Kassandra/Kassandra.fbx" id="4_5txjl"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_tw3f4"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6b15a"]
 height = 2.9829102
 
@@ -25,17 +23,14 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 script = ExtResource("1_odbrj")
 character_name = "Kassandra"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=429344779]
-visible = false
-mesh = SubResource("CapsuleMesh_tw3f4")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1337504824]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49145508, 0)
 shape = SubResource("CapsuleShape3D_6b15a")
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("2_5txjl")]
 
-[node name="InteractableComponent" parent="." unique_id=1146505506 instance=ExtResource("3_1r4dw")]
+[node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("3_1r4dw")]
+meshs = [NodePath("../Kassandra/Skeleton3D/Hair_L_MessyClumps_Helmet_LOD5"), NodePath("../Kassandra/Skeleton3D/SKM_Kas_BodyMesh_LOD2_001"), NodePath("../Kassandra/Skeleton3D/SKM_Kas_FaceMesh_LOD2_001")]
 
 [node name="Kassandra" parent="." unique_id=478888796 instance=ExtResource("4_5txjl")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0.0107584, -0.96821034, 0.0020673275)
@@ -84,5 +79,7 @@ tree_root = SubResource("AnimationNodeStateMachine_6b15a")
 anim_player = NodePath("../AnimationPlayer")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 
 [editable path="Kassandra"]
