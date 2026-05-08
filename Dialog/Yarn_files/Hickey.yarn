@@ -3,8 +3,11 @@ color: green
 position: -538,-230
 ---
 <<if get_flag("metHick")>>
-Hickey greats you with his half smirk.
-Hick: Hey dude what can I do you for?
+<<if $hickSpeak == false>>
+	Hickey greats you with his half smirk.
+	Hick: Hey dude what can I do you for?
+	<<set $hickSpeak = true>>
+<<endif>>
 -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
 	<<detour howYouDoing>>
 -> What's new around?<<if get_flag_uncheck ("hickNA")>>
@@ -19,7 +22,7 @@ Hick: Hey dude what can I do you for?
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
-	<<return>>
+	<<set $hickSpeak = false>><<return>>
 <<jump hickWorkshopTS3>>
 <<elseif true>>
 	<<detour meetHickey>>
@@ -31,9 +34,11 @@ color: green
 position: -555,14
 ---
 <<if get_flag("metHick")>>
-Hickey is packing up a bunch of boxes on a crate.
-Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you with anything?
-
+<<if $hickSpeak == false>>
+	Hickey greats you with his half smirk.
+	Hick: Hey dude what can I do you for?
+	<<set $hickSpeak = true>>
+<<endif>>
 -> Can I help you with those boxes?<<if get_flag_uncheck("hickBoxes")>>
 	<<detour boxesCheck>>
 -> Listen do you know Kass?<<if get_flag("hickeyKass") and get_flag_uncheck("hickDrugs")>>
@@ -52,6 +57,7 @@ Hick: Oh hey dude, sorry about the mess I'm working right now. can I help you wi
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
+	<<set $hickSpeak = false>>
 	<<return>>
 <<jump hickWorkshopTS5>>
 <<elseif true>>
@@ -63,6 +69,11 @@ title: hickWorkshopTS6
 color: green
 position: -531,371
 ---
+<<if $hickSpeak == false>>
+	Hickey greats you with his half smirk.
+	Hick: Hey dude what can I do you for?
+	<<set $hickSpeak = true>>
+<<endif>>
 <<if get_flag("metHick")>>
 -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
 	<<detour howYouDoing>>
@@ -78,6 +89,7 @@ position: -531,371
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
+	<<set $hickSpeak = false>>
 	<<return>>
 <<jump hickWorkshopTS6>>
 <<elseif true>>
@@ -102,6 +114,7 @@ title: meetHickey
 color: blue
 position: -1021,-15
 ---
+<<declare $hickSpeak= true>>
 Description of hickey and that kher knows him.
 Hickey introduces himself and tells kher they remind him of someone
 

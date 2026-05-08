@@ -8,6 +8,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_0900to1000
 color: purple
@@ -19,6 +22,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1000to1100
 color: purple
@@ -30,6 +36,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1100to1200
 color: purple
@@ -41,6 +50,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1200to1300
 color: purple
@@ -52,6 +64,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1300to1400
 color: purple
@@ -63,6 +78,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1400to1500
 color: purple
@@ -74,6 +92,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1500to1600
 color: purple
@@ -85,6 +106,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1600to1700
 color: purple
@@ -96,6 +120,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1700to1800
 color: purple
@@ -107,6 +134,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1800to1900
 color: purple
@@ -118,6 +148,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_1900to2000
 color: purple
@@ -129,6 +162,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_2000to2100
 color: purple
@@ -140,6 +176,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_2100to2200
 color: purple
@@ -151,6 +190,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_2200to2300
 color: purple
@@ -162,6 +204,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_2300to2400
 color: purple
@@ -173,6 +218,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 title: console_2400to2500
 color: purple
@@ -184,6 +232,9 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
+-> Download the arrival documents
+	Download complete
+	<<if set_flag("log")>><<endif>>
 ===
 
 // News

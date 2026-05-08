@@ -3,7 +3,11 @@ color: yellow
 position: -463,-268
 ---
 <<if get_flag("metZoe")>>
--> how can I get an extation for the SDA? <<if get_flag_uncheck("SDA")>>
+<<if $zoeSpeak == false>>
+	Zoe: Hi, Johiński. How can I help you? 
+	<<set $zoeSpeak = true>>
+<<endif>>
+-> how can I get an extension for the SDA? <<if get_flag_uncheck("SDA") and get_flag("deadDad")>>
 	<<detour zoeSDA>>
 -> about the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeExtension>>
@@ -12,7 +16,7 @@ position: -463,-268
 -> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
 	<<detour zoeHelp>>
 -> Thanks, see you later
-	<<return>>
+	<<set $zoeSpeak = false>><<return>>
 <<jump zoeOfficeTS2>>
 <<elseif true>>
 	<<detour meetZoe>>
@@ -24,7 +28,7 @@ color: blue
 position: -464,-2
 ---
 <<if get_flag("docs") and get_flag("log")>>
-	Here's the extantion
+	Here's the extension
 	<<if set_flag("gotExtension")>><<endif>>
 <<elseif true>>
 	Zoe is sharing a private moment with the corpse.
@@ -35,16 +39,20 @@ color: yellow
 position: -460,293
 ---
 <<if get_flag("metZoe")>>
--> how can I get an extation for the SDA? <<if get_flag_uncheck("SDA")>>
+<<if $zoeSpeak == false>>
+	Zoe: Hi, Johiński. How can I help you? 
+	<<set $zoeSpeak = true>>
+<<endif>>
+-> how can I get an extension for the SDA? <<if get_flag_uncheck("SDA") and get_flag("deadDad")>>
 	<<detour zoeSDA>>
--> about the extantion <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+-> about the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeExtension>>
 -> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
 	<<detour zoeKeys>>
 -> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
 	<<detour zoeHelp>>
 -> Thanks, see you later
-	<<return>>
+	<<set $zoeSpeak = false>><<return>>
 <<jump zoeOfficeTS5>>
 <<elseif true>>
 	<<detour meetZoe>>
@@ -54,9 +62,17 @@ position: -460,293
 title: meetZoe
 position: -947,-14
 ---
-Zoe: Hi I'm zoe 
+<<declare $zoeSpeak = true>>
+Zoe: Hi I'm zoe, who are you? and why are you here.
 <<if set_flag("metZoe")>><<endif>>
 -> Hi, I'm Kher
+	<<if get_flag("deadDad")>> 
+	I'm here about my dad.
+	Zoe: Oh, for the little I knew your father I'm very sorry.
+	<<else>>.
+	Zoe: are you Joh's kid? maybe go talk to the nurse. I don't want to deal with you.
+	She waves at you like to will you out of her office.
+	<<endif>>
 	<<return>>
 ===
 //DIALOGUE

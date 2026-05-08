@@ -4,6 +4,7 @@ color: blue
 position: -389,105
 ---
 <<if set_flag("deadDad")>><<endif>>
+<<declare $kassSpeak = true>>
 ???: Hey, I'm sorry now i really can't I've a lot of stuf...
 Oh, you must be Joh's kid right? You got here just in time,
 
@@ -46,7 +47,10 @@ color: blue
 position: 162,-189
 ---
 <<if get_flag("metKas")>>
-Kass: So kid? 
+<<if $kassSpeak == false>>
+	Kass: So kid? 
+	<<set $kassSpeak =true>>
+<<endif>>
 <<declare $Bag = false>>
 -> yes let me sign those documents and let's get it over with. <<if $Bag>>
 	<<detour kassSign>>
@@ -59,7 +63,7 @@ Kass: So kid?
 -> can you help me delay the SDA?<<if get_flag_uncheck("kassHelp")>>
 	<<detour kassHelp>>
 -> Bye
-	<<return>>
+	<<set $kassSpeak =false>><<return>>
 <<jump kasHospitalTS1>>
 <<elseif true>>
 	<<detour meetKas>>
@@ -71,7 +75,10 @@ color: blue
 position: 314,98
 ---
 <<if get_flag("metKas")>>
-Kass: So kid? 
+<<if $kassSpeak == false>> 
+	<<set $kassSpeak =true>>
+	Kass: So kid? 
+<<endif>>
 -> yes let me sign those documents and let's get it over with. <<if $Bag>>
     <<detour kassSign>>
 -> What's the SDA? 
