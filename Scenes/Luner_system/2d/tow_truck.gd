@@ -4,8 +4,6 @@ var location_id: NpcScheduler.locations = NpcScheduler.locations.TOWTRUCK
 @onready var label: Label = $CanvasLayer/Label
 @onready var _animated_sprite_1 = $CanvasLayer/chuj
 
-const tow_truck_punishment = 20
-
 func _ready() -> void:
 	_animated_sprite_1.play("default")
 	if ShipStats.fuel <= 0:
@@ -15,7 +13,7 @@ func _ready() -> void:
 	else:
 		label.text = "Your ship has been towtrucked"
 	SceneController.should_tow_truck = false
-	Globals.increment_timestep(tow_truck_punishment)
+	Globals.increment_timestep(Globals.tow_truck_punishment)
 
 func _on_travel_button_button_up() -> void:
 	Globals.current_moon = "ThePonds"

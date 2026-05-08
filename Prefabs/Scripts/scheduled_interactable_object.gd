@@ -4,6 +4,7 @@ extends interactable_object
 @export var item_name: String
 
 func _ready() -> void:
+	SignalBus.time_step_changed.connect(check_schedule)
 	check_schedule()
 	super()
 	
@@ -19,4 +20,6 @@ func check_schedule():
 		visible = !dialog_node == ""
 	$CollisionShape3D.disabled = !visible
 	has_dialog = !dialog_node == "" and has_dialog
+	if has_dialog:
+		super._set_dialog()
 	

@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_click"):
-		Globals.increment_timestep(100)
+		Globals.increment_timestep(60)
 	if Input.is_action_just_pressed("pause"):
 		var pause_scene_instance = pause_scene.instantiate()
 		add_child(pause_scene_instance)

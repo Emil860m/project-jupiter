@@ -3,8 +3,11 @@ color: green
 position: -237,-112
 ---
 <<if get_flag("metSul")>>
-The man acnowledge you without moving his eyes from his work.
-Sully: Hey Kher, can I help you? 
+<<if $sulSpeak==false>>
+	The man acnowledge you without moving his eyes from his work.
+	Sully: Hey Kher, can I help you? 
+	<<set $sulSpeak = true>>
+<<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
@@ -15,8 +18,10 @@ Sully: Hey Kher, can I help you?
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
+-> Hey Sul can you help me with the Allocation system of the ship?
+	<<detour SulAllocation>>
 -> Thanks, see you later
-	<<return>>
+	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS1>>
 
 <<elseif true>>
@@ -31,21 +36,25 @@ color: blue
 position: -217,73
 ---
 <<if get_flag("metSul")>>
-The man acnowledge you without moving his eyes from his work.
-Sully: Hey Kher, can I help you? 
-
+<<if $sulSpeak==false>>
+	The man acnowledge you without moving his eyes from his work.
+	Sully: Hey Kher, can I help you? 
+	<<set $sulSpeak = true>>
+<<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
--> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
+-> Hey Sul can you help me with the Allocation system of the ship?
+	<<detour SulAllocation>>
 -> Thanks, see you later
-	<<return>>
+	<<set $sulSpeak = false>><<return>>
 <<jump SalHospitalTS2>>
 <<elseif true>>
 	The old man's eyes light up when he sees you 
@@ -70,23 +79,26 @@ color: blue
 position: -212,235
 ---
 <<if get_flag("metSul")>>
-The man acnowledge you without moving his eyes from his work.
-Sully: Hey Kher, can I help you? 
-
+<<if $sulSpeak==false>>
+	The man acnowledge you without moving his eyes from his work.
+	Sully: Hey Kher, can I help you? 
+	<<set $sulSpeak = true>>
+<<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
--> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
+-> Hey Sul can you help me with the Allocation system of the ship?
+	<<detour SulAllocation>>
 -> Thanks, see you later
-	<<return>>
+	<<set $sulSpeak = false>><<return>>
 <<jump SalHospitalTS4>>
-
 <<elseif true>>
 	The old man's eyes light up when he sees you 
 	Sully: hey kid you made it.
@@ -99,19 +111,23 @@ color: green
 position: -250,648
 ---
 <<if get_flag("metSul")>>
-The man acnowledge you without moving his eyes from his work.
-Sully: Hey Kher, can I help you? 
-
+<<if $sulSpeak==false>>
+	The man acnowledge you without moving his eyes from his work.
+	Sully: Hey Kher, can I help you? 
+	<<set $sulSpeak = true>>
+<<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
--> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
+-> Hey Sul can you help me with the Allocation system of the ship?
+	<<detour SulAllocation>>
 -> Thanks, see you later
-	<<return>>
+	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS6>>
 <<elseif true>>
 The old man's eyes light up when he sees you 
@@ -124,21 +140,25 @@ color: green
 position: -252,413
 ---
 <<if get_flag("metSul")>>
-The man acnowledge you without moving his eyes from his work.
-Sully: Hey Kher, can I help you? 
-
+<<if $sulSpeak==false>>
+	The man acnowledge you without moving his eyes from his work.
+	Sully: Hey Kher, can I help you? 
+	<<set $sulSpeak = true>>
+<<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
--> Do you know how can I get an extension? <<if get_flag("deadDad")>>
+-> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
+-> Hey Sul can you help me with the Allocation system of the ship?
+	<<detour SulAllocation>>
 -> Thanks, see you later
-	<<return>>
+	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS4>>
 <<elseif true>>
 The old man's eyes light up when he sees you 
@@ -149,14 +169,18 @@ Sully: hey kid you made it.
 title: meetSully
 position: -796,253
 ---
-Hi I'm sully
+<<declare $sulSpeak = true>>
+-> yeah sully I remember you
+-> you were my father's friend right? 
+the man smiles in approval
 <<if set_flag("metSul")>><<endif>>
 ===
 
 //DIALOGUES
 title:sullyHick
 ---
-Hickey should have them
+Hickey should have them, he's at the workshop every two hours or so. 
+you remember the workshop right? the one on Ganymede.
 <<if set_flag("hickDocs")>><<endif>>
 ===
 
@@ -182,4 +206,11 @@ position: 91,539
 ---
 Oh thanks, my kompat must be out of power.
 <<if set_flag("zoeHospital")>><<endif>><<if set_flag("sullyOffice")>><<endif>><<if unset_flag("zoeAsk")>><<endif>>
+===
+
+title: SulAllocation
+---
+Yeah sure kid, basically the various stats all represent different systems of your ship. 
+For example Radiation protection helps you in long journeys. 
+Or maneuverability assists you with fine movement.
 ===

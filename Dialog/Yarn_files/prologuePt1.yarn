@@ -1,6 +1,10 @@
 title: Start
 position: -336,-546
 ---
+<<declare $dadMech = false>>
+<<declare $dadSoldier = false>>
+<<declare $Martian = false>>
+<<declare $Blind = false>>
 The  memories are a bit fucked up. Everything it's fuzzy when you haven't drank in a while. 
 When your mouth gets so dry that your body actively fight you swallowing, and it feels like having a swamp instead of a palate. 
 Everyone was like that back then in the jovian system. The shutter really got us all desperate.
@@ -31,6 +35,7 @@ We're just gonna have to ration water correctly.
 title: RecruitMar
 position: 38,-633
 --- 
+
 The letter came a few weeks later. a few weeks too late if you ask me, when a lot of people were already gone. We didn't even have the means to support so many eagle flights. 
 But there it was, the unusual sight of black ink on lab grown cellulose. I don't even know how long it was since I had last seen a printed mail.
 
@@ -63,8 +68,7 @@ You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn'
 			The commander smirks at you, a smirk that set upon you a sense of unease. 
 			Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones, 
 			And so you spent the next two months repairing machines and helping people. 
-			<<if set_flag("dadMech")>><<endif>>
-			<<jump Ch2>>
+			<<set $dadMech = true>><<set $Martian= true>><<jump Ch2>>
 		-> I know how to hold a gun mam. 
 			The commander smirks at you, a smirk that set upon you a sense of unease. 
 			Commander: Ok sure kid.
@@ -72,8 +76,7 @@ You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn'
 			Commander: Maybe. 
 			Commander: Go to colonel Birkos he will see what to do with you.
 			And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
-			<<if set_flag("dadSoldier")>> <<endif>>
-			<<jump Ch2>>
+			<<set $dadSoldier = true>><<set $Martian= true>><<jump Ch2>>
 	-> I've heard of a group of people. not military just normal people, that want a change. Maybe I can be of help there. 
 		Maybe you can make a difference.
 		<<jump RecruitReb>>
@@ -88,8 +91,7 @@ You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn'
 		The commander smirks at you, a smirk that set upon you a sense of unease. 
 		Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones, 
 		And so you spent the next two months repairing machines and helping people. 
-		<<if set_flag("dadMech")>><<endif>>
-		<<jump Ch2>>
+		<<set $dadMech = true>><<set $Martian= true>><<jump Ch2>>
 	-> I know how to hold a gun mam. 
 		The commander smirks at you, a smirk that set upon you a sense of unease. 
 		Commander: Ok sure kid.
@@ -97,9 +99,7 @@ You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn'
 		Commander: Maybe. 
 		Commander: Go to colonel Birkos he will see what to do with you.
 		And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
-		<<if set_flag("dadSoldier")>> <<endif>>
-		<<jump Ch2>>
-<<if set_flag("Martian")>><<endif>>
+		<<set $dadSoldier = true>><<set $Martian= true>><<jump Ch2>>
 ===
 title: RecruitReb
 position: 26,-338
@@ -129,22 +129,18 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 						Grig: Secondly are you sure? we can find you some other job on the station.
 						-> Yes I'm sure.
 							Grig: ok then ask Murphy, she will get you up to date. 
-							<<if set_flag("dadSoldier")>><<endif>>
-							<<jump Ch2>>
+							<<set $dadSoldier = true>><<jump Ch2>>
 						-> Maybe I should stick to being a mechanic.
 							Grig: Good thinking. 
 							Grig: We're always in need for good mechanics.
-							<<if set_flag("dadMech")>><<endif>>
-							<<jump Ch2>>						
+							<<set $dadMech = true>><<jump Ch2>>						
 					-> ehm I...
 						Grig: Listen, we can find you some other job on the station.
 						Grig: I really don't want you to die kid.
-						<<if set_flag("dadMech")>><<endif>>
-						<<jump Ch2>>
+						<<set $dadMech = true>><<jump Ch2>>
 				-> I know how to repair stuff 
 						Grig: Good, We're always in need for good mechanics.
-						<<if set_flag("dadMech")>><<endif>>
-						<<jump Ch2>>	
+						<<set $dadMech = true>><<jump Ch2>>	
 			-> I just wanted to know more about this place
 				Grig: listen kid. you don't just run into a place like this. 
 				His face is as harsh as it can possibly be. 
@@ -154,12 +150,10 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 					Grig: Ok then, what can you do? we can indeed find you some job on the station or on the field.
 					-> I can hold a gun.
 						Grig: ok then ask Murphy, she will get you up to date. 
-						<<if set_flag("dadSoldier")>><<endif>>
-						<<jump Ch2>>
+						<<set $dadSoldier = true>><<jump Ch2>>
 					-> I know how to repair stuff 
 						Grig: That's Good, We're always in need for good mechanics.
-						<<if set_flag("dadMech")>><<endif>>
-						<<jump Ch2>>	
+						<<set $dadMech = true>><<jump Ch2>>	
 	->Joh M. Johiński
 		Grig: Someone's the serious kind.
 		His smile fades leaving a serious expression. 
@@ -179,22 +173,19 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 					Grig: Secondly are you sure? we can find you some other job on the station.
 					-> Yes I'm sure.
 						Grig: ok then ask Murphy, she will get you up to date. 
-						<<if set_flag("dadSoldier")>><<endif>>
-						<<jump Ch2>>
+						<<set $dadSoldier = true>><<set $Blind = true>><<jump Ch2>>
 					-> Maybe I should stick to being a mechanic.
 						Grig: Good thinking. 
 						Grig: We're always in need for good mechanics.
-						<<if set_flag("dadMech")>><<endif>>
-						<<jump Ch2>>
+						<<set $dadMech = true>><<set $Blind = true>><<jump Ch2>>
 				-> ehm I...
 					Grig: Listen, we can find you some other job on the station.
 					Grig: I really don't want you to die kid.
-					<<if set_flag("dadMech")>><<endif>>
+					<<set $dadMech = true>><<set $Blind = true>>
 					<<jump Ch2>>
 			-> I know how to repair stuff 
 					Grig: Good, We're always in need for good mechanics.
-					<<if set_flag("dadMech")>><<endif>>
-					<<jump Ch2>>
+					<<set $dadMech = true>><<set $Blind = true>><<jump Ch2>>
 		-> I just wanted to know more about this place
 			Grig: listen kid. you don't just run into a place like this. 
 			His face is as harsh as it can possibly be. 
@@ -205,32 +196,29 @@ The chief of the place, a small framed man with an obviously broken nose and dar
 				Grig: Secondly what can you do? we can find you some job on the station or on the field.
 				-> I can hold a gun.
 					Grig: ok then ask Murphy, she will get you up to date. 
-					<<if set_flag("dadSoldier")>><<endif>>
-					<<jump Ch2>>
+					<<set $dadSoldier = true>><<set $Blind = true>><<jump Ch2>>
 				-> I know how to repair stuff 
 					Grig: That's Good, We're always in need for good mechanics.
-					<<if set_flag("dadMech")>><<endif>>
-					<<jump Ch2>>	
-<<if set_flag("Blind")>><<endif>>
+					<<set $dadMech = true>><<set $Blind = true>><<jump Ch2>>	
 ===
 title: Ch2
 position: 404,-519
 ---
-<<if get_flag("Blind")>>
+<<if $Blind == true>>
 	The work was hard, but it came with its rewards. 
-	<<if get_flag("dadMech")>>
-	Your help was essential in keeping the whole station running.
+	<<if $dadMech == true>>
+		Your help was essential in keeping the whole station running.
 	<<endif>>
 	These people really believed in what they were doing and so did you.
 	And they might even have had a shot at creating a free Jovian system. 
 	But unfortunately with the come of the successful treaty that stopped the Shatter, the Blind lose a lot of their followers. 
 	That on top of the opening of the Pons and the arrival of both Venuvian and Martian military force, drove the rebellion on the ground.
-<<elseif get_flag("Martian")>>
+<<elseif $Martian == true>>
 	Apart from some minor incidents here and there the conflict never exploded into a real war. 
-	<<if get_flag ("dadSoldier")>>
-	Your job was mostly containing small uprising here and there in the system, but not much more. 
-	<<elseif get_flag("dadMech")>>
-	Your job ended up being fixing and refurbishing old spy drones from earth into full fledged support systems for the inhabitants of the jovian system.
+	<<if $dadSoldier == true>>
+		Your job was mostly containing small uprising here and there in the system, but not much more. 
+	<<elseif $dadMech == true>>
+		Your job ended up being fixing and refurbishing old spy drones from earth into full fledged support systems for the inhabitants of the jovian system.
 	<<endif>>
 	But luckly those days ended when the Marsuvian alliance managed to secure a successful treaty with earth. 
 	The latter would open back up the water supplies to the jovian, and give them partial freedom while remaining in control of europa and io's resources.
@@ -282,13 +270,10 @@ Being a single dad it's not always the easiest.
 But having your own workshop helps with that.
 So much that you're even able to have enough time to bring your kid to the rational.
 It took them two weeks of annoying you and interrupting you mid work to convince you 
-
 When you go pick them up from school on ganymede to finally go there, they look at you.
 Kher: Hey dad, can Kazimierz hang out with us today?
-
 -> No kiddo, today it's just the two of us. 
 	The calming sound of the ship turning on helps you ignore your kid's upset face. 
-
 	-> so Kher how did it go today? 
 		Kher: ok.
 		-> Just drive silently 
@@ -300,85 +285,47 @@ Kher: Hey dad, can Kazimierz hang out with us today?
 			<<jump rational>>
 	-> Just silently drive towards the rational.
 		<<jump rational>>
-
 -> Sure I don't see why not.
 	The calming sound of the ship turning on, cover your kid and their friend's chatter.
-	<<if set_flag("hick")>><<endif>>
-	<<jump rational>>
+	<<declare $Hick= true >><<jump rational>>
 ===
 title: rational
 ---
 You arrive at the rational, the place is packed full and it took you a minute for them to find you a seat. 
-<<if get_flag("hick")>> 
-The three of you sit in the fake leather chair, while the waitress serves you your menu. 
-<<elseif true>>
-The two of you sit in the fake leather chair, while the waitress serves you your menu. 
+<<if $Hick == true>> 
+	The three of you sit in the fake leather chair, while the waitress serves you your menu. 
+<<else>>
+	The two of you sit in the fake leather chair, while the waitress serves you your menu. 
 <<endif>>
 You pick up the menu and read through it.
 -> pick the Barszcz 
 	It doesn't take you that long to settle on the Barszcz, you always felt more focused after good plate of it.
--> pick the Barszcz 
+-> pick the NutriMix 
 	It doesn't take you that long to settle on the NutriMix, you always felt stronger after good shake.
--> pick the Barszcz 
+-> pick the Insekczyk 
 	It doesn't take you that long to settle on the Insekczyk, you can actually find people more tolerable after it.
-
 The evening flies by in a second. 
 You find yourself in the ship right outside the workshop, your kids get out of the ship, while you finish turning down all the systems.
 You see them enter the place and turning on the light.
 You're about to switch of the JPS when you get a message from the integrated log.
-<<if get_flag("Martian")>>
-The commander's contact pops up in your messages with a location attached.
-you wonder what job will she have for you this time.
-<<elseif get_flag("Blind")>>
-Grig's contact pops up in your messages with a location attached.
-you wonder what job will he have for you this time.
+<<if $Martian== true>>
+	The commander's contact pops up in your messages with a location attached.
+	you wonder what job will she have for you this time.
+<<elseif $Blind== true>>
+	Grig's contact pops up in your messages with a location attached.
+	you wonder what job will he have for you this time.
 <<endif>>
 
 -> Go to the location. 
 	When you get back home you find the kid sleeping with their book still in their hand.
 	Another day has past
-	<<if adjust_status(0,0,0,1)>><<endif>><<jump alphaDialogue>>
+	<<if adjust_status(0,0,0,1)>><<endif>>
 -> Turn the system down and go back home.
 	You get in the house and get to work to finish a project you've been stuck on 
 	Kher decides to help you out, and so you two work together. 
 	By the end of the day you tuck them into bed and you know,
 	another day is over.
-	<<if adjust_status(1,0,0,0)>><<endif>><<jump alphaDialogue>>
-===
-title: Ch4
-position: 690,-135
----
-DESCRIBE HOW KHER WANTS TO MOVE OUT AND GO TO MARS
-<<if get_flag("martian")>>
-RELUCTUNT BUT PROWD MARTIAN.
-	->I WILL HELP THEM HOWEVER I CAN //+2 EDUCATION +1 MIND
-		<<if set_flag("KherStudent")>><<endif>>
-		<<jump Ch5>>
-	->FUCK THEM THEY'RE ABBANDONING ME. //+2 Phisical +1 SOCIAL
-		<<if set_flag("KherWorker")>><<endif>>
-		<<jump Ch5>>
-<<else>>
-WHY THE FUCK AND FUCK MARS!
-	->I WILL HELP THEM ANYWAYS //+2 EDUCATION +1 MIND
-		<<if set_flag("KherStudent")>><<endif>>
-		<<jump Ch5>>
-	->I WILL TRY TO MAKE THEM CHANGE THEIR MIND //+2 MIND +1EDUCATION
-		<<if set_flag("KherStudent")>><<endif>>
-		<<jump Ch5>>
-	->FUCK THAT! //+2 Phisical +1 SOCIAL
-		<<if set_flag("KherWorker")>><<endif>>
-		<<jump Ch5>>
-<<endif>>
-===
-title: Ch5
-position: 1104,-522
----
-KHER JUST LEFT, IS DADDY GONNA SEND MESSAGES? 
-
--> SEND MESSAGES
-	<<if set_flag("messages")>><<endif>>
--> DON'T SEND MESSAGES
-	<<if set_flag("noMessages")>><<endif>>
+	<<if adjust_status(1,0,0,0)>><<endif>>
 ===
 title: alphaDialogue
 ---
@@ -391,19 +338,15 @@ Memories are weird when you wake up from cryo.
 -> why was I even here? 
 	Dad: You were here for me kiddo. 
 	You look around but see no one. And then remember the message.
-
 	It came by mail what, 6 months ago now? they wrote you about your dad's sickness. 
 	Dad: Came here to say your final goodbye to your old man?
 	Dad: What a lucky father I am.
-
 	-> What's happening?
 		Dad: Don't worry about it.
 		Then you remember, he is being treated in Febris hospital in Ganymede. 
-
 	-> What sickness was it again?
 		Dad: I don't think it's that important now kiddo.
 		Then you remember, he is being treated in Febris hospital in Ganymede. 
-
 	-> Where was he staying.
 		You frantically look through your messages. 
 		Six months of spam are a lot to sift through. 
