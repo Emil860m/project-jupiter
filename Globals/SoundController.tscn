@@ -21,6 +21,10 @@ fmod_parameters/Location/variant_type = 4
 fmod_parameters/inFlight/id = -5108033378003122391
 fmod_parameters/inFlight = 0.0
 fmod_parameters/inFlight/variant_type = 2
+fmod_parameters/TalkingTo/id = 1276719723139148551
+fmod_parameters/TalkingTo = "None"
+fmod_parameters/TalkingTo/labels = PackedStringArray("None", "Kassandra", "Zoe", "Hickey", "Sully")
+fmod_parameters/TalkingTo/variant_type = 4
 
 [node name="AmbianceEmitter" type="FmodEventEmitter2D" parent="." unique_id=2073497909]
 event_name = "event:/ATMOS"

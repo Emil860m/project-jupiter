@@ -62,6 +62,14 @@ func set_bgm(location, loading=false):
 func set_in_flight(is_in_flight: bool):
 	bgm_emitter.set_parameter("inFlight", is_in_flight)
 
+func set_in_dialog(npc):
+	assert(npc == "Kassandra" or npc == "Zoe" or npc == "Hickey" or npc == "Sully")
+	
+	bgm_emitter.set_parameter("TalkingTo", npc)  # Kassandra | Zoe | Hickey | Sully
+
+func set_not_in_dialog():
+	bgm_emitter.set_parameter("TalkingTo", "None")
+
 func get_location_parameter(loc: NpcScheduler.locations) -> String:
 	match loc:
 		NpcScheduler.locations.MAIN_MENU: return "Title"
