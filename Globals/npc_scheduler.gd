@@ -34,7 +34,7 @@ func _ready() -> void:
 			NPC_Schedule.new(td2ts(20, 0), td2ts(25, 0), ["hickHospital"],[], "hickHospitalTS6")
 		],
 		locations.WORKSHOP: [
-			NPC_Schedule.new(td2ts(11, 00), td2ts(12, 15), [],[], "hickWorkshopTS3"),
+			NPC_Schedule.new(td2ts(11, 00), td2ts(13, 15), [],[], "hickWorkshopTS3"),
 			NPC_Schedule.new(td2ts(15, 15), td2ts(18, 00), [],[], "hickWorkshopTS5"),
 			NPC_Schedule.new(td2ts(20, 00), td2ts(21, 00), [],["hickHospital"], "hickWorkshopTS6")
 		],
@@ -42,9 +42,9 @@ func _ready() -> void:
 	}
 	kass = {
 		locations.HOSPITAL: [
-			NPC_Schedule.new(td2ts(9, 00), td2ts(14, 00), [],[], "kasHospitalTS1"),
-			NPC_Schedule.new(td2ts(14, 01), td2ts(20, 00), [],["kassWorkshop"],"kasHospitalTS4"),
-			NPC_Schedule.new(td2ts(18, 00), td2ts(20, 00), [],[],"kasHospitalTS7"),
+			NPC_Schedule.new(td2ts(9, 00), td2ts(15, 00), [],[], "kasHospitalTS1"),
+			NPC_Schedule.new(td2ts(15, 01), td2ts(17, 00), [],["kassWorkshop"],"kasHospitalTS4"),
+			NPC_Schedule.new(td2ts(17, 01), td2ts(20, 00), [],[],"kasHospitalTS7"),
 		],
 		locations.WORKSHOP: [
 			NPC_Schedule.new(td2ts(16, 30), td2ts(18, 00), ["kassWorkshop"],[],"kasWorkshopTS5")
@@ -52,27 +52,29 @@ func _ready() -> void:
 	}
 	zoe = {
 		locations.HOSPITAL: [
-			NPC_Schedule.new(td2ts(12, 45), td2ts(14, 00), ["zoeHospital"],[],"zoeHospitalTS4"),
+			NPC_Schedule.new(td2ts(15, 31), td2ts(16, 00), ["zoeHospital"],[],"zoeHospitalTS4"),
 			],
 		locations.OFFICE: [
 			NPC_Schedule.new(td2ts(9, 00), td2ts(16, 00), [],["sullyOffice"],"zoeOfficeTS2"),
-			NPC_Schedule.new(td2ts(9, 00), td2ts(12, 30), ["sullyOffice"],[],"SalOfficeTS3"),
+			NPC_Schedule.new(td2ts(9, 00), td2ts(15, 30), ["sullyOffice"],[],"SalOfficeTS3"),
 			NPC_Schedule.new(td2ts(12, 45), td2ts(16, 00), [],["zoeHospital"],"zoeOfficeTS5"),
 			NPC_Schedule.new(td2ts(16, 01), td2ts(20, 00), [],[],"zoeOfficeTS5"),
 		]
 	}
 	sally = {
 		locations.HOSPITAL: [
-			NPC_Schedule.new(td2ts(11, 45), td2ts(18, 00), [],["sullyOffice"],"SalHospitalTS2"),
-			NPC_Schedule.new(td2ts(12, 45), td2ts(21, 00), ["sullyOffice"],[],"SalHospitalTS4"),
+			NPC_Schedule.new(td2ts(11, 31), td2ts(13, 00), [],["sullyOffice"],"SalHospitalTS2"),
+			NPC_Schedule.new(td2ts(15, 31), td2ts(17, 30), [],[],"SalHospitalTS4"),
+			NPC_Schedule.new(td2ts(20, 00), td2ts(25, 30), ["sullyOffice"],[],"SalHospitalTS4"),
 		],
 		locations.WORKSHOP: [
 			NPC_Schedule.new(td2ts(9, 00), td2ts(11, 30), [],[],"SalWorkshopTS1"),
-			NPC_Schedule.new(td2ts(18, 30), td2ts(23, 30), [],["sullyOffice"],"SalWorkshopTS6"),
-			NPC_Schedule.new(td2ts(21, 30), td2ts(25, 00), ["sullyOffice"],[],"SalWorkshopTS6"),
+			NPC_Schedule.new(td2ts(13, 00), td2ts(15, 30), [],[],"SalWorkshopTS1"),
+			NPC_Schedule.new(td2ts(17, 30), td2ts(25, 00), [],["sullyOffice"],"SalWorkshopTS6"),
+			NPC_Schedule.new(td2ts(17, 30), td2ts(20, 00), ["sullyOffice"],[],"SalWorkshopTS6"),
 		],
 		locations.OFFICE: [
-			NPC_Schedule.new(td2ts(9, 00), td2ts(12, 30), ["sullyOffice"],[],"SalOfficeTS3"),
+			NPC_Schedule.new(td2ts(9, 00), td2ts(15, 30), ["sullyOffice"],[],"SalOfficeTS3"),
 		]
 	}
 	consoles = {
