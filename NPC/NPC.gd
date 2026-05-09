@@ -24,6 +24,8 @@ func _ready() -> void:
 		dialogComp.set_character_portrait(mood_portrait_dict[current_mood])
 
 func dialog_complete():
+	SoundController.set_not_in_dialog()
+	
 	print("dialog is completed")
 	interacting = false
 	check_time_and_flags()
@@ -83,5 +85,7 @@ func change_animation(blend_value: float) -> void:
 	self.set_process(true)
 
 func _interact():
+	SoundController.set_in_dialog(character_name)
+	
 	interacting = true
 	dialogComp.start_dialog()
