@@ -146,7 +146,7 @@ animations = [{
 "duration": 3.0,
 "texture": ExtResource("38_kjyrv")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 7.0
 }]
@@ -242,8 +242,7 @@ start_node = "alphaDialogue"
 position = Vector2(-9, 3)
 scale = Vector2(3.6269844, 3.6269844)
 sprite_frames = SubResource("SpriteFrames_4gbgg")
-frame = 19
-frame_progress = 0.5854282
+autoplay = "default"
 
 [connection signal="changeStat" from="StatAllocator" to="PlanetView2d" method="_on_stat_allocator_change_stat"]
 [connection signal="animation_finished" from="bootUP" to="." method="_on_boot_up_animation_finished"]

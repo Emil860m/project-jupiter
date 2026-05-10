@@ -11,7 +11,6 @@ var location_id = NpcScheduler.locations.PLANET_VIEW
 
 func _ready() -> void:
 	_animated_sprite_1.play("default")
-	_animated_sprite_2.play("default")
 	
 	if not Flags.get_flag("ContextHasBeenRead"):
 		Flags.set_flag("ContextHasBeenRead")
@@ -19,5 +18,4 @@ func _ready() -> void:
 
 
 func _on_boot_up_animation_finished() -> void:
-	_animated_sprite_2.stop()
 	_animated_sprite_2.visible = false
