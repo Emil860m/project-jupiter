@@ -179,7 +179,7 @@ func _create_option_buttons() -> void:
 		if button is Button:
 			button.text = option.get_plain_text()
 			var parent: Control = get_parent()
-			button.custom_minimum_size = Vector2(0, options_container.size.y/4 - 3)
+			#button.custom_minimum_size = Vector2(0, options_container.size.y/4 - 3)
 			#button.custom_minimum_size = Vector2(0, 80)
 			#button.add_theme_font_size_override("font_size", 40)
 		elif button.has_method("set_option_text"):
