@@ -21,7 +21,6 @@ var selected: bool = false
 var base_travel_time: int
 var estimated_travel_time: int
 
-
 @onready var estimated_loc: Sprite2D = $estimated_loc
 @onready var youAreHere: Sprite2D = $YouAreHere
 @onready var selectedSprite: Sprite2D = $selected
@@ -46,17 +45,18 @@ func _ready() -> void:
 	$Sprite2D.texture = sprite
 	estimated_loc.texture = sprite
 	current_angle = starting_angle
-	set_orbital_position()
+	
+	set_orbital_position(Globals.current_timestep)
 	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + 5)
 	#estimated_loc.visible = false
 	direction.visible = false
 	estimated_loc.self_modulate.a = 0.5
 	
-func set_orbital_position():
-	global_position = get_position_at_time(Globals.current_timestep)
+func set_orbital_position(time):
+	global_position = get_position_at_time(time)
 
-func set_estimated_loc(timestep, current_loc):
-	estimated_loc.global_position = get_position_at_time(Globals.current_timestep + timestep)
+func set_estimated_loc(timestep, travel_time, current_loc):
+	estimated_loc.global_position = get_position_at_time(travel_time + timestep)
 	direction.look_at(current_loc)
 	estimated_loc.visible = true
 	#estimated_travel_time = timestep
