@@ -9,12 +9,14 @@ position: -463,-268
 <<endif>>
 -> how can I get an extension for the SDA? <<if get_flag_uncheck("SDA") and get_flag("deadDad")>>
 	<<detour zoeSDA>>
--> about the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+-> About the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeExtension>>
 -> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
 	<<detour zoeKeys>>
--> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
+-> You seem very busy, do you need help with anything? <<if get_flag_uncheck("zoeHelp")>>
 	<<detour zoeHelp>>
+-> How much does the extension last for?<<if get_flag("gotExtension")>> 
+	<<detour ExtensionLast>>
 -> Thanks, see you later
 	<<set $zoeSpeak = false>><<return>>
 <<jump zoeOfficeTS2>>
@@ -27,12 +29,22 @@ title: zoeHospitalTS4
 color: blue
 position: -464,-2
 ---
-<<if get_flag("docs") and get_flag("log")>>
-	Here's the extension
+<<if get_flag("docs") and get_flag("log") and get_flag("will")>>
+	Zoe stoic look seems vialed by a sadness that makes her expression even more cold.
+	Zoe: Good Job. I'll file the extension when I go back to the office.
+		-> How much is the extension? 
+			Zoe: It last a week. so be quick in organizing this funeral thing.
+		-> Thanks
 	<<if set_flag("gotExtension")>><<endif>>
 <<elseif true>>
 	Zoe is sharing a private moment with the corpse.
 <<endif>>
+===
+title: ExtensionLast
+---
+-> How much is the extension? 
+	Zoe: It last a week. so be quick in organizing this funeral thing.
+	<<return>>
 ===
 title: zoeOfficeTS5
 color: yellow
@@ -45,12 +57,14 @@ position: -460,293
 <<endif>>
 -> how can I get an extension for the SDA? <<if get_flag_uncheck("SDA") and get_flag("deadDad")>>
 	<<detour zoeSDA>>
--> about the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
+-> About the extension <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeExtension>>
 -> Can you make a copy of sully's key?<<if get_flag("keys") and get_flag_uncheck("zoeKeys")>>
 	<<detour zoeKeys>>
--> can I help you somehow? <<if get_flag_uncheck("zoeHelp")>>
+-> You seem very busy, do you need help with anything? <<if get_flag_uncheck("zoeHelp")>>
 	<<detour zoeHelp>>
+-> How much does the extension last for?<<if get_flag("gotExtension")>> 
+	<<detour ExtensionLast>>
 -> Thanks, see you later
 	<<set $zoeSpeak = false>><<return>>
 <<jump zoeOfficeTS5>>
@@ -69,7 +83,7 @@ Zoe: Hi I'm zoe, who are you? and why are you here.
 	<<if get_flag("deadDad")>> 
 	I'm here about my dad.
 	Zoe: Oh, for the little I knew your father I'm very sorry.
-	<<else>>.
+	<<elseif true>>.
 	Zoe: are you Joh's kid? maybe go talk to the nurse. I don't want to deal with you.
 	She waves at you like to will you out of her office.
 	<<endif>>
@@ -78,30 +92,73 @@ Zoe: Hi I'm zoe, who are you? and why are you here.
 //DIALOGUE
 title:zoeSDA
 ---
-Yes, you need your a log report of your arrival and your father's docs.
+She rolls her eyes like you just completely ruined her day just by asking that. 
+Zoe: Look it is not that complicated
+Zoe: Go to the log and download the report of your arrival
+Zoe: Get your father's medical documentation.
+Zoe: Go to wherever your father lived log in his personal kompat and download his will.
+	-> So Log, Documents and Will?
+		Zoe: yes exactly
+		Zoe: are we done here or do you need me to draw you a picture?
+		-> Yes, draw me a picture.
+			Zoe: ...
+		-> ...
+	-> Ok thanks.
+		Zoe: Now go, I've work that needs to be done.
 <<if set_flag("SDA")>><<endif>>
 ===
 title:zoeKeys
 ---
-yes come pick them up tomorrow, for now keep using sully's 
+Zoe: Sure ok. But I don't have time now.
+Zoe: Come pick them up tomorrow, for now keep using sully's 
 <<if set_flag("zoeKeys")>><<endif>>
 ===
 title:zoeHelp
 ---
-tell sully to come here 
-<<if set_flag("zoeAsk")>><<endif>>
-<<if set_flag("zoeHelp")>><<endif>>
+<<if social_check(14)>>
+	She gazes up at you, almost confused.
+	like no one asked if she needed something in a long time.
+	Zoe: Actually, Yes.
+<<elseif true>>
+	She gazes up at you, a sliver of something off in her expression.
+	-> What's up?
+		She shakes off the expression, and goes back to her stoic look.
+		Zoe: I'm fine thanks. But yes, you actually can.
+	-> ...
+<<endif>>
+	Zoe: I've been trying to get a hold of Sully since this morning
+	Zoe: If you could tell him to come in my office that would be nice.
+<<if set_flag("zoeAsk")>><<endif>><<if set_flag("zoeHelp")>><<endif>>
 ===
 title:zoeExtension
 ---
-<<if get_flag("docs") and get_flag("log")>>
-	here's the extantion
+<<if get_flag("docs") and get_flag("log") and get_flag("will")>>
+	Zoe looks up at you, stoic as always
+	Zoe: Good Job. I'll file the extension when I go back to the office.
+		-> How much is the extension? 
+			Zoe: It last a week. so be quick in organizing this funeral thing.
+		-> Thanks
 	<<if set_flag("gotExtension")>><<endif>>
-<<elseif get_flag_uncheck("docs") and get_flag_uncheck("log")>>
-	you're missing both
-<<elseif get_flag_uncheck("docs")>>
-	You're missing the docs
+<<elseif get_flag_uncheck("docs") and get_flag_uncheck("log") and get_flag_uncheck("will")>>
+	Zoe: Are you serious? Log, Documents and Will, remember?
+	Zoe: you don't have any. Come back when you have them, and stop wasting my time.
+<<elseif get_flag_uncheck("docs")and get_flag_uncheck("will")>>
+	Zoe: You're still missing the medical documents and his will.
+	Zoe: Come back when you have them, and stop wasting my time.
+<<elseif get_flag_uncheck("log")and get_flag_uncheck("will")>>
+	Zoe: You're still missing your log and his will.
+	Zoe: Come back when you have them, and stop wasting my time.
+<<elseif get_flag_uncheck("docs")and get_flag_uncheck("log")>>
+	Zoe: You're still missing your log and the medical documents.
+	Zoe: Come back when you have them, and stop wasting my time.
 <<elseif get_flag_uncheck("log")>>
-	you're missing the log
+	Zoe: You're still missing the log.
+	Zoe: Come back when you have it, and stop wasting my time.
+<<elseif get_flag_uncheck("docs")>>
+	Zoe: You're still missing the medical documents.
+	Zoe: Come back when you have it, and stop wasting my time.
+<<elseif get_flag_uncheck("will")>>
+	Zoe: You're still missing his will.
+	Zoe: Come back when you have it, and stop wasting my time.
 <<endif>>
 ===

@@ -16,7 +16,7 @@ position: -538,-230
 	<<detour grandma>>
 ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
 	<<detour dad>>
-->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
 ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
 	<<detour hickDocs>>
@@ -51,7 +51,7 @@ position: -555,14
 	<<detour grandma>>
 ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
 	<<detour dad>>
-->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
 ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
 	<<detour hickDocs>>
@@ -83,7 +83,7 @@ position: -531,371
 	<<detour grandma>>
 ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
 	<<detour dad>>
-->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys")>>
+->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
 ->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
 	<<detour hickDocs>>
@@ -745,14 +745,28 @@ hickey looks at you weird.
 title: hickSully
 position: 127,-498
 ---
-Sully has the keys
+Hick: Mmm have you asked Sully? He should have a spare copy keys
 <<if set_flag("sullyKeys")>><<endif>>
 ===
 
 title: hickDocs
 position: 137,590
 ---
-Yeah here they are
+Hick: Yeah I have them, why do you need it?
+	-> He was my dad it's none of your business
+		Hick: Okok dude. No reason to get heated.
+		The boy turns on his Kompat. 
+		Hick: Here, I sent them directly to your Kompat.
+	-> I want to extend the SDA. Maybe organize a funeral or something.
+		Hick: Oh that's nice...
+		The boy looks shook by your idea.
+		-> Do you wanna come
+			Hick: Ah nah dude, I would love but I've a busy week ahead. But here.
+			Hick: I sent 
+			The boy turns on his Kompat. and sends you the docs.
+			Hick: I imagine you don't have Orbit anymore. I'll send them directly to your Kompat.
+		-> Can you give me the docs now?
+			Hick: Yeah, I can send them directly to your Kompat.
 <<if set_flag("docs")>><<endif>>
 <<if set_flag("hickDocs")>><<endif>>
 ===

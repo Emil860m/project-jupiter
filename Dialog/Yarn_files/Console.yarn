@@ -3,14 +3,17 @@ color: purple
 position: 0,0
 ---
 Would you like to read the news or check the log?
--> The news
-	<<jump news_crashesAtRationale>>
--> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
-	Download complete
-	<<if set_flag("log")>><<endif>>
+	-> The news
+		<<detour news_crashesAtRationale>>
+	-> The log
+		Hospital arrivals within the last hour: INSERT HERE
+		Courtyard arrivals within the last hour: INSERT HERE
+	-> Download the arrival documents<<if get_flag("SDA")>>
+		Download complete
+		<<detour Download>>
+	-> Log out
+		<<return>>
+<<jump console_0740to0900>>
 ===
 title: console_0900to1000
 color: purple
@@ -18,13 +21,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_crashesAtRationale>>
+	<<detour news_crashesAtRationale>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_0900to1000>>
 ===
 title: console_1000to1100
 color: purple
@@ -32,13 +38,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_crashesAtRationale>>
+	<<detour news_crashesAtRationale>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1000to1100>>
 ===
 title: console_1100to1200
 color: purple
@@ -46,13 +55,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_crashesAtRationale>>
+	<<detour news_crashesAtRationale>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1100to1200>>
 ===
 title: console_1200to1300
 color: purple
@@ -60,13 +72,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_meteorWarning>>
+	<<detour news_meteorWarning>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1200to1300>>
 ===
 title: console_1300to1400
 color: purple
@@ -74,13 +89,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_meteorWarning>>
+	<<detour news_meteorWarning>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1300to1400>>
 ===
 title: console_1400to1500
 color: purple
@@ -88,13 +106,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_insekczyk>>
+	<<detour news_insekczyk>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1400to1500>>
 ===
 title: console_1500to1600
 color: purple
@@ -102,13 +123,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_insekczyk>>
+	<<detour news_insekczyk>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1500to1600>>
 ===
 title: console_1600to1700
 color: purple
@@ -116,13 +140,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_gestionPrize>>
+	<<detour news_gestionPrize>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1600to1700>>
 ===
 title: console_1700to1800
 color: purple
@@ -130,13 +157,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_gestionPrize>>
+	<<detour news_gestionPrize>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1700to1800>>
 ===
 title: console_1800to1900
 color: purple
@@ -144,13 +174,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_missingColour>>
+	<<detour news_missingColour>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1800to1900>>
 ===
 title: console_1900to2000
 color: purple
@@ -158,13 +191,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_missingColour>>
+	<<detour news_missingColour>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_1900to2000>>
 ===
 title: console_2000to2100
 color: purple
@@ -172,13 +208,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_missingColour>>
+	<<detour news_missingColour>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_2000to2100>>
 ===
 title: console_2100to2200
 color: purple
@@ -186,13 +225,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_natureNurture>>
+	<<detour news_natureNurture>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_2100to2200>>
 ===
 title: console_2200to2300
 color: purple
@@ -200,13 +242,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_natureNurture>>
+	<<detour news_natureNurture>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_2200to2300>>
 ===
 title: console_2300to2400
 color: purple
@@ -214,13 +259,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_natureNurture>>
+	<<detour news_natureNurture>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_2300to2400>>
 ===
 title: console_2400to2500
 color: purple
@@ -228,13 +276,16 @@ position: 0,0
 ---
 Would you like to read the news or check the log?
 -> The news
-	<<jump news_natureNurture>>
+	<<detour news_natureNurture>>
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents
 	Download complete
-	<<if set_flag("log")>><<endif>>
+	<<detour Download>>
+-> Log out
+	<<return>>
+<<jump console_2400to2500>>
 ===
 
 // News
@@ -278,4 +329,11 @@ position: 0,0
 ---
 After extensive research, the unified studies have finally found a conclusive answer to the question of nature versus nuture.
 It seems the actions of a parent shape the child significantly more than their genes, so be on your best behaviour if you want to raise them well.
+===
+
+title: Download
+---
+	hello world
+<<if set_flag("log")>><<endif>>
+<<return>>
 ===
