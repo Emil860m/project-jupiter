@@ -41,10 +41,10 @@ states/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_cd5mq")
 states/BlendSpace1D/position = Vector2(410, 107.2)
 transitions = ["Start", "BlendSpace1D", SubResource("AnimationNodeStateMachineTransition_kdihf")]
 
-[node name="Sally" type="StaticBody3D" unique_id=764589073]
+[node name="Sully" type="StaticBody3D" unique_id=764589073]
 script = ExtResource("1_82rkw")
 blend_animation = true
-character_name = "Sally"
+character_name = "Sully"
 mood_portrait_dict = Dictionary[String, String]({
 "busy": "res://Textures/Portraits/Sully/juljus_busy.png",
 "happy": "res://Textures/Portraits/Sully/juljus_happy.png",
