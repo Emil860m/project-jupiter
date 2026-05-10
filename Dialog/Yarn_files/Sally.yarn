@@ -8,9 +8,9 @@ position: -237,-112
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
--> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
@@ -41,9 +41,9 @@ position: -217,73
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
--> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
@@ -68,7 +68,12 @@ color: yellow
 position: -1089,258
 ---
 <<if get_flag("docs") and get_flag("log")>>
-	Zoe: Here's the extantion
+	Zoe looks up at you, stoic as always
+	Zoe: Good Job. I'll file the extension when I go back to the office.
+	Sully: That's great kid! I glad you were able to make it in time
+		-> How much is the extension? 
+			Zoe: It last a week. so be quick in organizing this funeral thing.
+		-> Thanks
 	<<if set_flag("gotExtension")>><<endif>>
 <<elseif true>>
 	Sully is talking to Zoe
@@ -84,9 +89,9 @@ position: -212,235
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
--> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
@@ -116,9 +121,9 @@ position: -250,648
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
--> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
@@ -145,9 +150,9 @@ position: -252,413
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
--> How can I get in the workshop?<<if get_flag_uncheck("keys")>>
+-> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>

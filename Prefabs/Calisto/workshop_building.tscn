@@ -68,7 +68,7 @@ mesh = ExtResource("2_tbajc")
 [node name="Door" type="StaticBody3D" parent="." unique_id=1434063252]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 1.5, -7.5)
 script = ExtResource("3_arxxe")
-has_dialog = false
+dialog_node = "Workshop"
 
 [node name="InteractableComponent" parent="Door" unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("10_fl2y8")]
 transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.99999994, -2.9999998, 14.999998)
