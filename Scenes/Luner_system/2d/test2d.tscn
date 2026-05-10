@@ -23,6 +23,21 @@
 [ext_resource type="Texture2D" uid="uid://bcgpaw7txtcl5" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_11.png" id="21_octm2"]
 [ext_resource type="Texture2D" uid="uid://cdn0lsvk00bci" path="res://Textures/Pons/AlfaBackgroundAnim/ponsAnimBCG_12.png" id="22_wh2fw"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="23_5py0a"]
+[ext_resource type="Texture2D" uid="uid://b8xbwelsow84s" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame1.png" id="24_7t7xk"]
+[ext_resource type="Texture2D" uid="uid://vipqxdj2j7a" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame2.png" id="25_ut5qi"]
+[ext_resource type="Texture2D" uid="uid://c4m5bq4fjhcnw" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame3.png" id="26_x2k14"]
+[ext_resource type="Texture2D" uid="uid://dsi4kcrs6wtfi" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame4.png" id="27_tc5oj"]
+[ext_resource type="Texture2D" uid="uid://dwo24mulyyyy0" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame5.png" id="28_qlt5v"]
+[ext_resource type="Texture2D" uid="uid://dhlxecxacia1h" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame6.png" id="29_tqhu8"]
+[ext_resource type="Texture2D" uid="uid://bwn753aosvx28" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame7.png" id="30_33nlb"]
+[ext_resource type="Texture2D" uid="uid://brubtcq5gbsum" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame8.png" id="31_et22i"]
+[ext_resource type="Texture2D" uid="uid://vhf2lwtjfpok" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame9.png" id="32_173di"]
+[ext_resource type="Texture2D" uid="uid://dx7751t8o0hyi" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame10.png" id="33_2aeix"]
+[ext_resource type="Texture2D" uid="uid://b1u2hcdcn27ll" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame11.png" id="34_doykj"]
+[ext_resource type="Texture2D" uid="uid://cpqufc2vfyejq" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame12.png" id="35_ek0c1"]
+[ext_resource type="Texture2D" uid="uid://5ojsm5nprd5w" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame13.png" id="36_2gykm"]
+[ext_resource type="Texture2D" uid="uid://dbtow5hp2pij5" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame14.png" id="37_p55qc"]
+[ext_resource type="Texture2D" uid="uid://b3gsssvdiyiey" path="res://Textures/MapUI/bootUpAnimation/bootUPanimationFrame15.png" id="38_kjyrv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gr3x1"]
 animations = [{
@@ -66,6 +81,74 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gbgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_7t7xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7t7xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ut5qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ut5qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_x2k14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_x2k14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tc5oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tc5oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qlt5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qlt5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tqhu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_33nlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_et22i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_173di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2aeix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_doykj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ek0c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2gykm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_p55qc")
+}, {
+"duration": 3.0,
+"texture": ExtResource("38_kjyrv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
 }]
 
 [node name="Test2d" type="Node2D" unique_id=2028741739]
@@ -155,4 +238,12 @@ frame_progress = 0.79267645
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("23_5py0a")]
 start_node = "alphaDialogue"
 
+[node name="bootUP" type="AnimatedSprite2D" parent="." unique_id=853274842]
+position = Vector2(-9, 3)
+scale = Vector2(3.6269844, 3.6269844)
+sprite_frames = SubResource("SpriteFrames_4gbgg")
+frame = 19
+frame_progress = 0.5854282
+
 [connection signal="changeStat" from="StatAllocator" to="PlanetView2d" method="_on_stat_allocator_change_stat"]
+[connection signal="animation_finished" from="bootUP" to="." method="_on_boot_up_animation_finished"]

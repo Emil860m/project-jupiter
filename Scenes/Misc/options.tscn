@@ -66,7 +66,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=1933298748]
 layout_mode = 2
-text = "Sound:"
+text = "Sound effects:"
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer" unique_id=2105141177]
 layout_mode = 2

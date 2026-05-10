@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bvl0pnf2061ko" path="res://Prefabs/industrial_light_a.tscn" id="18_dcae5"]
 [ext_resource type="PackedScene" uid="uid://nmxf5wvoxmcg" path="res://Prefabs/Ganymede/left_wall.tscn" id="21_e6j45"]
 [ext_resource type="PackedScene" uid="uid://byp4fkxcmqcr2" path="res://NPC/Hickey/Hickey.tscn" id="23_aubca"]
-[ext_resource type="PackedScene" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
+[ext_resource type="PackedScene" uid="uid://cvv7l02d6nv7o" path="res://Prefabs/Ganymede/medicalBedEmpty.tscn" id="23_rxpas"]
 [ext_resource type="PackedScene" uid="uid://cs55xxpbvxs4e" path="res://NPC/Kassandra/Kassandra.tscn" id="24_rxpas"]
 [ext_resource type="PackedScene" uid="uid://jlpqaxd3k3fj" path="res://Prefabs/button.tscn" id="24_tn6kv"]
 [ext_resource type="PackedScene" uid="uid://cij2hpejmtgn6" path="res://Prefabs/Signs/arrowSign.tscn" id="25_tn6kv"]
@@ -41,6 +41,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c8axf4dn61bl" path="res://Assest/bookShelfStanding/bookShelfRedBook.obj" id="39_mcsqv"]
 [ext_resource type="PackedScene" uid="uid://dayv64fxqgsru" path="res://Prefabs/Posters/kalistoPoster.tscn" id="40_of3lc"]
 [ext_resource type="PackedScene" uid="uid://dn76p03h1oorx" path="res://Prefabs/Posters/rationalPoster.tscn" id="41_aqt3n"]
+[ext_resource type="PackedScene" uid="uid://t204wnkm60ud" path="res://Prefabs/MiscProps/railing.tscn" id="42_0gkqn"]
 
 [sub_resource type="Sky" id="Sky_lm1a6"]
 
@@ -700,7 +701,7 @@ has_dialog = false
 transform = Transform3D(0.12450942, 0, 0.38012815, 0, 0.39999998, 0, -0.38012815, 0, 0.12450942, 1.408696, 0, 45.313087)
 
 [node name="UnderConstructionSign2" parent="NavigationAgent3D/Lobby" unique_id=1407407071 instance=ExtResource("18_7xnya")]
-transform = Transform3D(-0.4, 0, -3.4969112e-08, 0, 0.4, 0, 3.4969112e-08, 0, -0.4, 19, 0, 0)
+transform = Transform3D(-0.37139174, 0, -0.14855365, 0, 0.4, 0, 0.14855365, 0, -0.37139174, 21.198286, 0, 0.9895723)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationAgent3D/Lobby" unique_id=2033287257]
 
@@ -733,9 +734,11 @@ can_interact = false
 
 [node name="DaddyDoor" parent="." unique_id=102163713 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.690615, 0, 32.37672)
+object_id = "door1"
 
 [node name="WorkerDoor" parent="." unique_id=310328905 instance=ExtResource("4_rt5xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.829254, 0, 2.251935)
+object_id = "door2"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=393703045]
 transform = Transform3D(0.5323888, 0.8138301, 0.23290095, 0, -0.27513406, 0.9614059, 0.8465, -0.5118417, -0.14647828, 13.52228, 23.809488, -5.060934)
@@ -798,7 +801,7 @@ current_mood = "concern"
 transform = Transform3D(-0.8677828, 0, 0.49694377, 0, 1, 0, -0.49694377, 0, -0.8677828, -11.76475, 1.0500002, 33.782196)
 
 [node name="Sally" parent="." unique_id=764589073 instance=ExtResource("28_vxxnl")]
-transform = Transform3D(0.6668187, 0, 0.74522, 0, 1, 0, -0.74522, 0, 0.6668187, -14.155514, 1.0500002, -8.176869)
+transform = Transform3D(0.58818054, 0, -0.80872965, 0, 1, 0, 0.80872965, 0, 0.58818054, -13.220663, 1.0500002, -8.372324)
 
 [node name="Wrench" parent="." unique_id=223653445 instance=ExtResource("30_r63l5")]
 transform = Transform3D(-0.4784195, 0, -0.14530936, 0, 0.5, 0, 0.14530936, 0, -0.4784195, -14.49101, 0.064695954, -10.574685)
@@ -840,7 +843,10 @@ transform = Transform3D(0.22153562, -0.44824326, 9.457553e-09, 6.556708e-08, 2.1
 mesh = ExtResource("39_mcsqv")
 
 [node name="Node3D4" parent="." unique_id=1678531539 instance=ExtResource("40_of3lc")]
-transform = Transform3D(-4.3567702e-08, -0.081016555, 0.99671286, -3.541346e-09, 0.99671286, 0.081016555, -1, 3.6793266e-16, -4.3711395e-08, -4.6131554, 2.0015004, -8.324468)
+transform = Transform3D(-4.3567702e-08, -0.081016555, 0.99671286, -3.541346e-09, 0.99671286, 0.081016555, -1, 3.6793266e-16, -4.3711395e-08, -4.3109145, 2.0015004, -8.324468)
 
 [node name="rationalePoster" parent="." unique_id=1018485615 instance=ExtResource("41_aqt3n")]
-transform = Transform3D(-4.3525002e-08, -0.09224894, 0.995736, -4.032329e-09, 0.995736, 0.09224894, -1, 0, -4.371139e-08, -15.696445, 1.7107351, 8.036236)
+transform = Transform3D(-4.3525002e-08, -0.09224894, 0.995736, -4.032329e-09, 0.995736, 0.09224894, -1, 0, -4.371139e-08, -15.487177, 1.7107351, 8.036236)
+
+[node name="Railing" parent="." unique_id=1909478892 instance=ExtResource("42_0gkqn")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 26.801165, 0, 0.25220633)
