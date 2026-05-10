@@ -7,6 +7,7 @@
 [ext_resource type="Animation" uid="uid://dok1at0danya2" path="res://Assest/characterModels/Animations/ButtonPush.anim" id="3_46g7a"]
 [ext_resource type="Script" uid="uid://7jddkljk15i1" path="res://Components/movement.gd" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://drec0s3wtys4v" path="res://Textures/MapUI/vinette.png" id="3_jmcfr"]
+[ext_resource type="Shader" uid="uid://dxdfqohglhbqb" path="res://Shaders/pixelate.gdshader" id="3_l40j0"]
 [ext_resource type="Animation" uid="uid://gvnrgp31ocsd" path="res://Assest/characterModels/Animations/walk.anim" id="3_oefvu"]
 [ext_resource type="PackedScene" uid="uid://b56p36sssq7xt" path="res://Components/raycast_component.tscn" id="4_sweqy"]
 [ext_resource type="PackedScene" uid="uid://dxwvd8802erpw" path="res://Components/input_component.tscn" id="5_2hs0m"]
@@ -80,6 +81,14 @@ albedo_texture = ExtResource("1_4flbx")
 [sub_resource type="BoxMesh" id="BoxMesh_hqtel"]
 material = SubResource("StandardMaterial3D_i3pqv")
 size = Vector3(0.8, 2, 0.8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46g7a"]
+render_priority = 0
+shader = ExtResource("3_l40j0")
+shader_parameter/pixel_size = 4
+
+[sub_resource type="QuadMesh" id="QuadMesh_l40j0"]
+material = SubResource("ShaderMaterial_46g7a")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ahvcc"]
 radius = 1.4153984
@@ -192,6 +201,10 @@ offset_bottom = 1060.0
 theme_override_fonts/font = ExtResource("5_ahvcc")
 theme_override_font_sizes/font_size = 64
 text = "20:00"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1779922631]
+transform = Transform3D(99.99998, 3.8146973e-06, 5.722046e-06, 1.9073486e-06, 99.99997, -6.67572e-06, 3.8146973e-06, -9.536743e-07, 99.99998, 1.5929098, -1.582943, -6.451088)
+mesh = SubResource("QuadMesh_l40j0")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1628919757]
 collision_mask = 3
