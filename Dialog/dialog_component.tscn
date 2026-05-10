@@ -52,6 +52,7 @@ gradient = SubResource("Gradient_ycefy")
 
 [node name="DialogComponent" type="Node" unique_id=1464193511]
 script = ExtResource("1_var2f")
+target_portrait_height = 225
 
 [node name="DialogRunner" parent="." unique_id=189222724 instance=ExtResource("2_sm16w")]
 
@@ -78,6 +79,7 @@ texture = SubResource("GradientTexture1D_wax0d")
 
 [node name="LinePresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1812540107 node_paths=PackedStringArray("text_label", "character_label", "continue_indicator")]
 layout_mode = 0
+offset_left = 240.0
 offset_right = 1420.0
 offset_bottom = 225.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xrhsp")
@@ -103,12 +105,17 @@ text = "Click to continue"
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/LinePresenter/Control" unique_id=1544814007]
-layout_mode = 0
-offset_top = -285.0
-offset_right = 287.0
-offset_bottom = 2.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.28300002
+anchor_top = 1.0
+anchor_right = -0.28300002
+anchor_bottom = 1.0
+offset_left = 120.94003
+offset_top = -223.0
+offset_right = 308.94003
+offset_bottom = -4.0
 texture = ExtResource("5_xrhsp")
-stretch_mode = 4
 
 [node name="CharacterLabel" type="Label" parent="CanvasLayer/Control/LinePresenter/Control" unique_id=462520019]
 layout_mode = 0
