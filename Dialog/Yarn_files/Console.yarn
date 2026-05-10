@@ -25,7 +25,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -42,7 +42,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -59,7 +59,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -76,7 +76,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -93,7 +93,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -110,7 +110,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -127,7 +127,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -144,7 +144,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -161,7 +161,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -178,7 +178,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -195,7 +195,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -212,7 +212,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -229,7 +229,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -246,7 +246,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -263,7 +263,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
@@ -280,7 +280,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
 -> Log out
