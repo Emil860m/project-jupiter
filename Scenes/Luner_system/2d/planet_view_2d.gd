@@ -3,6 +3,7 @@ extends Node2D
 
 var selected: Area2D
 @export var camera_2d: Camera2D
+@export var orbit_speed_multiplier: float = 6.0
 @onready var input_comp: input_component = $InputComponent
 @onready var raycast_comp: raycast_2d_component = $Raycast2dComponent
 @onready var moons: Node2D = $MoonParent
@@ -19,7 +20,10 @@ var selected: Area2D
 @export var hourLabel: Label
 var current_location: moon_2d
 var pons_distance
-
+var traveling := false
+var current_time: float
+var timestep_before_travel: int
+var event_triggered: bool = false
 @onready var noice_max = ShipStats.noise_max
 @onready var noice_min = ShipStats.noise_min
 @onready var button: Button = $UiElements/Button
@@ -40,7 +44,8 @@ func _ready() -> void:
 	shipsMaxDeltaV.text = "/ " + str(ShipStats.fuel_cap)
 	hourLabel.text = Globals.convert_timesteps_to_string(Globals.current_timestep)
 	Globals.current_location = NpcScheduler.locations.PLANET_VIEW
-	
+	current_time = Globals.current_timestep
+	timestep_before_travel = Globals.current_timestep
 	raycast_comp.camera_2d = camera_2d
 	current_location = get_node("MoonParent/" + Globals.current_moon)
 	currentLocationLabel.text = current_location.displayName
@@ -56,6 +61,31 @@ func _ready() -> void:
 				if m.displayName == "The Pons":
 					pons_distance = m.base_travel_time
 				break
+
+func _process(delta: float) -> void:
+	if traveling:
+		if current_time < Globals.current_timestep - 1:
+			current_time += delta * orbit_speed_multiplier
+			hourLabel.text = Globals.convert_timesteps_to_string(current_time)
+			for m in moons.get_children():
+				m.set_orbital_position(current_time)
+				m.set_estimated_loc(Globals.current_timestep, 0, current_location.global_position)
+			if current_time > (Globals.current_timestep + timestep_before_travel) / 2 and not event_triggered:
+				event_triggered = true
+				var event = event_scene.instantiate()
+				event.set_completion_callback(_on_event_completed)
+				add_child(event)
+				event.start(
+					Globals.current_timestep,
+					Globals.current_timestep + selected.estimated_travel_time,
+					current_location,
+					selected)
+				traveling = false
+		else:
+			if selected.loading_screen:
+				SceneController.goto_loading_screen(selected.travelScenePath, selected.main_poster, selected.other_posters)
+			else:
+				SceneController.goto_scene(selected.travelScenePath)
 
 func select_moon(hit):
 	button.disabled = false
@@ -81,7 +111,7 @@ func update_travel_time() -> void:
 	estimatedTravelLabel.text = Globals.convert_timesteps_to_string(round(selected.estimated_travel_time * (1 + traveltime_noice / 100)) + Globals.current_timestep)
 	estimatedFuelLabel.text = str(round(estimated_fuel * (1 + fuel_noice / 100)))
 	for m in moons.get_children():
-			m.set_estimated_loc(selected.estimated_travel_time, current_location.global_position)
+			m.set_estimated_loc(timestep_before_travel, selected.estimated_travel_time, current_location.global_position)
 
 
 func _on_travel_button_up() -> void:
@@ -96,14 +126,10 @@ func _on_travel_button_up() -> void:
 		Globals.current_moon = selected.name
 		if selected.travelScenePath:
 			SoundController.set_in_flight(true)
-			var event = event_scene.instantiate()
-			event.set_completion_callback(_on_event_completed)
-			add_child(event)
-			event.start(
-				Globals.current_timestep,
-				Globals.current_timestep + selected.estimated_travel_time,
-				current_location,
-				selected)
+			traveling = true
+			for m in moons.get_children():
+				m.set_selected(false)
+				#m.estimated_loc.visible = false
 		else:
 			SceneController.reload_scene()
 	else:
@@ -123,11 +149,12 @@ func _on_tow_truck_button_up() -> void:
 		tow_truck_time_label.text = "Estimated time of arrival at The Ponds:\n %s" % time_string
 
 func _on_event_completed() -> void:
+	traveling = true
 	Globals.interacting = false
-	if selected.loading_screen:
-		SceneController.goto_loading_screen(selected.travelScenePath, selected.main_poster, selected.other_posters)
-	else:
+	$EventDisplay/CanvasLayer/Backdrop.visible = false
+	if SceneController.should_tow_truck:
 		SceneController.goto_scene(selected.travelScenePath)
+
 
 
 func _on_stat_allocator_change_stat() -> void:
