@@ -5,7 +5,7 @@ position: -273,62
 <<if get_flag("keys")>>
 	<<if $workshopDes == true>>
 
-	<<else>>
+	<<elseif true>>
 		<<declare $workshopDes = true>>
 		You enter in the workshop. 
 		The chemical smell of motor oil and toxic liquids reminds you of your childhood. 
@@ -18,10 +18,11 @@ position: -273,62
 			-> Leave.
 				<<set $workshopDes = false>>
 				<<return>>
-<<else>>
-	you try to open the door but it seems to be locked. 
-	<<if set_flag("howOpen")>><<endif>>
+<<elseif true>>
+you try to open the door but it seems to be locked.
+	->Maybe someone knows how to open it
 <<endif>>
+<<if set_flag("howOpen")>><<endif>>
 ===
 title: Kompat
 ---
@@ -31,7 +32,7 @@ title: Kompat
 		Luckly enough he hasn't change it since you moved.
 		You quickly download the will from his personal K-Log.
 	<<if set_flag("will")>><<endif>>
-<<else>>
+<<elseif true>>
 	The old Kompat faintly glow. 
 	He didn't even install Orbit.
 	Dad: why would I install that, what am I a kid?
@@ -45,7 +46,7 @@ title: Sleep
 	-> Go to bed.
 
 	-> No It's too early to sleep.
-<<else>>
+<<elseif true>>
 	You managed to enter the workshop, today is not treating you very well.
 	Should you go to bed? 
 	Dad: you know you do you're not gonna be able to get the extension if you do right?
@@ -263,17 +264,18 @@ title: DadBody
 ---
 <<if $dadBody == false>>
 	You look at the black criosuit that contains your dad.
-	-> This is wrong, we got here in time. 
+	-> This is wrong, I should have got here in time. 
 		Dad: I'm sorry kid... that's space for you
 		The voice in your head somehow seems even more real with his body in front of you.
 		Dad: One minor inconvenience and you're a week late...
 		<<if mental_check(15)>>
 			You manage to hold back your tears, you've a job to do
-		<<else>>
+		<<elseif true>>
 			You clean the tears from your face.
 		<<endif>>
-		<<declare $dadBody = true>>
-<<else>>
+		<<declare $dadBody = false>>
+        <<set $dadBody = true>>
+<<elseif true>>
 	The body is still there staring at you.
 <<endif>>
 ===

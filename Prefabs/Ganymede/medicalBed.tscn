@@ -15,7 +15,7 @@ size = Vector3(5.5181274, 3.9086304, 2.7263184)
 [node name="MedicalBed" type="StaticBody3D" unique_id=130115927]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_68tse")
-dialog_node = "_Hospital"
+dialog_node = "DadBody"
 
 [node name="InteractableComponent" parent="." unique_id=1146505506 node_paths=PackedStringArray("meshs") instance=ExtResource("2_68tse")]
 meshs = [NodePath("../MedicalBed")]

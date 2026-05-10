@@ -294,7 +294,7 @@ title: rational
 You arrive at the rational, the place is packed full and it took you a minute for them to find you a seat. 
 <<if $Hick == true>> 
 	The three of you sit in the fake leather chair, while the waitress serves you your menu. 
-<<else>>
+<<elseif true>>
 	The two of you sit in the fake leather chair, while the waitress serves you your menu. 
 <<endif>>
 You pick up the menu and read through it.

@@ -83,7 +83,7 @@ Zoe: Hi I'm zoe, who are you? and why are you here.
 	<<if get_flag("deadDad")>> 
 	I'm here about my dad.
 	Zoe: Oh, for the little I knew your father I'm very sorry.
-	<<else>>.
+	<<elseif true>>.
 	Zoe: are you Joh's kid? maybe go talk to the nurse. I don't want to deal with you.
 	She waves at you like to will you out of her office.
 	<<endif>>
@@ -119,7 +119,7 @@ title:zoeHelp
 	She gazes up at you, almost confused.
 	like no one asked if she needed something in a long time.
 	Zoe: Actually, Yes.
-<<else>>
+<<elseif true>>
 	She gazes up at you, a sliver of something off in her expression.
 	-> What's up?
 		She shakes off the expression, and goes back to her stoic look.

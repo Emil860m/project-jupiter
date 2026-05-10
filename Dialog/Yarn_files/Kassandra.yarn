@@ -36,7 +36,7 @@ Kass: Listen kid I know your dad wanted a "real" funeral.
 <<if $Martian== true>>
 	Dad: You bet! I want a martian burial. 
 	Dad: Don't u dare yet me into that mass grave of a planet kid!
-<<else>>
+<<elseif true>>
 	Dad: You bet! Don't I deserve a proper burial?
 <<endif>>
 Kass: But it's too late for that, we really need your signature Kid.
@@ -191,7 +191,7 @@ title: kassHelp
 		-> Ok thanks.
 		-> Yeah, I already spoke to her.<<if get_flag_uncheck("SDA")>>
 			Kass: Great than you know everything
-	<<else>>
+	<<elseif true>>
 		Kass: I'm afraid I can't do much. But maybe try asking Zoe, I've seen her going in your father's room, maybe she's still there.
 		-> Ok thanks.
 		-> Yeah, I already spoke to her.<<if get_flag("SDA")>>
