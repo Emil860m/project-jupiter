@@ -103,6 +103,7 @@ func play_high_boop():
 
 @onready var dmg = $SFXEmitters/DmgEmitter
 @onready var elevator = $SFXEmitters/ElevatorEmitter
+@onready var ding = $SFXEmitters/DingEmitter
 
 func play_take_damage(amount = 1):
 	dmg.set_parameter("DMGSeverity", amount)
@@ -110,3 +111,6 @@ func play_take_damage(amount = 1):
 
 func play_elevator():
 	elevator.play()
+
+func play_ding():
+	ding.play()
