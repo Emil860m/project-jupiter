@@ -41,7 +41,7 @@ func _ready() -> void:
 	dessert_3.connect("pressed", _dish_chosen.bind(dessert_3,3))
 
 func _on_course_button_up(num_courses: int) -> void:
-	
+	SoundController.play_ding()
 	courses = num_courses
 	if num_courses == 1:
 		main_course.visible = true
@@ -50,6 +50,7 @@ func _on_course_button_up(num_courses: int) -> void:
 	main_view.visible = false
 	
 func _dish_chosen(buff: Buff_Button, dish_num: int):
+	SoundController.play_ding()
 	buffs.append(buff)
 	if dish_num == courses or courses == 1:
 		main_course.visible = false

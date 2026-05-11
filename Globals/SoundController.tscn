@@ -61,3 +61,7 @@ fmod_parameters/DMGSeverity/variant_type = 2
 [node name="ElevatorEmitter" type="FmodEventEmitter2D" parent="SFXEmitters" unique_id=603556662]
 event_name = "event:/SFX/ELEVATOR"
 event_guid = "{b7f8b45e-709c-41af-9a67-f8db0d3f16e1}"
+
+[node name="DingEmitter" type="FmodEventEmitter2D" parent="SFXEmitters" unique_id=797875039]
+event_name = "event:/SFX/Bell"
+event_guid = "{77f3bfe7-37e0-47bd-a029-68180e8487df}"
