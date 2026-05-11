@@ -26,7 +26,8 @@ position: -237,-112
 
 <<elseif true>>
 	The old man's eyes light up when he sees you 
-	Sully: hey kid you made it.
+	Sully: Hey kid you made it.
+	Sully: You remember me right?
 	<<detour meetSully>>
 	<<jump SalWorkshopTS1>>
 <<endif>>
@@ -58,7 +59,8 @@ position: -217,73
 <<jump SalHospitalTS2>>
 <<elseif true>>
 	The old man's eyes light up when he sees you 
-	Sully: hey kid you made it.
+	Sully: Hey kid you made it.
+	Sully: You remember me right?
 	<<detour meetSully>>
 	<<jump SalHospitalTS2>>
 <<endif>>
@@ -106,7 +108,8 @@ position: -212,235
 <<jump SalHospitalTS4>>
 <<elseif true>>
 	The old man's eyes light up when he sees you 
-	Sully: hey kid you made it.
+	Sully: Hey kid you made it.
+	Sully: You remember me right?
 	<<detour meetSully>>
 	<<jump SalHospitalTS4>>
 <<endif>>
@@ -175,47 +178,59 @@ title: meetSully
 position: -796,253
 ---
 <<declare $sulSpeak = true>>
--> yeah sully I remember you
+Obviously you remember Sully, I mean you left at 17 not 8, what did he expect.
+-> No sully I don't know who you are.
+	The man laugh.
+	Sully: you've always been fun kid.
+	Sully: and I see Mars treated you well.
+-> yeah sully I remember you.
+	The man smiles at you.
+	Sully: Yes kiddo.
+	Sully: You look good.
 -> you were my father's friend right? 
-the man smiles in approval
+	The man smiles at you.
+	Sully: Yes kiddo.
+	Sully: You look good.
 <<if set_flag("metSul")>><<endif>>
 ===
 
 //DIALOGUES
 title:sullyHick
 ---
-Hickey should have them, he's at the workshop every two hours or so. 
-you remember the workshop right? the one on Ganymede.
+Sully: Hickey should have them, he's at the workshop every two hours or so. 
+Sully: you remember the workshop right? the one on Ganymede.
 <<if set_flag("hickDocs")>><<endif>>
 ===
 
 title:sullyExtension
 ---
-Sully tells you to ask zoe
+Sully: Try asking zoe, she had a soft spot for your Pa.
 ===
 
 title:sullyGetIn
 ---
-Here are the keys, go ask zoe for a copy please
+Sully: Oh yes, here's the keys, go ask zoe for a copy please.
 <<if set_flag("keys")>><<endif>>
 ===
 
 title:sullyKey
 ---
-Here are the keys, go ask zoe for a copy please
+Sully: Oh yes, here's the keys, go ask zoe for a copy please.
 <<if set_flag("keys")>><<endif>>
 ===
 
 title: sulOfficeReq
 position: 91,539
 ---
-Oh thanks, my kompat must be out of power.
+Sully: Oh damn thanks kiddo, my kompat must be out of power.
+Sully: my charger must be broken or something.
 <<if set_flag("zoeHospital")>><<endif>><<if set_flag("sullyOffice")>><<endif>><<if unset_flag("zoeAsk")>><<endif>>
 ===
 
 title: SulAllocation
 ---
-Yeah sure kid, basically the various stats all represent different systems of your ship. 
-For example Radiation protection helps you in long journeys. 
-Or maneuverability assists you with fine movement.
+Sully: Yeah sure kid, basically the various stats all represent different systems of your ship. 
+Sully: For example Radiation protection helps you in long journeys. 
+Sully: Or maneuverability assists you with fine movement.
+Sully: Of course allocating correctly is important, but it's what you do in the situation that really matter.
 ===

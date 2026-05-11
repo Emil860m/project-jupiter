@@ -10,8 +10,6 @@ position: -538,-230
 <<endif>>
 -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
 	<<detour howYouDoing>>
--> What's new around?<<if get_flag_uncheck ("hickNA")>>
-	<<detour newAround>>
 -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
 	<<detour grandma>>
 ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
@@ -45,8 +43,6 @@ position: -555,14
 	<<detour drugs>>
 -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
 	<<detour howYouDoing>>
--> What's new around?<<if get_flag_uncheck ("hickNA")>>
-	<<detour newAround>>
 -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
 	<<detour grandma>>
 ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
@@ -77,8 +73,6 @@ position: -531,371
 <<if get_flag("metHick")>>
 -> How've you been doing?<<if get_flag_uncheck ("hickHYD")>>
 	<<detour howYouDoing>>
--> What's new around?<<if get_flag_uncheck ("hickNA")>>
-	<<detour newAround>>
 -> How's your grandma?<<if get_flag_uncheck("hickGrandma")>>
 	<<detour grandma>>
 ->So have you heard about dad?<<if get_flag("deadDad") and get_flag_uncheck("hickDad")>>
@@ -491,16 +485,21 @@ Hickey open his arms to hug you .
 			Hick: oh yeah sorry, I also got a lot of work.
 <<if set_flag ("hickDad")>><<endif>>
 ===
-title: newAround
-position: 118,-295
----
-SOMETHING ABOUT THE WORLD
-<<if set_flag ("hickNA")>><<endif>>
-===
 title: grandma
 position: 123,100
 ---
-SOMETHING ABOUT HICKEY'S SAD LIFE
+Hick: GanGran? Oh she's fine, she's leaving the life since I took her out of the lots.
+Hick: She should be on one of those smaller steatite playing Tysiąc with her pals.
+Hick: Should be on Melpomene if you wanna go say hi. Check your JPS.
+
+-> I only have the Pons, the Rational and the moons on my JPS.
+	Hick: What?! are you still on the old JSP version? 
+	Hick: How can you even understand anything on that old 2D interface?
+	Hick: I can bring you an updater tomorrow, so we can go chill somewhere.
+-> I'm pretty sure I don't have that.
+	Hick: What?! are you still on the old JSP version? 
+	Hick: How can you even understand anything on that old 2D interface?
+	Hick: I can bring you an updater tomorrow, so we can go chill somewhere.
 <<if set_flag ("hickGrandma")>><<endif>>
 ===
 title: boxesCheck

@@ -10,7 +10,7 @@ When your mouth gets so dry that your body actively fights you swallowing the wa
 Everyone was like that back then in the jovian system. The shutter really got everyone desperate.
 
 You remember it like it was yesterday.
-The gas giant infinite in the sky, staring. Your Dad trying to get in contact with the Martian authorities to get us on a shuttle. He saying you're gonna be fine, that you have enough water to survive the cut off.
+The gas giant infinitely orange in the sky, staring. The government saying you're gonna be fine, that you have enough water to survive the cut off.
 You're just gonna have to ration water correctly. 
 
 -> Like that's going to help.
@@ -25,9 +25,8 @@ You're just gonna have to ration water correctly.
 			but hopefully you're gonna know something soon
 			<<jump RecruitMar>>  
 	-> hopefully the Martians will help.
-		<<jump RecruitMar>>
-		
--> Hopefully he's right.
+		<<jump RecruitMar>>	
+-> Hopefully the Martians are right.
 	In times like this you need to stick together.
 	<<jump RecruitMar>>
 	//They will have martian passports
@@ -41,8 +40,7 @@ But there it was, after hell had unleashed. At your doorstep the unusual sight o
 
 25-12-2279; 14:50 | Płaskowyż Olimp - Mars
 
-Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, Mars. 
-As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the Terrestians for the control of the Jovian settlements on Kallisto and Ganymede. 
+Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, Mars. As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the Terrestians for the control of the Jovian settlements on Kallisto and Ganymede. 
 Your services will be explained to you as soon as you get in contact with your command officer.
 Please report to the martian embassy to you enclosed in this letter, you will be given more information about your tasks on location. 
 Do not disclose this information with anyone.
@@ -221,49 +219,51 @@ position: 404,-519
 	While Martian and Venuvian would deploy troops in the system, so to avoid father endangerment on Jupiter. 
 	Shortly after the Pons was opened, a neutral station shared between the three forces. 	
 <<endif>>
-
-GIVE CONTEXT
-
+You would have thought going back to your normal life, would have taken longer. 
+But everything moved so fast after those day. And everything felt so weird for some reason.
 Not having to worry about water anymore. 
-You remember the sorrow.
-For those you lost. 
-The anger.
+Working as much as possible to rebuild to keep living.
+With that lingering anger.
 Of knowing all that could have been avoided
-
-But you also remember her.
-How safe she made you feel. 
-You remember that old sofa, where you grew closer. 
+But there're also so many good memories from those years.
+There were your friends always making you laugh. Sully always being there and creating troubles.
+There was also her. The day you met her in Ganymede. your dinners out at the rational.
+Your first apartment, that old sofa, where you grew closer. 
 where you hoped you'd grow old together.
-
-But here it is again, the memories are getting fuzzy.
-Everything spinning. 
-
-->What is happening
-->Try to relax
-
-The hospital was cold. 
-You always liked hospitals, how sterile they are. 
-In how they're designed to be as efficient and secure as possible.
-there's something calming about such an environment.
-But nothing is calming right now. 
-The overused plastic chair is too Squeaky and stiff to be sitting in. 
-The lights too flickery. 
-the faulty thermos full of hot soup in your hands, warms them up.
-When the doctor asked you to leave, and the nurse escorted you out, you knew something was wrong. 
-You complied, but now you regret it.
-
-The next thing you know the doctor is in front of you
--> Aks how's your Wife doing.
-	<<if adjust_status(0,1,0,0)>><<endif>>
--> Ask how's your child doing.
-	<<if adjust_status(0,0,1,0)>><<endif>>
+When Kher was born you two were the happiest people on the Jovian system. 
+<<if $Blind == true>>
+	But soon your duty towards the Blind started clashing with your family.
+	That kind of life is a risky one, you couldn't keep doing both. 
+<<elseif $Martian == true>>
+	But soon your duty towards your comrades started clashing with your family.
+	The martian asked you to take long term station for 10 years on an out of system location.
+<<endif>> 
+	-> Choose Duty.
+		<<if $Blind == true>>
+		You spend the next five years working closely with Grig. And you manage to make a difference.
+		Thank to you the Blind's station turns into a proper base of operation for the group.
+		But circumstances change, and priority switch.
+		When you get the news of her passing you immediately decide to go back to your life, to your child.
+		<<elseif $Martian == true>>
+		You spend the next 5 years secretly working on surveillance drones. And you manage to make a difference.
+		The money are good and you know your family is taken care of.
+		But sometimes life gets in the way, circumstances change, and priority switch.
+		When you get the news of her passing you immediately decide to go back to your life, to your child.
+		<<endif>> 
+		<<if adjust_status(0,1,0,0)>><<endif>>
+	-> Choose Family.
+		The following 5 years are the best of your life, just the three of you, in that old workshop.
+		But sometimes life gets in the way. When she got sick you didn't know how to handle it, but you had to find a way. 
+		If not for her, for your child. 
+		When she passed your life turned gray again.
+		<<if adjust_status(0,0,1,0)>><<endif>>
 <<jump Ch3>>
 ===
 title: Ch3
 position: 641,-656
 ---
 Time really flies. 
-Twelve years went by in a second. 
+7 years went by in a second. 
 You kept working as a mechanic, raising Kher as best as you could.
 Being a single dad it's not always the easiest. 
 But having your own workshop helps with that.
@@ -310,7 +310,7 @@ You're about to switch of the JPS when you get a message from the integrated log
 <<if $Martian== true>>
 	The commander's contact pops up in your messages with a location attached.
 	you wonder what job will she have for you this time.
-<<elseif $Blind== true>>
+<<elseif $Blind>>
 	Grig's contact pops up in your messages with a location attached.
 	you wonder what job will he have for you this time.
 <<endif>>
@@ -336,7 +336,7 @@ Memories are weird when you wake up from cryo.
 
 -> why was I even here? 
 	Dad: You were here for me kiddo. 
-	You look around but see no one. And then remember the message.
+	You look around but see no one. You shook away the And then remember the message.
 	It came by mail what, 6 months ago now? they wrote you about your dad's sickness. 
 	Dad: Came here to say your final goodbye to your old man?
 	Dad: What a lucky father I am.
