@@ -119,8 +119,10 @@ texture = ExtResource("5_xrhsp")
 
 [node name="CharacterLabel" type="Label" parent="CanvasLayer/Control/LinePresenter/Control" unique_id=462520019]
 layout_mode = 0
-offset_top = -47.0
-offset_right = 1420.0
+offset_left = 9.0
+offset_top = -59.0
+offset_right = 1429.0
+theme_override_font_sizes/font_size = 36
 text = "Char label"
 
 [node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865 node_paths=PackedStringArray("options_container")]
