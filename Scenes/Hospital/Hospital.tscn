@@ -897,7 +897,9 @@ transform = Transform3D(0.4104899, 2.4957334e-08, 0.2854786, 0, -0.5, 4.371139e-
 
 [node name="MedicalConsole" parent="." unique_id=1574312724 instance=ExtResource("33_48os6")]
 transform = Transform3D(-0.23246169, 0, 0.21991262, 0, 0.32, 0, -0.21991262, 0, -0.23246169, -11.833609, 0.10928771, 36.99059)
-object_id = "Console 1"
+item_name = "medicalConsole"
+object_id = "medicalConsole"
+dialog_node = "medicalConsole_Hospital"
 
 [node name="Cup" parent="." unique_id=385252958 instance=ExtResource("35_2j7xw")]
 transform = Transform3D(0.5398807, 0, -0.44556576, 0, 0.7, 0, 0.44556576, 0, 0.5398807, -12.202895, 0.7262548, -5.2171054)
