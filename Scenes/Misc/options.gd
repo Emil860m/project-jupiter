@@ -35,3 +35,7 @@ func _on_exit_button_pressed() -> void:
 	queue_free()
 	return
 	
+
+
+func _on_credits_button_up() -> void:
+	SceneController.goto_scene("res://Scenes/credits.tscn")

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ccgvrr2d7vcv7"]
+
+[ext_resource type="Script" uid="uid://e71hxrpn77yq" path="res://Scenes/credits.gd" id="1_gryuy"]
+[ext_resource type="Texture2D" uid="uid://bwk30e48i6ujt" path="res://Textures/Dark/dark.png" id="1_r18jl"]
+
+[node name="Credits" type="Node2D" unique_id=631121694]
+script = ExtResource("1_gryuy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=722983135]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1809189839]
+offset_right = 1931.0
+offset_bottom = 1088.0
+texture = ExtResource("1_r18jl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=702171372]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1000.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+text = "Credits:
+Iupiter Obiit
+Creative lead | Eli Niedzielska
+Producer | Marco Lagiongada
+Writing | Marco Lagiongada
+Additional writing | Eli Niedzielska & Johan Brandi
+Gameplay | Johan Brandi
+Level design | Emil Sondum
+Programming | Emil Fenger & Emil Sondum
+Additional programming | Johan Brandi
+2D and 3D assets | Eli Niedzielska
+Character models | Marco Lagiongada
+UI/UX | Eli Niedzielska
+Music and sound | Johan brandi
+Yarn Masseur | Emil Fenger
+FMOD magician | Johan Brandi
+Actors
+Kassandra | Eliza Niedzielska
+Hickey | Pierpaolo Dileo
+Zoë | Mathilde ???
+Sully | Julius Sebastian Hansen
+Miko | James Robertson
+
+Photography Editing | Janusz Bekas, Eliza Niedzielska
+Photography Effects Design | Janusz Bekas
+External resources
+Fonts?
+Textures?
+Playtesting
+Eli Niedzielska & Johan Brandi & Emil Fenger & Emil Sondum & Marco Lagiongada
+Playtesters?
+Special thanks
+Hajo, Toke, TAs
+3rd party tools:
+godot(?)
+“Audio Engine: FMOD Studio by Firelight Technologies Pty Ltd.“
+“Narrative Design Tool: Yarn Spinner by Yarn Spinner Pty. Ltd.”
+Godot extensions
+fmod-gdextension by Utopia-Rise, Tristan Grespinet, and Pierre-Thomas Meisels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1479290704]
+offset_left = 1594.0
+offset_top = 865.0
+offset_right = 1876.0
+offset_bottom = 944.0
+text = "Return To Main Menu"
+
+[connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_mainmenu_button_up"]

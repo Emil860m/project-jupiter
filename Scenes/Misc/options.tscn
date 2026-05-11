@@ -80,6 +80,10 @@ value = 5.0
 tick_count = 11
 ticks_position = 3
 
+[node name="Credits" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=2140442394]
+layout_mode = 2
+text = "Show Credits"
+
 [node name="ExitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1564229421]
 layout_mode = 2
 text = "Return to menu"
@@ -87,4 +91,5 @@ text = "Return to menu"
 [connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/MasterContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/BgmContainer/BgmSlider" to="." method="_on_bgm_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/CenterContainer/VBoxContainer/SfxContainer/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="button_up" from="CanvasLayer/CenterContainer/VBoxContainer/Credits" to="." method="_on_credits_button_up"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

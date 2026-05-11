@@ -13,7 +13,7 @@ func _ready() -> void:
 	label.text = message
 	$CanvasLayer.visible = true
 func _on_mainmenu_button_up() -> void:
-	SceneController.goto_scene("res://Scenes/MainMenu.tscn")
+	SceneController.goto_scene("res://Scenes/credits.tscn")
 
 
 func _on_quit_button_up() -> void:
