@@ -534,27 +534,27 @@ hickey looks at you weird.
 	He starts frantically searching something amongst the boxes.
 	Hick: Here it is.
 		<<if education_check(16)>> 
-			What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+			What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 			This has less harmful then most substances but way more addictive.
 				->why does kass want this stuff? 
 					Dad: let the girl have some fun, you try being a nurse.
 				->jeez this is dangerous
-					Dad: Oh come on kiddo its just Sotine, you've seen worst
+					Dad: Oh come on kiddo its just S-Otine, you've seen worst
 		<<elseif education_check(13)>> 
-			What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+			What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 			This has less harmful then most substances but way more addictive.
 				->why does kass want this stuff? 
 					Dad: let the girl have some fun, you try being a nurse.
 				->jeez this is dangerous
-					Dad: Oh come on kiddo its just Sotine, you've seen worst
+					Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					//Gotta change
 		<<elseif true>>
-			What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+			What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 			This has less harmful then most substances but way more addictive.
 				->why does kass want this stuff? 
 					Dad: let the girl have some fun, you try being a nurse.
 				->jeez this is dangerous
-					Dad: Oh come on kiddo its just Sotine, you've seen worst
+					Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					//Gotta change
 		<<endif>>
 		<<if set_flag("GotDrugs")>><<endif>>
@@ -574,28 +574,28 @@ hickey looks at you weird.
 				Hick: That place is shit, they treat them like animals
 				-> yeah sure, just give me the stuff
 					<<if education_check(16)>> 
-						What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+						What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 						This has less harmful then most substances but way more addictive.
 							->why does kass want this stuff? 
 								Dad: let the girl have some fun, you try being a nurse.
 							->jeez this is dangerous
-								Dad: Oh come on kiddo its just Sotine, you've seen worst
+								Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					//Gotta change
 					<<elseif education_check(13)>> 
-						What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+						What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 						This has less harmful then most substances but way more addictive.
 							->why does kass want this stuff? 
 								Dad: let the girl have some fun, you try being a nurse.
 							->jeez this is dangerous
-								Dad: Oh come on kiddo its just Sotine, you've seen worst
+								Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					//Gotta change
 					<<elseif true>>
-						What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+						What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 						This has less harmful then most substances but way more addictive.
 							->why does kass want this stuff? 
 								Dad: let the girl have some fun, you try being a nurse.
 							->jeez this is dangerous
-								Dad: Oh come on kiddo its just Sotine, you've seen worst
+								Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					//Gotta change
 					<<endif>>
 					<<if set_flag("GotDrugs")>><<endif>>
@@ -603,27 +603,27 @@ hickey looks at you weird.
 					<<if set_flag("NoDrugs")>><<endif>>
 			-> yeah sure, just give me the stuff
 				<<if education_check(16)>> 
-					What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+					What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 					This has less harmful then most substances but way more addictive.
 						->why does kass want this stuff? 
 							Dad: let the girl have some fun, you try being a nurse.
 						->jeez this is dangerous
-							Dad: Oh come on kiddo its just Sotine, you've seen worst
+							Dad: Oh come on kiddo its just S-Otine, you've seen worst
 				//Gotta change
 				<<elseif education_check(13)>> 
-					What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+					What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 					This has less harmful then most substances but way more addictive.
 						->why does kass want this stuff? 
 							Dad: let the girl have some fun, you try being a nurse.
 						->jeez this is dangerous
-							Dad: Oh come on kiddo its just Sotine, you've seen worst
+							Dad: Oh come on kiddo its just S-Otine, you've seen worst
 				<<elseif true>>
-					What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+					What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 					This has less harmful then most substances but way more addictive.
 						->why does kass want this stuff? 
 							Dad: let the girl have some fun, you try being a nurse.
 						->jeez this is dangerous
-							Dad: Oh come on kiddo its just Sotine, you've seen worst
+							Dad: Oh come on kiddo its just S-Otine, you've seen worst
 				<<endif>>
 				<<if set_flag("GotDrugs")>><<endif>>
 			->you know what forget it 
@@ -639,104 +639,104 @@ hickey looks at you weird.
 				<<endif>>
 				-> yeah sure, just give me the stuff
 					<<if education_check(16)>> 
-						What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+						What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 						This has less harmful then most substances but way more addictive.
 							->why does kass want this stuff? 
 								Dad: let the girl have some fun, you try being a nurse.
 							->jeez this is dangerous
-								Dad: Oh come on kiddo its just Sotine, you've seen worst
+								Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					<<elseif education_check(13)>> 
-						What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+						What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 						This has less harmful then most substances but way more addictive.
 							->why does kass want this stuff? 
 								Dad: let the girl have some fun, you try being a nurse.
 							->jeez this is dangerous
-								Dad: Oh come on kiddo its just Sotine, you've seen worst
+								Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					<<elseif true>>
-						What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+						What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 						This has less harmful then most substances but way more addictive.
 							->why does kass want this stuff? 
 								Dad: let the girl have some fun, you try being a nurse.
 							->jeez this is dangerous
-								Dad: Oh come on kiddo its just Sotine, you've seen worst
+								Dad: Oh come on kiddo its just S-Otine, you've seen worst
 					<<endif>>
 					<<if set_flag("GotDrugs")>><<endif>>
 				->you know what forget it 
 					<<if set_flag("NoDrugs")>><<endif>>
 			-> yeah sure, just give me the stuff
 				<<if education_check(16)>> 
-					What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+					What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 					This has less harmful then most substances but way more addictive.
 						->why does kass want this stuff? 
 							Dad: let the girl have some fun, you try being a nurse.
 						->jeez this is dangerous
-							Dad: Oh come on kiddo its just Sotine, you've seen worst
+							Dad: Oh come on kiddo its just S-Otine, you've seen worst
 				<<elseif education_check(13)>> 
-					What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+					What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 					This has less harmful then most substances but way more addictive.
 						->why does kass want this stuff? 
 							Dad: let the girl have some fun, you try being a nurse.
 						->jeez this is dangerous
-							Dad: Oh come on kiddo its just Sotine, you've seen worst
+							Dad: Oh come on kiddo its just S-Otine, you've seen worst
 				<<elseif true>>
-					What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+					What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 					This has less harmful then most substances but way more addictive.
 						->why does kass want this stuff? 
 							Dad: let the girl have some fun, you try being a nurse.
 						->jeez this is dangerous
-							Dad: Oh come on kiddo its just Sotine, you've seen worst
+							Dad: Oh come on kiddo its just S-Otine, you've seen worst
 				<<endif>>
 				<<if set_flag("GotDrugs")>><<endif>>
 			->you know what forget it 
 				<<if set_flag("NoDrugs")>><<endif>>
 		-> yeah sure, just give me the stuff
 			<<if education_check(16)>> 
-				What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+				What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 				This has less harmful then most substances but way more addictive.
 					->why does kass want this stuff? 
 						Dad: let the girl have some fun, you try being a nurse.
 					->jeez this is dangerous
-						Dad: Oh come on kiddo its just Sotine, you've seen worst
+						Dad: Oh come on kiddo its just S-Otine, you've seen worst
 			<<elseif education_check(13)>> 
-				What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+				What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 				This has less harmful then most substances but way more addictive.
 					->why does kass want this stuff? 
 						Dad: let the girl have some fun, you try being a nurse.
 					->jeez this is dangerous
-						Dad: Oh come on kiddo its just Sotine, you've seen worst
+						Dad: Oh come on kiddo its just S-Otine, you've seen worst
 			<<elseif true>>
-				What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+				What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 				This has less harmful then most substances but way more addictive.
 					->why does kass want this stuff? 
 						Dad: let the girl have some fun, you try being a nurse.
 					->jeez this is dangerous
-						Dad: Oh come on kiddo its just Sotine, you've seen worst
+						Dad: Oh come on kiddo its just S-Otine, you've seen worst
 			<<endif>>
 			<<if set_flag("GotDrugs")>><<endif>>
 		->you know what forget it 
 			<<if set_flag("NoDrugs")>><<endif>>
 	-> listen, just give me the stuff I can't be bothered.   
 		<<if education_check(16)>> 
-			What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+			What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 			This has less harmful then most substances but way more addictive.
 				->why does kass want this stuff? 
 					Dad: let the girl have some fun, you try being a nurse.
 				->jeez this is dangerous
-					Dad: Oh come on kiddo its just Sotine, you've seen worst
+					Dad: Oh come on kiddo its just S-Otine, you've seen worst
 		<<elseif education_check(13)>> 
-			What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+			What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 			This has less harmful then most substances but way more addictive.
 				->why does kass want this stuff? 
 					Dad: let the girl have some fun, you try being a nurse.
 				->jeez this is dangerous
-					Dad: Oh come on kiddo its just Sotine, you've seen worst
+					Dad: Oh come on kiddo its just S-Otine, you've seen worst
 		<<elseif true>>
-			What you have in your hands is Sotine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
+			What you have in your hands is S-Otine a lab synthesized calming drug. You know in the jovian this stuff is banned pretty heavily.
 			This has less harmful then most substances but way more addictive.
 				->why does kass want this stuff? 
 					Dad: let the girl have some fun, you try being a nurse.
 				->jeez this is dangerous
-					Dad: Oh come on kiddo its just Sotine, you've seen worst
+					Dad: Oh come on kiddo its just S-Otine, you've seen worst
 		<<endif>>
 		<<if set_flag("GotDrugs")>><<endif>>
 	->you know what forget it 

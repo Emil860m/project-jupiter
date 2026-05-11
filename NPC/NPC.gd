@@ -54,7 +54,7 @@ func check_time_and_flags():
 			currentYarnNode = NpcScheduler.get_hickey_yarn_file(Globals.current_timestep, Globals.current_location)
 		"Kassandra":
 			currentYarnNode = NpcScheduler.get_kass_yarn_file(Globals.current_timestep, Globals.current_location)
-		"Sally":
+		"Sully":
 			currentYarnNode = NpcScheduler.get_sally_yarn_file(Globals.current_timestep, Globals.current_location)
 		"Zoe":
 			currentYarnNode = NpcScheduler.get_zoe_yarn_file(Globals.current_timestep, Globals.current_location)

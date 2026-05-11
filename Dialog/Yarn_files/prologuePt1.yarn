@@ -6,29 +6,29 @@ position: -336,-546
 <<declare $Martian = false>>
 <<declare $Blind = false>>
 The  memories are a bit fucked up. Everything it's fuzzy when you haven't drank in a while. 
-When your mouth gets so dry that your body actively fight you swallowing, and it feels like having a swamp instead of a palate. 
-Everyone was like that back then in the jovian system. The shutter really got us all desperate.
+When your mouth gets so dry that your body actively fights you swallowing the water, making it feel like having a swamp instead of a palate. 
+Everyone was like that back then in the jovian system. The shutter really got everyone desperate.
 
-I remember it like it was yesterday.
-Dad trying to get in contact with the Martian authorities to get us on a shuttle. He saying we're gonna be fine, that we have enough water to survive the cut off.
-We're just gonna have to ration water correctly. 
+You remember it like it was yesterday.
+The gas giant infinite in the sky, staring. Your Dad trying to get in contact with the Martian authorities to get us on a shuttle. He saying you're gonna be fine, that you have enough water to survive the cut off.
+You're just gonna have to ration water correctly. 
 
 -> Like that's going to help.
-	... I'm not gonna see my friends die. the system is almost out of water at this point. fuck earth,
+	... You're not gonna see my friends die. the system is almost out of water at this point. fuck earth,
 	-> and fuck the Martians!
-		Their fucking treaties are not doing shit for us! I don't care about their stupid citizenship
-		->I don't care about their stupid citizenship
+		Their fucking treaties are not doing shit! Who cares about their stupid citizenship
+		->You don't for sure.
 			I'll find another way to help, we don't need them.
 			<<jump RecruitReb>>
-		->I've heard they're drafting people.
-			Dad told me they're being quiet about it, 
-			but hopefully we're gonna know something soon
+		->You've heard they're drafting people.
+			Dad told you they're being quiet about it, 
+			but hopefully you're gonna know something soon
 			<<jump RecruitMar>>  
-	-> hopefully the Martians will help us.
+	-> hopefully the Martians will help.
 		<<jump RecruitMar>>
 		
 -> Hopefully he's right.
-	I really couldn't handle this on my own.
+	In times like this you need to stick together.
 	<<jump RecruitMar>>
 	//They will have martian passports
 ===
@@ -36,8 +36,8 @@ title: RecruitMar
 position: 38,-633
 --- 
 
-The letter came a few weeks later. a few weeks too late if you ask me, when a lot of people were already gone. We didn't even have the means to support so many eagle flights. 
-But there it was, the unusual sight of black ink on lab grown cellulose. I don't even know how long it was since I had last seen a printed mail.
+The letter came a few weeks later. a few weeks too late maybe, when a lot of people were already gone. There wasn't even have the means to support so many eagle flights, so Jupiter was no longer an option to get rid of the corpses. 
+But there it was, after hell had unleashed. At your doorstep the unusual sight of black ink on lab grown cellulose. You don't even know how long it was since you had last seen a printed mail.
 
 25-12-2279; 14:50 | Płaskowyż Olimp - Mars
 
@@ -45,42 +45,40 @@ Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, 
 As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the Terrestians for the control of the Jovian settlements on Kallisto and Ganymede. 
 Your services will be explained to you as soon as you get in contact with your command officer.
 Please report to the martian embassy to you enclosed in this letter, you will be given more information about your tasks on location. 
-Do not disclose this convocation with no one.
+Do not disclose this information with anyone.
 
 Best Regards,
 The Martian administration for a free jovian system. 
 
 The "embassy". You've heard of this, a resistance of sort put together by the stationary martian military in the system.
 Apparently they took control of some abandoned building in the lower city right by the almost empty water tanks.
-You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn't comply. 
+You know the place is full of Terrestian military. Those damn Ziemniaki are ready to shoot bullets in whoever doesn't comply. 
 
--> This is too risky, and for what? Mars doesn't care about us.
-	But you know the risk of throwing away the paper. Not answering mean losing your citizenship. 
+-> Joining would be too risky, and for what? Mars doesn't care about us.
+	But you know the risk of throwing away that paper. Not answering mean losing your citizenship. 
 	but what else could you do? would you really be willing to risk your life like that. 
 	And that's only to go at the Embassy. what will happen after that?
 	-> It's not like there's other any choice.
 		So you decide to go to the Embassy.
 		The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
-		In the corridor sitting while waiting for their faith three dozens of people, between men and women spanning from 17 to 40. 
-		When you enter the commander's office a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
-		Commander: So kid, what are you good at? How can you be of service?
+		In the corridor sitting waiting for their faith three dozen of people, between men and women spanning from 17 to 40. 
+		When you enter the commander's office, a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
+		Commander: So Johiński, what are you good at? How can you be of service?
 		-> I'm a mechanic, I'm pretty good at repairing stuff.
 			The commander smirks at you, a smirk that set upon you a sense of unease. 
-			Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones, 
+			Commander: We need people to repair water filters and try to fix extractor drones.
 			And so you spent the next two months repairing machines and helping people. 
 			<<set $dadMech = true>><<set $Martian= true>><<jump Ch2>>
 		-> I know how to hold a gun mam. 
-			The commander smirks at you, a smirk that set upon you a sense of unease. 
-			Commander: Ok sure kid.
-			She scans you from head to toe.
-			Commander: Maybe. 
+			The commander scans you from head to toe, her smirk sets upon you a sense of unease.
+			Commander: Ok sure, we can work with that. 
 			Commander: Go to colonel Birkos he will see what to do with you.
 			And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
 			<<set $dadSoldier = true>><<set $Martian= true>><<jump Ch2>>
 	-> I've heard of a group of people. not military just normal people, that want a change. Maybe I can be of help there. 
 		Maybe you can make a difference.
 		<<jump RecruitReb>>
--> You're not scared of those Ziemniak.
+-> You're not scared of the Ziemniaki.
 	The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
 	In the corridor sitting while waiting for their faith three dozens of people, between men and women spanning from 17 to 40. 
 	When you enter the commander's office a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
@@ -89,15 +87,13 @@ You know the place is full of Ziemniaki ready to shoot bullets in whoever doesn'
 	
 	-> I'm a mechanic, I'm pretty good at repairing stuff.
 		The commander smirks at you, a smirk that set upon you a sense of unease. 
-		Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones, 
+		Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones.
 		And so you spent the next two months repairing machines and helping people. 
 		<<set $dadMech = true>><<set $Martian= true>><<jump Ch2>>
 	-> I know how to hold a gun mam. 
-		The commander smirks at you, a smirk that set upon you a sense of unease. 
-		Commander: Ok sure kid.
-		She scans you from head to toe.
-		Commander: Maybe. 
-		Commander: Go to colonel Birkos he will see what to do with you.
+			The commander scans you from head to toe, her smirk sets upon you a sense of unease.
+			Commander: Ok sure, we can work with that. 
+			Commander: Go to colonel Birkos he will see what to do with you.
 		And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
 		<<set $dadSoldier = true>><<set $Martian= true>><<jump Ch2>>
 ===
@@ -220,11 +216,14 @@ position: 404,-519
 	<<elseif $dadMech == true>>
 		Your job ended up being fixing and refurbishing old spy drones from earth into full fledged support systems for the inhabitants of the jovian system.
 	<<endif>>
-	But luckly those days ended when the Marsuvian alliance managed to secure a successful treaty with earth. 
-	The latter would open back up the water supplies to the jovian, and give them partial freedom while remaining in control of europa and io's resources.
-	While martian and Venuvian would delopy troops in the system so to avoid father endangerment in the jovian. 	
+	But luckily those days ended when the Marsuvian alliance managed to secure a successful treaty with Earth. 
+	The latter would open back up the water supplies to the jovian system, and give them partial freedom while remaining in control of europa and io's resources.
+	While Martian and Venuvian would deploy troops in the system, so to avoid father endangerment on Jupiter. 
+	Shortly after the Pons was opened, a neutral station shared between the three forces. 	
 <<endif>>
-Everything that happened those days it's now a hazy. From back then you remember the relief. 
+
+GIVE CONTEXT
+
 Not having to worry about water anymore. 
 You remember the sorrow.
 For those you lost. 
