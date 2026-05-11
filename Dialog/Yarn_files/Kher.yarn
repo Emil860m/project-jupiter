@@ -176,14 +176,26 @@ position: -273,58
 My hands are clean, no need to wash them again.
 ===
 
+title: medicalConsole_Hospital
+color: green
+position: -273,58
+---
+A medical console for displaying pulse, blood oxygenation and pressure.
+The console is silent.
+No values are being displayed.
+...
+===
+
 title: uglyStatue_Office
 color: green
 position: -273,58
 ---
 I think this is supposed to be a statue...
 -> I don't like it.
-	Every office needs an ugly piece of art.
-	Yes. I especially enjoy the shape... a ball.
+	But every office needs an ugly piece of art.
+	Maybe there is something to enjoy about it?
+	Hmm...
+	I think enjoy the shape... the ball.
 	A lot of meaning hidden in there I'm sure.
 -> It's okay.
 	Kinda boring but I think that's what you need in an office setting.
