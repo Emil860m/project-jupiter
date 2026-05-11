@@ -8,6 +8,7 @@ class_name interactable_object
 @export var has_dialog : bool = true
 @export var has_outline: bool = true
 @export var portrait_path: String = ""
+@export var time_pass: int = 1
 
 
 
@@ -16,6 +17,7 @@ func _ready() -> void:
 	self.mouse_entered.connect(_on_mouse_entered)
 	self.mouse_exited.connect(_on_mouse_exited)
 	if has_outline:
+		interactable_component.time_pass = time_pass
 		interactable_component.interact = _interact
 		interactable_component.object_id = object_id
 	_set_dialog()

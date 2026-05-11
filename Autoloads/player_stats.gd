@@ -1,7 +1,7 @@
 extends Node
 
-@export var stat_needed_for_advantage: int = 11
-@export var stat_needed_to_not_have_disadvantage: int = 10
+@export var stat_needed_for_advantage: int = 12
+@export var stat_needed_to_not_have_disadvantage: int = 11
 
 
 ## Player stuff
