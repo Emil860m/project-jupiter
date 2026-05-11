@@ -62,6 +62,7 @@ func check_upgrades():
 	noise_reduction_button.disabled = Flags.get_flag("HasNoiseReduction1")
 
 func _on_leave_button_up() -> void:
+	SoundController.play_low_boop()
 	if Globals.interacting:
 		return
 	if ShipStats.fuel <= 0:
@@ -76,6 +77,7 @@ func _on_leave_button_up() -> void:
 
 
 func _on_refuel_button_button_up() -> void:
+	SoundController.play_high_boop()
 	if Globals.interacting:
 		return
 	main_label.text = 'Your ship has been refueled'
@@ -86,6 +88,7 @@ func _on_refuel_button_button_up() -> void:
 
 
 func _on_repair_button_button_up() -> void:
+	SoundController.play_high_boop()
 	if Globals.interacting:
 		return
 	main_label.text = 'Your ship has been repaired'
@@ -101,6 +104,7 @@ func _on_timer_timeout() -> void:
 
 
 func _on_upgrade_button_button_up() -> void:
+	SoundController.play_mid_boop()
 	if Globals.interacting:
 		return
 	upgrade_menu.visible = true
@@ -112,6 +116,7 @@ func _on_upgrade_button_button_up() -> void:
 
 
 func _on_back_button_button_up() -> void:
+	SoundController.play_mid_boop()
 	main_menu.visible = true
 	upgrade_menu.visible = false
 	_animated_sprite_1.visible = true
@@ -121,6 +126,7 @@ func _on_back_button_button_up() -> void:
 
 
 func _on_fuel_upgrade_button_up() -> void:
+	SoundController.play_high_boop()
 	ShipStats.upgrade_fuel_cap(fuel_upgrade_val)
 	Flags.set_flag("HasFuelUpgrade1")
 	upgrade_label.text = 'Fuel capacity increased'
@@ -131,6 +137,7 @@ func _on_fuel_upgrade_button_up() -> void:
 
 
 func _on_stat_allocation_upgrade_button_up() -> void:
+	SoundController.play_high_boop()
 	ShipStats.upgrade_poj(poj_upgrade_val)
 	Flags.set_flag("HasPOJUpgrade1")
 	upgrade_label.text = 'POJ increased'
@@ -141,6 +148,7 @@ func _on_stat_allocation_upgrade_button_up() -> void:
 
 
 func _on_noise_reduction_button_up() -> void:
+	SoundController.play_high_boop()
 	ShipStats.reduce_noise()
 	Flags.set_flag("HasNoiseReduction1")
 	upgrade_label.text = 'Estimation noise reduced'
