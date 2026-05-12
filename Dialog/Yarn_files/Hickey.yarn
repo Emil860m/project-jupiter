@@ -193,7 +193,7 @@ The usual grin brightens his face.
 								Hick: Good dude. 
 								Dad: Uhh, look at that, physical contact, that's progress.
 								You repress the impulse to flip off the air.
-							-> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("KassCrazy")>>
+							-> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("kassCrazy")>>
 								Hick: Yeah that sounds about right, but maybe go get checked. I can ask a friend to visit you tomorrow. 
 							-> Forget it.
 								Hickey really doesn't like your answer, but accepts it.
@@ -243,7 +243,7 @@ The usual grin brightens his face.
 								Hick: Good dude. 
 								Dad: Uhh, look at that, physical contact, that's progress.
 								You repress the impulse to flip off the air.
-							-> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("KassCrazy")>>
+							-> I think I won't, I already asked and I've been told I'm fucking crazy! <<if get_flag ("kassCrazy")>>
 								Hick: Yeah that sounds about right, but maybe go get checked. I can ask a friend to visit you tomorrow.
 									->Sure, why not.
 									->No thanks, I've too much stuff going on.
@@ -758,10 +758,13 @@ Hick: Yeah I have them, why do you need it?
 		Hick: Oh that's nice...
 		The boy looks shook by your idea.
 		-> Do you wanna come?
-			Hick: I've a busy weekend ahead of me, but let me know once you know more details and I'll see if I can make time for it.
-			Hick: I sent.
+			Hick: I don't know man, my weekend's packed already. 
+			The boy seems conflicted.
+			Hick: I'll tell you what. You let me know once everything is set and I'll see if I can make it.
+			Hick: But let me send you the thing first. Aaand sent.
 			The boy turns on his KomPat and sends you the docs.
 			Hick: I imagine you don't have Orbit anymore. I'll send them directly to your KomPat.
+			<<if set_flag("hickRecruit")>><<endif>>
 		-> Can you give me the docs now?
 			Hick: Yeah, I can send them directly to your KomPat.
 <<if set_flag("docs")>><<endif>>

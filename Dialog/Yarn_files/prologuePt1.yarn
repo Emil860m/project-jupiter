@@ -37,7 +37,7 @@ position: 38,-633
 The letter came a few weeks later. A few weeks too late maybe, when a lot of people were already gone. There weren't even means to support all the eagle flights, so Jupiter was no longer an option to get rid of the corpses. 
 But there it was at your doorstep, the unusual sight of black ink on lab grown cellulose. You don't even remember how long it had been since you last saw printed mail.
 
-25-12-2279; 14:50 | Płaskowyż Olimp - Mars
+:25-12-2279; 14:50 | Płaskowyż Olimp - Mars
 
 Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, Mars. As a Martian citizen under the age of 40 residing in the Jovian system, you are summoned to take action in the ongoing dispute with the Terrestians for the control of the settlements on the Jovian moons, Kallisto and Ganymede. 
 Please report to the Martian embassy as enclosed in this letter. You will receive more information about your tasks on location. Do not disclose this information to anyone.
@@ -268,7 +268,7 @@ You were about to switch of the JPS navigation system when you got a message fro
 -> Go to the location. 
 	When you get back home you find the kid sleeping with their book still in their hand.
 	Another day has passed.
-	<<if adjust_status(0,0,0,1)>><<endif>>
+	<<if adjust_status(0,0,0,1)>><<endif>><<if set_flag("noMessages")>><<endif>>
 -> Turn the system down and go back home.
 	You got in the house and went to work to finish a project you had been stuck on. 
 	Kher decided to help you out, and so the two of you worked together. 

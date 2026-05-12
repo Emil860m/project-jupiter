@@ -6,7 +6,7 @@ position: -273,62
 	<<if $workshopDes == true>>
 
 	<<elseif true>>
-		<<declare $workshopDes = true>>
+		<<declare $workshopDes = false>>
 		You enter the workshop. 
 		The chemical smell of motor oil and toxic liquids reminds you of your childhood. 
 		The place looks the same as always. It's weird how some things remain the same.

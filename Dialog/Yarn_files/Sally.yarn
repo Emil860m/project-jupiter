@@ -10,7 +10,7 @@ position: -237,-112
 <<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen") and get_flag_uncheck("keys")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
@@ -20,6 +20,8 @@ position: -237,-112
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS1>>
@@ -38,13 +40,13 @@ position: -217,73
 ---
 <<if get_flag("metSul")>>
 <<if $sulSpeak==false>>
-	The man acnowledges you without lifting his eyes from his work.
+	The man acknowledges you without lifting his eyes from his work.
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen") and get_flag_uncheck("keys")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
@@ -93,7 +95,7 @@ position: -212,235
 <<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen") and get_flag_uncheck("keys")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
@@ -126,7 +128,7 @@ position: -250,648
 <<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen") and get_flag_uncheck("keys")>>
 	<<detour sullyKey>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
@@ -155,7 +157,7 @@ position: -252,413
 <<endif>>
 -> How can I get in the workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour sullyGetIn>>
--> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
+-> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen") and get_flag_uncheck("keys")>>
 	<<detour sullyKey>>
 -> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
@@ -233,4 +235,19 @@ Sully: Yeah sure kid, basically the various stats all represent different system
 Sully: For example radiation protection helps protect you from radiation on long journeys. 
 Sully: Or maneuverability assists you with fine movement.
 Sully: Of course allocating correctly is important, but what you do in the situation matters just as much.
+===
+title: SulFuneral
+---
+Sully: Obviously kid that's not even a question.
+He leans in for a hug.
+	-> Sorry Sul, I'm not really the hugging type.
+		Dad: Damn kid, didn't think I brought you up to be so cold. 
+		He smiles at you. 
+		Sully: Just like your father, huh?
+		Sully pats you on the shoulder.
+		Sully: Let me know the details when you have them.
+	-> Hug Sully.
+		He holds you for a few seconds and you feel like a kid again, then he lets go.
+		Sully: Let me know the details when you have them.
+<<if set_flag("sullyRecruit")>><<endif>>
 ===

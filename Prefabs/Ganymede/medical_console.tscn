@@ -14,6 +14,7 @@ size = Vector3(6, 7, 3)
 transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, 0, 0)
 script = ExtResource("1_4j5sd")
 item_name = "console"
+dialog_node = "medicalConsole_Hospital"
 
 [node name="MedicalConsole" type="MeshInstance3D" parent="." unique_id=1066243886]
 material_overlay = SubResource("ShaderMaterial_i3843")

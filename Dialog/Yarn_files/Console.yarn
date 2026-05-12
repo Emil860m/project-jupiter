@@ -3,16 +3,19 @@ color: purple
 position: 0,0
 ---
 Would you like to read the news or check the log?
-	-> The news
-		<<detour news_crashesAtRationale>>
-	-> The log
-		Hospital arrivals within the last hour: Kassandra
-		Courtyard arrivals within the last hour: Sully
-	-> Download the arrival documents<<if get_flag("SDA")>>
-		Download complete
-		<<detour Download>>
-	-> Log out
-		<<return>>
+-> The news
+	<<detour news_crashesAtRationale>>
+-> The log
+	Hospital arrivals within the last hour: Kassandra
+	Courtyard arrivals within the last hour: Sully
+-> Download the arrival documents
+	<<detour Download>>
+	Download complete
+-> Log out
+	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_0740to0900>>
 ===
 title: console_0900to1000
@@ -30,6 +33,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_0900to1000>>
 ===
 title: console_1000to1100
@@ -47,6 +53,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1000to1100>>
 ===
 title: console_1100to1200
@@ -64,6 +73,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1100to1200>>
 ===
 title: console_1200to1300
@@ -81,6 +93,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1200to1300>>
 ===
 title: console_1300to1400
@@ -98,6 +113,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1300to1400>>
 ===
 title: console_1400to1500
@@ -115,6 +133,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1400to1500>>
 ===
 title: console_1500to1600
@@ -132,6 +153,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1500to1600>>
 ===
 title: console_1600to1700
@@ -149,6 +173,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1600to1700>>
 ===
 title: console_1700to1800
@@ -166,6 +193,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1700to1800>>
 ===
 title: console_1800to1900
@@ -183,6 +213,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1800to1900>>
 ===
 title: console_1900to2000
@@ -200,6 +233,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_1900to2000>>
 ===
 title: console_2000to2100
@@ -217,6 +253,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_2000to2100>>
 ===
 title: console_2100to2200
@@ -234,6 +273,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_2100to2200>>
 ===
 title: console_2200to2300
@@ -251,6 +293,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_2200to2300>>
 ===
 title: console_2300to2400
@@ -268,6 +313,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_2300to2400>>
 ===
 title: console_2400to2500
@@ -285,6 +333,9 @@ Would you like to read the news or check the log?
 	<<detour Download>>
 -> Log out
 	<<return>>
+<<if $download == true>>
+		<<if set_flag("log")>><<endif>>
+<<endif>>
 <<jump console_2400to2500>>
 ===
 
@@ -333,7 +384,9 @@ It seems the actions of a parent shape the child significantly more than their g
 
 title: Download
 ---
-	hello world
-<<if set_flag("log")>><<endif>>
-<<return>>
+<<declare $download = false>>
+*Download 0*
+*Download 50*
+*Download 90*
+<<set $download = true>>
 ===

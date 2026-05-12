@@ -95,7 +95,6 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 30
-text = "Textbox"
 
 [node name="ContinueIndicator" type="Label" parent="CanvasLayer/Control/LinePresenter/VBoxContainer" unique_id=702772141]
 layout_mode = 2
@@ -123,7 +122,6 @@ offset_left = 9.0
 offset_top = -59.0
 offset_right = 1429.0
 theme_override_font_sizes/font_size = 36
-text = "Char label"
 
 [node name="OptionsPresenter" type="PanelContainer" parent="CanvasLayer/Control" unique_id=2021137865 node_paths=PackedStringArray("options_container")]
 layout_mode = 0
