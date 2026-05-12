@@ -74,6 +74,7 @@ poj_upgrade_time = 20
 noise_reduction_time = 20
 fuel_upgrade_val = 50
 poj_upgrade_val = 2
+miko_portrait_path = "res://Textures/Portraits/Miko/james.png"
 
 [node name="DialogComponent" parent="." unique_id=1464193511 instance=ExtResource("19_kbvy3")]
 start_node = "tutorial_pons"

@@ -35,7 +35,7 @@ func start_dialog():
 		if _portrait.size.y > target_portrait_height and !portrait_scaled:
 			_portrait.scale *= target_portrait_height/_portrait.size.y
 			portrait_scaled = true
-		portrait.visible = has_portrait
+		_portrait.visible = has_portrait
 
 	print(start_node)
 	dialogue_runner.start_dialogue(start_node)
