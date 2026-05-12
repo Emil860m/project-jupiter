@@ -7,11 +7,11 @@ position: -273,62
 
 	<<elseif true>>
 		<<declare $workshopDes = true>>
-		You enter in the workshop. 
+		You enter the workshop. 
 		The chemical smell of motor oil and toxic liquids reminds you of your childhood. 
 		The place looks the same as always. It's weird how some things remain the same.
 	<<endif>>
-			-> Log in your father's Kompat. 
+			-> Log in on your father's KomPat. 
 				<<detour Kompat>>
 			-> Sleep.
 				<<jump Sleep>>
@@ -19,40 +19,40 @@ position: -273,62
 				<<set $workshopDes = false>>
 				<<return>>
 <<elseif true>>
-you try to open the door but it seems to be locked.
-	->Maybe someone knows how to open it
+You try to open the door but it seems to be locked.
+	-> Maybe someone knows how to open it?
 <<endif>>
 <<if set_flag("howOpen")>><<endif>>
 ===
 title: Kompat
 ---
 <<if get_flag_uncheck("will")>>
-	Kompat requires the password. 
-	-> insert his old password.
-		Luckly enough he hasn't change it since you moved.
+	KomPat requires the password. 
+	-> Insert his old password.
+		Luckily enough he hasn't changed it since you moved.
 		You quickly download the will from his personal K-Log.
 	<<if set_flag("will")>><<endif>>
 <<elseif true>>
-	The old Kompat faintly glow. 
+	The old KomPat faintly glow.
 	He didn't even install Orbit.
-	Dad: why would I install that, what am I a kid?
+	Dad: Why would I install that, what am I a kid?
 <<endif>>
 ===
 title: Sleep
 ---
 <<if get_flag("gotExtension")>>
-	You managed to get the extension, today was very tough 
+	You managed to get the extension, today was very tough.
 	You should close your eyes and rest, it's gonna be a long week.
 	-> Go to bed.
 
-	-> No It's too early to sleep.
+	-> No. It's too early to sleep.
 <<elseif true>>
 	You managed to enter the workshop, today is not treating you very well.
 	Should you go to bed? 
-	Dad: you know you do you're not gonna be able to get the extension if you do right?
+	Dad: You know if you do, you're not gonna be able to get the extension for my funeral, right?
 	-> Go to bed.
 	<<if trigger_end_of_game("You fall asleep, and wake up the morning after with the horrible awareness that something happen. You know your dad took his flight... alone.", true)>><<endif>>
-	-> No It's too early to sleep.
+	-> No. It's too early to sleep.
 <<endif>>
 ===
 title: cactus_office
@@ -62,11 +62,11 @@ position: -273,60
 How is this cactus even alive!
 In this enviroment?
 In this economy?
-This doesn't seem to be even the proper light for it.
--> Maybe it's fake
+There doesn't even seem to be proper light for it.
+-> Maybe it's fake...
 	Cheep polimare mold, but suprisingly convincing.
--> Maybe it's special
-	They water it with sunshine and kisses. I wonder what chem coctail is keeping it alive.
+-> Maybe it's special...
+	They water it with sunshine and kisses. I wonder what chem cocktail is keeping it alive.
 ===
 
 title: bookShelf_office
@@ -75,7 +75,7 @@ position: -273,58
 ---
 These are all just records... what a boring library to have.
 -> Maybe I can still find something interesting?
-	After careful analisys of the bookshelfs, you conclude that there is in fact nothing interesting in there.
+	After careful analysis of the bookshelves, you conclude that there is in fact nothing interesting in there.
 -> Nothing to see here.
 ===
 
@@ -116,28 +116,28 @@ position: -273,58
 Wait... is that a SPUTNIK satelite! What is it doing here?
 -> Maybe someone is making replicas here?
 -> The kind of trash you can find here.
-	Speaking of trash.. This is an impressive trash pile they colected over here. 
+	Speaking of trash.. This is an impressive trash pile they amassed over here. 
 ===
 
 title: paperNotice_workshop
 color: green
 position: -273,58
 ---
-Workshop temporarly halted due to personel termination.
+Workshop temporarily halted due to personel termination.
 ===
 
 title: trash1_workshop
 color: green
 position: -273,58
 ---
-A trash disposal unit labeled "Polimers type A,B,C and D"
+A trash disposal unit labeled "Polymers type A,B,C and D".
 ===
 
 title: trash2_workshop
 color: green
 position: -273,58
 ---
-A trash disposal unit labeled "All metals"
+A trash disposal unit labeled "All metals".
 ===
 
 title: trash3_workshop
@@ -157,7 +157,7 @@ position: -273,58
 ---
 Yes. This is a proper trash pile.
 Damn... I think there is a High Power Radio module behind these old gas tanks.
-Wish there was a way toget to it...
+Wish there was a way to get to it...
 ===
 
 title: thermos_workshop
@@ -211,10 +211,10 @@ color: green
 position: -273,58
 ---
 What an interesting artefact to keep in your office.
-It looks like one of the Jovita probes sent here nearly 70 years ago...
+It looks like one of the Iovita probes sent here nearly 70 years ago...
 This must have been hard to get.
 -> Do I remember anything about that?
-	I think the Martian goverment sent around fourty of these here. They where surveying the moons for possible habitat and industrial spots.
+	I think the Martian government sent around fourty of these here. They where surveying the moons for possible habitat and industrial spots.
 	Many of them actually ended up frying in the radioation belt while trying to analise Io.
 	A true land of the dead if even the robots can't survive there.
 -> True piece of history.
@@ -232,8 +232,8 @@ title: cafe_Hospital
 color: green
 position: -273,58
 ---
-Cafinated wheat instant bevrage.
-Someone on the staff is grinding.. these things are so strong, they will keep you up for up to 25 hours.
+Caffeinated wheat instant beverage.
+Someone on the staff is grinding... These things are so strong they will keep you up for all 25 hours of the day.
 ===
 
 title: posterPons
@@ -268,20 +268,20 @@ color: green
 position: -273,58
 ---
 KALLISTO
-The root. The trength. The industry.
+The root. The strength. The industry.
 The root of our colonising power.
 Where every worker shall be treated equally.
 ===
 title: DadBody
 ---
 <<if $dadBody == false>>
-	You look at the black criosuit that contains your dad.
+	You look at the black cryosuit that contains your dad.
 	-> This is wrong, I should have got here in time. 
-		Dad: I'm sorry kid... that's space for you
+		Dad: I'm sorry kid... that's space for you.
 		The voice in your head somehow seems even more real with his body in front of you.
 		Dad: One minor inconvenience and you're a week late...
 		<<if mental_check(15)>>
-			You manage to hold back your tears, you've a job to do
+			You manage to hold back your tears, you've a job to do.
 		<<elseif true>>
 			You clean the tears from your face.
 		<<endif>>

@@ -6,8 +6,8 @@ Would you like to read the news or check the log?
 	-> The news
 		<<detour news_crashesAtRationale>>
 	-> The log
-		Hospital arrivals within the last hour: INSERT HERE
-		Courtyard arrivals within the last hour: INSERT HERE
+		Hospital arrivals within the last hour: Kassandra
+		Courtyard arrivals within the last hour: Sully
 	-> Download the arrival documents<<if get_flag("SDA")>>
 		Download complete
 		<<detour Download>>
@@ -23,8 +23,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_crashesAtRationale>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: Kassandra
+	Courtyard arrivals within the last hour: Sully
 -> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
@@ -40,8 +40,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_crashesAtRationale>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: Kassandra
+	Courtyard arrivals within the last hour: Sully
 -> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
@@ -57,8 +57,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_crashesAtRationale>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Office arrivals within the last hour: Zoe
+	Courtyard arrivals within the last hour: Kazimierz
 -> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
@@ -74,8 +74,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_meteorWarning>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Office arrivals within the last hour: Zoe
+	Courtyard arrivals within the last hour: Kazimierz
 -> Download the arrival documents<<if get_flag("SDA")>>
 	Download complete
 	<<detour Download>>
@@ -314,7 +314,7 @@ title: news_gestionPrize
 color: blue
 position: 0,0
 ---
-Zoë Eklekta from Ganymede to receive prize for excellent gestion. Your time is valuable so do like Zoë and make the most of it.
+Zoe Eklekta from Ganymede to receive prize for excellent gestion. Your time is valuable so do like Zoe and make the most of it.
 ===
 title: news_missingColour
 color: blue

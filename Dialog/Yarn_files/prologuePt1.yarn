@@ -5,26 +5,25 @@ position: -336,-546
 <<declare $dadSoldier = false>>
 <<declare $Martian = false>>
 <<declare $Blind = false>>
-The  memories are a bit fucked up. Everything it's fuzzy when you haven't drank in a while. 
-When your mouth gets so dry that your body actively fights you swallowing the water, making it feel like having a swamp instead of a palate. 
-Everyone was like that back then in the jovian system. The shutter really got everyone desperate.
+The  memories are a bit fucked up. Everything gets fuzzy when you haven't drank in a while.
+When your mouth is so dry that your body actively fights you swallowing the water, making it feel like having a swamp instead of a palate.
+Everyone was like that back then in the Jovian system. The shutter really got everyone desperate.
 
 You remember it like it was yesterday.
-The gas giant infinitely orange in the sky, staring. The government saying you're gonna be fine, that you have enough water to survive the cut off.
-You're just gonna have to ration water correctly. 
+The gas giant infinitely orange in the sky, staring. The Martians saying you're gonna be fine, that you have enough water to survive the cut off.
+You're just gonna have to ration water correctly.
 
--> Like that's going to help.
-	... You're not gonna see my friends die. the system is almost out of water at this point. fuck earth,
-	-> and fuck the Martians!
-		Their fucking treaties are not doing shit! Who cares about their stupid citizenship
-		->You don't for sure.
-			I'll find another way to help, we don't need them.
+-> Like that's going to help. You won't stake our life on their words.
+	... You're not gonna see my friends die. the system is almost out of water at this point. Fuck Earth.
+	-> And fuck the Martians!
+		Their fucking treaties aren't doing shit! Who cares about their stupid citizenship.
+		->You for sure don't. A Kallistan first and foremost.
+			I'll find another way to help. We don't need them.
 			<<jump RecruitReb>>
 		->You've heard they're drafting people.
-			Dad told you they're being quiet about it, 
-			but hopefully you're gonna know something soon
+			Dad told you they're being quiet about it, but hopefully you're gonna know something soon.
 			<<jump RecruitMar>>  
-	-> hopefully the Martians will help.
+	-> Hopefully the Martians will help. You can only wait anyways.
 		<<jump RecruitMar>>	
 -> Hopefully the Martians are right.
 	In times like this you need to stick together.
@@ -35,165 +34,117 @@ title: RecruitMar
 position: 38,-633
 --- 
 
-The letter came a few weeks later. a few weeks too late maybe, when a lot of people were already gone. There wasn't even have the means to support so many eagle flights, so Jupiter was no longer an option to get rid of the corpses. 
-But there it was, after hell had unleashed. At your doorstep the unusual sight of black ink on lab grown cellulose. You don't even know how long it was since you had last seen a printed mail.
+The letter came a few weeks later. A few weeks too late maybe, when a lot of people were already gone. There weren't even means to support all the eagle flights, so Jupiter was no longer an option to get rid of the corpses. 
+But there it was at your doorstep, the unusual sight of black ink on lab grown cellulose. You don't even remember how long it had been since you last saw printed mail.
 
 25-12-2279; 14:50 | Płaskowyż Olimp - Mars
 
-Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, Mars. As a martian citizen under age 40 residing in the jovian system, you're called to take action in the ongoing dispute with the Terrestians for the control of the Jovian settlements on Kallisto and Ganymede. 
-Your services will be explained to you as soon as you get in contact with your command officer.
-Please report to the martian embassy to you enclosed in this letter, you will be given more information about your tasks on location. 
-Do not disclose this information with anyone.
+Dear sir Joh M. Johiński, born 2nd of March, 2255; Marowo, Tooting's district, Mars. As a Martian citizen under the age of 40 residing in the Jovian system, you are summoned to take action in the ongoing dispute with the Terrestians for the control of the settlements on the Jovian moons, Kallisto and Ganymede. 
+Please report to the Martian embassy as enclosed in this letter. You will receive more information about your tasks on location. Do not disclose this information to anyone.
 
 Best Regards,
-The Martian administration for a free jovian system. 
+The Martian administration for a free Jovian system. 
 
-The "embassy". You've heard of this, a resistance of sort put together by the stationary martian military in the system.
-Apparently they took control of some abandoned building in the lower city right by the almost empty water tanks.
-You know the place is full of Terrestian military. Those damn Ziemniaki are ready to shoot bullets in whoever doesn't comply. 
+The "embassy". You've heard of this. A resistance of sort put together by the stationary Martian military in the system.
+Apparently they took control of some abandoned building in the lower city right by the old water tanks.
+You know the place is teeming with Terrestian military. Those damn Ziemniaki are ready to shoot bullets in all who don't comply.
 
 -> Joining would be too risky, and for what? Mars doesn't care about us.
 	But you know the risk of throwing away that paper. Not answering mean losing your citizenship. 
-	but what else could you do? would you really be willing to risk your life like that. 
-	And that's only to go at the Embassy. what will happen after that?
+	But what else could you do? Would you really be willing to risk your life like that.
+	And that's only to go to the embassy. What will happen after that?
 	-> It's not like there's other any choice.
-		So you decide to go to the Embassy.
-		The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
-		In the corridor sitting waiting for their faith three dozen of people, between men and women spanning from 17 to 40. 
-		When you enter the commander's office, a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
+		So you decide to go to the embassy.
+		The ex-offices' gray concrete would look almost untouched, if it wasn't for the glue of torn down posters. 
+		In the corridor three dozen people awaiting their fate, between men and women ages spanning from 17 to 40.
+		When you enter the commander's office, a woman welcomes you, her eyes dark and stoic, on her dark skin what seems like chemical burns. 
 		Commander: So Johiński, what are you good at? How can you be of service?
-		-> I'm a mechanic, I'm pretty good at repairing stuff.
-			The commander smirks at you, a smirk that set upon you a sense of unease. 
-			Commander: We need people to repair water filters and try to fix extractor drones.
+		-> I'm a mechanic, so pretty good at repairing stuff.
+			The commander smirks at you, a smirk that sets a sense of enease upon you. 
+			Commander: We need people to repair water filters and fix extractor drones.
 			And so you spent the next two months repairing machines and helping people. 
 			<<set $dadMech = true>><<set $Martian= true>><<jump Ch2>>
-		-> I know how to hold a gun mam. 
-			The commander scans you from head to toe, her smirk sets upon you a sense of unease.
+		-> I know how to hold a gun, ma'am. 
+			The commander scans you from head to toe, her smirk sets a sense of enease upon you.
 			Commander: Ok sure, we can work with that. 
-			Commander: Go to colonel Birkos he will see what to do with you.
-			And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
+			Commander: Go to colonel Birkos he will know what to do with you.
+			And so you did. You spent the next two months patrolling and fighting off the Ziemniaki.
 			<<set $dadSoldier = true>><<set $Martian= true>><<jump Ch2>>
-	-> I've heard of a group of people. not military just normal people, that want a change. Maybe I can be of help there. 
+	-> I've heard of a group of people. Not military, just normal people who want a change. Maybe I can be of help there. 
 		Maybe you can make a difference.
 		<<jump RecruitReb>>
--> You're not scared of the Ziemniaki.
-	The ex-offices' gray concrete would look almost untouched, if it wasn't for the thorn down posters' glue still stuck on them. 
-	In the corridor sitting while waiting for their faith three dozens of people, between men and women spanning from 17 to 40. 
-	When you enter the commander's office a woman welcomes you, her eyes dark and stoic, on he dark skin what seems like chemical burns. 
+-> You're not scared of the Terrestians.
+	The ex-offices' gray concrete would look almost untouched, if it wasn't for the glue of torn down posters.
+	In the corridor three dozen people awaiting their fate, between men and women ages spanning from 17 to 40.
+	When you enter the commander's office a woman welcomes you, her eyes dark and stoic, on her dark skin what looks like chemical burns. 
 
 	Commander: So kid, what are you good at? How can you be of service?
 	
-	-> I'm a mechanic, I'm pretty good at repairing stuff.
-		The commander smirks at you, a smirk that set upon you a sense of unease. 
-		Commander: Ok mechanic. We do need people to repair water filters and try to fix extractor drones.
+	-> I'm a mechanic, so pretty good at repairing stuff.
+		The commander smirks at you, a smirk that sets a sense of enease upon you.
+		Commander: Ok mechanic. We need people to repair water filters and fix extractor drones.
 		And so you spent the next two months repairing machines and helping people. 
 		<<set $dadMech = true>><<set $Martian= true>><<jump Ch2>>
-	-> I know how to hold a gun mam. 
-			The commander scans you from head to toe, her smirk sets upon you a sense of unease.
+	-> I know how to hold a gun, ma'am. 
+			The commander scans you from head to toe, her smirk sets a sense of enease upon you.
 			Commander: Ok sure, we can work with that. 
-			Commander: Go to colonel Birkos he will see what to do with you.
-		And so you did. You spent the next two months patrolling and fighting off the Ziemniak.
+			Commander: Go to colonel Birkos he will know what to do with you.
+		And so you did. You spent the next two months patrolling and fighting off the Ziemniaki.
 		<<set $dadSoldier = true>><<set $Martian= true>><<jump Ch2>>
 ===
 title: RecruitReb
 position: 26,-338
 ---
-You would imagine that contacting such a group would  be more difficult, but it turned out to be pretty easy.
+You would imagine contacting such a group would be more difficult, but it turned out to be pretty easy.
 Just a matter of cashing in some favours here and there.
-The Blinded, resided in a small abandoned space station, bound to make an eagle flight into the gas giant of it's own in a couple of years.
-The once sterile interior was now filled with graffiti and vandalized propaganda posters. 
-The chief of the place, a small framed man with an obviously broken nose and dark slacked back hair, welcomes you with a smile.
-???: Salve, the name is Grig, with who do I've the pleasure? 
-	->My name's Joh
-		Grig: Welcome.
-		Now that the presentation are done his face gets less welcoming and more focused. 
-		Grig: Why are you here Joh?
-			-> I came here to help. I want to help! 
-				Grig: You're more than welcome to join our little club, we're always looking to expand here.
-				He leans in closer. 
-				Grig: But how can you help?	
-				-> I can hold a gun.
-					The man starts laughing. 
-					Grig: that was a fun joke kid.
-					Grig: look at you, you don't look like someone who's ready to take someones life.
-					His face is now harsh and with a sliver of empathy towards you.
-					Grig: not even a Ziemniak's one.
-					-> I can do it sir.
-						Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
-						Grig: Secondly are you sure? we can find you some other job on the station.
-						-> Yes I'm sure.
-							Grig: ok then ask Murphy, she will get you up to date. 
-							<<set $dadSoldier = true>><<jump Ch2>>
-						-> Maybe I should stick to being a mechanic.
-							Grig: Good thinking. 
-							Grig: We're always in need for good mechanics.
-							<<set $dadMech = true>><<jump Ch2>>						
-					-> ehm I...
-						Grig: Listen, we can find you some other job on the station.
-						Grig: I really don't want you to die kid.
-						<<set $dadMech = true>><<jump Ch2>>
-				-> I know how to repair stuff 
-						Grig: Good, We're always in need for good mechanics.
-						<<set $dadMech = true>><<jump Ch2>>	
-			-> I just wanted to know more about this place
-				Grig: listen kid. you don't just run into a place like this. 
-				His face is as harsh as it can possibly be. 
-				Grig: Now you're either with us or not.
-				-> I'm here to help sir. 
-					The man sighs, losening up the built up tension 
-					Grig: Ok then, what can you do? we can indeed find you some job on the station or on the field.
-					-> I can hold a gun.
-						Grig: ok then ask Murphy, she will get you up to date. 
-						<<set $dadSoldier = true>><<jump Ch2>>
-					-> I know how to repair stuff 
-						Grig: That's Good, We're always in need for good mechanics.
-						<<set $dadMech = true>><<jump Ch2>>	
-	->Joh M. Johiński
-		Grig: Someone's the serious kind.
-		His smile fades leaving a serious expression. 
-		Grig: So why are you here sir. Johiński.
+The Blind, resided in a small abandoned space station, bound to make an eagle flight of its own in a couple of years.
+The once sterile interior was now filled with graffiti and vandalized propaganda. 
+The chief of the place, a small framed man with an obviously broken nose and dark slicked back hair, welcomes you with a smile.
+???: Salve, the name is Grig, to whom do I owe the pleasure?
+->My name's Joh
+	Grig: Welcome.
+	Now that the presentations are done his face turns less welcoming and more focused. 
+	Grig: Why are you here Joh?
 		-> I came here to help. I want to help! 
 			Grig: You're more than welcome to join our little club, we're always looking to expand here.
 			He leans in closer. 
 			Grig: But how can you help?	
 			-> I can hold a gun.
 				The man starts laughing. 
-				Grig: that was a fun joke kid.
-				Grig: look at you, you don't look like someone who's ready to take someones life.
-				His face is now harsh and with a sliver of empathy towards you.
-				Grig: not even a Ziemniak's one.
-				-> I can do it sir.
-					Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
-					Grig: Secondly are you sure? we can find you some other job on the station.
-					-> Yes I'm sure.
-						Grig: ok then ask Murphy, she will get you up to date. 
-						<<set $dadSoldier = true>><<set $Blind = true>><<jump Ch2>>
+				Grig: That was a fun joke kid.
+				Grig: Look at you. You don't look ready to take a life.
+				His expression becomes harsh with a sliver of empathy.
+				Grig: Not even a Ziemniak's one.
+				-> I can do it, sir!
+					Grig: Listen, first of all, I'm no one's sir. Just call me Grig. 
+					Grig: Secondly are you sure? We can find you some other job on the station.
+					-> Yes, I'm sure.
+						Grig: Ok then ask Murphy, she will get you up to date. 
+						<<set $dadSoldier = true>><<jump Ch2>>
 					-> Maybe I should stick to being a mechanic.
 						Grig: Good thinking. 
 						Grig: We're always in need for good mechanics.
-						<<set $dadMech = true>><<set $Blind = true>><<jump Ch2>>
-				-> ehm I...
+						<<set $dadMech = true>><<jump Ch2>>						
+				-> Ehmm I...
 					Grig: Listen, we can find you some other job on the station.
-					Grig: I really don't want you to die kid.
-					<<set $dadMech = true>><<set $Blind = true>>
-					<<jump Ch2>>
-			-> I know how to repair stuff 
+					Grig: I don't want you to die kid.
+					<<set $dadMech = true>><<jump Ch2>>
+			-> I know how to repair machines.
 					Grig: Good, We're always in need for good mechanics.
-					<<set $dadMech = true>><<set $Blind = true>><<jump Ch2>>
-		-> I just wanted to know more about this place
-			Grig: listen kid. you don't just run into a place like this. 
-			His face is as harsh as it can possibly be. 
-			Grig: Now you're either with us or not.
-			-> I'm here to help sir. 
-				The man sighs, loosening up the built up tension 
-				Grig: Listen, first of all, I'm no ones sir. Just call me Grig. 
-				Grig: Secondly what can you do? we can find you some job on the station or on the field.
+					<<set $dadMech = true>><<jump Ch2>>	
+		-> I just wanted to know more about this place.
+			Grig: Listen kid. You don't just run into a place like this. 
+			His face was as harsh as it could possibly be.
+			Grig: Now. You're either with us or not.
+			-> I'm here to help sir.
+				The man sighs, releasing the tension.
+				Grig: Ok then, what can you do? We can indeed find you a job on the station or on the field.
 				-> I can hold a gun.
-					Grig: ok then ask Murphy, she will get you up to date. 
-					<<set $dadSoldier = true>><<set $Blind = true>><<jump Ch2>>
-				-> I know how to repair stuff 
+					Grig: Ok then ask Murphy, she will get you up to date. 
+					<<set $dadSoldier = true>><<jump Ch2>>
+				-> I know how to repair stuff.
 					Grig: That's Good, We're always in need for good mechanics.
-					<<set $dadMech = true>><<set $Blind = true>><<jump Ch2>>	
+					<<set $dadMech = true>><<jump Ch2>>	
 ===
 title: Ch2
 position: 404,-519
@@ -205,55 +156,55 @@ position: 404,-519
 	<<endif>>
 	These people really believed in what they were doing and so did you.
 	And they might even have had a shot at creating a free Jovian system. 
-	But unfortunately with the come of the successful treaty that stopped the Shatter, the Blind lose a lot of their followers. 
-	That on top of the opening of the Pons and the arrival of both Venuvian and Martian military force, drove the rebellion on the ground.
+	But unfortunately with the treaty that stopped the Shutter, the Blind lost a lot of their supporters.
+	That on top of the opening of the Pons and the arrival of both Venuvian and Martian military forces, drove the rebellion to the ground.
 <<elseif $Martian == true>>
-	Apart from some minor incidents here and there the conflict never exploded into a real war. 
+	Apart from some minor incidents here and there the conflict never exploded into a real war.
 	<<if $dadSoldier == true>>
-		Your job was mostly containing small uprising here and there in the system, but not much more. 
+		Your job was mostly containing small uprisings here and there in the system, but not much more. 
 	<<elseif $dadMech == true>>
-		Your job ended up being fixing and refurbishing old spy drones from earth into full fledged support systems for the inhabitants of the jovian system.
+		Your job ended up being fixing and refurbishing old spy drones from earth into full fledged support systems for the inhabitants of the Jovian system.
 	<<endif>>
 	But luckily those days ended when the Marsuvian alliance managed to secure a successful treaty with Earth. 
-	The latter would open back up the water supplies to the jovian system, and give them partial freedom while remaining in control of europa and io's resources.
-	While Martian and Venuvian would deploy troops in the system, so to avoid father endangerment on Jupiter. 
-	Shortly after the Pons was opened, a neutral station shared between the three forces. 	
+	The latter would open back up the water supplies to the Jovian system, and give them partial freedom while remaining in control of the resources on the moons of Europa and Io.
+	While Martians and Venuvians would deploy troops in the system to avoid further trouble on Jupiter. 
+	Shortly after, the Pons was opened, a neutral station shared between the three forces.
 <<endif>>
-You would have thought going back to your normal life, would have taken longer. 
-But everything moved so fast after those day. And everything felt so weird for some reason.
+You would have thought returning to your normal life, would have taken longer. 
+But everything moved so fast after those days. And everything felt so weird for some reason.
 Not having to worry about water anymore. 
-Working as much as possible to rebuild to keep living.
+Working as much as possible to rebuild and keep living.
 With that lingering anger.
-Of knowing all that could have been avoided
-But there're also so many good memories from those years.
-There were your friends always making you laugh. Sully always being there and creating troubles.
-There was also her. The day you met her in Ganymede. your dinners out at the rational.
-Your first apartment, that old sofa, where you grew closer. 
-where you hoped you'd grow old together.
-When Kher was born you two were the happiest people on the Jovian system. 
+Of knowing all that could have been avoided.
+But there are also so many good memories from those years.
+There were your friends making you laugh. Sully always causing trouble.
+And then there was her. The day you met in Ganymede, your dinners at the Rationale.
+Your first appartment, the old sofa where you grew closer. 
+Where you hoped you would grow old together.
+When Kher was born you two were the happiest people in the Jovian system.
 <<if $Blind == true>>
-	But soon your duty towards the Blind started clashing with your family.
+	But soon your ties with the Blind started clashing with your family.
 	That kind of life is a risky one, you couldn't keep doing both. 
 <<elseif $Martian == true>>
 	But soon your duty towards your comrades started clashing with your family.
-	The martian asked you to take long term station for 10 years on an out of system location.
+	The Martians asked you to take long term station for 10 years on an out of system location.
 <<endif>> 
-	-> Choose Duty.
+	-> Choose duty.
 		<<if $Blind == true>>
-		You spend the next five years working closely with Grig. And you manage to make a difference.
-		Thank to you the Blind's station turns into a proper base of operation for the group.
-		But circumstances change, and priority switch.
-		When you get the news of her passing you immediately decide to go back to your life, to your child.
+		You spent the next five years working closely with Grig. And you managed to make a difference.
+		Thanks to you, the Blind's station turned into a proper base of operation for the group.
+		But circumstances changed, and priorities switched.
+		When you get the news of her passing, you immediately decide to go back to your life, to your child.
 		<<elseif $Martian == true>>
-		You spend the next 5 years secretly working on surveillance drones. And you manage to make a difference.
-		The money are good and you know your family is taken care of.
-		But sometimes life gets in the way, circumstances change, and priority switch.
-		When you get the news of her passing you immediately decide to go back to your life, to your child.
+		You spent the next 5 years secretly working on surveillance drones. And you managed to make a difference.
+		The money was good and you knew your family was taken care of.
+		But sometimes life gets in the way, circumstances changed, and priority switched.
+		When you get the news of her passing, you immediately decide to go back to your life, to your child.
 		<<endif>> 
 		<<if adjust_status(0,1,0,0)>><<endif>>
-	-> Choose Family.
-		The following 5 years are the best of your life, just the three of you, in that old workshop.
-		But sometimes life gets in the way. When she got sick you didn't know how to handle it, but you had to find a way. 
+	-> Choose family.
+		The following 5 years are the best of your life. Just the three of you, in the old workshop.
+		But sometimes life gets in the way. When she got sick you didn't know how to handle it, but you had to find a way.
 		If not for her, for your child. 
 		When she passed your life turned gray again.
 		<<if adjust_status(0,0,1,0)>><<endif>>
@@ -262,27 +213,26 @@ When Kher was born you two were the happiest people on the Jovian system.
 title: Ch3
 position: 641,-656
 ---
-Time really flies. 
 7 years went by in a second. 
-You kept working as a mechanic, raising Kher as best as you could.
-Being a single dad it's not always the easiest. 
-But having your own workshop helps with that.
-So much that you're even able to have enough time to bring your kid to the rational.
-It took them two weeks of annoying you and interrupting you mid work to convince you 
-When you go pick them up from school on ganymede to finally go there, they look at you.
+You kept working as a mechanic, raising Kher as best you could.
+Being a single dad was not always easy. 
+But having your own workshop helped with that.
+So much that you're even able to have enough time to bring your kid to the orbiting diner, the Rationale.
+It took two weeks of annoying you and interrupting you mid work to convince you.
+When you went to pick them up from school on Ganymede to finally go there, they looked at you.
 Kher: Hey dad, can Kazimierz hang out with us today?
--> No kiddo, today it's just the two of us. 
-	The calming sound of the ship turning on helps you ignore your kid's upset face. 
+-> No kiddo, today it'll be just the two of us. 
+	The calming sound of the ship turning on helped you ignore your kid's upset face. 
 	-> so Kher how did it go today? 
-		Kher: ok.
-		-> Just drive silently 
-		-> Listen kid I know you wanted your friend with us 
-			But I really wanted to spend some time just you and me
-			is that ok? 
-			you smile at them. 
-			Kher: I said ok. don't worry.
+		Kher: Ok.
+		-> Just drive silently.
+		-> Listen kid I know you wanted your friend with us.
+			But I really wanted to spend some time just you and me.
+			Is that ok? 
+			You smiled at them. 
+			Kher: I said ok. Don't worry.
 			<<jump rational>>
-	-> Just silently drive towards the rational.
+	-> Just silently drive towards the Rationale.
 		<<jump rational>>
 -> Sure I don't see why not.
 	The calming sound of the ship turning on, cover your kid and their friend's chatter.
@@ -290,64 +240,64 @@ Kher: Hey dad, can Kazimierz hang out with us today?
 ===
 title: rational
 ---
-You arrive at the rational, the place is packed full and it took you a minute for them to find you a seat. 
+You arrived at the Rationale. The place was packed full and it took you a minute for them to find you a seat. 
 <<if $Hick == true>> 
-	The three of you sit in the fake leather chair, while the waitress serves you your menu. 
+	The three of you sat in the fake leather chair, while the waitress handed you a menu. 
 <<elseif true>>
-	The two of you sit in the fake leather chair, while the waitress serves you your menu. 
+	The two of you sat in the fake leather chair, while the waitress handed you a menu. 
 <<endif>>
-You pick up the menu and read through it.
--> pick the Barszcz 
-	It doesn't take you that long to settle on the Barszcz, you always felt more focused after good plate of it.
--> pick the NutriMix 
-	It doesn't take you that long to settle on the NutriMix, you always felt stronger after good shake.
--> pick the Insekczyk 
-	It doesn't take you that long to settle on the Insekczyk, you can actually find people more tolerable after it.
-The evening flies by in a second. 
-You find yourself in the ship right outside the workshop, your kids get out of the ship, while you finish turning down all the systems.
-You see them enter the place and turning on the light.
-You're about to switch of the JPS when you get a message from the integrated log.
+You picked it up and read through it.
+-> Pick the Barszcz.
+	It didn't take you that long to settle on the Barszcz, you always felt more focused after good plate of it.
+-> Pick the NutriMix.
+	It didn't take you that long to settle on the NutriMix, you always felt stronger after good shake.
+-> Pick the Insekczyk.
+	It didn't take you that long to settle on the Insekczyk, you can actually find people more tolerable after it.
+The evening flew by in a second. 
+You found yourself in the ship right outside the workshop. Your kid got out of the ship, while you finished turning down all the systems.
+You saw them enter the place and turn on the light.
+You were about to switch of the JPS navigation system when you got a message from the integrated log.
 <<if $Martian== true>>
 	The commander's contact pops up in your messages with a location attached.
-	you wonder what job will she have for you this time.
+	You wonder what job she will have for you this time.
 <<elseif $Blind>>
 	Grig's contact pops up in your messages with a location attached.
-	you wonder what job will he have for you this time.
+	You wonder what job he will have for you this time.
 <<endif>>
 
 -> Go to the location. 
 	When you get back home you find the kid sleeping with their book still in their hand.
-	Another day has past
+	Another day has passed.
 	<<if adjust_status(0,0,0,1)>><<endif>>
 -> Turn the system down and go back home.
-	You get in the house and get to work to finish a project you've been stuck on 
-	Kher decides to help you out, and so you two work together. 
-	By the end of the day you tuck them into bed and you know,
-	another day is over.
+	You got in the house and went to work to finish a project you had been stuck on. 
+	Kher decided to help you out, and so the two of you worked together. 
+	By the end of the day you tucked them into bed and you knew,
+	another day was over.
 	<<if adjust_status(1,0,0,0)>><<endif>>
 ===
 title: alphaDialogue
 ---
 Everything is wet when you wake up from cryosleep. 
-When you first took the spacecraft to get out of the jovian system you promised yourself you would never go back. 
+When you first took the spacecraft to get out of the Jovian system you promised yourself to never go back. 
 But here you are, the prodigal child back in their homeland. 
 
 Memories are weird when you wake up from cryo. 
 
--> why was I even here? 
+-> Why was I even here? 
 	Dad: You were here for me kiddo. 
-	You look around but see no one. You shook away the And then remember the message.
-	It came by mail what, 6 months ago now? they wrote you about your dad's sickness. 
+	You look around but see no one. You shook away the and then remember the message.
+	It came by mail what, 6 months ago now? They wrote about your dad's sickness. 
 	Dad: Came here to say your final goodbye to your old man?
 	Dad: What a lucky father I am.
 	-> What's happening?
 		Dad: Don't worry about it.
-		Then you remember, he is being treated in Febris hospital in Ganymede. 
+		Then you remember, he is being treated for radiation sickness at Febris hospital in Ganymede. 
 	-> What sickness was it again?
 		Dad: I don't think it's that important now kiddo.
-		Then you remember, he is being treated in Febris hospital in Ganymede. 
-	-> Where was he staying.
+		Then you remember, he is being treated for radiation sickness at Febris hospital in Ganymede. 
+	-> Where is he staying?
 		You frantically look through your messages. 
 		Six months of spam are a lot to sift through. 
-		But here it is... He is being in Febris hospital in Ganymede. 
+		But here it is... He is being treated for radiation sickness at Febris hospital in Ganymede. 
 ===

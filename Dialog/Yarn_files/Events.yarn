@@ -12,7 +12,7 @@ title: event_tutorial
 color: purple
 position: 0, 0
 ---
-The onset of nostalgia is cut short as you notice the fuel systems got damaged. It seems the jovian system hasn't changed.
+The onset of nostalgia is cut short as you notice the fuel systems got damaged. It seems the Jovian system hasn't changed.
 -> Run appropriate protocols
 	<<if true>>
 	<<if resolve_outcome(10,10,100)>><<endif>>
@@ -21,14 +21,14 @@ The onset of nostalgia is cut short as you notice the fuel systems got damaged. 
 -> Call the tow truck
 	<<if true>>
 	<<if resolve_outcome(0,10,100)>><<endif>>
-	You soak in a pool of ambivalence and nostalgia while waiting for the tow truck. The university starts to feel like a hazy dream in your jovian reality.
+	You soak in a pool of ambivalence while waiting for the tow truck. The university starts to feel like a hazy dream in your Jovian reality.
 	<<endif>>
 ===
 title: event_spaceDebris
 color: purple
 position: 0, 0
 ---
-You encounter space debris.
+You encounter space debris. You used to guess what life it had when it knew a use, but now you only see it as an obstacle.
 -> Slow down
 	<<if simple_d_check(80)>>
 	<<if resolve_outcome(5,5,0)>><<endif>>
@@ -77,7 +77,7 @@ title: event_carelessness
 color: purple
 position: 0, 0
 ---
-Short routes like these have a tendency to make you careless
+Short routes like these have a tendency to make you careless. You remember your dad was like this as well, but push away the thought.
 -> Trust your instincts
 	<<if simple_m_check(20)>>
 	No thought given yet you land perfectly. You must truly be a natural pilot or in lady luck's good graces.
@@ -135,7 +135,7 @@ title: event_landingOnTheRationale
 color: purple
 position: 0, 0
 ---
-Landing on the rationale is one of the harder trips within the jovian systems. Who thought such a small station would be suitable for so much traffic.
+Landing on the Rationale is one of the harder trips within the Jovian system. Who thought such a small station would be suitable for so much traffic.
 -> Slow down to a crawl.
 	<<if detriment_s_check()>>
 	<<if resolve_outcome(5,0,0)>><<endif>>

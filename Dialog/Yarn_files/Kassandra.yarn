@@ -5,45 +5,45 @@ position: -389,105
 ---
 <<if set_flag("deadDad")>><<endif>>
 <<declare $kassSpeak = true>>
-???: Hey, I'm sorry now i really can't I've a lot of stuf...
-Oh, you must be Joh's kid right? You got here just in time,
+???: Hey, I'm sorry now I really can't I have a lot of stuff...
+Oh, you must be Joh's kid right? You got here just in time.
 -> Can I see my father?
-	???: Wait, you didn't get the message? your father didn't make it. he's passed last week, I'm sorry for your loss kiddo.
+	???: Wait, you didn't get the message? Your father didn't make it. He passed last week. I'm sorry for your loss kiddo.
 -> Where's his room? 
-	???: Wait, you didn't get the message? your father didn't make it. he's passed last, I'm sorry for your loss kiddo.
--> let the woman finish what she's saying
-	???: I'm sorry for your loss kiddo. your dad passed last week.
+	???: Wait, you didn't get the message? Your father didn't make it. He passed last week. I'm sorry for your loss kiddo.
+-> Let the woman finish what she's saying.
+	???: I'm sorry for your loss kiddo. Your dad passed last week.
 -> I have been hearing voices, do you know why? 
 	Dad: Why would you tell her that idiot?
 	-> Shut up!
-		???: Excuse me? can you shut up?
-		->Sorry I wasn't talking to you
-			???: you just got of the ship? it might be cryosickness.
-		->I was talking to my dad if you don't mind
-			???: you just got of the ship? it might be cryosickness.
+		???: Excuse me? Can you shut up?
+		->Sorry I wasn't talking to you.
+			???: You just got of the ship? It might be cryosickness.
+		->I was talking to my dad if you don't mind.
+			???: You just got of the ship? It might be cryosickness.
 	-> ...
-	  ???: you just got of the ship? it might be cryosickness.
+	  ???: You just got of the ship? It might be cryosickness.
 But we do need you for something, your dad's eagle flight is gonna be tonight, and we need your signature on some documents.
 -> Wait, what?!
 	I just find out my father's dead and you start with that?!
-	???: Listen kid, I know it's hard but it's been two weeks since his passing. 
+	???: Listen kid, I know it's hard but it's been a week since his passing. 
 -> I'm sorry who are you?
 	???: Oh, I'm Kassandra you can call me Kass. 
 	Kass: I'm a nurse here I helped your father in the last months. 
 	<<declare $Kass = true>>
 Kass: Listen kid I know your dad wanted a "real" funeral.
 <<if $Martian== true>>
-	Dad: You bet! I want a martian burial. 
-	Dad: Don't u dare yet me into that mass grave of a planet kid!
+	Dad: You bet! I want a Martian burial. 
+	Dad: Don't you dare yeet me into that mass grave of a planet kid!
 <<elseif true>>
 	Dad: You bet! Don't I deserve a proper burial?
 <<endif>>
 Kass: But it's too late for that, we really need your signature Kid.
 <<if set_flag("metKas")>><<endif>>
--> what if I don't sign? 
-	Kass: uff, then you would have until 25 today to find another solution, because then the SDA will be enacted. 
+-> What if I don't sign? 
+	Kass: Uff, then you would have until 25 today to find another solution, because then the SDA will be enacted. 
 	<<return>>
--> ok let's get this over with...
+-> Ok let's get this over with...
     <<detour kassSign>>
 	<<return>>
 ===
@@ -58,17 +58,17 @@ position: 162,-189
 	<<set $kassSpeak =true>>
 <<endif>>
 <<declare $Bag = false>>
--> yes let me sign those documents and let's get it over with. <<if $Bag>>
+-> Yes, let me sign those documents and let's get it over with. <<if $Bag>>
 	<<detour kassSign>>
 -> What's the SDA? 
 	<<detour kassSDA>>
 -> Is there someone else other than you here? 
 	<<detour kassSchedule>>
--> is there a way to delay the SDA? <<if $Bag>>
+-> Is there a way to delay the SDA? <<if $Bag>>
 	<<detour kassDelay>>
--> can you help me delay the SDA?<<if get_flag_uncheck("kassHelp")>>
+-> Can you help me delay the SDA?<<if get_flag_uncheck("kassHelp")>>
 	<<detour kassHelp>>
--> Bye
+-> Bye.
 	<<set $kassSpeak =false>><<return>>
 <<jump kasHospitalTS1>>
 <<elseif true>>
@@ -86,17 +86,17 @@ position: 314,98
 	<<set $kassSpeak =true>>
 	Kass: So kid? 
 <<endif>>
--> yes let me sign those documents and let's get it over with. <<if $Bag>>
+-> Yes, let me sign those documents and let's get it over with. <<if $Bag>>
     <<detour kassSign>>
 -> What's the SDA? 
     <<detour kassSDA>>
 -> Is there someone else other than you here? 
     <<detour kassSchedule>>
--> is there a way to delay the SDA? <<if $Bag>>
+-> Is there a way to delay the SDA? <<if $Bag>>
     <<detour kassDelay>>
--> so can you help me with the SDA?<<if get_flag_uncheck("kassHelp2")>>
+-> So can you help me with the SDA?<<if get_flag_uncheck("kassHelp2")>>
     <<detour kassHelp2>>
--> Bye
+-> Bye.
     <<return>>
 <<jump kasHospitalTS4>>
 <<elseif true>>
@@ -110,21 +110,21 @@ position: 29,246
 ---
 <<if get_flag_uncheck("GotDrugs") and get_flag_uncheck("NoDrugs")>>
 	Kass: Ok do you see that guy over there? 
-	-> yes... 
-		Kass: go to him and tell him I sent you, he has something for me. 
-	-> who? Hickey? 
-		Kass: do you know him?! Oh well whatever. go to him and tell him I sent you, he has something for me.
+	-> Yes... 
+		Kass: go to him and tell him I sent you. He has something for me. 
+	-> Who? Hickey? 
+		Kass: Do you know him?! Oh well, whatever. Go to him and tell him I sent you. He has something for me.
 	<<if set_flag("hickeyKass")>><<endif>>
 <<elseif get_flag("GotDrugs")>>
-	Kass: do you have it? 
+	Kass: Do you have it? 
 		->Yes here it is.
-			Thanks
+			Thanks.
 			<<if set_flag("kassDrugsSuccess")>><<endif>>
-		->Yes but I'm not gonna give it to you. 
-			Kass: well thanks for nothing moron. 
+		->Yes, but I'm not gonna give it to you. 
+			Kass: Well, thanks for nothing moron. 
 			<<if set_flag("kassDrugsFail")>><<endif>>
 <<elseif get_flag("NoDrugs")>>
-	Kass: so you didn't manage to get it? well thanks for nothing!
+	Kass: So you didn't manage to get it? Well thanks for nothing!
 	<<if set_flag("kassDrugsFail")>><<endif>>
 <<endif>>
 ===
@@ -134,16 +134,16 @@ position: 305,409
 ---
 <<if get_flag("kassDrugsSuccess")>>
 	Kass: Thanks for before, I really appreciate it.
-	Kass: I will pull my strings don't worry about it
+	Kass: I will pull my strings don't worry about it.
 	<<if set_flag("gotExtension")>><<endif>>
 <<elseif get_flag("kassDrugsFail")>>
-	Kass side eyes you and goes back to work.
-	-> give her the drugs<<if get_flag("GotDrugs")>>
+	Kass side-eyes you and goes back to work.
+	-> Give her the drugs.<<if get_flag("GotDrugs")>>
 		Kass: Thanks, I really appreciate it.
 		<<if set_flag("kassDrugsSuccess")>><<endif>><<if unset_flag("kassDrugsFail")>><<endif>>
-		Kass: I will pull my strings don't worry about it
+		Kass: I will pull my strings don't worry about it.
 		<<if set_flag("gotExtension")>><<endif>>
-	-> leave<<if get_flag("GotDrugs")>>
+	-> Leave.<<if get_flag("GotDrugs")>>
 <<elseif true>>
 	Kass seems very busy and slightly distressed better not to interrupt her.
 <<endif>>
@@ -152,30 +152,30 @@ position: 305,409
 title: kassSign
 position: 775,-130
 ---
-Dad: kid are you sure? I'm gonna be gone gone
-Dad: no turning back.
--> yes let's sign this 
+Dad: Kid are you sure? I'm gonna be gone gone.
+Dad: No turning back.
+-> Yes, let's sign this.
 	Kass: Thanks kid I know this is hard.
 	<<if trigger_end_of_game("By signing the papers you authorized your dad's eagle flight. The last thing you see of him is a burial ship directed to Jupiter.", true)>><<endif>>
--> ok maybe I can try doing something about it.
+-> Ok maybe I can try doing something about it.
 	Kass: Ok kid.
 ===
 title: kassSDA
 position: 761,47
 ---
-Kass: The sda is the safe disposal act, it makes it so bodies can not be kept for more than two weeks in cryo ba-- ehm cryo suits. 
+Kass: The SDA is the safe disposal act, it makes it so bodies can not be kept for more than two weeks in cryo ba-- ehm cryo suits. 
 <<set $Bag = true>>
 <<return>>
 ===
 title: kassSchedule
 position: 763,201
 ---
-Kass: There's Zoe upstairs from 9 and sometimes sally swings by.
+Kass: There's Zoe upstairs from 9 and sometimes Sully swings by.
 ===
 title: kassDelay
 position: 766,362
 ---
-Kass: You can try talking to the boss up stairs, she should be there from 9 onward.
+Kass: You can try talking to the boss upstairs. She should be there from 9 onward.
 ===
 title: kassHelp
 ---
@@ -187,12 +187,12 @@ title: kassHelp
 		Kass: I'm afraid I can't do much. But maybe try asking Zoe upstairs, she should be here from 9.
 		-> Ok thanks.
 		-> Yeah, I already spoke to her.<<if get_flag_uncheck("SDA")>>
-			Kass: Great than you know everything
+			Kass: Great. Then you know everything.
 	<<elseif true>>
-		Kass: I'm afraid I can't do much. But maybe try asking Zoe, I've seen her going in your father's room, maybe she's still there.
+		Kass: I'm afraid I can't do much. But maybe try asking Zoe, I've seen her go into your father's room, maybe she's still there.
 		-> Ok thanks.
 		-> Yeah, I already spoke to her.<<if get_flag("SDA")>>
-			Kass: Great than you know everything
+			Kass: Great. Then you know everything.
 	<<endif>>
 <<endif>>
 <<if set_flag("kassHelp")>><<endif>>
@@ -201,24 +201,24 @@ title: kassHelp2
 ---
 <<if get_flag("kassHelp")>>
 	<<if get_flag("kassDrugs")>>
-		Sure but I'm gonna need you to do me a favour.
+		Sure, but I'm gonna need you to do me a favour.
 		I need you to talk to someone for me.
-		I'll be on Kallisto from 16.30 to 18. let's meet there
+		I'll be on Kallisto from 16.30 to 18. Let's meet there.
 		<<if set_flag("kassWorkshop")>><<endif>>    
 	<<elseif true>>
-		no, I told you I can't. Have you talked to Zoe?
+		No, I told you. I can't. Have you talked to Zoe?
 		-> Not yet.<<if get_flag_uncheck("SDA")>>
 		-> Yeah, I already spoke to her.<<if get_flag("SDA")>>
-			Kass: Great than you know everything
+			Kass: Great. Then you know everything.
 	<<endif>>
 <<elseif true>>
 	<<if social_check(13)>>
 		Kass: sure but I'm gonna need you to do me a favour.
 		Kass: I need you to talk to someone for me.
-		Kass: Let's meet on Callisto at 16.30. 
+		Kass: Let's meet on Kallisto at 16.30. 
 		<<if set_flag("kassWorkshop")>><<endif>>
 	<<elseif true>>
-		no, I told you I can't. Have you talked to Zoe?
+		No, I told you. I can't. Have you talked to Zoe?
 		-> Not yet.<<if get_flag_uncheck("SDA")>>
 		-> Yeah, I already spoke to her.<<if get_flag("SDA")>>
 			Kass: Great than you know everything

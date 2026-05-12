@@ -4,7 +4,7 @@ position: -237,-112
 ---
 <<if get_flag("metSul")>>
 <<if $sulSpeak==false>>
-	The man acnowledge you without moving his eyes from his work.
+	The man acnowledges you without lifting his eyes from his work.
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
@@ -12,22 +12,22 @@ position: -237,-112
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
--> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+-> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
--> Hey Sul can you help me with the Allocation system of the ship?
+-> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Thanks, see you later
+-> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS1>>
 
 <<elseif true>>
-	The old man's eyes light up when he sees you 
+	The old man's eyes light up when he sees you.
 	Sully: Hey kid you made it.
-	Sully: You remember me right?
+	Sully: You remember me, right?
 	<<detour meetSully>>
 	<<jump SalWorkshopTS1>>
 <<endif>>
@@ -38,7 +38,7 @@ position: -217,73
 ---
 <<if get_flag("metSul")>>
 <<if $sulSpeak==false>>
-	The man acnowledge you without moving his eyes from his work.
+	The man acnowledges you without lifting his eyes from his work.
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
@@ -46,21 +46,21 @@ position: -217,73
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
--> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+-> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
--> Hey Sul can you help me with the Allocation system of the ship?
+-> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Thanks, see you later
+-> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalHospitalTS2>>
 <<elseif true>>
-	The old man's eyes light up when he sees you 
+	The old man's eyes light up when he sees you.
 	Sully: Hey kid you made it.
-	Sully: You remember me right?
+	Sully: You remember me, right?
 	<<detour meetSully>>
 	<<jump SalHospitalTS2>>
 <<endif>>
@@ -70,15 +70,15 @@ color: yellow
 position: -1089,258
 ---
 <<if get_flag("docs") and get_flag("log")>>
-	Zoe looks up at you, stoic as always
+	Zoe looks up at you, stoic as always.
 	Zoe: Good Job. I'll file the extension when I go back to the office.
-	Sully: That's great kid! I glad you were able to make it in time
+	Sully: That's great kid! I glad you were able to make it in time.
 		-> How much is the extension? 
 			Zoe: It last a week. so be quick in organizing this funeral thing.
-		-> Thanks
+		-> Thanks.
 	<<if set_flag("gotExtension")>><<endif>>
 <<elseif true>>
-	Sully is talking to Zoe
+	Sully is talking to Zoe.
 <<endif>>
 ===
 title: SalHospitalTS4
@@ -87,7 +87,7 @@ position: -212,235
 ---
 <<if get_flag("metSul")>>
 <<if $sulSpeak==false>>
-	The man acnowledge you without moving his eyes from his work.
+	The man acnowledges you without lifting his eyes from his work.
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
@@ -95,21 +95,21 @@ position: -212,235
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
--> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+-> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
--> Hey Sul can you help me with the Allocation system of the ship?
+-> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Thanks, see you later
+-> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalHospitalTS4>>
 <<elseif true>>
-	The old man's eyes light up when he sees you 
+	The old man's eyes light up when he sees you.
 	Sully: Hey kid you made it.
-	Sully: You remember me right?
+	Sully: You remember me, right?
 	<<detour meetSully>>
 	<<jump SalHospitalTS4>>
 <<endif>>
@@ -120,7 +120,7 @@ position: -250,648
 ---
 <<if get_flag("metSul")>>
 <<if $sulSpeak==false>>
-	The man acnowledge you without moving his eyes from his work.
+	The man acnowledges you without lifting his eyes from his work.
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
@@ -132,14 +132,14 @@ position: -250,648
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
--> Hey Sul can you help me with the Allocation system of the ship?
+-> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Thanks, see you later
+-> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS6>>
 <<elseif true>>
-The old man's eyes light up when he sees you 
-Sully: hey kid you made it.
+The old man's eyes light up when he sees you.
+Sully: Hey kid you made it.
 <<jump meetSully>>
 <<endif>>
 ===
@@ -149,7 +149,7 @@ position: -252,413
 ---
 <<if get_flag("metSul")>>
 <<if $sulSpeak==false>>
-	The man acnowledge you without moving his eyes from his work.
+	The man acnowledges you without lifting his eyes from his work.
 	Sully: Hey Kher, can I help you? 
 	<<set $sulSpeak = true>>
 <<endif>>
@@ -157,20 +157,20 @@ position: -252,413
 	<<detour sullyGetIn>>
 -> Can you give me your keys?<<if get_flag("sullyKeys") and get_flag("howOpen")>>
 	<<detour sullyKey>>
--> Zoe wants to talk to you <<if get_flag("zoeAsk")>>
+-> Zoe wants to talk to you. <<if get_flag("zoeAsk")>>
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
 -> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
 	<<detour sullyHick>>
--> Hey Sul can you help me with the Allocation system of the ship?
+-> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Thanks, see you later
+-> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS4>>
 <<elseif true>>
-The old man's eyes light up when he sees you 
-Sully: hey kid you made it.
+The old man's eyes light up when he sees you.
+Sully: Hey kid you made it.
 <<jump meetSully>>
 <<endif>>
 ===
@@ -179,15 +179,15 @@ position: -796,253
 ---
 <<declare $sulSpeak = true>>
 Obviously you remember Sully, I mean you left at 17 not 8, what did he expect.
--> No sully I don't know who you are.
+-> No Sully I don't know who you are.
 	The man laugh.
-	Sully: you've always been fun kid.
-	Sully: and I see Mars treated you well.
--> yeah sully I remember you.
+	Sully: You've always been fun, kid.
+	Sully: And I see Mars treated you well.
+-> Yeah Sully! I remember you.
 	The man smiles at you.
-	Sully: Yes kiddo.
+	Sully: Yes, kiddo.
 	Sully: You look good.
--> you were my father's friend right? 
+-> You were my father's friend right? 
 	The man smiles at you.
 	Sully: Yes kiddo.
 	Sully: You look good.
@@ -198,39 +198,39 @@ Obviously you remember Sully, I mean you left at 17 not 8, what did he expect.
 title:sullyHick
 ---
 Sully: Hickey should have them, he's at the workshop every two hours or so. 
-Sully: you remember the workshop right? the one on Ganymede.
+Sully: you remember the workshop right? The one on Kallisto.
 <<if set_flag("hickDocs")>><<endif>>
 ===
 
 title:sullyExtension
 ---
-Sully: Try asking zoe, she had a soft spot for your Pa.
+Sully: Try asking Zoe, she had a soft spot for your Pa.
 ===
 
 title:sullyGetIn
 ---
-Sully: Oh yes, here's the keys, go ask zoe for a copy please.
+Sully: Oh yes, here're the keys. Go ask Zoe for a copy please.
 <<if set_flag("keys")>><<endif>>
 ===
 
 title:sullyKey
 ---
-Sully: Oh yes, here's the keys, go ask zoe for a copy please.
+Sully: Oh yes, here're the keys. Go ask Zoe for a copy please.
 <<if set_flag("keys")>><<endif>>
 ===
 
 title: sulOfficeReq
 position: 91,539
 ---
-Sully: Oh damn thanks kiddo, my kompat must be out of power.
-Sully: my charger must be broken or something.
+Sully: Oh damn, thanks kiddo, my kompat must be out of power.
+Sully: My charger must be broken or something.
 <<if set_flag("zoeHospital")>><<endif>><<if set_flag("sullyOffice")>><<endif>><<if unset_flag("zoeAsk")>><<endif>>
 ===
 
 title: SulAllocation
 ---
 Sully: Yeah sure kid, basically the various stats all represent different systems of your ship. 
-Sully: For example Radiation protection helps you in long journeys. 
+Sully: For example radiation protection helps protect you from radiation on long journeys. 
 Sully: Or maneuverability assists you with fine movement.
-Sully: Of course allocating correctly is important, but it's what you do in the situation that really matter.
+Sully: Of course allocating correctly is important, but what you do in the situation matters just as much.
 ===
