@@ -186,7 +186,7 @@ title: kassHelp
 	<<if get_flag_uncheck("sullyOffice")>> 
 		Kass: I'm afraid I can't do much. But maybe try asking Zoe upstairs, she should be here from 9.
 		-> Ok thanks.
-		-> Yeah, I already spoke to her.<<if get_flag_uncheck("SDA")>>
+		-> Yeah, I already spoke to her.<<if get_flag("SDA")>>
 			Kass: Great. Then you know everything.
 	<<elseif true>>
 		Kass: I'm afraid I can't do much. But maybe try asking Zoe, I've seen her go into your father's room, maybe she's still there.
