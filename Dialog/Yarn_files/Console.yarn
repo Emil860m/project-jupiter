@@ -29,8 +29,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: Kassandra
 	Courtyard arrivals within the last hour: Sully
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -49,8 +49,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: Kassandra
 	Courtyard arrivals within the last hour: Sully
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -69,8 +69,8 @@ Would you like to read the news or check the log?
 	Office arrivals within the last hour: Zoe
 	Courtyard arrivals within the last hour: Kazimierz
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -89,8 +89,8 @@ Would you like to read the news or check the log?
 	Office arrivals within the last hour: Zoe
 	Courtyard arrivals within the last hour: Kazimierz
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -109,8 +109,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -129,8 +129,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -149,8 +149,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -169,8 +169,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -189,8 +189,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -209,8 +209,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -229,8 +229,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -249,8 +249,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -269,8 +269,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -289,8 +289,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -309,8 +309,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
@@ -329,8 +329,8 @@ Would you like to read the news or check the log?
 	Hospital arrivals within the last hour: INSERT HERE
 	Courtyard arrivals within the last hour: INSERT HERE
 -> Download the arrival documents<<if get_flag("SDA")>>
-	Download complete
 	<<detour Download>>
+	Download complete
 -> Log out
 	<<return>>
 <<if $download == true>>
