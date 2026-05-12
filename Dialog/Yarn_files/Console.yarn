@@ -8,7 +8,7 @@ Would you like to read the news or check the log?
 -> The log
 	Hospital arrivals within the last hour: Kassandra
 	Courtyard arrivals within the last hour: Sully
--> Download the arrival documents
+-> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
 -> Log out

@@ -4,7 +4,6 @@ position: -273,62
 ---
 <<if get_flag("keys")>>
 	<<if $workshopDes == true>>
-
 	<<elseif true>>
 		<<declare $workshopDes = false>>
 		You enter the workshop. 
