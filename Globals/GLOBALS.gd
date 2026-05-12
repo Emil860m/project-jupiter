@@ -38,7 +38,7 @@ var current_chapter: int = 1
 var chapter_titles: Array[String] = [
 	"EVEN JUPITER IS BOUND BY TIME",
 	"GANYMEDE AND THE EAGLE",
-	"CHAPTER3TITLE_PLACEHOLER"
+	"I KNOCKED YOU TO THE GROUND BUT LIFTED YOU CAUTIOUSLY"
 ]
 
 func get_current_chapter_title():
