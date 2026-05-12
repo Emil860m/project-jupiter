@@ -17,7 +17,7 @@ position: -463,-268
 	<<detour zoeHelp>>
 -> How long does the extension last?<<if get_flag("gotExtension")>> 
 	<<detour ExtensionLast>>
--> Where can I find my dad's will?<<if get_flag("SDA")>>
+-> Where can I find my dad's will?<<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeWill>>
 -> Thanks, see you later.
 	<<set $zoeSpeak = false>><<return>>
@@ -67,7 +67,7 @@ position: -460,293
 	<<detour zoeHelp>>
 -> How much does the extension last for?<<if get_flag("gotExtension")>> 
 	<<detour ExtensionLast>>
--> Where can I find my dad's will?<<if get_flag("SDA")>>
+-> Where can I find my dad's will?<<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour zoeWill>>
 -> Thanks, see you later.
 	<<set $zoeSpeak = false>><<return>>

@@ -43,14 +43,14 @@ title: Sleep
 	You managed to get the extension, today was very tough.
 	You should close your eyes and rest, it's gonna be a long week.
 	-> Go to bed.
-
+		<<if trigger_end_of_game("You fall asleep, and everything turns black. Sleep is your best friend when you wanna pause from the world. But you know tomorrow will come, with all its problems.", true)>><<endif>>
 	-> No. It's too early to sleep.
 <<elseif true>>
 	You managed to enter the workshop, today is not treating you very well.
 	Should you go to bed? 
 	Dad: You know if you do, you're not gonna be able to get the extension for my funeral, right?
 	-> Go to bed.
-	<<if trigger_end_of_game("You fall asleep, and wake up the morning after with the horrible awareness that something happen. You know your dad took his flight... alone.", true)>><<endif>>
+		<<if trigger_end_of_game("You fall asleep, and wake up the morning after with the horrible awareness that something happen. You know your dad took his flight... alone.", true)>><<endif>>
 	-> No. It's too early to sleep.
 <<endif>>
 ===
