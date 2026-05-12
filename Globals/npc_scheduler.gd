@@ -36,7 +36,7 @@ func _ready() -> void:
 		locations.WORKSHOP: [
 			NPC_Schedule.new(td2ts(11, 00), td2ts(13, 15), [],[], "hickWorkshopTS3"),
 			NPC_Schedule.new(td2ts(15, 15), td2ts(18, 00), [],[], "hickWorkshopTS5"),
-			NPC_Schedule.new(td2ts(20, 00), td2ts(21, 00), [],["hickHospital"], "hickWorkshopTS6")
+			NPC_Schedule.new(td2ts(20, 00), td2ts(25, 00), [],["hickHospital"], "hickWorkshopTS6")
 		],
 		locations.OFFICE: []
 	}
@@ -58,7 +58,7 @@ func _ready() -> void:
 			NPC_Schedule.new(td2ts(9, 00), td2ts(16, 00), [],["sullyOffice"],"zoeOfficeTS2"),
 			NPC_Schedule.new(td2ts(9, 00), td2ts(15, 30), ["sullyOffice"],[],"SalOfficeTS3"),
 			NPC_Schedule.new(td2ts(12, 45), td2ts(16, 00), [],["zoeHospital"],"zoeOfficeTS5"),
-			NPC_Schedule.new(td2ts(16, 01), td2ts(20, 00), [],[],"zoeOfficeTS5"),
+			NPC_Schedule.new(td2ts(16, 01), td2ts(25, 00), [],[],"zoeOfficeTS5"),
 		]
 	}
 	sally = {

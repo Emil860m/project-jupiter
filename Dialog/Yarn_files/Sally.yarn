@@ -142,7 +142,8 @@ position: -250,648
 <<elseif true>>
 The old man's eyes light up when he sees you.
 Sully: Hey kid you made it.
-<<jump meetSully>>
+<<detour meetSully>>
+<<jump SalHospitalTS4>>
 <<endif>>
 ===
 title: SalWorkshopTS4
@@ -173,7 +174,8 @@ position: -252,413
 <<elseif true>>
 The old man's eyes light up when he sees you.
 Sully: Hey kid you made it.
-<<jump meetSully>>
+<<detour meetSully>>
+<<jump SalHospitalTS4>>
 <<endif>>
 ===
 title: meetSully

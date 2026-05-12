@@ -16,7 +16,7 @@ position: -538,-230
 	<<detour dad>>
 ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
-->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs")>>
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
@@ -49,7 +49,7 @@ position: -555,14
 	<<detour dad>>
 ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
-->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs")>>
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
@@ -79,7 +79,7 @@ position: -531,371
 	<<detour dad>>
 ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
-->Do you know where can I find my dad's docs?<<if get_flag("docs") and get_flag_uncheck("hickDocs")>>
+->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs")>>
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
@@ -743,6 +743,9 @@ title: hickSully
 position: 127,-498
 ---
 Hick: Mmm, have you asked Sully? He should have a spare copy of keys.
+Hick: He should be here every couple of hours. 
+Hick: And he usually stations there next to the ship after 17:00.
+Hick: Unless he has work to catch up on at the hospital.
 <<if set_flag("sullyKeys")>><<endif>>
 ===
 
