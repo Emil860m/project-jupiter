@@ -46,7 +46,7 @@ shape = SubResource("CircleShape2D_l0xxy")
 center = NodePath("../../Jupiter")
 speed = 10.9
 radius = 214.0
-starting_angle = 2.0
+starting_angle = 180.0
 sprite = ExtResource("3_a4yyy")
 displayName = "Ganymede"
 travelScenePath = "res://Scenes/Hospital/Hospital.tscn"
@@ -58,6 +58,7 @@ other_posters = Array[String](["res://Textures/Transitions/ponsPoster.png", "res
 center = NodePath("../../Jupiter")
 speed = 8.2
 radius = 364.0
+starting_angle = 90.0
 sprite = ExtResource("6_l0otk")
 displayName = "Kallisto"
 travelScenePath = "res://Scenes/Workshop/workshop.tscn"
@@ -67,7 +68,7 @@ other_posters = Array[String](["res://Textures/Transitions/ponsPoster.png", "res
 
 [node name="ThePonds" parent="MoonParent" unique_id=1184550554 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
-speed = 12.0
+speed = 16.0
 radius = 300.0
 starting_angle = 1.5
 sprite = ExtResource("7_ydf4a")
@@ -76,7 +77,7 @@ travelScenePath = "res://Scenes/Ponds/ponds.tscn"
 
 [node name="TheRational" parent="MoonParent" unique_id=591216634 node_paths=PackedStringArray("center") groups=["moon"] instance=ExtResource("2_s3bh8")]
 center = NodePath("../../Jupiter")
-speed = 5.0
+speed = 20.0
 radius = 180.0
 sprite = ExtResource("8_p17up")
 displayName = "The Rationale"
