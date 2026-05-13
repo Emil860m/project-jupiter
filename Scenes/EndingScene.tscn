@@ -15,6 +15,7 @@ offset_top = 538.0
 offset_right = 1026.0
 offset_bottom = 561.0
 text = "Thanks for playing!"
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=623210729]
 z_index = -5
@@ -35,6 +36,14 @@ offset_top = 646.0
 offset_right = 1003.0
 offset_bottom = 677.0
 text = "Quit game!"
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=255026351]
+offset_left = 734.0
+offset_top = 503.0
+offset_right = 1174.0
+offset_bottom = 526.0
+text = "Thanks for playing!"
+horizontal_alignment = 1
 
 [node name="ChapterTransition" parent="." unique_id=1208388307 instance=ExtResource("2_ulnso")]
 
