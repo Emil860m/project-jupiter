@@ -49,13 +49,13 @@ func advance_chapter():
 	
 var ch1_saved_values: Dictionary[String, Dictionary]
 func save_ch1_values():
-	ch1_saved_values["Flags"] = Flags.flags
-	ch1_saved_values["Stats"] = PlayerStats.Stats
+	ch1_saved_values["Flags"] = str_to_var( var_to_str(Flags.flags))
+	ch1_saved_values["Stats"] = str_to_var( var_to_str(PlayerStats.Stats))
 	
 func load_ch1_values():
 	current_chapter = 2
-	Flags.flags = ch1_saved_values["Flags"]
-	PlayerStats.Stats = ch1_saved_values["Stats"]
+	Flags.flags = str_to_var( var_to_str(ch1_saved_values["Flags"]))
+	PlayerStats.Stats = str_to_var( var_to_str(ch1_saved_values["Stats"]))
 	
 func reset_all_values():
 	current_chapter = 1
