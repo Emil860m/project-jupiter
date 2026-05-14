@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cws47xva5lu74"]
 
-[ext_resource type="Script" uid="uid://bhac8f3mjweov" path="res://Prefabs/Scripts/scheduled_interactable_object.gd" id="1_4j5sd"]
+[ext_resource type="Script" uid="uid://cs8lbv61xdsra" path="res://Prefabs/Scripts/interactable_object.gd" id="1_4j5sd"]
 [ext_resource type="ArrayMesh" uid="uid://bv0hudyxourhg" path="res://Assest/MedicalColsole/medicalConsole.obj" id="1_u3d1p"]
 [ext_resource type="PackedScene" uid="uid://d2a05bx81qyr1" path="res://Components/interactable_component.tscn" id="3_i3843"]
 [ext_resource type="PackedScene" uid="uid://cfw5wvsrdelm8" path="res://Dialog/dialog_component.tscn" id="4_01fmh"]
@@ -13,7 +13,6 @@ size = Vector3(6, 7, 3)
 [node name="MedicalConsole" type="StaticBody3D" unique_id=1574312724]
 transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, 0, 0)
 script = ExtResource("1_4j5sd")
-item_name = "console"
 dialog_node = "medicalConsole_Hospital"
 
 [node name="MedicalConsole" type="MeshInstance3D" parent="." unique_id=1066243886]
