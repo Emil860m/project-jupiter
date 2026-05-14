@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://e71hxrpn77yq" path="res://Scenes/credits.gd" id="1_gryuy"]
 [ext_resource type="Texture2D" uid="uid://bwk30e48i6ujt" path="res://Textures/Dark/dark.png" id="1_r18jl"]
+[ext_resource type="FontFile" uid="uid://cf4txk4vywh4q" path="res://Textures/MapUI/Jersey10-Regular.ttf" id="3_1bamb"]
+[ext_resource type="Texture2D" uid="uid://cup6r8phrt34t" path="res://Textures/SplashScreen/iupiter fin (1).svg" id="3_ccovl"]
 
 [node name="Credits" type="Node2D" unique_id=631121694]
 script = ExtResource("1_gryuy")
@@ -13,15 +15,33 @@ offset_right = 1931.0
 offset_bottom = 1088.0
 texture = ExtResource("1_r18jl")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=702171372]
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1479290704]
+offset_left = 1594.0
+offset_top = 865.0
+offset_right = 1876.0
+offset_bottom = 944.0
+text = "Return To Main Menu"
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=295669101]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 1000.0
-offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=702171372]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1104.0
+offset_bottom = 1430.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_1bamb")
+theme_override_font_sizes/normal_font_size = 30
 text = "Credits:
 Iupiter Obiit
 Creative lead | Eli Niedzielska
@@ -38,37 +58,40 @@ UI/UX | Eli Niedzielska
 Music and sound | Johan brandi
 Yarn Masseur | Emil Fenger
 FMOD magician | Johan Brandi
+
 Actors
 Kassandra | Eliza Niedzielska
 Hickey | Pierpaolo Dileo
-Zoë | Mathilde ???
+Zoë | Mathilde Brinch Ravn Nørregaard
 Sully | Julius Sebastian Hansen
 Miko | James Robertson
 
 Photography Editing | Janusz Bekas, Eliza Niedzielska
 Photography Effects Design | Janusz Bekas
-External resources
-Fonts?
-Textures?
+
 Playtesting
 Eli Niedzielska & Johan Brandi & Emil Fenger & Emil Sondum & Marco Lagiongada
-Playtesters?
+
 Special thanks
 Hajo, Toke, TAs
+Classmates aka playtesters
+
 3rd party tools:
-godot(?)
 “Audio Engine: FMOD Studio by Firelight Technologies Pty Ltd.“
 “Narrative Design Tool: Yarn Spinner by Yarn Spinner Pty. Ltd.”
+
 Godot extensions
-fmod-gdextension by Utopia-Rise, Tristan Grespinet, and Pierre-Thomas Meisels"
+fmod-gdextension by Utopia-Rise, Tristan Grespinet, and Pierre-Thomas Meisels
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=1479290704]
-offset_left = 1594.0
-offset_top = 865.0
-offset_right = 1876.0
-offset_bottom = 944.0
-text = "Return To Main Menu"
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control" unique_id=1441415409]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 2561.0
+offset_right = 1607.0
+offset_bottom = 3416.0
+texture = ExtResource("3_ccovl")
 
 [connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_mainmenu_button_up"]
