@@ -106,8 +106,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_meteorWarning>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -126,8 +126,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_insekczyk>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -146,8 +146,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_insekczyk>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -166,8 +166,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_gestionPrize>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -186,8 +186,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_gestionPrize>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -206,8 +206,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_missingColour>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -226,8 +226,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_missingColour>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -246,8 +246,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_missingColour>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -266,8 +266,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_natureNurture>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -286,8 +286,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_natureNurture>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -306,8 +306,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_natureNurture>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
@@ -326,8 +326,8 @@ Would you like to read the news or check the log?
 -> The news
 	<<detour news_natureNurture>>
 -> The log
-	Hospital arrivals within the last hour: INSERT HERE
-	Courtyard arrivals within the last hour: INSERT HERE
+	Hospital arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
+	Courtyard arrivals within the last hour: System malfunction. Your handy Pons personal will find a solution as soon as possible. Please come back later
 -> Download the arrival documents<<if get_flag("SDA")>>
 	<<detour Download>>
 	Download complete
