@@ -11,12 +11,13 @@ script = ExtResource("1_4l0lt")
 visible = false
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=503305846]
-offset_left = 879.0
-offset_top = 538.0
-offset_right = 1026.0
-offset_bottom = 561.0
+offset_left = 568.0
+offset_top = 443.0
+offset_right = 1344.0
+offset_bottom = 568.0
 text = "Thanks for playing!"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=623210729]
 z_index = -5
@@ -39,12 +40,13 @@ offset_bottom = 677.0
 text = "Quit game!"
 
 [node name="Label2" type="Label" parent="CanvasLayer" unique_id=255026351]
-offset_left = 734.0
-offset_top = 503.0
-offset_right = 1174.0
-offset_bottom = 526.0
+offset_left = 740.0
+offset_top = 356.0
+offset_right = 1180.0
+offset_bottom = 436.0
 text = "Thanks for playing!"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="ChapterTransition" parent="." unique_id=1208388307 instance=ExtResource("2_ulnso")]
 
