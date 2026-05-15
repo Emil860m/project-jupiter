@@ -14,14 +14,14 @@ The gas giant infinitely orange in the sky, staring. The Martians saying you're 
 You're just gonna have to ration water correctly.
 
 -> Like that's going to help. You won't stake our life on their words.
-	... You're not gonna see my friends die. the system is almost out of water at this point. Fuck Earth.
+	... You're not gonna see your friends die. the system is almost out of water at this point. Fuck Earth.
 	-> And fuck the Martians!
 		Their fucking treaties aren't doing shit! Who cares about their stupid citizenship.
 		->You for sure don't. A Kallistan first and foremost.
-			I'll find another way to help. We don't need them.
+			You'll find another way to help. We don't need them.
 			<<jump RecruitReb>>
 		->You've heard they're drafting people.
-			Dad told you they're being quiet about it, but hopefully you're gonna know something soon.
+			You've heard they're being quiet about it, but hopefully you're gonna know something soon.
 			<<jump RecruitMar>>  
 	-> Hopefully the Martians will help. You can only wait anyways.
 		<<jump RecruitMar>>	
