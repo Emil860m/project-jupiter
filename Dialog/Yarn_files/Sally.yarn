@@ -20,7 +20,7 @@ position: -237,-112
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if get_flag("gotExtension")>>
 	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
@@ -56,7 +56,7 @@ position: -217,73
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if get_flag("gotExtension")>>
 	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
@@ -107,7 +107,7 @@ position: -212,235
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if get_flag("gotExtension")>>
 	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
@@ -140,7 +140,7 @@ position: -250,648
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if get_flag("gotExtension")>>
 	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
@@ -174,7 +174,7 @@ position: -252,413
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
--> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if get_flag("gotExtension")>>
 	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
