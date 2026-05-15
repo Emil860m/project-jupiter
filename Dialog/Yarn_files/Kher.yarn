@@ -275,14 +275,14 @@ title: DadBody
 ---
 <<if $dadBody == false>>
 	You look at the black cryosuit that contains your dad.
-	-> This is wrong, I should have got here in time. 
+	-> This is wrong, I should have been here in time. 
 		Dad: I'm sorry kid... that's space for you.
 		The voice in your head somehow seems even more real with his body in front of you.
 		Dad: One minor inconvenience and you're a week late...
-		<<if mental_check(15)>>
+		<<if mental_check(13)>>
 			You manage to hold back your tears, you've a job to do.
 		<<elseif true>>
-			You clean the tears from your face.
+			You clean the tears from your face, you've a job to do.
 		<<endif>>
 		<<declare $dadBody = false>>
         <<set $dadBody = true>>

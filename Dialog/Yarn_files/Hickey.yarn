@@ -16,7 +16,7 @@ position: -538,-230
 	<<detour dad>>
 ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
-->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs")>>
+->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs") and get_flag("SDA")>>
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
@@ -49,7 +49,7 @@ position: -555,14
 	<<detour dad>>
 ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
-->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs")>>
+->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs") and get_flag("SDA")>>
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!
@@ -79,7 +79,7 @@ position: -531,371
 	<<detour dad>>
 ->Do you know can I get in the Workshop?<<if get_flag_uncheck("keys") and get_flag("howOpen")>>
 	<<detour hickSully>>
-->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs")>>
+->Do you know where can I find my dad's docs?<<if get_flag_uncheck("docs") and get_flag_uncheck("hickDocs") and get_flag("SDA")>>
 	<<detour hickDocs>>
 ->See you later!
 	Sure dude, whenever you want!

@@ -95,6 +95,7 @@ You know the place is teeming with Terrestian military. Those damn Ziemniaki are
 title: RecruitReb
 position: 26,-338
 ---
+<<set $Blind= true>>
 You would imagine contacting such a group would be more difficult, but it turned out to be pretty easy.
 Just a matter of cashing in some favours here and there.
 The Blind, resided in a small abandoned space station, bound to make an eagle flight of its own in a couple of years.
@@ -191,7 +192,7 @@ When Kher was born you two were the happiest people in the Jovian system.
 <<endif>> 
 	-> Choose duty.
 		<<if $Blind == true>>
-		You spent the next five years working closely with Grig. And you managed to make a difference.
+		You spent the next 5 years working closely with Grig. And you managed to make a difference.
 		Thanks to you, the Blind's station turned into a proper base of operation for the group.
 		But circumstances changed, and priorities switched.
 		When you get the news of her passing, you immediately decide to go back to your life, to your child.
@@ -231,7 +232,7 @@ Kher: Hey dad, can Kazimierz hang out with us today?
 			Is that ok? 
 			You smiled at them. 
 			Kher: I said ok. Don't worry.
-			<<jump rational>>
+		<<jump rational>>
 	-> Just silently drive towards the Rationale.
 		<<jump rational>>
 -> Sure I don't see why not.

@@ -5,6 +5,7 @@ position: -389,105
 ---
 <<if set_flag("deadDad")>><<endif>>
 <<declare $kassSpeak = true>>
+<<declare $Kass = false>>
 ???: Hey, I'm sorry now I really can't I have a lot of stuff...
 Oh, you must be Joh's kid right? You got here just in time.
 -> Can I see my father?
@@ -30,18 +31,28 @@ But we do need you for something, your dad's eagle flight is gonna be tonight, a
 -> I'm sorry who are you?
 	???: Oh, I'm Kassandra you can call me Kass. 
 	Kass: I'm a nurse here I helped your father in the last months. 
-	<<declare $Kass = true>>
-Kass: Listen kid I know your dad wanted a "real" funeral.
+<<if $Kass == true>>
+	Kass: Listen kid I know your dad wanted a "real" funeral.
+<<elseif $Kass == false>>
+	???: Listen kid I know your dad wanted a "real" funeral.
+<<endif>>
 <<if $Martian== true>>
 	Dad: You bet! I want a Martian burial. 
 	Dad: Don't you dare yeet me into that mass grave of a planet kid!
 <<elseif true>>
 	Dad: You bet! Don't I deserve a proper burial?
 <<endif>>
-Kass: But it's too late for that, we really need your signature Kid.
+<<if $Kass == true>>
+	Kass: But it's too late for that, we really need your signature Kid.
+<<elseif $Kass == false>>
+	???: But it's too late for that, we really need your signature Kid.
+<<endif>>
+<<if $Kass == false>>
+	Kass, at least that's what her tag says, looks at you concerned.
+<<endif>>
 <<if set_flag("metKas")>><<endif>>
--> What if I don't sign? 
-	Kass: Uff, then you would have until 25 today to find another solution, because then the SDA will be enacted. 
+-> Isn't there really any other way? 
+	Kass: Uff, you would have until 25 today to find a way to get an extension, because then the SDA will be enacted.
 	<<return>>
 -> Ok let's get this over with...
     <<detour kassSign>>
