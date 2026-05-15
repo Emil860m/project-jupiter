@@ -11,6 +11,7 @@ var isOpen = false
 func _ready() -> void:
 	interactable_component.interact = _interact
 	interactable_component.object_id = object_id
+	interactable_component.time_pass = 1
 	
 func _interact() -> void:
 	isOpen = !isOpen

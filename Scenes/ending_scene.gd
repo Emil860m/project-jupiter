@@ -7,12 +7,12 @@ var ch3: bool
 @onready var label2 := $CanvasLayer/Label2
 @onready var chapterTrans = $ChapterTransition
 func _ready() -> void:
+	label.text = message
+	label2.text = check_flags()
 	if ch3:
 		await chapterTrans.transition_finished
 	else:
 		chapterTrans.visible = false
-	label.text = message
-	label2.text = check_flags()
 	$CanvasLayer.visible = true
 func _on_mainmenu_button_up() -> void:
 	SceneController.goto_scene("res://Scenes/credits.tscn")

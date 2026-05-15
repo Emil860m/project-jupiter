@@ -8,6 +8,7 @@
 script = ExtResource("1_4l0lt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1712826689]
+visible = false
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=503305846]
 offset_left = 879.0
