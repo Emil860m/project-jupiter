@@ -43,8 +43,7 @@ position: -464,-2
 <<endif>>
 ===
 title: ExtensionLast
----
--> How much is the extension? 
+--- 
 	Zoe: It last a week. So be quick in organizing this funeral thing.
 	<<return>>
 ===

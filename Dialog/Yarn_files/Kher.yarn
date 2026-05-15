@@ -25,12 +25,17 @@ You try to open the door but it seems to be locked.
 ===
 title: Kompat
 ---
-<<if get_flag_uncheck("will")>>
+<<if get_flag_uncheck("will") and get_flag("SDA")>>
 	KomPat requires the password. 
 	-> Insert his old password.
 		Luckily enough he hasn't changed it since you moved.
 		You quickly download the will from his personal K-Log.
 	<<if set_flag("will")>><<endif>>
+<<elseif get_flag_uncheck("will") and get_flag_uncheck("SDA")>>
+	KomPat requires the password. 
+	-> Insert his old password.
+		The old man hasn't apparently changed it since you moved.
+		The KomPat is completely disorganized, without something to look for it's useless
 <<elseif true>>
 	The old KomPat faintly glow.
 	He didn't even install Orbit.

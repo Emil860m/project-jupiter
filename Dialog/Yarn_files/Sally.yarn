@@ -16,7 +16,7 @@ position: -237,-112
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
--> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
@@ -52,10 +52,12 @@ position: -217,73
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
--> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalHospitalTS2>>
@@ -101,10 +103,12 @@ position: -212,235
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
--> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalHospitalTS4>>
@@ -132,10 +136,12 @@ position: -250,648
 	<<detour sullyKey>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
--> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS6>>
@@ -164,10 +170,12 @@ position: -252,413
 	<<detour sulOfficeReq>>
 -> Do you know how can I get an extension? <<if get_flag("deadDad") and get_flag_uncheck("SDA")>>
 	<<detour sullyExtension>>
--> Do you know who might have my dad's documents? <<if get_flag("SDA")>>
+-> Do you know who might have my dad's documents? <<if get_flag("SDA") and get_flag_uncheck("gotExtension")>>
 	<<detour sullyHick>>
 -> Hey Sul can you help me with the POJ allocation system of the ship?
 	<<detour SulAllocation>>
+-> Hey Sul, I meant to ask you, would you like to come to dad's funeral?<<if set_flag("gotExtension")>>
+	<<detour SulFuneral>>
 -> Thanks, see you later.
 	<<set $sulSpeak = false>><<return>>
 <<jump SalWorkshopTS4>>
@@ -203,7 +211,6 @@ title:sullyHick
 ---
 Sully: Hickey should have them, he's at the workshop every two hours or so. 
 Sully: you remember the workshop right? The one on Kallisto.
-<<if set_flag("hickDocs")>><<endif>>
 ===
 
 title:sullyExtension
